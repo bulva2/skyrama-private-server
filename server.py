@@ -66,7 +66,8 @@ available_commands = {
     "planes.removeFlyByPlane": handle_planesRemoveFlyByPlane,
     "planes.onStartCargoTutorial": handle_planesOnStartCargoTutorial,
     "cargoshops.fillShop": handle_cargoshopsFillShop,
-    "cargoshops.collectSalesRevenue": handle_cargoshopsCollectSalesRevenue
+    "cargoshops.collectSalesRevenue": handle_cargoshopsCollectSalesRevenue,
+    "general.getBuddyInitState": handle_getBuddyInitState
 }
 
 print(" [+] Loading init data...")
