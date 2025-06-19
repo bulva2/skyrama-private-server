@@ -65,94 +65,143 @@
   <item name="av.goal.daily.28.hint"><![CDATA[V dnešnej úlohe dňa musíš pasažierov zozbierať ako veľmajster. Prijmi túto výzvu a v tvojej pokladni sa to rozzvoní! Čaká na teba skvelá cena!]]></item>
   <item name="av.goal.daily.28.rewardMsg"><![CDATA[Úlohu si zvládol excelentne. Si skutočná trieda. Nech sa páči, tu je tvoja odmena. Zaslúžiš si ju.]]></item>
   <item name="av.task.daily.28.GetPassengers.name"><![CDATA[Zozbieraj pasažierov (počet: {number})]]></item>
-  <item name="av.goal.daily.30.name"><![CDATA[Korčuľovanie lietadiel]]></item>
-  <item name="av.goal.daily.30.hint"><![CDATA[Hej, na mojom mobile som hral skvelú hru. S tučniakom sa musíš rozbehnúť najrýchlejšie ako vieš a potom sa s ním čo najďalej šmyknúť po ľade. Dosiahol som so skóre až na vrchol rebríčka, ale potom som dostal nápad. Čo tak také niečo vyskúšať s lietadlami? Potrebuješ pristáť s lietadlom a potom sa s ním budeš po ľade šmýkať tak ďaleko, ako sa len dá! Čo by sa tu už len mohlo pobabrať?]]></item>
-  <item name="av.goal.daily.30.rewardMsg"><![CDATA[Dostal som zákaz šmýkať sa s lietadlami. Zdá sa, že manager záchrannej služby dostal náhly záchvat. Ale zábava to bola... kým nás nestopli!]]></item>
-  <item name="av.task.daily.30.SendPlane.name"><![CDATA[Odštartuj lietadlá (počet: {number})]]></item>
-  <item name="av.goal.daily.31.name"><![CDATA[Super snehuliak]]></item>
-  <item name="av.goal.daily.31.hint"><![CDATA[Rozhodli sme sa usporiadať súťaž v stavaní snehuliakov! Bolo to skvelé - mali sme kategóriu dospelých a deti a pre najlepších snehuliakov sme pripravili super ceny. Len to malo jeden problém - keď lietadlá pristávali, motormi nám snehuliakov rozmetali. Môžeš ich za mňa zlikvidovať?]]></item>
-  <item name="av.goal.daily.31.rewardMsg"><![CDATA[Snehuliaková súťaž bola úspešná! Chceš vidieť víťazného snehuliaka? Vyzerá ako ty! Tá podoba je neskutočná.]]></item>
+  
+  
+  <item name="av.goal.daily.30.name"><![CDATA[Neuveriteľné stretnutie 69. druhu]]></item>
+  <item name="av.goal.daily.30.hint"><![CDATA[Hej, kámo. Dlho sme sa nevideli! Povedz... mal si tiež blackout? Včera večer v klube som si všimol kočku ako z inej planéty. Zelená alabastrová pokožka a tykadlá na čele vrátane. A potom... Ó môj bože! Červený záblesk svetla... Lietajúce taniere... a... POMOC! SONDÁÁÁ!!! Eh, porozprávame sa po práci, dobre? Musím to najskôr stráviť...]]></item>
+  <item name="av.goal.daily.30.rewardMsg"><![CDATA[To snáď nie, kámo! Uniesli ma mimozemšťania! Fiona mi práve povedala, že som bol nezvestný niekoľko rokov. Lin vraj, okrem podávania džúsov, prevzala aj moju prácu, aby mi zachránila zadok. Kúpim jej obrovskú kyticu, hneď ako si vybavím prvé rande s našou novou terapeutkou na letisku. Len nech to nie sú hviezdne kvety...]]></item>
+  
+  <item name="av.task.daily.30.SendPlane.name"><![CDATA[Odštartuj lietadlá (počet: {number})]]></item> 
+
+  <item name="av.goal.daily.31.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.31.hint"><![CDATA[Hej, kamoško! Ten chlap je späť. No vieš, o kom hovorím. Tariq, pirát. Nie, počkaj... pilot. Pred niekoľkými rokmi zmizol bez stopy po opileckom posedení s mojím Kurtim. Teraz tvrdí, že ho návštevníci z vesmíru zviedli... nie, vlastne uniesli. Alebo tak nejako. Každopádne sa z nášho letiska stalo pútnické miesto pre nositeľov alobalových čiapok. Postaraj sa o to!]]></item>
+  <item name="av.goal.daily.31.rewardMsg"><![CDATA[No, bolo to ľahšie, ako som očakával. Mal som ... omylom presunul miesto konania vedecko-fantastického kongresu do batožinového priestoru lietadla. Teraz sú všetky na ceste do... niekam. Alebo nikam. No dobre. No, hlavne že nie sú tu.]]></item>
+  
   <item name="av.task.daily.31.ReturnPlane.name"><![CDATA[Pošli späť lietadlá (počet: {number})]]></item>
-  <item name="av.goal.daily.32.name"><![CDATA[To je Sno'Joke]]></item>
-  <item name="av.goal.daily.32.hint"><![CDATA[Už si videl nový pluh na sneh značky Sno'Joke? Och, to je úžasné! Dodáva sa s titánovým pluhom, so vstavaným mikroprocesorom pre nastavenie sklonu, vyhrievacími vláknami na topenie snehu a v kabíne má dokonca wifi! Toto musím dostať na letisko! Prosím? Stojí to len pár sto miliónov...]]></item>
-  <item name="av.goal.daily.32.rewardMsg"><![CDATA[Tak, už máme nasporené dosť na kúpu snežného pluhu "Sno'Joke"! No to je hanba, že to tak dlho trvalo a sneh sa aj roztopil.]]></item>
+  
+  <item name="av.goal.daily.32.name"><![CDATA[Hviezdna minca]]></item>
+  <item name="av.goal.daily.32.hint"><![CDATA[Ahoj! Pamätáš sa, ako ma Fiona kedysi úplne očarila? To boli časy, čo? Poď, vrátime čas späť a obtočíme si ju okolo prsta, ako za starých dobrých čias. Hneď ako naškrabeme dosť peňazí, kúpim jej hviezdu!]]></item>
+  <item name="av.goal.daily.32.rewardMsg"><![CDATA[Ale malej sa rozžiarili oči, keď som jej pred nosom šplechla hviezdičku, však? Žiadna cesta nie je pre moje zlatíčko príliš ďaleko... dokonca ani do trafiky.]]></item>
+  
   <item name="av.task.daily.32.GetAirCoins.name"><![CDATA[Zozbieraj AirCenty (počet: {number})]]></item>
-  <item name="av.goal.daily.33.name"><![CDATA[Kondor Kurt]]></item>
-  <item name="av.goal.daily.33.hint"><![CDATA[Kurt tvrdí, že je najlepším skokanom na lyžiach na svete. Hovorí, že ako nič preskočí tri autobusy! Tak dobre. Autobusy ale nemáme a piloti nechcú, aby niekto skákal cez ich lietadlá, tak to budú musieť urobiť ľudia! Daj dokopy toľko pasažierov, koľko sa len dá a vytvor čo najdlhší rad.]]></item>
-  <item name="av.goal.daily.33.rewardMsg"><![CDATA[Zdá sa, že Kurt podcenil svoje skokanské schopnosti. Povedal, že myslel tri hračkárske autobusy. Teraz sa musím schovávať pred rozzúrenými, snehom zasypanými pasažiermi.]]></item>
+
+  <item name="av.goal.daily.33.name"><![CDATA[Ramageddon]]></item>
+  <item name="av.goal.daily.33.hint"><![CDATA[Hej, kamoško! Mám úplnú ... ako sa to povie? Panika, presne tak! Radar ukazuje obrovský meteorit na kolíznej dráhe s letiskom! Ak to buchne, naše priestory to rozbije ako hromadu stavebných kociek. Pohotovosť! POHOTOVOSŤ! Evakuuj toľko ľudí, koľko dokážeš!]]></item>
+  <item name="av.goal.daily.33.rewardMsg"><![CDATA[Wow! Ako trápne, ale aj ... Meteorit na radare bol v skutočnosti len... ehm... ako sa to povie? Škvrna od pečeňovej paštéty. Presne tak. Odteraz v práci jem už len cviklovú polievku, to ti sľubujem.]]></item>
+  
   <item name="av.task.daily.33.GetPassengers.name"><![CDATA[Zozbieraj pasažierov (počet: {number})]]></item>
-  <item name="av.goal.daily.34.name"><![CDATA[Après-ski]]></item>
-  <item name="av.goal.daily.34.hint"><![CDATA[Nastala zima a to znamená, že začala lyžiarska sezóna. Musím urobiť veľa letov do Rakúska, aby som top-stredísk dostal všetkých tých lyžiarskych nadšencov. Ja nie som veľmi dobrý v lyžovaní, ale to vôbec nevadí - každý predsa vie, že v skutočnosti ide o to, čo sa deje na après-ski! Horúce babenky a varené víno. Kto by to nemiloval?!]]></item>
-  <item name="av.goal.daily.34.rewardMsg"><![CDATA[Áno, uviazol som v snehovom záveji. Nie, nebola to žiadna nehoda na lyžovačke. Len ma odtiaľ dostaň von!]]></item>
+
+  <item name="av.goal.daily.34.name"><![CDATA[Trápny-Man]]></item>
+  <item name="av.goal.daily.34.hint"><![CDATA[Hej, kamo! Tie kočky v eurozóne totálne letia na superhrdinov, hovorí Kurt. A vieš čo? Vždy som si chcel obliecť tú ultra tesnú spandexovú kombinézu na moje dokonale tvarované pilotné telo. Poďme do Európy a ukážme tým babám, čo je skutočný hrdina. Opona hore pre „Propellatora“...]]></item>
+  <item name="av.goal.daily.34.rewardMsg"><![CDATA[No, to je teda... Najprv som si myslel, že dievčatá na mňa pískajú... Ale potom zakopneš párkrát o plášť a zrazu ťa vypískajú! Teraz mi hovoria „Proletátor“. No a čo, koho to trápi? Aspoň už nemusím do kostýmu svetového záchrancu napchávať pás na stiahnutie brucha.]]></item>
+  
   <item name="av.task.daily.34.SendPlane.eu.name"><![CDATA[Odštartuj lietadlá do Európy (počet: {number})]]></item>
-  <item name="av.goal.daily.35.name"><![CDATA[50 slov]]></item>
-  <item name="av.goal.daily.35.hint"><![CDATA[Musím letieť na Aljašku. Vedel si, že Eskimáci majú pre sneh 50 rôznych výrazov? Vlastne je to dosť diskutabilné, ale koho to už zaujíma? Vždy je to dobrá téma na rozhovor, keď si v útulnom iglú s Eskimáčkami. Som si istý, že doteraz ich ešte nik nepožiadal o to, aby odrecitovali všetkých 50 slov.]]></item>
-  <item name="av.goal.daily.35.rewardMsg"><![CDATA[Eskimáčka mi tiež povedala, aby som nejedol určitý druh snehu - zabudol som názov, ale mal to byť žltý sneh. Teraz sa cítim chorý ...]]></item>
+
+  <item name="av.goal.daily.35.name"><![CDATA[2024: Tariqova odysea]]></item>
+  <item name="av.goal.daily.35.hint"><![CDATA[Hej, kámo! Tie baby v NASA sú dokonalé raketové palivo pre vesmírneho prieskumníka môjho kalibru. Pripnuté blond hrivy, módne okuliare a vždy sľubný klip v ruke. Čo viac si priať? Poďme do USA a ukážme tým kočkám, aký neodolateľný je ujo Tariq vo vesmírnej beztiaži. Hihihihihi...]]></item>
+  <item name="av.goal.daily.35.rewardMsg"><![CDATA[No do kelu! V tom raketopláne ma len tak hádzalo! Letušky tam nemali vôbec. Čo je toto za podnik? Takže toľko k tomu „Cape Karnevalu“…]]></item>
+  
   <item name="av.task.daily.35.SendPlane.na.name"><![CDATA[Odštartuj lietadlá do Severnej Ameriky (počet: {number})]]></item>
-  <item name="av.goal.daily.36.name"><![CDATA[Nádherné Andy]]></item>
-  <item name="av.goal.daily.36.hint"><![CDATA[Musím letieť do Ánd a vyzdvihnúť balíky. Neviem, čo je tam dnu, ale sľúbili mi, že tam nie sú žiadne pavúky, pirane, hady a ani nič podobného. Teraz je tam dosť chladno, preto dúfam, že mi moje lietadlo na ceste nezamrzne.]]></item>
-  <item name="av.goal.daily.36.rewardMsg"><![CDATA[V debne sa niečo krúti a škrieka! Dúfam, že sa to nedostane von - počkať, to je už von. Oni sú v kabíne! Och, to sú len morské prasiatka. A vlastne sú veľmi roztomilé!]]></item>
+ 
+  <item name="av.goal.daily.36.name"><![CDATA[Miloval som dievča na Marse]]></item>
+  <item name="av.goal.daily.36.hint"><![CDATA[Mám toho plné zuby! Pozemské baby sú tak náročné. „Vynes smeti!“, „Zdvihni záchodovú dosku!“, „Spusti záchodovú dosku!“ „Neklam ma!“. Koniec divadla! V Južnej Amerike je kopec pozorovaní UFO. Poďme tam hneď letieť — možno tam nájdeme tú krásku s chápadlami, ktorá ma kedysi pozvala do svojho UFO.]]></item>
+  <item name="av.goal.daily.36.rewardMsg"><![CDATA[Och, Bože... čo sa stalo? Bol som v jednej brazílskej krčme a ukecal som jednu roztomilú „Chiquitu“. Potom... zasa výpadok. O 6 dní som sa zobudil s plnofúzom, alkoholovým dychom a bez drobných na kraji chodníka. To boli MIMOZEMŠŤANIA! ZASA MA UNIESLI! Iné vysvetlenie neexistuje...<br><br>Nemáš tabletku na bolesť hlavy?]]></item>
+    
   <item name="av.task.daily.36.SendPlane.sa.name"><![CDATA[Odštartuj lietadlá do Južnej Ameriky (počet: {number})]]></item>
-  <item name="av.goal.daily.100.name"><![CDATA[Korčuľovanie lietadiel]]></item>
-  <item name="av.goal.daily.100.hint"><![CDATA[Hej, na mojom mobile som hral skvelú hru. S tučniakom sa musíš rozbehnúť najrýchlejšie ako vieš a potom sa s ním čo najďalej šmyknúť po ľade. Dosiahol som so skóre až na vrchol rebríčka, ale potom som dostal nápad. Čo tak také niečo vyskúšať s lietadlami? Potrebuješ pristáť s lietadlom a potom sa s ním budeš po ľade šmýkať tak ďaleko, ako sa len dá! Čo by sa už len mohlo pobabrať?]]></item>
-  <item name="av.goal.daily.100.rewardMsg"><![CDATA[I’ve now been banned from sliding Lietadlá. Zdá sa, že manager záchrannej služby dostal náhly záchvat. Ale zábava to bola... kým nás nestopli!]]></item>
-  <item name="av.task.daily.100.SendPlane.name"><![CDATA[Odštartuj lietadlá (počet: {number})]]></item>
-  <item name="av.goal.daily.101.name"><![CDATA[Super snehuliak]]></item>
-  <item name="av.goal.daily.101.hint"><![CDATA[Rozhodli sme sa usporiadať súťaž v stavaní snehuliakov! Bolo to skvelé - mali sme kategóriu dospelých a deti a pre najlepších snehuliakov sme pripravili super ceny. Len to malo jeden problém - keď lietadlá pristávali, motormi nám snehuliakov rozmetali. Môžeš ich za mňa zlikvidovať?]]></item>
-  <item name="av.goal.daily.101.rewardMsg"><![CDATA[Snehuliaková súťaž bola úspešná! Chceš vidieť víťazného snehuliaka? Vyzerá ako ty! Tá podoba je neskutočná.]]></item>
+
+
+  <item name="av.goal.daily.100.name"><![CDATA[Neuveriteľné stretnutie 69. druhu]]></item>
+  <item name="av.goal.daily.100.hint"><![CDATA[Hej, kámo. Dlho sme sa nevideli! Povedz... mal si tiež blackout? Včera večer v klube som si všimol kočku ako z inej planéty. Zelená alabastrová pokožka a tykadlá na čele vrátane. A potom... Ó môj bože! Červený záblesk svetla... Lietajúce taniere... a... POMOC! SONDÁÁÁ!!! Eh, porozprávame sa po práci, dobre? Musím to najskôr stráviť...]]></item>
+  <item name="av.goal.daily.100.rewardMsg"><![CDATA[To snáď nie, kámo! Uniesli ma mimozemšťania! Fiona mi práve povedala, že som bol nezvestný niekoľko rokov. Lin vraj, okrem podávania džúsov, prevzala aj moju prácu, aby mi zachránila zadok. Kúpim jej obrovskú kyticu, hneď ako si vybavím prvé rande s našou novou terapeutkou na letisku. Len nech to nie sú hviezdne kvety...]]></item>
+  
+  <item name="av.task.daily.100.SendPlane.name"><![CDATA[Odštartuj lietadlá (počet: {number})]]></item> 
+
+  <item name="av.goal.daily.101.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.101.hint"><![CDATA[Hej, kamoško! Ten chlap je späť. No vieš, o kom hovorím. Tariq, pirát. Nie, počkaj... pilot. Pred niekoľkými rokmi zmizol bez stopy po opileckom posedení s mojím Kurtim. Teraz tvrdí, že ho návštevníci z vesmíru zviedli... nie, vlastne uniesli. Alebo tak nejako. Každopádne sa z nášho letiska stalo pútnické miesto pre nositeľov alobalových čiapok. Postaraj sa o to!]]></item>
+  <item name="av.goal.daily.101.rewardMsg"><![CDATA[No, bolo to ľahšie, ako som očakával. Mal som ... omylom presunul miesto konania vedecko-fantastického kongresu do batožinového priestoru lietadla. Teraz sú všetky na ceste do... niekam. Alebo nikam. No dobre. No, hlavne že nie sú tu.]]></item>
+  
   <item name="av.task.daily.101.ReturnPlane.name"><![CDATA[Pošli späť lietadlá (počet: {number})]]></item>
-  <item name="av.goal.daily.102.name"><![CDATA[To je Sno'Joke]]></item>
-  <item name="av.goal.daily.102.hint"><![CDATA[Už si videl nový pluh na sneh značky Sno'Joke? Och, to je úžasné! Dodáva sa s titánovým pluhom, so vstavaným mikroprocesorom pre nastavenie sklonu, vyhrievacími vláknami na topenie snehu a v kabíne má dokonca wifi! Toto musím dostať na letisko! Prosím? Stojí to len pár sto miliónov...]]></item>
-  <item name="av.goal.daily.102.rewardMsg"><![CDATA[Tak, už máme nasporené dosť na kúpu snežného pluhu "Sno'Joke"! No to je hanba, že to tak dlho trvalo a sneh sa aj roztopil.]]></item>
+  
+  <item name="av.goal.daily.102.name"><![CDATA[Hviezdna minca]]></item>
+  <item name="av.goal.daily.102.hint"><![CDATA[Ahoj! Pamätáš sa, ako ma Fiona kedysi úplne očarila? To boli časy, čo? Poď, vrátime čas späť a obtočíme si ju okolo prsta, ako za starých dobrých čias. Hneď ako naškrabeme dosť peňazí, kúpim jej hviezdu!]]></item>
+  <item name="av.goal.daily.102.rewardMsg"><![CDATA[Ale malej sa rozžiarili oči, keď som jej pred nosom šplechla hviezdičku, však? Žiadna cesta nie je pre moje zlatíčko príliš ďaleko... dokonca ani do trafiky.]]></item>
+  
   <item name="av.task.daily.102.GetAirCoins.name"><![CDATA[Zozbieraj AirCenty (počet: {number})]]></item>
-  <item name="av.goal.daily.103.name"><![CDATA[Kondor Kurt]]></item>
-  <item name="av.goal.daily.103.hint"><![CDATA[Kurt tvrdí, že je najlepším skokanom na lyžiach na svete. Hovorí, že ako nič preskočí tri autobusy! Tak dobre. Autobusy ale nemáme a piloti nechcú, aby niekto skákal cez ich lietadlá, tak to budú musieť urobiť ľudia! Daj dokopy toľko pasažierov, koľko sa len dá a vytvor čo najdlhší rad.]]></item>
-  <item name="av.goal.daily.103.rewardMsg"><![CDATA[Zdá sa, že Kurt podcenil svoje skokanské schopnosti. Povedal, že myslel tri hračkárske autobusy. Teraz sa musím schovávať pred rozzúrenými, snehom zasypanými pasažiermi.]]></item>
+
+  <item name="av.goal.daily.103.name"><![CDATA[Ramageddon]]></item>
+  <item name="av.goal.daily.103.hint"><![CDATA[Hej, kamoško! Mám úplnú ... ako sa to povie? Panika, presne tak! Radar ukazuje obrovský meteorit na kolíznej dráhe s letiskom! Ak to buchne, naše priestory to rozbije ako hromadu stavebných kociek. Pohotovosť! POHOTOVOSŤ! Evakuuj toľko ľudí, koľko dokážeš!]]></item>
+  <item name="av.goal.daily.103.rewardMsg"><![CDATA[Wow! Ako trápne, ale aj ... Meteorit na radare bol v skutočnosti len... ehm... ako sa to povie? Škvrna od pečeňovej paštéty. Presne tak. Odteraz v práci jem už len cviklovú polievku, to ti sľubujem.]]></item>
+  
   <item name="av.task.daily.103.GetPassengers.name"><![CDATA[Zozbieraj pasažierov (počet: {number})]]></item>
-  <item name="av.goal.daily.104.name"><![CDATA[Après-ski]]></item>
-  <item name="av.goal.daily.104.hint"><![CDATA[Nastala zima a to znamená, že začala lyžiarska sezóna. Musím urobiť veľa letov do Rakúska, aby som top-stredísk dostal všetkých tých lyžiarskych nadšencov. Ja nie som veľmi dobrý v lyžovaní, ale to vôbec nevadí - každý predsa vie, že v skutočnosti ide o to, čo sa deje na après-ski! Horúce babenky a varené víno. Kto by to nemiloval?!]]></item>
-  <item name="av.goal.daily.104.rewardMsg"><![CDATA[Áno, uviazol som v snehovom záveji. Nie, nebola to žiadna nehoda na lyžovačke. Len ma odtiaľ dostaň von!]]></item>
+
+  <item name="av.goal.daily.104.name"><![CDATA[Trápny-Man]]></item>
+  <item name="av.goal.daily.104.hint"><![CDATA[Hej, kamo! Tie kočky v eurozóne totálne letia na superhrdinov, hovorí Kurt. A vieš čo? Vždy som si chcel obliecť tú ultra tesnú spandexovú kombinézu na moje dokonale tvarované pilotné telo. Poďme do Európy a ukážme tým babám, čo je skutočný hrdina. Opona hore pre „Propellatora“...]]></item>
+  <item name="av.goal.daily.104.rewardMsg"><![CDATA[No, to je teda... Najprv som si myslel, že dievčatá na mňa pískajú... Ale potom zakopneš párkrát o plášť a zrazu ťa vypískajú! Teraz mi hovoria „Proletátor“. No a čo, koho to trápi? Aspoň už nemusím do kostýmu svetového záchrancu napchávať pás na stiahnutie brucha.]]></item>
+  
   <item name="av.task.daily.104.SendPlane.eu.name"><![CDATA[Odštartuj lietadlá do Európy (počet: {number})]]></item>
-  <item name="av.goal.daily.105.name"><![CDATA[50 slov]]></item>
-  <item name="av.goal.daily.105.hint"><![CDATA[Musím letieť na Aljašku. Vedel si, že Eskimáci majú pre sneh 50 rôznych výrazov? Vlastne je to dosť diskutabilné, ale koho to už zaujíma? Vždy je to dobrá téma na rozhovor, keď si v útulnom iglú s Eskimáčkami. Som si istý, že doteraz ich ešte nik nepožiadal o to, aby odrecitovali všetkých 50 slov.]]></item>
-  <item name="av.goal.daily.105.rewardMsg"><![CDATA[Eskimáčka mi tiež povedala, aby som nejedol určitý druh snehu - zabudol som názov, ale mal to byť žltý sneh. Teraz sa cítim chorý ...]]></item>
+
+  <item name="av.goal.daily.105.name"><![CDATA[2024: Tariqova odysea]]></item>
+  <item name="av.goal.daily.105.hint"><![CDATA[Hej, kámo! Tie baby v NASA sú dokonalé raketové palivo pre vesmírneho prieskumníka môjho kalibru. Pripnuté blond hrivy, módne okuliare a vždy sľubný klip v ruke. Čo viac si priať? Poďme do USA a ukážme tým kočkám, aký neodolateľný je ujo Tariq vo vesmírnej beztiaži. Hihihihihi...]]></item>
+  <item name="av.goal.daily.105.rewardMsg"><![CDATA[No do kelu! V tom raketopláne ma len tak hádzalo! Letušky tam nemali vôbec. Čo je toto za podnik? Takže toľko k tomu „Cape Karnevalu“…]]></item>
+  
   <item name="av.task.daily.105.SendPlane.na.name"><![CDATA[Odštartuj lietadlá do Severnej Ameriky (počet: {number})]]></item>
-  <item name="av.goal.daily.106.name"><![CDATA[Nádherné Andy]]></item>
-  <item name="av.goal.daily.106.hint"><![CDATA[Musím letieť do Ánd a vyzdvihnúť balíky. Neviem, čo je tam dnu, ale sľúbili mi, že tam nie sú žiadne pavúky, pirane, hady a ani nič podobného. Teraz je tam dosť chladno, preto dúfam, že mi moje lietadlo na ceste nezamrzne.]]></item>
-  <item name="av.goal.daily.106.rewardMsg"><![CDATA[V debne sa niečo krúti a škrieka! Dúfam, že sa to nedostane von - počkať, to je už von. Oni sú v kabíne! Och, to sú len morské prasiatka. A vlastne sú veľmi roztomilé!]]></item>
+ 
+  <item name="av.goal.daily.106.name"><![CDATA[Miloval som dievča na Marse]]></item>
+  <item name="av.goal.daily.106.hint"><![CDATA[Mám toho plné zuby! Pozemské baby sú tak náročné. „Vynes smeti!“, „Zdvihni záchodovú dosku!“, „Spusti záchodovú dosku!“ „Neklam ma!“. Koniec divadla! V Južnej Amerike je kopec pozorovaní UFO. Poďme tam hneď letieť — možno tam nájdeme tú krásku s chápadlami, ktorá ma kedysi pozvala do svojho UFO.]]></item>
+  <item name="av.goal.daily.106.rewardMsg"><![CDATA[Och, Bože... čo sa stalo? Bol som v jednej brazílskej krčme a ukecal som jednu roztomilú „Chiquitu“. Potom... zasa výpadok. O 6 dní som sa zobudil s plnofúzom, alkoholovým dychom a bez drobných na kraji chodníka. To boli MIMOZEMŠŤANIA! ZASA MA UNIESLI! Iné vysvetlenie neexistuje...<br><br>Nemáš tabletku na bolesť hlavy?]]></item>
+    
   <item name="av.task.daily.106.SendPlane.sa.name"><![CDATA[Odštartuj lietadlá do Južnej Ameriky (počet: {number})]]></item>
+  
+  
   <item name="av.goal.daily.107.name"><![CDATA[Úloha pre obchodníkov]]></item>
   <item name="av.goal.daily.107.hint"><![CDATA[Medzinárodná organizácia obchodníkov ISO vyhlásila celosvetovú súťaž pre majiteľov obchodov. Každý, komu sa dnes podarí predať potrebné množstvo výrobkov, dostane štedrú odmenu.]]></item>
   <item name="av.goal.daily.107.rewardMsg"><![CDATA[Gratulujeme! Úlohu sa ti podarilo zvládnuť. Nech sa páči, tu je tvoja odmena. Zaslúžiš si ju.]]></item>
   <item name="av.task.daily.107.SellProducts.name"><![CDATA[Predaj tovar (počet: {number})]]></item>
-  <item name="av.goal.daily.200.name"><![CDATA[Korčuľovanie lietadiel]]></item>
-  <item name="av.goal.daily.200.hint"><![CDATA[Hej, na mojom mobile som hral skvelú hru. S tučniakom sa musíš rozbehnúť najrýchlejšie ako vieš a potom sa s ním čo najďalej šmyknúť po ľade. Dosiahol som so skóre až na vrchol rebríčka, ale potom som dostal nápad. Čo tak také niečo vyskúšať s lietadlami? Potrebuješ pristáť s lietadlom a potom sa s ním budeš po ľade šmýkať tak ďaleko, ako sa len dá! Čo by sa už len mohlo pobabrať?]]></item>
-  <item name="av.goal.daily.200.rewardMsg"><![CDATA[I’ve now been banned from sliding Lietadlá. Zdá sa, že manager záchrannej služby dostal náhly záchvat. Ale zábava to bola... kým nás nestopli!]]></item>
-  <item name="av.task.daily.200.SendPlane.name"><![CDATA[Odštartuj lietadlá (počet: {number})]]></item>
-  <item name="av.goal.daily.201.name"><![CDATA[Super snehuliak]]></item>
-  <item name="av.goal.daily.201.hint"><![CDATA[Rozhodli sme sa usporiadať súťaž v stavaní snehuliakov! Bolo to skvelé - mali sme kategóriu dospelých a deti a pre najlepších snehuliakov sme pripravili super ceny. Len to malo jeden problém - keď lietadlá pristávali, motormi nám snehuliakov rozmetali. Môžeš ich za mňa zlikvidovať?]]></item>
-  <item name="av.goal.daily.201.rewardMsg"><![CDATA[Snehuliaková súťaž bola úspešná! Chceš vidieť víťazného snehuliaka? Vyzerá ako ty! Tá podoba je neskutočná.]]></item>
+
+  
+  <item name="av.goal.daily.200.name"><![CDATA[Neuveriteľné stretnutie 69. druhu]]></item>
+  <item name="av.goal.daily.200.hint"><![CDATA[Hej, kámo. Dlho sme sa nevideli! Povedz... mal si tiež blackout? Včera večer v klube som si všimol kočku ako z inej planéty. Zelená alabastrová pokožka a tykadlá na čele vrátane. A potom... Ó môj bože! Červený záblesk svetla... Lietajúce taniere... a... POMOC! SONDÁÁÁ!!! Eh, porozprávame sa po práci, dobre? Musím to najskôr stráviť...]]></item>
+  <item name="av.goal.daily.200.rewardMsg"><![CDATA[To snáď nie, kámo! Uniesli ma mimozemšťania! Fiona mi práve povedala, že som bol nezvestný niekoľko rokov. Lin vraj, okrem podávania džúsov, prevzala aj moju prácu, aby mi zachránila zadok. Kúpim jej obrovskú kyticu, hneď ako si vybavím prvé rande s našou novou terapeutkou na letisku. Len nech to nie sú hviezdne kvety...]]></item>
+  
+  <item name="av.task.daily.200.SendPlane.name"><![CDATA[Odštartuj lietadlá (počet: {number})]]></item> 
+
+  <item name="av.goal.daily.201.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.201.hint"><![CDATA[Hej, kamoško! Ten chlap je späť. No vieš, o kom hovorím. Tariq, pirát. Nie, počkaj... pilot. Pred niekoľkými rokmi zmizol bez stopy po opileckom posedení s mojím Kurtim. Teraz tvrdí, že ho návštevníci z vesmíru zviedli... nie, vlastne uniesli. Alebo tak nejako. Každopádne sa z nášho letiska stalo pútnické miesto pre nositeľov alobalových čiapok. Postaraj sa o to!]]></item>
+  <item name="av.goal.daily.201.rewardMsg"><![CDATA[No, bolo to ľahšie, ako som očakával. Mal som ... omylom presunul miesto konania vedecko-fantastického kongresu do batožinového priestoru lietadla. Teraz sú všetky na ceste do... niekam. Alebo nikam. No dobre. No, hlavne že nie sú tu.]]></item>
+  
   <item name="av.task.daily.201.ReturnPlane.name"><![CDATA[Pošli späť lietadlá (počet: {number})]]></item>
-  <item name="av.goal.daily.202.name"><![CDATA[To je Sno'Joke]]></item>
-  <item name="av.goal.daily.202.hint"><![CDATA[Už si videl nový pluh na sneh značky Sno'Joke? Och, to je úžasné! Dodáva sa s titánovým pluhom, so vstavaným mikroprocesorom pre nastavenie sklonu, vyhrievacími vláknami na topenie snehu a v kabíne má dokonca wifi! Toto musím dostať na letisko! Prosím? Stojí to len pár sto miliónov...]]></item>
-  <item name="av.goal.daily.202.rewardMsg"><![CDATA[Tak, už máme nasporené dosť na kúpu snežného pluhu "Sno'Joke"! No to je hanba, že to tak dlho trvalo a sneh sa aj roztopil.]]></item>
+  
+  <item name="av.goal.daily.202.name"><![CDATA[Hviezdna minca]]></item>
+  <item name="av.goal.daily.202.hint"><![CDATA[Ahoj! Pamätáš sa, ako ma Fiona kedysi úplne očarila? To boli časy, čo? Poď, vrátime čas späť a obtočíme si ju okolo prsta, ako za starých dobrých čias. Hneď ako naškrabeme dosť peňazí, kúpim jej hviezdu!]]></item>
+  <item name="av.goal.daily.202.rewardMsg"><![CDATA[Ale malej sa rozžiarili oči, keď som jej pred nosom šplechla hviezdičku, však? Žiadna cesta nie je pre moje zlatíčko príliš ďaleko... dokonca ani do trafiky.]]></item>
+  
   <item name="av.task.daily.202.GetAirCoins.name"><![CDATA[Zozbieraj AirCenty (počet: {number})]]></item>
-  <item name="av.goal.daily.203.name"><![CDATA[Kondor Kurt]]></item>
-  <item name="av.goal.daily.203.hint"><![CDATA[Kurt tvrdí, že je najlepším skokanom na lyžiach na svete. Hovorí, že ako nič preskočí tri autobusy! Tak dobre. Autobusy ale nemáme a piloti nechcú, aby niekto skákal cez ich lietadlá, tak to budú musieť urobiť ľudia! Daj dokopy toľko pasažierov, koľko sa len dá a vytvor čo najdlhší rad.]]></item>
-  <item name="av.goal.daily.203.rewardMsg"><![CDATA[Zdá sa, že Kurt podcenil svoje skokanské schopnosti. Povedal, že myslel tri hračkárske autobusy. Teraz sa musím schovávať pred rozzúrenými, snehom zasypanými pasažiermi.]]></item>
+
+  <item name="av.goal.daily.203.name"><![CDATA[Ramageddon]]></item>
+  <item name="av.goal.daily.203.hint"><![CDATA[Hej, kamoško! Mám úplnú ... ako sa to povie? Panika, presne tak! Radar ukazuje obrovský meteorit na kolíznej dráhe s letiskom! Ak to buchne, naše priestory to rozbije ako hromadu stavebných kociek. Pohotovosť! POHOTOVOSŤ! Evakuuj toľko ľudí, koľko dokážeš!]]></item>
+  <item name="av.goal.daily.203.rewardMsg"><![CDATA[Wow! Ako trápne, ale aj ... Meteorit na radare bol v skutočnosti len... ehm... ako sa to povie? Škvrna od pečeňovej paštéty. Presne tak. Odteraz v práci jem už len cviklovú polievku, to ti sľubujem.]]></item>
+  
   <item name="av.task.daily.203.GetPassengers.name"><![CDATA[Zozbieraj pasažierov (počet: {number})]]></item>
-  <item name="av.goal.daily.204.name"><![CDATA[Après-ski]]></item>
-  <item name="av.goal.daily.204.hint"><![CDATA[Nastala zima a to znamená, že začala lyžiarska sezóna. Musím urobiť veľa letov do Rakúska, aby som top-stredísk dostal všetkých tých lyžiarskych nadšencov. Ja nie som veľmi dobrý v lyžovaní, ale to vôbec nevadí - každý predsa vie, že v skutočnosti ide o to, čo sa deje na après-ski! Horúce babenky a varené víno. Kto by to nemiloval?!]]></item>
-  <item name="av.goal.daily.204.rewardMsg"><![CDATA[Áno, uviazol som v snehovom záveji. Nie, nebola to žiadna nehoda na lyžovačke. Len ma odtiaľ dostaň von!]]></item>
+
+  <item name="av.goal.daily.204.name"><![CDATA[Trápny-Man]]></item>
+  <item name="av.goal.daily.204.hint"><![CDATA[Hej, kamo! Tie kočky v eurozóne totálne letia na superhrdinov, hovorí Kurt. A vieš čo? Vždy som si chcel obliecť tú ultra tesnú spandexovú kombinézu na moje dokonale tvarované pilotné telo. Poďme do Európy a ukážme tým babám, čo je skutočný hrdina. Opona hore pre „Propellatora“...]]></item>
+  <item name="av.goal.daily.204.rewardMsg"><![CDATA[No, to je teda... Najprv som si myslel, že dievčatá na mňa pískajú... Ale potom zakopneš párkrát o plášť a zrazu ťa vypískajú! Teraz mi hovoria „Proletátor“. No a čo, koho to trápi? Aspoň už nemusím do kostýmu svetového záchrancu napchávať pás na stiahnutie brucha.]]></item>
+  
   <item name="av.task.daily.204.SendPlane.eu.name"><![CDATA[Odštartuj lietadlá do Európy (počet: {number})]]></item>
-  <item name="av.goal.daily.205.name"><![CDATA[50 slov]]></item>
-  <item name="av.goal.daily.205.hint"><![CDATA[Musím letieť na Aljašku. Vedel si, že Eskimáci majú pre sneh 50 rôznych výrazov? Vlastne je to dosť diskutabilné, ale koho to už zaujíma? Vždy je to dobrá téma na rozhovor, keď si v útulnom iglú s Eskimáčkami. Som si istý, že doteraz ich ešte nik nepožiadal o to, aby odrecitovali všetkých 50 slov.]]></item>
-  <item name="av.goal.daily.205.rewardMsg"><![CDATA[Eskimáčka mi tiež povedala, aby som nejedol určitý druh snehu - zabudol som názov, ale mal to byť žltý sneh. Teraz sa cítim chorý ...]]></item>
+
+  <item name="av.goal.daily.205.name"><![CDATA[2024: Tariqova odysea]]></item>
+  <item name="av.goal.daily.205.hint"><![CDATA[Hej, kámo! Tie baby v NASA sú dokonalé raketové palivo pre vesmírneho prieskumníka môjho kalibru. Pripnuté blond hrivy, módne okuliare a vždy sľubný klip v ruke. Čo viac si priať? Poďme do USA a ukážme tým kočkám, aký neodolateľný je ujo Tariq vo vesmírnej beztiaži. Hihihihihi...]]></item>
+  <item name="av.goal.daily.205.rewardMsg"><![CDATA[No do kelu! V tom raketopláne ma len tak hádzalo! Letušky tam nemali vôbec. Čo je toto za podnik? Takže toľko k tomu „Cape Karnevalu“…]]></item>
+  
   <item name="av.task.daily.205.SendPlane.na.name"><![CDATA[Odštartuj lietadlá do Severnej Ameriky (počet: {number})]]></item>
-  <item name="av.goal.daily.206.name"><![CDATA[Nádherné Andy]]></item>
-  <item name="av.goal.daily.206.hint"><![CDATA[Musím letieť do Ánd a vyzdvihnúť balíky. Neviem, čo je tam dnu, ale sľúbili mi, že tam nie sú žiadne pavúky, pirane, hady a ani nič podobného. Teraz je tam dosť chladno, preto dúfam, že mi moje lietadlo na ceste nezamrzne.]]></item>
-  <item name="av.goal.daily.206.rewardMsg"><![CDATA[V debne sa niečo krúti a škrieka! Dúfam, že sa to nedostane von - počkať, to je už von. Oni sú v kabíne! Och, to sú len morské prasiatka. A vlastne sú veľmi roztomilé!]]></item>
+ 
+  <item name="av.goal.daily.206.name"><![CDATA[Miloval som dievča na Marse]]></item>
+  <item name="av.goal.daily.206.hint"><![CDATA[Mám toho plné zuby! Pozemské baby sú tak náročné. „Vynes smeti!“, „Zdvihni záchodovú dosku!“, „Spusti záchodovú dosku!“ „Neklam ma!“. Koniec divadla! V Južnej Amerike je kopec pozorovaní UFO. Poďme tam hneď letieť — možno tam nájdeme tú krásku s chápadlami, ktorá ma kedysi pozvala do svojho UFO.]]></item>
+  <item name="av.goal.daily.206.rewardMsg"><![CDATA[Och, Bože... čo sa stalo? Bol som v jednej brazílskej krčme a ukecal som jednu roztomilú „Chiquitu“. Potom... zasa výpadok. O 6 dní som sa zobudil s plnofúzom, alkoholovým dychom a bez drobných na kraji chodníka. To boli MIMOZEMŠŤANIA! ZASA MA UNIESLI! Iné vysvetlenie neexistuje...<br><br>Nemáš tabletku na bolesť hlavy?]]></item>
+    
   <item name="av.task.daily.206.SendPlane.sa.name"><![CDATA[Odštartuj lietadlá do Južnej Ameriky (počet: {number})]]></item>
+
+  
   <item name="av.goal.daily.207.name"><![CDATA[Úloha pre obchodníkov]]></item>
   <item name="av.goal.daily.207.hint"><![CDATA[Medzinárodná organizácia obchodníkov ISO vyhlásila celosvetovú súťaž pre majiteľov obchodov. Každý, komu sa dnes podarí predať potrebné množstvo výrobkov, dostane štedrú odmenu.]]></item>
   <item name="av.goal.daily.207.rewardMsg"><![CDATA[Blahoželáme! Vyhral si a tu je tvoja odmena! Neskutočné!]]></item>

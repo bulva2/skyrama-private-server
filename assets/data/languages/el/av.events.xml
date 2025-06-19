@@ -255,4 +255,17 @@
   <item name="av.skyrace2017.text"><![CDATA[Οι αιθέρες σε περιμένουν! Ολοκλήρωσε τους Αιθέριους Αγώνες και απόδειξε σε όλους ότι είσαι ο καλύτερος πιλότος του Skyrama!]]></item>
   <item name="av.skyrace2017.mouseover"><![CDATA[Οι Αιθέριοι Αγώνες έφτασαν! Τέρμα τα γκάζια!]]></item>
  </category>
+ 
+ <category name="av.spaceevent2024">
+  <item name="av.spaceevent2024.title"><![CDATA[Γαλαξιακές Εβδομάδες]]></item>
+  <item name="av.spaceevent2024.text"><![CDATA[Σε ένα γαλαξιακό γεγονός, ο Ταρίκ κατέρριψε μια αρμάδα από εντυπωσιακά διαστημόπλοια. Τώρα σε προσκαλεί σε επτά αποστολές που σου προσφέρουν μια γεύση από την φουτουριστική καθημερινότητά του στο αεροδρόμιο. Ξεκίνα για ένα κοσμικό μέλλον γεμάτο περιπέτειες!]]></item>
+  <item name="av.spaceevent2024.mouseover"><![CDATA[Τα αστέρια σε καλούν! Άναψε τους κινητήρες σου και κατάκτησε το σύμπαν με ιλιγγιώδη ταχύτητα!]]></item>
+ </category>
+
+ <category name="av.birthdayevent2025">
+  <item name="av.birthdayevent2025.title"><![CDATA[Saturday Nightflight]]></item>
+  <item name="av.birthdayevent2025.text"><![CDATA[14 χρόνια Skyrama – το ξανθό μαλλί δεν είναι υποχρεωτικό. Οι μηροί τρέμουν, ο ρυθμός δονείται και τα love handles λικνίζονται στον ρυθμό. Κέρασε τον εαυτό σου ένα αφρώδες Aerosol Spritz και άλλα παιχνιδιάρικα ποτά σ’ αυτό το εναέριο πάρτι γενεθλίων. Στην πίστα – και γλίστρησε κατευθείαν στην απόλαυση!]]></item>
+  <item name="av.birthdayevent2025.mouseover"><![CDATA[Φώτα σβηστά, προβολέας αναμμένος! Το Saturday Nightflight απογειώνεται – προορισμός: άκρως απόρρητη ζώνη μπικίνι. Είσοδος μόνο με σέξι λίκνισμα!]]></item>
+ </category> 
+  
 </language>

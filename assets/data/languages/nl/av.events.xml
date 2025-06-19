@@ -256,4 +256,17 @@
   <item name="av.skyrace2017.text"><![CDATA[Heb je zin om hoog te vliegen? Doe mee met de Skyrace en bewijs iedereen dat jij de beste piloot van Skyrama bent!]]></item>
   <item name="av.skyrace2017.mouseover"><![CDATA[Tijd voor de Skyrace! Zet die snelheidshendel maar helemaal open!]]></item>
  </category>
+ 
+ <category name="av.spaceevent2024">
+  <item name="av.spaceevent2024.title"><![CDATA[Galactische Weken]]></item>
+  <item name="av.spaceevent2024.text"><![CDATA[Tijdens een galactisch evenement heeft Tariq een vloot coole ruimteschepen uit de lucht geschoten. Nu nodigt hij je uit voor zeven missies om een kijkje te nemen in zijn futuristische luchthavenroutine. Ga op reis naar een kosmische toekomst vol avontuur!]]></item>
+  <item name="av.spaceevent2024.mouseover"><![CDATA[De sterren roepen! Start je motoren en verover het universum met duizelingwekkende snelheid!]]></item>
+ </category>
+ 
+ <category name="av.birthdayevent2025">
+  <item name="av.birthdayevent2025.title"><![CDATA[Saturday Nightflight]]></item>
+  <item name="av.birthdayevent2025.text"><![CDATA[Skyrama viert 14 jaar – blond haar is optioneel. De dijen trillen, de beat vibreert en de love handles deinen mee op het ritme. Trakteer jezelf op een sprankelende Aerosol Spritz en andere ondeugende drankjes tijdens dit hoogvliegende verjaardagsfeest. Naar de startbaan – en glijd zo het genot in!]]></item>
+  <item name="av.birthdayevent2025.mouseover"><![CDATA[Lichten uit, spotlight aan! De Saturday Nightflight stijgt op – bestemming: streng geheime bikinizone. Alleen toegang met soepele heupactie!]]></item>
+ </category>
+   
 </language>

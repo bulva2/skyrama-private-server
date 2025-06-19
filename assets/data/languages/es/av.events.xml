@@ -258,4 +258,17 @@
   <item name="av.skyrace2017.text"><![CDATA[¿Listo para volar bien alto? ¡Compite en Skyrace y demuestra a todo el mundo que eres el mejor piloto de Skyrama!]]></item>
   <item name="av.skyrace2017.mouseover"><![CDATA[¡La carrera aérea Skyrace ha llegado! ¡Es hora de encender los conmutadores de alta velocidad!]]></item>
  </category>
+ 
+ <category name="av.spaceevent2024">
+  <item name="av.spaceevent2024.title"><![CDATA[Semanas Galácticas]]></item>
+  <item name="av.spaceevent2024.text"><![CDATA[Durante un evento galáctico, Tariq ha lanzado una armada de increíbles naves espaciales directamente desde el cielo para vosotros. Ahora os invita a participar en siete misiones-evento en su día a día futurista en el aeropuerto. ¡Embárcate en un futuro cósmico y cómico lleno de aventuras!]]></item>
+  <item name="av.spaceevent2024.mouseover"><![CDATA[¡Las estrellas te llaman! Enciende tus motores y conquista el universo a una velocidad ridícula.]]></item>
+ </category>
+ 
+ <category name="av.birthdayevent2025">
+  <item name="av.birthdayevent2025.title"><![CDATA[Saturday Nightflight]]></item>
+  <item name="av.birthdayevent2025.text"><![CDATA[14 años de Skyrama – el rubio es opcional. Los muslos tiemblan, el ritmo vibra y las cartucheras se mueven al compás. Date un chispeante Aerosol Spritz y otros tragos traviesos en esta fiesta de cumpleaños por todo lo alto. ¡Pisa la pista y deslízate directo al placer!]]></item>
+  <item name="av.birthdayevent2025.mouseover"><![CDATA[¡Luces fuera, foco encendido! El Saturday Nightflight despega – destino: zona bikini ultrasecreta. ¡Entrada solo con movimiento de caderas!]]></item>
+ </category>
+  
 </language>

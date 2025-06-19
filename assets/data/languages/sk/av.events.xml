@@ -255,4 +255,17 @@
   <item name="av.skyrace2017.text"><![CDATA[Si pripravený vyletieť vysoko do neba? Súťaž v akcii Skyrace a dokáž každému, že si najlepším pilotom v hre Skyrama!]]></item>
   <item name="av.skyrace2017.mouseover"><![CDATA[Skyrace prichádza! Je čas zapnúť tvoj vysokorýchlostný spínač!]]></item>
  </category>
+ 
+ <category name="av.spaceevent2024">
+  <item name="av.spaceevent2024.title"><![CDATA[Galaktické týždne]]></item>
+  <item name="av.spaceevent2024.text"><![CDATA[V tomto galaktickom evente Tariq zostrelil z neba armádu skvelých vesmírnych lodí. Teraz vás pozýva na sedem eventových questov, ktoré vás zavedú do jeho futuristického letiskového každodenného života. Vydajte sa na kozmickú budúcnosť plnú dobrodružstiev!]]></item>
+  <item name="av.spaceevent2024.mouseover"><![CDATA[Hviezdy volajú! Spusti svoje motory a doby svet rýchlosťou svetla!]]></item>
+ </category>
+ 
+ <category name="av.birthdayevent2025">
+  <item name="av.birthdayevent2025.title"><![CDATA[Saturday Nightflight]]></item>
+  <item name="av.birthdayevent2025.text"><![CDATA[Skyrama oslavuje 14 rokov – blond vlasy sú nepovinné. Stehná sa chvejú, beat vibruje a láskyplné vankúšiky sa vlnia v rytme. Dopraj si šumivý Aerosol Spritz a ďalšie nezbedné drinky na tejto narodeninovej párty vo vzduchu. Na ranvej – a šmyk rovno do rozkoše!]]></item>
+  <item name="av.birthdayevent2025.mouseover"><![CDATA[Svetlá zhasnú, reflektor zapnutý! Saturday Nightflight vzlieta – cieľ: prísne tajná bikiny zóna. Vstup len s výstavným vlnivým bokom!]]></item>
+ </category> 
+ 
 </language>

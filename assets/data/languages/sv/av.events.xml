@@ -255,4 +255,17 @@
   <item name="av.skyrace2017.text"><![CDATA[Är du redo att flyga högt i skyn? Tävla i Skyrace och bevisa för alla att du är den bästa piloten i Skyrama!]]></item>
   <item name="av.skyrace2017.mouseover"><![CDATA[Skyrace är här! Det är dags att slå på fartspaken!]]></item>
  </category>
+ 
+ <category name="av.spaceevent2024">
+  <item name="av.spaceevent2024.title"><![CDATA[Galaktiska veckor]]></item>
+  <item name="av.spaceevent2024.text"><![CDATA[I ett galaktiskt event har Tariq skjutit ner en armada av coola rymdskepp från himlen. Nu bjuder han in dig till sju eventuppdrag som tar dig med in i hans futuristiska flygplatsvardag. Ge dig ut på en kosmisk framtid full av äventyr!]]></item>
+  <item name="av.spaceevent2024.mouseover"><![CDATA[Stjärnorna kallar! Starta dina motorer och erövra universum med galaktisk hastighet!]]></item>
+ </category>
+ 
+ <category name="av.birthdayevent2025">
+  <item name="av.birthdayevent2025.title"><![CDATA[Saturday Nightflight]]></item>
+  <item name="av.birthdayevent2025.text"><![CDATA[Skyrama fyller 14 år – blont hår är valfritt. Låren skälver, beatet vibrerar och kärlekshandtagen gungar i takt. Unna dig en bubblande Aerosol Spritz och andra småbusiga drinkar på detta födelsedagskalas i luften. Ut på landningsbanan – och glid rakt in i njutningen!]]></item>
+  <item name="av.birthdayevent2025.mouseover"><![CDATA[Ljuset släcks, strålkastaren tänds! Saturday Nightflight lyfter – destination: topphemlig bikinizon. Inträde endast med höftrörelse!]]></item>
+ </category> 
+  
 </language>
