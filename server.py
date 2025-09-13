@@ -93,7 +93,8 @@ def main():
         "backgrounds.makeCurrent": handle_backgroundsMakeCurrent,
         "landmarks.buy": handle_landmarksBuy,
         "landmarks.makeCurrent": handle_landmarksMakeCurrent,
-        "hangars.upgrade": handle_hangarsUpgrade
+        "hangars.upgrade": handle_hangarsUpgrade,
+        "map_extensions.buy": handle_mapExpansionsBuy
     }
     
     #########################
@@ -103,11 +104,11 @@ def main():
     
     p = Path(__file__).parents[0]
     
-    f = open(os.path.join(p, "data", "global_init_data.json.def"), "r")
+    f = open(os.path.join(p, "data", "global_init_data.json.def"), "r", encoding="utf-8")
     init_data = json.loads(str(f.read()))
     f.close()
     
-    f = open(os.path.join(p, "data", "obj.json.def"), "r")
+    f = open(os.path.join(p, "data", "obj.json.def"), "r", encoding="utf-8")
     obj_data = json.loads(str(f.read()))
     f.close()
     
@@ -268,10 +269,10 @@ def main():
             msg = 'bgc.error.email_notGiven'
         else:
             # Check if account already exists
-            if userManager.user_name_exists(username) == False:
+            if not userManager.user_name_exists(username):
                 uid = random.randint(10000000, 99999999)
                 # Just in case it might be a double user id
-                while userManager.user_id_exists(uid) == True:
+                while userManager.user_id_exists(uid):
                     uid = random.randint(10000000, 99999999)
     
                 token = str(uuid.uuid1())

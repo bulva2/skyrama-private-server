@@ -103,7 +103,7 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [x] cargoshops.buyCargo
 - [x] runways.buy
 - [x] terminals.buy
-- [ ] map_extensions.buy
+- [x] map_extensions.buy
 - [ ] hangars.buy
 - [x] hangars.upgrade
 - [ ] warehouses.buy
