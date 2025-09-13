@@ -206,6 +206,12 @@ def main():
             password = hashlib.sha512(password.encode('utf-8')).hexdigest()
     
             json_data = userManager.load_save_by_name(username)
+
+            # In case there isn't an account with the selected username we return invalid credentials
+            if json_data == -1:
+                msg = 'bgc.error.login_invalidCredentials'
+                return render_template("home.html", SERVERIP=server_ip, ASSETSIP=assets_ip, playerCount=userManager.get_player_count(), langstrings=langstrings[lang], lang=lang, langUpper=langUpper, msg=msg)
+
             if json_data["playerData"]["password"] == password:
                 # Generate random token
                 json_data["playerData"]["token"] = str(uuid.uuid1())
@@ -310,7 +316,18 @@ def main():
     
     @app.route("/logout/")
     def logout():
-        return render_template('logout.html')
+        # Setup session
+        if not request.args.get('locale'):
+            if "lang" in session:
+                lang = session["lang"]
+            else:
+                lang = "en"
+        else:
+            lang = request.args.get('locale')
+        session["lang"] = lang
+        
+        langUpper = lang.upper()
+        return render_template('logout.html', lang=lang, langUpper=langUpper, langstrings=langstrings[lang], ASSETSIP=assets_ip, playerCount=userManager.get_player_count())
     
     ################
     # GAME DYNAMIC #
