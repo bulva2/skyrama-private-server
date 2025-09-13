@@ -17,7 +17,6 @@ def handle_mapExpansionsBuy(request, user_id, rpcResult, items_to_add_to_obj, js
 
     for i in init_data["map_extensions"]:
         if int(i["grid_size"]) == int(request["p"]["grid_size"]):
-            print("Found!", i["grid_size"])
             if current_level >= int(i["level"]):
                 json_data["playerData"]["air_coins"] = json_data["playerData"]["air_coins"] - i["air_coins_cost"]
             else:
