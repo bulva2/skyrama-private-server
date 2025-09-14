@@ -19,14 +19,14 @@ __world_map_players = {}
 __playerCount = {"count": len(os.listdir("data")) - 5} # -5 because of default files and folders
 
 
-n = open(os.path.join("data", "new_player.json.def"), "r")
+n = open(os.path.join("data", "new_player.json.def"), "r", encoding="utf-8")
 NEW_ACCOUNT_DATA = json.loads(str(n.read()))
 n.close()
 
 
 def store_save_by_id(user_id):
     try:
-        f = open(os.path.join(p, "data", str(user_id) + ".json"), "r")
+        f = open(os.path.join(p, "data", str(user_id) + ".json"), "r", encoding="utf-8")
         json_data = json.loads(str(f.read()))
         __saves[str(user_id)] = json_data
         f.close() 
@@ -50,13 +50,13 @@ def load_save_by_name(user_name):
 
 def modify_save_by_id(user_id, json_data):
     __saves[str(user_id)] = json_data
-    f = open(os.path.join("data", str(user_id) + ".json"), "w")
+    f = open(os.path.join("data", str(user_id) + ".json"), "w", encoding="utf-8")
     f.write(json.dumps(json_data))
     f.close()
 
 def get_id_from_name(user_name):
     try:
-        f = open(os.path.join(p, "data", "nametoid", str(user_name)), "r")
+        f = open(os.path.join(p, "data", "nametoid", str(user_name)), "r", encoding="utf-8")
         user_id = int(f.read())
         f.close()
         return user_id
@@ -71,7 +71,7 @@ def user_name_exists(user_name):
 
 def create_new_account(uid, username, password, token):
     json_data = NEW_ACCOUNT_DATA.copy()
-    f = open(os.path.join("data", str(uid) + ".json"), "w+")
+    f = open(os.path.join("data", str(uid) + ".json"), "w+", encoding="utf-8")
     json_data["playerData"]["account_id"] = uid
     json_data["playerData"]["user_name"] = username
     json_data["playerData"]["password"] = password
@@ -99,12 +99,12 @@ def create_new_account(uid, username, password, token):
 
 
     # Create a nametoid file
-    f = open(os.path.join("data", "nametoid", str(username)), "w+")
+    f = open(os.path.join("data", "nametoid", str(username)), "w+", encoding="utf-8")
     f.write(str(uid))
     f.close()
 
 def read_location_id(file):
-    with open(os.path.join(p, "data", file), "r") as f:
+    with open(os.path.join(p, "data", file), "r", encoding="utf-8") as f:
         json_data = json.load(f)
     return file[0:-5], json_data["playerData"]["location_id"]
     

@@ -14,13 +14,13 @@ This repository is made for educational purposes only, and will not be monetized
 
 ## How to play
 
-You can find the game on http://skyrama.glitch.me. You will either need a browser that supports Flash (and Flash Player itself), or an all-in-one browser like [Flash Browser](https://flash.pm).
+You will either need a browser that supports Flash (and Flash Player itself), or an all-in-one browser like this [Pre-Bundled Firefox with Flash Player](https://www.reddit.com/r/flash/comments/kwdwci/simple_solution_to_use_flash_after_january_12_2021).
 
 ## How to run the code locally
 
 Install the libraries from requirements.txt and start server.py. It's as simple as that!
 
-You will need a browser that supports Flash (and Flash Player itself) to run the game. Alternatively, you can use [Flash Browser](https://flash.pm).
+You will need a browser that supports Flash (and Flash Player itself) to run the game. Alternatively, you can try checking out this [Pre-Bundled Firefox with Flash Player](https://www.reddit.com/r/flash/comments/kwdwci/simple_solution_to_use_flash_after_january_12_2021/)
 
 ## Known issues
 - Leaving the tutorial early causes bugs.
@@ -103,7 +103,7 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [x] cargoshops.buyCargo
 - [x] runways.buy
 - [x] terminals.buy
-- [ ] map_extensions.buy
+- [x] map_extensions.buy
 - [ ] hangars.buy
 - [x] hangars.upgrade
 - [ ] warehouses.buy

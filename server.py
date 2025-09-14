@@ -93,7 +93,8 @@ def main():
         "backgrounds.makeCurrent": handle_backgroundsMakeCurrent,
         "landmarks.buy": handle_landmarksBuy,
         "landmarks.makeCurrent": handle_landmarksMakeCurrent,
-        "hangars.upgrade": handle_hangarsUpgrade
+        "hangars.upgrade": handle_hangarsUpgrade,
+        "map_extensions.buy": handle_mapExpansionsBuy
     }
     
     #########################
@@ -103,11 +104,11 @@ def main():
     
     p = Path(__file__).parents[0]
     
-    f = open(os.path.join(p, "data", "global_init_data.json.def"), "r")
+    f = open(os.path.join(p, "data", "global_init_data.json.def"), "r", encoding="utf-8")
     init_data = json.loads(str(f.read()))
     f.close()
     
-    f = open(os.path.join(p, "data", "obj.json.def"), "r")
+    f = open(os.path.join(p, "data", "obj.json.def"), "r", encoding="utf-8")
     obj_data = json.loads(str(f.read()))
     f.close()
     
@@ -206,6 +207,12 @@ def main():
             password = hashlib.sha512(password.encode('utf-8')).hexdigest()
     
             json_data = userManager.load_save_by_name(username)
+
+            # In case there isn't an account with the selected username we return invalid credentials
+            if json_data == -1:
+                msg = 'bgc.error.login_invalidCredentials'
+                return render_template("home.html", SERVERIP=server_ip, ASSETSIP=assets_ip, playerCount=userManager.get_player_count(), langstrings=langstrings[lang], lang=lang, langUpper=langUpper, msg=msg)
+
             if json_data["playerData"]["password"] == password:
                 # Generate random token
                 json_data["playerData"]["token"] = str(uuid.uuid1())
@@ -262,10 +269,10 @@ def main():
             msg = 'bgc.error.email_notGiven'
         else:
             # Check if account already exists
-            if userManager.user_name_exists(username) == False:
+            if not userManager.user_name_exists(username):
                 uid = random.randint(10000000, 99999999)
                 # Just in case it might be a double user id
-                while userManager.user_id_exists(uid) == True:
+                while userManager.user_id_exists(uid):
                     uid = random.randint(10000000, 99999999)
     
                 token = str(uuid.uuid1())
@@ -310,7 +317,18 @@ def main():
     
     @app.route("/logout/")
     def logout():
-        return render_template('logout.html')
+        # Setup session
+        if not request.args.get('locale'):
+            if "lang" in session:
+                lang = session["lang"]
+            else:
+                lang = "en"
+        else:
+            lang = request.args.get('locale')
+        session["lang"] = lang
+        
+        langUpper = lang.upper()
+        return render_template('logout.html', lang=lang, langUpper=langUpper, langstrings=langstrings[lang], ASSETSIP=assets_ip, playerCount=userManager.get_player_count())
     
     ################
     # GAME DYNAMIC #
