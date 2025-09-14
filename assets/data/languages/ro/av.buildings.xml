@@ -1157,6 +1157,10 @@
   <item name="av.building.birthday2025_plane04"><![CDATA[D1SC0-M3D2]]></item>
   <item name="av.building.birthday2025_plane05"><![CDATA[D1SC0-L4Rg3]]></item>
   
+  <item name="av.building.summer2025_plane01"><![CDATA[SUN-LRG01]]></item>
+  <item name="av.building.summer2025_plane02"><![CDATA[SUN-LRG02]]></item>
+  <item name="av.building.summer2025_plane03"><![CDATA[SUN-K1SS]]></item>  
+  
  </category>
  <category name="av.storeitem">
   <item name="av.storeitem.s_prop1"><![CDATA[Transportă pasageri pentru a genera Aircoin-uri şi PE.]]></item>
@@ -2057,7 +2061,11 @@
   <item name="av.storeitem.birthday2025_plane02"><![CDATA[Ediţie limitată]]></item>
   <item name="av.storeitem.birthday2025_plane03"><![CDATA[Ediţie limitată]]></item>
   <item name="av.storeitem.birthday2025_plane04"><![CDATA[Ediţie limitată]]></item>
-  <item name="av.storeitem.birthday2025_plane05"><![CDATA[Ediţie limitată]]></item>	 
+  <item name="av.storeitem.birthday2025_plane05"><![CDATA[Ediţie limitată]]></item>
+  
+  <item name="av.storeitem.summer2025_plane01"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.summer2025_plane02"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.summer2025_plane03"><![CDATA[Ediţie limitată]]></item>  
   
  </category>
 </language>

@@ -1,1 +1,8 @@
-<Config viewportWidth="760" viewportHeight="630" cellSize="24" numCells="40" cameraAngle="60"/>
+<Config
+	viewportWidth="760"
+	viewportHeight="630"
+	cellSize="24"
+	numCells="40"
+	cameraAngle="60"
+/>
+
