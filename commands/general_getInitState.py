@@ -1,5 +1,5 @@
 import time
-import userManager
+from commands.buddy_getAll import run_buddy_checks
 from deepmerge import always_merger
 
 def handle_getInitState(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
@@ -26,17 +26,8 @@ def handle_getInitState(request, user_id, rpcResult, items_to_add_to_obj, json_d
                 break
 
     # Run buddy.getAll
-    for buddy in json_data["buddyStuff"]["buddies"]:
-        buddy_data = userManager.load_save_by_id(buddy["hi_player_id"])
-        buddy["last_buddyping_time"] = buddy_data["playerData"]["last_buddyping_time"]
-        buddy["xp"] = buddy_data["playerData"]["xp"]
-        # if request accepted
-        if int(buddy["status"]) != 1 and int(buddy["status"]) != 2:
-            # if buddyping activated
-            if request["t"] < int(buddy["last_buddyping_time"]):
-                buddy["status"] = 5
-            else:
-                buddy["status"] = 0
+    run_buddy_checks(request["t"], json_data)
 
     rpcResult["r"] = always_merger.merge(json_data, init_data) # Deepmerge both global init and personal user init.
+    # To-do when switching to an acutal database: don't store password between the game data!!!!!!!
     

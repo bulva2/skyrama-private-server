@@ -1,6 +1,19 @@
 import time
 import userManager
 
+def run_buddy_checks(time, json_data):
+    for buddy in json_data["buddyStuff"]["buddies"]:
+        buddy_data = userManager.load_save_by_id(buddy["hi_player_id"])
+        buddy["last_buddyping_time"] = buddy_data["playerData"]["last_buddyping_time"]
+        buddy["xp"] = buddy_data["playerData"]["xp"]
+        # if request accepted
+        if int(buddy["status"]) != 1 and int(buddy["status"]) != 2:
+            # if buddyping activated
+            if time < int(buddy["last_buddyping_time"]):
+                buddy["status"] = 5
+            else:
+                buddy["status"] = 0
+
 def handle_buddyGetAll(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
     rpcResult["t"] = str(int(time.time()))
@@ -28,20 +41,7 @@ def handle_buddyGetAll(request, user_id, rpcResult, items_to_add_to_obj, json_da
     0 = offline
     '''
 
-
-    # ALSO MODIFY IN buddy.getAll !!!!!!!!
-
-    for buddy in json_data["buddyStuff"]["buddies"]:
-        buddy_data = userManager.load_save_by_id(buddy["hi_player_id"])
-        buddy["last_buddyping_time"] = buddy_data["playerData"]["last_buddyping_time"]
-        buddy["xp"] = buddy_data["playerData"]["xp"]
-        # if request accepted
-        if int(buddy["status"]) != 1 and int(buddy["status"]) != 2:
-            # if buddyping activated
-            if request["t"] < int(buddy["last_buddyping_time"]):
-                buddy["status"] = 5
-            else:
-                buddy["status"] = 0
+    run_buddy_checks(request["t"], json_data)
 
     rpcResult["r"]["buddies"] = json_data["buddyStuff"]["buddies"]
     rpcResult["r"]["packets"] = json_data["buddyStuff"]["packets"]
