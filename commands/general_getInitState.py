@@ -1,5 +1,6 @@
 import time
 import userManager
+from deepmerge import always_merger
 
 def handle_getInitState(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
@@ -37,5 +38,5 @@ def handle_getInitState(request, user_id, rpcResult, items_to_add_to_obj, json_d
             else:
                 buddy["status"] = 0
 
-    rpcResult["r"] = {**json_data, **init_data} # Merge both global init and personal user init.
+    rpcResult["r"] = always_merger.merge(json_data, init_data) # Deepmerge both global init and personal user init.
     

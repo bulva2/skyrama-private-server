@@ -357,7 +357,7 @@ def main():
     
             # Check start level based on xp
             start_level = get_level_from_xp(
-                json_data["playerData"]["xp"], json_data["playerData"]["xp_level_caps"])
+                json_data["playerData"]["xp"], init_data["playerData"]["xp_level_caps"])
     
             # Add this data to the Object, allowing for live updating in the game
             total_items_to_add_to_obj = []
@@ -396,7 +396,7 @@ def main():
     
             # Check start level based on xp
             end_level = get_level_from_xp(
-                json_data["playerData"]["xp"], json_data["playerData"]["xp_level_caps"])
+                json_data["playerData"]["xp"], init_data["playerData"]["xp_level_caps"])
     
             if start_level != end_level:  # Check level-up
                 for i in range(end_level - start_level):

@@ -1,4 +1,5 @@
 import time
+import utils
 
 def handle_mapExpansionsBuy(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
@@ -7,13 +8,7 @@ def handle_mapExpansionsBuy(request, user_id, rpcResult, items_to_add_to_obj, js
 
     # Check current level based on xp
     current_xp = int(json_data["playerData"]["xp"])
-    current_level = 100 # Handle the edge case when you're at the last level
-    j = 0
-    for i in json_data["playerData"]["xp_level_caps"]:
-        if int(i) > current_xp:
-            current_level = j
-            break
-        j = j + 1
+    current_level = utils.get_level_by_xp(current_xp, init_data["playerData"]["xp_level_caps"])
 
     for i in init_data["map_extensions"]:
         if int(i["grid_size"]) == int(request["p"]["grid_size"]):
