@@ -94,6 +94,7 @@ def main():
         "hangars.upgrade": handle_hangarsUpgrade,
         "map_extensions.buy": handle_mapExpansionsBuy,
         "hangars.buy": handle_hangarsBuy,
+        "buddy.collectPassenger": handle_buddyCollectPassenger,
     }
     
     #########################

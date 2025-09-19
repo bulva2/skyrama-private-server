@@ -70,7 +70,7 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [ ] evoucher.book
 - [x] lucky_luggage.spin
 - [x] buddy.getAll
-- [ ] buddy.collectPassenger
+- [x] buddy.collectPassenger
 - [ ] buddy.receivePassengers
 - [x] buddy.endRelationship
 - [x] buddy.accept
