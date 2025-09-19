@@ -1,16 +1,15 @@
-
 # Skyrama Private Server
 
-Skyrama Private Server is an attempt to create a custom server for Skyrama, a Bigpoint game. Not all features have been implemented, and the ones that are likely contain bugs. All help is welcome!
+Skyrama Private Server is an attempt to create a custom server for Skyrama, a Bigpoint game. Not all features have been implemented, and those that are likely contain bugs. All help is welcome!
 
-The way this server works is, least to say, kind of primitive. Data gets stored in JSON files directly on your pc instead of using a proper database. It does run just fine, however! In the future data storing might easily be upgraded if needed.
+The way this server works is, to say, kind of primitive. Data gets stored in JSON files directly on your pc instead of using a proper database. However, it runs just fine! We plan to switch to a database when we implement all the game functionality.
 
 Keep in mind that although passwords should be properly encrypted/hashed, it is recommended to not use a password you use for any other services.
 
 
 ## Legal Issues
 
-This repository is made for educational purposes only, and will not be monetized in any way. Contact me for any legal problems, and I'll take appropriate action.
+This repository is made for educational purposes only and will not be monetized in any way. Contact me for any legal problems, and I'll take appropriate action.
 
 ## How to play
 
@@ -24,11 +23,12 @@ You will need a browser that supports Flash (and Flash Player itself) to run the
 
 ## Known issues
 - Leaving the tutorial early causes bugs.
-- Lucky luggages pop-up each time even when there are no free spins.
+- Lucky luggages pop up each time, even when there are no free spins.
+- Inconsistent int usage in JSON data. Might cause issues later on when we switch to the database
 - (and a bunch more xD)
 
 ## List of quest task types
-This are all the types of tasks that can be in a quest. Doing an unimplemented one will work in-game, but after refreshing all further progress on quests will be gone! The tutorial (as well as the mid-game "cargo tutorial") and most important other types are working.
+These are all the types of tasks that can be in a quest. Doing an unimplemented one will work in-game, but after refreshing all further progress on quests will be gone! The tutorial (as well as the mid-game "cargo tutorial") and most important other types are working as well.
 
 - [x] BuyBay
 - [x] BuyLandsideBuilding
