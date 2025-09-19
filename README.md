@@ -24,6 +24,7 @@ You will need a browser that supports Flash (and Flash Player itself) to run the
 
 ## Known issues
 - Leaving the tutorial early causes bugs.
+- Lucky luggages pop-up each time even when there are no free spins.
 - (and a bunch more xD)
 
 ## List of quest task types
@@ -104,7 +105,7 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [x] runways.buy
 - [x] terminals.buy
 - [x] map_extensions.buy
-- [ ] hangars.buy
+- [x] hangars.buy
 - [x] hangars.upgrade
 - [ ] warehouses.buy
 - [x] playerdata.setbooster

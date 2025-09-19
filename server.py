@@ -92,7 +92,8 @@ def main():
         "landmarks.buy": handle_landmarksBuy,
         "landmarks.makeCurrent": handle_landmarksMakeCurrent,
         "hangars.upgrade": handle_hangarsUpgrade,
-        "map_extensions.buy": handle_mapExpansionsBuy
+        "map_extensions.buy": handle_mapExpansionsBuy,
+        "hangars.buy": handle_hangarsBuy,
     }
     
     #########################
@@ -381,7 +382,7 @@ def main():
                         return "Could not get Sky_Instance_Plane object with unique id 1435_12297741"
     
                     total_response["rpcResults"].append(rpcResult)
-                    total_items_to_add_to_obj = total_items_to_add_to_obj + items_to_add_to_obj
+                    total_items_to_add_to_obj += items_to_add_to_obj
     
                     # Check goal completion
                     handle_goal(command, request.form["userId"], "main", items_to_add_to_obj, json_data, init_data)
