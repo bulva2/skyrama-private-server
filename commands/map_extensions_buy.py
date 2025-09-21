@@ -8,7 +8,7 @@ def handle_mapExpansionsBuy(request, user_id, rpcResult, items_to_add_to_obj, js
 
     # Check current level based on xp
     current_xp = int(json_data["playerData"]["xp"])
-    current_level = utils.get_level_by_xp(current_xp, init_data["playerData"]["xp_level_caps"])
+    current_level = utils.get_level_from_xp(current_xp, init_data["playerData"]["xp_level_caps"])
 
     for i in init_data["map_extensions"]:
         if int(i["grid_size"]) == int(request["p"]["grid_size"]):

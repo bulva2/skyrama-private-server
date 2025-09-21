@@ -1,0 +1,16 @@
+{
+    "serverSettings": {
+        "host": "http://127.0.0.1",
+        "port": 5050,
+        
+        "alternativeAssetStore": {
+            "enabled": false,
+            "host": "https://example.com",
+            "port": 7070 
+        }
+    },
+    "debugging": {
+        "flaskDebug": true,
+        "loggingLevel": "warning"
+    }
+}

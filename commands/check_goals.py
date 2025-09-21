@@ -107,14 +107,19 @@ def next_quest(quest_seq, init_data, json_data, user_id, items_to_add_to_obj):
                         new_goal_id = l["id"]
                         break
 
-            json_data["playerData"]["air_coins"] = json_data["playerData"]["air_coins"] + j["reward_air_coins"]
-            json_data["playerData"]["air_cash"] = json_data["playerData"]["air_cash"] + j["reward_air_cash"]
-            json_data["playerData"]["xp"] = json_data["playerData"]["xp"] + j["reward_xp"]
-            json_data["playerData"]["passengers"] = json_data["playerData"]["passengers"] + j["reward_passengers"]
-            json_data["playerData"]["super_fuel"] = json_data["playerData"]["super_fuel"] + j["reward_kerosene_boost"]
+            json_data["playerData"]["air_coins"] += j["reward_air_coins"]
+            json_data["playerData"]["air_cash"] += j["reward_air_cash"]
+            json_data["playerData"]["xp"] += j["reward_xp"]
+            json_data["playerData"]["passengers"] += j["reward_passengers"]
+            json_data["playerData"]["super_fuel"] += j["reward_kerosene_boost"]
 
             # reward_goods and reward_map_extension are unused
+
+            # TODO:
             # reward_hangar_upgrade: what is this? which hangar? To figure out
+            # I think that we gotta reward_obj_type and reward_obj_type_id,
+            # if the type isn't hangar, add slot for the small hangar. -bulva2
+
             # reward_cargo_capacity_upgrade: Where to change this?
 
 

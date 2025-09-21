@@ -28,7 +28,7 @@ def handle_terminalsBuy(request, user_id, rpcResult, items_to_add_to_obj, json_d
       
     # Check current level based on xp
     current_xp = int(json_data["playerData"]["xp"])
-    current_level = utils.get_level_by_xp(current_xp, init_data["playerData"]["xp_level_caps"])
+    current_level = utils.get_level_from_xp(current_xp, init_data["playerData"]["xp_level_caps"])
 
     if request["p"]["influenceableType"]["air_coins_cost"] != 0:
       if current_level >= unlock_lvl:

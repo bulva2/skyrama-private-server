@@ -1,28 +1,27 @@
-if __name__ == '__main__':
-      
-    #######################
-    # Import server stuff #
-    #######################
-    from commands import *
-    from bundle import TEMPLATES_DIR, STUB_DIR, STYLES_DIR, ASSETS_DIR
-    import userManager
-    
-    ##########################
-    # Import 3rd party stuff #
-    ##########################
-    print(" [+] Importing libraries...")
-    from flask import Flask, render_template, send_from_directory, request, redirect, session, url_for
-    import re
-    import random
-    import uuid
-    import hashlib
-    from pathlib import Path
-    import json
-    import os
+#######################
+# Import server stuff #
+#######################
+from commands import *
+from bundle import TEMPLATES_DIR, STUB_DIR, STYLES_DIR, ASSETS_DIR
+from utils import get_level_from_xp
+import userManager
+
+##########################
+# Import 3rd party stuff #
+##########################
+import logging
+import re
+import random
+import uuid
+import hashlib
+from pathlib import Path
+import json
+import os
+from flask import Flask, render_template, send_from_directory, request, redirect, session
 
 def main():
-    print(" [+] Loading server...")
-    
+    logging.info("[+] Loading server...")
+
     for module in os.listdir(os.path.join(os.path.dirname(__file__), "commands")):
         if module == '__init__.py' or module[-3:] != '.py':
             continue
@@ -104,18 +103,17 @@ def main():
     
     p = Path(__file__).parents[0]
     
-    f = open(os.path.join(p, "data", "global_init_data.json.def"), "r", encoding="utf-8")
-    init_data = json.loads(str(f.read()))
+    with open(os.path.join(p, "data", "global_init_data.json.def"), "r", encoding="utf-8") as f:
+        init_data = json.loads(f.read())
     f.close()
-    
-    f = open(os.path.join(p, "data", "obj.json.def"), "r", encoding="utf-8")
-    obj_data = json.loads(str(f.read()))
+
+    with open(os.path.join(p, "data", "obj.json.def"), "r", encoding="utf-8") as f:
+        obj_data = json.loads(f.read())
     f.close()
-    
+
     ################################
     # Sort accounts by location id #
     ################################
-    
     userManager.save_players_by_location_id()
     
     ##########################
@@ -123,11 +121,10 @@ def main():
     ##########################
     langstrings = {}
     for filename in os.listdir(os.path.join("templates", "languages")):
-        f = open(os.path.join("templates", "languages",
-                 filename), "r", encoding="utf-8")
-        langstrings[filename[0:-5]] = json.loads(str(f.read()))
+        with open(os.path.join("templates", "languages",
+                 filename), "r", encoding="utf-8") as f:
+            langstrings[filename[0:-5]] = json.loads(f.read())
         f.close()
-    
     ########################################
     # Get total amount of created accounts #
     ########################################
@@ -143,9 +140,9 @@ def main():
     # LOCAL
     host = '127.0.0.1'
     port = 5050
-    server_ip = "http://" + str(host) + ":" + str(port)
-    assets_ip = "http://" + str(host) + ":" + str(port)
-    
+    server_ip = f"http://{host}:{port}"
+    assets_ip = f"http://{host}:{port}"
+
     app = Flask(__name__, template_folder=TEMPLATES_DIR)
     
     print(" [+] Configuring server routes...")
@@ -330,21 +327,11 @@ def main():
         langUpper = lang.upper()
         return render_template('logout.html', lang=lang, langUpper=langUpper, langstrings=langstrings[lang], ASSETSIP=assets_ip, playerCount=userManager.get_player_count())
     
-    ################
-    # GAME DYNAMIC #
-    ################
+    @app.errorhandler(404)
+    def page_not_found(e):
+        return homepage()
     
-    def get_level_from_xp(xp, level_caps):
-        level = 100  # Handle the edge case when you're at the last level
-        j = 0
-        for i in level_caps:
-            if int(i) > xp:
-                level = j
-                break
-            j = j + 1
-        return level
-    
-    
+    # Handle all the game commands 
     @app.route("/SkyApi.php", methods=['POST'])
     def handle_request():
         print(request.form)
@@ -400,32 +387,20 @@ def main():
     
             if start_level != end_level:  # Check level-up
                 for i in range(end_level - start_level):
-                    json_data["playerData"]["air_coins"] = int(
-                        json_data["playerData"]["air_coins"]) + 850
-                    json_data["playerData"]["air_cash"] = int(
-                        json_data["playerData"]["air_cash"]) + 2  # YAY WE CAN BUY 0.2 HANGAR SLOTS!!!
-    
+                    json_data["playerData"]["air_coins"] += 850
+                    json_data["playerData"]["air_cash"] += 2  # YAY WE CAN BUY 0.2 HANGAR SLOTS!!!
+
             # Create command object
             obj = {}
-            print(total_items_to_add_to_obj)
             handle_addObj(
                 command, request.form["userId"], obj, total_items_to_add_to_obj, json_data, init_data, obj_data)
             total_response["obj"] = obj
     
             userManager.modify_save_by_id(str(request.form["userId"]), json_data)
-    
             return total_response
         else:
-            print("User " + str(request.form["userId"]
-                                ) + " has used an invalid token.")
+            print(f"User {request.form['userId']} has used an invalid token.")
             return "token_error"
-    
-    
-    ########
-    # MAIN #
-    ########
-    
-    print(" [+] Running server...")
 
     app.secret_key = 'SECRET_KEY'
     app.run(host=host, port=port, debug=True)

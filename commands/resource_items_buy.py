@@ -1,5 +1,5 @@
 import time
-from utils import get_level_by_xp
+from utils import get_level_from_xp
 
 def handle_resourceItemsBuy(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
@@ -12,7 +12,7 @@ def handle_resourceItemsBuy(request, user_id, rpcResult, items_to_add_to_obj, js
             required_level = i["required_level"]
             amount = i["amount"]
 
-    current_level = get_level_by_xp(int(json_data["playerData"]["xp"]), init_data["playerData"]["xp_level_caps"])
+    current_level = get_level_from_xp(int(json_data["playerData"]["xp"]), init_data["playerData"]["xp_level_caps"])
 
     if current_level < required_level or json_data["playerData"]["air_cash"] < air_cash_cost:
         rpcResult["i"] = -1 # Possible cheat, disconnect user
