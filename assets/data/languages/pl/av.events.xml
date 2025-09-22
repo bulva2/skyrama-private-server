@@ -255,4 +255,17 @@
   <item name="av.skyrace2017.text"><![CDATA[Jesteś gotów unieść się hen, wysoko w przestworza? Zmierz siły w podniebnym wyścigu i udowodnij, że jesteś najlepszym pilotem w Skyramie!]]></item>
   <item name="av.skyrace2017.mouseover"><![CDATA[Czas na podniebny wyścig Czas przełączyć na najwyższy bieg!]]></item>
  </category>
+ 
+ <category name="av.spaceevent2024">
+  <item name="av.spaceevent2024.title"><![CDATA[Galaktyczne Tygodnie]]></item>
+  <item name="av.spaceevent2024.text"><![CDATA[Podczas galaktycznego wydarzenia Tariq zestrzelił z nieba flotę niesamowitych statków kosmicznych. Teraz zaprasza cię na siedem misji, byś doświadczył jego futurystycznej codzienności na lotnisku. Wyrusz w kosmiczną przyszłość pełną przygód!]]></item>
+  <item name="av.spaceevent2024.mouseover"><![CDATA[Gwiazdy wzywają! Uruchom silniki i podbij wszechświat z zawrotną prędkością!]]></item>
+ </category>
+ 
+ <category name="av.birthdayevent2025">
+  <item name="av.birthdayevent2025.title"><![CDATA[Saturday Nightflight]]></item>
+  <item name="av.birthdayevent2025.text"><![CDATA[Skyrama kończy 14 lat – blond włosy są opcjonalne. Uda drżą, beat wibruje, a boczki kołyszą się w rytmie. Zafunduj sobie musującego Aerosol Spritza i inne figlarne drinki na tym podniebnym przyjęciu urodzinowym. Na pas startowy – i ślizg prosto w rozkosz!]]></item>
+  <item name="av.birthdayevent2025.mouseover"><![CDATA[Światła gasną, reflektor w ruch! Saturday Nightflight startuje – cel: ściśle tajna strefa bikini. Wstęp tylko z biodrowym wigglem!]]></item>
+ </category> 
+ 
 </language>

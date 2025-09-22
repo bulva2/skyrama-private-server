@@ -65,94 +65,142 @@
   <item name="av.goal.daily.28.hint"><![CDATA[Bij de opdracht van vandaag moet je proberen om wereldkampioen passagierverzamelen te worden. Ga de uitdaging aan en laat je kassa rinkelen! Er staan je coole prijzen te wachten!]]></item>
   <item name="av.goal.daily.28.rewardMsg"><![CDATA[Je hebt de opdracht met bravoure uitgevoerd. Dat was echt geniaal! Hier is je beloning, je hebt het verdiend!]]></item>
   <item name="av.task.daily.28.GetPassengers.name"><![CDATA[Verzamel {number} passagier(s)]]></item>
-  <item name="av.goal.daily.30.name"><![CDATA[Vliegtuigschaatsen]]></item>
-  <item name="av.goal.daily.30.hint"><![CDATA[Hé, ik speel een geweldig spel op mijn mobieltje. Je moet een pinguïn laten rennen en dan zo ver mogelijk over het ijs laten glijden. Ik had de topscore al gehaald, maar kreeg toen een idee. Als ik het nu eens zou proberen met vliegtuigen? Ik hoef alleen maar een vliegtuig te laten landen en dan zo ver mogelijk door te laten glijden op het ijs! Er kan immers niets mis gaan?]]></item>
-  <item name="av.goal.daily.30.rewardMsg"><![CDATA[Nu mag ik geen vliegtuigen meer laten glijden. Blijkbaar kreeg de manager voor noodgevallen plotseling een hernia. Ach, het was leuk zo lang het duurde!]]></item>
+
+  
+  <item name="av.goal.daily.30.name"><![CDATA[Ongelooflijke ontmoeting van de 69e soort]]></item>
+  <item name="av.goal.daily.30.hint"><![CDATA[Hé, ouwe! Lang niet gezien! Zeg... heb jij ook een zwart gat in je geheugen? Gisteravond in de club richtte ik mijn laser op een chick die letterlijk van een andere planeet leek te komen. Groene albasten huid en voelsprieten op haar voorhoofd inbegrepen. En toen... Oh mijn God! Een rode lichtflits... Vliegende schotels... en... HELP! DE SONDE!!! Uh... laten we er na het werk over praten, oké? Ik moet dit eerst even verwerken...]]></item>
+  <item name="av.goal.daily.30.rewardMsg"><![CDATA[Ik kan het niet geloven, ouwe! Ik ben door buitenaardse wezens ontvoerd! Fiona heeft me net verteld dat ik een paar jaar zoek was. Blijkbaar heeft Lin, naast haar werk als Sapbediende, ook mijn baan overgenomen om mijn hachje te redden. Ik geef haar een grote bos bloemen zodra ik mijn eerste date met onze nieuwe luchthaven-therapeute geregeld heb. Zolang het maar geen sterrenbloemen zijn...]]></item>
+  
   <item name="av.task.daily.30.SendPlane.name"><![CDATA[Stuur {number} vliegtuig/en]]></item>
-  <item name="av.goal.daily.31.name"><![CDATA[Super Sneewpoppen]]></item>
-  <item name="av.goal.daily.31.hint"><![CDATA[We hebben besloten een sneeuwpoppenwedstrijd te houden! Het wordt geweldig - we hebben categorieën voor volwassenen en kinderen en er zijn geweldige prijzen voor de mooiste sneeuwpoppen. We hebben echter een probleem – de vliegtuigen blijven maar landen en blazen de sneeuwpoppen omver met hun motoren. Kun jij ze voor me afhandelen?]]></item>
-  <item name="av.goal.daily.31.rewardMsg"><![CDATA[De sneeuwpoppenwedstrijd was een succes! Wil je de winnende sneeuwpop zien? Hij lijkt precies op jou! De gelijkenis is griezelig.]]></item>
+
+  <item name="av.goal.daily.31.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.31.hint"><![CDATA[Hé, joh! Die kerel is terug. Je weet wel, Tariq, die piraat. Nee, wacht... piloot! Een paar jaar geleden verdween hij spoorloos na een flinke zuippartij met mijn maat Kurti. Nu beweert hij dat bezoekers uit de ruimte hem hebben verleid... eh, nee... ontvoerd! Of zoiets. Hoe dan ook, onze luchthaven is nu een bedevaartsoord geworden voor aluhoedjes. Regel jij dat even?]]></item>
+  <item name="av.goal.daily.31.rewardMsg"><![CDATA[Nou, dat was makkelijker dan verwacht. Ik had... per ongeluk... de locaties van de Science Fiction Convention in het laadruim van een vliegtuig verplaatst. Nu zijn ze allemaal onderweg naar... ergens. Of nergens. Ach ja, als ze maar niet hier zijn.]]></item>
+  
   <item name="av.task.daily.31.ReturnPlane.name"><![CDATA[Stuur {number} vliegtuig(en) terug]]></item>
-  <item name="av.goal.daily.32.name"><![CDATA[Sno'Joke]]></item>
-  <item name="av.goal.daily.32.hint"><![CDATA[Heb je de nieuwe Sno'Joke sneeuwploeg al gezien? Dat ding is echt geweldig! Hij heeft een titanium schep, een geïntegreerde microprocessor om de helling aan te passen, verwarmingselementen om het ijs te smelten en zelfs wifi in de cabine! Die moeten we hebben voor de luchthaven! Alsjeblieft? Hij kost maar een paar miljoen...]]></item>
-  <item name="av.goal.daily.32.rewardMsg"><![CDATA[We hebben voldoende geld verdiend om een Sno'Joke sneeuwploeg te kopen! Helaas duurde het zo lang dat de sneeuw al vanzelf is gesmolten.]]></item>
+
+  <item name="av.goal.daily.32.name"><![CDATA[Stergeld]]></item>
+  <item name="av.goal.daily.32.hint"><![CDATA[Hoi! Weet je nog hoe Fiona me destijds helemaal van mijn stuk bracht? Dat waren nog eens tijden, hè? Kom, laten we de klok terugdraaien en haar om onze vinger winden, net als vroeger. Zodra we genoeg geld bij elkaar hebben gesprokkeld, koop ik een ster voor haar!]]></item>
+  <item name="av.goal.daily.32.rewardMsg"><![CDATA[Je had haar gezicht moeten zien toen ik die ster recht onder haar neus duwde, hè? Voor mijn liefste is geen afstand te groot... zelfs niet naar de kiosk.]]></item>
+  
   <item name="av.task.daily.32.GetAirCoins.name"><![CDATA[Verzamel {number} Aircoin(s)]]></item>
-  <item name="av.goal.daily.33.name"><![CDATA[Karel de Condor]]></item>
-  <item name="av.goal.daily.33.hint"><![CDATA[Karel beweert dat hij één van de beste skispringers ter wereld is. Hij zegt dat hij in één keer over drie bussen kan springen! Maar we hebben geen bussen en de piloten willen niet dat er iets over hun vliegtuigen springt, dus moeten we het maar met mensen doen! Verzamel zoveel mogelijk passagiers en laat ze in een lange rij liggen.]]></item>
-  <item name="av.goal.daily.33.rewardMsg"><![CDATA[Blijkbaar heeft Karel gelogen over zijn kwaliteiten. Hij zegt dat hij drie SPEELGOEDbussen bedoelde. Ik moet me nu verstoppen voor een heleboel met sneeuw bedekte boze passagiers.]]></item>
+
+  <item name="av.goal.daily.33.name"><![CDATA[Ramageddon]]></item>
+  <item name="av.goal.daily.33.hint"><![CDATA[Hé, dingetje! Ik duw de totale ... nou, hoe zeg je dat? Paniek, dat klopt! De radar toont een enorme meteoriet op ramkoers met het vliegveld! Als dat ding ons op de neus raakt, zal het onze site verpletteren als een lading bakstenen. Rood alarm! ROOD ALARM! Evacueer zoveel mogelijk mensen!]]></item>
+  <item name="av.goal.daily.33.rewardMsg"><![CDATA[Oei! Wat gênant zeg... De meteoor op de radar bleek eigenlijk gewoon een... uh... hoe noem je dat ook alweer? Een leverworstvlek. Precies. Vanaf nu eet ik op het werk alleen nog maar bietensoep, dat beloof ik je.]]></item>
+  
   <item name="av.task.daily.33.GetPassengers.name"><![CDATA[Verzamel {number} passagier(s)]]></item>
-  <item name="av.goal.daily.34.name"><![CDATA[Après-ski]]></item>
-  <item name="av.goal.daily.34.hint"><![CDATA[Het is winter en dus is het skiseizoen. Ik moet een heleboel vluchten naar Oostenrijk maken om de skifanaten naar de resorts daar te brengen. Ik ben zelf niet zo'n goede skiër, maar dat geeft niets – iedereen weet dat de après-ski het belangrijkst is! Mooie meiden en glühwein. Daar houdt toch iedereen van?]]></item>
-  <item name="av.goal.daily.34.rewardMsg"><![CDATA[Ja, ik zit voorover in een sneeuwhoop vast. Nee, het was geen ski-ongeluk. Haal me er nu maar gewoon uit!]]></item>
+  
+  <item name="av.goal.daily.34.name"><![CDATA[Dom-Man]]></item>
+  <item name="av.goal.daily.34.hint"><![CDATA[Hé, vriend! De hete meiden in de eurozone houden echt van superhelden, zegt Kurt. En weet je wat? Ik heb altijd al zo'n huiddicht spandex ding over mijn welgevormde pilotenlichaam willen aantrekken. Kom op, laten we naar Europa vliegen en de babes laten zien wat een echte held is. Gordijn omhoog voor de “Propellator”...]]></item>
+  <item name="av.goal.daily.34.rewardMsg"><![CDATA[Nou, dat is... Eerst dacht ik dat de meisjes naar me floten... Maar dan struikel je een paar keer over je cape en opeens fluiten ze je UIT! Ze noemen me nu de “proletariër”. Oké, wat maakt het uit? Tenminste hoef ik geen buik-inriem meer onder mijn superheldenpak te proppen.]]></item>
+  
   <item name="av.task.daily.34.SendPlane.eu.name"><![CDATA[Stuur {number} vliegtuig(en) naar Europa]]></item>
-  <item name="av.goal.daily.35.name"><![CDATA[50 Woorden]]></item>
-  <item name="av.goal.daily.35.hint"><![CDATA[Ik moet naar Alaska vliegen. Wist je dat de Eskimo's vijftig verschillende woorden voor sneeuw hebben? Dat is wel een beetje overdreven zeg, maar ach... Het is wel een goed gespreksonderwerp als ik met een mooie Eskimodame in een iglo zit. Ik weet zeker dat er nog nooit iemand heeft gevraagd om alle vijftig woorden op te noemen.]]></item>
-  <item name="av.goal.daily.35.rewardMsg"><![CDATA[De Eskimodames wilden me een bepaald soort sneeuw laten eten – ik weet de naam niet meer, maar het was gele sneeuw. Nu ben ik misselijk...]]></item>
+
+  <item name="av.goal.daily.35.name"><![CDATA[2024: Een odyssee voor Tariq]]></item>
+  <item name="av.goal.daily.35.hint"><![CDATA[Hé, vriend! De meiden bij Nasa zijn de perfecte brandstof voor een ruimteverkenner van mijn kaliber. Opgestoken blonde manen, modieuze brillen en altijd een veelbelovend klembord in de hand. Wat wil je nog meer? Kom op, laten we naar de VS vliegen en de taarten laten zien hoe onweerstaanbaar oom Tariq is in nul zwaartekracht. Hihihihi...]]></item>
+  <item name="av.goal.daily.35.rewardMsg"><![CDATA[Jemig de pemig! In de shuttle werd ik alleen maar heen en weer geschud! En er waren niet eens stewardessen. Wat is dit voor plek? Nou, zo veel voor de „Cape Carnival“…]]></item>
+  
   <item name="av.task.daily.35.SendPlane.na.name"><![CDATA[Stuur {number} vliegtuig(en) naar Noord-Amerika]]></item>
-  <item name="av.goal.daily.36.name"><![CDATA[Het adembenemende Andesgebergte]]></item>
-  <item name="av.goal.daily.36.hint"><![CDATA[Ik moet naar het Andesgebergte vliegen om een pakketje op te halen. Ik weet niet wat er in die kist zit, maar ze hebben me beloofd dat er geen spinnen, piranha's, slangen of andere enge kruipers in zitten. Het is nu erg koud, dus ik hoop maar dat mijn vliegtuig niet bevriest tijdens de vlucht.]]></item>
-  <item name="av.goal.daily.36.rewardMsg"><![CDATA[De kist wiebelt en kraakt! Ik hoop maar dat hij niet opengaat – oh, nee. Ze zijn ontsnapt. Ze zitten in de cockpit! Oh, het zijn maar cavia's. Eigenlijk zijn ze best wel schattig!]]></item>
+
+  <item name="av.goal.daily.36.name"><![CDATA[Ik hield van een meisje op Mars]]></item>
+  <item name="av.goal.daily.36.hint"><![CDATA[Ik ben er helemaal klaar mee! Aardse meiden zijn zo veeleisend. „Breng de vuilnis buiten!”, „Doe de wc-bril omhoog!”, „Doe de wc-bril omlaag!”, „Bedrieg me niet!” Genoeg van dat drama! In Zuid-Amerika zijn er volop UFO-waarnemingen. Laten we daar meteen heen vliegen. Misschien vinden we die sexy tentakelmeid die me toen uitnodigde in haar UFO.]]></item>
+  <item name="av.goal.daily.36.rewardMsg"><![CDATA[Oh god... wat is er gebeurd? Ik was in een Braziliaanse kroeg en had die knappe Chiquita helemaal ingepakt. En toen... alweer een black-out. Zes dagen later werd ik wakker met een volle baard, een kater en zonder kleingeld in de goot. Dat moesten BUITENAARDSE WEZENS zijn! IK BEN WEER ONTVOERD! Een andere verklaring is er niet...<br><br>Heb je een hoofdpijntablet?]]></item>
+  
   <item name="av.task.daily.36.SendPlane.sa.name"><![CDATA[Stuur {number} vliegtuigen naar Zuid-Amerika]]></item>
-  <item name="av.goal.daily.100.name"><![CDATA[Vliegtuigschaatsen]]></item>
-  <item name="av.goal.daily.100.hint"><![CDATA[Hé, ik speel een geweldig spel op mijn mobieltje. Je moet een pinguïn laten rennen en dan zo ver mogelijk over het ijs laten glijden. Ik had de topscore al gehaald, maar kreeg toen een idee. Als ik het nu eens zou proberen met vliegtuigen? Ik hoef alleen maar een vliegtuig te laten landen en dan zo ver mogelijk door te laten glijden op het ijs! Er kan immers niets mis gaan?]]></item>
-  <item name="av.goal.daily.100.rewardMsg"><![CDATA[Nu mag ik geen vliegtuigen meer laten glijden. Blijkbaar kreeg de manager voor noodgevallen plotseling een hernia. Ach, het was leuk zo lang het duurde!]]></item>
+
+
+  <item name="av.goal.daily.100.name"><![CDATA[Ongelooflijke ontmoeting van de 69e soort]]></item>
+  <item name="av.goal.daily.100.hint"><![CDATA[Hé, ouwe! Lang niet gezien! Zeg... heb jij ook een zwart gat in je geheugen? Gisteravond in de club richtte ik mijn laser op een chick die letterlijk van een andere planeet leek te komen. Groene albasten huid en voelsprieten op haar voorhoofd inbegrepen. En toen... Oh mijn God! Een rode lichtflits... Vliegende schotels... en... HELP! DE SONDE!!! Uh... laten we er na het werk over praten, oké? Ik moet dit eerst even verwerken...]]></item>
+  <item name="av.goal.daily.100.rewardMsg"><![CDATA[Ik kan het niet geloven, ouwe! Ik ben door buitenaardse wezens ontvoerd! Fiona heeft me net verteld dat ik een paar jaar zoek was. Blijkbaar heeft Lin, naast haar werk als Sapbediende, ook mijn baan overgenomen om mijn hachje te redden. Ik geef haar een grote bos bloemen zodra ik mijn eerste date met onze nieuwe luchthaven-therapeute geregeld heb. Zolang het maar geen sterrenbloemen zijn...]]></item>
+  
   <item name="av.task.daily.100.SendPlane.name"><![CDATA[Stuur {number} vliegtuig/en]]></item>
-  <item name="av.goal.daily.101.name"><![CDATA[Super Sneeuwpoppen]]></item>
-  <item name="av.goal.daily.101.hint"><![CDATA[We hebben besloten een sneeuwpoppenwedstrijd te houden! Het wordt geweldig - we hebben categorieën voor volwassenen en kinderen en er zijn geweldige prijzen voor de mooiste sneeuwpoppen. We hebben echter een probleem – de vliegtuigen blijven maar landen en blazen de sneeuwpoppen omver met hun motoren. Kun jij ze voor me afhandelen?]]></item>
-  <item name="av.goal.daily.101.rewardMsg"><![CDATA[De sneeuwpoppenwedstrijd was een succes! Wil je de winnende sneeuwpop zien? Hij lijkt precies op jou! De gelijkenis is griezelig.]]></item>
+
+  <item name="av.goal.daily.101.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.101.hint"><![CDATA[Hé, joh! Die kerel is terug. Je weet wel, Tariq, die piraat. Nee, wacht... piloot! Een paar jaar geleden verdween hij spoorloos na een flinke zuippartij met mijn maat Kurti. Nu beweert hij dat bezoekers uit de ruimte hem hebben verleid... eh, nee... ontvoerd! Of zoiets. Hoe dan ook, onze luchthaven is nu een bedevaartsoord geworden voor aluhoedjes. Regel jij dat even?]]></item>
+  <item name="av.goal.daily.101.rewardMsg"><![CDATA[Nou, dat was makkelijker dan verwacht. Ik had... per ongeluk... de locaties van de Science Fiction Convention in het laadruim van een vliegtuig verplaatst. Nu zijn ze allemaal onderweg naar... ergens. Of nergens. Ach ja, als ze maar niet hier zijn.]]></item>
+  
   <item name="av.task.daily.101.ReturnPlane.name"><![CDATA[Stuur {number} vliegtuig(en) terug]]></item>
-  <item name="av.goal.daily.102.name"><![CDATA[Sno'Joke]]></item>
-  <item name="av.goal.daily.102.hint"><![CDATA[Heb je de nieuwe Sno'Joke sneeuwploeg al gezien? Dat ding is echt geweldig! Hij heeft een titanium schep, een geïntegreerde microprocessor om de helling aan te passen, verwarmingselementen om het ijs te smelten en zelfs wifi in de cabine! Die moeten we hebben voor de luchthaven! Alsjeblieft? Hij kost maar een paar miljoen...]]></item>
-  <item name="av.goal.daily.102.rewardMsg"><![CDATA[We hebben voldoende geld verdiend om een Sno'Joke sneeuwploeg te kopen! Helaas duurde het zo lang dat de sneeuw al vanzelf is gesmolten.]]></item>
+
+  <item name="av.goal.daily.102.name"><![CDATA[Stergeld]]></item>
+  <item name="av.goal.daily.102.hint"><![CDATA[Hoi! Weet je nog hoe Fiona me destijds helemaal van mijn stuk bracht? Dat waren nog eens tijden, hè? Kom, laten we de klok terugdraaien en haar om onze vinger winden, net als vroeger. Zodra we genoeg geld bij elkaar hebben gesprokkeld, koop ik een ster voor haar!]]></item>
+  <item name="av.goal.daily.102.rewardMsg"><![CDATA[Je had haar gezicht moeten zien toen ik die ster recht onder haar neus duwde, hè? Voor mijn liefste is geen afstand te groot... zelfs niet naar de kiosk.]]></item>
+  
   <item name="av.task.daily.102.GetAirCoins.name"><![CDATA[Verzamel {number} Aircoin(s)]]></item>
-  <item name="av.goal.daily.103.name"><![CDATA[Karel de Condor]]></item>
-  <item name="av.goal.daily.103.hint"><![CDATA[Karel beweert dat hij één van de beste skispringers ter wereld is. Hij zegt dat hij in één keer over drie bussen kan springen! Maar we hebben geen bussen en de piloten willen niet dat er iets over hun vliegtuigen springt, dus moeten we het maar met mensen doen! Verzamel zoveel mogelijk passagiers en laat ze in een lange rij liggen.]]></item>
-  <item name="av.goal.daily.103.rewardMsg"><![CDATA[Blijkbaar heeft Karel gelogen over zijn kwaliteiten. Hij zegt dat hij drie SPEELGOEDbussen bedoelde. Ik moet me nu verstoppen voor een heleboel met sneeuw bedekte boze passagiers.]]></item>
+
+  <item name="av.goal.daily.103.name"><![CDATA[Ramageddon]]></item>
+  <item name="av.goal.daily.103.hint"><![CDATA[Hé, dingetje! Ik duw de totale ... nou, hoe zeg je dat? Paniek, dat klopt! De radar toont een enorme meteoriet op ramkoers met het vliegveld! Als dat ding ons op de neus raakt, zal het onze site verpletteren als een lading bakstenen. Rood alarm! ROOD ALARM! Evacueer zoveel mogelijk mensen!]]></item>
+  <item name="av.goal.daily.103.rewardMsg"><![CDATA[Oei! Wat gênant zeg... De meteoor op de radar bleek eigenlijk gewoon een... uh... hoe noem je dat ook alweer? Een leverworstvlek. Precies. Vanaf nu eet ik op het werk alleen nog maar bietensoep, dat beloof ik je.]]></item>
+  
   <item name="av.task.daily.103.GetPassengers.name"><![CDATA[Verzamel {number} passagier(s)]]></item>
-  <item name="av.goal.daily.104.name"><![CDATA[Après-ski]]></item>
-  <item name="av.goal.daily.104.hint"><![CDATA[Het is winter en dus is het skiseizoen. Ik moet een heleboel vluchten naar Oostenrijk maken om de skifanaten naar de resorts daar te brengen. Ik ben zelf niet zo'n goede skiër, maar dat geeft niets – iedereen weet dat de après-ski het belangrijkst is! Mooie meiden en glühwein. Daar houdt toch iedereen van?]]></item>
-  <item name="av.goal.daily.104.rewardMsg"><![CDATA[Ja, ik zit voorover in een sneeuwhoop vast. Nee, het was geen ski-ongeluk. Haal me er nu maar gewoon uit!]]></item>
+  
+  <item name="av.goal.daily.104.name"><![CDATA[Dom-Man]]></item>
+  <item name="av.goal.daily.104.hint"><![CDATA[Hé, vriend! De hete meiden in de eurozone houden echt van superhelden, zegt Kurt. En weet je wat? Ik heb altijd al zo'n huiddicht spandex ding over mijn welgevormde pilotenlichaam willen aantrekken. Kom op, laten we naar Europa vliegen en de babes laten zien wat een echte held is. Gordijn omhoog voor de “Propellator”...]]></item>
+  <item name="av.goal.daily.104.rewardMsg"><![CDATA[Nou, dat is... Eerst dacht ik dat de meisjes naar me floten... Maar dan struikel je een paar keer over je cape en opeens fluiten ze je UIT! Ze noemen me nu de “proletariër”. Oké, wat maakt het uit? Tenminste hoef ik geen buik-inriem meer onder mijn superheldenpak te proppen.]]></item>
+  
   <item name="av.task.daily.104.SendPlane.eu.name"><![CDATA[Stuur {number} vliegtuig(en) naar Europa]]></item>
-  <item name="av.goal.daily.105.name"><![CDATA[50 Woorden]]></item>
-  <item name="av.goal.daily.105.hint"><![CDATA[Ik moet naar Alaska vliegen. Wist je dat de Eskimo's vijftig verschillende woorden voor sneeuw hebben? Dat is wel een beetje overdreven zeg, maar ach... Het is wel een goed gespreksonderwerp als ik met een mooie Eskimodame in een iglo zit. Ik weet zeker dat er nog nooit iemand heeft gevraagd om alle vijftig woorden op te noemen.]]></item>
-  <item name="av.goal.daily.105.rewardMsg"><![CDATA[De Eskimodames wilden me een bepaald soort sneeuw laten eten – ik weet de naam niet meer, maar het was gele sneeuw. Nu ben ik misselijk...]]></item>
+
+  <item name="av.goal.daily.105.name"><![CDATA[2024: Een odyssee voor Tariq]]></item>
+  <item name="av.goal.daily.105.hint"><![CDATA[Hé, vriend! De meiden bij Nasa zijn de perfecte brandstof voor een ruimteverkenner van mijn kaliber. Opgestoken blonde manen, modieuze brillen en altijd een veelbelovend klembord in de hand. Wat wil je nog meer? Kom op, laten we naar de VS vliegen en de taarten laten zien hoe onweerstaanbaar oom Tariq is in nul zwaartekracht. Hihihihi...]]></item>
+  <item name="av.goal.daily.105.rewardMsg"><![CDATA[Jemig de pemig! In de shuttle werd ik alleen maar heen en weer geschud! En er waren niet eens stewardessen. Wat is dit voor plek? Nou, zo veel voor de „Cape Carnival“…]]></item>
+  
   <item name="av.task.daily.105.SendPlane.na.name"><![CDATA[Stuur {number} vliegtuig(en) naar Noord-Amerika]]></item>
-  <item name="av.goal.daily.106.name"><![CDATA[Het adembenemende Andesgebergte]]></item>
-  <item name="av.goal.daily.106.hint"><![CDATA[Ik moet naar het Andesgebergte vliegen om een pakketje op te halen. Ik weet niet wat er in die kist zit, maar ze hebben me beloofd dat er geen spinnen, piranha's, slangen of andere enge kruipers in zitten. Het is nu erg koud, dus ik hoop maar dat mijn vliegtuig niet bevriest tijdens de vlucht.]]></item>
-  <item name="av.goal.daily.106.rewardMsg"><![CDATA[De kist wiebelt en kraakt! Ik hoop maar dat hij niet opengaat – oh, nee. Ze zijn ontsnapt. Ze zitten in de cockpit! Oh, het zijn maar cavia's. Eigenlijk zijn ze best wel schattig!]]></item>
+
+  <item name="av.goal.daily.106.name"><![CDATA[Ik hield van een meisje op Mars]]></item>
+  <item name="av.goal.daily.106.hint"><![CDATA[Ik ben er helemaal klaar mee! Aardse meiden zijn zo veeleisend. „Breng de vuilnis buiten!”, „Doe de wc-bril omhoog!”, „Doe de wc-bril omlaag!”, „Bedrieg me niet!” Genoeg van dat drama! In Zuid-Amerika zijn er volop UFO-waarnemingen. Laten we daar meteen heen vliegen. Misschien vinden we die sexy tentakelmeid die me toen uitnodigde in haar UFO.]]></item>
+  <item name="av.goal.daily.106.rewardMsg"><![CDATA[Oh god... wat is er gebeurd? Ik was in een Braziliaanse kroeg en had die knappe Chiquita helemaal ingepakt. En toen... alweer een black-out. Zes dagen later werd ik wakker met een volle baard, een kater en zonder kleingeld in de goot. Dat moesten BUITENAARDSE WEZENS zijn! IK BEN WEER ONTVOERD! Een andere verklaring is er niet...<br><br>Heb je een hoofdpijntablet?]]></item>
+  
   <item name="av.task.daily.106.SendPlane.sa.name"><![CDATA[Stuur {number} vliegtuigen naar Zuid-Amerika]]></item>
+  
   <item name="av.goal.daily.107.name"><![CDATA[Zakelijke uitdaging]]></item>
   <item name="av.goal.daily.107.hint"><![CDATA[De internationale winkeliersorganisatie heeft een wedstrijd afgekondigd waaraan iedereen mee kan dooen. Als het je dus lukt om vandaag de gevraagde hoeveelheid producten te verkopen, krijg je een lekkere prijs!]]></item>
   <item name="av.goal.daily.107.rewardMsg"><![CDATA[Gefeliciteerd! Je kon deze uitdaging aan en hier is je beloning. Je hebt het verdiend!]]></item>
   <item name="av.task.daily.107.SellProducts.name"><![CDATA[Verkoop {number} product(en)]]></item>
-  <item name="av.goal.daily.200.name"><![CDATA[Vliegtuigschaatsen]]></item>
-  <item name="av.goal.daily.200.hint"><![CDATA[Hé, ik speel een geweldig spel op mijn mobieltje. Je moet een pinguïn laten rennen en dan zo ver mogelijk over het ijs laten glijden. Ik had de topscore al gehaald, maar kreeg toen een idee. Als ik het nu eens zou proberen met vliegtuigen? Ik hoef alleen maar een vliegtuig te laten landen en dan zo ver mogelijk door te laten glijden op het ijs! Er kan immers niets mis gaan?]]></item>
-  <item name="av.goal.daily.200.rewardMsg"><![CDATA[Nu mag ik geen vliegtuigen meer laten glijden. Blijkbaar kreeg de manager voor noodgevallen plotseling een hernia. Ach, het was leuk zo lang het duurde!]]></item>
+
+
+  <item name="av.goal.daily.200.name"><![CDATA[Ongelooflijke ontmoeting van de 69e soort]]></item>
+  <item name="av.goal.daily.200.hint"><![CDATA[Hé, ouwe! Lang niet gezien! Zeg... heb jij ook een zwart gat in je geheugen? Gisteravond in de club richtte ik mijn laser op een chick die letterlijk van een andere planeet leek te komen. Groene albasten huid en voelsprieten op haar voorhoofd inbegrepen. En toen... Oh mijn God! Een rode lichtflits... Vliegende schotels... en... HELP! DE SONDE!!! Uh... laten we er na het werk over praten, oké? Ik moet dit eerst even verwerken...]]></item>
+  <item name="av.goal.daily.200.rewardMsg"><![CDATA[Ik kan het niet geloven, ouwe! Ik ben door buitenaardse wezens ontvoerd! Fiona heeft me net verteld dat ik een paar jaar zoek was. Blijkbaar heeft Lin, naast haar werk als Sapbediende, ook mijn baan overgenomen om mijn hachje te redden. Ik geef haar een grote bos bloemen zodra ik mijn eerste date met onze nieuwe luchthaven-therapeute geregeld heb. Zolang het maar geen sterrenbloemen zijn...]]></item>
+  
   <item name="av.task.daily.200.SendPlane.name"><![CDATA[Stuur {number} vliegtuig/en]]></item>
-  <item name="av.goal.daily.201.name"><![CDATA[Super Sneeuwpoppen]]></item>
-  <item name="av.goal.daily.201.hint"><![CDATA[We hebben besloten een sneeuwpoppenwedstrijd te houden! Het wordt geweldig - we hebben categorieën voor volwassenen en kinderen en er zijn geweldige prijzen voor de mooiste sneeuwpoppen. We hebben echter een probleem – de vliegtuigen blijven maar landen en blazen de sneeuwpoppen omver met hun motoren. Kun jij ze voor me afhandelen?]]></item>
-  <item name="av.goal.daily.201.rewardMsg"><![CDATA[De sneeuwpoppenwedstrijd was een succes! Wil je de winnende sneeuwpop zien? Hij lijkt precies op jou! De gelijkenis is griezelig.]]></item>
+
+  <item name="av.goal.daily.201.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.201.hint"><![CDATA[Hé, joh! Die kerel is terug. Je weet wel, Tariq, die piraat. Nee, wacht... piloot! Een paar jaar geleden verdween hij spoorloos na een flinke zuippartij met mijn maat Kurti. Nu beweert hij dat bezoekers uit de ruimte hem hebben verleid... eh, nee... ontvoerd! Of zoiets. Hoe dan ook, onze luchthaven is nu een bedevaartsoord geworden voor aluhoedjes. Regel jij dat even?]]></item>
+  <item name="av.goal.daily.201.rewardMsg"><![CDATA[Nou, dat was makkelijker dan verwacht. Ik had... per ongeluk... de locaties van de Science Fiction Convention in het laadruim van een vliegtuig verplaatst. Nu zijn ze allemaal onderweg naar... ergens. Of nergens. Ach ja, als ze maar niet hier zijn.]]></item>
+  
   <item name="av.task.daily.201.ReturnPlane.name"><![CDATA[Stuur {number} vliegtuig(en) terug]]></item>
-  <item name="av.goal.daily.202.name"><![CDATA[Sno'Joke]]></item>
-  <item name="av.goal.daily.202.hint"><![CDATA[Heb je de nieuwe Sno'Joke sneeuwploeg al gezien? Dat ding is echt geweldig! Hij heeft een titanium schep, een geïntegreerde microprocessor om de helling aan te passen, verwarmingselementen om het ijs te smelten en zelfs wifi in de cabine! Die moeten we hebben voor de luchthaven! Alsjeblieft? Hij kost maar een paar miljoen...]]></item>
-  <item name="av.goal.daily.202.rewardMsg"><![CDATA[We hebben voldoende geld verdiend om een Sno'Joke sneeuwploeg te kopen! Helaas duurde het zo lang dat de sneeuw al vanzelf is gesmolten.]]></item>
+
+  <item name="av.goal.daily.202.name"><![CDATA[Stergeld]]></item>
+  <item name="av.goal.daily.202.hint"><![CDATA[Hoi! Weet je nog hoe Fiona me destijds helemaal van mijn stuk bracht? Dat waren nog eens tijden, hè? Kom, laten we de klok terugdraaien en haar om onze vinger winden, net als vroeger. Zodra we genoeg geld bij elkaar hebben gesprokkeld, koop ik een ster voor haar!]]></item>
+  <item name="av.goal.daily.202.rewardMsg"><![CDATA[Je had haar gezicht moeten zien toen ik die ster recht onder haar neus duwde, hè? Voor mijn liefste is geen afstand te groot... zelfs niet naar de kiosk.]]></item>
+  
   <item name="av.task.daily.202.GetAirCoins.name"><![CDATA[Verzamel {number} Aircoin(s)]]></item>
-  <item name="av.goal.daily.203.name"><![CDATA[Karel de Condor]]></item>
-  <item name="av.goal.daily.203.hint"><![CDATA[Karel beweert dat hij één van de beste skispringers ter wereld is. Hij zegt dat hij in één keer over drie bussen kan springen! Maar we hebben geen bussen en de piloten willen niet dat er iets over hun vliegtuigen springt, dus moeten we het maar met mensen doen! Verzamel zoveel mogelijk passagiers en laat ze in een lange rij liggen.]]></item>
-  <item name="av.goal.daily.203.rewardMsg"><![CDATA[Blijkbaar heeft Karel gelogen over zijn kwaliteiten. Hij zegt dat hij drie SPEELGOEDbussen bedoelde. Ik moet me nu verstoppen voor een heleboel met sneeuw bedekte boze passagiers.]]></item>
+
+  <item name="av.goal.daily.203.name"><![CDATA[Ramageddon]]></item>
+  <item name="av.goal.daily.203.hint"><![CDATA[Hé, dingetje! Ik duw de totale ... nou, hoe zeg je dat? Paniek, dat klopt! De radar toont een enorme meteoriet op ramkoers met het vliegveld! Als dat ding ons op de neus raakt, zal het onze site verpletteren als een lading bakstenen. Rood alarm! ROOD ALARM! Evacueer zoveel mogelijk mensen!]]></item>
+  <item name="av.goal.daily.203.rewardMsg"><![CDATA[Oei! Wat gênant zeg... De meteoor op de radar bleek eigenlijk gewoon een... uh... hoe noem je dat ook alweer? Een leverworstvlek. Precies. Vanaf nu eet ik op het werk alleen nog maar bietensoep, dat beloof ik je.]]></item>
+  
   <item name="av.task.daily.203.GetPassengers.name"><![CDATA[Verzamel {number} passagier(s)]]></item>
-  <item name="av.goal.daily.204.name"><![CDATA[Après-ski]]></item>
-  <item name="av.goal.daily.204.hint"><![CDATA[Het is winter en dus is het skiseizoen. Ik moet een heleboel vluchten naar Oostenrijk maken om de skifanaten naar de resorts daar te brengen. Ik ben zelf niet zo'n goede skiër, maar dat geeft niets – iedereen weet dat de après-ski het belangrijkst is! Mooie meiden en glühwein. Daar houdt toch iedereen van?]]></item>
-  <item name="av.goal.daily.204.rewardMsg"><![CDATA[Ja, ik zit voorover in een sneeuwhoop vast. Nee, het was geen ski-ongeluk. Haal me er nu maar gewoon uit!]]></item>
+  
+  <item name="av.goal.daily.204.name"><![CDATA[Dom-Man]]></item>
+  <item name="av.goal.daily.204.hint"><![CDATA[Hé, vriend! De hete meiden in de eurozone houden echt van superhelden, zegt Kurt. En weet je wat? Ik heb altijd al zo'n huiddicht spandex ding over mijn welgevormde pilotenlichaam willen aantrekken. Kom op, laten we naar Europa vliegen en de babes laten zien wat een echte held is. Gordijn omhoog voor de “Propellator”...]]></item>
+  <item name="av.goal.daily.204.rewardMsg"><![CDATA[Nou, dat is... Eerst dacht ik dat de meisjes naar me floten... Maar dan struikel je een paar keer over je cape en opeens fluiten ze je UIT! Ze noemen me nu de “proletariër”. Oké, wat maakt het uit? Tenminste hoef ik geen buik-inriem meer onder mijn superheldenpak te proppen.]]></item>
+  
   <item name="av.task.daily.204.SendPlane.eu.name"><![CDATA[Stuur {number} vliegtuig(en) naar Europa]]></item>
-  <item name="av.goal.daily.205.name"><![CDATA[50 Woorden]]></item>
-  <item name="av.goal.daily.205.hint"><![CDATA[Ik moet naar Alaska vliegen. Wist je dat de Eskimo's vijftig verschillende woorden voor sneeuw hebben? Dat is wel een beetje overdreven zeg, maar ach... Het is wel een goed gespreksonderwerp als ik met een mooie Eskimodame in een iglo zit. Ik weet zeker dat er nog nooit iemand heeft gevraagd om alle vijftig woorden op te noemen.]]></item>
-  <item name="av.goal.daily.205.rewardMsg"><![CDATA[De Eskimodames wilden me een bepaald soort sneeuw laten eten – ik weet de naam niet meer, maar het was gele sneeuw. Nu ben ik misselijk...]]></item>
+
+  <item name="av.goal.daily.205.name"><![CDATA[2024: Een odyssee voor Tariq]]></item>
+  <item name="av.goal.daily.205.hint"><![CDATA[Hé, vriend! De meiden bij Nasa zijn de perfecte brandstof voor een ruimteverkenner van mijn kaliber. Opgestoken blonde manen, modieuze brillen en altijd een veelbelovend klembord in de hand. Wat wil je nog meer? Kom op, laten we naar de VS vliegen en de taarten laten zien hoe onweerstaanbaar oom Tariq is in nul zwaartekracht. Hihihihi...]]></item>
+  <item name="av.goal.daily.205.rewardMsg"><![CDATA[Jemig de pemig! In de shuttle werd ik alleen maar heen en weer geschud! En er waren niet eens stewardessen. Wat is dit voor plek? Nou, zo veel voor de „Cape Carnival“…]]></item>
+  
   <item name="av.task.daily.205.SendPlane.na.name"><![CDATA[Stuur {number} vliegtuig(en) naar Noord-Amerika]]></item>
-  <item name="av.goal.daily.206.name"><![CDATA[Het adembenemende Andesgebergte]]></item>
-  <item name="av.goal.daily.206.hint"><![CDATA[Ik moet naar het Andesgebergte vliegen om een pakketje op te halen. Ik weet niet wat er in die kist zit, maar ze hebben me beloofd dat er geen spinnen, piranha's, slangen of andere enge kruipers in zitten. Het is nu erg koud, dus ik hoop maar dat mijn vliegtuig niet bevriest tijdens de vlucht.]]></item>
-  <item name="av.goal.daily.206.rewardMsg"><![CDATA[De kist wiebelt en kraakt! Ik hoop maar dat hij niet opengaat – oh, nee. Ze zijn ontsnapt. Ze zitten in de cockpit! Oh, het zijn maar cavia's. Eigenlijk zijn ze best wel schattig!]]></item>
+
+  <item name="av.goal.daily.206.name"><![CDATA[Ik hield van een meisje op Mars]]></item>
+  <item name="av.goal.daily.206.hint"><![CDATA[Ik ben er helemaal klaar mee! Aardse meiden zijn zo veeleisend. „Breng de vuilnis buiten!”, „Doe de wc-bril omhoog!”, „Doe de wc-bril omlaag!”, „Bedrieg me niet!” Genoeg van dat drama! In Zuid-Amerika zijn er volop UFO-waarnemingen. Laten we daar meteen heen vliegen. Misschien vinden we die sexy tentakelmeid die me toen uitnodigde in haar UFO.]]></item>
+  <item name="av.goal.daily.206.rewardMsg"><![CDATA[Oh god... wat is er gebeurd? Ik was in een Braziliaanse kroeg en had die knappe Chiquita helemaal ingepakt. En toen... alweer een black-out. Zes dagen later werd ik wakker met een volle baard, een kater en zonder kleingeld in de goot. Dat moesten BUITENAARDSE WEZENS zijn! IK BEN WEER ONTVOERD! Een andere verklaring is er niet...<br><br>Heb je een hoofdpijntablet?]]></item>
+  
   <item name="av.task.daily.206.SendPlane.sa.name"><![CDATA[Stuur {number} vliegtuigen naar Zuid-Amerika]]></item>
+
+  
   <item name="av.goal.daily.207.name"><![CDATA[Zakelijke uitdaging]]></item>
   <item name="av.goal.daily.207.hint"><![CDATA[De internationale winkeliersorganisatie heeft een wedstrijd afgekondigd waaraan iedereen mee kan dooen. Als het je dus lukt om vandaag de gevraagde hoeveelheid producten te verkopen, krijg je een lekkere prijs!]]></item>
   <item name="av.goal.daily.207.rewardMsg"><![CDATA[Gefeliciteerd! Je kon deze uitdaging aan en hier is je beloning. Je hebt het verdiend!]]></item>

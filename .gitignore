@@ -1,3 +1,9 @@
+# Skyrama Private Server specific
+data/users/*
+!data/users/nametoid/
+data/users/nametoid/*
+!data/users/nametoid/.gitkeep
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -158,10 +164,5 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
-data/61272264Michielvde.json
-data/61272264Michielvde.json
-data/61272264Michielvde.json
-data/69291424Michielvde2.json
-data/71356066Michielvde.json
-test.txt
-data/24520838TestingTuto.json
+
+*.ignore

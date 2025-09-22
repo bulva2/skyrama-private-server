@@ -255,4 +255,17 @@
   <item name="av.skyrace2017.text"><![CDATA[Ты готов покорить небеса? Соревнуйся в Высотных гонках и покажи всем, что ты лучший пилот в Skyrama!]]></item>
   <item name="av.skyrace2017.mouseover"><![CDATA[Ура! В Skyrama начались Высотные гонки! Пора задействовать скоростной переключатель!]]></item>
  </category>
+ 
+ <category name="av.spaceevent2024">
+  <item name="av.spaceevent2024.title"><![CDATA[Галактические недели]]></item>
+  <item name="av.spaceevent2024.text"><![CDATA[В этом галактическом событии Тарик сбил с неба армаду крутых космических кораблей. Теперь он приглашает вас пройти семь квестов и окунуться в его футуристические будни в аэропорту. Отправляйтесь в космическое будущее, полное приключений!]]></item>
+  <item name="av.spaceevent2024.mouseover"><![CDATA[Звезды зовут! Запускай двигатели и завоевывай вселенную с головокружительной скоростью!]]></item>
+ </category>
+ 
+ <category name="av.birthdayevent2025">
+  <item name="av.birthdayevent2025.title"><![CDATA[Saturday Nightflight]]></item>
+  <item name="av.birthdayevent2025.text"><![CDATA[Skyrama исполняется 14 лет – блондинистые волосы не обязательны. Бёдра дрожат, бит вибрирует, а спасательные круги покачиваются в ритме. Побалуй себя шипучим Aerosol Spritz и другими игривыми коктейлями на этом праздничном полёте. На взлётную полосу – и скользи прямо в удовольствие!]]></item>
+  <item name="av.birthdayevent2025.mouseover"><![CDATA[Свет выключен, прожектор включён! Saturday Nightflight взлетает – пункт назначения: сверхсекретная бикини-зона. Вход только с эффектной работой бёдер!]]></item>
+ </category> 
+ 
 </language>

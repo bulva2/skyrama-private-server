@@ -65,94 +65,143 @@
   <item name="av.goal.daily.28.hint"><![CDATA[Provocarea de astăzi se axează pe colectarea pasagerilor. Îndeplineşte această sarcină, te aşteaptă un premiu minunat!]]></item>
   <item name="av.goal.daily.28.rewardMsg"><![CDATA[Ai îndeplinit sarcina cu brio. Felicitări! Iată-ţi binemeritata recompensă!]]></item>
   <item name="av.task.daily.28.GetPassengers.name"><![CDATA[Colectează {number} pasager(i)]]></item>
-  <item name="av.goal.daily.30.name"><![CDATA[Cu avionul pe gheţuş]]></item>
-  <item name="av.goal.daily.30.hint"><![CDATA[Hei, ai jucat pe mobil jocul cu pinguinul? Mie îmi place mult. Trebuie să-l faci să alerge pe o cărare şi apoi să alunece pe gheaţă cât mai departe. Am deja punctajul maxim şi mi-a venit o idee. Ce-ar fi să încerc chestia asta cu un avion? Nu trebuie decât să aterizez şi să-l las să patineze. Cred că ar fi distractiv... şi nu văd ce probleme ar putea să apară.]]></item>
-  <item name="av.goal.daily.30.rewardMsg"><![CDATA[Mi s-a interzis să mă dau cu avionul pe gheaţă. Pare-se că şeful de la serviciul de urgenţă a făcut brusc hernie. Păcat, a fost tare de tot!]]></item>
+  
+
+  <item name="av.goal.daily.30.name"><![CDATA[Incrível encontro do 69º tipo]]></item>
+  <item name="av.goal.daily.30.hint"><![CDATA[Hei, amice. De când nu ne-am mai văzut! Apropo... ai și tu o pană de memorie? Ieri seară, în club, am fixat o tipă ca din altă lume. Piele de alabastru verde și antene pe frunte, inclusiv. Și apoi... Doamne Dumnezeule! O lumină roșie... Farfurii zburătoare... și... AJUTOR! SONDĂĂĂ!!! Hm... vorbim după muncă, bine? Trebuie să diger asta...]]></item>
+  <item name="av.goal.daily.30.rewardMsg"><![CDATA[Nu-mi vine să cred, amice! Am fost răpit de extratereștri! Fiona tocmai mi-a spus că am fost dispărut câțiva ani. Se pare că Lin, pe lângă împinsul de sucuri, a preluat și slujba mea ca să-mi salveze pielea. O să-i ofer un buchet mare de flori imediat ce reușesc să organizez prima întâlnire cu noua noastră terapeută de la aeroport. Atâta timp cât nu sunt flori stelare...]]></item>
+  
   <item name="av.task.daily.30.SendPlane.name"><![CDATA[Trimite {number} avioane]]></item>
-  <item name="av.goal.daily.31.name"><![CDATA[Puzderie de oameni de zăpadă]]></item>
-  <item name="av.goal.daily.31.hint"><![CDATA[Am hotărât să organizăm un concurs de făcut oameni de zăpadă! Va fi fantastic, vom avea o categorie pentru adulţi şi una pentru copii, iar pentru cei mai reuşiţi oameni de zăpadă vom acorda premii trăsnet. Avioanele astea ne încurcă însă planurile. Când aterizează, ne spulberă toţi oamenii de zăpadă. Scapi tu de ele, dacă te rog frumos?]]></item>
-  <item name="av.goal.daily.31.rewardMsg"><![CDATA[Concursul de făcut oameni de zăpadă a avut un mare succes! Vrei să-l vezi pe cel care a primit marele premiu? Seamănă leit cu tine! Brrr, cam straniu... mă ia cu fiori.]]></item>
+
+  <item name="av.goal.daily.31.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.31.hint"><![CDATA[Hei, tu acolo! Tipul ăsta s-a întors. Știi despre cine vorbesc, nu-i așa? Tariq, piratul... Nu, stai. Pilotul. Acum câțiva ani, a dispărut fără urmă după o beție cruntă cu Kurti al meu. Acum susține că a fost sedus... ah, nu, răpit de vizitatori din spațiu. Sau ceva de genul. Oricum, aeroportul nostru a devenit acum un loc de pelerinaj pentru purtătorii de pălării de aluminiu. Ocupă-te de asta!]]></item>
+  <item name="av.goal.daily.31.rewardMsg"><![CDATA[Ei bine, asta a fost mai simplu decât mă așteptam. Am avut ... mutat din greșeală ... locurile de desfășurare ale Convenției Science Fiction în cala unui avion. Acum toate sunt în drum spre... undeva. Sau nicăieri. În fine. Principalul lucru nu este aici.]]></item>
+  
   <item name="av.task.daily.31.ReturnPlane.name"><![CDATA[Returnează {number} avioane]]></item>
-  <item name="av.goal.daily.32.name"><![CDATA[Sno’Joke]]></item>
-  <item name="av.goal.daily.32.hint"><![CDATA[Ai văzut noul plug de zăpadă Sno’Joke? O, e nemaipomenit! Are cupa placată cu titan, un microprocesor pentru ajustarea înclinării, filamente fierbinţi care topesc zăpada.. şi chiar şi Wi-Fi în cabină! Musai să luăm unul pentru aeroport! Hai, te rog mult! Nu costă decât vreo câteva milioane de parale...]]></item>
-  <item name="av.goal.daily.32.rewardMsg"><![CDATA[În fine avem bani suficienţi pentru un Sno’Joke. Ce păcat că a durat atât de mult! Uite, s-a topit toată zăpada.]]></item>
+  
+  <item name="av.goal.daily.32.name"><![CDATA[Moneda Stelelor]]></item>
+  <item name="av.goal.daily.32.hint"><![CDATA[Salut! Îți mai amintești cum m-a scos Fiona din minți atunci? Alea chiar erau vremuri bune, nu? Hai să dăm timpul înapoi și să o cucerim din nou, ca pe vremuri. De îndată ce strângem destui bani, îi cumpăr o stea!]]></item>
+  <item name="av.goal.daily.32.rewardMsg"><![CDATA[Dar micuța a făcut ochii mari când i-am pus steaua în fața nasului, nu-i așa? Pentru iubita mea, niciun drum nu e prea lung... nici măcar până la chioșc.]]></item>
+    
   <item name="av.task.daily.32.GetAirCoins.name"><![CDATA[Colectează {number} AirCoin]]></item>
-  <item name="av.goal.daily.33.name"><![CDATA[Fenomenul Florin]]></item>
-  <item name="av.goal.daily.33.hint"><![CDATA[Florin se dă bun la săritura cu schiurile. Imaginează-ţi, pretinde că poate sări peste trei autobuze deodată! Autobuze nu avem, iar piloţii s-ar face foc şi pară dacă ar sări cineva peste avioanele lor. Va trebui să ne mulţumim cu oameni! Adună cât mai mulţi pasageri şi culcă-i la pământ în linie dreaptă.]]></item>
-  <item name="av.goal.daily.33.rewardMsg"><![CDATA[Ştiam eu că Florin ne îmbrobodeşte cu talentul lui la sărit cu schiurile. Acum zice că se referea la trei autobuze de jucărie. Pasagerii noştri sunt furioşi, aşa că ar trebui să mă ascund undeva.]]></item>
+  
+  <item name="av.goal.daily.33.name"><![CDATA[Ramageddon]]></item>
+  <item name="av.goal.daily.33.hint"><![CDATA[Hei, tu acolo! Sunt într-un total... cum îi zice? Panică, exact! Radarul arată un meteorit uriaș pe curs de coliziune cu aeroportul! Dacă chestia aia ne lovește în nas, ne va zdrobi site-ul ca o grămadă de cărămizi. Cod roșu! COD ROȘU! Evacuează cât mai mulți oameni poți!]]></item>
+  <item name="av.goal.daily.33.rewardMsg"><![CDATA[Wow! Cât de jenant, dar și ... Meteoritul de pe radar a fost de fapt doar un... uhh... cum se spune? Pată de cârnat. Exact. De acum înainte voi mânca doar supă de sfeclă la serviciu, vă promit asta.]]></item>
+  
   <item name="av.task.daily.33.GetPassengers.name"><![CDATA[Colectează {number} pasager(i)]]></item>
-  <item name="av.goal.daily.34.name"><![CDATA[Après-ski]]></item>
-  <item name="av.goal.daily.34.hint"><![CDATA[Iarna şi-a intrat în drepturi şi s-a deschis sezonul de schi. Trebuie să fac o mulţime de zboruri în Austria, ca să-i duc pe amatori în staţiunile de acolo. Eu personal nu le prea am cu schiurile, dar ce contează? Toată lumea ştie că important este ce se întâmplă după schiat. Dudui cu bujori în obrăjori şi vin fiert. Cum să nu-mi placă?]]></item>
-  <item name="av.goal.daily.34.rewardMsg"><![CDATA[Da, sunt blocat într-un troian... cu capu-n jos. Nu, nu a fost un accident. Scoate-mă odată de aici!]]></item>
+  
+  <item name="av.goal.daily.34.name"><![CDATA[Idiot-Man!]]></item>
+  <item name="av.goal.daily.34.hint"><![CDATA[Hei, amice! Kurt zice că fetele din zona euro sunt înnebunite după supereroi. Și știi ceva? Întotdeauna mi-am dorit să îmbrac un costum strâmt de spandex ca să-mi arăt trupul bine lucrat de pilot. Hai să mergem în Europa și să le arătăm gagicilor ce înseamnă un adevărat erou. Cortina sus pentru „Propellator”...]]></item>
+  <item name="av.goal.daily.34.rewardMsg"><![CDATA[Adică, serios... La început am crezut că fetele fluieră după mine... Dar apoi te împiedici de câteva ori de pelerină și, dintr-odată, încep să te huiduie! Acum îmi spun „proletarul”. Eh, pe cine interesează? Măcar nu mai trebuie să-mi strâng burta într-un corset sub costumul de supererou.]]></item>
+  
   <item name="av.task.daily.34.SendPlane.eu.name"><![CDATA[Trimite {number} avioane în Europa]]></item>
-  <item name="av.goal.daily.35.name"><![CDATA[50 de cuvinte]]></item>
-  <item name="av.goal.daily.35.hint"><![CDATA[Trebuie să zbor în Alaska. Ştiai că în limba eschimoşilor există 50 de cuvinte pentru zăpadă? De fapt, e discutabil şi tocmai asta e ideea. E un bun subiect de discuţie... cu o eschimoasă chipeşă, într-un iglu călduţ... Nimeni nu le-a mai cerut vreodată să spună toate cele 50 de cuvinte.]]></item>
-  <item name="av.goal.daily.35.rewardMsg"><![CDATA[Eschimoasele mi-au recomandat să mănânc un anumit fel de zăpadă. Nu-mi amintesc cum îi spuneau, dar era galbenă. Acum mi-e rău de la stomac...]]></item>
+  
+  <item name="av.goal.daily.35.name"><![CDATA[2024: O odisee Tariq]]></item>
+  <item name="av.goal.daily.35.hint"><![CDATA[Hei, amice! Puicuțele de la Nasa sunt combustibilul perfect pentru un explorator spațial de calibrul meu. Coafuri blonde aranjate, ochelari la modă și întotdeauna un clipboard promițător în mână. Ce ți-ai putea dori mai mult? Haideți, să zburăm în SUA și să le arătăm prăjiturilor cât de irezistibil este unchiul Tariq în gravitație zero. Hihihihihihihi...]]></item>
+  <item name="av.goal.daily.35.rewardMsg"><![CDATA[Mamă, ce șoc! Am fost zdruncinat de tot în navetă! Și nici măcar nu aveau însoțitoare de bord. Ce fel de firmă mai e și asta? Atât despre faimosul „Carnaval de la Capă”…]]></item>
+  
   <item name="av.task.daily.35.SendPlane.na.name"><![CDATA[Trimite {number} avioane în America de Nord]]></item>
-  <item name="av.goal.daily.36.name"><![CDATA[Uluitorii Anzi]]></item>
-  <item name="av.goal.daily.36.hint"><![CDATA[Trebuie să zbor în Anzi, după un colet. Nu ştiu ce-i înăuntru, dar mi s-a garantat că nu sunt păianjeni, piranha, şerpi sau alte târâtoare. E cam răcoare acolo, sper să n-am probleme cu jivrajul.]]></item>
-  <item name="av.goal.daily.36.rewardMsg"><![CDATA[Coletul se mişcă! Of, sper că nu se deschide... stai, au ieşit! Sunt în carlingă! O, sunt doar porcuşori de Guinea. Ha-ha, sunt chiar simpatici!]]></item>
+  
+  <item name="av.goal.daily.36.name"><![CDATA[Am iubit o fată de pe Marte]]></item>
+  <item name="av.goal.daily.36.hint"><![CDATA[M-am săturat până peste cap! Fetele de pe Pământ sunt atât de pretențioase. „Du gunoiul afară!”, «Îndoaie capacul de la toaletă în sus!», «Îndoaie capacul de la toaletă în jos!» „Să nu mă înșeli!”. Gata cu teatrul! În America de Sud sunt o grămadă de observații de OZN-uri. Hai să zburăm direct acolo. Poate o vom găsi pe tipa sexy cu tentacule care m-a invitat în OZN-ul ei atunci.]]></item>
+  <item name="av.goal.daily.36.rewardMsg"><![CDATA[Doamne... ce s-a întâmplat? Eram într-un bar brazilian și încercam să cuceresc o Chiquita drăguță. Apoi... iarăși un gol total. 6 zile mai târziu, m-am trezit cu barbă mare, duh de alcool și fără un ban în buzunar, într-un șanț. Erau EXTRATEREȘTRI! AM FOST RĂPIT DIN NOU! Nu există altă explicație...<br><br>Ai un comprimat pentru durerea de cap?]]></item>
+    
   <item name="av.task.daily.36.SendPlane.sa.name"><![CDATA[Trimite {number} avioane în America de Sud]]></item>
-  <item name="av.goal.daily.100.name"><![CDATA[Cu avionul pe gheţuş]]></item>
-  <item name="av.goal.daily.100.hint"><![CDATA[Hei, ai jucat pe mobil jocul cu pinguinul? Mie îmi place mult. Trebuie să-l faci să alerge pe o cărare şi apoi să alunece pe gheaţă cât mai departe. Am deja punctajul maxim şi mi-a venit o idee. Ce-ar fi să încerc chestia asta cu un avion? Nu trebuie decât să aterizez şi să-l las să patineze. Cred că ar fi distractiv... şi nu văd ce probleme ar putea să apară.]]></item>
-  <item name="av.goal.daily.100.rewardMsg"><![CDATA[Mi s-a interzis să mă dau cu avionul pe gheaţă. Pare-se că şeful de la serviciul de urgenţă a făcut brusc hernie. Păcat, a fost tare de tot!]]></item>
+  
+
+  <item name="av.goal.daily.100.name"><![CDATA[Incrível encontro do 69º tipo]]></item>
+  <item name="av.goal.daily.100.hint"><![CDATA[Hei, amice. De când nu ne-am mai văzut! Apropo... ai și tu o pană de memorie? Ieri seară, în club, am fixat o tipă ca din altă lume. Piele de alabastru verde și antene pe frunte, inclusiv. Și apoi... Doamne Dumnezeule! O lumină roșie... Farfurii zburătoare... și... AJUTOR! SONDĂĂĂ!!! Hm... vorbim după muncă, bine? Trebuie să diger asta...]]></item>
+  <item name="av.goal.daily.100.rewardMsg"><![CDATA[Nu-mi vine să cred, amice! Am fost răpit de extratereștri! Fiona tocmai mi-a spus că am fost dispărut câțiva ani. Se pare că Lin, pe lângă împinsul de sucuri, a preluat și slujba mea ca să-mi salveze pielea. O să-i ofer un buchet mare de flori imediat ce reușesc să organizez prima întâlnire cu noua noastră terapeută de la aeroport. Atâta timp cât nu sunt flori stelare...]]></item>
+  
   <item name="av.task.daily.100.SendPlane.name"><![CDATA[Trimite {number} avioane]]></item>
-  <item name="av.goal.daily.101.name"><![CDATA[Puzderie de oameni de zăpadă]]></item>
-  <item name="av.goal.daily.101.hint"><![CDATA[Am hotărât să organizăm un concurs de făcut oameni de zăpadă! Va fi fantastic, vom avea o categorie pentru adulţi şi una pentru copii, iar pentru cei mai reuşiţi oameni de zăpadă vom acorda premii trăsnet. Avioanele astea ne încurcă însă planurile. Când aterizează, ne spulberă toţi oamenii de zăpadă. Scapi tu de ele, dacă te rog frumos?]]></item>
-  <item name="av.goal.daily.101.rewardMsg"><![CDATA[Concursul de făcut oameni de zăpadă a avut un mare succes! Vrei să-l vezi pe cel care a primit marele premiu? Seamănă leit cu tine! Brrr, cam straniu... mă ia cu fiori.]]></item>
+
+  <item name="av.goal.daily.101.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.101.hint"><![CDATA[Hei, tu acolo! Tipul ăsta s-a întors. Știi despre cine vorbesc, nu-i așa? Tariq, piratul... Nu, stai. Pilotul. Acum câțiva ani, a dispărut fără urmă după o beție cruntă cu Kurti al meu. Acum susține că a fost sedus... ah, nu, răpit de vizitatori din spațiu. Sau ceva de genul. Oricum, aeroportul nostru a devenit acum un loc de pelerinaj pentru purtătorii de pălării de aluminiu. Ocupă-te de asta!]]></item>
+  <item name="av.goal.daily.101.rewardMsg"><![CDATA[Ei bine, asta a fost mai simplu decât mă așteptam. Am avut ... mutat din greșeală ... locurile de desfășurare ale Convenției Science Fiction în cala unui avion. Acum toate sunt în drum spre... undeva. Sau nicăieri. În fine. Principalul lucru nu este aici.]]></item>
+  
   <item name="av.task.daily.101.ReturnPlane.name"><![CDATA[Returnează {number} avioane]]></item>
-  <item name="av.goal.daily.102.name"><![CDATA[Sno’Joke]]></item>
-  <item name="av.goal.daily.102.hint"><![CDATA[Ai văzut noul plug de zăpadă Sno’Joke? O, e nemaipomenit! Are cupa placată cu titan, un microprocesor pentru ajustarea înclinării, filamente fierbinţi care topesc zăpada.. şi chiar şi Wi-Fi în cabină! Musai să luăm unul pentru aeroport! Hai, te rog mult! Nu costă decât vreo câteva milioane de parale...]]></item>
-  <item name="av.goal.daily.102.rewardMsg"><![CDATA[În fine avem bani suficienţi pentru un Sno’Joke. Ce păcat că a durat atât de mult! Uite, s-a topit toată zăpada.]]></item>
+  
+  <item name="av.goal.daily.102.name"><![CDATA[Moneda Stelelor]]></item>
+  <item name="av.goal.daily.102.hint"><![CDATA[Salut! Îți mai amintești cum m-a scos Fiona din minți atunci? Alea chiar erau vremuri bune, nu? Hai să dăm timpul înapoi și să o cucerim din nou, ca pe vremuri. De îndată ce strângem destui bani, îi cumpăr o stea!]]></item>
+  <item name="av.goal.daily.102.rewardMsg"><![CDATA[Dar micuța a făcut ochii mari când i-am pus steaua în fața nasului, nu-i așa? Pentru iubita mea, niciun drum nu e prea lung... nici măcar până la chioșc.]]></item>
+    
   <item name="av.task.daily.102.GetAirCoins.name"><![CDATA[Colectează {number} AirCoin]]></item>
-  <item name="av.goal.daily.103.name"><![CDATA[Fenomenul Florin]]></item>
-  <item name="av.goal.daily.103.hint"><![CDATA[Florin se dă bun la săritura cu schiurile. Imaginează-ţi, pretinde că poate sări peste trei autobuze deodată! Autobuze nu avem, iar piloţii s-ar face foc şi pară dacă ar sări cineva peste avioanele lor. Va trebui să ne mulţumim cu oameni! Adună cât mai mulţi pasageri şi culcă-i la pământ în linie dreaptă.]]></item>
-  <item name="av.goal.daily.103.rewardMsg"><![CDATA[Ştiam eu că Florin ne îmbrobodeşte cu talentul lui la sărit cu schiurile. Acum zice că se referea la trei autobuze de jucărie. Pasagerii noştri sunt furioşi, aşa că ar trebui să mă ascund undeva.]]></item>
+  
+  <item name="av.goal.daily.103.name"><![CDATA[Ramageddon]]></item>
+  <item name="av.goal.daily.103.hint"><![CDATA[Hei, tu acolo! Sunt într-un total... cum îi zice? Panică, exact! Radarul arată un meteorit uriaș pe curs de coliziune cu aeroportul! Dacă chestia aia ne lovește în nas, ne va zdrobi site-ul ca o grămadă de cărămizi. Cod roșu! COD ROȘU! Evacuează cât mai mulți oameni poți!]]></item>
+  <item name="av.goal.daily.103.rewardMsg"><![CDATA[Wow! Cât de jenant, dar și ... Meteoritul de pe radar a fost de fapt doar un... uhh... cum se spune? Pată de cârnat. Exact. De acum înainte voi mânca doar supă de sfeclă la serviciu, vă promit asta.]]></item>
+  
   <item name="av.task.daily.103.GetPassengers.name"><![CDATA[Colectează {number} pasager(i)]]></item>
-  <item name="av.goal.daily.104.name"><![CDATA[Après-ski]]></item>
-  <item name="av.goal.daily.104.hint"><![CDATA[Iarna şi-a intrat în drepturi şi s-a deschis sezonul de schi. Trebuie să fac o mulţime de zboruri în Austria, ca să-i duc pe amatori în staţiunile de acolo. Eu personal nu le prea am cu schiurile, dar ce contează? Toată lumea ştie că important este ce se întâmplă după schiat. Dudui cu bujori în obrăjori şi vin fiert. Cum să nu-mi placă?]]></item>
-  <item name="av.goal.daily.104.rewardMsg"><![CDATA[Da, sunt blocat într-un troian... cu capu-n jos. Nu, nu a fost un accident. Scoate-mă odată de aici!]]></item>
+  
+  <item name="av.goal.daily.104.name"><![CDATA[Idiot-Man!]]></item>
+  <item name="av.goal.daily.104.hint"><![CDATA[Hei, amice! Kurt zice că fetele din zona euro sunt înnebunite după supereroi. Și știi ceva? Întotdeauna mi-am dorit să îmbrac un costum strâmt de spandex ca să-mi arăt trupul bine lucrat de pilot. Hai să mergem în Europa și să le arătăm gagicilor ce înseamnă un adevărat erou. Cortina sus pentru „Propellator”...]]></item>
+  <item name="av.goal.daily.104.rewardMsg"><![CDATA[Adică, serios... La început am crezut că fetele fluieră după mine... Dar apoi te împiedici de câteva ori de pelerină și, dintr-odată, încep să te huiduie! Acum îmi spun „proletarul”. Eh, pe cine interesează? Măcar nu mai trebuie să-mi strâng burta într-un corset sub costumul de supererou.]]></item>
+  
   <item name="av.task.daily.104.SendPlane.eu.name"><![CDATA[Trimite {number} avioane în Europa]]></item>
-  <item name="av.goal.daily.105.name"><![CDATA[50 de cuvinte]]></item>
-  <item name="av.goal.daily.105.hint"><![CDATA[Trebuie să zbor în Alaska. Ştiai că în limba eschimoşilor există 50 de cuvinte pentru zăpadă? De fapt, e discutabil şi tocmai asta e ideea. E un bun subiect de discuţie... cu o eschimoasă chipeşă, într-un iglu călduţ... Nimeni nu le-a mai cerut vreodată să spună toate cele 50 de cuvinte.]]></item>
-  <item name="av.goal.daily.105.rewardMsg"><![CDATA[Eschimoasele mi-au recomandat să mănânc un anumit fel de zăpadă. Nu-mi amintesc cum îi spuneau, dar era galbenă. Acum mi-e rău de la stomac...]]></item>
+  
+  <item name="av.goal.daily.105.name"><![CDATA[2024: O odisee Tariq]]></item>
+  <item name="av.goal.daily.105.hint"><![CDATA[Hei, amice! Puicuțele de la Nasa sunt combustibilul perfect pentru un explorator spațial de calibrul meu. Coafuri blonde aranjate, ochelari la modă și întotdeauna un clipboard promițător în mână. Ce ți-ai putea dori mai mult? Haideți, să zburăm în SUA și să le arătăm prăjiturilor cât de irezistibil este unchiul Tariq în gravitație zero. Hihihihihihihi...]]></item>
+  <item name="av.goal.daily.105.rewardMsg"><![CDATA[Mamă, ce șoc! Am fost zdruncinat de tot în navetă! Și nici măcar nu aveau însoțitoare de bord. Ce fel de firmă mai e și asta? Atât despre faimosul „Carnaval de la Capă”…]]></item>
+  
   <item name="av.task.daily.105.SendPlane.na.name"><![CDATA[Trimite {number} avioane în America de Nord]]></item>
-  <item name="av.goal.daily.106.name"><![CDATA[Uluitorii Anzi]]></item>
-  <item name="av.goal.daily.106.hint"><![CDATA[Trebuie să zbor în Anzi, după un colet. Nu ştiu ce-i înăuntru, dar mi s-a garantat că nu sunt păianjeni, piranha, şerpi sau alte târâtoare. E cam răcoare acolo, sper să n-am probleme cu jivrajul.]]></item>
-  <item name="av.goal.daily.106.rewardMsg"><![CDATA[Coletul se mişcă! Of, sper că nu se deschide... stai, au ieşit! Sunt în carlingă! O, sunt doar porcuşori de Guinea. Ha-ha, sunt chiar simpatici!]]></item>
+  
+  <item name="av.goal.daily.106.name"><![CDATA[Am iubit o fată de pe Marte]]></item>
+  <item name="av.goal.daily.106.hint"><![CDATA[M-am săturat până peste cap! Fetele de pe Pământ sunt atât de pretențioase. „Du gunoiul afară!”, «Îndoaie capacul de la toaletă în sus!», «Îndoaie capacul de la toaletă în jos!» „Să nu mă înșeli!”. Gata cu teatrul! În America de Sud sunt o grămadă de observații de OZN-uri. Hai să zburăm direct acolo. Poate o vom găsi pe tipa sexy cu tentacule care m-a invitat în OZN-ul ei atunci.]]></item>
+  <item name="av.goal.daily.106.rewardMsg"><![CDATA[Doamne... ce s-a întâmplat? Eram într-un bar brazilian și încercam să cuceresc o Chiquita drăguță. Apoi... iarăși un gol total. 6 zile mai târziu, m-am trezit cu barbă mare, duh de alcool și fără un ban în buzunar, într-un șanț. Erau EXTRATEREȘTRI! AM FOST RĂPIT DIN NOU! Nu există altă explicație...<br><br>Ai un comprimat pentru durerea de cap?]]></item>
+    
   <item name="av.task.daily.106.SendPlane.sa.name"><![CDATA[Trimite {number} avioane în America de Sud]]></item>
+  
+  
   <item name="av.goal.daily.107.name"><![CDATA[Provocarea comercianţilor]]></item>
   <item name="av.goal.daily.107.hint"><![CDATA[Organizaţia Internaţională a Comerţului (OIC) a lansat un concurs: Comercianţii care reuşesc să vândă cantitatea de produse solicitată vor primi o recompensă generoasă.]]></item>
   <item name="av.goal.daily.107.rewardMsg"><![CDATA[Felicitări! Ai reuşit! Iată-ţi recompensa binemeritată!]]></item>
   <item name="av.task.daily.107.SellProducts.name"><![CDATA[Vinde {number} produse]]></item>
-  <item name="av.goal.daily.200.name"><![CDATA[Cu avionul pe gheţuş]]></item>
-  <item name="av.goal.daily.200.hint"><![CDATA[Hei, ai jucat pe mobil jocul cu pinguinul? Mie îmi place mult. Trebuie să-l faci să alerge pe o cărare şi apoi să alunece pe gheaţă cât mai departe. Am deja punctajul maxim şi mi-a venit o idee. Ce-ar fi să încerc chestia asta cu un avion? Nu trebuie decât să aterizez şi să-l las să patineze. Cred că ar fi distractiv... şi nu văd ce probleme ar putea să apară.]]></item>
-  <item name="av.goal.daily.200.rewardMsg"><![CDATA[Mi s-a interzis să mă dau cu avionul pe gheaţă. Pare-se că şeful de la serviciul de urgenţă a făcut brusc hernie. Păcat, a fost tare de tot!]]></item>
+
+
+  <item name="av.goal.daily.200.name"><![CDATA[Incrível encontro do 69º tipo]]></item>
+  <item name="av.goal.daily.200.hint"><![CDATA[Hei, amice. De când nu ne-am mai văzut! Apropo... ai și tu o pană de memorie? Ieri seară, în club, am fixat o tipă ca din altă lume. Piele de alabastru verde și antene pe frunte, inclusiv. Și apoi... Doamne Dumnezeule! O lumină roșie... Farfurii zburătoare... și... AJUTOR! SONDĂĂĂ!!! Hm... vorbim după muncă, bine? Trebuie să diger asta...]]></item>
+  <item name="av.goal.daily.200.rewardMsg"><![CDATA[Nu-mi vine să cred, amice! Am fost răpit de extratereștri! Fiona tocmai mi-a spus că am fost dispărut câțiva ani. Se pare că Lin, pe lângă împinsul de sucuri, a preluat și slujba mea ca să-mi salveze pielea. O să-i ofer un buchet mare de flori imediat ce reușesc să organizez prima întâlnire cu noua noastră terapeută de la aeroport. Atâta timp cât nu sunt flori stelare...]]></item>
+  
   <item name="av.task.daily.200.SendPlane.name"><![CDATA[Trimite {number} avioane]]></item>
-  <item name="av.goal.daily.201.name"><![CDATA[Puzderie de oameni de zăpadă]]></item>
-  <item name="av.goal.daily.201.hint"><![CDATA[Am hotărât să organizăm un concurs de făcut oameni de zăpadă! Va fi fantastic, vom avea o categorie pentru adulţi şi una pentru copii, iar pentru cei mai reuşiţi oameni de zăpadă vom acorda premii trăsnet. Avioanele astea ne încurcă însă planurile. Când aterizează, ne spulberă toţi oamenii de zăpadă. Scapi tu de ele, dacă te rog frumos?]]></item>
-  <item name="av.goal.daily.201.rewardMsg"><![CDATA[Concursul de făcut oameni de zăpadă a avut un mare succes! Vrei să-l vezi pe cel care a primit marele premiu? Seamănă leit cu tine! Brrr, cam straniu... mă ia cu fiori.]]></item>
+
+  <item name="av.goal.daily.201.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.201.hint"><![CDATA[Hei, tu acolo! Tipul ăsta s-a întors. Știi despre cine vorbesc, nu-i așa? Tariq, piratul... Nu, stai. Pilotul. Acum câțiva ani, a dispărut fără urmă după o beție cruntă cu Kurti al meu. Acum susține că a fost sedus... ah, nu, răpit de vizitatori din spațiu. Sau ceva de genul. Oricum, aeroportul nostru a devenit acum un loc de pelerinaj pentru purtătorii de pălării de aluminiu. Ocupă-te de asta!]]></item>
+  <item name="av.goal.daily.201.rewardMsg"><![CDATA[Ei bine, asta a fost mai simplu decât mă așteptam. Am avut ... mutat din greșeală ... locurile de desfășurare ale Convenției Science Fiction în cala unui avion. Acum toate sunt în drum spre... undeva. Sau nicăieri. În fine. Principalul lucru nu este aici.]]></item>
+  
   <item name="av.task.daily.201.ReturnPlane.name"><![CDATA[Returnează {number} avioane]]></item>
-  <item name="av.goal.daily.202.name"><![CDATA[Sno’Joke]]></item>
-  <item name="av.goal.daily.202.hint"><![CDATA[Ai văzut noul plug de zăpadă Sno’Joke? O, e nemaipomenit! Are cupa placată cu titan, un microprocesor pentru ajustarea înclinării, filamente fierbinţi care topesc zăpada.. şi chiar şi Wi-Fi în cabină! Musai să luăm unul pentru aeroport! Hai, te rog mult! Nu costă decât vreo câteva milioane de parale...]]></item>
-  <item name="av.goal.daily.202.rewardMsg"><![CDATA[În fine avem bani suficienţi pentru un Sno’Joke. Ce păcat că a durat atât de mult! Uite, s-a topit toată zăpada.]]></item>
+  
+  <item name="av.goal.daily.202.name"><![CDATA[Moneda Stelelor]]></item>
+  <item name="av.goal.daily.202.hint"><![CDATA[Salut! Îți mai amintești cum m-a scos Fiona din minți atunci? Alea chiar erau vremuri bune, nu? Hai să dăm timpul înapoi și să o cucerim din nou, ca pe vremuri. De îndată ce strângem destui bani, îi cumpăr o stea!]]></item>
+  <item name="av.goal.daily.202.rewardMsg"><![CDATA[Dar micuța a făcut ochii mari când i-am pus steaua în fața nasului, nu-i așa? Pentru iubita mea, niciun drum nu e prea lung... nici măcar până la chioșc.]]></item>
+    
   <item name="av.task.daily.202.GetAirCoins.name"><![CDATA[Colectează {number} AirCoin]]></item>
-  <item name="av.goal.daily.203.name"><![CDATA[Fenomenul Florin]]></item>
-  <item name="av.goal.daily.203.hint"><![CDATA[Florin se dă bun la săritura cu schiurile. Imaginează-ţi, pretinde că poate sări peste trei autobuze deodată! Autobuze nu avem, iar piloţii s-ar face foc şi pară dacă ar sări cineva peste avioanele lor. Va trebui să ne mulţumim cu oameni! Adună cât mai mulţi pasageri şi culcă-i la pământ în linie dreaptă.]]></item>
-  <item name="av.goal.daily.203.rewardMsg"><![CDATA[Ştiam eu că Florin ne îmbrobodeşte cu talentul lui la sărit cu schiurile. Acum zice că se referea la trei autobuze de jucărie. Pasagerii noştri sunt furioşi, aşa că ar trebui să mă ascund undeva.]]></item>
+  
+  <item name="av.goal.daily.203.name"><![CDATA[Ramageddon]]></item>
+  <item name="av.goal.daily.203.hint"><![CDATA[Hei, tu acolo! Sunt într-un total... cum îi zice? Panică, exact! Radarul arată un meteorit uriaș pe curs de coliziune cu aeroportul! Dacă chestia aia ne lovește în nas, ne va zdrobi site-ul ca o grămadă de cărămizi. Cod roșu! COD ROȘU! Evacuează cât mai mulți oameni poți!]]></item>
+  <item name="av.goal.daily.203.rewardMsg"><![CDATA[Wow! Cât de jenant, dar și ... Meteoritul de pe radar a fost de fapt doar un... uhh... cum se spune? Pată de cârnat. Exact. De acum înainte voi mânca doar supă de sfeclă la serviciu, vă promit asta.]]></item>
+  
   <item name="av.task.daily.203.GetPassengers.name"><![CDATA[Colectează {number} pasager(i)]]></item>
-  <item name="av.goal.daily.204.name"><![CDATA[Après-ski]]></item>
-  <item name="av.goal.daily.204.hint"><![CDATA[Iarna şi-a intrat în drepturi şi s-a deschis sezonul de schi. Trebuie să fac o mulţime de zboruri în Austria, ca să-i duc pe amatori în staţiunile de acolo. Eu personal nu le prea am cu schiurile, dar ce contează? Toată lumea ştie că important este ce se întâmplă după schiat. Dudui cu bujori în obrăjori şi vin fiert. Cum să nu-mi placă?]]></item>
-  <item name="av.goal.daily.204.rewardMsg"><![CDATA[Da, sunt blocat într-un troian... cu capu-n jos. Nu, nu a fost un accident. Scoate-mă odată de aici!]]></item>
+  
+  <item name="av.goal.daily.204.name"><![CDATA[Idiot-Man!]]></item>
+  <item name="av.goal.daily.204.hint"><![CDATA[Hei, amice! Kurt zice că fetele din zona euro sunt înnebunite după supereroi. Și știi ceva? Întotdeauna mi-am dorit să îmbrac un costum strâmt de spandex ca să-mi arăt trupul bine lucrat de pilot. Hai să mergem în Europa și să le arătăm gagicilor ce înseamnă un adevărat erou. Cortina sus pentru „Propellator”...]]></item>
+  <item name="av.goal.daily.204.rewardMsg"><![CDATA[Adică, serios... La început am crezut că fetele fluieră după mine... Dar apoi te împiedici de câteva ori de pelerină și, dintr-odată, încep să te huiduie! Acum îmi spun „proletarul”. Eh, pe cine interesează? Măcar nu mai trebuie să-mi strâng burta într-un corset sub costumul de supererou.]]></item>
+  
   <item name="av.task.daily.204.SendPlane.eu.name"><![CDATA[Trimite {number} avioane în Europa]]></item>
-  <item name="av.goal.daily.205.name"><![CDATA[50 de cuvinte]]></item>
-  <item name="av.goal.daily.205.hint"><![CDATA[Trebuie să zbor în Alaska. Ştiai că în limba eschimoşilor există 50 de cuvinte pentru zăpadă? De fapt, e discutabil şi tocmai asta e ideea. E un bun subiect de discuţie... cu o eschimoasă chipeşă, într-un iglu călduţ... Nimeni nu le-a mai cerut vreodată să spună toate cele 50 de cuvinte.]]></item>
-  <item name="av.goal.daily.205.rewardMsg"><![CDATA[Eschimoasele mi-au recomandat să mănânc un anumit fel de zăpadă. Nu-mi amintesc cum îi spuneau, dar era galbenă. Acum mi-e rău de la stomac...]]></item>
+  
+  <item name="av.goal.daily.205.name"><![CDATA[2024: O odisee Tariq]]></item>
+  <item name="av.goal.daily.205.hint"><![CDATA[Hei, amice! Puicuțele de la Nasa sunt combustibilul perfect pentru un explorator spațial de calibrul meu. Coafuri blonde aranjate, ochelari la modă și întotdeauna un clipboard promițător în mână. Ce ți-ai putea dori mai mult? Haideți, să zburăm în SUA și să le arătăm prăjiturilor cât de irezistibil este unchiul Tariq în gravitație zero. Hihihihihihihi...]]></item>
+  <item name="av.goal.daily.205.rewardMsg"><![CDATA[Mamă, ce șoc! Am fost zdruncinat de tot în navetă! Și nici măcar nu aveau însoțitoare de bord. Ce fel de firmă mai e și asta? Atât despre faimosul „Carnaval de la Capă”…]]></item>
+  
   <item name="av.task.daily.205.SendPlane.na.name"><![CDATA[Trimite {number} avioane în America de Nord]]></item>
-  <item name="av.goal.daily.206.name"><![CDATA[Uluitorii Anzi]]></item>
-  <item name="av.goal.daily.206.hint"><![CDATA[Trebuie să zbor în Anzi, după un colet. Nu ştiu ce-i înăuntru, dar mi s-a garantat că nu sunt păianjeni, piranha, şerpi sau alte târâtoare. E cam răcoare acolo, sper să n-am probleme cu jivrajul.]]></item>
-  <item name="av.goal.daily.206.rewardMsg"><![CDATA[Coletul se mişcă! Of, sper că nu se deschide... stai, au ieşit! Sunt în carlingă! O, sunt doar porcuşori de Guinea. Ha-ha, sunt chiar simpatici!]]></item>
+  
+  <item name="av.goal.daily.206.name"><![CDATA[Am iubit o fată de pe Marte]]></item>
+  <item name="av.goal.daily.206.hint"><![CDATA[M-am săturat până peste cap! Fetele de pe Pământ sunt atât de pretențioase. „Du gunoiul afară!”, «Îndoaie capacul de la toaletă în sus!», «Îndoaie capacul de la toaletă în jos!» „Să nu mă înșeli!”. Gata cu teatrul! În America de Sud sunt o grămadă de observații de OZN-uri. Hai să zburăm direct acolo. Poate o vom găsi pe tipa sexy cu tentacule care m-a invitat în OZN-ul ei atunci.]]></item>
+  <item name="av.goal.daily.206.rewardMsg"><![CDATA[Doamne... ce s-a întâmplat? Eram într-un bar brazilian și încercam să cuceresc o Chiquita drăguță. Apoi... iarăși un gol total. 6 zile mai târziu, m-am trezit cu barbă mare, duh de alcool și fără un ban în buzunar, într-un șanț. Erau EXTRATEREȘTRI! AM FOST RĂPIT DIN NOU! Nu există altă explicație...<br><br>Ai un comprimat pentru durerea de cap?]]></item>
+    
   <item name="av.task.daily.206.SendPlane.sa.name"><![CDATA[Trimite {number} avioane în America de Sud]]></item>
+  
+  
   <item name="av.goal.daily.207.name"><![CDATA[Provocarea comercianţilor]]></item>
   <item name="av.goal.daily.207.hint"><![CDATA[Organizaţia Internaţională a Comerţului (OIC) a lansat un concurs: Comercianţii care reuşesc să vândă cantitatea de produse solicitată vor primi o recompensă generoasă.]]></item>
   <item name="av.goal.daily.207.rewardMsg"><![CDATA[Felicitări! ai reuşit! Iată-ţi recompensa binemeritată!]]></item>

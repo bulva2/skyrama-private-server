@@ -2,311 +2,329 @@
 <backgrounds_assets>
 
 	<background name="city">
-		<top asset="gfx/backgrounds/city/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/city/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/city/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/city/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/city/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/city/sky1_ground.png" />
 	</background>
 
 	<background name="hills">
-		<top asset="gfx/backgrounds/hills/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/hills/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/hills/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/hills/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/hills/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/hills/sky1_ground.png" />
 	</background>
 
 	<background name="mountains">
-		<top asset="gfx/backgrounds/mountains/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/mountains/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/mountains/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/mountains/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/mountains/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/mountains/sky1_ground.png" />
 	</background>
 
 	<background name="fields">
-		<top asset="gfx/backgrounds/fields/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/fields/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/fields/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/fields/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/fields/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/fields/sky1_ground.png" />
 	</background>
 
 	<background name="desert">
-		<top asset="gfx/backgrounds/desert/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/desert/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/desert/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/desert/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/desert/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/desert/sky1_ground.png" />
 	</background>
 
 	<background name="fall">
-		<top asset="gfx/backgrounds/halloween/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/halloween/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/halloween/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/halloween/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/halloween/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/halloween/sky1_ground.png" />
 	</background>
 
 	<background name="winter">
-		<top asset="gfx/backgrounds/winter/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/winter/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/winter/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/winter/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/winter/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/winter/sky1_ground.png" />
 	</background>
 
 	<background name="valentine">
-		<top asset="gfx/backgrounds/valentine/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/valentine/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/valentine/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/valentine/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/valentine/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/valentine/sky1_ground.png" />
 	</background>
 
 	<background name="easter">
-		<top asset="gfx/backgrounds/easter/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/easter/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/easter/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/easter/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/easter/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/easter/sky1_ground.png" />
 	</background>
 
 	<background name="bday_background">
-		<top asset="gfx/backgrounds/bday_background/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/bday_background/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/bday_background/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/bday_background/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/bday_background/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/bday_background/sky1_ground.png" />
 	</background>
 
 	<background name="pirate_background">
-		<top asset="gfx/backgrounds/pirate_background/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/pirate_background/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/pirate_background/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/pirate_background/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/pirate_background/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/pirate_background/sky1_ground.png" />
 	</background>
 
 	<background name="event3_background">
-		<top asset="gfx/backgrounds/event3_background/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/event3_background/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/event3_background/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/event3_background/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/event3_background/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/event3_background/sky1_ground.png" />
 	</background>
 
 	<background name="event4_background">
-		<top asset="gfx/backgrounds/event4/sky3_top.png"/>
-		<horizon asset="gfx/backgrounds/event4/sky3_middle.png"/>
-		<mapTile asset="gfx/backgrounds/event4/sky3_ground.png"/>
+		<top asset="gfx/backgrounds/event4/sky3_top.png" />
+		<horizon asset="gfx/backgrounds/event4/sky3_middle.png" />
+		<mapTile asset="gfx/backgrounds/event4/sky3_ground.png" />
 	</background>
 
 	<background name="event5_background">
-		<top asset="gfx/backgrounds/event5/sky5_top.png"/>
-		<horizon asset="gfx/backgrounds/event5/sky5_middle.png"/>
-		<mapTile asset="gfx/backgrounds/event5/sky5_ground.png"/>
+		<top asset="gfx/backgrounds/event5/sky5_top.png" />
+		<horizon asset="gfx/backgrounds/event5/sky5_middle.png" />
+		<mapTile asset="gfx/backgrounds/event5/sky5_ground.png" />
 	</background>
 
 	<background name="history_background">
-		<top asset="gfx/events/history/background/top.png"/>
-		<horizon asset="gfx/events/history/background/middle.png"/>
-		<mapTile asset="gfx/events/history/background/ground.png"/>
+		<top asset="gfx/events/history/background/top.png" />
+		<horizon asset="gfx/events/history/background/middle.png" />
+		<mapTile asset="gfx/events/history/background/ground.png" />
 	</background>
 
 	<background name="vip_background">
-		<top asset="gfx/events/vip/background/sky1_top.png"/>
-		<horizon asset="gfx/events/vip/background/sky1_middle.png"/>
-		<mapTile asset="gfx/events/vip/background/sky1_ground.png"/>
+		<top asset="gfx/events/vip/background/sky1_top.png" />
+		<horizon asset="gfx/events/vip/background/sky1_middle.png" />
+		<mapTile asset="gfx/events/vip/background/sky1_ground.png" />
 	</background>
 
 	<background name="emergency_background">
-		<top asset="gfx/backgrounds/emergency/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/emergency/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/emergency/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/emergency/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/emergency/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/emergency/sky1_ground.png" />
 	</background>
 
 	<background name="science2013_background">
-		<top asset="gfx/backgrounds/science2013/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/science2013/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/science2013/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/science2013/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/science2013/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/science2013/sky1_ground.png" />
 	</background>
 
 	<background name="summer2013_background">
-		<top asset="gfx/backgrounds/summer2013/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/summer2013/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/summer2013/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/summer2013/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/summer2013/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/summer2013/sky1_ground.png" />
 	</background>
 
 	<background name="flashback_background">
-		<top asset="gfx/backgrounds/flashback/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/flashback/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/flashback/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/flashback/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/flashback/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/flashback/sky1_ground.png" />
 	</background>
 
     <background name="golden50ies_082013_background">
-		<top asset="gfx/backgrounds/golden50ies_082013/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/golden50ies_082013/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/golden50ies_082013/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/golden50ies_082013/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/golden50ies_082013/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/golden50ies_082013/sky1_ground.png" />
 	</background>
 
     <background name="japan2013_092013_background">
-		<top asset="gfx/backgrounds/japan2013/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/japan2013/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/japan2013/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/japan2013/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/japan2013/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/japan2013/sky1_ground.png" />
 	</background>
 
     <background name="halloween_102013_background">
-		<top asset="gfx/backgrounds/halloween2013/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/halloween2013/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/halloween2013/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/halloween2013/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/halloween2013/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/halloween2013/sky1_ground.png" />
 	</background>
 
     <background name="winter_122013_background">
-		<top asset="gfx/backgrounds/winter2013/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/winter2013/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/winter2013/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/winter2013/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/winter2013/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/winter2013/sky1_ground.png" />
 	</background>
 
     <background name="flashback_III_background">
-        <top asset="gfx/backgrounds/flashback3/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/flashback3/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/flashback3/sky1_ground.png"/>
+        <top asset="gfx/backgrounds/flashback3/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/flashback3/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/flashback3/sky1_ground.png" />
     </background>
 
     <background name="xplanes_022014_background">
-		<top asset="gfx/backgrounds/xplanes2014/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/xplanes2014/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/xplanes2014/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/xplanes2014/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/xplanes2014/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/xplanes2014/sky1_ground.png" />
 	</background>
 
   <background name="airlineweeks1_042014_background">
-		<top asset="gfx/backgrounds/airlineweeks1_042014/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/airlineweeks1_042014/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/airlineweeks1_042014/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/airlineweeks1_042014/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/airlineweeks1_042014/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/airlineweeks1_042014/sky1_ground.png" />
 	</background>
 
 	<background name="airlineweeks2_062014_background">
-		<top asset="gfx/backgrounds/airlineweeks2_062014/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/airlineweeks2_062014/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/airlineweeks2_062014/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/airlineweeks2_062014/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/airlineweeks2_062014/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/airlineweeks2_062014/sky1_ground.png" />
 	</background>
 	
 	<background name="goldenageofaviation_092014_background">
-		<top asset="gfx/backgrounds/goldenageofaviation_092014_background/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/goldenageofaviation_092014_background/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/goldenageofaviation_092014_background/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/goldenageofaviation_092014_background/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/goldenageofaviation_092014_background/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/goldenageofaviation_092014_background/sky1_ground.png" />
 	</background> 
 	
 	<background name="conceptplanes_072014_background">
-		<top asset="gfx/backgrounds/conceptplanes_072014/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/conceptplanes_072014/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/conceptplanes_072014/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/conceptplanes_072014/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/conceptplanes_072014/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/conceptplanes_072014/sky1_ground.png" />
 	</background>
 	
 	<background name="halloween_102014_background">
-		<top asset="gfx/backgrounds/halloween2014/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/halloween2014/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/halloween2014/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/halloween2014/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/halloween2014/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/halloween2014/sky1_ground.png" />
 	</background>
 	
 	<background name="xmas2014_background">
-		<top asset="gfx/backgrounds/xmas2014/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/xmas2014/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/xmas2014/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/xmas2014/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/xmas2014/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/xmas2014/sky1_ground.png" />
 	</background>
 	
 	<background name="mostwanted022015_background">
-		<top asset="gfx/backgrounds/mostwanted022015/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/mostwanted022015/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/mostwanted022015/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/mostwanted022015/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/mostwanted022015/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/mostwanted022015/sky1_ground.png" />
 	</background>
 	
 	<background name="emergency042015_background">
-		<top asset="gfx/backgrounds/emergency042015/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/emergency042015/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/emergency042015/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/emergency042015/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/emergency042015/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/emergency042015/sky1_ground.png" />
 	</background>
 	
 	<background name="airshow072015_background">
-		<top asset="gfx/backgrounds/airshow072015/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/airshow072015/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/airshow072015/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/airshow072015/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/airshow072015/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/airshow072015/sky1_ground.png" />
 	</background>
 	
 	<background name="waterplanes082015_background">
-		<top asset="gfx/backgrounds/waterplanes082015/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/waterplanes082015/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/waterplanes082015/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/waterplanes082015/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/waterplanes082015/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/waterplanes082015/sky1_ground.png" />
 	</background>
 	
 	<background name="ufoevent102015_background">
-		<top asset="gfx/backgrounds/ufoevent102015/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/ufoevent102015/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/ufoevent102015/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/ufoevent102015/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/ufoevent102015/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/ufoevent102015/sky1_ground.png" />
 	</background>
 	
 	<background name="polarevent122015_background">
-		<top asset="gfx/backgrounds/polarevent122015/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/polarevent122015/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/polarevent122015/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/polarevent122015/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/polarevent122015/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/polarevent122015/sky1_ground.png" />
 	</background>
 	
 	<background name="futureevent012016_background">
-		<top asset="gfx/backgrounds/futureevent012016/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/futureevent012016/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/futureevent012016/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/futureevent012016/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/futureevent012016/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/futureevent012016/sky1_ground.png" />
 	</background>
 	
 	<background name="movieevent022016_background">
-		<top asset="gfx/backgrounds/movieevent022016/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/movieevent022016/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/movieevent022016/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/movieevent022016/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/movieevent022016/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/movieevent022016/sky1_ground.png" />
 	</background>
 	
 	<background name="wildlifeevent042016_background">
-		<top asset="gfx/backgrounds/wildlifeevent042016/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/wildlifeevent042016/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/wildlifeevent042016/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/wildlifeevent042016/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/wildlifeevent042016/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/wildlifeevent042016/sky1_ground.png" />
 	</background>
 	
 	<background name="emevent052016_background">
-		<top asset="gfx/backgrounds/emevent052016/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/emevent052016/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/emevent052016/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/emevent052016/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/emevent052016/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/emevent052016/sky1_ground.png" />
 	</background>
 	
 	<background name="olympicevent092016_background">
-		<top asset="gfx/backgrounds/olympicevent092016/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/olympicevent092016/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/olympicevent092016/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/olympicevent092016/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/olympicevent092016/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/olympicevent092016/sky1_ground.png" />
 	</background>
 	
 	<background name="arcticevent122016_background">
-		<top asset="gfx/backgrounds/arcticevent122016/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/arcticevent122016/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/arcticevent122016/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/arcticevent122016/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/arcticevent122016/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/arcticevent122016/sky1_ground.png" />
 	</background>
 	
 	<background name="valentinesevent022017_background">
-		<top asset="gfx/backgrounds/valentinesevent022017/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/valentinesevent022017/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/valentinesevent022017/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/valentinesevent022017/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/valentinesevent022017/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/valentinesevent022017/sky1_ground.png" />
 	</background>
 	
 	<background name="skyrace2017_background">
-		<top asset="gfx/backgrounds/skyrace2017_background/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/skyrace2017_background/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/skyrace2017_background/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/skyrace2017_background/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/skyrace2017_background/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/skyrace2017_background/sky1_ground.png" />
 	</background>
 
 	<background name="madmax2022_background">
-		<top asset="gfx/backgrounds/madmax_2022/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/madmax_2022/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/madmax_2022/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/madmax_2022/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/madmax_2022/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/madmax_2022/sky1_ground.png" />
 	</background>
 	
 	<background name="summer2022_background">
-		<top asset="gfx/backgrounds/summer2022/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/summer2022/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/summer2022/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/summer2022/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/summer2022/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/summer2022/sky1_ground.png" />
 	</background>	
 
 	<background name="summer2023_background">
-		<top asset="gfx/backgrounds/summer2023/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/summer2023/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/summer2023/sky1_ground.png"/>
+		<top asset="gfx/backgrounds/summer2023/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/summer2023/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/summer2023/sky1_ground.png" />
 	</background>
 	
 	<background name="winter2023_background">
-		<top asset="gfx/backgrounds/winterevent2023/sky1_top.png"/>
-		<horizon asset="gfx/backgrounds/winterevent2023/sky1_middle.png"/>
-		<mapTile asset="gfx/backgrounds/winterevent2023/sky1_ground.png"/>
-	</background>			
+		<top asset="gfx/backgrounds/winterevent2023/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/winterevent2023/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/winterevent2023/sky1_ground.png" />
+	</background>
 	
-	<landmark name="berlin" asset="gfx/backgrounds/landmarks/berlin.png" x="910" y="168"/>
-	<landmark name="new_york" asset="gfx/backgrounds/landmarks/new_york.png" x="910" y="168"/>
-	<landmark name="california" asset="gfx/backgrounds/landmarks/california.png" x="910" y="168"/>
-	<landmark name="london" asset="gfx/backgrounds/landmarks/london.png" x="910" y="168"/>
-	<landmark name="canada" asset="gfx/backgrounds/landmarks/canada.png" x="910" y="168"/>
-	<landmark name="vip_landmark" asset="gfx/backgrounds/landmarks/vip_landmark.png" x="910" y="168"/>
-	<landmark name="icon_remover" asset="gfx/backgrounds/landmarks/icon_remover.png" x="910" y="168"/>
+	<background name="easter2024_background">
+		<top asset="gfx/backgrounds/easter2024/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/easter2024/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/easter2024/sky1_ground.png" />
+	</background>
+	
+	<background name="halloween2024_background">
+		<top asset="gfx/backgrounds/halloween2024/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/halloween2024/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/halloween2024/sky1_ground.png" />
+	</background>							
+
+	<background name="spaceevent2024_background">
+		<top asset="gfx/backgrounds/spaceevent2024/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/spaceevent2024/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/spaceevent2024/sky1_ground.png" />
+	</background>	
+	
+	<landmark name="berlin" asset="gfx/backgrounds/landmarks/berlin.png" x="910" y="168" />
+	<landmark name="new_york" asset="gfx/backgrounds/landmarks/new_york.png" x="910" y="168" />
+	<landmark name="california" asset="gfx/backgrounds/landmarks/california.png" x="910" y="168" />
+	<landmark name="london" asset="gfx/backgrounds/landmarks/london.png" x="910" y="168" />
+	<landmark name="canada" asset="gfx/backgrounds/landmarks/canada.png" x="910" y="168" />
+	<landmark name="vip_landmark" asset="gfx/backgrounds/landmarks/vip_landmark.png" x="910" y="168" />
+	<landmark name="icon_remover" asset="gfx/backgrounds/landmarks/icon_remover.png" x="910" y="168" />
 
 </backgrounds_assets>

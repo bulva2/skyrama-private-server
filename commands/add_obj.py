@@ -24,9 +24,27 @@ def handle_addObj(request, user_id, obj, total_items_to_add_to_obj, json_data, i
     obj["flashCookies"] = []
 
     for i in total_items_to_add_to_obj:
-      if i in json_data:
-        obj[i] = json_data[i]
-      elif i in init_data:
-        obj[i] = init_data[i]
+      splitted = i.split(":")
+      name = splitted[0]
+      splitted.pop(0)
+
+      if name in json_data:
+        data = json_data[name]
+      elif name in init_data:
+        data = init_data[name]
+
+      if len(splitted) == 0:
+          obj[name] = data
+      else:
+        result = []
+        for j in splitted:
+
+          for k in data:
+            if int(k["id"]) == int(j):
+              result.append(k)
+              break
+
+        obj[name] = result
+          
         
     

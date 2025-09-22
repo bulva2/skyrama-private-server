@@ -65,94 +65,143 @@
   <item name="av.goal.daily.28.hint"><![CDATA[A repülőterek versenyének mai kihívása az utasok gyűjtése. Vegyél részt benne, és fantasztikus díjakat nyerhetsz!]]></item>
   <item name="av.goal.daily.28.rewardMsg"><![CDATA[Meg se kottyant neked ez a feladat! Emelem kalapom! Itt a jutalmad, megérdemelted!]]></item>
   <item name="av.task.daily.28.GetPassengers.name"><![CDATA[{number} utas összegyűjtése]]></item>
-  <item name="av.goal.daily.30.name"><![CDATA[Csúszó landolás]]></item>
-  <item name="av.goal.daily.30.hint"><![CDATA[Figyu, ezt a szuper játékot a mobilomon szoktam játszani. Szóval van egy pingvin, ami fut egy darabig, aztán csúszik a jégen. Az a lényeg, hogy minél messzebbre tudjon csúszni. Már elértem a legfelső pontszámot... de eszembe jutott valami. Mi lenne, ha kipróbálnánk ugyanezt, csak repülővel? Szépen letenném a gépet, aztán simán siklanánk a jégen – minél tovább, annál jobb! Nem történhet semmi baj!]]></item>
-  <item name="av.goal.daily.30.rewardMsg"><![CDATA[Az a helyzet, hogy megtiltották ezt a géppel siklás dolgot. Olyan piros volt a feje a sürgősségi szolgálat főnökének, tutira sérvet kapott. Azért jót csúszkáltunk, nem?]]></item>
+
+
+  <item name="av.goal.daily.30.name"><![CDATA[Hihetetlen találkozás a 69. típussal]]></item>
+  <item name="av.goal.daily.30.hint"><![CDATA[Hé, haver! Rég nem láttalak! Mondd csak... neked is filmszakadásod van? Tegnap este a diszkóban kinéztem egy csajt, mintha egy másik bolygóról jött volna. Zöld alabástrom bőr, antennák a homlokán, minden benne volt. És aztán... Úristen! Egy vörös villanás... repülő csészealjak... és... SEGÍTSÉG! A SZONDA!!! Öhm... beszéljünk erről a munka után, rendben? Ezt még fel kell dolgoznom...]]></item>
+  <item name="av.goal.daily.30.rewardMsg"><![CDATA[Nem hiszem el, haver! Elraboltak az idegenek! Fiona éppen most mondta, hogy évekig eltűntem. Lin valószínűleg, a Gyümiléltologató munkája mellett, az én feladataimat is átvette, hogy megmentse a hátsómat. Veszek neki egy hatalmas csokor virágot, amint sikerül megszerveznem az első randit az új reptéri terapeutánkkal. Csak ne csillagvirág legyen...]]></item>
+  
   <item name="av.task.daily.30.SendPlane.name"><![CDATA[{number} járat indítása]]></item>
-  <item name="av.goal.daily.31.name"><![CDATA[Behavazott hóemberek]]></item>
-  <item name="av.goal.daily.31.hint"><![CDATA[Elhatároztuk, hogy hóemberépítő versenyt rendezünk. Külön kategóriában indulnak a felnőttek és a gyerekek, és fantasztikus díjakat fogunk kiosztani a legjobb hóemberekért. Azért van egy kis probléma: állandóan le- meg felszállnak a gépek, és a motorjuk totál szétfújja a hóembereket. Megszabadulnál tőlük a kedvemért?]]></item>
-  <item name="av.goal.daily.31.rewardMsg"><![CDATA[A hóemberépítő verseny irtó nagy siker volt! Szeretnéd látni a győztes hóembert? Igazából nagyon hasonlít rád! De tényleg, elképesztő a hasonlóság...]]></item>
+
+  <item name="av.goal.daily.31.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.31.hint"><![CDATA[Hé, haver! Ez a fickó visszatért. Tudod, kiről beszélek, ugye? Tariq, a... kalóz. Nem, várj... pilóta! Pár évvel ezelőtt nyomtalanul eltűnt, miután egy masszív ivászatot tartott a haverommal, Kurtival. Most azt állítja, hogy űrlátogatók elcsábították... vagyis... elrabolták! Vagy valami ilyesmi. Mindenesetre a reptérünk mostanra az alumíniumkalaposok zarándokhelyévé vált. Foglalkozz vele, kérlek!]]></item>
+  <item name="av.goal.daily.31.rewardMsg"><![CDATA[Nos, ez könnyebb volt, mint vártam... Véletlenül a sci-fi találkozó helyszíneit áthelyeztem egy repülőgép rakterébe. Most mind úton vannak... valahová. Vagy sehova. Nos, a lényeg, hogy ne itt legyenek.]]></item>
+  
   <item name="av.task.daily.31.ReturnPlane.name"><![CDATA[{number} járat visszaküldése]]></item>
-  <item name="av.goal.daily.32.name"><![CDATA[Megéri az árát]]></item>
-  <item name="av.goal.daily.32.hint"><![CDATA[Láttad a legújabb hóeke típust? Hú, eszelős egy járgány! A lapátja titánbevonatos, a dőlésszögét számítógép vezérli, fűtőszálak mindenütt, hogy megolvasszák a jeget, a kabinban pedig beépített wifi! Muszáj beszereznünk egyet a reptérre! Lécci! Igen, az ára egy kilencjegyű szám – de sok benne a nulla!]]></item>
-  <item name="av.goal.daily.32.rewardMsg"><![CDATA[El sem hiszem, hogy sikerült: összegyűlt a pénz az új hóekére! Mondjuk kár, hogy közben kitavaszodott.]]></item>
+
+  <item name="av.goal.daily.32.name"><![CDATA[Csillagpénz]]></item>
+  <item name="av.goal.daily.32.hint"><![CDATA[Helló! Emlékszel, hogy Fiona annak idején teljesen elbűvölt engem? Azok voltak ám az idők, mi? Gyere, forgassuk vissza az időt, és hódítsuk meg újra, mint annak idején. Amint elég pénz összegyűlik, veszek neki egy csillagot!]]></item>
+  <item name="av.goal.daily.32.rewardMsg"><![CDATA[Hát, mekkorát nézett a kiscsaj, amikor az orra elé raktam a csillagot, mi? A szerelmemért semmi sem túl nagy távolság... Még a kioszkig sem.]]></item>
+  
   <item name="av.task.daily.32.GetAirCoins.name"><![CDATA[{number} aircoin összegyűjtése]]></item>
-  <item name="av.goal.daily.33.name"><![CDATA[Jon, a sas]]></item>
-  <item name="av.goal.daily.33.hint"><![CDATA[Jon azzal henceg, hogy ő a világ egyik legjobb síugrója. Azt mondja, egyszerre három buszt is át tud ugrani! Mivel nincsenek buszaink, és a pilóták nem engedik, hogy a repülőket használjuk, emberekkel fogjuk csinálni! Szóval, gyűjts össze annyi utast, amennyit csak tudsz, aztán fektesd le őket egy hosszú sorba. Hű, alig várom!]]></item>
-  <item name="av.goal.daily.33.rewardMsg"><![CDATA[Nos, most már legalább tudjuk, hogy Jon hajlamos a túlzásokra, ha a síugrásról van szó. Utólag könnyű mondani, hogy játékbuszokra gondolt, mert a dühös utasok nem őt keresik, hanem engem...]]></item>
+
+  <item name="av.goal.daily.33.name"><![CDATA[Ramatgeddon]]></item>
+  <item name="av.goal.daily.33.hint"><![CDATA[Hé, haver! Teljesen... hogy is mondják? Pánikban vagyok, pontosan! A radar hatalmas meteort jelez, amely egyenesen a repülőtér felé tart! Ha ez a dolog becsapódik, úgy szétzúzza a területünket, mintha csak építőkockák lennének. Vörös riasztás! VÖRÖS RIASZTÁS! Evakuálj annyi embert, amennyit csak tudsz!]]></item>
+  <item name="av.goal.daily.33.rewardMsg"><![CDATA[Hűha! Milyen kínos, de egyben ... A meteorit a radaron valójában csak egy... uhh... hogy is mondják? Egy kis májas kolbász. Pontosan. Mostantól csak céklalevest fogok enni a munkahelyemen, ezt megígérem.]]></item>
+  
   <item name="av.task.daily.33.GetPassengers.name"><![CDATA[{number} utas összegyűjtése]]></item>
-  <item name="av.goal.daily.34.name"><![CDATA[A hütték világa]]></item>
-  <item name="av.goal.daily.34.hint"><![CDATA[Tudod, mi van télen? Síszezon. Az utóbbi két hétben mást se csinálok, mint a megszállott síelőket viszem Ausztriába. Én nem síelek jól, de manapság nem is ez a lényeg, hanem az, mit csinálsz a síelés mellett. Tudod... egy kis iszogatás meg csajozás egy hüttében a pálya tetején, aztán a pálya közepén, végül az alján – már ha épségben leérsz.]]></item>
-  <item name="av.goal.daily.34.rewardMsg"><![CDATA[Igen, be vagyok temetve egy hóbuckába. Nem, nem síbaleset volt. Akkor kiszednél végre innen?]]></item>
+
+  <item name="av.goal.daily.34.name"><![CDATA[Hülye-Man]]></item>
+  <item name="av.goal.daily.34.hint"><![CDATA[Hé, haver! Kurt szerint az eurózónás csajok totál odavannak a szuperhősökért. És tudod mit? Mindig is ki akartam próbálni egy olyan szűk spandex ruhát a tökéletesen formált pilóta-testemen. Repüljünk Európába, és mutassuk meg a csajoknak, milyen egy igazi hős. Függöny fel a „Propellátor”-ra...]]></item>
+  <item name="av.goal.daily.34.rewardMsg"><![CDATA[Nos, ez... Először azt hittem, hogy a lányok fütyülnek rám... De aztán párszor megbotlasz a köpenyedben, és hirtelen kifütyülnek! Most már „proletárnak” hívnak. Rendben, kit érdekel? Legalább nem kell majd egy pocakos övet bepréselnem a világmegváltó öltözékem alá.]]></item>
+
   <item name="av.task.daily.34.SendPlane.eu.name"><![CDATA[{number} repülő indítása Európába]]></item>
-  <item name="av.goal.daily.35.name"><![CDATA[Ötven szó]]></item>
-  <item name="av.goal.daily.35.hint"><![CDATA[Lesz egy utam Alaszkába. Tudtad, hogy az eszkimóknak ötven különböző szavuk van a hóra? Valójában ez egy elég vitatott állítás, de kit érdekel? Kiváló beszélgetéstéma lesz, miközben felmelegítjük egymást egy szép eszkimólánnyal egy igluban. Biztos senki nem kérte még, hogy sorolja el mind az ötven szót.]]></item>
-  <item name="av.goal.daily.35.rewardMsg"><![CDATA[Nem, nem jutottunk el az ötven szóig. De adok egy jó tanácsot: ha egy eszkimó megkínál eszkimó jégkrémmel, semmiképp ne egyél belőle.]]></item>
+
+  <item name="av.goal.daily.35.name"><![CDATA[2024: Tariq odüsszeiája]]></item>
+  <item name="av.goal.daily.35.hint"><![CDATA[Hé, haver! A Nasa csajai tökéletes rakétahajtóanyagot jelentenek egy ilyen kaliberű űrkutatónak. Feltűzött szőke sörény, divatos szemüveg és mindig egy ígéretes írótábla a kezükben. Mi mást is kívánhatnál? Irány az USA, és mutassuk meg a csajoknak, milyen ellenállhatatlan Tariq bácsi a súlytalanság állapotában. Hihihihi...]]></item>
+  <item name="av.goal.daily.35.rewardMsg"><![CDATA[Hűha, ez aztán durva volt! Csak úgy remegtem a siklóban! És még légiutas-kísérők sem voltak. Micsoda hely ez? Ennyit a „Cape Karneválról”…]]></item>
+    
   <item name="av.task.daily.35.SendPlane.na.name"><![CDATA[{number} járat indítása Észak-Amerikába]]></item>
-  <item name="av.goal.daily.36.name"><![CDATA[Az Andok fölött]]></item>
-  <item name="av.goal.daily.36.hint"><![CDATA[Amikor az Andok fölött repülünk, fel kell vennünk egy csomagot. Nem tudom, mi van a ládában, de azt ígérték, hogy semmi pók, pirája, kígyó vagy egyéb szörnyeteg nem lesz benne. Itt most elég hideg van, úgyhogy remélem, nem jegesednek el a szárnyak.]]></item>
-  <item name="av.goal.daily.36.rewardMsg"><![CDATA[Esküszöm, hogy valami mozog abban a ládában! Remélem nem nyílik ki, mert... Úristen! ez nyitva van! Bejutottak a pilótafülkébe! Ó, ne, ez csiklandoz! Őőő, minden oké, csak van néhány tengerimalacunk a fedélzeten.]]></item>
+
+  <item name="av.goal.daily.36.name"><![CDATA[Szerettem egy lányt a Marson]]></item>
+  <item name="av.goal.daily.36.hint"><![CDATA[Elegem van! A földi lányok annyira igényesek. „Vidd ki a szemetet!”, »Hajtsd fel a vécéülőkét!«, »Hajtsd le a vécéülőkét!« »Ne csalj meg!«. Elég a színházból! Dél-Amerikában rengeteg UFO-észlelés van. Gyerünk, repüljünk oda most azonnal. Talán megtaláljuk azt a szexi csápos lányt, aki egyszer meghívott az űrhajójába.]]></item>
+  <item name="av.goal.daily.36.rewardMsg"><![CDATA[Úristen... mi történt? Egy brazil bárban voltam, és elcsábítottam egy bájos Chiquitát. Aztán... újabb filmszakadás. Hat nappal később szakállasan, alkoholszagúan és egy fillér nélkül ébredtem egy árokban. Biztos, hogy IDEGENEK VOLTAK! MEGINT ELRABOLTAK! Más magyarázat nincs...<br><br>Van egy fejfájás tablettád?]]></item>
+  
   <item name="av.task.daily.36.SendPlane.sa.name"><![CDATA[{number} járat indítása Dél-Amerikába]]></item>
-  <item name="av.goal.daily.100.name"><![CDATA[Csúszó landolás]]></item>
-  <item name="av.goal.daily.100.hint"><![CDATA[Van egy szuper játék, amit a mobilomon szoktam játszani. Szóval van egy pingvin, ami fut egy darabig, aztán végigcsúszik a jégen. Az a lényeg, hogy minél messzebbre tudjon csúszni. Már elértem a legfelső pontszámot... de eszembe jutott valami. Mi lenne, ha kipróbálnánk ugyanezt, csak repülővel? Szépen letenném a gépet, aztán simán siklanánk a jégen – minél tovább, annál jobb! Nem történhet semmi baj!]]></item>
-  <item name="av.goal.daily.100.rewardMsg"><![CDATA[Az a helyzet, hogy megtiltották ezt a géppel siklás dolgot. Olyan piros volt a feje a sürgősségi szolgálat főnökének, tutira sérvet kapott. Azért jót csúszkáltunk, nem?]]></item>
+
+
+  <item name="av.goal.daily.100.name"><![CDATA[Hihetetlen találkozás a 69. típussal]]></item>
+  <item name="av.goal.daily.100.hint"><![CDATA[Hé, haver! Rég nem láttalak! Mondd csak... neked is filmszakadásod van? Tegnap este a diszkóban kinéztem egy csajt, mintha egy másik bolygóról jött volna. Zöld alabástrom bőr, antennák a homlokán, minden benne volt. És aztán... Úristen! Egy vörös villanás... repülő csészealjak... és... SEGÍTSÉG! A SZONDA!!! Öhm... beszéljünk erről a munka után, rendben? Ezt még fel kell dolgoznom...]]></item>
+  <item name="av.goal.daily.100.rewardMsg"><![CDATA[Nem hiszem el, haver! Elraboltak az idegenek! Fiona éppen most mondta, hogy évekig eltűntem. Lin valószínűleg, a Gyümiléltologató munkája mellett, az én feladataimat is átvette, hogy megmentse a hátsómat. Veszek neki egy hatalmas csokor virágot, amint sikerül megszerveznem az első randit az új reptéri terapeutánkkal. Csak ne csillagvirág legyen...]]></item>
+  
   <item name="av.task.daily.100.SendPlane.name"><![CDATA[{number} járat indítása]]></item>
-  <item name="av.goal.daily.101.name"><![CDATA[Behavazott hóemberek]]></item>
-  <item name="av.goal.daily.101.hint"><![CDATA[Elhatároztuk, hogy hóemberépítő versenyt rendezünk. Külön kategóriában indulnak a felnőttek és a gyerekek, és fantasztikus díjakat fogunk kiosztani a legjobb hóemberekért. Azért van egy kis probléma: állandóan le- meg felszállnak a gépek, és a motorjuk totál szétfújja a hóembereket. Megszabadulnál tőlük a kedvemért?]]></item>
-  <item name="av.goal.daily.101.rewardMsg"><![CDATA[A hóemberépítő verseny irtó nagy siker volt! Szeretnéd látni a nyertes hóembert? Igazából nagyon hasonlít rád. De tényleg, elképesztő a hasonlóság...]]></item>
+
+  <item name="av.goal.daily.101.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.101.hint"><![CDATA[Hé, haver! Ez a fickó visszatért. Tudod, kiről beszélek, ugye? Tariq, a... kalóz. Nem, várj... pilóta! Pár évvel ezelőtt nyomtalanul eltűnt, miután egy masszív ivászatot tartott a haverommal, Kurtival. Most azt állítja, hogy űrlátogatók elcsábították... vagyis... elrabolták! Vagy valami ilyesmi. Mindenesetre a reptérünk mostanra az alumíniumkalaposok zarándokhelyévé vált. Foglalkozz vele, kérlek!]]></item>
+  <item name="av.goal.daily.101.rewardMsg"><![CDATA[Nos, ez könnyebb volt, mint vártam... Véletlenül a sci-fi találkozó helyszíneit áthelyeztem egy repülőgép rakterébe. Most mind úton vannak... valahová. Vagy sehova. Nos, a lényeg, hogy ne itt legyenek.]]></item>
+  
   <item name="av.task.daily.101.ReturnPlane.name"><![CDATA[{number} járat visszaküldése]]></item>
-  <item name="av.goal.daily.102.name"><![CDATA[Megéri az árát]]></item>
-  <item name="av.goal.daily.102.hint"><![CDATA[Láttad a legújabb hóeke típust? Hú, eszelős egy járgány! A lapátja titánbevonatos, a dőlésszögét számítógép vezérli, fűtőszálak mindenütt, hogy megolvasszák a jeget, a kabinban pedig beépített wifi! Muszáj beszereznünk egyet a reptérre! Légyszi! Igen, az ára egy kilencjegyű szám – de sok benne a nulla!]]></item>
-  <item name="av.goal.daily.102.rewardMsg"><![CDATA[El sem hiszem, hogy sikerült: összegyűlt a pénz az új hóekére! Mondjuk kár, hogy közben kitavaszodott.]]></item>
+
+  <item name="av.goal.daily.102.name"><![CDATA[Csillagpénz]]></item>
+  <item name="av.goal.daily.102.hint"><![CDATA[Helló! Emlékszel, hogy Fiona annak idején teljesen elbűvölt engem? Azok voltak ám az idők, mi? Gyere, forgassuk vissza az időt, és hódítsuk meg újra, mint annak idején. Amint elég pénz összegyűlik, veszek neki egy csillagot!]]></item>
+  <item name="av.goal.daily.102.rewardMsg"><![CDATA[Hát, mekkorát nézett a kiscsaj, amikor az orra elé raktam a csillagot, mi? A szerelmemért semmi sem túl nagy távolság... Még a kioszkig sem.]]></item>
+  
   <item name="av.task.daily.102.GetAirCoins.name"><![CDATA[{number} aircoin összegyűjtése]]></item>
-  <item name="av.goal.daily.103.name"><![CDATA[Jon, a sas]]></item>
-  <item name="av.goal.daily.103.hint"><![CDATA[Jon azzal henceg, hogy ő a világ egyik legjobb síugrója. Azt mondja, egyszerre három buszt is át tud ugrani! Mivel nincsenek buszaink, és a pilóták nem engedik, hogy a repülőket használjuk, emberekkel fogjuk csinálni! Szóval, gyűjts össze annyi utast, amennyit csak tudsz, aztán fektesd le őket egy hosszú sorba. Hű, alig várom!]]></item>
-  <item name="av.goal.daily.103.rewardMsg"><![CDATA[Nos, most már legalább tudjuk, hogy Jon hajlamos a túlzásokra, ha a síugrásról van szó. Utólag könnyű mondani, hogy játékbuszokra gondolt, mert a dühös utasok nem őt keresik, hanem engem...]]></item>
+
+  <item name="av.goal.daily.103.name"><![CDATA[Ramatgeddon]]></item>
+  <item name="av.goal.daily.103.hint"><![CDATA[Hé, haver! Teljesen... hogy is mondják? Pánikban vagyok, pontosan! A radar hatalmas meteort jelez, amely egyenesen a repülőtér felé tart! Ha ez a dolog becsapódik, úgy szétzúzza a területünket, mintha csak építőkockák lennének. Vörös riasztás! VÖRÖS RIASZTÁS! Evakuálj annyi embert, amennyit csak tudsz!]]></item>
+  <item name="av.goal.daily.103.rewardMsg"><![CDATA[Hűha! Milyen kínos, de egyben ... A meteorit a radaron valójában csak egy... uhh... hogy is mondják? Egy kis májas kolbász. Pontosan. Mostantól csak céklalevest fogok enni a munkahelyemen, ezt megígérem.]]></item>
+  
   <item name="av.task.daily.103.GetPassengers.name"><![CDATA[{number} utas összegyűjtése]]></item>
-  <item name="av.goal.daily.104.name"><![CDATA[A hütték világa]]></item>
-  <item name="av.goal.daily.104.hint"><![CDATA[Tudod, mi van télen? Síszezon. Az utóbbi két hétben mást se csinálok, mint a megszállott síelőket viszem Ausztriába. Én nem síelek jól, de manapság nem is ez a lényeg, hanem az, mit csinálsz a síelés mellett. Tudod... egy kis iszogatás meg csajozás egy hüttében a pálya tetején, aztán a pálya közepén, végül az alján – már ha épségben leérsz.]]></item>
-  <item name="av.goal.daily.104.rewardMsg"><![CDATA[Igen, be vagyok temetve egy hóbuckába. Nem, nem síbaleset volt. Akkor kiszednél végre innen?]]></item>
+
+  <item name="av.goal.daily.104.name"><![CDATA[Hülye-Man]]></item>
+  <item name="av.goal.daily.104.hint"><![CDATA[Hé, haver! Kurt szerint az eurózónás csajok totál odavannak a szuperhősökért. És tudod mit? Mindig is ki akartam próbálni egy olyan szűk spandex ruhát a tökéletesen formált pilóta-testemen. Repüljünk Európába, és mutassuk meg a csajoknak, milyen egy igazi hős. Függöny fel a „Propellátor”-ra...]]></item>
+  <item name="av.goal.daily.104.rewardMsg"><![CDATA[Nos, ez... Először azt hittem, hogy a lányok fütyülnek rám... De aztán párszor megbotlasz a köpenyedben, és hirtelen kifütyülnek! Most már „proletárnak” hívnak. Rendben, kit érdekel? Legalább nem kell majd egy pocakos övet bepréselnem a világmegváltó öltözékem alá.]]></item>
+
   <item name="av.task.daily.104.SendPlane.eu.name"><![CDATA[{number} repülő indítása Európába]]></item>
-  <item name="av.goal.daily.105.name"><![CDATA[Ötven szó]]></item>
-  <item name="av.goal.daily.105.hint"><![CDATA[Lesz egy utam Alaszkába. Tudtad, hogy az eszkimóknak ötven különböző szavuk van a hóra? Valójában ez egy elég vitatott állítás, de kit érdekel? Kiváló beszélgetéstéma lesz, miközben felmelegítjük egymást egy szép eszkimólánnyal egy igluban. Biztos senki nem kérte még, hogy sorolja el mind az ötven szót.]]></item>
-  <item name="av.goal.daily.105.rewardMsg"><![CDATA[Nem, nem jutottunk el az ötven szóig. De adok egy jó tanácsot: ha egy eszkimó megkínál eszkimó jégkrémmel, semmiképp ne egyél belőle.]]></item>
+
+  <item name="av.goal.daily.105.name"><![CDATA[2024: Tariq odüsszeiája]]></item>
+  <item name="av.goal.daily.105.hint"><![CDATA[Hé, haver! A Nasa csajai tökéletes rakétahajtóanyagot jelentenek egy ilyen kaliberű űrkutatónak. Feltűzött szőke sörény, divatos szemüveg és mindig egy ígéretes írótábla a kezükben. Mi mást is kívánhatnál? Irány az USA, és mutassuk meg a csajoknak, milyen ellenállhatatlan Tariq bácsi a súlytalanság állapotában. Hihihihi...]]></item>
+  <item name="av.goal.daily.105.rewardMsg"><![CDATA[Hűha, ez aztán durva volt! Csak úgy remegtem a siklóban! És még légiutas-kísérők sem voltak. Micsoda hely ez? Ennyit a „Cape Karneválról”…]]></item>
+    
   <item name="av.task.daily.105.SendPlane.na.name"><![CDATA[{number} járat indítása Észak-Amerikába]]></item>
-  <item name="av.goal.daily.106.name"><![CDATA[Az Andok fölött]]></item>
-  <item name="av.goal.daily.106.hint"><![CDATA[Amikor az Andok fölött repülünk, fel kell vennünk egy csomagot. Nem tudom, mi van a ládában, de azt ígérték, hogy semmi pók, pirája, kígyó vagy egyéb szörnyeteg nem lesz benne. Itt most elég hideg van, úgyhogy remélem, nem jegesednek el a szárnyak.]]></item>
-  <item name="av.goal.daily.106.rewardMsg"><![CDATA[Esküszöm, hogy valami mozog abban a ládában! Remélem nem nyílik ki, mert... Úristen! ez nyitva van! Bejutottak a pilótafülkébe! Ó, ne, ez csiklandoz! Őőő, minden oké, csak van néhány tengerimalacunk a fedélzeten.]]></item>
-  <item name="av.task.daily.106.SendPlane.sa.name"><![CDATA[{number} járat indítása Dél-Amerikába]]></item>
+
+  <item name="av.goal.daily.106.name"><![CDATA[Szerettem egy lányt a Marson]]></item>
+  <item name="av.goal.daily.106.hint"><![CDATA[Elegem van! A földi lányok annyira igényesek. „Vidd ki a szemetet!”, »Hajtsd fel a vécéülőkét!«, »Hajtsd le a vécéülőkét!« »Ne csalj meg!«. Elég a színházból! Dél-Amerikában rengeteg UFO-észlelés van. Gyerünk, repüljünk oda most azonnal. Talán megtaláljuk azt a szexi csápos lányt, aki egyszer meghívott az űrhajójába.]]></item>
+  <item name="av.goal.daily.106.rewardMsg"><![CDATA[Úristen... mi történt? Egy brazil bárban voltam, és elcsábítottam egy bájos Chiquitát. Aztán... újabb filmszakadás. Hat nappal később szakállasan, alkoholszagúan és egy fillér nélkül ébredtem egy árokban. Biztos, hogy IDEGENEK VOLTAK! MEGINT ELRABOLTAK! Más magyarázat nincs...<br><br>Van egy fejfájás tablettád?]]></item>
+  
+  <item name="av.task.daily.106.SendPlane.sa.name"><![CDATA[{number} járat indítása Dél-Amerikába]]></item>  
+  
+  
   <item name="av.goal.daily.107.name"><![CDATA[Az üzletvezetők versenye]]></item>
   <item name="av.goal.daily.107.hint"><![CDATA[A Nemzetközi Eladók Szövetsége, a NESZ versenyt hirdetett az üzletembereknek az egész világon. Aki ma eladja a kívánt mennyiségű árut, busás jutalomban részesül.]]></item>
   <item name="av.goal.daily.107.rewardMsg"><![CDATA[Gratulálok! Nyertél és azonnal élvezheted is az ajándékodat. Őrület!]]></item>
   <item name="av.task.daily.107.SellProducts.name"><![CDATA[{number} áru eladása]]></item>
-  <item name="av.goal.daily.200.name"><![CDATA[Csúszó landolás]]></item>
-  <item name="av.goal.daily.200.hint"><![CDATA[Figyu, ezt a szuper játékot a mobilomon szoktam játszani. Szóval van egy pingvin, ami fut egy darabig, aztán végigcsúszik a jégen. Az a lényeg, hogy minél messzebbre tudjon csúszni. Már elértem a legfelső pontszámot... de eszembe jutott valami. Mi lenne, ha kipróbálnánk ugyanezt, csak repülővel? Szépen letenném a gépet, aztán simán siklanánk a jégen – minél tovább, annál jobb! Nem történhet semmi baj!]]></item>
-  <item name="av.goal.daily.200.rewardMsg"><![CDATA[Az a helyzet, hogy megtiltották ezt a géppel siklás dolgot. Olyan piros volt a feje a sürgősségi szolgálat főnökének, tutira sérvet kapott. Azért jót csúszkáltunk, nem?]]></item>
+
+
+  <item name="av.goal.daily.200.name"><![CDATA[Hihetetlen találkozás a 69. típussal]]></item>
+  <item name="av.goal.daily.200.hint"><![CDATA[Hé, haver! Rég nem láttalak! Mondd csak... neked is filmszakadásod van? Tegnap este a diszkóban kinéztem egy csajt, mintha egy másik bolygóról jött volna. Zöld alabástrom bőr, antennák a homlokán, minden benne volt. És aztán... Úristen! Egy vörös villanás... repülő csészealjak... és... SEGÍTSÉG! A SZONDA!!! Öhm... beszéljünk erről a munka után, rendben? Ezt még fel kell dolgoznom...]]></item>
+  <item name="av.goal.daily.200.rewardMsg"><![CDATA[Nem hiszem el, haver! Elraboltak az idegenek! Fiona éppen most mondta, hogy évekig eltűntem. Lin valószínűleg, a Gyümiléltologató munkája mellett, az én feladataimat is átvette, hogy megmentse a hátsómat. Veszek neki egy hatalmas csokor virágot, amint sikerül megszerveznem az első randit az új reptéri terapeutánkkal. Csak ne csillagvirág legyen...]]></item>
+  
   <item name="av.task.daily.200.SendPlane.name"><![CDATA[{number} járat indítása]]></item>
-  <item name="av.goal.daily.201.name"><![CDATA[Behavazott hóemberek]]></item>
-  <item name="av.goal.daily.201.hint"><![CDATA[Elhatároztuk, hogy hóemberépítő versenyt rendezünk. Külön kategóriában indulnak a felnőttek és a gyerekek, és fantasztikus díjakat fogunk kiosztani a legjobb hóemberekért. Azért van egy kis probléma: állandóan le- meg felszállnak a gépek, és a motorjuk totál szétfújja a hóembereket. Megszabadulnál tőlük a kedvemért?]]></item>
-  <item name="av.goal.daily.201.rewardMsg"><![CDATA[A hóemberépítő verseny irtó nagy siker volt! Szeretnéd látni a nyertes hóembert? Igazából nagyon hasonlít rád. De tényleg, elképesztő a hasonlóság...]]></item>
+
+  <item name="av.goal.daily.201.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.201.hint"><![CDATA[Hé, haver! Ez a fickó visszatért. Tudod, kiről beszélek, ugye? Tariq, a... kalóz. Nem, várj... pilóta! Pár évvel ezelőtt nyomtalanul eltűnt, miután egy masszív ivászatot tartott a haverommal, Kurtival. Most azt állítja, hogy űrlátogatók elcsábították... vagyis... elrabolták! Vagy valami ilyesmi. Mindenesetre a reptérünk mostanra az alumíniumkalaposok zarándokhelyévé vált. Foglalkozz vele, kérlek!]]></item>
+  <item name="av.goal.daily.201.rewardMsg"><![CDATA[Nos, ez könnyebb volt, mint vártam... Véletlenül a sci-fi találkozó helyszíneit áthelyeztem egy repülőgép rakterébe. Most mind úton vannak... valahová. Vagy sehova. Nos, a lényeg, hogy ne itt legyenek.]]></item>
+  
   <item name="av.task.daily.201.ReturnPlane.name"><![CDATA[{number} járat visszaküldése]]></item>
-  <item name="av.goal.daily.202.name"><![CDATA[Megéri az árát]]></item>
-  <item name="av.goal.daily.202.hint"><![CDATA[Láttad a legújabb hóeke típust? Hú, eszelős egy járgány! A lapátja titánbevonatos, a dőlésszögét számítógép vezérli, fűtőszálak mindenütt, hogy megolvasszák a jeget, a kabinban pedig beépített wifi! Muszáj beszereznünk egyet a reptérre! Légyszi! Igen, az ára egy kilencjegyű szám – de sok benne a nulla!]]></item>
-  <item name="av.goal.daily.202.rewardMsg"><![CDATA[El sem hiszem, hogy sikerült: összegyűlt a pénz az új hóekére! Mondjuk kár, hogy közben kitavaszodott.]]></item>
+
+  <item name="av.goal.daily.202.name"><![CDATA[Csillagpénz]]></item>
+  <item name="av.goal.daily.202.hint"><![CDATA[Helló! Emlékszel, hogy Fiona annak idején teljesen elbűvölt engem? Azok voltak ám az idők, mi? Gyere, forgassuk vissza az időt, és hódítsuk meg újra, mint annak idején. Amint elég pénz összegyűlik, veszek neki egy csillagot!]]></item>
+  <item name="av.goal.daily.202.rewardMsg"><![CDATA[Hát, mekkorát nézett a kiscsaj, amikor az orra elé raktam a csillagot, mi? A szerelmemért semmi sem túl nagy távolság... Még a kioszkig sem.]]></item>
+  
   <item name="av.task.daily.202.GetAirCoins.name"><![CDATA[{number} aircoin összegyűjtése]]></item>
-  <item name="av.goal.daily.203.name"><![CDATA[Jon, a sas]]></item>
-  <item name="av.goal.daily.203.hint"><![CDATA[Jon azzal henceg, hogy ő a világ egyik legjobb síugrója. Azt mondja, egyszerre három buszt is át tud ugrani! Mivel nincsenek buszaink, és a pilóták nem engedik, hogy a repülőket használjuk, emberekkel fogjuk csinálni! Szóval gyűjts össze annyi utast, amennyit csak tudsz, aztán fektesd le őket egy hosszú sorba.]]></item>
-  <item name="av.goal.daily.203.rewardMsg"><![CDATA[Nos, most már legalább tudjuk, hogy Jon hajlamos a túlzásokra, ha a síugrásról van szó. Utólag könnyű mondani, hogy játékbuszokra gondolt, mert a dühös utasok nem őt keresik, hanem engem...]]></item>
+
+  <item name="av.goal.daily.203.name"><![CDATA[Ramatgeddon]]></item>
+  <item name="av.goal.daily.203.hint"><![CDATA[Hé, haver! Teljesen... hogy is mondják? Pánikban vagyok, pontosan! A radar hatalmas meteort jelez, amely egyenesen a repülőtér felé tart! Ha ez a dolog becsapódik, úgy szétzúzza a területünket, mintha csak építőkockák lennének. Vörös riasztás! VÖRÖS RIASZTÁS! Evakuálj annyi embert, amennyit csak tudsz!]]></item>
+  <item name="av.goal.daily.203.rewardMsg"><![CDATA[Hűha! Milyen kínos, de egyben ... A meteorit a radaron valójában csak egy... uhh... hogy is mondják? Egy kis májas kolbász. Pontosan. Mostantól csak céklalevest fogok enni a munkahelyemen, ezt megígérem.]]></item>
+  
   <item name="av.task.daily.203.GetPassengers.name"><![CDATA[{number} utas összegyűjtése]]></item>
-  <item name="av.goal.daily.204.name"><![CDATA[A hütték világa]]></item>
-  <item name="av.goal.daily.204.hint"><![CDATA[Tudod, mi van télen? Síszezon. Az utóbbi két hétben mást se csinálok, mint a megszállott síelőket viszem Ausztriába. Én nem síelek jól, de manapság nem is ez a lényeg, hanem az, mit csinálsz a síelés mellett. Tudod... egy kis iszogatás meg csajozás egy hüttében a pálya tetején, aztán a pálya közepén, végül az alján – már ha épségben leérsz.]]></item>
-  <item name="av.goal.daily.204.rewardMsg"><![CDATA[Igen, be vagyok temetve egy hóbuckába. Nem, nem síbaleset volt. Akkor kiszednél végre innen?]]></item>
+
+  <item name="av.goal.daily.204.name"><![CDATA[Hülye-Man]]></item>
+  <item name="av.goal.daily.204.hint"><![CDATA[Hé, haver! Kurt szerint az eurózónás csajok totál odavannak a szuperhősökért. És tudod mit? Mindig is ki akartam próbálni egy olyan szűk spandex ruhát a tökéletesen formált pilóta-testemen. Repüljünk Európába, és mutassuk meg a csajoknak, milyen egy igazi hős. Függöny fel a „Propellátor”-ra...]]></item>
+  <item name="av.goal.daily.204.rewardMsg"><![CDATA[Nos, ez... Először azt hittem, hogy a lányok fütyülnek rám... De aztán párszor megbotlasz a köpenyedben, és hirtelen kifütyülnek! Most már „proletárnak” hívnak. Rendben, kit érdekel? Legalább nem kell majd egy pocakos övet bepréselnem a világmegváltó öltözékem alá.]]></item>
+
   <item name="av.task.daily.204.SendPlane.eu.name"><![CDATA[{number} repülő indítása Európába]]></item>
-  <item name="av.goal.daily.205.name"><![CDATA[Ötven szó]]></item>
-  <item name="av.goal.daily.205.hint"><![CDATA[Lesz egy utam Alaszkába. Tudtad, hogy az eszkimóknak ötven különböző szavuk van a hóra? Valójában ez egy elég vitatott állítás, de kit érdekel? Kiváló beszélgetéstéma lesz, miközben felmelegítjük egymást egy szép eszkimólánnyal egy igluban. Biztos senki nem kérte még, hogy sorolja el mind az ötven szót.]]></item>
-  <item name="av.goal.daily.205.rewardMsg"><![CDATA[Nem, nem jutottunk el az ötven szóig. De adok egy jó tanácsot: ha egy eszkimó megkínál eszkimó jégkrémmel, semmiképp ne egyél belőle.]]></item>
+
+  <item name="av.goal.daily.205.name"><![CDATA[2024: Tariq odüsszeiája]]></item>
+  <item name="av.goal.daily.205.hint"><![CDATA[Hé, haver! A Nasa csajai tökéletes rakétahajtóanyagot jelentenek egy ilyen kaliberű űrkutatónak. Feltűzött szőke sörény, divatos szemüveg és mindig egy ígéretes írótábla a kezükben. Mi mást is kívánhatnál? Irány az USA, és mutassuk meg a csajoknak, milyen ellenállhatatlan Tariq bácsi a súlytalanság állapotában. Hihihihi...]]></item>
+  <item name="av.goal.daily.205.rewardMsg"><![CDATA[Hűha, ez aztán durva volt! Csak úgy remegtem a siklóban! És még légiutas-kísérők sem voltak. Micsoda hely ez? Ennyit a „Cape Karneválról”…]]></item>
+    
   <item name="av.task.daily.205.SendPlane.na.name"><![CDATA[{number} járat indítása Észak-Amerikába]]></item>
-  <item name="av.goal.daily.206.name"><![CDATA[Az Andok fölött]]></item>
-  <item name="av.goal.daily.206.hint"><![CDATA[Amikor az Andok fölött repülünk, fel kell vennünk egy csomagot. Nem tudom, mi van a ládában, de azt ígérték, hogy semmi pók, pirája, kígyó vagy egyéb szörnyeteg nem lesz benne. Itt most elég hideg van, úgyhogy remélem, nem jegesednek el a szárnyak.]]></item>
-  <item name="av.goal.daily.206.rewardMsg"><![CDATA[Esküszöm, hogy valami mozog abban a ládában! Remélem nem nyílik ki, mert... Úristen! ez nyitva van! Bejutottak a pilótafülkébe! Ó, ne, ez csiklandoz! Őőő, minden oké, csak van néhány tengerimalacunk a fedélzeten.]]></item>
-  <item name="av.task.daily.206.SendPlane.sa.name"><![CDATA[{number} járat indítása Dél-Amerikába]]></item>
+
+  <item name="av.goal.daily.206.name"><![CDATA[Szerettem egy lányt a Marson]]></item>
+  <item name="av.goal.daily.206.hint"><![CDATA[Elegem van! A földi lányok annyira igényesek. „Vidd ki a szemetet!”, »Hajtsd fel a vécéülőkét!«, »Hajtsd le a vécéülőkét!« »Ne csalj meg!«. Elég a színházból! Dél-Amerikában rengeteg UFO-észlelés van. Gyerünk, repüljünk oda most azonnal. Talán megtaláljuk azt a szexi csápos lányt, aki egyszer meghívott az űrhajójába.]]></item>
+  <item name="av.goal.daily.206.rewardMsg"><![CDATA[Úristen... mi történt? Egy brazil bárban voltam, és elcsábítottam egy bájos Chiquitát. Aztán... újabb filmszakadás. Hat nappal később szakállasan, alkoholszagúan és egy fillér nélkül ébredtem egy árokban. Biztos, hogy IDEGENEK VOLTAK! MEGINT ELRABOLTAK! Más magyarázat nincs...<br><br>Van egy fejfájás tablettád?]]></item>
+  
+  <item name="av.task.daily.206.SendPlane.sa.name"><![CDATA[{number} járat indítása Dél-Amerikába]]></item>    
+  
+  
   <item name="av.goal.daily.207.name"><![CDATA[Az üzletvezetők versenye]]></item>
   <item name="av.goal.daily.207.hint"><![CDATA[A Nemzetközi Eladók Szövetsége, a NESZ versenyt hirdetett az üzletembereknek az egész világon. Aki ma eladja a kívánt mennyiségű árut, busás jutalomban részesül.]]></item>
   <item name="av.goal.daily.207.rewardMsg"><![CDATA[Gratulálok! Nyertél és azonnal élvezheted is az ajándékodat. Őrület!]]></item>

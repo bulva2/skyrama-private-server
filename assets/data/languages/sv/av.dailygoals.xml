@@ -65,94 +65,143 @@
   <item name="av.goal.daily.28.hint"><![CDATA[Dagens uppdrag handlar om att samla passagerare. Ta dig an denna utmaning! Ett fantastiskt pris väntar!]]></item>
   <item name="av.goal.daily.28.rewardMsg"><![CDATA[Du klarade utmaningen och har nu bevisat att du hör till de bästa. Här är din belöning - den är du värd!]]></item>
   <item name="av.task.daily.28.GetPassengers.name"><![CDATA[Samla {number} passagerare]]></item>
-  <item name="av.goal.daily.30.name"><![CDATA[Skridskoplan]]></item>
-  <item name="av.goal.daily.30.hint"><![CDATA[Hallå där! Jag har spelat ett sånt roligt spel på min mobil. Du måste få en pingvin att först springa på en väg och sen måste den glida så långt den kan över isen. Jag har redan fått maxpoäng, men fick en ljus idé. Skulle man inte kunna testa det med ett flygplan? Jag måste bara få ner planet på marken och sedan glida så långt jag kan på isen! Vad skulle kunna gå snett?]]></item>
-  <item name="av.goal.daily.30.rewardMsg"><![CDATA[Jag har blivit förbjuden att glida plan över isen. Säkerhetschefen var visst inte alls glad över detta. Nåväl, det var kul så länge det varade!]]></item>
+
+  
+  <item name="av.goal.daily.30.name"><![CDATA[Otroligt möte av det 69:e slaget]]></item>
+  <item name="av.goal.daily.30.hint"><![CDATA[Tjena, polarn! Länge sen sist! Du... har du också minnesluckor? Igår kväll på klubben spanade jag in en brud som såg ut att komma från en annan planet. Grön alabasterhud och antenner på pannan inkluderat. Och sen... Herregud! Ett rött ljussken... Flygande tefat... och... HJÄLP! PROBEN!!! Öh, vi snackar efter jobbet, okej? Jag måste smälta det här...]]></item>
+  <item name="av.goal.daily.30.rewardMsg"><![CDATA[Jag kan inte fatta det, polarn! Jag blev kidnappad av utomjordingar! Fiona berättade just för mig att jag varit spårlöst försvunnen i flera år. Lin verkar inte bara göra sitt jobb med att dela ut juice, utan har också tagit över mitt jobb för att rädda min rumpa. Jag ska ge henne en stor bukett blommor så snart jag fixat en dejt med vår nya flygplatsterapeut. Bara det inte är några stjärnblommor...]]></item>
+  
   <item name="av.task.daily.30.SendPlane.name"><![CDATA[Skicka {number} flygplan]]></item>
-  <item name="av.goal.daily.31.name"><![CDATA[Snögubbetrubbel]]></item>
-  <item name="av.goal.daily.31.hint"><![CDATA[Vi har bestämt oss för att ha en tävling i att bygga snögubbar! Vi har planerat det i minsta detalj – vi har kategorier både för barn och vuxna och vinsterna kommer att vara något utöver det vanliga. Men det finns ett litet problem – flygplanen fortsätter att landa och blåser bort våra snögubbar. Kan du hjälpa mig att bli av med flygplanen?]]></item>
-  <item name="av.goal.daily.31.rewardMsg"><![CDATA[Snögubbetävlingen var en succé! Vill du se snögubben som vann? Den ser exakt ut som dig! Likheten är skrämmande.]]></item>
+  
+  <item name="av.goal.daily.31.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.31.hint"><![CDATA[Hej, du där! Den där snubben är tillbaka. Du vet vem jag menar. Tariq, piraten... Nej, vänta. Piloten. För några år sedan försvann han spårlöst efter en fyllekväll med min Kurti. Nu påstår han att besökare från rymden förfört... nej, förlåt... kidnappat honom. Eller något sånt. Hur som helst har vår flygplats blivit en vallfartsort för foliehattar. Ta hand om den!]]></item>
+  <item name="av.goal.daily.31.rewardMsg"><![CDATA[Nå, det var ju enklare än väntat. Jag hade... av misstag... flyttat alla arenor för science fiction-mässan till lastrummet på ett flygplan. Nu är de på väg till... någonstans. Eller ingenstans. Tja, huvudsaken är att de inte är här.]]></item>
+  
   <item name="av.task.daily.31.ReturnPlane.name"><![CDATA[Skicka tillbaka {number} flygplan]]></item>
-  <item name="av.goal.daily.32.name"><![CDATA[Snöplog à la lyx]]></item>
-  <item name="av.goal.daily.32.hint"><![CDATA[Har du sett den nya snöplogen à la lyx? Den är fantastisk! Den har verkligen allt – från ett inbyggt element som smälter is till inbyggd wifi i förarhytten! Vi måste skaffa en till flygplatsen! Snälla? Den kostar bara ett par hundra miljoner...]]></item>
-  <item name="av.goal.daily.32.rewardMsg"><![CDATA[Vi sparade ihop så att vi kunde köpa den där lyxiga snöplogen! Synd bara att leveransen dröjde så länge – isen hade ju redan börjat smälta av sig själv.]]></item>
+  
+  <item name="av.goal.daily.32.name"><![CDATA[Stjärnmynt]]></item>
+  <item name="av.goal.daily.32.hint"><![CDATA[Tjena! Kommer du ihåg hur Fiona förtrollade mig den där gången? Det var tider, eller hur? Kom igen, vi vrider tillbaka klockan och charmar henne som förr i tiden. Så snart vi har samlat tillräckligt med stålar, köper jag en stjärna till henne!]]></item>
+  <item name="av.goal.daily.32.rewardMsg"><![CDATA[Oj, hon fick stora ögon när jag smackade stjärnan rakt framför näsan på henne, eller hur? För min älskling är ingen väg för lång... inte ens till kiosken.]]></item>
+  
   <item name="av.task.daily.32.GetAirCoins.name"><![CDATA[Samla {number} luftmynt]]></item>
-  <item name="av.goal.daily.33.name"><![CDATA[Kondoren Kurt]]></item>
-  <item name="av.goal.daily.33.hint"><![CDATA[Kurs påstår att han är en av de bästa skidhopparna i världen. Han säger att han kan hoppa över tre bussar samtidigt! Nu har vi ju inga bussar och piloterna vill inte ha någon hoppande över deras flygplan så vi måste nöja oss med människor! Samla ihop så många passagerare du kan och få dem att lägga sig i en lång rad.]]></item>
-  <item name="av.goal.daily.33.rewardMsg"><![CDATA[Det verkar som om Kurt ljög om sina färdigheter som skidhoppare. Han säger att han menade LEKSAKSbussar. Jag gömmer mig nu från en hög arga, snötäckta passagerare.]]></item>
+
+  <item name="av.goal.daily.33.name"><![CDATA[Ramageddon]]></item>
+  <item name="av.goal.daily.33.hint"><![CDATA[Hej, thingy! Jag är helt... vad säger man nu igen? Panikslagen, precis! Radarn visar en gigantisk meteorit på kollisionskurs mot flygplatsen! Om den där saken kraschar in i oss, kommer den att smula sönder hela området som en hög byggklossar. Kod röd! KOD RÖD! Evakuera så många du kan!]]></item>
+  <item name="av.goal.daily.33.rewardMsg"><![CDATA[Oj då! Så pinsamt alltså... Meteoriten på radarn visade sig faktiskt bara vara en... äh... vad säger man nu igen? En leverpastejfläck. Precis. Från och med nu ska jag bara äta rödbetssoppa på jobbet, det lovar jag dig.]]></item>
+  
   <item name="av.task.daily.33.GetPassengers.name"><![CDATA[Samla {number} passagerare]]></item>
-  <item name="av.goal.daily.34.name"><![CDATA[Après-ski]]></item>
-  <item name="av.goal.daily.34.hint"><![CDATA[Det är vinter och det innebär skidsäsong. Jag måste göra en massa flygningar till Österrike eftersom de vill åka skidor på en av de lyxiga anläggningarna. Jag är själv inte särskilt bra på skidåkning, men det gör inget – alla vet att det ändå mest handlar om Après-ski! Vackra damer och varm choklad. Vem skulle inte uppskatta det?]]></item>
-  <item name="av.goal.daily.34.rewardMsg"><![CDATA[Ja, jag hamnade med huvudet först i en snödriva. Nej, det var ingen skidolycka. Hjälp mig upp härifrån!]]></item>
+
+  <item name="av.goal.daily.34.name"><![CDATA[Dum-Mannen!]]></item>
+  <item name="av.goal.daily.34.hint"><![CDATA[Tjena, grabben! De heta brudarna i eurozonen är tydligen galna i superhjältar, säger Kurt. Och vet du vad? Jag har alltid velat dra på mig en sån där tajt spandexdräkt över min välformade pilotkropp. Kom igen, vi drar till Europa och visar babes hur en riktig hjälte ser ut. Ridå upp för "Propellatorn"...]]></item>
+  <item name="av.goal.daily.34.rewardMsg"><![CDATA[Alltså, det här är ju... I början trodde jag att tjejerna visslade efter mig... Men så snubblar man över manteln några gånger, och plötsligt blir man utbuad! Nu kallar de mig för "Proletatorn". Äh, vem bryr sig? Åtminstone slipper jag klämma in en maggördel under min världsräddardräkt.]]></item>
+  
   <item name="av.task.daily.34.SendPlane.eu.name"><![CDATA[Skicka {number} flygplan till Europa]]></item>
-  <item name="av.goal.daily.35.name"><![CDATA[50 ord]]></item>
-  <item name="av.goal.daily.35.hint"><![CDATA[Jag måste till Alaska. Visste du att eskimåerna har femtio olika ord för snö? Låter lite pretentiöst, men vem bryr sig. Men samtidigt ett bra samtalsämne när jag myser med en eskimåbrud i hennes igloo. Kan inte tänka mig att någon någonsin frågat dem om alla femtio ord.]]></item>
-  <item name="av.goal.daily.35.rewardMsg"><![CDATA[Eskimåtjejen sa att jag skulle äta en speciell typ av snö – jag har glömt namnet på den, men det visade sig vara gul snö. Nu är jag lite illamående...]]></item>
+
+  <item name="av.goal.daily.35.name"><![CDATA[2024: En odyssé av Tariq]]></item>
+  <item name="av.goal.daily.35.hint"><![CDATA[Tjena, polarn! Tjejerna på NASA är den perfekta raketbränslet för en rymdforskare av min kaliber. Högt uppsatta blonda svall, trendiga glasögon och alltid ett löftesrikt klämblock i handen. Vad mer kan man önska sig? Kom igen, vi drar till USA och visar de här damerna hur oemotståndlig farbror Tariq är i tyngdlöshet. Hihihihihi...]]></item>
+  <item name="av.goal.daily.35.rewardMsg"><![CDATA[Herregud! Jag skakade som ett asplöv i rymdfärjan! Och det fanns inga flygvärdinnor. Vad är det här för ett företag? Så mycket för Cape Karneval…]]></item>
+  
   <item name="av.task.daily.35.SendPlane.na.name"><![CDATA[Skicka {number} flygplan till Nordamerika]]></item>
-  <item name="av.goal.daily.36.name"><![CDATA[Spännande Anderna]]></item>
-  <item name="av.goal.daily.36.hint"><![CDATA[Jag måste flyga till Anderna och hämta ett paket. Jag vet inte vad som finns i lådan, men man har försäkrat mig om att det inte är några spindlar, pirayor, ormar eller liknande. Det är ganska kallt ute just nu så jag hoppas att motoerna inte isar igen under flygningen.]]></item>
-  <item name="av.goal.daily.36.rewardMsg"><![CDATA[Lådan vacklar och konstiga ljud kommer från den! Hoppas den inte öppnar sig av sig själv – vänta... de har tagit sig ut. De är i cockpiten! Åhhh, det är bara marsvin. Och de är faktiskt söta!]]></item>
+
+  <item name="av.goal.daily.36.name"><![CDATA[Jag älskade en flicka på Mars]]></item>
+  <item name="av.goal.daily.36.hint"><![CDATA[Jag har fått nog! Jordens tjejer är så krävande. ”Ta ut soporna!”, ’Fäll upp toalettsitsen!’, ’Fäll ner toalettsitsen!’ ’Var inte otrogen mot mig!’. Nu räcker det med teatern! I Sydamerika finns det massor av UFO-observationer. Kom igen, vi sticker dit direkt – kanske hittar vi den heta tentakelbruden som bjöd in mig i sitt UFO den där gången.]]></item>
+  <item name="av.goal.daily.36.rewardMsg"><![CDATA[Herregud ... vad har hänt? Jag var på en brasiliansk bar och lyckades charma en söt liten Chiquita. Sen ... ännu en blackout. Sex dagar senare vaknade jag upp med ett yvigt skägg, spritandedräkt och utan en krona i fickan i rännstenen. Det måste ha varit UTOMJORDINGAR! JAG BLEV BORTRÖVAD IGEN! Det finns ingen annan förklaring...<br><br>Har du en huvudvärkstablett?]]></item>  
+
   <item name="av.task.daily.36.SendPlane.sa.name"><![CDATA[Skicka {number} flygplan till Sydamerika]]></item>
-  <item name="av.goal.daily.100.name"><![CDATA[Skridskoplan]]></item>
-  <item name="av.goal.daily.100.hint"><![CDATA[Hallå där! Jag har spelat ett sånt roligt spel på min mobil. Du måste få en pingvin att först springa på en väg och sen måste den glida så långt den kan över isen. Jag har redan fått maxpoäng, men fick en ljus idé. Skulle man inte kunna testa det med ett flygplan? Jag måste bara få ner planet på marken och sedan glida så långt jag kan på isen! Vad skulle kunna gå snett?]]></item>
-  <item name="av.goal.daily.100.rewardMsg"><![CDATA[Jag har blivit förbjuden att glida plan över isen. Säkerhetschefen var visst inte alls glad över detta. Nåväl, det var kul så länge det varade!]]></item>
+
+
+  <item name="av.goal.daily.100.name"><![CDATA[Otroligt möte av det 69:e slaget]]></item>
+  <item name="av.goal.daily.100.hint"><![CDATA[Tjena, polarn! Länge sen sist! Du... har du också minnesluckor? Igår kväll på klubben spanade jag in en brud som såg ut att komma från en annan planet. Grön alabasterhud och antenner på pannan inkluderat. Och sen... Herregud! Ett rött ljussken... Flygande tefat... och... HJÄLP! PROBEN!!! Öh, vi snackar efter jobbet, okej? Jag måste smälta det här...]]></item>
+  <item name="av.goal.daily.100.rewardMsg"><![CDATA[Jag kan inte fatta det, polarn! Jag blev kidnappad av utomjordingar! Fiona berättade just för mig att jag varit spårlöst försvunnen i flera år. Lin verkar inte bara göra sitt jobb med att dela ut juice, utan har också tagit över mitt jobb för att rädda min rumpa. Jag ska ge henne en stor bukett blommor så snart jag fixat en dejt med vår nya flygplatsterapeut. Bara det inte är några stjärnblommor...]]></item>
+  
   <item name="av.task.daily.100.SendPlane.name"><![CDATA[Skicka {number} flygplan]]></item>
-  <item name="av.goal.daily.101.name"><![CDATA[Snögubbetrubbel]]></item>
-  <item name="av.goal.daily.101.hint"><![CDATA[Vi har bestämt oss för att ha en tävling i att bygga snögubbar! Vi har planerat det i minsta detalj – vi har kategorier både för barn och vuxna och vinsterna kommer att vara något utöver det vanliga. Men det finns ett litet problem – flygplanen fortsätter att landa och blåser bort våra snögubbar. Kan du hjälpa mig att bli av med flygplanen?]]></item>
-  <item name="av.goal.daily.101.rewardMsg"><![CDATA[Snögubbetävlingen var en succé! Vill du se snögubben som vann? Den ser exakt ut som dig! Likheten är skrämmande.]]></item>
+  
+  <item name="av.goal.daily.101.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.101.hint"><![CDATA[Hej, du där! Den där snubben är tillbaka. Du vet vem jag menar. Tariq, piraten... Nej, vänta. Piloten. För några år sedan försvann han spårlöst efter en fyllekväll med min Kurti. Nu påstår han att besökare från rymden förfört... nej, förlåt... kidnappat honom. Eller något sånt. Hur som helst har vår flygplats blivit en vallfartsort för foliehattar. Ta hand om den!]]></item>
+  <item name="av.goal.daily.101.rewardMsg"><![CDATA[Nå, det var ju enklare än väntat. Jag hade... av misstag... flyttat alla arenor för science fiction-mässan till lastrummet på ett flygplan. Nu är de på väg till... någonstans. Eller ingenstans. Tja, huvudsaken är att de inte är här.]]></item>
+  
   <item name="av.task.daily.101.ReturnPlane.name"><![CDATA[Skicka tillbaka {number} flygplan]]></item>
-  <item name="av.goal.daily.102.name"><![CDATA[Snöplog à la lyx]]></item>
-  <item name="av.goal.daily.102.hint"><![CDATA[Har du sett den nya snöplogen à la lyx? Den är fantastisk! Den har verkligen allt – från ett inbyggt element som smälter is till inbyggd wifi i förarhytten! Vi måste skaffa en till flygplatsen! Snälla? Den kostar bara ett par hundra miljoner...]]></item>
-  <item name="av.goal.daily.102.rewardMsg"><![CDATA[Vi sparade ihop så att vi kunde köpa den där lyxiga snöplogen! Synd bara att leveransen dröjde så länge – isen hade ju redan börjat smälta av sig själv.]]></item>
+  
+  <item name="av.goal.daily.102.name"><![CDATA[Stjärnmynt]]></item>
+  <item name="av.goal.daily.102.hint"><![CDATA[Tjena! Kommer du ihåg hur Fiona förtrollade mig den där gången? Det var tider, eller hur? Kom igen, vi vrider tillbaka klockan och charmar henne som förr i tiden. Så snart vi har samlat tillräckligt med stålar, köper jag en stjärna till henne!]]></item>
+  <item name="av.goal.daily.102.rewardMsg"><![CDATA[Oj, hon fick stora ögon när jag smackade stjärnan rakt framför näsan på henne, eller hur? För min älskling är ingen väg för lång... inte ens till kiosken.]]></item>
+  
   <item name="av.task.daily.102.GetAirCoins.name"><![CDATA[Samla {number} luftmynt]]></item>
-  <item name="av.goal.daily.103.name"><![CDATA[Kondoren Kurt]]></item>
-  <item name="av.goal.daily.103.hint"><![CDATA[Kurs påstår att han är en av de bästa skidhopparna i världen. Han säger att han kan hoppa över tre bussar samtidigt! Nu har vi ju inga bussar och piloterna vill inte ha någon hoppande över deras flygplan så vi måste nöja oss med människor! Samla ihop så många passagerare du kan och få dem att lägga sig i en lång rad.]]></item>
-  <item name="av.goal.daily.103.rewardMsg"><![CDATA[Det verkar som om Kurt ljög om sina färdigheter som skidhoppare. Han säger att han menade LEKSAKSbussar. Jag gömmer mig nu från en hög arga, snötäckta passagerare.]]></item>
+
+  <item name="av.goal.daily.103.name"><![CDATA[Ramageddon]]></item>
+  <item name="av.goal.daily.103.hint"><![CDATA[Hej, thingy! Jag är helt... vad säger man nu igen? Panikslagen, precis! Radarn visar en gigantisk meteorit på kollisionskurs mot flygplatsen! Om den där saken kraschar in i oss, kommer den att smula sönder hela området som en hög byggklossar. Kod röd! KOD RÖD! Evakuera så många du kan!]]></item>
+  <item name="av.goal.daily.103.rewardMsg"><![CDATA[Oj då! Så pinsamt alltså... Meteoriten på radarn visade sig faktiskt bara vara en... äh... vad säger man nu igen? En leverpastejfläck. Precis. Från och med nu ska jag bara äta rödbetssoppa på jobbet, det lovar jag dig.]]></item>
+  
   <item name="av.task.daily.103.GetPassengers.name"><![CDATA[Samla {number} passagerare]]></item>
-  <item name="av.goal.daily.104.name"><![CDATA[Après-ski]]></item>
-  <item name="av.goal.daily.104.hint"><![CDATA[Det är vinter och det innebär skidsäsong. Jag måste göra en massa flygningar till Österrike eftersom de vill åka skidor på en av de lyxiga anläggningarna. Jag är själv inte särskilt bra på skidåkning, men det gör inget – alla vet att det ändå mest handlar om Après-ski! Vackra damer och varm choklad. Vem skulle inte uppskatta det?]]></item>
-  <item name="av.goal.daily.104.rewardMsg"><![CDATA[Ja, jag hamnade med huvudet först i en snödriva. Nej, det var ingen skidolycka. Hjälp mig upp härifrån!]]></item>
+
+  <item name="av.goal.daily.104.name"><![CDATA[Dum-Mannen!]]></item>
+  <item name="av.goal.daily.104.hint"><![CDATA[Tjena, grabben! De heta brudarna i eurozonen är tydligen galna i superhjältar, säger Kurt. Och vet du vad? Jag har alltid velat dra på mig en sån där tajt spandexdräkt över min välformade pilotkropp. Kom igen, vi drar till Europa och visar babes hur en riktig hjälte ser ut. Ridå upp för "Propellatorn"...]]></item>
+  <item name="av.goal.daily.104.rewardMsg"><![CDATA[Alltså, det här är ju... I början trodde jag att tjejerna visslade efter mig... Men så snubblar man över manteln några gånger, och plötsligt blir man utbuad! Nu kallar de mig för "Proletatorn". Äh, vem bryr sig? Åtminstone slipper jag klämma in en maggördel under min världsräddardräkt.]]></item>
+  
   <item name="av.task.daily.104.SendPlane.eu.name"><![CDATA[Skicka {number} flygplan till Europa]]></item>
-  <item name="av.goal.daily.105.name"><![CDATA[50 ord]]></item>
-  <item name="av.goal.daily.105.hint"><![CDATA[Jag måste till Alaska. Visste du att eskimåerna har femtio olika ord för snö? Låter lite pretentiöst, men vem bryr sig. Men samtidigt ett bra samtalsämne när jag myser med en eskimåbrud i hennes igloo. Kan inte tänka mig att någon någonsin frågat dem om alla femtio ord.]]></item>
-  <item name="av.goal.daily.105.rewardMsg"><![CDATA[Eskimåtjejen sa att jag skulle äta en speciell typ av snö – jag har glömt namnet på den, men det visade sig vara gul snö. Nu är jag lite illamående...]]></item>
+
+  <item name="av.goal.daily.105.name"><![CDATA[2024: En odyssé av Tariq]]></item>
+  <item name="av.goal.daily.105.hint"><![CDATA[Tjena, polarn! Tjejerna på NASA är den perfekta raketbränslet för en rymdforskare av min kaliber. Högt uppsatta blonda svall, trendiga glasögon och alltid ett löftesrikt klämblock i handen. Vad mer kan man önska sig? Kom igen, vi drar till USA och visar de här damerna hur oemotståndlig farbror Tariq är i tyngdlöshet. Hihihihihi...]]></item>
+  <item name="av.goal.daily.105.rewardMsg"><![CDATA[Herregud! Jag skakade som ett asplöv i rymdfärjan! Och det fanns inga flygvärdinnor. Vad är det här för ett företag? Så mycket för Cape Karneval…]]></item>
+  
   <item name="av.task.daily.105.SendPlane.na.name"><![CDATA[Skicka {number} flygplan till Nordamerika]]></item>
-  <item name="av.goal.daily.106.name"><![CDATA[Spännande Anderna]]></item>
-  <item name="av.goal.daily.106.hint"><![CDATA[Jag måste flyga till Anderna och hämta ett paket. Jag vet inte vad som finns i lådan, men man har försäkrat mig om att det inte är några spindlar, pirayor, ormar eller liknande. Det är ganska kallt ute just nu så jag hoppas att motoerna inte isar igen under flygningen.]]></item>
-  <item name="av.goal.daily.106.rewardMsg"><![CDATA[Lådan vacklar och konstiga ljud kommer från den! Hoppas den inte öppnar sig av sig själv – vänta... de har tagit sig ut. De är i cockpiten! Åhhh, det är bara marsvin. Och de är faktiskt söta!]]></item>
-  <item name="av.task.daily.106.SendPlane.sa.name"><![CDATA[Skicka {number} flygplan till Sydamerika]]></item>
+
+  <item name="av.goal.daily.106.name"><![CDATA[Jag älskade en flicka på Mars]]></item>
+  <item name="av.goal.daily.106.hint"><![CDATA[Jag har fått nog! Jordens tjejer är så krävande. ”Ta ut soporna!”, ’Fäll upp toalettsitsen!’, ’Fäll ner toalettsitsen!’ ’Var inte otrogen mot mig!’. Nu räcker det med teatern! I Sydamerika finns det massor av UFO-observationer. Kom igen, vi sticker dit direkt – kanske hittar vi den heta tentakelbruden som bjöd in mig i sitt UFO den där gången.]]></item>
+  <item name="av.goal.daily.106.rewardMsg"><![CDATA[Herregud ... vad har hänt? Jag var på en brasiliansk bar och lyckades charma en söt liten Chiquita. Sen ... ännu en blackout. Sex dagar senare vaknade jag upp med ett yvigt skägg, spritandedräkt och utan en krona i fickan i rännstenen. Det måste ha varit UTOMJORDINGAR! JAG BLEV BORTRÖVAD IGEN! Det finns ingen annan förklaring...<br><br>Har du en huvudvärkstablett?]]></item>  
+
+  <item name="av.task.daily.106.SendPlane.sa.name"><![CDATA[Skicka {number} flygplan till Sydamerika]]></item>  
+
+  
   <item name="av.goal.daily.107.name"><![CDATA[Utmaning för butiksägare]]></item>
   <item name="av.goal.daily.107.hint"><![CDATA[International Shop Organization ISO har utlyst en tävling för butiksägare världen över. Alla som lyckas sälja den fastslagna mängden produkter idag kommer att bli rikligt belönade.]]></item>
   <item name="av.goal.daily.107.rewardMsg"><![CDATA[Stort grattis! Du klarade utmaningen och här är din belöning. Den är du värd!]]></item>
   <item name="av.task.daily.107.SellProducts.name"><![CDATA[Sälj {number} produkt/er]]></item>
-  <item name="av.goal.daily.200.name"><![CDATA[Skridskoplan]]></item>
-  <item name="av.goal.daily.200.hint"><![CDATA[Hallå där! Jag har spelat ett sånt roligt spel på min mobil. Du måste få en pingvin att först springa på en väg och sen måste den glida så långt den kan över isen. Jag har redan fått maxpoäng, men fick en ljus idé. Skulle man inte kunna testa det med ett flygplan? Jag måste bara få ner planet på marken och sedan glida så långt jag kan på isen! Vad skulle kunna gå snett?]]></item>
-  <item name="av.goal.daily.200.rewardMsg"><![CDATA[Jag har blivit förbjuden att glida plan över isen. Säkerhetschefen var visst inte alls glad över detta. Nåväl, det var kul så länge det varade!]]></item>
+
+
+  <item name="av.goal.daily.200.name"><![CDATA[Otroligt möte av det 69:e slaget]]></item>
+  <item name="av.goal.daily.200.hint"><![CDATA[Tjena, polarn! Länge sen sist! Du... har du också minnesluckor? Igår kväll på klubben spanade jag in en brud som såg ut att komma från en annan planet. Grön alabasterhud och antenner på pannan inkluderat. Och sen... Herregud! Ett rött ljussken... Flygande tefat... och... HJÄLP! PROBEN!!! Öh, vi snackar efter jobbet, okej? Jag måste smälta det här...]]></item>
+  <item name="av.goal.daily.200.rewardMsg"><![CDATA[Jag kan inte fatta det, polarn! Jag blev kidnappad av utomjordingar! Fiona berättade just för mig att jag varit spårlöst försvunnen i flera år. Lin verkar inte bara göra sitt jobb med att dela ut juice, utan har också tagit över mitt jobb för att rädda min rumpa. Jag ska ge henne en stor bukett blommor så snart jag fixat en dejt med vår nya flygplatsterapeut. Bara det inte är några stjärnblommor...]]></item>
+  
   <item name="av.task.daily.200.SendPlane.name"><![CDATA[Skicka {number} flygplan]]></item>
-  <item name="av.goal.daily.201.name"><![CDATA[Snögubbetrubbel]]></item>
-  <item name="av.goal.daily.201.hint"><![CDATA[Vi har bestämt oss för att ha en tävling i att bygga snögubbar! Vi har planerat det i minsta detalj – vi har kategorier både för barn och vuxna och vinsterna kommer att vara något utöver det vanliga. Men det finns ett litet problem – flygplanen fortsätter att landa och blåser bort våra snögubbar. Kan du hjälpa mig att bli av med flygplanen?]]></item>
-  <item name="av.goal.daily.201.rewardMsg"><![CDATA[Snögubbetävlingen var en succé! Vill du se snögubben som vann? Den ser exakt ut som dig! Likheten är skrämmande.]]></item>
+  
+  <item name="av.goal.daily.201.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.201.hint"><![CDATA[Hej, du där! Den där snubben är tillbaka. Du vet vem jag menar. Tariq, piraten... Nej, vänta. Piloten. För några år sedan försvann han spårlöst efter en fyllekväll med min Kurti. Nu påstår han att besökare från rymden förfört... nej, förlåt... kidnappat honom. Eller något sånt. Hur som helst har vår flygplats blivit en vallfartsort för foliehattar. Ta hand om den!]]></item>
+  <item name="av.goal.daily.201.rewardMsg"><![CDATA[Nå, det var ju enklare än väntat. Jag hade... av misstag... flyttat alla arenor för science fiction-mässan till lastrummet på ett flygplan. Nu är de på väg till... någonstans. Eller ingenstans. Tja, huvudsaken är att de inte är här.]]></item>
+  
   <item name="av.task.daily.201.ReturnPlane.name"><![CDATA[Skicka tillbaka {number} flygplan]]></item>
-  <item name="av.goal.daily.202.name"><![CDATA[Snöplog à la lyx]]></item>
-  <item name="av.goal.daily.202.hint"><![CDATA[Har du sett den nya snöplogen à la lyx? Den är fantastisk! Den har verkligen allt – från ett inbyggt element som smälter is till inbyggd wifi i förarhytten! Vi måste skaffa en till flygplatsen! Snälla? Den kostar bara ett par hundra miljoner...]]></item>
-  <item name="av.goal.daily.202.rewardMsg"><![CDATA[Vi sparade ihop så att vi kunde köpa den där lyxiga snöplogen! Synd bara att leveransen dröjde så länge – isen hade ju redan börjat smälta av sig själv.]]></item>
+  
+  <item name="av.goal.daily.202.name"><![CDATA[Stjärnmynt]]></item>
+  <item name="av.goal.daily.202.hint"><![CDATA[Tjena! Kommer du ihåg hur Fiona förtrollade mig den där gången? Det var tider, eller hur? Kom igen, vi vrider tillbaka klockan och charmar henne som förr i tiden. Så snart vi har samlat tillräckligt med stålar, köper jag en stjärna till henne!]]></item>
+  <item name="av.goal.daily.202.rewardMsg"><![CDATA[Oj, hon fick stora ögon när jag smackade stjärnan rakt framför näsan på henne, eller hur? För min älskling är ingen väg för lång... inte ens till kiosken.]]></item>
+  
   <item name="av.task.daily.202.GetAirCoins.name"><![CDATA[Samla {number} luftmynt]]></item>
-  <item name="av.goal.daily.203.name"><![CDATA[Kondoren Kurt]]></item>
-  <item name="av.goal.daily.203.hint"><![CDATA[Kurs påstår att han är en av de bästa skidhopparna i världen. Han säger att han kan hoppa över tre bussar samtidigt! Nu har vi ju inga bussar och piloterna vill inte ha någon hoppande över deras flygplan så vi måste nöja oss med människor! Samla ihop så många passagerare du kan och få dem att lägga sig i en lång rad.]]></item>
-  <item name="av.goal.daily.203.rewardMsg"><![CDATA[Det verkar som om Kurt ljög om sina färdigheter som skidhoppare. Han säger att han menade LEKSAKSbussar. Jag gömmer mig nu från en hög arga, snötäckta passagerare.]]></item>
+
+  <item name="av.goal.daily.203.name"><![CDATA[Ramageddon]]></item>
+  <item name="av.goal.daily.203.hint"><![CDATA[Hej, thingy! Jag är helt... vad säger man nu igen? Panikslagen, precis! Radarn visar en gigantisk meteorit på kollisionskurs mot flygplatsen! Om den där saken kraschar in i oss, kommer den att smula sönder hela området som en hög byggklossar. Kod röd! KOD RÖD! Evakuera så många du kan!]]></item>
+  <item name="av.goal.daily.203.rewardMsg"><![CDATA[Oj då! Så pinsamt alltså... Meteoriten på radarn visade sig faktiskt bara vara en... äh... vad säger man nu igen? En leverpastejfläck. Precis. Från och med nu ska jag bara äta rödbetssoppa på jobbet, det lovar jag dig.]]></item>
+  
   <item name="av.task.daily.203.GetPassengers.name"><![CDATA[Samla {number} passagerare]]></item>
-  <item name="av.goal.daily.204.name"><![CDATA[Après-ski]]></item>
-  <item name="av.goal.daily.204.hint"><![CDATA[Det är vinter och det innebär skidsäsong. Jag måste göra en massa flygningar till Österrike eftersom de vill åka skidor på en av de lyxiga anläggningarna. Jag är själv inte särskilt bra på skidåkning, men det gör inget – alla vet att det ändå mest handlar om Après-ski! Vackra damer och varm choklad. Vem skulle inte uppskatta det?]]></item>
-  <item name="av.goal.daily.204.rewardMsg"><![CDATA[Ja, jag hamnade med huvudet först i en snödriva. Nej, det var ingen skidolycka. Hjälp mig upp härifrån!]]></item>
+
+  <item name="av.goal.daily.204.name"><![CDATA[Dum-Mannen!]]></item>
+  <item name="av.goal.daily.204.hint"><![CDATA[Tjena, grabben! De heta brudarna i eurozonen är tydligen galna i superhjältar, säger Kurt. Och vet du vad? Jag har alltid velat dra på mig en sån där tajt spandexdräkt över min välformade pilotkropp. Kom igen, vi drar till Europa och visar babes hur en riktig hjälte ser ut. Ridå upp för "Propellatorn"...]]></item>
+  <item name="av.goal.daily.204.rewardMsg"><![CDATA[Alltså, det här är ju... I början trodde jag att tjejerna visslade efter mig... Men så snubblar man över manteln några gånger, och plötsligt blir man utbuad! Nu kallar de mig för "Proletatorn". Äh, vem bryr sig? Åtminstone slipper jag klämma in en maggördel under min världsräddardräkt.]]></item>
+  
   <item name="av.task.daily.204.SendPlane.eu.name"><![CDATA[Skicka {number} flygplan till Europa]]></item>
-  <item name="av.goal.daily.205.name"><![CDATA[50 ord]]></item>
-  <item name="av.goal.daily.205.hint"><![CDATA[Jag måste till Alaska. Visste du att eskimåerna har femtio olika ord för snö? Låter lite pretentiöst, men vem bryr sig. Men samtidigt ett bra samtalsämne när jag myser med en eskimåbrud i hennes igloo. Kan inte tänka mig att någon någonsin frågat dem om alla femtio ord.]]></item>
-  <item name="av.goal.daily.205.rewardMsg"><![CDATA[Eskimåtjejen sa att jag skulle äta en speciell typ av snö – jag har glömt namnet på den, men det visade sig vara gul snö. Nu är jag lite illamående...]]></item>
+
+  <item name="av.goal.daily.205.name"><![CDATA[2024: En odyssé av Tariq]]></item>
+  <item name="av.goal.daily.205.hint"><![CDATA[Tjena, polarn! Tjejerna på NASA är den perfekta raketbränslet för en rymdforskare av min kaliber. Högt uppsatta blonda svall, trendiga glasögon och alltid ett löftesrikt klämblock i handen. Vad mer kan man önska sig? Kom igen, vi drar till USA och visar de här damerna hur oemotståndlig farbror Tariq är i tyngdlöshet. Hihihihihi...]]></item>
+  <item name="av.goal.daily.205.rewardMsg"><![CDATA[Herregud! Jag skakade som ett asplöv i rymdfärjan! Och det fanns inga flygvärdinnor. Vad är det här för ett företag? Så mycket för Cape Karneval…]]></item>
+  
   <item name="av.task.daily.205.SendPlane.na.name"><![CDATA[Skicka {number} flygplan till Nordamerika]]></item>
-  <item name="av.goal.daily.206.name"><![CDATA[Spännande Anderna]]></item>
-  <item name="av.goal.daily.206.hint"><![CDATA[Jag måste flyga till Anderna och hämta ett paket. Jag vet inte vad som finns i lådan, men man har försäkrat mig om att det inte är några spindlar, pirayor, ormar eller liknande. Det är ganska kallt ute just nu så jag hoppas att motoerna inte isar igen under flygningen.]]></item>
-  <item name="av.goal.daily.206.rewardMsg"><![CDATA[Lådan vacklar och konstiga ljud kommer från den! Hoppas den inte öppnar sig av sig själv – vänta... de har tagit sig ut. De är i cockpiten! Åhhh, det är bara marsvin. Och de är faktiskt söta!]]></item>
-  <item name="av.task.daily.206.SendPlane.sa.name"><![CDATA[Skicka {number} flygplan till Sydamerika]]></item>
+
+  <item name="av.goal.daily.206.name"><![CDATA[Jag älskade en flicka på Mars]]></item>
+  <item name="av.goal.daily.206.hint"><![CDATA[Jag har fått nog! Jordens tjejer är så krävande. ”Ta ut soporna!”, ’Fäll upp toalettsitsen!’, ’Fäll ner toalettsitsen!’ ’Var inte otrogen mot mig!’. Nu räcker det med teatern! I Sydamerika finns det massor av UFO-observationer. Kom igen, vi sticker dit direkt – kanske hittar vi den heta tentakelbruden som bjöd in mig i sitt UFO den där gången.]]></item>
+  <item name="av.goal.daily.206.rewardMsg"><![CDATA[Herregud ... vad har hänt? Jag var på en brasiliansk bar och lyckades charma en söt liten Chiquita. Sen ... ännu en blackout. Sex dagar senare vaknade jag upp med ett yvigt skägg, spritandedräkt och utan en krona i fickan i rännstenen. Det måste ha varit UTOMJORDINGAR! JAG BLEV BORTRÖVAD IGEN! Det finns ingen annan förklaring...<br><br>Har du en huvudvärkstablett?]]></item>  
+
+  <item name="av.task.daily.206.SendPlane.sa.name"><![CDATA[Skicka {number} flygplan till Sydamerika]]></item>  
+  
+  
   <item name="av.goal.daily.207.name"><![CDATA[Utmaning för butiksägare]]></item>
   <item name="av.goal.daily.207.hint"><![CDATA[International Shop Organization ISO har utlyst en tävling för butiksägare världen över. Alla som lyckas sälja den fastslagna mängden produkter idag kommer att bli rikligt belönade.]]></item>
   <item name="av.goal.daily.207.rewardMsg"><![CDATA[Stort grattis! Du klarade utmaningen och här är din belöning. Den är du värd!]]></item>

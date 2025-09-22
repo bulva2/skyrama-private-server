@@ -65,94 +65,142 @@
   <item name="av.goal.daily.28.hint"><![CDATA[Tämänpäiväinen lentokenttähaaste liittyy matkustajien kokoamiseen. Hoida se, näytä olevasi paras ja voita palkkio!]]></item>
   <item name="av.goal.daily.28.rewardMsg"><![CDATA[Hoidit haasteen ja näytit olevasi yksi parhaista! Tässä palkkiosi, olet ansainnut sen!]]></item>
   <item name="av.task.daily.28.GetPassengers.name"><![CDATA[Kerää {number} matkustajaa]]></item>
-  <item name="av.goal.daily.30.name"><![CDATA[Koneluistelua]]></item>
-  <item name="av.goal.daily.30.hint"><![CDATA[Hei, olen pelannut tätä upeaa peliä puhelimellani. Siinä pitää pistää pingviini juoksemaan polkua pitkin ja liukua sitten jäällä niin pitkälle kuin mahdollista. Sain jo parhaat pisteet, mutta sitten sain idean. Mitä jos yrittäisin sitä lentokoneilla? Minun pitää vain laskeutua koneella ja liu'uttaa se jäällä mahdollisimman pitkälle! Mikä voisi mennä vikaan?]]></item>
-  <item name="av.goal.daily.30.rewardMsg"><![CDATA[Multa kiellettiin koneiden liu'uttaminen. Ilmeisesti pelastushenkilöstön johtaja sai yhtäkkiä tyrän. No jaa, se oli hauskaa niin kauan kuin sitä kesti!]]></item>
+  
+
+  <item name="av.goal.daily.30.name"><![CDATA[Uskomaton kohtaaminen 69. tyyppiä]]></item>
+  <item name="av.goal.daily.30.hint"><![CDATA[Hei, kaveri! Eipä olla nähty pitkään aikaan! Kuule... Onko sinulla myös filmin repeämä? Eilen illalla klubilla bongasin muijan kuin toiselta planeetalta. Vihreä alabasteri-iho ja tuntosarvet otsassa mukaan lukien. Ja sitten... Voi hyvä luoja! Punainen valonvälähdys... Lentävät lautaset... ja... APUA! KOETIN!!! Öhöm. Puhutaan tästä lisää töiden jälkeen, okei? Mun pitää vähän sulatella tätä...]]></item>
+  <item name="av.goal.daily.30.rewardMsg"><![CDATA[En voi uskoa tätä, kaveri! Avaruusoliot kaappasivat minut! Fiona kertoi juuri, että olin kateissa monta vuotta. Lin on ilmeisesti, Juomakärryn työntäjä lisäksi, hoitanut myös minun hommiani pelastaakseen minut pulasta. Ostankin hänelle ison kukkakimpun, kunhan saan järjestettyä ensimmäiset treffit uuden lentokenttäterapeuttimme kanssa. Kunhan vain eivät ole tähtikukkia...]]></item>
+  
   <item name="av.task.daily.30.SendPlane.name"><![CDATA[Lähetä {number} lento/a]]></item>
-  <item name="av.goal.daily.31.name"><![CDATA[Superlumiukot]]></item>
-  <item name="av.goal.daily.31.hint"><![CDATA[Olemme päättäneet pitää lumiukkokilpailun! Siitä tulee upeaa - meillä on kategoriat aikuisille ja lapsille ja upeita palkintoja parhaista lumiukoista. Meillä on tosin ongelma - nämä koneet puhaltavat moottoreineen lumiukot nurin, kun ne laskeutuvat. Voitko hankkiutua eroon niistä?]]></item>
-  <item name="av.goal.daily.31.rewardMsg"><![CDATA[Lumiukkokisa oli menestys! Haluatko nähdä voittajalumiukon? Se näyttää ihan sinulta! Yhdennäköisyys on hämmästyttävä.]]></item>
+
+  <item name="av.goal.daily.31.name"><![CDATA[Konnaväki]]></item>
+  <item name="av.goal.daily.31.hint"><![CDATA[Hei, kuule! Se tyyppi on palannut. Tiedäthän, kuka? Tariq, se... piraatti. Ei, odota... pilotti! Muutama vuosi sitten hän katosi jäljettömiin yhden kunnon ryyppyillan jälkeen Kurti-ystäväni kanssa. Nyt hän väittää, että avaruuden vierailijat... öh, viettelivät hänet... tai siis kidnappasivat hänet! Tai jotain sinne päin. Joka tapauksessa lentokentästämme on nyt tullut foliopipojen pyhiinvaelluspaikka. Hoida se!]]></item>
+  <item name="av.goal.daily.31.rewardMsg"><![CDATA[No, se oli helpompaa kuin odotin. Minulla oli ... vahingossa ... siirtänyt Science Fiction Conventionin tapahtumapaikat lentokoneen ruumaan. Nyt ne kaikki ovat matkalla... jonnekin. Tai ei minnekään. No jaa, kunhan eivät ole täällä.]]></item>
+  
   <item name="av.task.daily.31.ReturnPlane.name"><![CDATA[Lähetä {number} lento/a takaisin]]></item>
-  <item name="av.goal.daily.32.name"><![CDATA[Se on Lum'Pila]]></item>
-  <item name="av.goal.daily.32.hint"><![CDATA[Oletko nähnyt uutta Lum'Pila-lumiauraa? Voi se on uskomaton! Siinä on titaanipäällysteinen kauha, upotetut mikroprosessorit säätämässä kallistuskulmaa, lämpösäikeet sulattamaan jäätä ja jopa sisäänrakennettu wifi hytissä! Meidän täytyy saada yksi sellainen lentokentälle! Jooko? Se maksaa vain pari sataa miljoonaa…]]></item>
-  <item name="av.goal.daily.32.rewardMsg"><![CDATA[No me säästimme tarpeeksi Lum'Pila-lumiauran ostamiseen! Harmi, että se kesti niin kauan, että lumi ehti sulaa pois.]]></item>
+  
+  <item name="av.goal.daily.32.name"><![CDATA[Tähtikolikot]]></item>
+  <item name="av.goal.daily.32.hint"><![CDATA[Moi! Muistatko, kuinka Fiona silloin hurmasi minut täysin? Ne olivat aikoja, vai mitä? Tule, käännetään kello taaksepäin ja hurmataan hänet uudelleen, kuten vanhoina hyvinä aikoina. Heti kun meillä on tarpeeksi rahaa kasassa, ostan hänelle tähden!]]></item>
+  <item name="av.goal.daily.32.rewardMsg"><![CDATA[Mutta pikkuisen silmät loksahtivat, kun löin tähteä hänen nenänsä eteen, eikö niin? Mikään matka ei ole liian kaukana kultaseni... Ei edes kioskille.]]></item>
+  
   <item name="av.task.daily.32.GetAirCoins.name"><![CDATA[Kerää {number} lentopenniä]]></item>
-  <item name="av.goal.daily.33.name"><![CDATA[Kondori-Kurt]]></item>
-  <item name="av.goal.daily.33.hint"><![CDATA[Kurt väittää, että hän on yksi maailman parhaista mäkihyppääjistä. Hän sanoo voivansa hypätä kolmen bussin yli kerralla! No meillä ei ole busseja, eivätkä pilotit anna kenenkään hyppiä koneidensa yli, joten joudumme tyytymään ihmisiin! Kokoa mahdollisimman monta matkustajaa ja aseta heidät makaamaan pitkään riviin.]]></item>
-  <item name="av.goal.daily.33.rewardMsg"><![CDATA[Näyttää siltä, että Kurt puhui soopaa mäkihyppytaidoistaan. Hän sanoo, että tarkoitti kolmea LELUbussia. Minun pitää piiloutua nyt suurelta joukolta vihaisia, lumisia matkustajia.]]></item>
+
+  <item name="av.goal.daily.33.name"><![CDATA[Ramageedon]]></item>
+  <item name="av.goal.daily.33.hint"><![CDATA[Hei, kuule! Olen aivan... miten sitä sanotaan? Paniikissa, juuri niin! Tutka näyttää valtavan meteoriitin olevan törmäyskurssilla lentokenttäämme kohti! Jos se osuu meihin, se tuhoaa alueemme kuin kasa rakennuspalikoita. Punainen hälytys! PUNAINEN HÄLYTYS! Evakuoi niin monta ihmistä kuin pystyt!]]></item>
+  <item name="av.goal.daily.33.rewardMsg"><![CDATA[Hupsista! Olipa noloa... Tutkassa näkynyt meteoriitti olikin vain... ööh... miksi sitä sanotaankaan? Maksamakkaratahra. Aivan niin. Tästä lähtien syön työpaikalla vain punajuurikeittoa, lupaan sen sinulle.]]></item>
+  
   <item name="av.task.daily.33.GetPassengers.name"><![CDATA[Kerää {number} matkustajaa]]></item>
-  <item name="av.goal.daily.34.name"><![CDATA[Après-Ski]]></item>
-  <item name="av.goal.daily.34.hint"><![CDATA[On talvi ja se tarkoittaa hiihtosesonkia. Mun pitää tehdä monta lentoa Itävaltaan viedäkseni hiihtointoilijat sinne huippukohteisiin. En itse ole erityisen hyvä hiihtäjä, mutta ei sillä väliä - kaikki tietävät, että kysymys on oikeasti jälkimainingeista! Hottikset ja glögi. Mitä ei rakastaisi?]]></item>
-  <item name="av.goal.daily.34.rewardMsg"><![CDATA[Kyllä, olen päästäni jumissa hangessa. Ei, se ei ollut hiihto-onnettomuus. Auta mut vain pois täältä!]]></item>
+
+  <item name="av.goal.daily.34.name"><![CDATA[Hölmö-Mies]]></item>
+  <item name="av.goal.daily.34.hint"><![CDATA[Hei, kaveri! Kurt sanoo, että euroalueen mimmit ovat täysin hullaantuneita supersankareihin. Ja tiedätkö mitä? Olen aina halunnut vetää tiukan spandex-puvun hyvin muotoillun lentäjänvartaloni päälle. Lähdetään Eurooppaan ja näytetään beibeille, miltä oikea sankari näyttää. Esirippu ylös ”Propellatorille”...]]></item>
+  <item name="av.goal.daily.34.rewardMsg"><![CDATA[Siis, tämä on... Aluksi luulin, että tytöt viheltävät minulle ihaillen... Mutta sitten kompastut muutaman kerran viittaan, ja yhtäkkiä he buuaavat sinut pois! Nyt he kutsuvat minua „Proletatoriksi“. No, ketä kiinnostaa? Ainakaan minun ei enää tarvitse tunkea vatsakorsettia supersankariasun alle.]]></item>
+  
   <item name="av.task.daily.34.SendPlane.eu.name"><![CDATA[Lähetä {number} lentoa Eurooppaan]]></item>
-  <item name="av.goal.daily.35.name"><![CDATA[50 sanaa]]></item>
-  <item name="av.goal.daily.35.hint"><![CDATA[Minun pitää lentää Alaskaan. Tiesitkö, että eskimoilla on viisikymmentä eri sanaa lumelle? Itse asiassa se on hieman kiistanalaista, mutta ketä kiinnostaa? Se on silti hyvä puheenaihe, kun käperryn igluun noiden ihanien eskimoleidien kanssa. Olen varma, ettei kukaan ole vielä pyytänyt heitä luettelemaan kaikkia niitä.]]></item>
-  <item name="av.goal.daily.35.rewardMsg"><![CDATA[Eskimonaiset käskivät mua yrittää syödä tietyntyyppistä lunta - unohdin nimen, mutta se osoittautui keltaiseksi lumeksi. Mulla on huono olo…]]></item>
+
+  <item name="av.goal.daily.35.name"><![CDATA[2024: Tariqin odysseia]]></item>
+  <item name="av.goal.daily.35.hint"><![CDATA[Hei, kaveri! Nasan mimmit ovat täydellistä rakettipolttoainetta avaruustutkijalle minun tasollani. Kiinnitetyt vaaleat maneesit, muodikkaat silmälasit ja aina lupaava leikepöytä kädessä. Mitä muuta voisi toivoa? Lähdetään Jenkkeihin ja näytetään kaunottarille, kuinka vastustamaton setä Tariq on painottomassa tilassa. Hihihihihi...]]></item>
+  <item name="av.goal.daily.35.rewardMsg"><![CDATA[Hyvä luoja! Minua ravisteli sukkula aivan ympäriinsä! Eikä siellä edes ollut lentoemäntiä. Mikä paikka tämä oikein on? Siinäpä se Cape Karnevaali…]]></item>
+
   <item name="av.task.daily.35.SendPlane.na.name"><![CDATA[Lähetä {number} lentoa Pohjois-Amerikkaan]]></item>
-  <item name="av.goal.daily.36.name"><![CDATA[Mahtavat Andit]]></item>
-  <item name="av.goal.daily.36.hint"><![CDATA[Mun pitää lentää Andeille ja hakea paketti. En tiedä, mitä laatikossa on, mutta he lupasivat, ettei siellä ole hämähäkkejä, piraijoja, käärmeitä tai muita karmivia otuksia. Ulkona on aika kylmä just nyt, joten toivon, ettei koneeni peity jäähän matkan aikana.]]></item>
-  <item name="av.goal.daily.36.rewardMsg"><![CDATA[Laatikko kiemurtelee ja nitisee! Toivottavasti se ei aukea - hetkinen, ne ovat päässeet ulos. Ne ovat ohjaamossa! Ai, ne ovat vain marsuja. Oi, miten suloisia!]]></item>
+
+  <item name="av.goal.daily.36.name"><![CDATA[Rakastin tyttöä Marsissa]]></item>
+  <item name="av.goal.daily.36.hint"><![CDATA[Nyt riittää! Maan tytöt ovat niin vaativia. "Vie roskat ulos!", "Nosta wc-istuin ylös!", "Laske wc-kansi alas!", "Älä petä minua!". Loppu tälle draamalle! Etelä-Amerikassa on paljon UFO-havaintoja. Lähdetään sinne heti. Ehkä löydämme sen kuuman lonkerotytön, joka kutsui minut silloin ufoonsa.]]></item>
+  <item name="av.goal.daily.36.rewardMsg"><![CDATA[Voi luoja... mitä oikein tapahtui? Olin brasilialaisessa baarissa ja hurmasin suloisen Chiquitan. Sitten... taas muistikatkos. Kuusi päivää myöhemmin heräsin täyspartaisena, viinalta haisevana ja ilman lantin lanttia katuojassa. Ne olivat AVARUUSOLIOITA! MINUT SIEPATTIN TAAS! Ei tähän ole muuta selitystä...<br><br>Onko sinulla päänsärkytabletti?]]></item>  
+
   <item name="av.task.daily.36.SendPlane.sa.name"><![CDATA[Lähetä {number} lentoa Etelä-Amerikkaan]]></item>
-  <item name="av.goal.daily.100.name"><![CDATA[Koneluistelua]]></item>
-  <item name="av.goal.daily.100.hint"><![CDATA[Hei, olen pelannut tätä upeaa peliä puhelimellani. Siinä pitää pistää pingviini juoksemaan polkua pitkin ja liukua sitten jäällä niin pitkälle kuin mahdollista. Sain jo parhaat pisteet, mutta sitten sain idean. Mitä jos yrittäisin sitä lentokoneilla? Minun pitää vain laskeutua koneella ja liu'uttaa se jäällä mahdollisimman pitkälle! Mikä voisi mennä vikaan?]]></item>
-  <item name="av.goal.daily.100.rewardMsg"><![CDATA[Multa kiellettiin koneiden liu'uttaminen. Ilmeisesti pelastushenkilöstön johtaja sai yhtäkkiä tyrän. No jaa, se oli hauskaa niin kauan kuin sitä kesti!]]></item>
+  
+
+  <item name="av.goal.daily.100.name"><![CDATA[Uskomaton kohtaaminen 69. tyyppiä]]></item>
+  <item name="av.goal.daily.100.hint"><![CDATA[Hei, kaveri! Eipä olla nähty pitkään aikaan! Kuule... Onko sinulla myös filmin repeämä? Eilen illalla klubilla bongasin muijan kuin toiselta planeetalta. Vihreä alabasteri-iho ja tuntosarvet otsassa mukaan lukien. Ja sitten... Voi hyvä luoja! Punainen valonvälähdys... Lentävät lautaset... ja... APUA! KOETIN!!! Öhöm. Puhutaan tästä lisää töiden jälkeen, okei? Mun pitää vähän sulatella tätä...]]></item>
+  <item name="av.goal.daily.100.rewardMsg"><![CDATA[En voi uskoa tätä, kaveri! Avaruusoliot kaappasivat minut! Fiona kertoi juuri, että olin kateissa monta vuotta. Lin on ilmeisesti, Juomakärryn työntäjä lisäksi, hoitanut myös minun hommiani pelastaakseen minut pulasta. Ostankin hänelle ison kukkakimpun, kunhan saan järjestettyä ensimmäiset treffit uuden lentokenttäterapeuttimme kanssa. Kunhan vain eivät ole tähtikukkia...]]></item>
+  
   <item name="av.task.daily.100.SendPlane.name"><![CDATA[Lähetä {number} lento/a]]></item>
-  <item name="av.goal.daily.101.name"><![CDATA[Superlumiukot]]></item>
-  <item name="av.goal.daily.101.hint"><![CDATA[Olemme päättäneet pitää lumiukkokilpailun! Siitä tulee upeaa - meillä on kategoriat aikuisille ja lapsille ja upeita palkintoja parhaista lumiukoista. Meillä on tosin ongelma - nämä koneet puhaltavat moottoreineen lumiukot nurin, kun ne laskeutuvat. Voitko hankkiutua eroon niistä?]]></item>
-  <item name="av.goal.daily.101.rewardMsg"><![CDATA[Lumiukkokisa oli menestys! Haluatko nähdä voittajalumiukon? Se näyttää ihan sinulta! Yhdennäköisyys on hämmästyttävä.]]></item>
+
+  <item name="av.goal.daily.101.name"><![CDATA[Konnaväki]]></item>
+  <item name="av.goal.daily.101.hint"><![CDATA[Hei, kuule! Se tyyppi on palannut. Tiedäthän, kuka? Tariq, se... piraatti. Ei, odota... pilotti! Muutama vuosi sitten hän katosi jäljettömiin yhden kunnon ryyppyillan jälkeen Kurti-ystäväni kanssa. Nyt hän väittää, että avaruuden vierailijat... öh, viettelivät hänet... tai siis kidnappasivat hänet! Tai jotain sinne päin. Joka tapauksessa lentokentästämme on nyt tullut foliopipojen pyhiinvaelluspaikka. Hoida se!]]></item>
+  <item name="av.goal.daily.101.rewardMsg"><![CDATA[No, se oli helpompaa kuin odotin. Minulla oli ... vahingossa ... siirtänyt Science Fiction Conventionin tapahtumapaikat lentokoneen ruumaan. Nyt ne kaikki ovat matkalla... jonnekin. Tai ei minnekään. No jaa, kunhan eivät ole täällä.]]></item>
+  
   <item name="av.task.daily.101.ReturnPlane.name"><![CDATA[Lähetä {number} lento/a takaisin]]></item>
-  <item name="av.goal.daily.102.name"><![CDATA[Se on Lum'Pila]]></item>
-  <item name="av.goal.daily.102.hint"><![CDATA[Oletko nähnyt uutta Lum'Pila-lumiauraa? Voi se on uskomaton! Siinä on titaanipäällysteinen kauha, upotetut mikroprosessorit säätämässä kallistuskulmaa, lämpösäikeet sulattamaan jäätä ja jopa sisäänrakennettu wifi hytissä! Meidän täytyy saada yksi sellainen lentokentälle! Jooko? Se maksaa vain pari sataa miljoonaa…]]></item>
-  <item name="av.goal.daily.102.rewardMsg"><![CDATA[No me säästimme tarpeeksi Lum'Pila-lumiauran ostamiseen! Harmi, että se kesti niin kauan, että lumi ehti sulaa pois.]]></item>
+  
+  <item name="av.goal.daily.102.name"><![CDATA[Tähtikolikot]]></item>
+  <item name="av.goal.daily.102.hint"><![CDATA[Moi! Muistatko, kuinka Fiona silloin hurmasi minut täysin? Ne olivat aikoja, vai mitä? Tule, käännetään kello taaksepäin ja hurmataan hänet uudelleen, kuten vanhoina hyvinä aikoina. Heti kun meillä on tarpeeksi rahaa kasassa, ostan hänelle tähden!]]></item>
+  <item name="av.goal.daily.102.rewardMsg"><![CDATA[Mutta pikkuisen silmät loksahtivat, kun löin tähteä hänen nenänsä eteen, eikö niin? Mikään matka ei ole liian kaukana kultaseni... Ei edes kioskille.]]></item>
+  
   <item name="av.task.daily.102.GetAirCoins.name"><![CDATA[Kerää {number} lentopenniä]]></item>
-  <item name="av.goal.daily.103.name"><![CDATA[Kondori-Kurt]]></item>
-  <item name="av.goal.daily.103.hint"><![CDATA[Kurt väittää, että hän on yksi maailman parhaista mäkihyppääjistä. Hän sanoo voivansa hypätä kolmen bussin yli kerralla! No meillä ei ole busseja, eivätkä pilotit anna kenenkään hyppiä koneidensa yli, joten joudumme tyytymään ihmisiin! Kokoa mahdollisimman monta matkustajaa ja aseta heidät makaamaan pitkään riviin.]]></item>
-  <item name="av.goal.daily.103.rewardMsg"><![CDATA[Näyttää siltä, että Kurt puhui soopaa mäkihyppytaidoistaan. Hän sanoo, että tarkoitti kolmea LELUbussia. Minun pitää piiloutua nyt suurelta joukolta vihaisia, lumisia matkustajia.]]></item>
+
+  <item name="av.goal.daily.103.name"><![CDATA[Ramageedon]]></item>
+  <item name="av.goal.daily.103.hint"><![CDATA[Hei, kuule! Olen aivan... miten sitä sanotaan? Paniikissa, juuri niin! Tutka näyttää valtavan meteoriitin olevan törmäyskurssilla lentokenttäämme kohti! Jos se osuu meihin, se tuhoaa alueemme kuin kasa rakennuspalikoita. Punainen hälytys! PUNAINEN HÄLYTYS! Evakuoi niin monta ihmistä kuin pystyt!]]></item>
+  <item name="av.goal.daily.103.rewardMsg"><![CDATA[Hupsista! Olipa noloa... Tutkassa näkynyt meteoriitti olikin vain... ööh... miksi sitä sanotaankaan? Maksamakkaratahra. Aivan niin. Tästä lähtien syön työpaikalla vain punajuurikeittoa, lupaan sen sinulle.]]></item>
+  
   <item name="av.task.daily.103.GetPassengers.name"><![CDATA[Kerää {number} matkustajaa]]></item>
-  <item name="av.goal.daily.104.name"><![CDATA[Après-Ski]]></item>
-  <item name="av.goal.daily.104.hint"><![CDATA[On talvi ja se tarkoittaa hiihtosesonkia. Mun pitää tehdä monta lentoa Itävaltaan viedäkseni hiihtointoilijat sinne huippukohteisiin. En itse ole erityisen hyvä hiihtäjä, mutta ei sillä väliä - kaikki tietävät, että kysymys on oikeasti jälkimainingeista! Hottikset ja glögi. Mitä ei rakastaisi?]]></item>
-  <item name="av.goal.daily.104.rewardMsg"><![CDATA[Kyllä, olen päästäni jumissa hangessa. Ei, se ei ollut hiihto-onnettomuus. Auta mut vain pois täältä!]]></item>
+
+  <item name="av.goal.daily.104.name"><![CDATA[Hölmö-Mies]]></item>
+  <item name="av.goal.daily.104.hint"><![CDATA[Hei, kaveri! Kurt sanoo, että euroalueen mimmit ovat täysin hullaantuneita supersankareihin. Ja tiedätkö mitä? Olen aina halunnut vetää tiukan spandex-puvun hyvin muotoillun lentäjänvartaloni päälle. Lähdetään Eurooppaan ja näytetään beibeille, miltä oikea sankari näyttää. Esirippu ylös ”Propellatorille”...]]></item>
+  <item name="av.goal.daily.104.rewardMsg"><![CDATA[Siis, tämä on... Aluksi luulin, että tytöt viheltävät minulle ihaillen... Mutta sitten kompastut muutaman kerran viittaan, ja yhtäkkiä he buuaavat sinut pois! Nyt he kutsuvat minua „Proletatoriksi“. No, ketä kiinnostaa? Ainakaan minun ei enää tarvitse tunkea vatsakorsettia supersankariasun alle.]]></item>
+  
   <item name="av.task.daily.104.SendPlane.eu.name"><![CDATA[Lähetä {number} lentoa Eurooppaan]]></item>
-  <item name="av.goal.daily.105.name"><![CDATA[50 sanaa]]></item>
-  <item name="av.goal.daily.105.hint"><![CDATA[Minun pitää lentää Alaskaan. Tiesitkö, että eskimoilla on viisikymmentä eri sanaa lumelle? Itse asiassa se on hieman kiistanalaista, mutta ketä kiinnostaa? Se on silti hyvä puheenaihe, kun käperryn igluun noiden ihanien eskimoleidien kanssa. Olen varma, ettei kukaan ole vielä pyytänyt heitä luettelemaan kaikkia niitä.]]></item>
-  <item name="av.goal.daily.105.rewardMsg"><![CDATA[Eskimonaiset käskivät mua yrittää syödä tietyntyyppistä lunta - unohdin nimen, mutta se osoittautui keltaiseksi lumeksi. Mulla on huono olo…]]></item>
+
+  <item name="av.goal.daily.105.name"><![CDATA[2024: Tariqin odysseia]]></item>
+  <item name="av.goal.daily.105.hint"><![CDATA[Hei, kaveri! Nasan mimmit ovat täydellistä rakettipolttoainetta avaruustutkijalle minun tasollani. Kiinnitetyt vaaleat maneesit, muodikkaat silmälasit ja aina lupaava leikepöytä kädessä. Mitä muuta voisi toivoa? Lähdetään Jenkkeihin ja näytetään kaunottarille, kuinka vastustamaton setä Tariq on painottomassa tilassa. Hihihihihi...]]></item>
+  <item name="av.goal.daily.105.rewardMsg"><![CDATA[Hyvä luoja! Minua ravisteli sukkula aivan ympäriinsä! Eikä siellä edes ollut lentoemäntiä. Mikä paikka tämä oikein on? Siinäpä se Cape Karnevaali…]]></item>
+
   <item name="av.task.daily.105.SendPlane.na.name"><![CDATA[Lähetä {number} lentoa Pohjois-Amerikkaan]]></item>
-  <item name="av.goal.daily.106.name"><![CDATA[Mahtavat Andit]]></item>
-  <item name="av.goal.daily.106.hint"><![CDATA[Mun pitää lentää Andeille ja hakea paketti. En tiedä, mitä laatikossa on, mutta he lupasivat, ettei siellä ole hämähäkkejä, piraijoja, käärmeitä tai muita karmivia otuksia. Ulkona on aika kylmä just nyt, joten toivon, ettei koneeni peity jäähän matkan aikana.]]></item>
-  <item name="av.goal.daily.106.rewardMsg"><![CDATA[Laatikko kiemurtelee ja nitisee! Toivottavasti se ei aukea - hetkinen, ne ovat päässeet ulos. Ne ovat ohjaamossa! Ai, ne ovat vain marsuja. Oi, miten suloisia!]]></item>
+
+  <item name="av.goal.daily.106.name"><![CDATA[Rakastin tyttöä Marsissa]]></item>
+  <item name="av.goal.daily.106.hint"><![CDATA[Nyt riittää! Maan tytöt ovat niin vaativia. "Vie roskat ulos!", "Nosta wc-istuin ylös!", "Laske wc-kansi alas!", "Älä petä minua!". Loppu tälle draamalle! Etelä-Amerikassa on paljon UFO-havaintoja. Lähdetään sinne heti. Ehkä löydämme sen kuuman lonkerotytön, joka kutsui minut silloin ufoonsa.]]></item>
+  <item name="av.goal.daily.106.rewardMsg"><![CDATA[Voi luoja... mitä oikein tapahtui? Olin brasilialaisessa baarissa ja hurmasin suloisen Chiquitan. Sitten... taas muistikatkos. Kuusi päivää myöhemmin heräsin täyspartaisena, viinalta haisevana ja ilman lantin lanttia katuojassa. Ne olivat AVARUUSOLIOITA! MINUT SIEPATTIN TAAS! Ei tähän ole muuta selitystä...<br><br>Onko sinulla päänsärkytabletti?]]></item>  
+
   <item name="av.task.daily.106.SendPlane.sa.name"><![CDATA[Lähetä {number} lentoa Etelä-Amerikkaan]]></item>
+
+  
   <item name="av.goal.daily.107.name"><![CDATA[Liikekilpailu]]></item>
   <item name="av.goal.daily.107.hint"><![CDATA[Kansainvälinen liikejärjestö KLJ järjestää kilpailun kaikille maailman liikkeenomistajille. Kaikki, jotka onnistuvat myymään vaaditun määrän tuotteita tänään, saavat avokätisen palkkion.]]></item>
   <item name="av.goal.daily.107.rewardMsg"><![CDATA[Paljon onnea! Selvisit haasteesta - tässä palkkiosi. Olet ansainnut sen!]]></item>
   <item name="av.task.daily.107.SellProducts.name"><![CDATA[Myy {number} tuotetta]]></item>
-  <item name="av.goal.daily.200.name"><![CDATA[Koneluistelua]]></item>
-  <item name="av.goal.daily.200.hint"><![CDATA[Hei, olen pelannut tätä upeaa peliä puhelimellani. Siinä pitää pistää pingviini juoksemaan polkua pitkin ja liukua sitten jäällä niin pitkälle kuin mahdollista. Sain jo parhaat pisteet, mutta sitten sain idean. Mitä jos yrittäisin sitä lentokoneilla? Minun pitää vain laskeutua koneella ja liu'uttaa se jäällä mahdollisimman pitkälle! Mikä voisi mennä vikaan?]]></item>
-  <item name="av.goal.daily.200.rewardMsg"><![CDATA[Multa kiellettiin koneiden liu'uttaminen. Ilmeisesti pelastushenkilöstön johtaja sai yhtäkkiä tyrän. No jaa, se oli hauskaa niin kauan kuin sitä kesti!]]></item>
+
+  
+  <item name="av.goal.daily.200.name"><![CDATA[Uskomaton kohtaaminen 69. tyyppiä]]></item>
+  <item name="av.goal.daily.200.hint"><![CDATA[Hei, kaveri! Eipä olla nähty pitkään aikaan! Kuule... Onko sinulla myös filmin repeämä? Eilen illalla klubilla bongasin muijan kuin toiselta planeetalta. Vihreä alabasteri-iho ja tuntosarvet otsassa mukaan lukien. Ja sitten... Voi hyvä luoja! Punainen valonvälähdys... Lentävät lautaset... ja... APUA! KOETIN!!! Öhöm. Puhutaan tästä lisää töiden jälkeen, okei? Mun pitää vähän sulatella tätä...]]></item>
+  <item name="av.goal.daily.200.rewardMsg"><![CDATA[En voi uskoa tätä, kaveri! Avaruusoliot kaappasivat minut! Fiona kertoi juuri, että olin kateissa monta vuotta. Lin on ilmeisesti, Juomakärryn työntäjä lisäksi, hoitanut myös minun hommiani pelastaakseen minut pulasta. Ostankin hänelle ison kukkakimpun, kunhan saan järjestettyä ensimmäiset treffit uuden lentokenttäterapeuttimme kanssa. Kunhan vain eivät ole tähtikukkia...]]></item>
+  
   <item name="av.task.daily.200.SendPlane.name"><![CDATA[Lähetä {number} lento/a]]></item>
-  <item name="av.goal.daily.201.name"><![CDATA[Superlumiukot]]></item>
-  <item name="av.goal.daily.201.hint"><![CDATA[Olemme päättäneet pitää lumiukkokilpailun! Siitä tulee upeaa - meillä on kategoriat aikuisille ja lapsille ja upeita palkintoja parhaista lumiukoista. Meillä on tosin ongelma - nämä koneet puhaltavat moottoreineen lumiukot nurin, kun ne laskeutuvat. Voitko hankkiutua eroon niistä?]]></item>
-  <item name="av.goal.daily.201.rewardMsg"><![CDATA[Lumiukkokisa oli menestys! Haluatko nähdä voittajalumiukon? Se näyttää ihan sinulta! Yhdennäköisyys on hämmästyttävä.]]></item>
+
+  <item name="av.goal.daily.201.name"><![CDATA[Konnaväki]]></item>
+  <item name="av.goal.daily.201.hint"><![CDATA[Hei, kuule! Se tyyppi on palannut. Tiedäthän, kuka? Tariq, se... piraatti. Ei, odota... pilotti! Muutama vuosi sitten hän katosi jäljettömiin yhden kunnon ryyppyillan jälkeen Kurti-ystäväni kanssa. Nyt hän väittää, että avaruuden vierailijat... öh, viettelivät hänet... tai siis kidnappasivat hänet! Tai jotain sinne päin. Joka tapauksessa lentokentästämme on nyt tullut foliopipojen pyhiinvaelluspaikka. Hoida se!]]></item>
+  <item name="av.goal.daily.201.rewardMsg"><![CDATA[No, se oli helpompaa kuin odotin. Minulla oli ... vahingossa ... siirtänyt Science Fiction Conventionin tapahtumapaikat lentokoneen ruumaan. Nyt ne kaikki ovat matkalla... jonnekin. Tai ei minnekään. No jaa, kunhan eivät ole täällä.]]></item>
+  
   <item name="av.task.daily.201.ReturnPlane.name"><![CDATA[Lähetä {number} lento/a takaisin]]></item>
-  <item name="av.goal.daily.202.name"><![CDATA[Se on Lum'Pila]]></item>
-  <item name="av.goal.daily.202.hint"><![CDATA[Oletko nähnyt uutta Lum'Pila-lumiauraa? Voi se on uskomaton! Siinä on titaanipäällysteinen kauha, upotetut mikroprosessorit säätämässä kallistuskulmaa, lämpösäikeet sulattamaan jäätä ja jopa sisäänrakennettu wifi hytissä! Meidän täytyy saada yksi sellainen lentokentälle! Jooko? Se maksaa vain pari sataa miljoonaa…]]></item>
-  <item name="av.goal.daily.202.rewardMsg"><![CDATA[No me säästimme tarpeeksi Lum'Pila-lumiauran ostamiseen! Harmi, että se kesti niin kauan, että lumi ehti sulaa pois.]]></item>
+  
+  <item name="av.goal.daily.202.name"><![CDATA[Tähtikolikot]]></item>
+  <item name="av.goal.daily.202.hint"><![CDATA[Moi! Muistatko, kuinka Fiona silloin hurmasi minut täysin? Ne olivat aikoja, vai mitä? Tule, käännetään kello taaksepäin ja hurmataan hänet uudelleen, kuten vanhoina hyvinä aikoina. Heti kun meillä on tarpeeksi rahaa kasassa, ostan hänelle tähden!]]></item>
+  <item name="av.goal.daily.202.rewardMsg"><![CDATA[Mutta pikkuisen silmät loksahtivat, kun löin tähteä hänen nenänsä eteen, eikö niin? Mikään matka ei ole liian kaukana kultaseni... Ei edes kioskille.]]></item>
+  
   <item name="av.task.daily.202.GetAirCoins.name"><![CDATA[Kerää {number} lentopenniä]]></item>
-  <item name="av.goal.daily.203.name"><![CDATA[Kondori-Kurt]]></item>
-  <item name="av.goal.daily.203.hint"><![CDATA[Kurt väittää, että hän on yksi maailman parhaista mäkihyppääjistä. Hän sanoo voivansa hypätä kolmen bussin yli kerralla! No meillä ei ole busseja, eivätkä pilotit anna kenenkään hyppiä koneidensa yli, joten joudumme tyytymään ihmisiin! Kokoa mahdollisimman monta matkustajaa ja aseta heidät makaamaan pitkään riviin.]]></item>
-  <item name="av.goal.daily.203.rewardMsg"><![CDATA[Näyttää siltä, että Kurt puhui soopaa mäkihyppytaidoistaan. Hän sanoo, että tarkoitti kolmea LELUbussia. Minun pitää piiloutua nyt suurelta joukolta vihaisia, lumisia matkustajia.]]></item>
+
+  <item name="av.goal.daily.203.name"><![CDATA[Ramageedon]]></item>
+  <item name="av.goal.daily.203.hint"><![CDATA[Hei, kuule! Olen aivan... miten sitä sanotaan? Paniikissa, juuri niin! Tutka näyttää valtavan meteoriitin olevan törmäyskurssilla lentokenttäämme kohti! Jos se osuu meihin, se tuhoaa alueemme kuin kasa rakennuspalikoita. Punainen hälytys! PUNAINEN HÄLYTYS! Evakuoi niin monta ihmistä kuin pystyt!]]></item>
+  <item name="av.goal.daily.203.rewardMsg"><![CDATA[Hupsista! Olipa noloa... Tutkassa näkynyt meteoriitti olikin vain... ööh... miksi sitä sanotaankaan? Maksamakkaratahra. Aivan niin. Tästä lähtien syön työpaikalla vain punajuurikeittoa, lupaan sen sinulle.]]></item>
+  
   <item name="av.task.daily.203.GetPassengers.name"><![CDATA[Kerää {number} matkustajaa]]></item>
-  <item name="av.goal.daily.204.name"><![CDATA[Après-Ski]]></item>
-  <item name="av.goal.daily.204.hint"><![CDATA[On talvi ja se tarkoittaa hiihtosesonkia. Mun pitää tehdä monta lentoa Itävaltaan viedäkseni hiihtointoilijat sinne huippukohteisiin. En itse ole erityisen hyvä hiihtäjä, mutta ei sillä väliä - kaikki tietävät, että kysymys on oikeasti jälkimainingeista! Hottikset ja glögi. Mitä ei rakastaisi?]]></item>
-  <item name="av.goal.daily.204.rewardMsg"><![CDATA[Kyllä, olen päästäni jumissa hangessa. Ei, se ei ollut hiihto-onnettomuus. Auta mut vain pois täältä!]]></item>
+
+  <item name="av.goal.daily.204.name"><![CDATA[Hölmö-Mies]]></item>
+  <item name="av.goal.daily.204.hint"><![CDATA[Hei, kaveri! Kurt sanoo, että euroalueen mimmit ovat täysin hullaantuneita supersankareihin. Ja tiedätkö mitä? Olen aina halunnut vetää tiukan spandex-puvun hyvin muotoillun lentäjänvartaloni päälle. Lähdetään Eurooppaan ja näytetään beibeille, miltä oikea sankari näyttää. Esirippu ylös ”Propellatorille”...]]></item>
+  <item name="av.goal.daily.204.rewardMsg"><![CDATA[Siis, tämä on... Aluksi luulin, että tytöt viheltävät minulle ihaillen... Mutta sitten kompastut muutaman kerran viittaan, ja yhtäkkiä he buuaavat sinut pois! Nyt he kutsuvat minua „Proletatoriksi“. No, ketä kiinnostaa? Ainakaan minun ei enää tarvitse tunkea vatsakorsettia supersankariasun alle.]]></item>
+  
   <item name="av.task.daily.204.SendPlane.eu.name"><![CDATA[Lähetä {number} lentoa Eurooppaan]]></item>
-  <item name="av.goal.daily.205.name"><![CDATA[50 sanaa]]></item>
-  <item name="av.goal.daily.205.hint"><![CDATA[Minun pitää lentää Alaskaan. Tiesitkö, että eskimoilla on viisikymmentä eri sanaa lumelle? Itse asiassa se on hieman kiistanalaista, mutta ketä kiinnostaa? Se on silti hyvä puheenaihe, kun käperryn igluun noiden ihanien eskimoleidien kanssa. Olen varma, ettei kukaan ole vielä pyytänyt heitä luettelemaan kaikkia niitä.]]></item>
-  <item name="av.goal.daily.205.rewardMsg"><![CDATA[Eskimonaiset käskivät mua yrittää syödä tietyntyyppistä lunta - unohdin nimen, mutta se osoittautui keltaiseksi lumeksi. Mulla on huono olo…]]></item>
+
+  <item name="av.goal.daily.205.name"><![CDATA[2024: Tariqin odysseia]]></item>
+  <item name="av.goal.daily.205.hint"><![CDATA[Hei, kaveri! Nasan mimmit ovat täydellistä rakettipolttoainetta avaruustutkijalle minun tasollani. Kiinnitetyt vaaleat maneesit, muodikkaat silmälasit ja aina lupaava leikepöytä kädessä. Mitä muuta voisi toivoa? Lähdetään Jenkkeihin ja näytetään kaunottarille, kuinka vastustamaton setä Tariq on painottomassa tilassa. Hihihihihi...]]></item>
+  <item name="av.goal.daily.205.rewardMsg"><![CDATA[Hyvä luoja! Minua ravisteli sukkula aivan ympäriinsä! Eikä siellä edes ollut lentoemäntiä. Mikä paikka tämä oikein on? Siinäpä se Cape Karnevaali…]]></item>
+
   <item name="av.task.daily.205.SendPlane.na.name"><![CDATA[Lähetä {number} lentoa Pohjois-Amerikkaan]]></item>
-  <item name="av.goal.daily.206.name"><![CDATA[Mahtavat Andit]]></item>
-  <item name="av.goal.daily.206.hint"><![CDATA[Mun pitää lentää Andeille ja hakea paketti. En tiedä, mitä laatikossa on, mutta he lupasivat, ettei siellä ole hämähäkkejä, piraijoja, käärmeitä tai muita karmivia otuksia. Ulkona on aika kylmä just nyt, joten toivon, ettei koneeni peity jäähän matkan aikana.]]></item>
-  <item name="av.goal.daily.206.rewardMsg"><![CDATA[Laatikko kiemurtelee ja nitisee! Toivottavasti se ei aukea - hetkinen, ne ovat päässeet ulos. Ne ovat ohjaamossa! Ai, ne ovat vain marsuja. Oi, miten suloisia!]]></item>
-  <item name="av.task.daily.206.SendPlane.sa.name"><![CDATA[Lähetä {number} lentoa Etelä-Amerikkaan]]></item>
+
+  <item name="av.goal.daily.206.name"><![CDATA[Rakastin tyttöä Marsissa]]></item>
+  <item name="av.goal.daily.206.hint"><![CDATA[Nyt riittää! Maan tytöt ovat niin vaativia. "Vie roskat ulos!", "Nosta wc-istuin ylös!", "Laske wc-kansi alas!", "Älä petä minua!". Loppu tälle draamalle! Etelä-Amerikassa on paljon UFO-havaintoja. Lähdetään sinne heti. Ehkä löydämme sen kuuman lonkerotytön, joka kutsui minut silloin ufoonsa.]]></item>
+  <item name="av.goal.daily.206.rewardMsg"><![CDATA[Voi luoja... mitä oikein tapahtui? Olin brasilialaisessa baarissa ja hurmasin suloisen Chiquitan. Sitten... taas muistikatkos. Kuusi päivää myöhemmin heräsin täyspartaisena, viinalta haisevana ja ilman lantin lanttia katuojassa. Ne olivat AVARUUSOLIOITA! MINUT SIEPATTIN TAAS! Ei tähän ole muuta selitystä...<br><br>Onko sinulla päänsärkytabletti?]]></item>  
+
+  <item name="av.task.daily.206.SendPlane.sa.name"><![CDATA[Lähetä {number} lentoa Etelä-Amerikkaan]]></item>  
+
   <item name="av.goal.daily.207.name"><![CDATA[Liikekilpailu]]></item>
   <item name="av.goal.daily.207.hint"><![CDATA[Kansainvälinen liikejärjestö KLJ järjestää kilpailun kaikille maailman liikkeenomistajille. Kaikki, jotka onnistuvat myymään vaaditun määrän tuotteita tänään, saavat avokätisen palkkion.]]></item>
   <item name="av.goal.daily.207.rewardMsg"><![CDATA[Paljon onnea! Selvisit haasteesta - tässä palkkiosi. Olet ansainnut sen!]]></item>

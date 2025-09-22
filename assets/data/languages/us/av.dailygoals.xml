@@ -65,94 +65,143 @@
   <item name="av.goal.daily.28.hint"><![CDATA[Today's challenge is all about collecting passengers like a champ. Accept it and you could win amazing prizes!]]></item>
   <item name="av.goal.daily.28.rewardMsg"><![CDATA[You made completing this quest look easy! I tip my hat to you. Here's your reward, you earned it!]]></item>
   <item name="av.task.daily.28.GetPassengers.name"><![CDATA[Collect {number} passenger(s)]]></item>
-  <item name="av.goal.daily.30.name"><![CDATA[Elephail]]></item>
-  <item name="av.goal.daily.30.hint"><![CDATA[Dude! Guess who's going to the zoo on a hot date? This babe says she's got a big surprise for me. Strolling through the animal kingdom, it's sure to be pure animal attraction! All aboard!]]></item>
-  <item name="av.goal.daily.30.rewardMsg"><![CDATA[Color me surprised! Her son tagged along! And the little punk kept noshing on my peanuts! Good thing I'm no elephant and can forget that awful evening.]]></item>
+  
+
+  <item name="av.goal.daily.30.name"><![CDATA[Close Encounter of the 69th kind]]></item>
+  <item name="av.goal.daily.30.hint"><![CDATA[Hey, dude. Long time no see! Btw... are you drawing a blank too? Last night at the singles bar, I lasered in on this galacitcally hawt babe. Green alabaster skin and antennae on her forehead included. And then... Oh my God! A red flash of light... Flying saucers... and... HELP MEEEEE! THE PROBE!!! Ahem. Let’s talk after work, okay? I need to process this…]]></item>
+  <item name="av.goal.daily.30.rewardMsg"><![CDATA[I don't believe it, dude! I was abducted by aliens! Fiona just told me that I went missing for years. Apparently, Lin took over my job, in addition to the juice-pushing, in order to save my behind. I'll buy her a big bouquet of flowers after I get a a date with our new airport therapist lined up. No starlight lillies, though.]]></item>
+  
   <item name="av.task.daily.30.SendPlane.name"><![CDATA[Send {number} plane(s)]]></item>
-  <item name="av.goal.daily.31.name"><![CDATA[Service Desert]]></item>
-  <item name="av.goal.daily.31.hint"><![CDATA[Heeey...you! Good googly, aren't these passengers annoying? All day long, all I hear is, "There's no TP! No coffee! No service!" Is that so? Well, I'll just have to show them a thing or two, while you take care of the airport.]]></item>
-  <item name="av.goal.daily.31.rewardMsg"><![CDATA[Let's see what they have to say about that! I haven't wrapped my head around the toilet paper issue, but we shouldn't hear anymore service complaints, thanks to the complimentary tea service!]]></item>
+
+  <item name="av.goal.daily.31.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.31.hint"><![CDATA[Hey, thingummy! He's back, you know? Come on, you know who I'm talking about. Tariq... the... uuuuhh... pirate. No, wait. Pilot. A few years ago, he disappeared without a trace after a binge drinking session with my hubby, Kurt. Now he claims that visitors from space have cutenapped... no... wait ... kidnapped him. Or something like that. Anyway, our airport has now become a pilgrimage site for tin foil hat wearers. Take care of 'em.]]></item>
+  <item name="av.goal.daily.31.rewardMsg"><![CDATA[Well, that was easier than expected. I had... accidentally... moved the venues of the science fiction convention to the cargo hold of an aeroplane. Now they're all on their way to... somewhere. Or nowhere. Anywhere's good, as long as it's not here.]]></item>
+  
   <item name="av.task.daily.31.ReturnPlane.name"><![CDATA[Return {number} plane(s)]]></item>
-  <item name="av.goal.daily.32.name"><![CDATA[Monet-Air-y]]></item>
-  <item name="av.goal.daily.32.hint"><![CDATA[Howdy! Them ol' penny pinchers at the IRS are a-knockin' at my door, I tell ya. If my gal Fiona finds out she married some broke joker, we're gonna be through! Finito! Or the like. Help me! I'll get better, I swear!]]></item>
-  <item name="av.goal.daily.32.rewardMsg"><![CDATA[Yeehaw! Now that's what I call me a payday! I've never seen so much cash *sniff* But don't worry, money squandring is my specialty. Besides, rainy day funds are for wet blankets.]]></item>
+
+  <item name="av.goal.daily.32.name"><![CDATA[Space Bucks]]></item>
+  <item name="av.goal.daily.32.hint"><![CDATA[Hi! Do you remember how I swept Fiona off her feet? Those were the days, eh? Come on, I'll turn back the clock and wrap her around my little finger just like I used to. I might even go and buy her a star!]]></item>
+  <item name="av.goal.daily.32.rewardMsg"><![CDATA[You should’ve seen Fi-Fi's eyes light up when I slapped that star right under her nose, huh? For my sweetheart, no distance is too far… not even to the souvenir store.]]></item>
+  
   <item name="av.task.daily.32.GetAirCoins.name"><![CDATA[Collect {number} AirCoin(s)]]></item>
-  <item name="av.goal.daily.33.name"><![CDATA[Daredevil Dames]]></item>
-  <item name="av.goal.daily.33.hint"><![CDATA[Heeey...you! This week, we're testing plane protypes with pedals and hand-cranked propellers. Members from the Society for Retired Aviatrices were supposed to go up, but I they might need a little convincing. Get them back or we'll be stuck doing the work ourselves!]]></item>
-  <item name="av.goal.daily.33.rewardMsg"><![CDATA[Look at 'em soar! Have you ever seen a plane shudder so elegantly above the clouds? Zig... then zag... then DUCK!<br><br>Whew. Let's leave the mimosas on the ground next time.]]></item>
+
+  <item name="av.goal.daily.33.name"><![CDATA[Ramageddon]]></item>
+  <item name="av.goal.daily.33.hint"><![CDATA[Hey, thingummy! I'm totally panicking... well, what's the word I'm looking for? Terror, that's it! The radar is showing a huge meteorite on a collision course with the airport! If that thing crashes into us, it will smash our premises like a load of building blocks. Code red! CODE RED! Evacuate as many people as you can!]]></item>
+  <item name="av.goal.daily.33.rewardMsg"><![CDATA[Wow! How embarrassing... The meteorite on the radar was actually just a... er... how do you say it in English? A roastbeef smudge. Embarrassing, huh? From now on, I'll only eat beetroot soup at work, I can promise you that much.]]></item>
+  
   <item name="av.task.daily.33.GetPassengers.name"><![CDATA[Collect {number} passenger(s)]]></item>
-  <item name="av.goal.daily.34.name"><![CDATA[Spanish Flyer]]></item>
-  <item name="av.goal.daily.34.hint"><![CDATA[Spanish babes are hot, hot, hot! A bullfight sounds like just the place to impress. I'm ready to go. My wrinkle-free, red speedo ought to do the trick! Just follow my lead. Casanova? Hah! Just call me casa-supernova!]]></item>
-  <item name="av.goal.daily.34.rewardMsg"><![CDATA[*Sigh* ...I hate bullfights. I stumbled into the ring to show off for my new chica and... she ran off with another torero! Sad end for a prize bull like me!]]></item>
+
+  <item name="av.goal.daily.34.name"><![CDATA[Sad-Man!]]></item>
+  <item name="av.goal.daily.34.hint"><![CDATA[Hey, dude! Those EU hotties are totally into superheroes, says Kurt. And you know what? I’ve always wanted to slip into one of those skin-tight spandex suits and show off my well-sculpted pilot bod. Come on, let's fly to Europe and show the babes what a real hero is like. Curtains up for the ‘Propellator’...]]></item>
+  <item name="av.goal.daily.34.rewardMsg"><![CDATA[Well, that's just... At first I thought the girls were whistling at me... But then you trip over your cape a few times and suddenly you hear them whistling you off! They call me the ‘Propelator’ now. Well, who cares? At least I don't have to squeeze a girdle under my super suit anymore.]]></item>
+  
   <item name="av.task.daily.34.SendPlane.eu.name"><![CDATA[Send {number} planes to Europe]]></item>
-  <item name="av.goal.daily.35.name"><![CDATA[Road Trippin']]></item>
-  <item name="av.goal.daily.35.hint"><![CDATA[American babes love a manly man, right? Leather-clad and gleaming with baby oil. Saw it on TV. Nevermind! I've tuned up my old moped and I'm hitting the road. Honk if you love the ladies as much as I do!]]></item>
-  <item name="av.goal.daily.35.rewardMsg"><![CDATA[Whooaa! Did you hear all that honking? I felt like the king of the road. Everyone was staring... Until I realized the gasoline line from the pump was still attached to my moped. Phew!]]></item>
+
+  <item name="av.goal.daily.35.name"><![CDATA[2024: A Tariq Odyssey]]></item>
+  <item name="av.goal.daily.35.hint"><![CDATA[Hey buddy! The babes at NASA are perfect rocket fuel for a space explorer of my calibre. High ponytails, stylish glasses, and always armed with a sensual clipboard. What more could you want? Come on, let's jet off to the US and show these gals how irresistible Uncle Tariq is in zero gravity.  Hehehehe...]]></item>
+  <item name="av.goal.daily.35.rewardMsg"><![CDATA[Holy smokes! That shuttle ride shook me to my core! And they didn’t even have flight attendants. What kind of operation is this? So much for Cape Carnival…]]></item>
+  
   <item name="av.task.daily.35.SendPlane.na.name"><![CDATA[Send {number} planes to North America]]></item>
-  <item name="av.goal.daily.36.name"><![CDATA[On the Wrong Foot]]></item>
-  <item name="av.goal.daily.36.hint"><![CDATA[Dude! How do you feel about hiking in the Andes? Romantic trails, mountain air, and plenty of peaks to conquer. Time to whip out my hiking pole, head for the hills, and see what I can rustle out of the bushes!]]></item>
-  <item name="av.goal.daily.36.rewardMsg"><![CDATA[Ah, what a great time! I think I've set a new hiking trend in South America. The girls set out in droves in the opposite direction. They were quick too. I couldn't catch up. Haha... yeah, so fast. They're calling it the "Great Tariq Escape" on the news. I don't get it.]]></item>
+
+  <item name="av.goal.daily.36.name"><![CDATA[Mars Attacks!]]></item>
+  <item name="av.goal.daily.36.hint"><![CDATA[I’ve had it up to here! Earth girls are so demanding. “Take out the trash!” “Put the toilet seat UP!” “Put the toilet seat DOWN!” “Don’t cheat on me!” Enough with the drama! South America’s got tons of UFO sightings. Let’s jet over there right now—maybe I’ll find that hot tentacle babe who invited me into her spaceship a while back.]]></item>
+  <item name="av.goal.daily.36.rewardMsg"><![CDATA[Oh God... what happened? I was at a Brazilian bar, sweet-talking this cute Chiquita, and then... blackout. Six days later, I wake up in the gutter—with a long beard, boozy breath, and no spare change. It had to be ALIENS! I GOT ABDUCTED AGAIN! There’s no other explanation…<br><br>Got a headache pill?]]></item>  
+
   <item name="av.task.daily.36.SendPlane.sa.name"><![CDATA[Send {number} planes to South America]]></item>
-  <item name="av.goal.daily.100.name"><![CDATA[Elephail]]></item>
-  <item name="av.goal.daily.100.hint"><![CDATA[Dude! Guess who's going to the zoo on a hot date? This babe says she's got a big surprise for me. Strolling through the animal kingdom, it's sure to be pure animal attraction! Woo hoo!]]></item>
-  <item name="av.goal.daily.100.rewardMsg"><![CDATA[Color me surprised! Her son tagged along! And the little punk kept noshing on my peanuts! Good thing I'm no elephant and can forget that awful evening.]]></item>
+
+
+  <item name="av.goal.daily.100.name"><![CDATA[Close Encounter of the 69th kind]]></item>
+  <item name="av.goal.daily.100.hint"><![CDATA[Hey, dude. Long time no see! Btw... are you drawing a blank too? Last night at the singles bar, I lasered in on this galacitcally hawt babe. Green alabaster skin and antennae on her forehead included. And then... Oh my God! A red flash of light... Flying saucers... and... HELP MEEEEE! THE PROBE!!! Ahem. Let’s talk after work, okay? I need to process this…]]></item>
+  <item name="av.goal.daily.100.rewardMsg"><![CDATA[I don't believe it, dude! I was abducted by aliens! Fiona just told me that I went missing for years. Apparently, Lin took over my job, in addition to the juice-pushing, in order to save my behind. I'll buy her a big bouquet of flowers after I get a a date with our new airport therapist lined up. No starlight lillies, though.]]></item>
+  
   <item name="av.task.daily.100.SendPlane.name"><![CDATA[Send {number} plane(s)]]></item>
-  <item name="av.goal.daily.101.name"><![CDATA[Service Desert]]></item>
-  <item name="av.goal.daily.101.hint"><![CDATA[Heeey...you! Good googly, aren't these passengers annoying? All day long, all I hear is, "There's no TP! No coffee! No service!" Is that so? Well, I'll just have to show them a thing or two, while you take care of the airport.]]></item>
-  <item name="av.goal.daily.101.rewardMsg"><![CDATA[Let's see what they have to say about that! I haven't wrapped my head around the toilet paper issue, but we shouldn't hear anymore service complaints, thanks to the complimentary tea service!]]></item>
+
+  <item name="av.goal.daily.101.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.101.hint"><![CDATA[Hey, thingummy! He's back, you know? Come on, you know who I'm talking about. Tariq... the... uuuuhh... pirate. No, wait. Pilot. A few years ago, he disappeared without a trace after a binge drinking session with my hubby, Kurt. Now he claims that visitors from space have cutenapped... no... wait ... kidnapped him. Or something like that. Anyway, our airport has now become a pilgrimage site for tin foil hat wearers. Take care of 'em.]]></item>
+  <item name="av.goal.daily.101.rewardMsg"><![CDATA[Well, that was easier than expected. I had... accidentally... moved the venues of the science fiction convention to the cargo hold of an aeroplane. Now they're all on their way to... somewhere. Or nowhere. Anywhere's good, as long as it's not here.]]></item>
+  
   <item name="av.task.daily.101.ReturnPlane.name"><![CDATA[Return {number} plane(s)]]></item>
-  <item name="av.goal.daily.102.name"><![CDATA[Monet-Air-y]]></item>
-  <item name="av.goal.daily.102.hint"><![CDATA[Howdy! Them ol' penny pinchers at the IRS are a-knockin' at my door, I tell ya. If my gal Fiona finds out she married some broke joker, we're gonna be through! Finito! Or the like. Help me! I'll get better, I swear!]]></item>
-  <item name="av.goal.daily.102.rewardMsg"><![CDATA[Yeehaw! Now that's what I call me a payday! I've never seen so much cash *sniff* But don't worry, money squandring is my specialty. Besides, rainy day funds are for wet blankets.]]></item>
+
+  <item name="av.goal.daily.102.name"><![CDATA[Space Bucks]]></item>
+  <item name="av.goal.daily.102.hint"><![CDATA[Hi! Do you remember how I swept Fiona off her feet? Those were the days, eh? Come on, I'll turn back the clock and wrap her around my little finger just like I used to. I might even go and buy her a star!]]></item>
+  <item name="av.goal.daily.102.rewardMsg"><![CDATA[You should’ve seen Fi-Fi's eyes light up when I slapped that star right under her nose, huh? For my sweetheart, no distance is too far… not even to the souvenir store.]]></item>
+  
   <item name="av.task.daily.102.GetAirCoins.name"><![CDATA[Collect {number} AirCoin(s)]]></item>
-  <item name="av.goal.daily.103.name"><![CDATA[Daredevil Dames]]></item>
-  <item name="av.goal.daily.103.hint"><![CDATA[Heeey...you! This week, we're testing plane protypes with pedals and hand-cranked propellers. Members from the Society for Retired Aviatrices were supposed to go up, but I they might need a little convincing. Get them back or we'll be stuck doing the work ourselves!]]></item>
-  <item name="av.goal.daily.103.rewardMsg"><![CDATA[Look at 'em soar! Have you ever seen a plane shudder so elegantly above the clouds? Zig... then zag... then DUCK!<br><br>Whew. Let's leave the mimosas on the ground next time.]]></item>
+
+  <item name="av.goal.daily.103.name"><![CDATA[Ramageddon]]></item>
+  <item name="av.goal.daily.103.hint"><![CDATA[Hey, thingummy! I'm totally panicking... well, what's the word I'm looking for? Terror, that's it! The radar is showing a huge meteorite on a collision course with the airport! If that thing crashes into us, it will smash our premises like a load of building blocks. Code red! CODE RED! Evacuate as many people as you can!]]></item>
+  <item name="av.goal.daily.103.rewardMsg"><![CDATA[Wow! How embarrassing... The meteorite on the radar was actually just a... er... how do you say it in English? A roastbeef smudge. Embarrassing, huh? From now on, I'll only eat beetroot soup at work, I can promise you that much.]]></item>
+  
   <item name="av.task.daily.103.GetPassengers.name"><![CDATA[Collect {number} passenger(s)]]></item>
-  <item name="av.goal.daily.104.name"><![CDATA[Spanish Flyer]]></item>
-  <item name="av.goal.daily.104.hint"><![CDATA[Spanish babes are hot, hot, hot! A bullfight sounds like just the place to impress. I'm ready to go. My wrinkle-free, red speedo ought to do the trick! Just follow my lead. Casanova? Hah! Just call me casa-supernova!]]></item>
-  <item name="av.goal.daily.104.rewardMsg"><![CDATA[*Sigh* ...I hate bullfights. I stumbled into the ring to show off for my new chica and... she ran off with another torero! Sad end for a prize bull like me!]]></item>
+
+  <item name="av.goal.daily.104.name"><![CDATA[Sad-Man!]]></item>
+  <item name="av.goal.daily.104.hint"><![CDATA[Hey, dude! Those EU hotties are totally into superheroes, says Kurt. And you know what? I’ve always wanted to slip into one of those skin-tight spandex suits and show off my well-sculpted pilot bod. Come on, let's fly to Europe and show the babes what a real hero is like. Curtains up for the ‘Propellator’...]]></item>
+  <item name="av.goal.daily.104.rewardMsg"><![CDATA[Well, that's just... At first I thought the girls were whistling at me... But then you trip over your cape a few times and suddenly you hear them whistling you off! They call me the ‘Propelator’ now. Well, who cares? At least I don't have to squeeze a girdle under my super suit anymore.]]></item>
+  
   <item name="av.task.daily.104.SendPlane.eu.name"><![CDATA[Send {number} planes to Europe]]></item>
-  <item name="av.goal.daily.105.name"><![CDATA[Road Trippin']]></item>
-  <item name="av.goal.daily.105.hint"><![CDATA[American babes love a manly man, right? Leather-clad and gleaming with baby oil. Saw it on TV. Nevermind! I've tuned up my old moped and I'm hitting the road. Honk if you love the ladies as much as I do!]]></item>
-  <item name="av.goal.daily.105.rewardMsg"><![CDATA[Whooaa! Did you hear all that honking? I felt like the king of the road. Everyone was staring... Until I realized the gasoline line from the pump was still attached to my moped. Phew!]]></item>
+
+  <item name="av.goal.daily.105.name"><![CDATA[2024: A Tariq Odyssey]]></item>
+  <item name="av.goal.daily.105.hint"><![CDATA[Hey buddy! The babes at NASA are perfect rocket fuel for a space explorer of my calibre. High ponytails, stylish glasses, and always armed with a sensual clipboard. What more could you want? Come on, let's jet off to the US and show these gals how irresistible Uncle Tariq is in zero gravity.  Hehehehe...]]></item>
+  <item name="av.goal.daily.105.rewardMsg"><![CDATA[Holy smokes! That shuttle ride shook me to my core! And they didn’t even have flight attendants. What kind of operation is this? So much for Cape Carnival…]]></item>
+  
   <item name="av.task.daily.105.SendPlane.na.name"><![CDATA[Send {number} planes to North America]]></item>
-  <item name="av.goal.daily.106.name"><![CDATA[On the Wrong Foot]]></item>
-  <item name="av.goal.daily.106.hint"><![CDATA[Dude! How do you feel about hiking in the Andes? Romantic trails, mountain air, and plenty of peaks to conquer. Time to whip out my hiking pole, head for the hills, and see what I can rustle out of the bushes!]]></item>
-  <item name="av.goal.daily.106.rewardMsg"><![CDATA[Ah, what a great time! I think I've set a new hiking trend in South America. The girls set out in droves in the opposite direction. They were quick too. I couldn't catch up. Haha... yeah, so fast. They're calling it the "Great Tariq Escape" on the news. I don't get it.]]></item>
+
+  <item name="av.goal.daily.106.name"><![CDATA[Mars Attacks!]]></item>
+  <item name="av.goal.daily.106.hint"><![CDATA[I’ve had it up to here! Earth girls are so demanding. “Take out the trash!” “Put the toilet seat UP!” “Put the toilet seat DOWN!” “Don’t cheat on me!” Enough with the drama! South America’s got tons of UFO sightings. Let’s jet over there right now—maybe I’ll find that hot tentacle babe who invited me into her spaceship a while back.]]></item>
+  <item name="av.goal.daily.106.rewardMsg"><![CDATA[Oh God... what happened? I was at a Brazilian bar, sweet-talking this cute Chiquita, and then... blackout. Six days later, I wake up in the gutter—with a long beard, boozy breath, and no spare change. It had to be ALIENS! I GOT ABDUCTED AGAIN! There’s no other explanation…<br><br>Got a headache pill?]]></item>  
+
   <item name="av.task.daily.106.SendPlane.sa.name"><![CDATA[Send {number} planes to South America]]></item>
+  
+  
   <item name="av.goal.daily.107.name"><![CDATA[Shop Owner Challenge]]></item>
   <item name="av.goal.daily.107.hint"><![CDATA[The International Shop Organization ISO has announced a competition for shop owners around the globe. Anyone who manages to sell the requested amount of products today will be rewarded generously.]]></item>
   <item name="av.goal.daily.107.rewardMsg"><![CDATA[Congratulations! You beat the challenge and here is your reward. You earned it!]]></item>
   <item name="av.task.daily.107.SellProducts.name"><![CDATA[Sell {number} products]]></item>
-  <item name="av.goal.daily.200.name"><![CDATA[Elephail]]></item>
-  <item name="av.goal.daily.200.hint"><![CDATA[Dude! Guess who's going to the zoo on a hot date? This babe says she's got a big surprise for me. Strolling through the animal kingdom, it's sure to be pure animal attraction! Woo hoo!]]></item>
-  <item name="av.goal.daily.200.rewardMsg"><![CDATA[Color me surprised! Her son tagged along! And the little punk kept noshing on my peanuts! Good thing I'm no elephant and can forget that awful evening.]]></item>
+
+  
+  <item name="av.goal.daily.200.name"><![CDATA[Close Encounter of the 69th kind]]></item>
+  <item name="av.goal.daily.200.hint"><![CDATA[Hey, dude. Long time no see! Btw... are you drawing a blank too? Last night at the singles bar, I lasered in on this galacitcally hawt babe. Green alabaster skin and antennae on her forehead included. And then... Oh my God! A red flash of light... Flying saucers... and... HELP MEEEEE! THE PROBE!!! Ahem. Let’s talk after work, okay? I need to process this…]]></item>
+  <item name="av.goal.daily.200.rewardMsg"><![CDATA[I don't believe it, dude! I was abducted by aliens! Fiona just told me that I went missing for years. Apparently, Lin took over my job, in addition to the juice-pushing, in order to save my behind. I'll buy her a big bouquet of flowers after I get a a date with our new airport therapist lined up. No starlight lillies, though.]]></item>
+  
   <item name="av.task.daily.200.SendPlane.name"><![CDATA[Send {number} plane(s)]]></item>
-  <item name="av.goal.daily.201.name"><![CDATA[Service Desert]]></item>
-  <item name="av.goal.daily.201.hint"><![CDATA[Heeey...you! Good googly, aren't these passengers annoying? All day long, all I hear is, "There's no TP! No coffee! No service!" Is that so? Well, I'll just have to show them a thing or two, while you take care of the airport.]]></item>
-  <item name="av.goal.daily.201.rewardMsg"><![CDATA[Let's see what they have to say about that! I haven't wrapped my head around the toilet paper issue, but we shouldn't hear anymore service complaints, thanks to the complimentary tea service!]]></item>
+
+  <item name="av.goal.daily.201.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.201.hint"><![CDATA[Hey, thingummy! He's back, you know? Come on, you know who I'm talking about. Tariq... the... uuuuhh... pirate. No, wait. Pilot. A few years ago, he disappeared without a trace after a binge drinking session with my hubby, Kurt. Now he claims that visitors from space have cutenapped... no... wait ... kidnapped him. Or something like that. Anyway, our airport has now become a pilgrimage site for tin foil hat wearers. Take care of 'em.]]></item>
+  <item name="av.goal.daily.201.rewardMsg"><![CDATA[Well, that was easier than expected. I had... accidentally... moved the venues of the science fiction convention to the cargo hold of an aeroplane. Now they're all on their way to... somewhere. Or nowhere. Anywhere's good, as long as it's not here.]]></item>
+  
   <item name="av.task.daily.201.ReturnPlane.name"><![CDATA[Return {number} plane(s)]]></item>
-  <item name="av.goal.daily.202.name"><![CDATA[Monet-Air-y]]></item>
-  <item name="av.goal.daily.202.hint"><![CDATA[Howdy! Them ol' penny pinchers at the IRS are a-knockin' at my door, I tell ya. If my gal Fiona finds out she married some broke joker, we're gonna be through! Finito! Or the like. Help me! I'll get better, I swear!]]></item>
-  <item name="av.goal.daily.202.rewardMsg"><![CDATA[Yeehaw! Now that's what I call me a payday! I've never seen so much cash *sniff* But don't worry, money squandring is my specialty. Besides, rainy day funds are for wet blankets.]]></item>
+
+  <item name="av.goal.daily.202.name"><![CDATA[Space Bucks]]></item>
+  <item name="av.goal.daily.202.hint"><![CDATA[Hi! Do you remember how I swept Fiona off her feet? Those were the days, eh? Come on, I'll turn back the clock and wrap her around my little finger just like I used to. I might even go and buy her a star!]]></item>
+  <item name="av.goal.daily.202.rewardMsg"><![CDATA[You should’ve seen Fi-Fi's eyes light up when I slapped that star right under her nose, huh? For my sweetheart, no distance is too far… not even to the souvenir store.]]></item>
+  
   <item name="av.task.daily.202.GetAirCoins.name"><![CDATA[Collect {number} AirCoin(s)]]></item>
-  <item name="av.goal.daily.203.name"><![CDATA[Daredevil Dames]]></item>
-  <item name="av.goal.daily.203.hint"><![CDATA[Heeey...you! This week, we're testing plane protypes with pedals and hand-cranked propellers. Members from the Society for Retired Aviatrices were supposed to go up, but I they might need a little convincing. Get them back or we'll be stuck doing the work ourselves!]]></item>
-  <item name="av.goal.daily.203.rewardMsg"><![CDATA[Look at 'em soar! Have you ever seen a plane shudder so elegantly above the clouds? Zig... then zag... then DUCK!<br><br>Whew. Let's leave the mimosas on the ground next time.]]></item>
+
+  <item name="av.goal.daily.203.name"><![CDATA[Ramageddon]]></item>
+  <item name="av.goal.daily.203.hint"><![CDATA[Hey, thingummy! I'm totally panicking... well, what's the word I'm looking for? Terror, that's it! The radar is showing a huge meteorite on a collision course with the airport! If that thing crashes into us, it will smash our premises like a load of building blocks. Code red! CODE RED! Evacuate as many people as you can!]]></item>
+  <item name="av.goal.daily.203.rewardMsg"><![CDATA[Wow! How embarrassing... The meteorite on the radar was actually just a... er... how do you say it in English? A roastbeef smudge. Embarrassing, huh? From now on, I'll only eat beetroot soup at work, I can promise you that much.]]></item>
+  
   <item name="av.task.daily.203.GetPassengers.name"><![CDATA[Collect {number} passenger(s)]]></item>
-  <item name="av.goal.daily.204.name"><![CDATA[Spanish Flyer]]></item>
-  <item name="av.goal.daily.204.hint"><![CDATA[Spanish babes are hot, hot, hot! A bullfight sounds like just the place to impress. I'm ready to go. My wrinkle-free, red speedo ought to do the trick! Just follow my lead. Casanova? Hah! Just call me casa-supernova!]]></item>
-  <item name="av.goal.daily.204.rewardMsg"><![CDATA[*Sigh* ...I hate bullfights. I stumbled into the ring to show off for my new chica and... she ran off with another torero! Sad end for a prize bull like me!]]></item>
+
+  <item name="av.goal.daily.204.name"><![CDATA[Sad-Man!]]></item>
+  <item name="av.goal.daily.204.hint"><![CDATA[Hey, dude! Those EU hotties are totally into superheroes, says Kurt. And you know what? I’ve always wanted to slip into one of those skin-tight spandex suits and show off my well-sculpted pilot bod. Come on, let's fly to Europe and show the babes what a real hero is like. Curtains up for the ‘Propellator’...]]></item>
+  <item name="av.goal.daily.204.rewardMsg"><![CDATA[Well, that's just... At first I thought the girls were whistling at me... But then you trip over your cape a few times and suddenly you hear them whistling you off! They call me the ‘Propelator’ now. Well, who cares? At least I don't have to squeeze a girdle under my super suit anymore.]]></item>
+  
   <item name="av.task.daily.204.SendPlane.eu.name"><![CDATA[Send {number} planes to Europe]]></item>
-  <item name="av.goal.daily.205.name"><![CDATA[Road Trippin']]></item>
-  <item name="av.goal.daily.205.hint"><![CDATA[American babes love a manly man, right? Leather-clad and gleaming with baby oil. Saw it on TV. Nevermind! I've tuned up my old moped and I'm hitting the road. Honk if you love the ladies as much as I do!]]></item>
-  <item name="av.goal.daily.205.rewardMsg"><![CDATA[Whooaa! Did you hear all that honking? I felt like the king of the road. Everyone was staring... Until I realized the gasoline line from the pump was still attached to my moped. Phew!]]></item>
+
+  <item name="av.goal.daily.205.name"><![CDATA[2024: A Tariq Odyssey]]></item>
+  <item name="av.goal.daily.205.hint"><![CDATA[Hey buddy! The babes at NASA are perfect rocket fuel for a space explorer of my calibre. High ponytails, stylish glasses, and always armed with a sensual clipboard. What more could you want? Come on, let's jet off to the US and show these gals how irresistible Uncle Tariq is in zero gravity.  Hehehehe...]]></item>
+  <item name="av.goal.daily.205.rewardMsg"><![CDATA[Holy smokes! That shuttle ride shook me to my core! And they didn’t even have flight attendants. What kind of operation is this? So much for Cape Carnival…]]></item>
+  
   <item name="av.task.daily.205.SendPlane.na.name"><![CDATA[Send {number} planes to North America]]></item>
-  <item name="av.goal.daily.206.name"><![CDATA[On the Wrong Foot]]></item>
-  <item name="av.goal.daily.206.hint"><![CDATA[Dude! How do you feel about hiking in the Andes? Romantic trails, mountain air, and plenty of peaks to conquer. Time to whip out my hiking pole, head for the hills, and see what I can rustle out of the bushes!]]></item>
-  <item name="av.goal.daily.206.rewardMsg"><![CDATA[Ah, what a great time! I think I've set a new hiking trend in South America. The girls set out in droves in the opposite direction. They were quick too. I couldn't catch up. Haha... yeah, so fast. They're calling it the "Great Tariq Escape" on the news. I don't get it.]]></item>
+
+  <item name="av.goal.daily.206.name"><![CDATA[Mars Attacks!]]></item>
+  <item name="av.goal.daily.206.hint"><![CDATA[I’ve had it up to here! Earth girls are so demanding. “Take out the trash!” “Put the toilet seat UP!” “Put the toilet seat DOWN!” “Don’t cheat on me!” Enough with the drama! South America’s got tons of UFO sightings. Let’s jet over there right now—maybe I’ll find that hot tentacle babe who invited me into her spaceship a while back.]]></item>
+  <item name="av.goal.daily.206.rewardMsg"><![CDATA[Oh God... what happened? I was at a Brazilian bar, sweet-talking this cute Chiquita, and then... blackout. Six days later, I wake up in the gutter—with a long beard, boozy breath, and no spare change. It had to be ALIENS! I GOT ABDUCTED AGAIN! There’s no other explanation…<br><br>Got a headache pill?]]></item>  
+
   <item name="av.task.daily.206.SendPlane.sa.name"><![CDATA[Send {number} planes to South America]]></item>
+
+  
   <item name="av.goal.daily.207.name"><![CDATA[Shop Owner Challenge]]></item>
   <item name="av.goal.daily.207.hint"><![CDATA[The International Shop Organization ISO has announced a competition for shop owners around the globe. Anyone who manages to sell the requested amount of products today will be rewarded generously.]]></item>
   <item name="av.goal.daily.207.rewardMsg"><![CDATA[Congratulations! You beat the challenge and here is your reward. You earned it!]]></item>

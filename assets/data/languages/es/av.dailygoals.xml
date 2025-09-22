@@ -65,94 +65,141 @@
   <item name="av.goal.daily.28.hint"><![CDATA[El reto de hoy en el aeropuerto se centra en reunir pasajeros. Supéralo para demostrar que eres el mejor y llévate una recompensa.]]></item>
   <item name="av.goal.daily.28.rewardMsg"><![CDATA[Has superado el reto y has demostrado que eres uno de los mejores. Aquí tienes tu recompensa. ¡Te la has ganado!]]></item>
   <item name="av.task.daily.28.GetPassengers.name"><![CDATA[Consigue {number} pasajero(s)]]></item>
-  <item name="av.goal.daily.30.name"><![CDATA[Esquí aeronáutico]]></item>
-  <item name="av.goal.daily.30.hint"><![CDATA[¡Oye! Mira qué juego tan chulo estoy jugando últimamente en el móvil. Tienes que hacer que el pingüino avance por el camino y después se deslice por el hielo lo más lejos posible. Ya he alcanzado la posición máxima pero se me ha ocurrido una idea. ¿Y si lo intentamos con aviones? ¡Solo me hace falta aterrizar el avión y deslizarlo por la pista para llegar todo lo lejos que pueda! ¿Qué puede salir mal?]]></item>
-  <item name="av.goal.daily.30.rewardMsg"><![CDATA[Me han prohibido el esquí aeronáutico. Parece que al jefe de los servicios de emergencia le ha salido una hernia de repente. Bueno, ¡al menos fue divertido mientras duró!]]></item>
+  
+
+  <item name="av.goal.daily.30.name"><![CDATA[Encuentro cercano del tipo 69]]></item>
+  <item name="av.goal.daily.30.hint"><![CDATA[¡Ey, tío! ¡Cuánto tiempo sin verte! Dime... ¿tú también tienes un apagón mental? Anoche en la disco le eché el ojo a una chica de otro mundo. Piel verde de alabastro y antenas en la frente incluidas. Y luego... ¡Dios mío! Un destello rojo... platillos volantes... y... ¡SOCORRO! ¡LA SONDA! Ejem. Hablamos después del trabajo, ¿vale? Necesito procesarlo...]]></item>
+  <item name="av.goal.daily.30.rewardMsg"><![CDATA[¡No me lo puedo creer, tío! ¡Me secuestraron unos extraterrestres! Fiona acaba de contarme que he estado desaparecido durante años. Parece que Lin, además de encargarse de repartir zumos, asumió también mi trabajo para salvarme el pellejo. Le voy a regalar un gran ramo de flores en cuanto consiga organizar la primera cita con nuestra nueva terapeuta del aeropuerto. Siempre y cuando no sean flores de estrellas, claro...]]></item>
+  
   <item name="av.task.daily.30.SendPlane.name"><![CDATA[Envía {number} avión(es)]]></item>
-  <item name="av.goal.daily.31.name"><![CDATA[Hombretones de nieve]]></item>
-  <item name="av.goal.daily.31.hint"><![CDATA[¡Hemos decidido crear un concurso de muñecos de nieve! Va a ser fantástico, tenemos categorías para adultos y para niños. Habrá premios fabulosos para los mejores muñecos de nieve. Sin embargo, hay un problemilla... los aviones no dejan de aterrizar y, con el viento que provocan los motores, los muñecos de nieve se vuelan. ¿Te podrías encargar de ellos por mí?]]></item>
-  <item name="av.goal.daily.31.rewardMsg"><![CDATA[¡El concurso de muñecos de nieve fue todo un éxito! ¿Quieres ver el que ha ganado? ¡Es clavadito a ti! El parecido es espectacular.]]></item>
+
+  <item name="av.goal.daily.31.name"><![CDATA[Con Aire]]></item>
+  <item name="av.goal.daily.31.hint"><![CDATA[¡Oye, tú! Ese tipo ha vuelto. Ya sabes de quién hablo. Tariq, el… uuh... pirata. No, espera. ¡Piloto! Hace unos años, desapareció sin dejar rastro después de una noche de borrachera con mi Kurti. Ahora dice que unos visitantes del espacio lo sedujeron… no, espera… ¡lo secuestraron! O algo así. En fin, nuestro aeropuerto se ha convertido ahora en un lugar de peregrinación para los amantes de los sombreros de aluminio. ¡Encárgate de ellos!]]></item>
+  <item name="av.goal.daily.31.rewardMsg"><![CDATA[Bueno, eso fue más fácil de lo esperado. Por... accidente... trasladé los lugares de la convención de ciencia ficción a la bodega de un avión. Ahora están todos de camino a... algún lugar. O a ningún lugar. Bueno, mientras no sea aquí, todo está bien.]]></item>
+  
   <item name="av.task.daily.31.ReturnPlane.name"><![CDATA[Haz que regresen {number} avión(es)]]></item>
-  <item name="av.goal.daily.32.name"><![CDATA[La SinTrabajo]]></item>
-  <item name="av.goal.daily.32.hint"><![CDATA[¿Has visto el nuevo modelo de quitanieves SinTrabajo? ¡Menuda máquina, es fantástica! ¡Tiene una pala de titanio, un microprocesador integrado para ajustar la inclinación, filamentos de calor para derretir el hielo e incluso wifi disponible en la cabina! ¡Tenemos que conseguir una para el aeropuerto! ¡Porfa, porfa! Solo cuestan unos cientos de millones...]]></item>
-  <item name="av.goal.daily.32.rewardMsg"><![CDATA[¡Bien! Hemos ahorrado suficiente para comprar una quitanieves SinTrabajo. Qué pena que hayamos tardado tanto, la nieve ya se ha derretido sola.]]></item>
+
+  <item name="av.goal.daily.32.name"><![CDATA[Dólares especiales]]></item>
+  <item name="av.goal.daily.32.hint"><![CDATA[¡Ey! ¿Te acuerdas de cómo Fiona me volvía loco en aquellos tiempos? ¡Qué épocas, eh! Vamos, retrocedamos el tiempo y hagámosla caer rendida otra vez, como en los viejos días. En cuanto juntemos suficiente pasta, ¡le compro una estrella!]]></item>
+  <item name="av.goal.daily.32.rewardMsg"><![CDATA[¡Vaya ojazos puso la chica cuando le planté la estrella delante de las narices, eh! Por mi amor no hay distancia demasiado larga… ni siquiera hasta el quiosco.]]></item>
+  
   <item name="av.task.daily.32.GetAirCoins.name"><![CDATA[Consigue {number} aerocéntimo(s)]]></item>
-  <item name="av.goal.daily.33.name"><![CDATA[Kurt el Cóndor]]></item>
-  <item name="av.goal.daily.33.hint"><![CDATA[Kurt afirma ser uno de los mejores saltadores con esquís. ¡Dice que puede saltar tres autobuses al mismo tiempo! Pero no tenemos autobuses y los pilotos no están dispuestos a que nadie salte sobre sus aviones, así que tendremos que hacerlo con gente. Agrupa a todos los pasajeros que puedas y que se tumben haciendo una línea larga.]]></item>
-  <item name="av.goal.daily.33.rewardMsg"><![CDATA[Parece que Kurt nos mintió sobre su habilidad saltando con esquís. Ahora dice que se refería a tres autobuses DE JUGUETE. Tengo que esconderme de ese montón de pasajeros enfadados.]]></item>
+
+  <item name="av.goal.daily.33.name"><![CDATA[Ramagedón]]></item>
+  <item name="av.goal.daily.33.hint"><![CDATA[¡Oye, colega! Estoy entrando en un total… ¿cómo se dice? ¡Ah, sí, pánico, eso es! El radar muestra un enorme meteorito en rumbo de colisión con el aeropuerto. ¡Si esa cosa nos golpea, destruirá nuestras instalaciones como si fueran piezas de un juego de construcción! ¡Código rojo! ¡CÓDIGO ROJO! ¡Evacúa a tanta gente como puedas!]]></item>
+  <item name="av.goal.daily.33.rewardMsg"><![CDATA[¡Vaya, qué vergüenza...! El meteorito en el radar resultó ser solo una... eh... ¿cómo se dice? ¡Una mancha de salchicha! Exacto. A partir de ahora, solo comeré sopa de remolacha en el trabajo, te lo prometo.]]></item>
+  
   <item name="av.task.daily.33.GetPassengers.name"><![CDATA[Consigue {number} pasajero(s)]]></item>
-  <item name="av.goal.daily.34.name"><![CDATA[Después del esquí]]></item>
-  <item name="av.goal.daily.34.hint"><![CDATA[Es invierno, y eso significa que ha llegado la temporada de esquí. Tengo que hacer muchos vuelos a Austria para llevar a los esquiadores a las mejores estaciones del país. Yo no soy muy bueno esquiando pero qué más da... ¡todo el mundo sabe que lo bueno llega después del esquí! Tías buenas y vino caliente, ¿cómo no iba a ser fantástico?]]></item>
-  <item name="av.goal.daily.34.rewardMsg"><![CDATA[Sí, estoy medio enterrado bajo un montón de nieve. No, no ha sido un accidente de esquí. ¡Calla y sácame de aquí!]]></item>
+
+  <item name="av.goal.daily.34.name"><![CDATA[Hombre triste]]></item>
+  <item name="av.goal.daily.34.hint"><![CDATA[Oye, tío. Las chicas guapas de la Eurozona están súper locas por los superhéroes, dice Kurt. ¿Y sabes qué? Siempre quise ponerme un traje ajustado de spandex sobre mi esculpido cuerpo de piloto. Vamos, volamos a Europa y les mostramos a esas chicas lo que es un verdadero héroe. Se levanta el telón para el 'Propellator'...]]></item>
+  <item name="av.goal.daily.34.rewardMsg"><![CDATA[Bueno, esto es... Al principio pensé que las chicas me estaban silbando de admiración... Pero luego tropiezas un par de veces con la capa y, de repente, ¡te abuchean! Ahora me llaman el "Proletator". Bueno, ¿a quién le importa? Al menos ya no tengo que apretujarme un cinturón de faja debajo del traje de salvador del mundo.]]></item>
+  
   <item name="av.task.daily.34.SendPlane.eu.name"><![CDATA[Envía {number} avión(es) a Europa]]></item>
-  <item name="av.goal.daily.35.name"><![CDATA[50 palabras]]></item>
-  <item name="av.goal.daily.35.hint"><![CDATA[Tengo que volar a Alaska. ¿Sabías que los esquimales tienen cincuenta palabras distintas para la nieve? En realidad hay cierta polémica sobre el tema, ¿pero qué más da? Es un buen tema de conversación para cuando me acurruque dentro de un iglú con esas esquimales tan guapas. Seguro que nadie les ha pedido antes que reciten las cincuenta palabras.]]></item>
-  <item name="av.goal.daily.35.rewardMsg"><![CDATA[Las esquimales me han dicho que intentase comer un tipo concreto de nieve... no me acuerdo del nombre, pero resulta que era nieve amarilla. Me duele la barriga...]]></item>
+
+  <item name="av.goal.daily.35.name"><![CDATA[2024: Una odisea de Tariq]]></item>
+  <item name="av.goal.daily.35.hint"><![CDATA[¡Oye, colega! Las chicas de la NASA son el combustible perfecto para un explorador espacial de mi calibre. Melenas rubias recogidas, gafas a la moda y siempre con una sensual carpeta en la mano. ¿Qué más se puede pedir? Vamos, volamos a los EE. UU. y les mostramos a esas bellezas lo irresistible que es el tío Tariq en gravedad cero. Jijijiji...]]></item>
+  <item name="av.goal.daily.35.rewardMsg"><![CDATA[¡Madre mía! ¡El transbordador me sacudió de arriba abajo! Ni siquiera tenían asistentes de vuelo. ¿Qué clase de servicio es este? Así que, tanto para el "Carnaval de Cabo"…]]></item>
+  
   <item name="av.task.daily.35.SendPlane.na.name"><![CDATA[Envía {number} avión(es) a América del Norte]]></item>
-  <item name="av.goal.daily.36.name"><![CDATA[Los imponentes Andes]]></item>
-  <item name="av.goal.daily.36.hint"><![CDATA[Tengo que volar a los Andes para recoger un paquete. No sé qué hay en el contenedor pero me han prometido que no lleva arañas, pirañas, serpientes ni ningún otro bicho repugnante. Hace mucho frío ahí fuera, espero que mi avión no se hiele durante el trayecto.]]></item>
-  <item name="av.goal.daily.36.rewardMsg"><![CDATA[¡Salen chillidos del contenedor y se está moviendo! Espero que no se abra... espera, han salido. ¡Están en la cabina! ¡Oh, solo son cobayas! ¡Ah, qué monas son!]]></item>
+
+  <item name="av.goal.daily.36.name"><![CDATA[¡Marte ataca!]]></item>
+  <item name="av.goal.daily.36.hint"><![CDATA[¡Estoy harto de esto! ¡Las chicas terrícolas son tan exigentes! "¡Saca la basura!", "¡Levanta la tapa del inodoro!", "¡Baja la tapa del asiento!", "¡No me engañes!". ¡Basta de dramas! En Sudamérica hay un montón de avistamientos de ovnis. Vamos a volar allí ahora mismo; tal vez encontremos a esa sexy extraterrestre con tentáculos que me invitó a su nave la última vez.]]></item>
+  <item name="av.goal.daily.36.rewardMsg"><![CDATA[¡Dios mío! ¿Qué ha pasado? Estaba en un bar brasileño, coqueteando con una chiquita encantadora. Y luego... otro apagón. Seis días después, desperté con una barba enorme, aliento alcohólico y sin un centavo en el bolsillo, tirado en la cuneta. ¡Fueron EXTRATERRESTRES! ¡ME SECUESTRARON OTRA VEZ! No hay otra explicación...<br><br>¿Tienes una pastilla para el dolor de cabeza?]]></item>  
+
   <item name="av.task.daily.36.SendPlane.sa.name"><![CDATA[Envía {number} avión(es) a América del Sur]]></item>
-  <item name="av.goal.daily.100.name"><![CDATA[Esquí aeronáutico]]></item>
-  <item name="av.goal.daily.100.hint"><![CDATA[¡Oye! Mira qué juego tan chulo estoy jugando últimamente en el móvil. Tienes que hacer que el pingüino avance por el camino y después se deslice por el hielo lo más lejos posible. Ya he alcanzado la posición máxima pero se me ha ocurrido una idea. ¿Y si lo intentamos con aviones? ¡Solo me hace falta aterrizar el avión y deslizarlo por la pista para llegar todo lo lejos que pueda! ¿Qué puede salir mal?]]></item>
-  <item name="av.goal.daily.100.rewardMsg"><![CDATA[Me han prohibido el esquí aeronáutico. Parece que al jefe de los servicios de emergencia le ha salido una hernia de repente. Bueno, ¡al menos fue divertido mientras duró!]]></item>
+
+
+  <item name="av.goal.daily.100.name"><![CDATA[Encuentro cercano del tipo 69]]></item>
+  <item name="av.goal.daily.100.hint"><![CDATA[¡Ey, tío! ¡Cuánto tiempo sin verte! Dime... ¿tú también tienes un apagón mental? Anoche en la disco le eché el ojo a una chica de otro mundo. Piel verde de alabastro y antenas en la frente incluidas. Y luego... ¡Dios mío! Un destello rojo... platillos volantes... y... ¡SOCORRO! ¡LA SONDA! Ejem. Hablamos después del trabajo, ¿vale? Necesito procesarlo...]]></item>
+  <item name="av.goal.daily.100.rewardMsg"><![CDATA[¡No me lo puedo creer, tío! ¡Me secuestraron unos extraterrestres! Fiona acaba de contarme que he estado desaparecido durante años. Parece que Lin, además de encargarse de repartir zumos, asumió también mi trabajo para salvarme el pellejo. Le voy a regalar un gran ramo de flores en cuanto consiga organizar la primera cita con nuestra nueva terapeuta del aeropuerto. Siempre y cuando no sean flores de estrellas, claro...]]></item>
+  
   <item name="av.task.daily.100.SendPlane.name"><![CDATA[Envía {number} avión(es)]]></item>
-  <item name="av.goal.daily.101.name"><![CDATA[Hombretones de nieve]]></item>
-  <item name="av.goal.daily.101.hint"><![CDATA[¡Hemos decidido crear un concurso de muñecos de nieve! Va a ser fantástico, tenemos categorías para adultos y para niños. Habrá premios fabulosos para los mejores muñecos de nieve. Sin embargo, hay un problemilla... los aviones no dejan de aterrizar y, con el viento que provocan los motores, los muñecos de nieve se vuelan. ¿Te podrías encargar de ellos por mí?]]></item>
-  <item name="av.goal.daily.101.rewardMsg"><![CDATA[¡El concurso de muñecos de nieve fue todo un éxito! ¿Quieres ver el que ha ganado? ¡Es clavadito a ti! El parecido es espectacular.]]></item>
+
+  <item name="av.goal.daily.101.name"><![CDATA[Con Aire]]></item>
+  <item name="av.goal.daily.101.hint"><![CDATA[¡Oye, tú! Ese tipo ha vuelto. Ya sabes de quién hablo. Tariq, el… uuh... pirata. No, espera. ¡Piloto! Hace unos años, desapareció sin dejar rastro después de una noche de borrachera con mi Kurti. Ahora dice que unos visitantes del espacio lo sedujeron… no, espera… ¡lo secuestraron! O algo así. En fin, nuestro aeropuerto se ha convertido ahora en un lugar de peregrinación para los amantes de los sombreros de aluminio. ¡Encárgate de ellos!]]></item>
+  <item name="av.goal.daily.101.rewardMsg"><![CDATA[Bueno, eso fue más fácil de lo esperado. Por... accidente... trasladé los lugares de la convención de ciencia ficción a la bodega de un avión. Ahora están todos de camino a... algún lugar. O a ningún lugar. Bueno, mientras no sea aquí, todo está bien.]]></item>
+  
   <item name="av.task.daily.101.ReturnPlane.name"><![CDATA[Haz que regresen {number} avión(es)]]></item>
-  <item name="av.goal.daily.102.name"><![CDATA[La SinTrabajo]]></item>
-  <item name="av.goal.daily.102.hint"><![CDATA[¿Has visto el nuevo modelo de quitanieves SinTrabajo? ¡Menuda máquina, es fantástica! ¡Tiene una pala de titanio, un microprocesador integrado para ajustar la inclinación, filamentos de calor para derretir el hielo e incluso wifi disponible en la cabina! ¡Tenemos que conseguir una para el aeropuerto! ¡Porfa, porfa! Solo cuestan unos cientos de millones...]]></item>
-  <item name="av.goal.daily.102.rewardMsg"><![CDATA[¡Bien! Hemos ahorrado suficiente para comprar una quitanieves SinTrabajo. Qué pena que hayamos tardado tanto, la nieve ya se ha derretido sola.]]></item>
+
+  <item name="av.goal.daily.102.name"><![CDATA[Dólares especiales]]></item>
+  <item name="av.goal.daily.102.hint"><![CDATA[¡Ey! ¿Te acuerdas de cómo Fiona me volvía loco en aquellos tiempos? ¡Qué épocas, eh! Vamos, retrocedamos el tiempo y hagámosla caer rendida otra vez, como en los viejos días. En cuanto juntemos suficiente pasta, ¡le compro una estrella!]]></item>
+  <item name="av.goal.daily.102.rewardMsg"><![CDATA[¡Vaya ojazos puso la chica cuando le planté la estrella delante de las narices, eh! Por mi amor no hay distancia demasiado larga… ni siquiera hasta el quiosco.]]></item>
+  
   <item name="av.task.daily.102.GetAirCoins.name"><![CDATA[Consigue {number} aerocéntimo(s)]]></item>
-  <item name="av.goal.daily.103.name"><![CDATA[Kurt el Cóndor]]></item>
-  <item name="av.goal.daily.103.hint"><![CDATA[Kurt afirma ser uno de los mejores saltadores con esquís. ¡Dice que puede saltar tres autobuses al mismo tiempo! Pero no tenemos autobuses y los pilotos no están dispuestos a que nadie salte sobre sus aviones, así que tendremos que hacerlo con gente. Agrupa a todos los pasajeros que puedas y que se tumben haciendo una línea larga.]]></item>
-  <item name="av.goal.daily.103.rewardMsg"><![CDATA[Parece que Kurt nos mintió sobre su habilidad saltando con esquís. Ahora dice que se refería a tres autobuses DE JUGUETE. Tengo que esconderme de ese montón de pasajeros enfadados.]]></item>
+
+  <item name="av.goal.daily.103.name"><![CDATA[Ramagedón]]></item>
+  <item name="av.goal.daily.103.hint"><![CDATA[¡Oye, colega! Estoy entrando en un total… ¿cómo se dice? ¡Ah, sí, pánico, eso es! El radar muestra un enorme meteorito en rumbo de colisión con el aeropuerto. ¡Si esa cosa nos golpea, destruirá nuestras instalaciones como si fueran piezas de un juego de construcción! ¡Código rojo! ¡CÓDIGO ROJO! ¡Evacúa a tanta gente como puedas!]]></item>
+  <item name="av.goal.daily.103.rewardMsg"><![CDATA[¡Vaya, qué vergüenza...! El meteorito en el radar resultó ser solo una... eh... ¿cómo se dice? ¡Una mancha de salchicha! Exacto. A partir de ahora, solo comeré sopa de remolacha en el trabajo, te lo prometo.]]></item>
+  
   <item name="av.task.daily.103.GetPassengers.name"><![CDATA[Consigue {number} pasajero(s)]]></item>
-  <item name="av.goal.daily.104.name"><![CDATA[Después del esquí]]></item>
-  <item name="av.goal.daily.104.hint"><![CDATA[Es invierno, y eso significa que ha llegado la temporada de esquí. Tengo que hacer muchos vuelos a Austria para llevar a los esquiadores a las mejores estaciones del país. Yo no soy muy bueno esquiando pero qué más da... ¡todo el mundo sabe que lo bueno llega después del esquí! Tías buenas y vino caliente, ¿cómo no iba a ser fantástico?]]></item>
-  <item name="av.goal.daily.104.rewardMsg"><![CDATA[Sí, estoy medio enterrado bajo un montón de nieve. No, no ha sido un accidente de esquí. ¡Calla y sácame de aquí!]]></item>
+
+  <item name="av.goal.daily.104.name"><![CDATA[Hombre triste]]></item>
+  <item name="av.goal.daily.104.hint"><![CDATA[Oye, tío. Las chicas guapas de la Eurozona están súper locas por los superhéroes, dice Kurt. ¿Y sabes qué? Siempre quise ponerme un traje ajustado de spandex sobre mi esculpido cuerpo de piloto. Vamos, volamos a Europa y les mostramos a esas chicas lo que es un verdadero héroe. Se levanta el telón para el 'Propellator'...]]></item>
+  <item name="av.goal.daily.104.rewardMsg"><![CDATA[Bueno, esto es... Al principio pensé que las chicas me estaban silbando de admiración... Pero luego tropiezas un par de veces con la capa y, de repente, ¡te abuchean! Ahora me llaman el "Proletator". Bueno, ¿a quién le importa? Al menos ya no tengo que apretujarme un cinturón de faja debajo del traje de salvador del mundo.]]></item>
+  
   <item name="av.task.daily.104.SendPlane.eu.name"><![CDATA[Envía {number} avión(es) a Europa]]></item>
-  <item name="av.goal.daily.105.name"><![CDATA[50 palabras]]></item>
-  <item name="av.goal.daily.105.hint"><![CDATA[Tengo que volar a Alaska. ¿Sabías que los esquimales tienen cincuenta palabras distintas para la nieve? En realidad hay cierta polémica sobre el tema, ¿pero qué más da? Es un buen tema de conversación para cuando me acurruque dentro de un iglú con esas esquimales tan guapas. Seguro que nadie les ha pedido antes que reciten las cincuenta palabras.]]></item>
-  <item name="av.goal.daily.105.rewardMsg"><![CDATA[Las esquimales me han dicho que intentase comer un tipo concreto de nieve... no me acuerdo del nombre, pero resulta que era nieve amarilla. Me duele la barriga...]]></item>
+
+  <item name="av.goal.daily.105.name"><![CDATA[2024: Una odisea de Tariq]]></item>
+  <item name="av.goal.daily.105.hint"><![CDATA[¡Oye, colega! Las chicas de la NASA son el combustible perfecto para un explorador espacial de mi calibre. Melenas rubias recogidas, gafas a la moda y siempre con una sensual carpeta en la mano. ¿Qué más se puede pedir? Vamos, volamos a los EE. UU. y les mostramos a esas bellezas lo irresistible que es el tío Tariq en gravedad cero. Jijijiji...]]></item>
+  <item name="av.goal.daily.105.rewardMsg"><![CDATA[¡Madre mía! ¡El transbordador me sacudió de arriba abajo! Ni siquiera tenían asistentes de vuelo. ¿Qué clase de servicio es este? Así que, tanto para el "Carnaval de Cabo"…]]></item>
+  
   <item name="av.task.daily.105.SendPlane.na.name"><![CDATA[Envía {number} avión(es) a América del Norte]]></item>
-  <item name="av.goal.daily.106.name"><![CDATA[Los imponentes Andes]]></item>
-  <item name="av.goal.daily.106.hint"><![CDATA[Tengo que volar a los Andes para recoger un paquete. No sé qué hay en el contenedor pero me han prometido que no lleva arañas, pirañas, serpientes ni ningún otro bicho repugnante. Hace mucho frío ahí fuera, espero que mi avión no se hiele durante el trayecto.]]></item>
-  <item name="av.goal.daily.106.rewardMsg"><![CDATA[¡Salen chillidos del contenedor y se está moviendo! ¡Salen chillidos del contenedor y se está moviendo! ¡Están en la cabina! ¡Oh, solo son cobayas! ¡Ah, qué monas son!]]></item>
-  <item name="av.task.daily.106.SendPlane.sa.name"><![CDATA[Envía {number} avión(es) a América del Sur]]></item>
+
+  <item name="av.goal.daily.106.name"><![CDATA[¡Marte ataca!]]></item>
+  <item name="av.goal.daily.106.hint"><![CDATA[¡Estoy harto de esto! ¡Las chicas terrícolas son tan exigentes! "¡Saca la basura!", "¡Levanta la tapa del inodoro!", "¡Baja la tapa del asiento!", "¡No me engañes!". ¡Basta de dramas! En Sudamérica hay un montón de avistamientos de ovnis. Vamos a volar allí ahora mismo; tal vez encontremos a esa sexy extraterrestre con tentáculos que me invitó a su nave la última vez.]]></item>
+  <item name="av.goal.daily.106.rewardMsg"><![CDATA[¡Dios mío! ¿Qué ha pasado? Estaba en un bar brasileño, coqueteando con una chiquita encantadora. Y luego... otro apagón. Seis días después, desperté con una barba enorme, aliento alcohólico y sin un centavo en el bolsillo, tirado en la cuneta. ¡Fueron EXTRATERRESTRES! ¡ME SECUESTRARON OTRA VEZ! No hay otra explicación...<br><br>¿Tienes una pastilla para el dolor de cabeza?]]></item>  
+
+  <item name="av.task.daily.106.SendPlane.sa.name"><![CDATA[Envía {number} avión(es) a América del Sur]]></item> 
+  
   <item name="av.goal.daily.107.name"><![CDATA[Desafío de propietario]]></item>
   <item name="av.goal.daily.107.hint"><![CDATA[La OIT (Organización Internacional de Tiendas) ha anunciado una competición para los propietarios de tiendas de todo el mundo. Todos aquellos que consigan vender hoy la cantidad de productos solicitada recibirán una generosa recompensa.]]></item>
   <item name="av.goal.daily.107.rewardMsg"><![CDATA[¡Felicidades! Has superado el desafío y aquí tienes tu recompensa. ¡Genial!]]></item>
   <item name="av.task.daily.107.SellProducts.name"><![CDATA[Vende {number} producto(s)]]></item>
-  <item name="av.goal.daily.200.name"><![CDATA[Esquí aeronáutico]]></item>
-  <item name="av.goal.daily.200.hint"><![CDATA[¡Oye! Mira qué juego tan chulo estoy jugando últimamente en el móvil. Tienes que hacer que el pingüino avance por el camino y después se deslice por el hielo lo más lejos posible. Tienes que hacer que el pingüino avance por el camino y después se deslice por el hielo lo más lejos posible. Ya he alcanzado la posición máxima pero se me ha ocurrido una idea. Ya he alcanzado la posición máxima pero se me ha ocurrido u¡Solo me hace falta aterrizar el avión y deslizarlo por la pista para llegar todo lo lejos que pueda! ¿Qué puede salir mal?]]></item>
-  <item name="av.goal.daily.200.rewardMsg"><![CDATA[Me han prohibido el esquí aeronáutico. Parece que al jefe de los servicios de emergencia le ha salido una hernia de repente. Bueno, ¡al menos fue divertido mientras duró!]]></item>
+
+
+  <item name="av.goal.daily.200.name"><![CDATA[Encuentro cercano del tipo 69]]></item>
+  <item name="av.goal.daily.200.hint"><![CDATA[¡Ey, tío! ¡Cuánto tiempo sin verte! Dime... ¿tú también tienes un apagón mental? Anoche en la disco le eché el ojo a una chica de otro mundo. Piel verde de alabastro y antenas en la frente incluidas. Y luego... ¡Dios mío! Un destello rojo... platillos volantes... y... ¡SOCORRO! ¡LA SONDA! Ejem. Hablamos después del trabajo, ¿vale? Necesito procesarlo...]]></item>
+  <item name="av.goal.daily.200.rewardMsg"><![CDATA[¡No me lo puedo creer, tío! ¡Me secuestraron unos extraterrestres! Fiona acaba de contarme que he estado desaparecido durante años. Parece que Lin, además de encargarse de repartir zumos, asumió también mi trabajo para salvarme el pellejo. Le voy a regalar un gran ramo de flores en cuanto consiga organizar la primera cita con nuestra nueva terapeuta del aeropuerto. Siempre y cuando no sean flores de estrellas, claro...]]></item>
+  
   <item name="av.task.daily.200.SendPlane.name"><![CDATA[Envía {number} avión(es)]]></item>
-  <item name="av.goal.daily.201.name"><![CDATA[Hombretones de nieve]]></item>
-  <item name="av.goal.daily.201.hint"><![CDATA[¡Hemos decidido crear un concurso de muñecos de nieve! Va a ser fantástico, tenemos categorías para adultos y para niños. Habrá premios fabulosos para los mejores muñecos de nieve. Sin embargo, hay un problemilla... los aviones no dejan de aterrizar y, con el viento que provocan los motores, los muñecos de nieve se vuelan. ¿Te podrías encargar de ellos por mí?]]></item>
-  <item name="av.goal.daily.201.rewardMsg"><![CDATA[¡El concurso de muñecos de nieve fue todo un éxito! ¿Quieres ver el que ha ganado? ¡Es clavadito a ti! El parecido es espectacular.]]></item>
+
+  <item name="av.goal.daily.201.name"><![CDATA[Con Aire]]></item>
+  <item name="av.goal.daily.201.hint"><![CDATA[¡Oye, tú! Ese tipo ha vuelto. Ya sabes de quién hablo. Tariq, el… uuh... pirata. No, espera. ¡Piloto! Hace unos años, desapareció sin dejar rastro después de una noche de borrachera con mi Kurti. Ahora dice que unos visitantes del espacio lo sedujeron… no, espera… ¡lo secuestraron! O algo así. En fin, nuestro aeropuerto se ha convertido ahora en un lugar de peregrinación para los amantes de los sombreros de aluminio. ¡Encárgate de ellos!]]></item>
+  <item name="av.goal.daily.201.rewardMsg"><![CDATA[Bueno, eso fue más fácil de lo esperado. Por... accidente... trasladé los lugares de la convención de ciencia ficción a la bodega de un avión. Ahora están todos de camino a... algún lugar. O a ningún lugar. Bueno, mientras no sea aquí, todo está bien.]]></item>
+  
   <item name="av.task.daily.201.ReturnPlane.name"><![CDATA[Haz que regresen {number} avión(es)]]></item>
-  <item name="av.goal.daily.202.name"><![CDATA[La SinTrabajo]]></item>
-  <item name="av.goal.daily.202.hint"><![CDATA[¿Has visto el nuevo modelo de quitanieves SinTrabajo? ¡Menuda máquina, es fantástica! ¡Tiene una pala de titanio, un microprocesador integrado para ajustar la inclinación, filamentos de calor para derretir el hielo e incluso wifi disponible en la cabina! ¡Tenemos que conseguir una para el aeropuerto! ¡Porfa, porfa! Solo cuestan unos cientos de millones...]]></item>
-  <item name="av.goal.daily.202.rewardMsg"><![CDATA[¡Bien! Hemos ahorrado suficiente para comprar una quitanieves SinTrabajo. Qué pena que hayamos tardado tanto, la nieve ya se ha derretido sola.]]></item>
+
+  <item name="av.goal.daily.202.name"><![CDATA[Dólares especiales]]></item>
+  <item name="av.goal.daily.202.hint"><![CDATA[¡Ey! ¿Te acuerdas de cómo Fiona me volvía loco en aquellos tiempos? ¡Qué épocas, eh! Vamos, retrocedamos el tiempo y hagámosla caer rendida otra vez, como en los viejos días. En cuanto juntemos suficiente pasta, ¡le compro una estrella!]]></item>
+  <item name="av.goal.daily.202.rewardMsg"><![CDATA[¡Vaya ojazos puso la chica cuando le planté la estrella delante de las narices, eh! Por mi amor no hay distancia demasiado larga… ni siquiera hasta el quiosco.]]></item>
+  
   <item name="av.task.daily.202.GetAirCoins.name"><![CDATA[Consigue {number} aerocéntimo(s)]]></item>
-  <item name="av.goal.daily.203.name"><![CDATA[Kurt el Cóndor]]></item>
-  <item name="av.goal.daily.203.hint"><![CDATA[Kurt afirma ser uno de los mejores saltadores con esquís. ¡Dice que puede saltar tres autobuses al mismo tiempo! Pero no tenemos autobuses y los pilotos no están dispuestos a que nadie salte sobre sus aviones, así que tendremos que hacerlo con gente. Agrupa a todos los pasajeros que puedas y que se tumben haciendo una línea larga.]]></item>
-  <item name="av.goal.daily.203.rewardMsg"><![CDATA[Parece que Kurt nos mintió sobre su habilidad saltando con esquís. Ahora dice que se refería a tres autobuses DE JUGUETE. Tengo que esconderme de ese montón de pasajeros enfadados.]]></item>
+
+  <item name="av.goal.daily.203.name"><![CDATA[Ramagedón]]></item>
+  <item name="av.goal.daily.203.hint"><![CDATA[¡Oye, colega! Estoy entrando en un total… ¿cómo se dice? ¡Ah, sí, pánico, eso es! El radar muestra un enorme meteorito en rumbo de colisión con el aeropuerto. ¡Si esa cosa nos golpea, destruirá nuestras instalaciones como si fueran piezas de un juego de construcción! ¡Código rojo! ¡CÓDIGO ROJO! ¡Evacúa a tanta gente como puedas!]]></item>
+  <item name="av.goal.daily.203.rewardMsg"><![CDATA[¡Vaya, qué vergüenza...! El meteorito en el radar resultó ser solo una... eh... ¿cómo se dice? ¡Una mancha de salchicha! Exacto. A partir de ahora, solo comeré sopa de remolacha en el trabajo, te lo prometo.]]></item>
+  
   <item name="av.task.daily.203.GetPassengers.name"><![CDATA[Consigue {number} pasajero(s)]]></item>
-  <item name="av.goal.daily.204.name"><![CDATA[Después del esquí]]></item>
-  <item name="av.goal.daily.204.hint"><![CDATA[Es invierno, y eso significa que ha llegado la temporada de esquí. Tengo que hacer muchos vuelos a Austria para llevar a los esquiadores a las mejores estaciones del país. Yo no soy muy bueno esquiando pero qué más da... ¡todo el mundo sabe que lo bueno llega después del esquí! Tías buenas y vino caliente, ¿cómo no iba a ser fantástico?]]></item>
-  <item name="av.goal.daily.204.rewardMsg"><![CDATA[Sí, estoy medio enterrado bajo un montón de nieve. No, no ha sido un accidente de esquí. ¡Calla y sácame de aquí!]]></item>
+
+  <item name="av.goal.daily.204.name"><![CDATA[Hombre triste]]></item>
+  <item name="av.goal.daily.204.hint"><![CDATA[Oye, tío. Las chicas guapas de la Eurozona están súper locas por los superhéroes, dice Kurt. ¿Y sabes qué? Siempre quise ponerme un traje ajustado de spandex sobre mi esculpido cuerpo de piloto. Vamos, volamos a Europa y les mostramos a esas chicas lo que es un verdadero héroe. Se levanta el telón para el 'Propellator'...]]></item>
+  <item name="av.goal.daily.204.rewardMsg"><![CDATA[Bueno, esto es... Al principio pensé que las chicas me estaban silbando de admiración... Pero luego tropiezas un par de veces con la capa y, de repente, ¡te abuchean! Ahora me llaman el "Proletator". Bueno, ¿a quién le importa? Al menos ya no tengo que apretujarme un cinturón de faja debajo del traje de salvador del mundo.]]></item>
+  
   <item name="av.task.daily.204.SendPlane.eu.name"><![CDATA[Envía {number} avión(es) a Europa]]></item>
-  <item name="av.goal.daily.205.name"><![CDATA[50 palabras]]></item>
-  <item name="av.goal.daily.205.hint"><![CDATA[Tengo que volar a Alaska. ¿Sabías que los esquimales tienen cincuenta palabras distintas para la nieve? En realidad hay cierta polémica sobre el tema, ¿pero qué más da? Es un buen tema de conversación para cuando me acurruque dentro de un iglú con esas esquimales tan guapas. Seguro que nadie les ha pedido antes que reciten las cincuenta palabras.]]></item>
-  <item name="av.goal.daily.205.rewardMsg"><![CDATA[Las esquimales me han dicho que intentase comer un tipo concreto de nieve... no me acuerdo del nombre, pero resulta que era nieve amarilla. Me duele la barriga...]]></item>
+
+  <item name="av.goal.daily.205.name"><![CDATA[2024: Una odisea de Tariq]]></item>
+  <item name="av.goal.daily.205.hint"><![CDATA[¡Oye, colega! Las chicas de la NASA son el combustible perfecto para un explorador espacial de mi calibre. Melenas rubias recogidas, gafas a la moda y siempre con una sensual carpeta en la mano. ¿Qué más se puede pedir? Vamos, volamos a los EE. UU. y les mostramos a esas bellezas lo irresistible que es el tío Tariq en gravedad cero. Jijijiji...]]></item>
+  <item name="av.goal.daily.205.rewardMsg"><![CDATA[¡Madre mía! ¡El transbordador me sacudió de arriba abajo! Ni siquiera tenían asistentes de vuelo. ¿Qué clase de servicio es este? Así que, tanto para el "Carnaval de Cabo"…]]></item>
+  
   <item name="av.task.daily.205.SendPlane.na.name"><![CDATA[Envía {number} avión(es) a América del Norte]]></item>
-  <item name="av.goal.daily.206.name"><![CDATA[Los imponentes Andes]]></item>
-  <item name="av.goal.daily.206.hint"><![CDATA[Tengo que volar a los Andes para recoger un paquete. No sé qué hay en el contenedor pero me han prometido que no lleva arañas, pirañas, serpientes ni ningún otro bicho repugnante. Hace mucho frío ahí fuera, espero que mi avión no se hiele durante el trayecto.]]></item>
-  <item name="av.goal.daily.206.rewardMsg"><![CDATA[¡Salen chillidos del contenedor y se está moviendo! Espero que no se abra... espera, han salido. ¡Están en la cabina! ¡Oh, solo son cobayas! ¡Ah, qué monas son!]]></item>
-  <item name="av.task.daily.206.SendPlane.sa.name"><![CDATA[Envía {number} avión(es) a América del Sur]]></item>
+
+  <item name="av.goal.daily.206.name"><![CDATA[¡Marte ataca!]]></item>
+  <item name="av.goal.daily.206.hint"><![CDATA[¡Estoy harto de esto! ¡Las chicas terrícolas son tan exigentes! "¡Saca la basura!", "¡Levanta la tapa del inodoro!", "¡Baja la tapa del asiento!", "¡No me engañes!". ¡Basta de dramas! En Sudamérica hay un montón de avistamientos de ovnis. Vamos a volar allí ahora mismo; tal vez encontremos a esa sexy extraterrestre con tentáculos que me invitó a su nave la última vez.]]></item>
+  <item name="av.goal.daily.206.rewardMsg"><![CDATA[¡Dios mío! ¿Qué ha pasado? Estaba en un bar brasileño, coqueteando con una chiquita encantadora. Y luego... otro apagón. Seis días después, desperté con una barba enorme, aliento alcohólico y sin un centavo en el bolsillo, tirado en la cuneta. ¡Fueron EXTRATERRESTRES! ¡ME SECUESTRARON OTRA VEZ! No hay otra explicación...<br><br>¿Tienes una pastilla para el dolor de cabeza?]]></item>  
+
+  <item name="av.task.daily.206.SendPlane.sa.name"><![CDATA[Envía {number} avión(es) a América del Sur]]></item> 
+  
   <item name="av.goal.daily.207.name"><![CDATA[Desafío de propietario]]></item>
   <item name="av.goal.daily.207.hint"><![CDATA[La OIT (Organización Internacional de Tiendas) ha anunciado una competición para los propietarios de tiendas de todo el mundo. Todos aquellos que consigan vender hoy la cantidad de productos solicitada recibirán una generosa recompensa.]]></item>
   <item name="av.goal.daily.207.rewardMsg"><![CDATA[¡Felicidades! Has superado el desafío y aquí tienes tu recompensa. ¡Genial!]]></item>

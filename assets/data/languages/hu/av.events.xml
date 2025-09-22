@@ -255,4 +255,17 @@
   <item name="av.skyrace2017.text"><![CDATA[Készen állsz egy észvesztő repülésre? Állj rajthoz a Repülőversenyen, és bizonyítsd be, hogy te vagy a Skyrama legjobb pilótája!]]></item>
   <item name="av.skyrace2017.mouseover"><![CDATA[Indul a Repülőverseny! Ideje felkattintanod a szuper sebesség kapcsolót!]]></item>
  </category>
+ 
+ <category name="av.spaceevent2024">
+  <item name="av.spaceevent2024.title"><![CDATA[Galaktikus hetek]]></item>
+  <item name="av.spaceevent2024.text"><![CDATA[Egy galaktikus esemény során Tariq egy csapat menő űrhajót lőtt le az égből. Most meghív hét küldetésre, hogy betekintést nyerj futurisztikus reptéri mindennapjaiba. Indulj egy kozmikus kalandokkal teli jövőbe!]]></item>
+  <item name="av.spaceevent2024.mouseover"><![CDATA[A csillagok hívnak! Indítsd be a hajtóműveket, és hódítsd meg az univerzumot elképesztő sebességgel!]]></item>
+ </category>
+ 
+ <category name="av.birthdayevent2025">
+  <item name="av.birthdayevent2025.title"><![CDATA[Saturday Nightflight]]></item>
+  <item name="av.birthdayevent2025.text"><![CDATA[14 éves a Skyrama – a szőke haj nem kötelező. A combok remegnek, a beat vibrál, és a szeretetfogantyúk ritmusra ringanak. Koccints egy pezsgő Aerosol Spritzre és más pajzán italokra ezen a magasra szárnyaló szülinapi bulin! Gurulj ki a kifutóra – és csússz egyenesen az élvezetbe!]]></item>
+  <item name="av.birthdayevent2025.mouseover"><![CDATA[Fények le, reflektor fel! A Saturday Nightflight felszáll – célállomás: szigorúan titkos bikini-zóna. Belépés csak csípőrázással!]]></item>
+ </category> 
+  
 </language>
