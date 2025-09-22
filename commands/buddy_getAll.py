@@ -1,5 +1,5 @@
 import time
-import userManager
+import src.userManager as userManager
 
 def run_buddy_checks(time, json_data):
     for buddy in json_data["buddyStuff"]["buddies"]:

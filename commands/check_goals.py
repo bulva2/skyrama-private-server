@@ -1,3 +1,4 @@
+import logging
 from commands.goals import *
 
 available_task_types = {
@@ -23,14 +24,9 @@ available_task_types = {
 
 def give_reward(json_data, init_data, user_id, type_id, type, items_to_add_to_obj):
     if type_id != -1:
-
-
-
         if type == "Bay":
             json_data["bays"].append({"bay_types_id": type_id,"last_harvest_time": 0,"set_in_storage_time": "0","id": json_data["playerData"]["next_object_id"],"position_x": -100,"position_y": -100,"direction": 0,"player_id": user_id})
             json_data["playerData"]["next_object_id"] = int(json_data["playerData"]["next_object_id"]) + 1
-
-
 
         elif type == "Plane":
             for h in init_data["planeTypes"]:
@@ -115,10 +111,18 @@ def next_quest(quest_seq, init_data, json_data, user_id, items_to_add_to_obj):
 
             # reward_goods and reward_map_extension are unused
 
-            # TODO:
-            # reward_hangar_upgrade: what is this? which hangar? To figure out
-            # I think that we gotta reward_obj_type and reward_obj_type_id,
-            # if the type isn't hangar, add slot for the small hangar. -bulva2
+            if j["reward_hangar_upgrade"] > 0:
+                if j["reward_obj_type"] == "Hangar":
+                    for h in json_data["hangarTypes"]:
+                        if int(h["id"]) == j["reward_obj_type_id"]:
+                            h["capacity"] += int(j["reward_hangar_upgrade"])
+                            items_to_add_to_obj.append("hangars")
+                            logging.debug(f"Quest reward: Upgraded hangar {h['id']} by {j['reward_hangar_upgrade']} levels, current level: {h['capacity']}")
+                            break
+                else:
+                    json_data["hangarTypes"][0]["capacity"] += int(j["reward_hangar_upgrade"])
+                    items_to_add_to_obj.append("hangars")
+                    logging.debug(f"Quest reward: Upgraded first hangar by {j['reward_hangar_upgrade']} levels, current level: {json_data['hangarTypes'][0]['capacity']}")
 
             # reward_cargo_capacity_upgrade: Where to change this?
 

@@ -5,16 +5,15 @@ import random
 from concurrent.futures import ProcessPoolExecutor
 
 
-p = Path(__file__).parents[0]
-
+ROOT_DIR = Path(__file__).parents[1]
 
 '''
 Store all save files in memory.
 '''
-
+    
 __saves = {}
 __world_map_players = {}
-__playerCount = {"count": len(os.listdir(os.path.join(p, "data", "users")))}
+__playerCount = {"count": len(os.listdir(os.path.join(ROOT_DIR, "data", "users"))) - 1}
 
 n = open(os.path.join("data", "new_player.json.def"), "r", encoding="utf-8")
 NEW_ACCOUNT_DATA = json.loads(n.read())
@@ -22,7 +21,7 @@ n.close()
 
 def store_save_by_id(user_id : int) -> bool:
     try:
-        f = open(os.path.join(p, "data", "users", str(user_id) + ".json"), "r", encoding="utf-8")
+        f = open(os.path.join(ROOT_DIR, "data", "users", str(user_id) + ".json"), "r", encoding="utf-8")
         json_data = json.loads(str(f.read()))
         __saves[str(user_id)] = json_data
         f.close() 
@@ -38,7 +37,6 @@ def load_save_by_id(user_id : int) -> dict | int:
 
 def load_save_by_name(user_name : str) -> dict | int:
     user_id = get_id_from_name(user_name)
-    print(user_id)
     if user_id == -1:
         return -1
     else:
@@ -53,7 +51,7 @@ def modify_save_by_id(user_id : int, json_data : dict) -> None:
 
 def get_id_from_name(user_name : str) -> int:
     try:
-        f = open(os.path.join(p, "data", "users", "nametoid", str(user_name)), "r", encoding="utf-8")
+        f = open(os.path.join(ROOT_DIR, "data", "users", "nametoid", str(user_name)), "r", encoding="utf-8")
         user_id = int(f.read())
         f.close()
         return user_id
@@ -101,13 +99,13 @@ def create_new_account(uid : int, username : str, password : str, token : str) -
     f.close()
 
 def read_location_id(file : str) -> tuple[str, int]:
-    with open(os.path.join(p, "data", "users", file), "r", encoding="utf-8") as f:
+    with open(os.path.join(ROOT_DIR, "data", "users", file), "r", encoding="utf-8") as f:
         json_data = json.load(f)
     return file[0:-5], json_data["playerData"]["location_id"]
     
 
 def save_players_by_location_id():
-    all_files = [x for x in os.listdir(os.path.join(p, "data", "users")) if x.endswith(".json")]
+    all_files = [x for x in os.listdir(os.path.join(ROOT_DIR, "data", "users")) if x.endswith(".json")]
     with ProcessPoolExecutor() as executor:
         for user_id, result in executor.map(read_location_id, all_files):
             if result not in __world_map_players:

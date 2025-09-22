@@ -1,5 +1,5 @@
 import time
-from utils import get_level_from_xp
+from src.utils import get_level_from_xp
 
 def handle_resourceItemsBuy(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]

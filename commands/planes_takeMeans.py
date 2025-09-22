@@ -204,6 +204,4 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                     if (request["t"] - i["start_service_time"]) < service_time or i["start_service_time"] == 0:
                         if int(request["t"]) > int(json_data["playerData"]["aycqs_start_time"]):
                             json_data["playerData"]["air_cash"] -= quick_buddy_serve_coins_cost
-                        print("Quick Service used (check if true)")
-
         j = j + 1

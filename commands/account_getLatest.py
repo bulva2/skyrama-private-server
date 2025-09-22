@@ -1,5 +1,6 @@
 import time
-import userManager
+import src.userManager as userManager
+import logging
 
 def handle_accountGetLatest(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
@@ -11,7 +12,7 @@ def handle_accountGetLatest(request, user_id, rpcResult, items_to_add_to_obj, js
 
     player_list = userManager.get_accounts_by_location_id(request["p"]["locationId"],30,user_id)
 
-    print(player_list)
+    logging.debug(f"Found {len(player_list)} players in location ID {request['p']['locationId']} for user {user_id}")
 
     for player in player_list:
         if player == 800:
