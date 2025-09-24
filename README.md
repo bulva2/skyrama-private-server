@@ -42,7 +42,7 @@ These are all the types of tasks that can be in a quest. Doing an unimplemented 
 - [x] PlaceBay
 - [x] PlaceCargoshop
 - [ ] PlaceDecoration
-- [ ] PlaceLandsideBuilding
+- [x] PlaceLandsideBuilding
 - [x] PlaceTerminal
 - [x] PlaceWarehouse
 - [x] QuickStartPlane
@@ -71,7 +71,7 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [x] lucky_luggage.spin
 - [x] buddy.getAll
 - [x] buddy.collectPassenger
-- [ ] buddy.receivePassengers
+- [ ] buddy.receivePassengers - Not sure if this is actually used?
 - [x] buddy.endRelationship
 - [x] buddy.accept
 - [x] buddy.decline
@@ -156,15 +156,15 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - warehouses.get
 - landside_buildings.get
 - souvenirs.buy
-
-### Not sure what those are
-- catchits.get
-- catchits.catchPrize
-- planes.rebateMiss
-- offers.buyOffer
 - expeditions.start
 - expeditions.land
 - expeditions.getanother
 - expeditions.end
 - expeditions.fillfuel
 - expeditions.addfuel
+
+### Not sure what those are
+- catchits.get
+- catchits.catchPrize
+- planes.rebateMiss
+- offers.buyOffer

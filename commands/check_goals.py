@@ -12,6 +12,7 @@ available_task_types = {
     "GetPassengers": handle_GetPassengers,
     "BuyBay": handle_BuyBay,
     "BuyLandsideBuilding": handle_BuyLandsideBuilding,
+    "PlaceLandsideBuilding": handle_PlaceLandsideBuilding,
     "CollectSouvenir": handle_CollectSouvenir,
     "GetAirCoins": handle_GetAirCoins,
     "PlaceWarehouse": handle_PlaceWarehouse,
