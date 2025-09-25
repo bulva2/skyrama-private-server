@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <language>
  <category name="av.event_pumpkin">
   <item name="av.event_pumpkin.title"><![CDATA[Pumpkin weeks]]></item>
@@ -256,5 +256,18 @@
   <item name="av.skyrace2017.title"><![CDATA[Skyrace Weeks]]></item>
   <item name="av.skyrace2017.text"><![CDATA[Are you ready to fly sky-high? Compete in the Skyrace and prove to everyone that you are the best pilot in Skyrama!]]></item>
   <item name="av.skyrace2017.mouseover"><![CDATA[The Skyrace is here! It’s time to turn on your high-speed switch!]]></item>
- </category> 
+ </category>
+ 
+ <category name="av.spaceevent2024">
+  <item name="av.spaceevent2024.title"><![CDATA[Galactic Weeks]]></item>
+  <item name="av.spaceevent2024.text"><![CDATA[In a galactic event, Tariq shot down an armada of cool Spaceships from the sky for you. Now, he invites you to take part in seven event quests set in his futuristic airport life. Step into a cosmic-comic future full of adventures!]]></item>
+  <item name="av.spaceevent2024.mouseover"><![CDATA[The stars are calling! Fire up your engines and conquer the universe at ridiculous speeds!]]></item>
+ </category>
+ 
+ <category name="av.birthdayevent2025">
+  <item name="av.birthdayevent2025.title"><![CDATA[Saturday Nightflight]]></item>
+  <item name="av.birthdayevent2025.text"><![CDATA[14 years of Skyrama – blonde hair optional. Thighs trembling, the beat vibrating, and love handles grooving in sync. Treat yourself to a sparkling Aerosol Spritz and other delightfully cheeky nightcaps at our high-flying birthday bash. Hit the runway and glide straight into pleasure!]]></item>
+  <item name="av.birthdayevent2025.mouseover"><![CDATA[Lights off, spotlight on! Saturday Nightflight is cleared for takeoff – destination: top-secret bikini zone. Entry by hip action only!]]></item>
+ </category>
+   
 </language>

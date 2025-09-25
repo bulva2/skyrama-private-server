@@ -65,94 +65,127 @@
   <item name="av.goal.daily.28.hint"><![CDATA[In der heutigen Tagesaufgabe musst Du Passagiere sammeln wie ein Weltmeister. Nimm die Herausforderung an! Dir winkt ein toller Preis!]]></item>
   <item name="av.goal.daily.28.rewardMsg"><![CDATA[Du hast die Aufgabe mit Bravour gemeistert. Das war wirklich Spitzenklasse. Die Belohnung hast Du Dir verdient.]]></item>
   <item name="av.task.daily.28.GetPassengers.name"><![CDATA[Sammle {number} Passagier/e]]></item>
-  <item name="av.goal.daily.30.name"><![CDATA[Abgeschmiert]]></item>
-  <item name="av.goal.daily.30.hint"><![CDATA[Hey, Alter! Irgendwas stimmt bei meinem Flieger nicht. Die Triebwerke kommen einfach nicht mehr in Schwung wie früher. Manchmal dauert es Stunden, bis die alte Turbine zum Take-Off röchelt … und danach geht’s steil bergab. Kumpel, wir müssen meine Pilotenkarriere retten. Von mir aus auch mit Selbstversuchen! ]]></item>
-  <item name="av.goal.daily.30.rewardMsg"><![CDATA[Siehste? Übung macht den Meister! Jetzt nennen sie mich wieder den schnellsten Flieger von hier bis zur Dorfkaserne. Funktioniert eben alles, wenn man nur an sich arbeitet. ]]></item>
+  
+  <!-- new daily goals for events -->
+  
+  <item name="av.goal.daily.30.name"><![CDATA[Unglaubliche Begegnung der 69ten Art]]></item>
+  <item name="av.goal.daily.30.hint"><![CDATA[Hey, Alter. Lange nicht gesehen! Samma... haste auch 'nen Filmriss? Gestern Abend in der Disse hab ich ein Babe wie vom anderen Stern angelasert. Grüne Alabasterhaut und Fühler auf der Stirn inklusive. Und dann... Oh mein Gott! Ein roter Lichtblitz... Fliegende Untertassen... und... HILFE! DIE SONDE!!! Ähem. Wir reden nach der Arbeit weiter, okay? Ich muss das erst verdauen...]]></item>
+  <item name="av.goal.daily.30.rewardMsg"><![CDATA[Ich glaub's ja nicht, Alter! Ich wurde von Außerirdischen entführt! Fiona steckt mir gerade, dass ich mehrere Jahre verschollen war. Lin hat wohl, neben der Saftschubserei, auch meinen Job übernommen, um mir die Hinterräder zu retten. Ich spendier ihr 'nen großen Blumenstrauß, sobald ich das erste Date mit unserer neuen Flughafentherapeutin gewuppt habe. Solange es nur keine Sternblumen sind...]]></item>
   <item name="av.task.daily.30.SendPlane.name"><![CDATA[Starte {number} Flugzeug/e]]></item>
-  <item name="av.goal.daily.31.name"><![CDATA[Jung-Erfinder]]></item>
-  <item name="av.goal.daily.31.hint"><![CDATA[Hey, Dingsda! Die kleinen ABC-Schützen von der Grundschule präsentieren diese Woche ihre besten Tüftel-Eier auf dem Flughafen, oder so. Aber keine Hühner. Kurtis Enkel zeigt auf der Rollbahn einen Vulkan aus Klopapier. Räum alles frei, dann habe ich noch Zeit, seine kleine Bastelei etwas zu … verstärken … hihi. ]]></item>
-  <item name="av.goal.daily.31.rewardMsg"><![CDATA[Hurra! Das hat geklappt wie am Schnürchen! Der Vulkan ist in die Luft gegangen wie ein Kegelclub am Herrenabend! Schau nur, wie schön die Landebahn brennt. All die lodernden Flugz… oje. Ich glaube, ich muss zurück an die Arbeit. Tschüß! ]]></item>
+  
+  <item name="av.goal.daily.31.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.31.hint"><![CDATA[Hey, Dingsda! Dieser Typ ist zurück. Na, du weißt schon. Tariq, der Pirat. Neee, Moment. Pilot. Vor ein paar Jahren ist er nach einem Zechgelage mit meinem Kurti spurlos verschwunden. Jetzt behauptet er, dass Besucher aus dem All ihn verführt... ach nein... entführt hätten. Oder so. Auf jeden Fall ist unser Flughafen jetzt eine Pilgerstätte für Aluhut-Träger geworden. Kümmer dich drum!]]></item>
+  <item name="av.goal.daily.31.rewardMsg"><![CDATA[Na, das war ja einfacher als erwartet. Ich hatte ... aus Versehen ... die Veranstaltungsorte der Science Fiction Convention in den Laderaum eines Fliegers verlegt. Jetzt sind sie alle auf dem Weg nach... irgendwo. Oder nirgendwo. Na ja. Hauptsache nicht hier.]]></item>
   <item name="av.task.daily.31.ReturnPlane.name"><![CDATA[Schicke {number} Flugzeug/e zurück]]></item>
-  <item name="av.goal.daily.32.name"><![CDATA[Gala-Dinner der Eierköpfe]]></item>
-  <item name="av.goal.daily.32.hint"><![CDATA[Tach! Haste schon gehört? Morgen schlagen die feinen Pinkel vom Superhirnie-Club sich in unserem Messe-Hotel die Bäuche voll. Aber einer meiner Jungs … nicht icke, weißte … hat dit ganze Budget über Nacht verze… verprasst. Jetzt ham‘ wir nich‘ mal genug Zaster für Grünkohl auf der hohen Kante. Hilf mir, wa? Mit Senf! ]]></item>
-  <item name="av.goal.daily.32.rewardMsg"><![CDATA[Sauber! Die Schlaumeier waren hin und weg von Fionas Kartoffelsalat. Sind mit Tränen in den Augen aus’m Raum geflitzt. Warum geistige Nahrung, wenn die olle Hausmannskost es auch tut, wa? ]]></item>
+  
+  <item name="av.goal.daily.32.name"><![CDATA[Sterntaler]]></item>
+  <item name="av.goal.daily.32.hint"><![CDATA[Tach! Kannste dich noch erinnern, wie Fiona mich damals ausm Häuschen gebracht hat? Det waren noch Zeiten, wa? Komm, wir drehen die Uhr zurück und wickeln se' um den Finger wie Anno Tobak. Sobald wir genug Schotter auf der Halde haben, kof ich 'nen Stern für sie!]]></item>
+  <item name="av.goal.daily.32.rewardMsg"><![CDATA[Da hat die Kleene aber Augen gemacht, als ich ihr den Stern vors Näschen geklatscht habe, wa? Für meine Liebste ist mir eben kein Weg zu weit... nicht mal zum Kiosk.]]></item>
   <item name="av.task.daily.32.GetAirCoins.name"><![CDATA[Sammle {number} Aircoin/s]]></item>
-  <item name="av.goal.daily.33.name"><![CDATA[Budenzauder]]></item>
-  <item name="av.goal.daily.33.hint"><![CDATA[Hey, Dingenskirchen! Unsere neue Wartehalle ist eine Wucht. Ergonomische Sessel, vollautomatische Cappucino-Mixer, Wohlfül-Fußmassage und Wirr…warrpool oder so. Das müssen wir unbedingt diesen lustigen Leutchen zeigen. Na, du weißt schon. Passagiere. Genau! ]]></item>
-  <item name="av.goal.daily.33.rewardMsg"><![CDATA[Einfach toll. Die Passadingsbums waren total begeistert vom Luxuskram im Verwaltungsbereich. Schade, dass es für den Warteraum nicht mehr gereicht hat, aber nächste Woche reparieren wir vielleicht die Heizung und kaufen eine neue Glühbirne. Ich hol mir jetzt meine Fandango-Packung. ]]></item>
+  
+  <item name="av.goal.daily.33.name"><![CDATA[Ramageddon]]></item>
+  <item name="av.goal.daily.33.hint"><![CDATA[Hey, Dingsda! Ich schieb die totale ... na, wie sagt man noch? Panik, genau! Das Radar zeigt einen riesigen Meteoriten auf Kollisionskurs mit dem Flughafen an! Falls uns das Ding auf die Nase kracht, wird es unser Gelände wie eine Ladung Steckbausteine zerschmettern. Alarmstufe Rot! ALARMSTUFE ROT! Evakuier so viele Leute du noch kannst!]]></item>
+  <item name="av.goal.daily.33.rewardMsg"><![CDATA[Hui! Wie peinlich aber auch ... Der Meteorit auf dem Radar war tatsächlich nur ein... äähh... wie sagt man noch? Leberwurstfleck. Genau. Ab jetzt esse ich am Arbeisplatz nur noch Rübensuppe, so viel versprech ich dir.]]></item>
   <item name="av.task.daily.33.GetPassengers.name"><![CDATA[Sammle {number} Passagier/e]]></item>
-  <item name="av.goal.daily.34.name"><![CDATA[Nürnberger Trichter]]></item>
-  <item name="av.goal.daily.34.hint"><![CDATA[Hey, Alter! Hab gerade eine Mordsschnecke aufgegabelt! Das totale Superhirn. Die Kleine ist so gut in der Schule, dass sie jetzt schon zum dritten Mal ihr Abi macht. Wahnsinn, oder? Bei mir hat’s nicht mal zum ersten Versuch gereicht. Komm, wir besuchen sie in Europa und helfen ihr beim Pauken. ]]></item>
-  <item name="av.goal.daily.34.rewardMsg"><![CDATA[Wahnsinn!  Sie hat’s geschafft! Jedes Mal, wenn ich sie besucht habe, hat sie sich auf ihre Bücher gestürzt und mich total ignoriert. Ihre Eltern waren baff. Sonst hat sie nie freiwillig gelernt! Es stimmt eben doch: Wer Tariq trifft, lernt es schnell besser. Das hat ihr neuer Freund gestern auch gesagt … *schnief* ]]></item>
+  
+  <item name="av.goal.daily.34.name"><![CDATA[Blöd-Man!]]></item>
+  <item name="av.goal.daily.34.hint"><![CDATA[Hey, Alter! Die scharfen Schnitten in der Euro-Zone stehen total auf Superhelden, sagt der Kurt. Und weißte was? Ich wollte mir schon immer so'ne hautenge Spandex-Nummer über meinen wohlgeformten Pilotenleib stülpen. Komm, wir fliegen nach Europa und zeigen den Babes was ein echter Held ist. Vorhang auf für den "Propellator"...]]></item>
+  <item name="av.goal.daily.34.rewardMsg"><![CDATA[Also, das ist doch... Am Anfang dachte ich, die Mädels  pfeifen mir zu... Aber dann stolpert man ein paar Mal übers Cape und plötzlich pfeifen sie eines AUS! Den "Proletator" nennen sie mich jetzt. Na gut, wen kümmert's? Zumindest muss ich dann keinen Bauch-Weg-Gürtel mehr unters Weltenretter-Outfit quetschen.]]></item>
   <item name="av.task.daily.34.SendPlane.eu.name"><![CDATA[Starte {number} Flugzeug/e nach Europa]]></item>
-  <item name="av.goal.daily.35.name"><![CDATA[Schmierlappen]]></item>
-  <item name="av.goal.daily.35.hint"><![CDATA[Hey, Alter! Haste schon gehört? Philadelphia ist eine Reise wert. Die heimischen Cremetörtchen sind zuckersüß. Einfach zum Anschlabbern … hihihi. Eine Ex-Kollegin hat sich da gerade an der Naturwissenschaftlichen Fakultät eingeschrieben. Die Kleine hat damals nach dem ersten Flug mit mir spontan gekündigt. Komm, wir zeigen ihr, was ein echter Naturbursche ist! ]]></item>
-  <item name="av.goal.daily.35.rewardMsg"><![CDATA[Alter, ich hab’s immer noch drauf. Von wegen „ich trau mich nie wieder in ein Flugzeug“. Mein Anblick hat sie total kuriert. Sie hat sofort das Studium geschmissen und sich mit dem nächsten Last-Minute-Flieger nach Timbuktu abgesetzt. Bin eben Gottes Geschenk an die Wissenschaft! Holla!]]></item>
+  
+  <item name="av.goal.daily.35.name"><![CDATA[2024: Eine Tariq-Odyssee]]></item>
+  <item name="av.goal.daily.35.hint"><![CDATA[Hey, Kumpel! Die Babes bei der Nasa sind der perfekte Rakentreibstoff für 'nen Weltraumforscher von meinem Kaliber. Hochgesteckte blonde Mähnen, modische Brillen und immer ein verheißungsvolles Klemmbrett in der Hand. Was will man mehr? Komm, wir düsen in die USA und zeigen den Torten, wie unwiderstehlich Onkel Tariq bei Schwerelosigkeit ist. Hihihihihi...]]></item>
+  <item name="av.goal.daily.35.rewardMsg"><![CDATA[Alter Falter! Mich hat's im Shuttle nur noch geschüttelt! Flugbegleiterinnen hatten sie auch keine. Was ist das denn für ein Laden? So viel also zum Thema Cape Karneval...]]></item>
   <item name="av.task.daily.35.SendPlane.na.name"><![CDATA[Starte {number} Flugzeug/e nach Nordamerika]]></item>
-  <item name="av.goal.daily.36.name"><![CDATA[Ausgeholzt]]></item>
-  <item name="av.goal.daily.36.hint"><![CDATA[Alter, ich krieg die Hummeln! Meine neue Ische fliegt morgen in den Regenwald, um auf Tuchfühlung zu gehen. Mit Flora und Fauna, sagt sie. Aber rate mal, wer heimlich unterm Tuch lauert? Hihihi. Dann sind wir ganz allein. Nur ich, mein Schatz und ihre heißen Freundinnen! ]]></item>
-  <item name="av.goal.daily.36.rewardMsg"><![CDATA[Sich regen? Von wegen! Die Einzigen, die auf Tuchfühlung gegangen sind, waren die verfluchten Moskitos. Konnten gar nicht genug von mir kriegen. Jetzt seh ich aus wie ein Schweizer Käse mit Paprika … und fühl mich wie der letzte Tilsiter in Omas Kühlschrank.  So ein … Quark. ]]></item>
+  
+  <item name="av.goal.daily.36.name"><![CDATA[Ich liebte ein Mädchen auf'm Mars]]></item>
+  <item name="av.goal.daily.36.hint"><![CDATA[Ich hab die Faxen dicke! Erdenmädchen sind so anspruchsvoll. "Bring dem Müll raus!", "Klapp den Klodeckel HOCH!", "Klapp die Klobrille RUNTER!" "Betrüg mich nicht!". Schluss mit dem Theater! In Südamerika gibt's jede Menge Ufo-Sichtungen. Komm, wir jetten sofort rüber. Vielleicht finden wir da ja die heiße Tentakelbraut die mich damals in ihr Ufo eingeladen hat.]]></item>
+  <item name="av.goal.daily.36.rewardMsg"><![CDATA[Oh Gott ... was ist passiert? Ich war in einer brasilianischen Kneipe und hab diese schnuffige Chiquita weichgekocht. Dann ... schon wieder ein Filmriss. 6 Tage später bin ich mit Vollbart, Fahne und ohne Kleingeld im Rinnstein aufgewacht. Das waren AUSSERIDISCHE! ICH WURDE SCHON WIEDER ENTFÜHRT! Eine andere Erklärung gibt es nicht ...<br><br>Haste 'ne Kopfschmerztablette?]]></item>
   <item name="av.task.daily.36.SendPlane.sa.name"><![CDATA[Starte {number} Flugzeug/e nach Südamerika]]></item>
-  <item name="av.goal.daily.100.name"><![CDATA[Abgeschmiert]]></item>
-  <item name="av.goal.daily.100.hint"><![CDATA[Hey, Alter! Irgendwas stimmt bei meinem Flieger nicht. Die Triebwerke kommen einfach nicht mehr in Schwung wie früher. Manchmal dauert es Stunden, bis die alte Turbine zum Take-Off röchelt … und danach geht’s steil bergab. Kumpel, wir müssen meine Pilotenkarriere retten. Von mir aus auch mit Selbstversuchen! ]]></item>
-  <item name="av.goal.daily.100.rewardMsg"><![CDATA[Siehste? Übung macht den Meister! Jetzt nennen sie mich wieder den schnellsten Flieger von hier bis zur Dorfkaserne. Funktioniert eben alles, wenn man nur an sich arbeitet. ]]></item>
+  
+<!-- new daily goals for events copy from 30 - 60 / 100 - 106 -->  
+  
+  <item name="av.goal.daily.100.name"><![CDATA[Unglaubliche Begegnung der 69ten Art]]></item>
+  <item name="av.goal.daily.100.hint"><![CDATA[Hey, Alter. Lange nicht gesehen! Samma... haste auch 'nen Filmriss? Gestern Abend in der Disse hab ich ein Babe wie vom anderen Stern angelasert. Grüne Alabasterhaut und Fühler auf der Stirn inklusive. Und dann... Oh mein Gott! Ein roter Lichtblitz... Fliegende Untertassen... und... HILFE! DIE SONDE!!! Ähem. Wir reden nach der Arbeit weiter, okay? Ich muss das erst verdauen...]]></item>
+  <item name="av.goal.daily.100.rewardMsg"><![CDATA[Ich glaub's ja nicht, Alter! Ich wurde von Außerirdischen entführt! Fiona steckt mir gerade, dass ich mehrere Jahre verschollen war. Lin hat wohl, neben der Saftschubserei, auch meinen Job übernommen, um mir die Hinterräder zu retten. Ich spendier ihr 'nen großen Blumenstrauß, sobald ich das erste Date mit unserer neuen Flughafentherapeutin gewuppt habe. Solange es nur keine Sternblumen sind...]]></item>
   <item name="av.task.daily.100.SendPlane.name"><![CDATA[Starte {number} Flugzeug/e]]></item>
-  <item name="av.goal.daily.101.name"><![CDATA[Jung-Erfinder]]></item>
-  <item name="av.goal.daily.101.hint"><![CDATA[Hey, Dingenskirchen! Unsere neue Wartehalle ist eine Wucht. Ergonomische Sessel, vollautomatische Cappucino-Mixer, Wohlfül-Fußmassage und Wirr…warrpool oder so. Das müssen wir unbedingt diesen lustigen Leutchen zeigen. Na, du weißt schon. Passagiere. Genau! ]]></item>
-  <item name="av.goal.daily.101.rewardMsg"><![CDATA[Hurra! Das hat geklappt wie am Schnürchen! Der Vulkan ist in die Luft gegangen wie ein Kegelclub am Herrenabend! Schau nur, wie schön die Landebahn brennt. All die lodernden Flugz… oje. Ich glaube, ich muss zurück an die Arbeit. Tschüß! ]]></item>
+  
+  <item name="av.goal.daily.101.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.101.hint"><![CDATA[Hey, Dingsda! Dieser Typ ist zurück. Na, du weißt schon. Tariq, der Pirat. Neee, Moment. Pilot. Vor ein paar Jahren ist er nach einem Zechgelage mit meinem Kurti spurlos verschwunden. Jetzt behauptet er, dass Besucher aus dem All ihn verführt... ach nein... entführt hätten. Oder so. Auf jeden Fall ist unser Flughafen jetzt eine Pilgerstätte für Aluhut-Träger geworden. Kümmer dich drum!]]></item>
+  <item name="av.goal.daily.101.rewardMsg"><![CDATA[Na, das war ja einfacher als erwartet. Ich hatte ... aus Versehen ... die Veranstaltungsorte der Science Fiction Convention in den Laderaum eines Fliegers verlegt. Jetzt sind sie alle auf dem Weg nach... irgendwo. Oder nirgendwo. Na ja. Hauptsache nicht hier.]]></item>
   <item name="av.task.daily.101.ReturnPlane.name"><![CDATA[Schicke {number} Flugzeug/e zurück]]></item>
-  <item name="av.goal.daily.102.name"><![CDATA[Gala-Dinner der Eierköpfe]]></item>
-  <item name="av.goal.daily.102.hint"><![CDATA[Tach! Haste schon gehört? Morgen schlagen die feinen Pinkel vom Superhirnie-Club sich in unserem Messe-Hotel die Bäuche voll. Aber einer meiner Jungs … nicht icke, weißte … hat dit ganze Budget über Nacht verze… verprasst. Jetzt ham‘ wir nich‘ mal genug Zaster für Grünkohl auf der hohen Kante. Hilf mir, wa? Mit Senf! ]]></item>
-  <item name="av.goal.daily.102.rewardMsg"><![CDATA[Sauber! Die Schlaumeier waren hin und weg von Fionas Kartoffelsalat. Sind mit Tränen in den Augen aus’m Raum geflitzt. Warum geistige Nahrung, wenn die olle Hausmannskost es auch tut, wa? ]]></item>
+  
+  <item name="av.goal.daily.102.name"><![CDATA[Sterntaler]]></item>
+  <item name="av.goal.daily.102.hint"><![CDATA[Tach! Kannste dich noch erinnern, wie Fiona mich damals ausm Häuschen gebracht hat? Det waren noch Zeiten, wa? Komm, wir drehen die Uhr zurück und wickeln se' um den Finger wie Anno Tobak. Sobald wir genug Schotter auf der Halde haben, kof ich 'nen Stern für sie!]]></item>
+  <item name="av.goal.daily.102.rewardMsg"><![CDATA[Da hat die Kleene aber Augen gemacht, als ich ihr den Stern vors Näschen geklatscht habe, wa? Für meine Liebste ist mir eben kein Weg zu weit... nicht mal zum Kiosk.]]></item>
   <item name="av.task.daily.102.GetAirCoins.name"><![CDATA[Sammle {number} Aircoin/s]]></item>
-  <item name="av.goal.daily.103.name"><![CDATA[Budenzauder]]></item>
-  <item name="av.goal.daily.103.hint"><![CDATA[Hey, Dingenskirchen! Unsere neue Wartehalle ist eine Wucht. Ergonomische Sessel, vollautomatische Cappucino-Mixer, Wohlfül-Fußmassage und Wirr…warrpool oder so. Das müssen wir unbedingt diesen lustigen Leutchen zeigen. Na, du weißt schon. Passagiere. Genau! ]]></item>
-  <item name="av.goal.daily.103.rewardMsg"><![CDATA[Einfach toll. Die Passadingsbums waren total begeistert vom Luxuskram im Verwaltungsbereich. Schade, dass es für den Warteraum nicht mehr gereicht hat, aber nächste Woche reparieren wir vielleicht die Heizung und kaufen eine neue Glühbirne. Ich hol mir jetzt meine Fandango-Packung. ]]></item>
+  
+  <item name="av.goal.daily.103.name"><![CDATA[Ramageddon]]></item>
+  <item name="av.goal.daily.103.hint"><![CDATA[Hey, Dingsda! Ich schieb die totale ... na, wie sagt man noch? Panik, genau! Das Radar zeigt einen riesigen Meteoriten auf Kollisionskurs mit dem Flughafen an! Falls uns das Ding auf die Nase kracht, wird es unser Gelände wie eine Ladung Steckbausteine zerschmettern. Alarmstufe Rot! ALARMSTUFE ROT! Evakuier so viele Leute du noch kannst!]]></item>
+  <item name="av.goal.daily.103.rewardMsg"><![CDATA[Hui! Wie peinlich aber auch ... Der Meteorit auf dem Radar war tatsächlich nur ein... äähh... wie sagt man noch? Leberwurstfleck. Genau. Ab jetzt esse ich am Arbeisplatz nur noch Rübensuppe, so viel versprech ich dir.]]></item>
   <item name="av.task.daily.103.GetPassengers.name"><![CDATA[Sammle {number} Passagier/e]]></item>
-  <item name="av.goal.daily.104.name"><![CDATA[Nürnberger Trichter]]></item>
-  <item name="av.goal.daily.104.hint"><![CDATA[Hey, Alter! Hab gerade eine Mordsschnecke aufgegabelt! Das totale Superhirn. Die Kleine ist so gut in der Schule, dass sie jetzt schon zum dritten Mal ihr Abi macht. Wahnsinn, oder? Bei mir hat’s nicht mal zum ersten Versuch gereicht. Komm, wir besuchen sie in Europa und helfen ihr beim Pauken. ]]></item>
-  <item name="av.goal.daily.104.rewardMsg"><![CDATA[Wahnsinn!  Sie hat’s geschafft! Jedes Mal, wenn ich sie besucht habe, hat sie sich auf ihre Bücher gestürzt und mich total ignoriert. Ihre Eltern waren baff. Sonst hat sie nie freiwillig gelernt! Es stimmt eben doch: Wer Tariq trifft, lernt es schnell besser. Das hat ihr neuer Freund gestern auch gesagt … *schnief* ]]></item>
+  
+  <item name="av.goal.daily.104.name"><![CDATA[Blöd-Man!]]></item>
+  <item name="av.goal.daily.104.hint"><![CDATA[Hey, Alter! Die scharfen Schnitten in der Euro-Zone stehen total auf Superhelden, sagt der Kurt. Und weißte was? Ich wollte mir schon immer so'ne hautenge Spandex-Nummer über meinen wohlgeformten Pilotenleib stülpen. Komm, wir fliegen nach Europa und zeigen den Babes was ein echter Held ist. Vorhang auf für den "Propellator"...]]></item>
+  <item name="av.goal.daily.104.rewardMsg"><![CDATA[Also, das ist doch... Am Anfang dachte ich, die Mädels  pfeifen mir zu... Aber dann stolpert man ein paar Mal übers Cape und plötzlich pfeifen sie eines AUS! Den "Proletator" nennen sie mich jetzt. Na gut, wen kümmert's? Zumindest muss ich dann keinen Bauch-Weg-Gürtel mehr unters Weltenretter-Outfit quetschen.]]></item>
   <item name="av.task.daily.104.SendPlane.eu.name"><![CDATA[Starte {number} Flugzeug/e nach Europa]]></item>
-  <item name="av.goal.daily.105.name"><![CDATA[Schmierlappen]]></item>
-  <item name="av.goal.daily.105.hint"><![CDATA[Hey, Alter! Haste schon gehört? Philadelphia ist eine Reise wert. Die heimischen Cremetörtchen sind zuckersüß. Einfach zum Anschlabbern … hihihi. Eine Ex-Kollegin hat sich da gerade an der Naturwissenschaftlichen Fakultät eingeschrieben. Die Kleine hat damals nach dem ersten Flug mit mir spontan gekündigt. Komm, wir zeigen ihr, was ein echter Naturbursche ist! ]]></item>
-  <item name="av.goal.daily.105.rewardMsg"><![CDATA[Alter, ich hab’s immer noch drauf. Von wegen „ich trau mich nie wieder in ein Flugzeug“. Mein Anblick hat sie total kuriert. Sie hat sofort das Studium geschmissen und sich mit dem nächsten Last-Minute-Flieger nach Timbuktu abgesetzt. Bin eben Gottes Geschenk an die Wissenschaft! ]]></item>
+  
+  <item name="av.goal.daily.105.name"><![CDATA[2024: Eine Tariq-Odyssee]]></item>
+  <item name="av.goal.daily.105.hint"><![CDATA[Hey, Kumpel! Die Babes bei der Nasa sind der perfekte Rakentreibstoff für 'nen Weltraumforscher von meinem Kaliber. Hochgesteckte blonde Mähnen, modische Brillen und immer ein verheißungsvolles Klemmbrett in der Hand. Was will man mehr? Komm, wir düsen in die USA und zeigen den Torten, wie unwiderstehlich Onkel Tariq bei Schwerelosigkeit ist. Hihihihihi...]]></item>
+  <item name="av.goal.daily.105.rewardMsg"><![CDATA[Alter Falter! Mich hat's im Shuttle nur noch geschüttelt! Flugbegleiterinnen hatten sie auch keine. Was ist das denn für ein Laden? So viel also zum Thema Cape Karneval...]]></item>
   <item name="av.task.daily.105.SendPlane.na.name"><![CDATA[Starte {number} Flugzeug/e nach Nordamerika]]></item>
-  <item name="av.goal.daily.106.name"><![CDATA[Ausgeholzt]]></item>
-  <item name="av.goal.daily.106.hint"><![CDATA[Alter, ich krieg die Hummeln! Meine neue Ische fliegt morgen in den Regenwald, um auf Tuchfühlung zu gehen. Mit Flora und Fauna, sagt sie. Aber rate mal, wer heimlich unterm Tuch lauert? Hihihi. Dann sind wir ganz allein. Nur ich, mein Schatz und ihre heißen Freundinnen! ]]></item>
-  <item name="av.goal.daily.106.rewardMsg"><![CDATA[Sich regen? Von wegen! Die Einzigen, die auf Tuchfühlung gegangen sind, waren die verfluchten Moskitos. Konnten gar nicht genug von mir kriegen. Jetzt seh ich aus wie ein Schweizer Käse mit Paprika … und fühl mich wie der letzte Tilsiter in Omas Kühlschrank.  So ein … Quark. ]]></item>
+  
+  <item name="av.goal.daily.106.name"><![CDATA[Ich liebte ein Mädchen auf'm Mars]]></item>
+  <item name="av.goal.daily.106.hint"><![CDATA[Ich hab die Faxen dicke! Erdenmädchen sind so anspruchsvoll. "Bring dem Müll raus!", "Klapp den Klodeckel HOCH!", "Klapp die Klobrille RUNTER!" "Betrüg mich nicht!". Schluss mit dem Theater! In Südamerika gibt's jede Menge Ufo-Sichtungen. Komm, wir jetten sofort rüber. Vielleicht finden wir da ja die heiße Tentakelbraut die mich damals in ihr Ufo eingeladen hat.]]></item>
+  <item name="av.goal.daily.106.rewardMsg"><![CDATA[Oh Gott ... was ist passiert? Ich war in einer brasilianischen Kneipe und hab diese schnuffige Chiquita weichgekocht. Dann ... schon wieder ein Filmriss. 6 Tage später bin ich mit Vollbart, Fahne und ohne Kleingeld im Rinnstein aufgewacht. Das waren AUSSERIDISCHE! ICH WURDE SCHON WIEDER ENTFÜHRT! Eine andere Erklärung gibt es nicht ...<br><br>Haste 'ne Kopfschmerztablette?]]></item>
   <item name="av.task.daily.106.SendPlane.sa.name"><![CDATA[Starte {number} Flugzeug/e nach Südamerika]]></item>
+  
+  <!-- seperate quest ? --> 
+  
   <item name="av.goal.daily.107.name"><![CDATA[Wettlauf der Ladenbesitzer]]></item>
   <item name="av.goal.daily.107.hint"><![CDATA[Der Internationale Verband der Ladenbesitzer veranstaltet einen Wettbewerb für Kaufleute auf der ganzen Welt. Wer heute die geforderte Zahl an Waren verkauft, kann richtig abräumen.]]></item>
   <item name="av.goal.daily.107.rewardMsg"><![CDATA[Herzlichen Glückwunsch! Du hast gewonnen und hier ist Deine Belohnung! Wahnsinn!]]></item>
   <item name="av.task.daily.107.SellProducts.name"><![CDATA[Verkaufe {number} Ware/n]]></item>
-  <item name="av.goal.daily.200.name"><![CDATA[Abgeschmiert]]></item>
-  <item name="av.goal.daily.200.hint"><![CDATA[Hey, Alter! Irgendwas stimmt bei meinem Flieger nicht. Die Triebwerke kommen einfach nicht mehr in Schwung wie früher. Manchmal dauert es Stunden, bis die alte Turbine zum Take-Off röchelt … und danach geht’s steil bergab. Kumpel, wir müssen meine Pilotenkarriere retten. Von mir aus auch mit Selbstversuchen! ]]></item>
-  <item name="av.goal.daily.200.rewardMsg"><![CDATA[Siehste? Übung macht den Meister! Jetzt nennen sie mich wieder den schnellsten Flieger von hier bis zur Dorfkaserne. Funktioniert eben alles, wenn man nur an sich arbeitet. ]]></item>
+  
+  <!-- new daily goals for events copy from 30 - 60 / 200 - 206 -->
+  
+  <item name="av.goal.daily.200.name"><![CDATA[Unglaubliche Begegnung der 69ten Art]]></item>
+  <item name="av.goal.daily.200.hint"><![CDATA[Hey, Alter. Lange nicht gesehen! Samma... haste auch 'nen Filmriss? Gestern Abend in der Disse hab ich ein Babe wie vom anderen Stern angelasert. Grüne Alabasterhaut und Fühler auf der Stirn inklusive. Und dann... Oh mein Gott! Ein roter Lichtblitz... Fliegende Untertassen... und... HILFE! DIE SONDE!!! Ähem. Wir reden nach der Arbeit weiter, okay? Ich muss das erst verdauen...]]></item>
+  <item name="av.goal.daily.200.rewardMsg"><![CDATA[Ich glaub's ja nicht, Alter! Ich wurde von Außerirdischen entführt! Fiona steckt mir gerade, dass ich mehrere Jahre verschollen war. Lin hat wohl, neben der Saftschubserei, auch meinen Job übernommen, um mir die Hinterräder zu retten. Ich spendier ihr 'nen großen Blumenstrauß, sobald ich das erste Date mit unserer neuen Flughafentherapeutin gewuppt habe. Solange es nur keine Sternblumen sind...]]></item>
   <item name="av.task.daily.200.SendPlane.name"><![CDATA[Starte {number} Flugzeug/e]]></item>
-  <item name="av.goal.daily.201.name"><![CDATA[Jung-Erfinder]]></item>
-  <item name="av.goal.daily.201.hint"><![CDATA[Hey, Dingenskirchen! Unsere neue Wartehalle ist eine Wucht. Ergonomische Sessel, vollautomatische Cappucino-Mixer, Wohlfül-Fußmassage und Wirr…warrpool oder so. Das müssen wir unbedingt diesen lustigen Leutchen zeigen. Na, du weißt schon. Passagiere. Genau! ]]></item>
-  <item name="av.goal.daily.201.rewardMsg"><![CDATA[Hurra! Das hat geklappt wie am Schnürchen! Der Vulkan ist in die Luft gegangen wie ein Kegelclub am Herrenabend! Schau nur, wie schön die Landebahn brennt. All die lodernden Flugz… oje. Ich glaube, ich muss zurück an die Arbeit. Tschüß! ]]></item>
+  
+  <item name="av.goal.daily.201.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.201.hint"><![CDATA[Hey, Dingsda! Dieser Typ ist zurück. Na, du weißt schon. Tariq, der Pirat. Neee, Moment. Pilot. Vor ein paar Jahren ist er nach einem Zechgelage mit meinem Kurti spurlos verschwunden. Jetzt behauptet er, dass Besucher aus dem All ihn verführt... ach nein... entführt hätten. Oder so. Auf jeden Fall ist unser Flughafen jetzt eine Pilgerstätte für Aluhut-Träger geworden. Kümmer dich drum!]]></item>
+  <item name="av.goal.daily.201.rewardMsg"><![CDATA[Na, das war ja einfacher als erwartet. Ich hatte ... aus Versehen ... die Veranstaltungsorte der Science Fiction Convention in den Laderaum eines Fliegers verlegt. Jetzt sind sie alle auf dem Weg nach... irgendwo. Oder nirgendwo. Na ja. Hauptsache nicht hier.]]></item>
   <item name="av.task.daily.201.ReturnPlane.name"><![CDATA[Schicke {number} Flugzeug/e zurück]]></item>
-  <item name="av.goal.daily.202.name"><![CDATA[Gala-Dinner der Eierköpfe]]></item>
-  <item name="av.goal.daily.202.hint"><![CDATA[Tach! Haste schon gehört? Morgen schlagen die feinen Pinkel vom Superhirnie-Club sich in unserem Messe-Hotel die Bäuche voll. Aber einer meiner Jungs … nicht icke, weißte … hat dit ganze Budget über Nacht verze… verprasst. Jetzt ham‘ wir nich‘ mal genug Zaster für Grünkohl auf der hohen Kante. Hilf mir, wa? Mit Senf! ]]></item>
-  <item name="av.goal.daily.202.rewardMsg"><![CDATA[Sauber! Die Schlaumeier waren hin und weg von Fionas Kartoffelsalat. Sind mit Tränen in den Augen aus’m Raum geflitzt. Warum geistige Nahrung, wenn die olle Hausmannskost es auch tut, wa? ]]></item>
+  
+  <item name="av.goal.daily.202.name"><![CDATA[Sterntaler]]></item>
+  <item name="av.goal.daily.202.hint"><![CDATA[Tach! Kannste dich noch erinnern, wie Fiona mich damals ausm Häuschen gebracht hat? Det waren noch Zeiten, wa? Komm, wir drehen die Uhr zurück und wickeln se' um den Finger wie Anno Tobak. Sobald wir genug Schotter auf der Halde haben, kof ich 'nen Stern für sie!]]></item>
+  <item name="av.goal.daily.202.rewardMsg"><![CDATA[Da hat die Kleene aber Augen gemacht, als ich ihr den Stern vors Näschen geklatscht habe, wa? Für meine Liebste ist mir eben kein Weg zu weit... nicht mal zum Kiosk.]]></item>
   <item name="av.task.daily.202.GetAirCoins.name"><![CDATA[Sammle {number} Aircoin/s]]></item>
-  <item name="av.goal.daily.203.name"><![CDATA[Budenzauder]]></item>
-  <item name="av.goal.daily.203.hint"><![CDATA[Hey, Dingenskirchen! Unsere neue Wartehalle ist eine Wucht. Ergonomische Sessel, vollautomatische Cappucino-Mixer, Wohlfül-Fußmassage und Wirr…warrpool oder so. Das müssen wir unbedingt diesen lustigen Leutchen zeigen. Na, du weißt schon. Passagiere. Genau! ]]></item>
-  <item name="av.goal.daily.203.rewardMsg"><![CDATA[Einfach toll. Die Passadingsbums waren total begeistert vom Luxuskram im Verwaltungsbereich. Schade, dass es für den Warteraum nicht mehr gereicht hat, aber nächste Woche reparieren wir vielleicht die Heizung und kaufen eine neue Glühbirne. Ich hol mir jetzt meine Fandango-Packung. ]]></item>
+  
+  <item name="av.goal.daily.203.name"><![CDATA[Ramageddon]]></item>
+  <item name="av.goal.daily.203.hint"><![CDATA[Hey, Dingsda! Ich schieb die totale ... na, wie sagt man noch? Panik, genau! Das Radar zeigt einen riesigen Meteoriten auf Kollisionskurs mit dem Flughafen an! Falls uns das Ding auf die Nase kracht, wird es unser Gelände wie eine Ladung Steckbausteine zerschmettern. Alarmstufe Rot! ALARMSTUFE ROT! Evakuier so viele Leute du noch kannst!]]></item>
+  <item name="av.goal.daily.203.rewardMsg"><![CDATA[Hui! Wie peinlich aber auch ... Der Meteorit auf dem Radar war tatsächlich nur ein... äähh... wie sagt man noch? Leberwurstfleck. Genau. Ab jetzt esse ich am Arbeisplatz nur noch Rübensuppe, so viel versprech ich dir.]]></item>
   <item name="av.task.daily.203.GetPassengers.name"><![CDATA[Sammle {number} Passagier/e]]></item>
-  <item name="av.goal.daily.204.name"><![CDATA[Nürnberger Trichter]]></item>
-  <item name="av.goal.daily.204.hint"><![CDATA[Hey, Alter! Hab gerade eine Mordsschnecke aufgegabelt! Das totale Superhirn. Die Kleine ist so gut in der Schule, dass sie jetzt schon zum dritten Mal ihr Abi macht. Wahnsinn, oder? Bei mir hat’s nicht mal zum ersten Versuch gereicht. Komm, wir besuchen sie in Europa und helfen ihr beim Pauken. ]]></item>
-  <item name="av.goal.daily.204.rewardMsg"><![CDATA[Wahnsinn!  Sie hat’s geschafft! Jedes Mal, wenn ich sie besucht habe, hat sie sich auf ihre Bücher gestürzt und mich total ignoriert. Ihre Eltern waren baff. Sonst hat sie nie freiwillig gelernt! Es stimmt eben doch: Wer Tariq trifft, lernt es schnell besser. Das hat ihr neuer Freund gestern auch gesagt … *schnief* ]]></item>
+  
+  <item name="av.goal.daily.204.name"><![CDATA[Blöd-Man!]]></item>
+  <item name="av.goal.daily.204.hint"><![CDATA[Hey, Alter! Die scharfen Schnitten in der Euro-Zone stehen total auf Superhelden, sagt der Kurt. Und weißte was? Ich wollte mir schon immer so'ne hautenge Spandex-Nummer über meinen wohlgeformten Pilotenleib stülpen. Komm, wir fliegen nach Europa und zeigen den Babes was ein echter Held ist. Vorhang auf für den "Propellator"...]]></item>
+  <item name="av.goal.daily.204.rewardMsg"><![CDATA[Also, das ist doch... Am Anfang dachte ich, die Mädels  pfeifen mir zu... Aber dann stolpert man ein paar Mal übers Cape und plötzlich pfeifen sie eines AUS! Den "Proletator" nennen sie mich jetzt. Na gut, wen kümmert's? Zumindest muss ich dann keinen Bauch-Weg-Gürtel mehr unters Weltenretter-Outfit quetschen.]]></item>
   <item name="av.task.daily.204.SendPlane.eu.name"><![CDATA[Starte {number} Flugzeug/e nach Europa]]></item>
-  <item name="av.goal.daily.205.name"><![CDATA[Schmierlappen]]></item>
-  <item name="av.goal.daily.205.hint"><![CDATA[Hey, Alter! Haste schon gehört? Philadelphia ist eine Reise wert. Die heimischen Cremetörtchen sind zuckersüß. Einfach zum Anschlabbern … hihihi. Eine Ex-Kollegin hat sich da gerade an der Naturwissenschaftlichen Fakultät eingeschrieben. Die Kleine hat damals nach dem ersten Flug mit mir spontan gekündigt. Komm, wir zeigen ihr, was ein echter Naturbursche ist! ]]></item>
-  <item name="av.goal.daily.205.rewardMsg"><![CDATA[Alter, ich hab’s immer noch drauf. Von wegen „ich trau mich nie wieder in ein Flugzeug“. Mein Anblick hat sie total kuriert. Sie hat sofort das Studium geschmissen und sich mit dem nächsten Last-Minute-Flieger nach Timbuktu abgesetzt. Bin eben Gottes Geschenk an die Wissenschaft! ]]></item>
+  
+  <item name="av.goal.daily.205.name"><![CDATA[2024: Eine Tariq-Odyssee]]></item>
+  <item name="av.goal.daily.205.hint"><![CDATA[Hey, Kumpel! Die Babes bei der Nasa sind der perfekte Rakentreibstoff für 'nen Weltraumforscher von meinem Kaliber. Hochgesteckte blonde Mähnen, modische Brillen und immer ein verheißungsvolles Klemmbrett in der Hand. Was will man mehr? Komm, wir düsen in die USA und zeigen den Torten, wie unwiderstehlich Onkel Tariq bei Schwerelosigkeit ist. Hihihihihi...]]></item>
+  <item name="av.goal.daily.205.rewardMsg"><![CDATA[Alter Falter! Mich hat's im Shuttle nur noch geschüttelt! Flugbegleiterinnen hatten sie auch keine. Was ist das denn für ein Laden? So viel also zum Thema Cape Karneval...]]></item>
   <item name="av.task.daily.205.SendPlane.na.name"><![CDATA[Starte {number} Flugzeug/e nach Nordamerika]]></item>
-  <item name="av.goal.daily.206.name"><![CDATA[Ausgeholzt]]></item>
-  <item name="av.goal.daily.206.hint"><![CDATA[Alter, ich krieg die Hummeln! Meine neue Ische fliegt morgen in den Regenwald, um auf Tuchfühlung zu gehen. Mit Flora und Fauna, sagt sie. Aber rate mal, wer heimlich unterm Tuch lauert? Hihihi. Dann sind wir ganz allein. Nur ich, mein Schatz und ihre heißen Freundinnen! ]]></item>
-  <item name="av.goal.daily.206.rewardMsg"><![CDATA[Sich regen? Von wegen! Die Einzigen, die auf Tuchfühlung gegangen sind, waren die verfluchten Moskitos. Konnten gar nicht genug von mir kriegen. Jetzt seh ich aus wie ein Schweizer Käse mit Paprika … und fühl mich wie der letzte Tilsiter in Omas Kühlschrank.  So ein … Quark. ]]></item>
+  
+  <item name="av.goal.daily.206.name"><![CDATA[Ich liebte ein Mädchen auf'm Mars]]></item>
+  <item name="av.goal.daily.206.hint"><![CDATA[Ich hab die Faxen dicke! Erdenmädchen sind so anspruchsvoll. "Bring dem Müll raus!", "Klapp den Klodeckel HOCH!", "Klapp die Klobrille RUNTER!" "Betrüg mich nicht!". Schluss mit dem Theater! In Südamerika gibt's jede Menge Ufo-Sichtungen. Komm, wir jetten sofort rüber. Vielleicht finden wir da ja die heiße Tentakelbraut die mich damals in ihr Ufo eingeladen hat.]]></item>
+  <item name="av.goal.daily.206.rewardMsg"><![CDATA[Oh Gott ... was ist passiert? Ich war in einer brasilianischen Kneipe und hab diese schnuffige Chiquita weichgekocht. Dann ... schon wieder ein Filmriss. 6 Tage später bin ich mit Vollbart, Fahne und ohne Kleingeld im Rinnstein aufgewacht. Das waren AUSSERIDISCHE! ICH WURDE SCHON WIEDER ENTFÜHRT! Eine andere Erklärung gibt es nicht ...<br><br>Haste 'ne Kopfschmerztablette?]]></item>
   <item name="av.task.daily.206.SendPlane.sa.name"><![CDATA[Starte {number} Flugzeug/e nach Südamerika]]></item>
+  
+  <!-- seperate quest ? -->
+  
   <item name="av.goal.daily.207.name"><![CDATA[Wettlauf der Ladenbesitzer]]></item>
   <item name="av.goal.daily.207.hint"><![CDATA[Der Internationale Verband der Ladenbesitzer veranstaltet einen Wettbewerb für Kaufleute auf der ganzen Welt. Wer heute die geforderte Zahl an Waren verkauft, kann richtig abräumen.]]></item>
   <item name="av.goal.daily.207.rewardMsg"><![CDATA[Herzlichen Glückwunsch! Du hast gewonnen und hier ist Deine Belohnung! Wahnsinn!]]></item>

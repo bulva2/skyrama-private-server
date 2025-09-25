@@ -37,7 +37,6 @@ def handle_planesUpgrade(request, user_id, rpcResult, items_to_add_to_obj, json_
     for i in init_data["planeUpgradeCostTypes"]:
       if current_plane_type_id in i["planeIds"]:
         for j in i["costs"][str(current_upgrade_number)]:
-          print(j)
           if j["type"] == "consumable": # Reduce tuning parts
             json_data["consumables"][j["id"]] = json_data["consumables"][j["id"]] - j["amount"]
             

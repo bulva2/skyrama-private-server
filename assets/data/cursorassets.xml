@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cursors>
-	<cursor id="_moveCursor" hotspotX="0" hotspotY="0"/>
-	<cursor id="_flipCursor" hotspotX="0" hotspotY="0"/>
-	<cursor id="_removeCursor" hotspotX="0" hotspotY="0"/>
-	<cursor id="_placeCursor" hotspotX="0" hotspotY="0"/>
+<cursors >
+	<cursor id="_moveCursor" hotspotX="0"  hotspotY="0" />
+	<cursor id="_flipCursor" hotspotX="0"  hotspotY="0" />
+	<cursor id="_removeCursor" hotspotX="0"  hotspotY="0" />
+	<cursor id="_placeCursor" hotspotX="0"  hotspotY="0" />
 </cursors>

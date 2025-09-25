@@ -47,3 +47,9 @@ def handle_placeablePlace(request, user_id, rpcResult, items_to_add_to_obj, json
           i["position_x"] = request["p"]["x"]
           i["position_y"] = request["p"]["y"]
           i["direction"] = request["p"]["d"]
+    elif request["p"]["obj_type"] == "hangar":
+      for i in json_data["hangars"]:
+        if int(i["id"]) == int(request["p"]["obj_id"]):
+          i["position_x"] = request["p"]["x"]
+          i["position_y"] = request["p"]["y"]
+          i["direction"] = request["p"]["d"]

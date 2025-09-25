@@ -65,94 +65,144 @@
   <item name="av.goal.daily.28.hint"><![CDATA[Bugünkü günlük görevde çok fazla yolcu toplaman gerekecek. Ne kadar iyi olduğunu göster ve harika bir ödülü kap!]]></item>
   <item name="av.goal.daily.28.rewardMsg"><![CDATA[Görevi başarıyla tamamladın. Gerçekten harika bir iş çıkardın. Ödülün burada, onu hak ettin!]]></item>
   <item name="av.task.daily.28.GetPassengers.name"><![CDATA[{number} yolcu topla]]></item>
-  <item name="av.goal.daily.30.name"><![CDATA[Uçak Pateni]]></item>
-  <item name="av.goal.daily.30.hint"><![CDATA[Hey, bu harika oyunu cep telefonumda oynuyordum. Bu oyunda bir pengueni pist boyunca koşturum sonra da buz üzerinde mümkün olduğunca uzağa kaydırıyorsun. En iyi skora ulaştım bile, ama sonra aklıma bir fikir geldi. Bunu uçaklarla denesem nasıl olurdu acaba? Tüm yapmam gereken uçağı kondurup sonra da buz üzerinde mümkün olduğunca uzağa kaydırmak. Ne ters gidebilir ki?]]></item>
-  <item name="av.goal.daily.30.rewardMsg"><![CDATA[Artık uçakları kaydırmam yasaklandı. Anlaşılan acil durum müdürü aniden uçuk çıkartmış. Olsun, yine de iyi eğlendim!]]></item>
+  
+  
+  <item name="av.goal.daily.30.name"><![CDATA[69'uncu Tür ile Yakın Karşılaşma]]></item>
+  <item name="av.goal.daily.30.hint"><![CDATA[Hey, dostum! Uzun zamandır görüşmüyoruz! Bu arada... sende de bir hafıza kaybı var mı? Dün gece bekarlar barında galaktik derecede çekici bir hatuna göz diktim. Yeşil kaymak taşı gibi cildi ve alnında antenleri vardı. Ve sonra... Aman Tanrım! Kırmızı bir ışık patlaması... Uçan daireler... ve... YARDIM EEDİİİN! PROBEEE!!! Öhö öhö. İşten sonra konuşalım mı? Bunu bir sindirmem lazım…]]></item>
+  <item name="av.goal.daily.30.rewardMsg"><![CDATA[İnanamıyorum dostum! Uzaylılar tarafından kaçırıldım! Fiona, yıllardır kayıp olduğumu söyledi. Görünüşe göre Lin, beni zor durumdan kurtarmak için meyve suyu satma işine ek olarak benim işimi de devralmış. Yeni havaalanı terapistimizle bir randevu ayarladıktan sonra ona büyük bir çiçek buketi alacağım. Ama yıldız zambakları kesinlikle olmaz!]]></item>
+  
   <item name="av.task.daily.30.SendPlane.name"><![CDATA[{number} uçak gönder]]></item>
-  <item name="av.goal.daily.31.name"><![CDATA[Süper Kardanadamlar]]></item>
-  <item name="av.goal.daily.31.hint"><![CDATA[Bir kardan adam yapma yarışması düzenlemeye karar verdik! Bu harika olacak. Hem yetişkinlere hem de çocuklara yönelik kategorilerimiz var ve en iyi kardanadamlar için harika birkaç ödül verilecek. Ama bir sorunumuz var. Uçaklar kondukça motorlarından çıkan rüzgar kardanadamları bozuyor. Benim için o uçakları uzaklaştırabilir misin?]]></item>
-  <item name="av.goal.daily.31.rewardMsg"><![CDATA[Kardanadam yarışması gerçek bir başarıydı! Kazanan kardanadamı görmek ister misin? Tıpkı sana benziyor! Bu kadar benzerlik olmaz!]]></item>
+
+  <item name="av.goal.daily.31.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.31.hint"><![CDATA[Hey, baksana! Geri döndü, biliyor musun? Hadi, kimi kastettiğimi çok iyi biliyorsun. Tariq... ıııhhh... uuuuh... korsan. Yok bekle, Pilot demek istedim. Birkaç yıl önce, Kurt'le içki alemi sonrası iz bırakmadan kaybolmuştu. Şimdi ise uzaydan gelen ziyaretçilerin onun aklını başından aldıklarını... yok yok... kaçırdıklarını söylüyor. Ya da buna benzer bir şey. Her neyse, havaalanımız şimdi alüminyum şapka takanların merkezi haline geldi. Onlarla ilgilen.]]></item>
+  <item name="av.goal.daily.31.rewardMsg"><![CDATA[Eh, beklediğimden daha kolay oldu. Bilmeden... bilim kurgu kongresinin mekanlarını bir uçağın kargo bölümüne taşımışım. Şimdi hepsi bir yerlere... ya da hiçbir yere gidiyor. Neresi olduğu fark etmez, yeter ki burada olmasınlar.]]></item>
+  
   <item name="av.task.daily.31.ReturnPlane.name"><![CDATA[{number} uçağı geri gönder]]></item>
-  <item name="av.goal.daily.32.name"><![CDATA[Bu, Karşakası]]></item>
-  <item name="av.goal.daily.32.hint"><![CDATA[Yeni Kar Şakası kar küreyicisini gördün mü? Bu harika bir alet! Titanyum kaplı bir küreği, kürek eğimini ayarlamak için bütünleşik mikro işlemcileri, buzu eritmek için ısıcı filamentleri ve hatta kabinde kablosuz internet erişimi var. Havaalanına bunlardan bir tane almalıyız. Lütfeeen! Sadece birkaç yüz milyon dolarcık...]]></item>
-  <item name="av.goal.daily.32.rewardMsg"><![CDATA[Sanırım bir Kar Şakası kar küreyicisi almak için yeterli parayı biriktirdik. Ama ne yazık ki kar çoktan eridi gitti bile!]]></item>
+
+  <item name="av.goal.daily.32.name"><![CDATA[Bucks Spaziali]]></item>
+  <item name="av.goal.daily.32.hint"><![CDATA[Merhaba! Fiona’yı nasıl etkilediğimi hatırlıyor musun? Ne güzel günlerdi, değil mi? Hadi, saati geri saralım ve onu eski günlerdeki gibi parmağımda oynatayım. Belki gidip ona bir yıldız bile alırım!]]></item>
+  <item name="av.goal.daily.32.rewardMsg"><![CDATA[Fi-Fi’nin gözleri yıldızı önünde gördüğünde nasıl parladığını görmeliydin, gerçekten! Sevgilim için hiçbir mesafe çok uzak değildir… hediyelik eşya dükkanına kadar olsa bile.]]></item>
+  
   <item name="av.task.daily.32.GetAirCoins.name"><![CDATA[{number} Uçuş kuruşu topla]]></item>
-  <item name="av.goal.daily.33.name"><![CDATA[Roket Tayfun]]></item>
-  <item name="av.goal.daily.33.hint"><![CDATA[Tayfun, dünyanın en iyi kayakla atlayıcısı olduğunu iddia ediyor. Tam üç otobüsün üzerinden atlayabilirmiş! Ama elimizde hiç otobüs yok ve pilotlar da kimsenin uçakları üzerinden atlamasını istemiyor. O yüzden, bu işi insanlarla halletmeliyiz. Bulabildiğin kadar çok yolcu topla ve uzun bir çizgi halinde onları arka arkaya yere yatır.]]></item>
-  <item name="av.goal.daily.33.rewardMsg"><![CDATA[Anlaşılan Tayfun kayakla atlama yetenekleri hakkında yalan söylüyormuş. Sözde üç OYUNCAK otobüsü kastetmiş. Şimdi karla kaplı bir sürü kızgın yolcudan saklanıyorum.]]></item>
+  
+  <item name="av.goal.daily.33.name"><![CDATA[Ramageddon]]></item>
+  <item name="av.goal.daily.33.hint"><![CDATA[Hey, şey! Tam bir panik halindeyim... şey... hangi kelimeyi arıyorum? "Dehşet" kelimesi tam uyar! Radar, havaalanına çarpma rotasında devasa bir göktaşı gösteriyor! Eğer o şey bize çarparsa, burayı bir enkaz yığını haline getirir. Kırmızı alarm! KIRMIZI ALARM! Mümkün olduğunca fazla insanı tahliye et!]]></item>
+  <item name="av.goal.daily.33.rewardMsg"><![CDATA[Vay canına! Ne kadar utandım, yer yarılsa da içine girsem. Radardaki meteor aslında sadece bir.. şey...! Ekranda sadece bir kızartma lekesiymiş. Utanç verici, değil mi? Şu andan itibaren, iş yerinde sadece pancar çorbası içeceğim, bunu garanti edebilirim.]]></item>
+  
   <item name="av.task.daily.33.GetPassengers.name"><![CDATA[{number} yolcu topla]]></item>
-  <item name="av.goal.daily.34.name"><![CDATA[Kayaktan Sonra]]></item>
-  <item name="av.goal.daily.34.hint"><![CDATA[Kış geldi ve kış demek, kayak demek. Kayak tutkunlarını en yüksekteki tatil beldelerine ulaştırmak için Avusturya'ya defalarca uçmam gerekiyor. Kayak kaymakta iyi olmayabilirim ama sorun değil. Asıl eğlence kayaktan sonra başlıyor! Çıtır kızlar ve sıcak şarap. Daha ne ister insan?]]></item>
-  <item name="av.goal.daily.34.rewardMsg"><![CDATA[Evet, bir kar yığınına baş aşağı saplandım kaldım. Hayır, kayak kazası değildi. Beni buradan çıkarsan artık!]]></item>
+
+  <item name="av.goal.daily.34.name"><![CDATA[Aptal adam]]></item>
+  <item name="av.goal.daily.34.hint"><![CDATA[Hey, dostum! Kurt diyor ki AB’deki güzel kadınlar süper kahramanlara bayılıyor. Ve biliyor musun? Hep şu dar spandeks kostümlerden birine girip mükemmel pilot vücudumu sergilemeyi hayal etmiştim. Hadi, Avrupa’ya uçalım ve kızlara gerçek bir kahramanın nasıl olduğunu gösterelim. Karşınızda ‘Propellator’...]]></item>
+  <item name="av.goal.daily.34.rewardMsg"><![CDATA[Yani, işte bu... Başta kızların bana ıslık çaldığını sanıyordum... Ama birkaç kez pelerinine takılıp düşünce, bir anda onların seni dışladığını duyuyorsun! Artık bana ‘Pornelator’ diyorlar. Eh, kimin umurunda? En azından artık süper kostümümün altına korse sıkıştırmak zorunda değilim.]]></item>
+  
   <item name="av.task.daily.34.SendPlane.eu.name"><![CDATA[{number} uçağı Avrupa'ya gönder]]></item>
-  <item name="av.goal.daily.35.name"><![CDATA[50 Sözcük]]></item>
-  <item name="av.goal.daily.35.hint"><![CDATA[Alaska'ya uçmalıyım. Eskimo dilinde kar için elli farklı sözcük olduğunu biliyor muydun? Aslında bu biraz karmaşık ama ne fark eder! Yine de, Eskimo hanımlarla bir igloda baş başa kaldığımdan bundan iyi bir muhabbet konusu çıkar. Eminim kimse onlardan daha önce elli sözcüğin hepsini söylemelerini istememiştir.]]></item>
-  <item name="av.goal.daily.35.rewardMsg"><![CDATA[Eskimo hanımefendiler bana belirli bir tür kar yememi söylediler. Adını unuttum ama anlaşılan bu sarı karmış. Şimdi kendimi hasta hissediyorum...]]></item>
+  
+  <item name="av.goal.daily.35.name"><![CDATA[2024: Bir Tariq Macerası]]></item>
+  <item name="av.goal.daily.35.hint"><![CDATA[Hey dostum! NASA’daki kadınlar, benim gibi bir uzay kaşifi için mükemmel bir roket yakıtı. Uzun atkuyrukları, şık gözlükler ve ellerinde daima cazibeli bir not defteri. Daha ne isteyebilirsin ki? Hadi, ABD’ye uçalım ve bu kızlara sıfır yerçekiminde Amca Tariq’in ne kadar karşı konulmaz olduğunu gösterelim. Hihihihi...]]></item>
+  <item name="av.goal.daily.35.rewardMsg"><![CDATA[Aman Tanrım! O mekik yolculuğu beni mahvetti! Ve uçuş görevlileri bile yoktu. Bu nasıl bir operasyon? Cape Karnavalı bu kadar mıymış…]]></item>
+  
   <item name="av.task.daily.35.SendPlane.na.name"><![CDATA[Kuzey Amerika'ya {number} uçak gönder]]></item>
-  <item name="av.goal.daily.36.name"><![CDATA[Harika And Dağları]]></item>
-  <item name="av.goal.daily.36.hint"><![CDATA[Bir paketi almak için And Dağlarına uçmalıyım. O sandıkta ne olduğunu bilmiyorum ama örümcek, pirana, yılan veya başka bir sürüngen olmadığı konusunda bana garanti verdiler. Şu anda dışarısı çok soğuk, o yüzden umarım uçağım uçuş sırasında buz tutmaz.]]></item>
-  <item name="av.goal.daily.36.rewardMsg"><![CDATA[Sandık kıpırdamaya ve gıcırdamaya başladı. Umarım açılmaz. Olamaz, dışarıya çıktılar bile. Kokpite girdiler! Oh, bunlar sadece kobay fareleriymiş. Iyyy, aslında şirinler!]]></item>
+
+  <item name="av.goal.daily.36.name"><![CDATA[Mars'ta bir kızı sevdim.]]></item>
+  <item name="av.goal.daily.36.hint"><![CDATA[Burama kadar geldi! Dünya’daki kızlar çok talepkar. “Çöpü çıkar!” “Tuvalet kapağını kaldır!” “Tuvalet kapağını indir!” “Beni aldatma!” Bu kadar dram yeter! Güney Amerika’da tonlarca UFO gözlemi var. Hadi hemen oraya uçalım—belki bir süre önce beni uzay gemisine davet eden o çekici dokungaçlı hatunu bulurum.]]></item>
+  <item name="av.goal.daily.36.rewardMsg"><![CDATA[Aman Tanrım... ne oldu? Brezilya’da bir barda tatlı tatlı bu sevimli Chiquita ile konuşuyordum ve sonra... film koptu. Altı gün sonra, uzun bir sakalla, alkol kokan nefesle ve cebimde beş kuruş olmadan kaldırımda uyandım. Bu kesinlikle UZAYLILARIN İŞİYDİ! YİNE KAÇIRILDIM!<br><br>Başka bir açıklaması yok...]]></item>  
+  
   <item name="av.task.daily.36.SendPlane.sa.name"><![CDATA[Güney Amerika'ya {number} uçak gönder]]></item>
-  <item name="av.goal.daily.100.name"><![CDATA[Uçak Pateni]]></item>
-  <item name="av.goal.daily.100.hint"><![CDATA[Hey, bu harika oyunu cep telefonumda oynuyordum. Bu oyunda bir pengueni pist boyunca koşturum sonra da buz üzerinde mümkün olduğunca uzağa kaydırıyorsun. En iyi skora ulaştım bile, ama sonra aklıma bir fikir geldi. Bunu uçaklarla denesem nasıl olurdu acaba? Tüm yapmam gereken uçağı kondurup sonra da buz üzerinde mümkün olduğunca uzağa kaydırmak. Ne ters gidebilir ki?]]></item>
-  <item name="av.goal.daily.100.rewardMsg"><![CDATA[Artık uçakları kaydırmam yasaklandı. Anlaşılan acil durum müdürü aniden uçuk çıkartmış. Olsun, yine de iyi eğlendim!]]></item>
+  
+
+  <item name="av.goal.daily.100.name"><![CDATA[69'uncu Tür ile Yakın Karşılaşma]]></item>
+  <item name="av.goal.daily.100.hint"><![CDATA[Hey, dostum! Uzun zamandır görüşmüyoruz! Bu arada... sende de bir hafıza kaybı var mı? Dün gece bekarlar barında galaktik derecede çekici bir hatuna göz diktim. Yeşil kaymak taşı gibi cildi ve alnında antenleri vardı. Ve sonra... Aman Tanrım! Kırmızı bir ışık patlaması... Uçan daireler... ve... YARDIM EEDİİİN! PROBEEE!!! Öhö öhö. İşten sonra konuşalım mı? Bunu bir sindirmem lazım…]]></item>
+  <item name="av.goal.daily.100.rewardMsg"><![CDATA[İnanamıyorum dostum! Uzaylılar tarafından kaçırıldım! Fiona, yıllardır kayıp olduğumu söyledi. Görünüşe göre Lin, beni zor durumdan kurtarmak için meyve suyu satma işine ek olarak benim işimi de devralmış. Yeni havaalanı terapistimizle bir randevu ayarladıktan sonra ona büyük bir çiçek buketi alacağım. Ama yıldız zambakları kesinlikle olmaz!]]></item>
+  
   <item name="av.task.daily.100.SendPlane.name"><![CDATA[{number} uçak gönder]]></item>
-  <item name="av.goal.daily.101.name"><![CDATA[Süper Kardanadamlar]]></item>
-  <item name="av.goal.daily.101.hint"><![CDATA[Bir kardan adam yapma yarışması düzenlemeye karar verdik! Bu harika olacak. Hem yetişkinlere hem de çocuklara yönelik kategorilerimiz var ve en iyi kardanadamlar için harika birkaç ödül verilecek. Ama bir sorunumuz var. Uçaklar kondukça motorlarından çıkan rüzgar kardanadamları bozuyor. Benim için o uçakları uzaklaştırabilir misin?]]></item>
-  <item name="av.goal.daily.101.rewardMsg"><![CDATA[Kardanadam yarışması gerçek bir başarıydı! Kazanan kardanadamı görmek ister misin? Tıpkı sana benziyor! Bu kadar benzerlik olmaz!]]></item>
+
+  <item name="av.goal.daily.101.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.101.hint"><![CDATA[Hey, baksana! Geri döndü, biliyor musun? Hadi, kimi kastettiğimi çok iyi biliyorsun. Tariq... ıııhhh... uuuuh... korsan. Yok bekle, Pilot demek istedim. Birkaç yıl önce, Kurt'le içki alemi sonrası iz bırakmadan kaybolmuştu. Şimdi ise uzaydan gelen ziyaretçilerin onun aklını başından aldıklarını... yok yok... kaçırdıklarını söylüyor. Ya da buna benzer bir şey. Her neyse, havaalanımız şimdi alüminyum şapka takanların merkezi haline geldi. Onlarla ilgilen.]]></item>
+  <item name="av.goal.daily.101.rewardMsg"><![CDATA[Eh, beklediğimden daha kolay oldu. Bilmeden... bilim kurgu kongresinin mekanlarını bir uçağın kargo bölümüne taşımışım. Şimdi hepsi bir yerlere... ya da hiçbir yere gidiyor. Neresi olduğu fark etmez, yeter ki burada olmasınlar.]]></item>
+  
   <item name="av.task.daily.101.ReturnPlane.name"><![CDATA[{number} uçağı geri gönder]]></item>
-  <item name="av.goal.daily.102.name"><![CDATA[Bu, Karşakası]]></item>
-  <item name="av.goal.daily.102.hint"><![CDATA[Yeni Kar Şakası kar küreyicisini gördün mü? Bu harika bir alet! Titanyum kaplı bir küreği, kürek eğimini ayarlamak için bütünleşik mikro işlemcileri, buzu eritmek için ısıcı filamentleri ve hatta kabinde kablosuz internet erişimi var. Havaalanına bunlardan bir tane almalıyız. Lütfeeen! Sadece birkaç yüz milyon dolarcık...]]></item>
-  <item name="av.goal.daily.102.rewardMsg"><![CDATA[Sanırım bir Kar Şakası kar küreyicisi almak için yeterli parayı biriktirdik. Ama ne yazık ki kar çoktan eridi gitti bile!]]></item>
+
+  <item name="av.goal.daily.102.name"><![CDATA[Bucks Spaziali]]></item>
+  <item name="av.goal.daily.102.hint"><![CDATA[Merhaba! Fiona’yı nasıl etkilediğimi hatırlıyor musun? Ne güzel günlerdi, değil mi? Hadi, saati geri saralım ve onu eski günlerdeki gibi parmağımda oynatayım. Belki gidip ona bir yıldız bile alırım!]]></item>
+  <item name="av.goal.daily.102.rewardMsg"><![CDATA[Fi-Fi’nin gözleri yıldızı önünde gördüğünde nasıl parladığını görmeliydin, gerçekten! Sevgilim için hiçbir mesafe çok uzak değildir… hediyelik eşya dükkanına kadar olsa bile.]]></item>
+  
   <item name="av.task.daily.102.GetAirCoins.name"><![CDATA[{number} Uçuş kuruşu topla]]></item>
-  <item name="av.goal.daily.103.name"><![CDATA[Roket Tayfun]]></item>
-  <item name="av.goal.daily.103.hint"><![CDATA[Tayfun, dünyanın en iyi kayakla atlayıcısı olduğunu iddia ediyor. Tam üç otobüsün üzerinden atlayabilirmiş! Ama elimizde hiç otobüs yok ve pilotlar da kimsenin uçakları üzerinden atlamasını istemiyor. O yüzden, bu işi insanlarla halletmeliyiz. Bulabildiğin kadar çok yolcu topla ve uzun bir çizgi halinde onları arka arkaya yere yatır.]]></item>
-  <item name="av.goal.daily.103.rewardMsg"><![CDATA[Anlaşılan Tayfun kayakla atlama yetenekleri hakkında yalan söylüyormuş. Sözde üç OYUNCAK otobüsü kastetmiş. Şimdi karla kaplı bir sürü kızgın yolcudan saklanıyorum.]]></item>
+  
+  <item name="av.goal.daily.103.name"><![CDATA[Ramageddon]]></item>
+  <item name="av.goal.daily.103.hint"><![CDATA[Hey, şey! Tam bir panik halindeyim... şey... hangi kelimeyi arıyorum? "Dehşet" kelimesi tam uyar! Radar, havaalanına çarpma rotasında devasa bir göktaşı gösteriyor! Eğer o şey bize çarparsa, burayı bir enkaz yığını haline getirir. Kırmızı alarm! KIRMIZI ALARM! Mümkün olduğunca fazla insanı tahliye et!]]></item>
+  <item name="av.goal.daily.103.rewardMsg"><![CDATA[Vay canına! Ne kadar utandım, yer yarılsa da içine girsem. Radardaki meteor aslında sadece bir.. şey...! Ekranda sadece bir kızartma lekesiymiş. Utanç verici, değil mi? Şu andan itibaren, iş yerinde sadece pancar çorbası içeceğim, bunu garanti edebilirim.]]></item>
+  
   <item name="av.task.daily.103.GetPassengers.name"><![CDATA[{number} yolcu topla]]></item>
-  <item name="av.goal.daily.104.name"><![CDATA[Kayaktan Sonra]]></item>
-  <item name="av.goal.daily.104.hint"><![CDATA[Kış geldi ve kış demek, kayak demek. Kayak tutkunlarını en yüksekteki tatil beldelerine ulaştırmak için Avusturya'ya defalarca uçmam gerekiyor. Kayak kaymakta iyi olmayabilirim ama sorun değil. Asıl eğlence kayaktan sonra başlıyor! Çıtır kızlar ve sıcak şarap. Daha ne ister insan?]]></item>
-  <item name="av.goal.daily.104.rewardMsg"><![CDATA[Evet, bir kar yığınına baş aşağı saplandım kaldım. Hayır, kayak kazası değildi. Beni buradan çıkarsan artık!]]></item>
+
+  <item name="av.goal.daily.104.name"><![CDATA[Aptal adam]]></item>
+  <item name="av.goal.daily.104.hint"><![CDATA[Hey, dostum! Kurt diyor ki AB’deki güzel kadınlar süper kahramanlara bayılıyor. Ve biliyor musun? Hep şu dar spandeks kostümlerden birine girip mükemmel pilot vücudumu sergilemeyi hayal etmiştim. Hadi, Avrupa’ya uçalım ve kızlara gerçek bir kahramanın nasıl olduğunu gösterelim. Karşınızda ‘Propellator’...]]></item>
+  <item name="av.goal.daily.104.rewardMsg"><![CDATA[Yani, işte bu... Başta kızların bana ıslık çaldığını sanıyordum... Ama birkaç kez pelerinine takılıp düşünce, bir anda onların seni dışladığını duyuyorsun! Artık bana ‘Pornelator’ diyorlar. Eh, kimin umurunda? En azından artık süper kostümümün altına korse sıkıştırmak zorunda değilim.]]></item>
+  
   <item name="av.task.daily.104.SendPlane.eu.name"><![CDATA[{number} uçağı Avrupa'ya gönder]]></item>
-  <item name="av.goal.daily.105.name"><![CDATA[50 Sözcük]]></item>
-  <item name="av.goal.daily.105.hint"><![CDATA[Alaska'ya uçmalıyım. Eskimo dilinde kar için elli farklı sözcük olduğunu biliyor muydun? Aslında bu biraz karmaşık ama ne fark eder! Yine de, Eskimo hanımlarla bir igloda baş başa kaldığımdan bundan iyi bir muhabbet konusu çıkar. Eminim kimse onlardan daha önce elli sözcüğin hepsini söylemelerini istememiştir.]]></item>
-  <item name="av.goal.daily.105.rewardMsg"><![CDATA[Eskimo hanımefendiler bana belirli bir tür kar yememi söylediler. Adını unuttum ama anlaşılan bu sarı karmış. Şimdi kendimi hasta hissediyorum...]]></item>
+  
+  <item name="av.goal.daily.105.name"><![CDATA[2024: Bir Tariq Macerası]]></item>
+  <item name="av.goal.daily.105.hint"><![CDATA[Hey dostum! NASA’daki kadınlar, benim gibi bir uzay kaşifi için mükemmel bir roket yakıtı. Uzun atkuyrukları, şık gözlükler ve ellerinde daima cazibeli bir not defteri. Daha ne isteyebilirsin ki? Hadi, ABD’ye uçalım ve bu kızlara sıfır yerçekiminde Amca Tariq’in ne kadar karşı konulmaz olduğunu gösterelim. Hihihihi...]]></item>
+  <item name="av.goal.daily.105.rewardMsg"><![CDATA[Aman Tanrım! O mekik yolculuğu beni mahvetti! Ve uçuş görevlileri bile yoktu. Bu nasıl bir operasyon? Cape Karnavalı bu kadar mıymış…]]></item>
+  
   <item name="av.task.daily.105.SendPlane.na.name"><![CDATA[Kuzey Amerika'ya {number} uçak gönder]]></item>
-  <item name="av.goal.daily.106.name"><![CDATA[Harika And Dağları]]></item>
-  <item name="av.goal.daily.106.hint"><![CDATA[Bir paketi almak için And Dağlarına uçmalıyım. O sandıkta ne olduğunu bilmiyorum ama örümcek, pirana, yılan veya başka bir sürüngen olmadığı konusunda bana garanti verdiler. Şu anda dışarısı çok soğuk, o yüzden umarım uçağım uçuş sırasında buz tutmaz.]]></item>
-  <item name="av.goal.daily.106.rewardMsg"><![CDATA[Sandık kıpırdamaya ve gıcırdamaya başladı. Umarım açılmaz. Olamaz, dışarıya çıktılar bile. Kokpite girdiler! Oh, bunlar sadece kobay fareleriymiş. Iyyy, aslında şirinler!]]></item>
-  <item name="av.task.daily.106.SendPlane.sa.name"><![CDATA[Güney Amerika'ya {number} uçak gönder]]></item>
+
+  <item name="av.goal.daily.106.name"><![CDATA[Mars'ta bir kızı sevdim.]]></item>
+  <item name="av.goal.daily.106.hint"><![CDATA[Burama kadar geldi! Dünya’daki kızlar çok talepkar. “Çöpü çıkar!” “Tuvalet kapağını kaldır!” “Tuvalet kapağını indir!” “Beni aldatma!” Bu kadar dram yeter! Güney Amerika’da tonlarca UFO gözlemi var. Hadi hemen oraya uçalım—belki bir süre önce beni uzay gemisine davet eden o çekici dokungaçlı hatunu bulurum.]]></item>
+  <item name="av.goal.daily.106.rewardMsg"><![CDATA[Aman Tanrım... ne oldu? Brezilya’da bir barda tatlı tatlı bu sevimli Chiquita ile konuşuyordum ve sonra... film koptu. Altı gün sonra, uzun bir sakalla, alkol kokan nefesle ve cebimde beş kuruş olmadan kaldırımda uyandım. Bu kesinlikle UZAYLILARIN İŞİYDİ! YİNE KAÇIRILDIM!<br><br>Başka bir açıklaması yok...]]></item>  
+  
+  <item name="av.task.daily.106.SendPlane.sa.name"><![CDATA[Güney Amerika'ya {number} uçak gönder]]></item>  
+  
+  
+  
   <item name="av.goal.daily.107.name"><![CDATA[Dükkan Sahipleri Yarışması]]></item>
   <item name="av.goal.daily.107.hint"><![CDATA[Uluslararası Dükkan Organizasyonu ISO, dükkan sahipleri arasında dünya çapında bir yarışma düzenliyor. Bugün gerekli sayıda ürün satışı yapanlar en iyi biçimde ödüllendirilecek.]]></item>
   <item name="av.goal.daily.107.rewardMsg"><![CDATA[Tebrikler! Kazandın, ödülün burada. Onu hak ettin!]]></item>
   <item name="av.task.daily.107.SellProducts.name"><![CDATA[{number} ürün sat]]></item>
-  <item name="av.goal.daily.200.name"><![CDATA[Uçak Pateni]]></item>
-  <item name="av.goal.daily.200.hint"><![CDATA[Hey, bu harika oyunu cep telefonumda oynuyordum. Bu oyunda bir pengueni pist boyunca koşturum sonra da buz üzerinde mümkün olduğunca uzağa kaydırıyorsun. En iyi skora ulaştım bile, ama sonra aklıma bir fikir geldi. Bunu uçaklarla denesem nasıl olurdu acaba? Tüm yapmam gereken uçağı kondurup sonra da buz üzerinde mümkün olduğunca uzağa kaydırmak. Ne ters gidebilir ki?]]></item>
-  <item name="av.goal.daily.200.rewardMsg"><![CDATA[Artık uçakları kaydırmam yasaklandı. Anlaşılan acil durum müdürü aniden uçuk çıkartmış. Olsun, yine de iyi eğlendim!]]></item>
+
+
+  <item name="av.goal.daily.200.name"><![CDATA[69'uncu Tür ile Yakın Karşılaşma]]></item>
+  <item name="av.goal.daily.200.hint"><![CDATA[Hey, dostum! Uzun zamandır görüşmüyoruz! Bu arada... sende de bir hafıza kaybı var mı? Dün gece bekarlar barında galaktik derecede çekici bir hatuna göz diktim. Yeşil kaymak taşı gibi cildi ve alnında antenleri vardı. Ve sonra... Aman Tanrım! Kırmızı bir ışık patlaması... Uçan daireler... ve... YARDIM EEDİİİN! PROBEEE!!! Öhö öhö. İşten sonra konuşalım mı? Bunu bir sindirmem lazım…]]></item>
+  <item name="av.goal.daily.200.rewardMsg"><![CDATA[İnanamıyorum dostum! Uzaylılar tarafından kaçırıldım! Fiona, yıllardır kayıp olduğumu söyledi. Görünüşe göre Lin, beni zor durumdan kurtarmak için meyve suyu satma işine ek olarak benim işimi de devralmış. Yeni havaalanı terapistimizle bir randevu ayarladıktan sonra ona büyük bir çiçek buketi alacağım. Ama yıldız zambakları kesinlikle olmaz!]]></item>
+  
   <item name="av.task.daily.200.SendPlane.name"><![CDATA[{number} uçak gönder]]></item>
-  <item name="av.goal.daily.201.name"><![CDATA[Süper Kardanadamlar]]></item>
-  <item name="av.goal.daily.201.hint"><![CDATA[Bir kardan adam yapma yarışması düzenlemeye karar verdik! Bu harika olacak. Hem yetişkinlere hem de çocuklara yönelik kategorilerimiz var ve en iyi kardanadamlar için harika birkaç ödül verilecek. Ama bir sorunumuz var. Uçaklar kondukça motorlarından çıkan rüzgar kardanadamları bozuyor. Benim için o uçakları uzaklaştırabilir misin?]]></item>
-  <item name="av.goal.daily.201.rewardMsg"><![CDATA[Kardanadam yarışması gerçek bir başarıydı! Kazanan kardanadamı görmek ister misin? Tıpkı sana benziyor! Bu kadar benzerlik olmaz!]]></item>
+
+  <item name="av.goal.daily.201.name"><![CDATA[Con Air]]></item>
+  <item name="av.goal.daily.201.hint"><![CDATA[Hey, baksana! Geri döndü, biliyor musun? Hadi, kimi kastettiğimi çok iyi biliyorsun. Tariq... ıııhhh... uuuuh... korsan. Yok bekle, Pilot demek istedim. Birkaç yıl önce, Kurt'le içki alemi sonrası iz bırakmadan kaybolmuştu. Şimdi ise uzaydan gelen ziyaretçilerin onun aklını başından aldıklarını... yok yok... kaçırdıklarını söylüyor. Ya da buna benzer bir şey. Her neyse, havaalanımız şimdi alüminyum şapka takanların merkezi haline geldi. Onlarla ilgilen.]]></item>
+  <item name="av.goal.daily.201.rewardMsg"><![CDATA[Eh, beklediğimden daha kolay oldu. Bilmeden... bilim kurgu kongresinin mekanlarını bir uçağın kargo bölümüne taşımışım. Şimdi hepsi bir yerlere... ya da hiçbir yere gidiyor. Neresi olduğu fark etmez, yeter ki burada olmasınlar.]]></item>
+  
   <item name="av.task.daily.201.ReturnPlane.name"><![CDATA[{number} uçağı geri gönder]]></item>
-  <item name="av.goal.daily.202.name"><![CDATA[Bu, Karşakası]]></item>
-  <item name="av.goal.daily.202.hint"><![CDATA[Yeni Kar Şakası kar küreyicisini gördün mü? Bu harika bir alet! Titanyum kaplı bir küreği, kürek eğimini ayarlamak için bütünleşik mikro işlemcileri, buzu eritmek için ısıcı filamentleri ve hatta kabinde kablosuz internet erişimi var. Havaalanına bunlardan bir tane almalıyız. Lütfeeen! Sadece birkaç yüz milyon dolarcık...]]></item>
-  <item name="av.goal.daily.202.rewardMsg"><![CDATA[Sanırım bir Kar Şakası kar küreyicisi almak için yeterli parayı biriktirdik. Ama ne yazık ki kar çoktan eridi gitti bile!]]></item>
+
+  <item name="av.goal.daily.202.name"><![CDATA[Bucks Spaziali]]></item>
+  <item name="av.goal.daily.202.hint"><![CDATA[Merhaba! Fiona’yı nasıl etkilediğimi hatırlıyor musun? Ne güzel günlerdi, değil mi? Hadi, saati geri saralım ve onu eski günlerdeki gibi parmağımda oynatayım. Belki gidip ona bir yıldız bile alırım!]]></item>
+  <item name="av.goal.daily.202.rewardMsg"><![CDATA[Fi-Fi’nin gözleri yıldızı önünde gördüğünde nasıl parladığını görmeliydin, gerçekten! Sevgilim için hiçbir mesafe çok uzak değildir… hediyelik eşya dükkanına kadar olsa bile.]]></item>
+  
   <item name="av.task.daily.202.GetAirCoins.name"><![CDATA[{number} Uçuş kuruşu topla]]></item>
-  <item name="av.goal.daily.203.name"><![CDATA[Roket Tayfun]]></item>
-  <item name="av.goal.daily.203.hint"><![CDATA[Tayfun, dünyanın en iyi kayakla atlayıcısı olduğunu iddia ediyor. Tam üç otobüsün üzerinden atlayabilirmiş! Ama elimizde hiç otobüs yok ve pilotlar da kimsenin uçakları üzerinden atlamasını istemiyor. O yüzden, bu işi insanlarla halletmeliyiz. Bulabildiğin kadar çok yolcu topla ve uzun bir çizgi halinde onları arka arkaya yere yatır.]]></item>
-  <item name="av.goal.daily.203.rewardMsg"><![CDATA[Anlaşılan Tayfun kayakla atlama yetenekleri hakkında yalan söylüyormuş. Sözde üç OYUNCAK otobüsü kastetmiş. Şimdi karla kaplı bir sürü kızgın yolcudan saklanıyorum.]]></item>
+  
+  <item name="av.goal.daily.203.name"><![CDATA[Ramageddon]]></item>
+  <item name="av.goal.daily.203.hint"><![CDATA[Hey, şey! Tam bir panik halindeyim... şey... hangi kelimeyi arıyorum? "Dehşet" kelimesi tam uyar! Radar, havaalanına çarpma rotasında devasa bir göktaşı gösteriyor! Eğer o şey bize çarparsa, burayı bir enkaz yığını haline getirir. Kırmızı alarm! KIRMIZI ALARM! Mümkün olduğunca fazla insanı tahliye et!]]></item>
+  <item name="av.goal.daily.203.rewardMsg"><![CDATA[Vay canına! Ne kadar utandım, yer yarılsa da içine girsem. Radardaki meteor aslında sadece bir.. şey...! Ekranda sadece bir kızartma lekesiymiş. Utanç verici, değil mi? Şu andan itibaren, iş yerinde sadece pancar çorbası içeceğim, bunu garanti edebilirim.]]></item>
+  
   <item name="av.task.daily.203.GetPassengers.name"><![CDATA[{number} yolcu topla]]></item>
-  <item name="av.goal.daily.204.name"><![CDATA[Kayaktan Sonra]]></item>
-  <item name="av.goal.daily.204.hint"><![CDATA[Kış geldi ve kış demek, kayak demek. Kayak tutkunlarını en yüksekteki tatil beldelerine ulaştırmak için Avusturya'ya defalarca uçmam gerekiyor. Kayak kaymakta iyi olmayabilirim ama sorun değil. Asıl eğlence kayaktan sonra başlıyor! Çıtır kızlar ve sıcak şarap. Daha ne ister insan?]]></item>
-  <item name="av.goal.daily.204.rewardMsg"><![CDATA[Evet, bir kar yığınına baş aşağı saplandım kaldım. Hayır, kayak kazası değildi. Beni buradan çıkarsan artık!]]></item>
+
+  <item name="av.goal.daily.204.name"><![CDATA[Aptal adam]]></item>
+  <item name="av.goal.daily.204.hint"><![CDATA[Hey, dostum! Kurt diyor ki AB’deki güzel kadınlar süper kahramanlara bayılıyor. Ve biliyor musun? Hep şu dar spandeks kostümlerden birine girip mükemmel pilot vücudumu sergilemeyi hayal etmiştim. Hadi, Avrupa’ya uçalım ve kızlara gerçek bir kahramanın nasıl olduğunu gösterelim. Karşınızda ‘Propellator’...]]></item>
+  <item name="av.goal.daily.204.rewardMsg"><![CDATA[Yani, işte bu... Başta kızların bana ıslık çaldığını sanıyordum... Ama birkaç kez pelerinine takılıp düşünce, bir anda onların seni dışladığını duyuyorsun! Artık bana ‘Pornelator’ diyorlar. Eh, kimin umurunda? En azından artık süper kostümümün altına korse sıkıştırmak zorunda değilim.]]></item>
+  
   <item name="av.task.daily.204.SendPlane.eu.name"><![CDATA[{number} uçağı Avrupa'ya gönder]]></item>
-  <item name="av.goal.daily.205.name"><![CDATA[50 Sözcük]]></item>
-  <item name="av.goal.daily.205.hint"><![CDATA[Alaska'ya uçmalıyım. Eskimo dilinde kar için elli farklı sözcük olduğunu biliyor muydun? Aslında bu biraz karmaşık ama ne fark eder! Yine de, Eskimo hanımlarla bir igloda baş başa kaldığımdan bundan iyi bir muhabbet konusu çıkar. Eminim kimse onlardan daha önce elli sözcüğin hepsini söylemelerini istememiştir.]]></item>
-  <item name="av.goal.daily.205.rewardMsg"><![CDATA[Eskimo hanımefendiler bana belirli bir tür kar yememi söylediler. Adını unuttum ama anlaşılan bu sarı karmış. Şimdi kendimi hasta hissediyorum...]]></item>
+  
+  <item name="av.goal.daily.205.name"><![CDATA[2024: Bir Tariq Macerası]]></item>
+  <item name="av.goal.daily.205.hint"><![CDATA[Hey dostum! NASA’daki kadınlar, benim gibi bir uzay kaşifi için mükemmel bir roket yakıtı. Uzun atkuyrukları, şık gözlükler ve ellerinde daima cazibeli bir not defteri. Daha ne isteyebilirsin ki? Hadi, ABD’ye uçalım ve bu kızlara sıfır yerçekiminde Amca Tariq’in ne kadar karşı konulmaz olduğunu gösterelim. Hihihihi...]]></item>
+  <item name="av.goal.daily.205.rewardMsg"><![CDATA[Aman Tanrım! O mekik yolculuğu beni mahvetti! Ve uçuş görevlileri bile yoktu. Bu nasıl bir operasyon? Cape Karnavalı bu kadar mıymış…]]></item>
+  
   <item name="av.task.daily.205.SendPlane.na.name"><![CDATA[Kuzey Amerika'ya {number} uçak gönder]]></item>
-  <item name="av.goal.daily.206.name"><![CDATA[Harika And Dağları]]></item>
-  <item name="av.goal.daily.206.hint"><![CDATA[Bir paketi almak için And Dağlarına uçmalıyım. O sandıkta ne olduğunu bilmiyorum ama örümcek, pirana, yılan veya başka bir sürüngen olmadığı konusunda bana garanti verdiler. Şu anda dışarısı çok soğuk, o yüzden umarım uçağım uçuş sırasında buz tutmaz.]]></item>
-  <item name="av.goal.daily.206.rewardMsg"><![CDATA[Sandık kıpırdamaya ve gıcırdamaya başladı. Umarım açılmaz. Olamaz, dışarıya çıktılar bile. Kokpite girdiler! Oh, bunlar sadece kobay fareleriymiş. Iyyy, aslında şirinler!]]></item>
-  <item name="av.task.daily.206.SendPlane.sa.name"><![CDATA[Güney Amerika'ya {number} uçak gönder]]></item>
+
+  <item name="av.goal.daily.206.name"><![CDATA[Mars'ta bir kızı sevdim.]]></item>
+  <item name="av.goal.daily.206.hint"><![CDATA[Burama kadar geldi! Dünya’daki kızlar çok talepkar. “Çöpü çıkar!” “Tuvalet kapağını kaldır!” “Tuvalet kapağını indir!” “Beni aldatma!” Bu kadar dram yeter! Güney Amerika’da tonlarca UFO gözlemi var. Hadi hemen oraya uçalım—belki bir süre önce beni uzay gemisine davet eden o çekici dokungaçlı hatunu bulurum.]]></item>
+  <item name="av.goal.daily.206.rewardMsg"><![CDATA[Aman Tanrım... ne oldu? Brezilya’da bir barda tatlı tatlı bu sevimli Chiquita ile konuşuyordum ve sonra... film koptu. Altı gün sonra, uzun bir sakalla, alkol kokan nefesle ve cebimde beş kuruş olmadan kaldırımda uyandım. Bu kesinlikle UZAYLILARIN İŞİYDİ! YİNE KAÇIRILDIM!<br><br>Başka bir açıklaması yok...]]></item>  
+  
+  <item name="av.task.daily.206.SendPlane.sa.name"><![CDATA[Güney Amerika'ya {number} uçak gönder]]></item>    
+  
+  
   <item name="av.goal.daily.207.name"><![CDATA[Dükkan Sahipleri Yarışması]]></item>
   <item name="av.goal.daily.207.hint"><![CDATA[Uluslararası Dükkan Organizasyonu ISO, dükkan sahipleri arasında dünya çapında bir yarışma düzenliyor. Bugün gerekli sayıda ürün satışı yapanlar en iyi biçimde ödüllendirilecek.]]></item>
   <item name="av.goal.daily.207.rewardMsg"><![CDATA[Tebrikler! Kazandın, ödülün burada. Onu hak ettin!]]></item>

@@ -1,333 +1,333 @@
 <Soundassets>
-	<Event name="xp_count">
+	<Event name="xp_count" >
 		<SoundName>xp_count</SoundName>
 	</Event>	
-	<Event name="unlock">
+	<Event name="unlock" >
 		<SoundName>unlock</SoundName>
 	</Event>	
-	<Event name="unload">
+	<Event name="unload" >
 		<SoundName>unload</SoundName>
 	</Event>	
-	<Event name="undock_plane">
+	<Event name="undock_plane" >
 		<SoundName>undock_plane</SoundName>
 	</Event>	
-	<Event name="task_complete">
+	<Event name="task_complete" >
 		<SoundName>task_complete</SoundName>
 	</Event>	
-	<Event name="start_construction">
+	<Event name="start_construction" >
 		<SoundName>start_construction</SoundName>
 	</Event>	
-	<Event name="flightmap_mousover">
+	<Event name="flightmap_mousover" >
 		<SoundName>flightmap_mousover</SoundName>
 	</Event>
-	<Event name="send_gift">
+	<Event name="send_gift" >
 		<SoundName>send_gift</SoundName>
 	</Event>	
-	<Event name="receive_gift">
+	<Event name="receive_gift" >
 		<SoundName>receive_gift</SoundName>
 	</Event>	
-	<Event name="collect_item">
+	<Event name="collect_item" >
 		<SoundName>collect_item</SoundName>
 	</Event>
-	<Event name="open_news">
+	<Event name="open_news" >
 		<SoundName>open_news</SoundName>
 	</Event>	
-	<Event name="open_hangar">
+	<Event name="open_hangar" >
 		<SoundName>open_hangar</SoundName>
 	</Event>	
-	<Event name="load_passenger_plane">
+	<Event name="load_passenger_plane" >
 		<SoundName>load_passenger_plane</SoundName>
 	</Event>	
-	<Event name="load_cargo_plane">
+	<Event name="load_cargo_plane" >
 		<SoundName>load_cargo_plane</SoundName>
 	</Event>	
-	<Event name="level_up">
+	<Event name="level_up" >
 		<SoundName>level_up</SoundName>
 	</Event>	
-	<Event name="fuel_plane">
+	<Event name="fuel_plane" >
 		<SoundName>fuel_plane</SoundName>
 	</Event>	
-	<Event name="complete">
+	<Event name="complete" >
 		<SoundName>complete</SoundName>
 	</Event>	
-	<Event name="coin_count">
+	<Event name="coin_count" >
 		<SoundName>coin_count</SoundName>
 	</Event>	
-	<Event name="collect_passengers">
+	<Event name="collect_passengers" >
 		<SoundName>collect_passengers</SoundName>
 	</Event>	
-	<Event name="close_hangar">
+	<Event name="close_hangar" >
 		<SoundName>close_hangar</SoundName>
 	</Event>	
-	<Event name="busy">
+	<Event name="busy" >
 		<SoundName>busy</SoundName>
 	</Event>	
-	<Event name="buy_plane">
+	<Event name="buy_plane" >
 		<SoundName>buy_plane</SoundName>
 	</Event>	
-	<Event name="bonus_circle">
+	<Event name="bonus_circle" >
 		<SoundName>bonus_circle</SoundName>
 	</Event>	
-	<Event name="add_friend">
+	<Event name="add_friend" >
 		<SoundName>add_friend</SoundName>
 	</Event>	
-	<Event name="start">
+	<Event name="start" >
 		<SoundName>start</SoundName>
 	</Event>
-	<Event name="special_message">
+	<Event name="special_message" >
 		<SoundName>special_message</SoundName>
 	</Event>
-	<Event name="slide">
+	<Event name="slide" >
 		<SoundName>slide</SoundName>
 	</Event>
-	<Event name="open_submenu">
+	<Event name="open_submenu" >
 		<SoundName>open_submenu</SoundName>
 	</Event>
-	<Event name="ok">
+	<Event name="ok" >
 		<SoundName>ok</SoundName>
 	</Event>
-	<Event name="negative">
+	<Event name="negative" >
 		<SoundName>negative</SoundName>
 	</Event>
-	<Event name="mouseover">
+	<Event name="mouseover" >
 		<SoundName>mouseover</SoundName>
 	</Event>
-	<Event name="message">
+	<Event name="message" >
 		<SoundName>message</SoundName>
 	</Event>
-	<Event name="click">
+	<Event name="click" >
 		<SoundName>click</SoundName>
 	</Event>	
-	<Event name="passenger_popup">
+	<Event name="passenger_popup" >
 		<SoundName>passenger_popup</SoundName>
 	</Event>
-	<Event name="aircash">
+	<Event name="aircash" >
 		<SoundName>aircash_01</SoundName>
 		<SoundName>aircash_02</SoundName>
 	</Event>	
-	<Event name="helper">
+	<Event name="helper" >
 		<SoundName>helper</SoundName>
 	</Event>
-	<Event name="plane_turboprop_idle">
+	<Event name="plane_turboprop_idle" >
 		<SoundName>plane_turboprop_idle</SoundName>
 	</Event>
-	<Event name="plane_small_turboprop_take_off">
+	<Event name="plane_small_turboprop_take_off" >
 		<SoundName>plane_small_turboprop_take_off_01</SoundName>
 	</Event>
-	<Event name="plane_small_turboprop_land">
+	<Event name="plane_small_turboprop_land" >
 		<SoundName>plane_small_turboprop_land_02</SoundName>
 		<SoundName>plane_small_turboprop_land_01</SoundName>
 	</Event>
-	<Event name="plane_small_prop_take_off">
+	<Event name="plane_small_prop_take_off" >
 		<SoundName>plane_small_prop_take_off_03</SoundName>
 		<SoundName>plane_small_prop_take_off_02</SoundName>
 		<SoundName>plane_small_prop_take_off_01</SoundName>
 	</Event>
-	<Event name="plane_small_prop_land">
+	<Event name="plane_small_prop_land" >
 		<SoundName>plane_small_prop_land_02</SoundName>
 		<SoundName>plane_small_prop_land_01</SoundName>
 	</Event>
-	<Event name="seaplane_small_prop_take_off">
+	<Event name="seaplane_small_prop_take_off" >
 		<SoundName>plane_small_prop_take_off_03</SoundName>
 		<SoundName>plane_small_prop_take_off_02</SoundName>
 		<SoundName>plane_small_prop_take_off_01</SoundName>
 	</Event>
-	<Event name="seaplane_small_prop_land">
+	<Event name="seaplane_small_prop_land" >
 		<SoundName>plane_small_prop_land_02</SoundName>
 		<SoundName>plane_small_prop_land_01</SoundName>
 	</Event>
-	<Event name="seaplane_jet_idle">
+	<Event name="seaplane_jet_idle" >
 		<SoundName>plane_jet_idle</SoundName>
 	</Event>
-	<Event name="plane_small_jet_take_off">
+	<Event name="plane_small_jet_take_off" >
 		<SoundName>plane_small_jet_take_off_01</SoundName>
 	</Event>
-	<Event name="plane_small_jet_land">
+	<Event name="plane_small_jet_land" >
 		<SoundName>plane_small_jet_land_01</SoundName>
 	</Event>
-	<Event name="plane_prop_idle">
+	<Event name="plane_prop_idle" >
 		<SoundName>plane_prop_idle</SoundName>
 	</Event>
-	<Event name="seaplane_prop_idle">
+	<Event name="seaplane_prop_idle" >
 		<SoundName>plane_prop_idle</SoundName>
 	</Event>
-	<Event name="plane_medium_turboprop_take_off">
+	<Event name="plane_medium_turboprop_take_off" >
 		<SoundName>plane_medium_turboprop_take_off_02</SoundName>
 		<SoundName>plane_medium_turboprop_take_off_01</SoundName>
 	</Event>
-	<Event name="plane_medium_turboprop_land">
+	<Event name="plane_medium_turboprop_land" >
 		<SoundName>plane_medium_turboprop_land_03</SoundName>
 		<SoundName>plane_medium_turboprop_land_02</SoundName>
 		<SoundName>plane_medium_turboprop_land_01</SoundName>
 	</Event>
-	<Event name="plane_medium_prop_take_off">
+	<Event name="plane_medium_prop_take_off" >
 		<SoundName>plane_medium_prop_take_off_01</SoundName>
 	</Event>
-	<Event name="plane_medium_prop_land">
+	<Event name="plane_medium_prop_land" >
 		<SoundName>plane_medium_prop_land_01</SoundName>
 	</Event>
-	<Event name="seaplane_medium_prop_take_off">
+	<Event name="seaplane_medium_prop_take_off" >
 		<SoundName>plane_medium_prop_take_off_01</SoundName>
 	</Event>
-	<Event name="seaplane_medium_prop_land">
+	<Event name="seaplane_medium_prop_land" >
 		<SoundName>plane_medium_prop_land_01</SoundName>
 	</Event>
-	<Event name="seaplane_small_jet_take_off">
+	<Event name="seaplane_small_jet_take_off" >
 		<SoundName>plane_small_jet_take_off_01</SoundName>
 	</Event>
-	<Event name="seaplane_small_jet_land">
+	<Event name="seaplane_small_jet_land" >
 		<SoundName>plane_small_jet_land_01</SoundName>
 	</Event>
-	<Event name="seaplane_medium_jet_take_off">
+	<Event name="seaplane_medium_jet_take_off" >
 		<SoundName>plane_small_jet_take_off_01</SoundName>
 	</Event>
-	<Event name="seaplane_medium_jet_land">
+	<Event name="seaplane_medium_jet_land" >
 		<SoundName>plane_small_jet_land_01</SoundName>
 	</Event>
-	<Event name="plane_medium_jet_take_off">
+	<Event name="plane_medium_jet_take_off" >
 		<SoundName>plane_medium_jet_take_off_03</SoundName>
 		<SoundName>plane_medium_jet_take_off_02</SoundName>
 		<SoundName>plane_medium_jet_take_off_01</SoundName>
 	</Event>
-	<Event name="plane_medium_jet_land">
+	<Event name="plane_medium_jet_land" >
 		<SoundName>plane_medium_jet_land_03</SoundName>
 		<SoundName>plane_medium_jet_land_02</SoundName>
 		<SoundName>plane_medium_jet_land_01</SoundName>
 	</Event>
-	<Event name="plane_jet_idle">
+	<Event name="plane_jet_idle" >
 		<SoundName>plane_jet_idle</SoundName>
 	</Event>
-	<Event name="helicopter_zeppelin_idle">
+	<Event name="helicopter_zeppelin_idle" >
 		<SoundName>space_zeppelin_engine_idle_loop_01</SoundName>
 	</Event>
-	<Event name="helicopter_medium_zeppelin_land">
+	<Event name="helicopter_medium_zeppelin_land" >
 		<SoundName>space_zeppelin_engine_land_01</SoundName>
 	</Event>
-	<Event name="helicopter_medium_zeppelin_take_off">
+	<Event name="helicopter_medium_zeppelin_take_off" >
 		<SoundName>space_zeppelin_engine_take_off_01</SoundName>
 	</Event>	
-	<Event name="helicopter_small_balloon_idle">
+	<Event name="helicopter_small_balloon_idle" >
 		<SoundName>helicopter_small_balloon_idle</SoundName>
 	</Event>
-	<Event name="helicopter_small_balloon_land">
+	<Event name="helicopter_small_balloon_land" >
 		<SoundName>helicopter_small_balloon_land</SoundName>
 	</Event>
-	<Event name="helicopter_small_balloon_take_off">
+	<Event name="helicopter_small_balloon_take_off" >
 		<SoundName>helicopter_small_balloon_take_off</SoundName>
 	</Event>		
-	<Event name="helicopter_balloon_idle">
+	<Event name="helicopter_balloon_idle" >
 		<SoundName>helicopter_medium_balloon_idle</SoundName>
 	</Event>
-	<Event name="helicopter_balloon_land">
+	<Event name="helicopter_balloon_land" >
 		<SoundName>helicopter_medium_balloon_land</SoundName>
 	</Event>
-	<Event name="helicopter_balloon_take_off">
+	<Event name="helicopter_balloon_take_off" >
 		<SoundName>helicopter_medium_balloon_take_off</SoundName>
 	</Event>	
-	<Event name="helicopter_medium_balloon_idle">
+	<Event name="helicopter_medium_balloon_idle" >
 		<SoundName>helicopter_medium_balloon_idle</SoundName>
 	</Event>
-	<Event name="helicopter_medium_balloon_land">
+	<Event name="helicopter_medium_balloon_land" >
 		<SoundName>helicopter_medium_balloon_land</SoundName>
 	</Event>
-	<Event name="helicopter_medium_balloon_take_off">
+	<Event name="helicopter_medium_balloon_take_off" >
 		<SoundName>helicopter_medium_balloon_take_off</SoundName>
 	</Event>	
-	<Event name="plane_large_jet_take_off">
+	<Event name="plane_large_jet_take_off" >
 		<SoundName>plane_big_jet_take_off_04</SoundName>
 		<SoundName>plane_big_jet_take_off_03</SoundName>
 		<SoundName>plane_big_jet_take_off_02</SoundName>
 		<SoundName>plane_big_jet_take_off_01</SoundName>
 	</Event>
-	<Event name="plane_large_jet_land">
+	<Event name="plane_large_jet_land" >
 		<SoundName>plane_big_jet_land_04</SoundName>
 		<SoundName>plane_big_jet_land_03</SoundName>
 		<SoundName>plane_big_jet_land_02</SoundName>
 		<SoundName>plane_big_jet_land_01</SoundName>
 	</Event>
 	
-	<Event name="helicopter_small_ufo_land">
+	<Event name="helicopter_small_ufo_land" >
 		<SoundName>helicopter_ufo_land_01</SoundName>
 	</Event>
-	<Event name="helicopter_small_ufo_take_off">
+	<Event name="helicopter_small_ufo_take_off" >
 		<SoundName>helicopter_ufo_take_off_01</SoundName>
 	</Event>
-	<Event name="helicopter_medium_ufo_land">
+	<Event name="helicopter_medium_ufo_land" >
 		<SoundName>helicopter_ufo_land_01</SoundName>
 	</Event>
-	<Event name="helicopter_medium_ufo_take_off">
+	<Event name="helicopter_medium_ufo_take_off" >
 		<SoundName>helicopter_ufo_take_off_01</SoundName>
 	</Event>
-	<Event name="plane_small_ufo_land">
+	<Event name="plane_small_ufo_land" >
 		<SoundName>plane_ufo_land_01</SoundName>
 		<SoundName>plane_ufo_land_02</SoundName>
 	</Event>
-	<Event name="plane_small_ufo_take_off">
+	<Event name="plane_small_ufo_take_off" >
 		<SoundName>plane_ufo_take_off_01</SoundName>
 	</Event>
-	<Event name="plane_medium_ufo_land">
+	<Event name="plane_medium_ufo_land" >
 		<SoundName>plane_ufo_land_01</SoundName>
 		<SoundName>plane_ufo_land_02</SoundName>
 	</Event>
-	<Event name="plane_medium_ufo_take_off">
+	<Event name="plane_medium_ufo_take_off" >
 		<SoundName>plane_ufo_take_off_01</SoundName>
 	</Event>
 	
-	<Event name="flyby_prop">
+	<Event name="flyby_prop" >
 		<SoundName>plane_prop_flyby_01</SoundName>
 		<SoundName>plane_prop_flyby_02</SoundName>
 	</Event>
-	<Event name="flyby_turboprop">
+	<Event name="flyby_turboprop" >
 		<SoundName>plane_turboprop_flyby_01</SoundName>
 		<SoundName>plane_turboprop_flyby_02</SoundName>
 		<SoundName>plane_turboprop_flyby_03</SoundName>
 	</Event>
-	<Event name="flyby_jet">
+	<Event name="flyby_jet" >
 		<SoundName>plane_jet_flyby_01</SoundName>
 		<SoundName>plane_jet_flyby_02</SoundName>
 		<SoundName>plane_jet_flyby_03</SoundName>
 	</Event>
-	<Event name="flyby_rotor">
+	<Event name="flyby_rotor" >
 		<!-- replace this with a real flyby sound -->
 		<SoundName>helicopter_big_idle</SoundName>
 	</Event>
-	<Event name="plane_tire_squeal">
+	<Event name="plane_tire_squeal" >
 		<SoundName>plane_tire_squeal_01</SoundName>
 		<SoundName>plane_tire_squeal_02</SoundName>
 		<SoundName>plane_tire_squeal_03</SoundName>
 	</Event>
-	<Event name="helicopter_rotor_idle">
+	<Event name="helicopter_rotor_idle" >
 		<SoundName>helicopter_big_idle</SoundName>
 	</Event>
-	<Event name="helicopter_medium_rotor_land">
+	<Event name="helicopter_medium_rotor_land" >
 		<SoundName>helicopter_big_land</SoundName>
 	</Event>
-	<Event name="helicopter_medium_rotor_take_off">
+	<Event name="helicopter_medium_rotor_take_off" >
 		<SoundName>helicopter_big_take_off</SoundName>
 	</Event>
-	<Event name="helicopter_small_rotor_land">
+	<Event name="helicopter_small_rotor_land" >
 		<SoundName>helicopter_small_land</SoundName>
 	</Event>
-	<Event name="helicopter_small_rotor_take_off">
+	<Event name="helicopter_small_rotor_take_off" >
 		<SoundName>helicopter_small_take_off</SoundName>
 	</Event>
-	<Event name="seaplane_take_off">
+	<Event name="seaplane_take_off" >
 		<SoundName>seaplane_take_off</SoundName>
 	</Event>
-	<Event name="seaplane_land">
+	<Event name="seaplane_land" >
 		<SoundName>seaplane_land</SoundName>
 	</Event>
 	
-	<Event name="luggage_ambience">
+	<Event name="luggage_ambience" >
 		<SoundName>luggage_ambience</SoundName>
 	</Event>
-	<Event name="luggage_spin_music">
+	<Event name="luggage_spin_music" >
 		<SoundName>luggage_spin_music</SoundName>
 	</Event>
-	<Event name="luggage_spin_win">
+	<Event name="luggage_spin_win" >
 		<SoundName>luggage_spin_win</SoundName>
 	</Event>
-	<Event name="xmas_firework">
+	<Event name="xmas_firework" >
 		<SoundName>xmas_firework_01</SoundName>
 		<SoundName>xmas_firework_02</SoundName>
 		<SoundName>xmas_firework_03</SoundName>

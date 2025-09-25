@@ -1068,9 +1068,12 @@
   <item name="av.building.xmas2020_seaplane"><![CDATA[SnøRama X20]]></item>
   <item name="av.building.xmas2020_mediumplane"><![CDATA[Zero G X20]]></item>
   <item name="av.building.xmas2020_largeplane"><![CDATA[Ising 636 X20]]></item>
+  
   <item name="av.building.airstrip_birthday2021_large"><![CDATA[Stor bursdagsrullebane]]></item>
   <item name="av.building.airstrip_birthday2022_large"><![CDATA[Stor bursdagsrullebane]]></item>
   <item name="av.building.airstrip_birthday2023_large"><![CDATA[Stor bursdagsrullebane]]></item>
+  <item name="av.building.airstrip_birthday2024_large"><![CDATA[Stor bursdagsrullebane]]></item>
+  <item name="av.building.airstrip_birthday2025_large"><![CDATA[Stor bursdagsrullebane]]></item>	 
   
   <item name="av.building.smallplane_mm_2022"><![CDATA[Ja-Lopy]]></item>
   <item name="av.building.madmax2022_background"><![CDATA[Fremtidsbakgrunn]]></item>
@@ -1108,7 +1111,59 @@
   <item name="av.building.valentines2024_smallplane1b"><![CDATA[VAL-SB1]]></item>
   <item name="av.building.valentines2024_smallplane2"><![CDATA[VAL-S2]]></item>
   
+  <item name="av.building.easter2024_smallplane1"><![CDATA[EAS-S1]]></item>
+  <item name="av.building.easter2024_smallplane1b"><![CDATA[EAS-SB1]]></item>
+  <item name="av.building.easter2024_smallplane2"><![CDATA[EAS-S2]]></item>
+  
+  <item name="av.building.easter2024_background"><![CDATA[Fin utsikt]]></item>
+  
+	<item name="av.building.birthday2024_largeplane_01"><![CDATA[SRBE2024-LP01]]></item>
+	<item name="av.building.birthday2024_largeplane_02"><![CDATA[SRBE2024-LP02]]></item>
+	<item name="av.building.birthday2024_largeplane_03"><![CDATA[SRBE2024-LP03]]></item>
+	<item name="av.building.birthday2024_largeplane_04"><![CDATA[SRBE2024-LP04]]></item>
+	<item name="av.building.birthday2024_largeplane_05"><![CDATA[SRBE2024-LP05]]></item>
+	<item name="av.building.birthday2024_deco"><![CDATA[SRBE2024-DC01]]></item>
+	<item name="av.building.birthdaytower_2024"><![CDATA[SRBE2024-BT13]]></item>
+	<item name="av.building.birthday2024_spaceship"><![CDATA[SP4C3SH1P-2024]]></item>
+
+  <item name="av.building.concorde_recolor2024"><![CDATA[SRS-LP1]]></item>
+  <item name="av.building.july2024_largeplane_01"><![CDATA[SRS-LP2]]></item>
+  
+  <item name="av.building.sep2024_cargo"><![CDATA[S3KC-390]]></item>
+  <item name="av.building.sep2024_loon"><![CDATA[SEP24-HAB]]></item>
+  
+  <item name="av.building.halloween2024_background"><![CDATA[Grøsspanorama 2024]]></item>
+  <item name="av.building.halloween2024_concorde"><![CDATA[Dr4-CulA]]></item>
+  <item name="av.building.halloween2024_777"><![CDATA[Fr4nk-Enst31n]]></item>
+  
+  <item name="av.building.spaceevent2024_rocket"><![CDATA[L4G0-R0K-3T]]></item>
+  <item name="av.building.spaceevent2024_large_runway"><![CDATA[RUN-W4Y]]></item>
+  <item name="av.building.spaceevent2024_largeplane"><![CDATA[SP4C3-LP]]></item>
+  <item name="av.building.spaceevent2024_mediumplane"><![CDATA[SP4C3-MP]]></item>
+  <item name="av.building.spaceevent2024_jet"><![CDATA[SP4C3-J3T]]></item>
+  <item name="av.building.spaceevent2024_background"><![CDATA[Uendelige vidder]]></item>
+  
+  <item name="av.building.valentines2025_plane01"><![CDATA[LUV-PL4N3-01]]></item>
+  <item name="av.building.valentines2025_plane02"><![CDATA[LUV-L4RG3]]></item>
+  <item name="av.building.valentines2025_loon"><![CDATA[LUV-L00N]]></item>  
+
+  <item name="av.building.spring2025_plane01"><![CDATA[SPRNG-WPLN-01]]></item>
+  <item name="av.building.spring2025_plane02"><![CDATA[SPRNG-WPLN-02]]></item>
+  <item name="av.building.spring2025_plane03"><![CDATA[SPRNG-WPLN-03]]></item>
+	 
+  <item name="av.building.birthday2025_loon"><![CDATA[D1SC0-LOoN]]></item>
+  <item name="av.building.birthday2025_plane01"><![CDATA[D1SC0-PL4N3-01]]></item>
+  <item name="av.building.birthday2025_plane02"><![CDATA[D1SC0-J3T]]></item>
+  <item name="av.building.birthday2025_plane03"><![CDATA[D1SC0-M3D1]]></item>
+  <item name="av.building.birthday2025_plane04"><![CDATA[D1SC0-M3D2]]></item>
+  <item name="av.building.birthday2025_plane05"><![CDATA[D1SC0-L4Rg3]]></item>
+  
+  <item name="av.building.summer2025_plane01"><![CDATA[SUN-LRG01]]></item>
+  <item name="av.building.summer2025_plane02"><![CDATA[SUN-LRG02]]></item>
+  <item name="av.building.summer2025_plane03"><![CDATA[SUN-K1SS]]></item>  
+        
  </category>
+ 
  <category name="av.storeitem">
   <item name="av.storeitem.s_prop1"><![CDATA[Frakter passasjerer for å lage Luftmynter og EP]]></item>
   <item name="av.storeitem.s_prop_cargo1"><![CDATA[Frakter varer for å supplere tax free butikkene. Dette flyet vil løfte dine inntekter!]]></item>
@@ -1916,9 +1971,12 @@
   <item name="av.storeitem.xmas2020_seaplane"><![CDATA[Begrenset opplag]]></item>
   <item name="av.storeitem.xmas2020_mediumplane"><![CDATA[Begrenset opplag]]></item>
   <item name="av.storeitem.xmas2020_largeplane"><![CDATA[Begrenset opplag]]></item>
+  
   <item name="av.storeitem.airstrip_birthday2021_large"><![CDATA[Her lander store fly]]></item>
   <item name="av.storeitem.airstrip_birthday2022_large"><![CDATA[Her lander store fly]]></item>
   <item name="av.storeitem.airstrip_birthday2023_large"><![CDATA[Her lander store fly]]></item>
+  <item name="av.storeitem.airstrip_birthday2024_large"><![CDATA[Her lander store fly]]></item>
+  <item name="av.storeitem.airstrip_birthday2025_large"><![CDATA[Her lander store fly]]></item>	 
   
   <item name="av.storeitem.smallplane_mm_2022"><![CDATA[Begrenset opplag]]></item>
   <item name="av.storeitem.madmax2022_background"><![CDATA[Begrenset opplag]]></item>
@@ -1955,6 +2013,57 @@
   <item name="av.storeitem.valentines2024_smallplane1"><![CDATA[Begrenset opplag]]></item>
   <item name="av.storeitem.valentines2024_smallplane1b"><![CDATA[Begrenset opplag]]></item>
   <item name="av.storeitem.valentines2024_smallplane2"><![CDATA[Begrenset opplag]]></item>
+  
+  <item name="av.storeitem.easter2024_smallplane1"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.easter2024_smallplane1b"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.easter2024_smallplane2"><![CDATA[Begrenset opplag]]></item>
+  
+  <item name="av.storeitem.easter2024_background"><![CDATA[Denne fine utsikten får flypassasjerenes hjerter til å smelte!]]></item>
+  
+	<item name="av.storeitem.birthday2024_largeplane_01"><![CDATA[Begrenset opplag]]></item>
+	<item name="av.storeitem.birthday2024_largeplane_02"><![CDATA[Begrenset opplag]]></item>
+	<item name="av.storeitem.birthday2024_largeplane_03"><![CDATA[Begrenset opplag]]></item>
+	<item name="av.storeitem.birthday2024_largeplane_04"><![CDATA[Begrenset opplag]]></item>
+	<item name="av.storeitem.birthday2024_largeplane_05"><![CDATA[Begrenset opplag]]></item>
+	<item name="av.storeitem.birthday2024_deco"><![CDATA[Passasjerer: +{number} Radius: {radius}}]]></item>
+	<item name="av.storeitem.birthdaytower_2024"><![CDATA[Samler inn {number} passasjer(er) hvert {minutes}. minutt]]></item>
+	<item name="av.storeitem.birthday2024_spaceship"><![CDATA[Begrenset opplag]]></item>   
+
+  <item name="av.storeitem.concorde_recolor2024"><![CDATA[Begrenset opplag]]></item> 
+  <item name="av.storeitem.july2024_largeplane_01"><![CDATA[Begrenset opplag]]></item>
+  
+  <item name="av.storeitem.sep2024_cargo"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.sep2024_loon"><![CDATA[Begrenset opplag]]></item>
+  
+  <item name="av.storeitem.halloween2024_background"><![CDATA[Skummel utsikt]]></item>
+  <item name="av.storeitem.halloween2024_concorde"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.halloween2024_777"><![CDATA[Begrenset opplag]]></item>
+  
+  <item name="av.storeitem.spaceevent2024_rocket"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.spaceevent2024_large_runway"><![CDATA[Her lander store fly]]></item>
+  <item name="av.storeitem.spaceevent2024_largeplane"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.spaceevent2024_mediumplane"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.spaceevent2024_jet"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.spaceevent2024_background"><![CDATA[Galaktisk utsikt]]></item>
+  
+  <item name="av.storeitem.valentines2025_plane01"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.valentines2025_plane02"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.valentines2025_loon"><![CDATA[Begrenset opplag]]></item>  
+
+  <item name="av.storeitem.spring2025_plane01"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.spring2025_plane02"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.spring2025_plane03"><![CDATA[Begrenset opplag]]></item>
+	 
+  <item name="av.storeitem.birthday2025_loon"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.birthday2025_plane01"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.birthday2025_plane02"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.birthday2025_plane03"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.birthday2025_plane04"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.birthday2025_plane05"><![CDATA[Begrenset opplag]]></item>
+  
+  <item name="av.storeitem.summer2025_plane01"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.summer2025_plane02"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.summer2025_plane03"><![CDATA[Begrenset opplag]]></item>  
   
  </category>
 </language>

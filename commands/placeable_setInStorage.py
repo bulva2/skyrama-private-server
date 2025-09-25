@@ -40,3 +40,9 @@ def handle_placeableSetInStorage(request, user_id, rpcResult, items_to_add_to_ob
         if int(i["id"]) == int(request["p"]["obj_id"]):
           i["position_x"] = request["p"]["x"]
           i["position_y"] = request["p"]["y"]
+    elif request["p"]["obj_type"] == "hangar":
+      for i in json_data["hangars"]:
+        if int(i["id"]) == int(request["p"]["obj_id"]):
+          i["position_x"] = request["p"]["x"]
+          i["position_y"] = request["p"]["y"]
+

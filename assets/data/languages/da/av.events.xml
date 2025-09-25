@@ -257,4 +257,17 @@
   <item name="av.skyrace2017.text"><![CDATA[Er du klar til, at flyve skyhøjt? Deltag i Skyrace og bevis alle, at du er den bedste pilot i Skyrama!]]></item>
   <item name="av.skyrace2017.mouseover"><![CDATA[Skyrace er her! Det er på tide, at fjerne fartgrænsen!]]></item>
  </category>
+ 
+ <category name="av.spaceevent2024">
+  <item name="av.spaceevent2024.title"><![CDATA[Galaktiske Uger]]></item>
+  <item name="av.spaceevent2024.text"><![CDATA[Under et galaktisk event skød Tariq en armada af fantastiske rumskibe ned fra himlen. Nu inviterer han dig til syv opgaver, der giver et indblik i hans futuristiske lufthavnsdagligdag. Tag med på en kosmisk fremtid fyldt med eventyr!]]></item>
+  <item name="av.spaceevent2024.mouseover"><![CDATA[Stjernerne kalder! Tænd for motorerne og erobr universet med svimlende hastighed!]]></item>
+ </category>
+ 
+ <category name="av.birthdayevent2025">
+  <item name="av.birthdayevent2025.title"><![CDATA[Saturday Nightflight]]></item>
+  <item name="av.birthdayevent2025.text"><![CDATA[14 år med Skyrama – blondt hår er valgfrit. Lårene sitrer, beaten vibrerer, og kærlighedshåndtagene gynger i takt. Forkæl dig selv med en boblende Aerosol Spritz og andre frække drinks til den luftige fødselsdagsfest. Ud på landingsbanen – og glid direkte ind i nydelsen!]]></item>
+  <item name="av.birthdayevent2025.mouseover"><![CDATA[Lysene slukket, spotlyset tændt! Saturday Nightflight letter – destination: tophemmelig bikinizone. Adgang kun med hoftevrik!]]></item>
+ </category> 
+  
 </language>

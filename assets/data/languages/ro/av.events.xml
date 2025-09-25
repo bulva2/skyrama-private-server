@@ -255,4 +255,17 @@
   <item name="av.skyrace2017.text"><![CDATA[Eşti gata să zbori la limita cerului? Participă la competiţia Sky Race şi demonstrează tuturor că eşti cel mai bun pilot din Skyrama!]]></item>
   <item name="av.skyrace2017.mouseover"><![CDATA[Este timpul pentru Sky Race! Accelerează la maximum!]]></item>
  </category>
+ 
+ <category name="av.spaceevent2024">
+  <item name="av.spaceevent2024.title"><![CDATA[Săptămâni Galactice]]></item>
+  <item name="av.spaceevent2024.text"><![CDATA[Într-un eveniment galactic, Tariq a doborât din cer o armată de nave spațiale uimitoare. Acum te invită să participi la șapte misiuni în rutina sa futuristă de la aeroport. Pornește într-un viitor cosmic plin de aventuri!]]></item>
+  <item name="av.spaceevent2024.mouseover"><![CDATA[Stelele te cheamă! Activează motoarele și cucerește universul cu o viteză amețitoare!]]></item>
+ </category>
+ 
+ <category name="av.birthdayevent2025">
+  <item name="av.birthdayevent2025.title"><![CDATA[Saturday Nightflight]]></item>
+  <item name="av.birthdayevent2025.text"><![CDATA[Skyrama împlinește 14 ani – părul blond este opțional. Coapsele tremură, beat-ul vibrează, iar colăceii se leagănă pe ritm. Răsfață-te cu un spumos Aerosol Spritz și alte băuturi năstrușnice la această petrecere aniversară la înălțime. Pe pista de decolare – și alunecă direct spre plăcere!]]></item>
+  <item name="av.birthdayevent2025.mouseover"><![CDATA[Luminile se sting, reflectorul se aprinde! Saturday Nightflight decolează – destinație: zonă de bikini strict secretă. Accesul se face doar cu mișcări senzuale din șolduri!]]></item>
+ </category> 
+ 
 </language>

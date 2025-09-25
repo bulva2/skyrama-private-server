@@ -6,7 +6,6 @@ def calculate_warehouse_capacity(upgrade_level, init_data):
     upgrade_amount = int(init_data["cargoUpgrades"][1]["increment"])
     warehouse_capacity = start_amount + \
         (int(upgrade_level) - 1) * upgrade_amount
-    print(f"Warehouse capacity = {warehouse_capacity}")
 
     return warehouse_capacity
 
@@ -50,6 +49,8 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
 
             wares_revenue = int(i["wares_revenue"])
 
+            contents_count = int(i["contents_count"])
+
             souvenir_types_id = int(i["souvenir_types_id"])
 
             for g in init_data["planeTypes"]:
@@ -59,27 +60,25 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                     quick_buddy_serve_coins_cost = g["quick_buddy_serve_coins_cost"]
                     #####################################################################################
                     if "air_coins" in request["p"]:
-                        json_data["playerData"]["air_coins"] = json_data["playerData"]["air_coins"] + \
-                            request["p"]["air_coins"]
+                        json_data["playerData"]["air_coins"] = json_data["playerData"]["air_coins"] + request["p"]["air_coins"]
                     #####################################################################################
                     elif "xp" in request["p"]:
-                        json_data["playerData"]["xp"] = json_data["playerData"]["xp"] + \
-                            request["p"]["xp"]
+                        json_data["playerData"]["xp"] = json_data["playerData"]["xp"] + request["p"]["xp"]
                     #####################################################################################
                     elif "buddy_points" in request["p"]:
                         for h in json_data["buddyStuff"]["buddies"]:
-                            if int(request["p"]["owner_id"]) == int(user_id):
+                            if int(request["p"]["owner_id"]) == int(user_id): # plane sent by you
                                 if int(h["hi_player_id"]) == int(i["to_player_id"]):
                                     # Possible cheat, disconnect user
                                     if int(request["p"]["buddy_points"]) != buddy_points:
                                         rpcResult["i"] = -1
-                                    h["buddy_points"] = int(
-                                        h["buddy_points"]) + int(request["p"]["buddy_points"])
+                                    h["buddy_points"] = int(h["buddy_points"]) + int(request["p"]["buddy_points"])
+                                    break
 
-                            else:
+                            else: # plane sent by your friend
                                 if int(h["hi_player_id"]) == int(i["player_id"]):
-                                    h["buddy_points"] = int(
-                                        h["buddy_points"]) + buddy_points
+                                    h["buddy_points"] = int(h["buddy_points"]) + buddy_points
+                                    break
                     #####################################################################################
                     elif "cargo" in request["p"]:
                         for h in json_data["locations"]:
@@ -94,7 +93,7 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                             if int(k["cargo_types_id"]) == cargo_type:
                                 setup_new_cargo_item = False
                                 # Possible cheat, disconnect user
-                                if int(request["p"]["cargo"] != wares_revenue):
+                                if int(request["p"]["cargo"] != contents_count):
                                     rpcResult["i"] = -1
                                 k["num_in_warehouse"] += int(
                                     request["p"]["cargo"])
@@ -192,8 +191,8 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                 ##########################################################
                 if "xp" in request["p"]:
                     if (int(request["t"]) - int(i["start_service_time"])) < (int(service_time) / 3) or int(i["start_service_time"]) == 0:  # Own plane
-                        json_data["playerData"]["air_cash"] = int(
-                            json_data["playerData"]["air_cash"]) - int(quick_start_coins_cost)
+                        if int(request["t"]) > int(json_data["playerData"]["aycqs_start_time"]):
+                            json_data["playerData"]["air_cash"] -= int(quick_start_coins_cost)
 
             elif int(request["p"]["owner_id"]) != int(user_id):
                 # Add xp as temporary fix. Plane id 0 = Cashcow
@@ -203,8 +202,6 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                 if ("xp" in request["p"]) or (int(request["p"]["plane_id"]) == 0 and "air_coins" in request["p"]):
                     # Buddy plane
                     if (request["t"] - i["start_service_time"]) < service_time or i["start_service_time"] == 0:
-                        json_data["playerData"]["air_cash"] = json_data["playerData"]["air_cash"] - \
-                            quick_buddy_serve_coins_cost
-                        print("Quick Service used (check if true)")
-
+                        if int(request["t"]) > int(json_data["playerData"]["aycqs_start_time"]):
+                            json_data["playerData"]["air_cash"] -= quick_buddy_serve_coins_cost
         j = j + 1
