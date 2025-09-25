@@ -87,6 +87,7 @@ def main():
         "map_extensions.buy": handle_mapExpansionsBuy,
         "hangars.buy": handle_hangarsBuy,
         "buddy.collectPassenger": handle_buddyCollectPassenger,
+        "crafting.buySlot": handle_craftingBuySlot
     }
     logging.info("Loading init data...")
     
