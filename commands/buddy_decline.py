@@ -2,7 +2,7 @@ import time
 from pathlib import Path
 import os
 import json
-import userManager
+import src.userManager as userManager
 
 def handle_buddyDecline(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
@@ -26,15 +26,11 @@ def handle_buddyDecline(request, user_id, rpcResult, items_to_add_to_obj, json_d
     
     g = 0
     for i in json_data["buddyStuff"]["buddies"]:
-      print(i["hi_player_id"])
-      print(request["p"]["buddyId"])
       if str(i["hi_player_id"]) == str(request["p"]["buddyId"]) and str(i["lo_player_id"]) == str(user_id):
         json_data["buddyStuff"]["buddies"].pop(g)
       g = g + 1
     g = 0    
     for j in json2_data["buddyStuff"]["buddies"]:
-      print(j["hi_player_id"])
-      print(request["p"]["buddyId"])
       if str(j["lo_player_id"]) == str(request["p"]["buddyId"]) and str(j["hi_player_id"]) == str(user_id):
         json2_data["buddyStuff"]["buddies"].pop(g)
       g = g + 1

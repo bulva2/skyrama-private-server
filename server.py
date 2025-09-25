@@ -1,33 +1,25 @@
-if __name__ == '__main__':
-      
-    #######################
-    # Import server stuff #
-    #######################
-    from commands import *
-    from bundle import TEMPLATES_DIR, STUB_DIR, STYLES_DIR, ASSETS_DIR
-    import userManager
-    
-    ##########################
-    # Import 3rd party stuff #
-    ##########################
-    print(" [+] Importing libraries...")
-    from flask import Flask, render_template, send_from_directory, request, redirect, session, url_for
-    import re
-    import random
-    import uuid
-    import hashlib
-    from pathlib import Path
-    import json
-    import os
+# Import local stuff
+from commands import *
+from bundle import TEMPLATES_DIR, STUB_DIR, STYLES_DIR, ASSETS_DIR
+from src.utils import get_level_from_xp
+import src.userManager as userManager
+import src.configHandler as configHandler
+
+# Import 3rd party stuff
+import logging
+import re
+import random
+import uuid
+import hashlib
+from pathlib import Path
+import json
+import os
+from flask import Flask, render_template, send_from_directory, request, redirect, session
 
 def main():
-    print(" [+] Loading server...")
-    
-    for module in os.listdir(os.path.join(os.path.dirname(__file__), "commands")):
-        if module == '__init__.py' or module[-3:] != '.py':
-            continue
-        __import__(module[:-3], locals(), globals())
-    del module
+    configHandler.run()
+    logging.info("Loading the server, please wait..")
+    logging.debug("Debug mode is enabled")
     
     ###############################
     # Setup list of game commands #
@@ -95,65 +87,66 @@ def main():
         "map_extensions.buy": handle_mapExpansionsBuy,
         "hangars.buy": handle_hangarsBuy,
         "buddy.collectPassenger": handle_buddyCollectPassenger,
+        "crafting.buySlot": handle_craftingBuySlot
     }
-    
-    #########################
-    # Load global game data #
-    #########################
-    print(" [+] Loading init data...")
+    logging.info("Loading init data...")
     
     p = Path(__file__).parents[0]
     
-    f = open(os.path.join(p, "data", "global_init_data.json.def"), "r", encoding="utf-8")
-    init_data = json.loads(str(f.read()))
+    with open(os.path.join(p, "data", "global_init_data.json.def"), "r", encoding="utf-8") as f:
+        init_data = json.loads(f.read())
     f.close()
-    
-    f = open(os.path.join(p, "data", "obj.json.def"), "r", encoding="utf-8")
-    obj_data = json.loads(str(f.read()))
+
+    with open(os.path.join(p, "data", "obj.json.def"), "r", encoding="utf-8") as f:
+        obj_data = json.loads(f.read())
     f.close()
-    
-    ################################
-    # Sort accounts by location id #
-    ################################
-    
+
+    # Sort accounts by location id
     userManager.save_players_by_location_id()
     
-    ##########################
-    # Load site translations #
-    ##########################
+    # Load language files
     langstrings = {}
     for filename in os.listdir(os.path.join("templates", "languages")):
-        f = open(os.path.join("templates", "languages",
-                 filename), "r", encoding="utf-8")
-        langstrings[filename[0:-5]] = json.loads(str(f.read()))
+        with open(os.path.join("templates", "languages",
+                 filename), "r", encoding="utf-8") as f:
+            langstrings[filename[0:-5]] = json.loads(f.read())
         f.close()
     
-    ########################################
-    # Get total amount of created accounts #
-    ########################################
+    config = configHandler.get_config()
     
-    '''
-    # GLITCH
-    host = '0.0.0.0'
-    port = 8080
-    server_ip = "http://skyrama.glitch.me"
-    assets_ip = "https://cdn.jsdelivr.net/gh/Mima2370/skyrama-private-server/"
-    '''
+    host = config.get("ServerSettings", "host", fallback="127.0.0.1").replace("http://", "").replace("https://", "")
+    port = int(config.get("ServerSettings", "port", fallback="5050"))
+    use_https = config.getboolean("ServerSettings", "use_https", fallback=False)
+    protocol = "https" if use_https else "http"
+    server_ip = f"{protocol}://{host}:{port}"
     
-    # LOCAL
-    host = '127.0.0.1'
-    port = 5050
-    server_ip = "http://" + str(host) + ":" + str(port)
-    assets_ip = "http://" + str(host) + ":" + str(port)
-    
+    use_alt_assets = config.getboolean("AlternativeAssetStore", "alternative_asset_store_enabled", fallback=False)
+    if use_alt_assets:
+        alt_host = config.get("AlternativeAssetStore", "alternative_asset_store_host", fallback="")
+        alt_port = config.get("AlternativeAssetStore", "alternative_asset_store_port", fallback="")
+        alt_use_https = config.getboolean("AlternativeAssetStore", "asset_store_use_https", fallback=False)
+        alt_protocol = "https" if alt_use_https else "http"
+        
+        # If we have an alternative host
+        if alt_host:
+            # Clean the host (remove any protocol)
+            alt_host = alt_host.replace("http://", "").replace("https://", "")
+            
+            if alt_port:
+                assets_ip = f"{alt_protocol}://{alt_host}:{alt_port}"
+            else:
+                assets_ip = f"{alt_protocol}://{alt_host}"
+                
+            logging.info(f"Using alternative asset store: {assets_ip}")
+        else:
+            assets_ip = server_ip
+    else:
+        assets_ip = server_ip
+
     app = Flask(__name__, template_folder=TEMPLATES_DIR)
+    logging.info("Configuring server routes...")
     
-    print(" [+] Configuring server routes...")
-    
-    ##########
-    # ROUTES #
-    ##########
-    
+    # Routing    
     @app.route("/play")
     def play():
         # If not logged in, redirect to homepage
@@ -292,10 +285,7 @@ def main():
     def crossdomain():
         return send_from_directory(STUB_DIR, "crossdomain.xml")
     
-    ###############
-    # GAME STATIC #
-    ###############
-    
+    # Game static files
     @app.route("/assets/<path:path>")
     def static_assets_loader(path):
         return send_from_directory(ASSETS_DIR, path)
@@ -330,24 +320,14 @@ def main():
         langUpper = lang.upper()
         return render_template('logout.html', lang=lang, langUpper=langUpper, langstrings=langstrings[lang], ASSETSIP=assets_ip, playerCount=userManager.get_player_count())
     
-    ################
-    # GAME DYNAMIC #
-    ################
+    @app.errorhandler(404)
+    def page_not_found(e):
+        return homepage()
     
-    def get_level_from_xp(xp, level_caps):
-        level = 100  # Handle the edge case when you're at the last level
-        j = 0
-        for i in level_caps:
-            if int(i) > xp:
-                level = j
-                break
-            j = j + 1
-        return level
-    
-    
+    # Handle all the game commands
     @app.route("/SkyApi.php", methods=['POST'])
     def handle_request():
-        print(request.form)
+        logging.debug(request.form)
     
         json_data = userManager.load_save_by_id(str(request.form["userId"]))
     
@@ -363,8 +343,8 @@ def main():
             total_items_to_add_to_obj = []
             for command in command_data:
                 if command["m"] in available_commands:
-                    print("Command " + command["m"] + " handled")
-    
+                    logging.info(f"Command {command['m']} handled")
+
                     # Add current coins to request in order to simplify the GetAirCoins tasks
                     command["previous_air_coins"] = json_data["playerData"]["air_coins"]
     
@@ -379,7 +359,7 @@ def main():
                             rpcResult, items_to_add_to_obj, json_data, init_data)
                     
                     if rpcResult["i"] == -1: # Command asked to disconnect user (likely due to possible cheat)
-                        print(f"User with id {request.form['userId']} has been disconnected")
+                        logging.warning(f"User with id {request.form['userId']} has been disconnected, possible cheat detected!")
                         return "Could not get Sky_Instance_Plane object with unique id 1435_12297741"
     
                     total_response["rpcResults"].append(rpcResult)
@@ -390,7 +370,7 @@ def main():
                     handle_goal(command, request.form["userId"], "pilot", items_to_add_to_obj, json_data, init_data)
     
                 else:
-                    print("Command " + command["m"] + " not handled")
+                    logging.error(f"Command {command['m']} not implemented")
                     session["error_mode"] = "unimplemented"
                     return "Could not get Sky_Instance_Plane object with unique id 1435_12297741"
     
@@ -400,35 +380,24 @@ def main():
     
             if start_level != end_level:  # Check level-up
                 for i in range(end_level - start_level):
-                    json_data["playerData"]["air_coins"] = int(
-                        json_data["playerData"]["air_coins"]) + 850
-                    json_data["playerData"]["air_cash"] = int(
-                        json_data["playerData"]["air_cash"]) + 2  # YAY WE CAN BUY 0.2 HANGAR SLOTS!!!
-    
+                    json_data["playerData"]["air_coins"] += 850
+                    json_data["playerData"]["air_cash"] += 2  # YAY WE CAN BUY 0.2 HANGAR SLOTS!!!
+
             # Create command object
             obj = {}
-            print(total_items_to_add_to_obj)
             handle_addObj(
                 command, request.form["userId"], obj, total_items_to_add_to_obj, json_data, init_data, obj_data)
             total_response["obj"] = obj
     
             userManager.modify_save_by_id(str(request.form["userId"]), json_data)
-    
             return total_response
         else:
-            print("User " + str(request.form["userId"]
-                                ) + " has used an invalid token.")
+            logging.critical(f"Security alert: User {request.form['userId']} attempted to use an invalid token!")
             return "token_error"
-    
-    
-    ########
-    # MAIN #
-    ########
-    
-    print(" [+] Running server...")
 
+    logging.info(f"Starting server on {host}:{port} (Debug mode: {'On' if configHandler.get_flask_debug() else 'Off'})")
     app.secret_key = 'SECRET_KEY'
-    app.run(host=host, port=port, debug=True)
+    app.run(host=host, port=port, debug=configHandler.get_flask_debug())
 
 if __name__ == '__main__':
     main()

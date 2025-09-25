@@ -8,8 +8,7 @@ def calculate_cargo_capacity(level, init_data):
     # every next level = +60
     for i in range(level - 1):
         capacity += increment_capacity
-
-    print(capacity)
+        
     return capacity
 
 def handle_cargoshopsBuyCargo(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):

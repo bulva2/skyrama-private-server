@@ -27,8 +27,6 @@ def handle_addObj(request, user_id, obj, total_items_to_add_to_obj, json_data, i
       splitted = i.split(":")
       name = splitted[0]
       splitted.pop(0)
-      print(name)
-      print(splitted)
 
       if name in json_data:
         data = json_data[name]

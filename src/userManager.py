@@ -5,28 +5,23 @@ import random
 from concurrent.futures import ProcessPoolExecutor
 
 
-p = Path(__file__).parents[0]
-
+ROOT_DIR = Path(__file__).parents[1]
 
 '''
 Store all save files in memory.
 '''
-
+    
 __saves = {}
-
 __world_map_players = {}
-
-__playerCount = {"count": len(os.listdir("data")) - 5} # -5 because of default files and folders
-
+__playerCount = {"count": len(os.listdir(os.path.join(ROOT_DIR, "data", "users"))) - 1}
 
 n = open(os.path.join("data", "new_player.json.def"), "r", encoding="utf-8")
-NEW_ACCOUNT_DATA = json.loads(str(n.read()))
+NEW_ACCOUNT_DATA = json.loads(n.read())
 n.close()
 
-
-def store_save_by_id(user_id):
+def store_save_by_id(user_id : int) -> bool:
     try:
-        f = open(os.path.join(p, "data", str(user_id) + ".json"), "r", encoding="utf-8")
+        f = open(os.path.join(ROOT_DIR, "data", "users", str(user_id) + ".json"), "r", encoding="utf-8")
         json_data = json.loads(str(f.read()))
         __saves[str(user_id)] = json_data
         f.close() 
@@ -34,13 +29,13 @@ def store_save_by_id(user_id):
     except FileNotFoundError: # Account does not exist
         return False
 
-def load_save_by_id(user_id):
+def load_save_by_id(user_id : int) -> dict | int:
     if not str(user_id) in __saves:
         if store_save_by_id(user_id) == False:
             return -1
     return __saves[str(user_id)]
 
-def load_save_by_name(user_name):
+def load_save_by_name(user_name : str) -> dict | int:
     user_id = get_id_from_name(user_name)
     if user_id == -1:
         return -1
@@ -48,30 +43,30 @@ def load_save_by_name(user_name):
         return load_save_by_id(user_id)
 
 
-def modify_save_by_id(user_id, json_data):
+def modify_save_by_id(user_id : int, json_data : dict) -> None:
     __saves[str(user_id)] = json_data
-    f = open(os.path.join("data", str(user_id) + ".json"), "w", encoding="utf-8")
+    f = open(os.path.join("data", "users", str(user_id) + ".json"), "w", encoding="utf-8")
     f.write(json.dumps(json_data))
     f.close()
 
-def get_id_from_name(user_name):
+def get_id_from_name(user_name : str) -> int:
     try:
-        f = open(os.path.join(p, "data", "nametoid", str(user_name)), "r", encoding="utf-8")
+        f = open(os.path.join(ROOT_DIR, "data", "users", "nametoid", str(user_name)), "r", encoding="utf-8")
         user_id = int(f.read())
         f.close()
         return user_id
     except FileNotFoundError:
         return -1
 
-def user_id_exists(user_id):
+def user_id_exists(user_id : int) -> bool:
     return load_save_by_id(user_id) != -1
 
-def user_name_exists(user_name):
+def user_name_exists(user_name : str) -> bool:
     return load_save_by_name(user_name) != -1
 
-def create_new_account(uid, username, password, token):
+def create_new_account(uid : int, username : str, password : str, token : str) -> None:
     json_data = NEW_ACCOUNT_DATA.copy()
-    f = open(os.path.join("data", str(uid) + ".json"), "w+", encoding="utf-8")
+    f = open(os.path.join("data", "users", str(uid) + ".json"), "w+", encoding="utf-8")
     json_data["playerData"]["account_id"] = uid
     json_data["playerData"]["user_name"] = username
     json_data["playerData"]["password"] = password
@@ -99,18 +94,18 @@ def create_new_account(uid, username, password, token):
 
 
     # Create a nametoid file
-    f = open(os.path.join("data", "nametoid", str(username)), "w+", encoding="utf-8")
+    f = open(os.path.join("data", "users", "nametoid", str(username)), "w+", encoding="utf-8")
     f.write(str(uid))
     f.close()
 
-def read_location_id(file):
-    with open(os.path.join(p, "data", file), "r", encoding="utf-8") as f:
+def read_location_id(file : str) -> tuple[str, int]:
+    with open(os.path.join(ROOT_DIR, "data", "users", file), "r", encoding="utf-8") as f:
         json_data = json.load(f)
     return file[0:-5], json_data["playerData"]["location_id"]
     
 
 def save_players_by_location_id():
-    all_files = [x for x in os.listdir("data") if x.endswith(".json")]
+    all_files = [x for x in os.listdir(os.path.join(ROOT_DIR, "data", "users")) if x.endswith(".json")]
     with ProcessPoolExecutor() as executor:
         for user_id, result in executor.map(read_location_id, all_files):
             if result not in __world_map_players:
@@ -144,8 +139,8 @@ def get_accounts_by_location_id(location_id, amount, own_user_id):
 
     return player_list_cropped
 
-def get_player_count():
+def get_player_count() -> int:
     return __playerCount["count"]
 
-def add_to_player_count(amount):
+def add_to_player_count(amount : int) -> None:
     __playerCount["count"] += amount

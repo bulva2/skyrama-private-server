@@ -1,3 +1,9 @@
+# Skyrama Private Server specific
+data/users/*
+!data/users/nametoid/
+data/users/nametoid/*
+!data/users/nametoid/.gitkeep
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

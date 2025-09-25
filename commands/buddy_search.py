@@ -2,7 +2,7 @@ import time
 from pathlib import Path
 import os
 import json
-import userManager
+import src.userManager as userManager
 
 def handle_buddySearch(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
@@ -11,7 +11,7 @@ def handle_buddySearch(request, user_id, rpcResult, items_to_add_to_obj, json_da
 
 
     p = Path(__file__).parents[1]
-    for file in os.listdir(os.path.join(p, "data", "nametoid")):
+    for file in os.listdir(os.path.join(p, "data", "users", "nametoid")):
         if file.lower().startswith(request["p"]["username"].lower()):
             friendship = "none"
             friend_user_id = userManager.get_id_from_name(file)

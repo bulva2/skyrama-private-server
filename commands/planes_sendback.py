@@ -2,7 +2,7 @@ import time
 from pathlib import Path
 import os
 import json
-import userManager
+import src.userManager as userManager
 
 def handle_planesSendback(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]

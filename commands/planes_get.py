@@ -11,7 +11,6 @@ def handle_planesGet(request, user_id, rpcResult, items_to_add_to_obj, json_data
                 i["flight_status"] = 77
                 i["departure_time"] = int(time.time()) - 450
                 i["arrival_time"] = int(time.time()) + 450 # Disappears before arrival time, but apparently that's normal?
-                print(i["arrival_time"])
             break
 
     rpcResult["r"] = json_data["planes"]

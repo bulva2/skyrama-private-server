@@ -1,4 +1,5 @@
 import time
+import logging
 
 def handle_hangarsBuy(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
@@ -7,7 +8,7 @@ def handle_hangarsBuy(request, user_id, rpcResult, items_to_add_to_obj, json_dat
 
     for i in init_data["hangarTypes"]:
         if int(i["id"]) == int(request["p"]["types_id"]):
-            print(f"Purchasing hangar type ID {request['p']['types_id']} for user {user_id}")
+            logging.debug(f"Purchasing hangar type ID {request['p']['types_id']} for user {user_id}")
             if i["air_coins_cost"] != 0:
                 json_data["playerData"]["air_coins"] -= i["air_coins_cost"]
             elif i["air_cash_cost"] != 0:
@@ -25,6 +26,6 @@ def handle_hangarsBuy(request, user_id, rpcResult, items_to_add_to_obj, json_dat
                 "player_id": user_id
             })
 
-            print(f"Added hangar with ID {json_data['playerData']['next_object_id']} for user {user_id}")
+            logging.debug(f"Added hangar with ID {json_data['playerData']['next_object_id']} for user {user_id}")
             json_data["playerData"]["next_object_id"] = int(json_data["playerData"]["next_object_id"]) + 1
             break
