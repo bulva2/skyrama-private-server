@@ -363,11 +363,12 @@ def main():
                         return "Could not get Sky_Instance_Plane object with unique id 1435_12297741"
     
                     total_response["rpcResults"].append(rpcResult)
-                    total_items_to_add_to_obj += items_to_add_to_obj
     
                     # Check goal completion
                     handle_goal(command, request.form["userId"], "main", items_to_add_to_obj, json_data, init_data)
                     handle_goal(command, request.form["userId"], "pilot", items_to_add_to_obj, json_data, init_data)
+                    
+                    total_items_to_add_to_obj += items_to_add_to_obj
     
                 else:
                     logging.error(f"Command {command['m']} not implemented")

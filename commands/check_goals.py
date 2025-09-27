@@ -33,7 +33,7 @@ def give_reward(json_data, init_data, user_id, type_id, type, items_to_add_to_ob
             for h in init_data["planeTypes"]:
                 if int(h["id"]) == type_id:
 
-                    # Add hangar slot + get container id
+                    # Get container id
                     for k in init_data["hangarTypes"]:
                         if k["sml"] == h["size"] and k["aircraft_type"] == h["type"]:
                             hangar_type = int(k["id"])
@@ -41,11 +41,9 @@ def give_reward(json_data, init_data, user_id, type_id, type, items_to_add_to_ob
                     for k in json_data["hangars"]:
                         if int(k["hangar_types_id"]) == hangar_type:
                             k["upgrade_level"] = int(k["upgrade_level"]) + 1
-                            items_to_add_to_obj.append("hangars")
                             container_id = int(k["id"])
+                            items_to_add_to_obj.append(f"hangars:{container_id}")
                             break
-
-
 
                     json_data["planes"].append({"souvenir_types_id":-1,"active_count":1,"id":json_data["playerData"]["next_object_id"],"plane_type_id":type_id,"container_id":container_id,"subcontainer_id":1,"to_player_id":-1,"departure_time":-1,"arrival_time":-1,"kerosene_boost_flag":"0","flight_status":"77","buddy_points":h["buddy_points_yield"],"contents_count":h["capacity"],"air_coins":h["air_coins_yield"],"xp":h["xp_yield"],"wares_revenue":h["wares_revenue_capacity"],"banner_id":"-1","start_service_time":"0","last_state_change_time":"0","drop_consumable_id":"0","drop_consumable_amount":"0","instantland":0,"player_id":user_id,"from_location_id":-1,"from_user_name":"drone","upgrade_level":0})
                     json_data["playerData"]["next_object_id"] = int(json_data["playerData"]["next_object_id"]) + 1
@@ -113,17 +111,32 @@ def next_quest(quest_seq, init_data, json_data, user_id, items_to_add_to_obj):
             # reward_goods and reward_map_extension are unused
 
             if j["reward_hangar_upgrade"] > 0:
+                # Check which hangar needs to be upgraded
                 if j["reward_obj_type"] == "Hangar":
-                    for h in json_data["hangarTypes"]:
-                        if int(h["id"]) == j["reward_obj_type_id"]:
-                            h["capacity"] += int(j["reward_hangar_upgrade"])
-                            items_to_add_to_obj.append("hangars")
-                            logging.debug(f"Quest reward: Upgraded hangar {h['id']} by {j['reward_hangar_upgrade']} levels, current level: {h['capacity']}")
+                    hangar_types_id = int(h["hangar_types_id"])
+                elif j["reward_obj_type"] == "Plane":
+                    # Check to which hangar the plane belongs (not sure if there's an easier way for this?)
+                    for p in init_data["planeTypes"]:
+                        if p["id"] == j["reward_obj_type_id"]:
+                            plane_size = p["size"]
+                            plane_type = p["type"]
+                            break
+                    for h in init_data["hangarTypes"]:
+                        # If regular plane, check the size as well
+                        if h["aircraft_type"] == plane_type and \
+                            ((plane_type == "plane" and h["sml"] == plane_size) or plane_type != "plane"):
+                            hangar_types_id = h["id"]
                             break
                 else:
-                    json_data["hangarTypes"][0]["capacity"] += int(j["reward_hangar_upgrade"])
-                    items_to_add_to_obj.append("hangars")
-                    logging.debug(f"Quest reward: Upgraded first hangar by {j['reward_hangar_upgrade']} levels, current level: {json_data['hangarTypes'][0]['capacity']}")
+                    hangar_types_id = j["reward_obj_type_id"]
+
+
+                for h in json_data["hangars"]:
+                    if hangar_types_id == j["reward_obj_type_id"]:
+                        h["upgrade_level"] = int(h["upgrade_level"]) + int(j["reward_hangar_upgrade"])
+                        items_to_add_to_obj.append(f"hangars:{h["id"]}")
+                        logging.debug(f"Quest reward: Upgraded hangar {h['id']} by {j['reward_hangar_upgrade']} levels, current level: {h['upgrade_level']}")
+                        break
 
             # reward_cargo_capacity_upgrade: Where to change this?
 
