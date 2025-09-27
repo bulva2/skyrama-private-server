@@ -84,10 +84,11 @@ def main():
         "landmarks.buy": handle_landmarksBuy,
         "landmarks.makeCurrent": handle_landmarksMakeCurrent,
         "hangars.upgrade": handle_hangarsUpgrade,
-        "map_extensions.buy": handle_mapExpansionsBuy,
+        "map_extensions.buy": handle_mapExpansionsBuy,        
         "hangars.buy": handle_hangarsBuy,
         "buddy.collectPassenger": handle_buddyCollectPassenger,
-        "crafting.buySlot": handle_craftingBuySlot
+        "crafting.buySlot": handle_craftingBuySlot,
+        "evoucher.book": handle_evoucherBook
     }
     logging.info("Loading init data...")
     

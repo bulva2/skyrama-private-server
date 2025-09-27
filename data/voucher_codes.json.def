@@ -1,0 +1,19 @@
+{
+  "vouchers": [
+    {
+      "code": "BULVA2",
+      "description": "Example voucher",
+      "rewards": {
+        "air_coins": 5000,
+        "air_cash": 50,
+        "passengers": 10000,
+        "xp": 300,
+        "super_fuel": 20
+      },
+      "max_uses": 10,
+      "current_uses": 0,
+      "expires": 1767225600,
+      "active": true
+    }
+  ]
+}

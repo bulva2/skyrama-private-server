@@ -67,7 +67,7 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [x] playerdata.setLocation
 - [x] playerdata.updateLevel
 - [x] playerdata.updateSettings
-- [ ] evoucher.book
+- [x] evoucher.book
 - [x] lucky_luggage.spin
 - [x] buddy.getAll
 - [x] buddy.collectPassenger
@@ -131,7 +131,7 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [ ] crafting.start
 - [ ] crafting.instant
 - [ ] crafting.collect
-- [ ] crafting.buySlot
+- [x] crafting.buySlot
 - [ ] general.trackFlashError
 - [ ] materialevent.redeemItem
 

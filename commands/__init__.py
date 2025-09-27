@@ -1,4 +1,3 @@
-
 # Import all command handlers explicitly
 from .general_getCv import handle_getCv
 from .general_soundIsOn import handle_soundIsOn
@@ -49,6 +48,7 @@ from .playerdata_deleteBuddypingTime import handle_deleteBuddypingTime
 from .cargoshops_buy import handle_cargoshopsBuy
 from .cargoshops_buyCargo import handle_cargoshopsBuyCargo
 from .cargoshops_buyCapacity import handle_cargoshopsBuyCapacity
+from .evoucher_book import handle_evoucherBook
 from .sell import handle_sell
 from .backgrounds_buy import handle_backgroundsBuy
 from .backgrounds_makeCurrent import handle_backgroundsMakeCurrent
@@ -121,10 +121,11 @@ __all__ = [
     'handle_landmarksMakeCurrent',
     'handle_hangarsUpgrade',
     'handle_mapExpansionsBuy',
-    'handle_hangarsBuy',
+    'handle_hangarsBuy',    
     'handle_buddyCollectPassenger',
     'handle_lucky_luggage_live',
     'handle_goal',
     'handle_addObj',
-    "handle_craftingBuySlot"
+    "handle_craftingBuySlot",
+    "handle_evoucherBook"
 ]
