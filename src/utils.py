@@ -8,16 +8,26 @@ def get_level_from_xp(xp : int, level_caps : list[int]) -> int:
 
 def substract_resources(json_data, rpcResult, air_coins = None, air_cash = None, event_currency = None):
   player_data = json_data["playerData"]
+  
+  # Anticheat checks (Prevents negative resources)
+  if air_coins is not None and player_data["air_coins"] < air_coins:
+    rpcResult["i"] = -1
+    logging.warning(f"Insufficient air_coins for user {player_data['account_id']}: has {player_data['air_coins']}, needs {air_coins}")
+    return
+  
+  if air_cash is not None and player_data["air_cash"] < air_cash:
+    rpcResult["i"] = -1
+    logging.warning(f"Insufficient air_cash for user {player_data['account_id']}: has {player_data['air_cash']}, needs {air_cash}")
+    return
+  
+  if event_currency is not None and player_data["event_currency"] < event_currency:
+    rpcResult["i"] = -1
+    logging.warning(f"Insufficient event_currency for user {player_data['account_id']}: has {player_data['event_currency']}, needs {event_currency}")
+    return
+  
   if air_coins is not None:
     player_data["air_coins"] -= air_coins
   if air_cash is not None:
     player_data["air_cash"] -= air_cash
   if event_currency is not None:
     player_data["event_currency"] -= event_currency
-
-  # Anticheat checks
-  for i in ["air_coins", "air_cash", "event_currency"]:
-    if player_data[i] < 0:
-      rpcResult["i"] = -1 # Disconnects user
-      logging.warning(f"Negative resources detected for user with id {player_data["account_id"]}")
-      return
