@@ -88,7 +88,8 @@ def main():
         "hangars.buy": handle_hangarsBuy,
         "buddy.collectPassenger": handle_buddyCollectPassenger,
         "crafting.buySlot": handle_craftingBuySlot,
-        "evoucher.book": handle_evoucherBook
+        "evoucher.book": handle_evoucherBook,
+        "souvenirs.takeReward": handle_souvenirsTakeReward
     }
     logging.info("Loading init data...")
     
