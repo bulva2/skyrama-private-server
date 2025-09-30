@@ -1,5 +1,5 @@
 import time
-
+import logging
 
 def calculate_warehouse_capacity(upgrade_level, init_data):
     start_amount = int(init_data["cargoUpgrades"][0]["increment"])
@@ -26,9 +26,25 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
 
             # Check own/buddy plane's location
             if int(request["p"]["owner_id"]) == int(user_id):
-                location_id = int(i["to_location_id"])
+                # Own plane - use destination location if available, otherwise use from_location_id
+                if "to_location_id" in i:
+                    location_id = int(i["to_location_id"])
+                elif "from_location_id" in i:
+                    logging.warning(f"planes_takeMeans: 'to_location_id' missing for own plane id {i['id']}, using 'from_location_id' instead.")
+                    location_id = int(i["from_location_id"])
+                else:
+                    logging.warning(f"planes_takeMeans: 'from_location_id' missing for own plane id {i['id']}, using player's location instead.")
+                    location_id = json_data["playerData"]["location_id"]  # Fallback to player's location
             else:
-                location_id = int(i["from_location_id"])
+                # Buddy plane - use origin location if available
+                if "from_location_id" in i:
+                    location_id = int(i["from_location_id"])
+                elif "to_location_id" in i:
+                    logging.warning(f"planes_takeMeans: 'from_location_id' missing for buddy plane id {i['id']}, using 'to_location_id' instead.")
+                    location_id = int(i["to_location_id"])
+                else:
+                    logging.warning(f"planes_takeMeans: 'from_location_id' missing for buddy plane id {i['id']}, using player's location instead.")
+                    location_id = json_data["playerData"]["location_id"]  # Fallback to player's location
 
             # Check drop material + amount of it (+ workaround for missing data)
             if "drop_material" in i:

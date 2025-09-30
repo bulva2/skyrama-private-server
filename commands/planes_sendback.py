@@ -2,6 +2,7 @@ import time
 from pathlib import Path
 import os
 import json
+import logging
 import src.userManager as userManager
 
 def handle_planesSendback(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
@@ -47,6 +48,13 @@ def handle_planesSendback(request, user_id, rpcResult, items_to_add_to_obj, json
 
                 json2_data = userManager.load_save_by_id(buddy_id)
 
+                # Crash fail safe, needs more testing
+                if json2_data == -1 or json2_data is None:
+                    logging.critical(f"Crash has been prevented!")
+                    logging.critical(f"[planes_sendback] Could not load buddy data for player_id {request['p']['player_id']}: invalid json2_data")
+                    json_data["planes"].pop(j)
+                    continue
+
                 # When returning a plane from a stranger, add them to the buddylist.
                 in_buddy_list = False
                 for buddy in json_data["buddyStuff"]["buddies"]:
@@ -74,9 +82,13 @@ def handle_planesSendback(request, user_id, rpcResult, items_to_add_to_obj, json
         j = j + 1
     
     if request["p"]["player_id"] != 0:
-      '''
-      f = open(os.path.join(p, "data", player_from_file), "w")
-      f.write(json.dumps(json2_data))
-      f.close()
-      '''
-      userManager.modify_save_by_id(json2_data["playerData"]["account_id"], json2_data)
+        '''
+        f = open(os.path.join(p, "data", player_from_file), "w")
+        f.write(json.dumps(json2_data))
+        f.close()
+        '''
+        # Also just a fail safe, needs more testing
+        if json2_data != -1 and json2_data is not None and "playerData" in json2_data and "account_id" in json2_data["playerData"]:
+            userManager.modify_save_by_id(json2_data["playerData"]["account_id"], json2_data)
+        else:
+            logging.critical(f"[planes_sendback] Could not save buddy data for player_id {request['p']['player_id']}: invalid json2_data")
