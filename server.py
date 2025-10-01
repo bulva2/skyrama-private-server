@@ -118,11 +118,10 @@ def main():
     
     config = configHandler.get_config()
 
-    # List of admin user IDs
-    ADMINS = [54850708]
-
     maintenance = {"maintenance": False, "startTime": 0}
-    
+
+    # List of admin user IDs
+    ADMINS = [int(x.strip()) for x in config.get("AdminUsers", "admin_ids", fallback="-1").split(",")]
     host = config.get("ServerSettings", "host", fallback="127.0.0.1").replace("http://", "").replace("https://", "")
     port = int(config.get("ServerSettings", "port", fallback="5050"))
     use_https = config.getboolean("ServerSettings", "use_https", fallback=False)
