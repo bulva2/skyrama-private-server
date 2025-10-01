@@ -16,7 +16,6 @@ from pathlib import Path
 import json
 import os
 from flask import Flask, render_template, send_from_directory, request, redirect, session
-from flask_httpauth import HTTPBasicAuth
 
 def main():
     configHandler.run()
@@ -313,31 +312,31 @@ def main():
         return send_from_directory(STYLES_DIR, path)
 
 
-    auth = HTTPBasicAuth()
-    @auth.verify_password
-    def verify_password(username, password):
-        if "userid" in session and session["userid"] in ADMINS:
-            return True
-
-
     # Be sure to be logged in before using this
     @app.route("/set-maintenance/on")
-    @auth.login_required
     def setMaintenanceOn():
-        maintenance["maintenance"] = True
-        maintenance["startTime"] = int(time.time())
-        return "Success!"
+        if "userid" in session and session["userid"] in ADMINS:
+            maintenance["maintenance"] = True
+            maintenance["startTime"] = int(time.time())
+            return "Success!"
+        else:
+            return "good try lmao"
     
+
     @app.route("/set-maintenance/off")
-    @auth.login_required
     def setMaintenanceOff():
-        maintenance["maintenance"] = False
-        maintenance["startTime"] = 0
-        return "Success!"
+        if "userid" in session and session["userid"] in ADMINS:
+            maintenance["maintenance"] = False
+            maintenance["startTime"] = 0
+            return "Success!"
+        else:
+            return "good try lmao"
+
 
     @app.route("/maintenance/")
     def maintenanceWork():
         return render_template('maintenance.html') 
+
 
     @app.route("/error/")
     def error():
