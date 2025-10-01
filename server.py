@@ -1,4 +1,5 @@
 # Import local stuff
+import time
 from commands import *
 from bundle import TEMPLATES_DIR, STUB_DIR, STYLES_DIR, ASSETS_DIR
 from src.utils import get_level_from_xp
@@ -15,6 +16,7 @@ from pathlib import Path
 import json
 import os
 from flask import Flask, render_template, send_from_directory, request, redirect, session
+from flask_httpauth import HTTPBasicAuth
 
 def main():
     configHandler.run()
@@ -115,6 +117,11 @@ def main():
         f.close()
     
     config = configHandler.get_config()
+
+    # List of admin user IDs
+    ADMINS = [54850708]
+
+    maintenance = {"maintenance": False, "startTime": 0}
     
     host = config.get("ServerSettings", "host", fallback="127.0.0.1").replace("http://", "").replace("https://", "")
     port = int(config.get("ServerSettings", "port", fallback="5050"))
@@ -151,6 +158,9 @@ def main():
     # Routing    
     @app.route("/play")
     def play():
+        if maintenance["maintenance"]:
+            return redirect('maintenance')
+        
         # If not logged in, redirect to homepage
         if "username" not in session:
             return redirect("/")
@@ -170,6 +180,8 @@ def main():
     
     @app.route('/')
     def homepage():
+        if maintenance["maintenance"]:
+            return redirect('maintenance')
         # Setup session
         if not request.args.get('locale'):
             if "lang" in session:
@@ -185,6 +197,8 @@ def main():
     
     @app.route('/login', methods=['POST'])
     def login():
+        if maintenance["maintenance"]:
+            return redirect('maintenance')
         msg = ''
         # Setup session
         if not request.args.get('locale'):
@@ -228,6 +242,8 @@ def main():
     
     @app.route('/register', methods=['POST'])
     def register():
+        if maintenance["maintenance"]:
+            return redirect('maintenance')
         msg = ''
         # Read form data
         username = request.form['RegUsername']
@@ -296,13 +312,42 @@ def main():
     @app.route("/templates/styles/<path:path>")
     def styles(path):
         return send_from_directory(STYLES_DIR, path)
+
+
+    auth = HTTPBasicAuth()
+    @auth.verify_password
+    def verify_password(username, password):
+        if "userid" in session and session["userid"] in ADMINS:
+            return True
+
+
+    # Be sure to be logged in before using this
+    @app.route("/set-maintenance/on")
+    @auth.login_required
+    def setMaintenanceOn():
+        maintenance["maintenance"] = True
+        maintenance["startTime"] = int(time.time())
+        return "Success!"
     
-    
+    @app.route("/set-maintenance/off")
+    @auth.login_required
+    def setMaintenanceOff():
+        maintenance["maintenance"] = False
+        maintenance["startTime"] = 0
+        return "Success!"
+
+    @app.route("/maintenance/")
+    def maintenanceWork():
+        return render_template('maintenance.html') 
+
     @app.route("/error/")
     def error():
         if session["error_mode"] == "unimplemented":
             session["error_mode"] = "error"
             return render_template('unimplemented.html')
+        elif session["error_mode"] == "maintenance":
+            session["error_mode"] = "error"
+            return render_template('maintenance.html')
         else:
             return render_template('error.html')
     
@@ -329,6 +374,11 @@ def main():
     # Handle all the game commands
     @app.route("/SkyApi.php", methods=['POST'])
     def handle_request():
+        # Check for maintenance
+        if maintenance["maintenance"]:
+            session["error_mode"] = "maintenance"
+            return "Maintenance going on, sorry not sorry :)"
+
         logging.debug(request.form)
     
         json_data = userManager.load_save_by_id(str(request.form["userId"]))
