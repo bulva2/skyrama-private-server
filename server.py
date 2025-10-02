@@ -1,6 +1,7 @@
 # Import local stuff
 import time
 from commands import *
+from werkzeug import Request
 from bundle import TEMPLATES_DIR, STUB_DIR, STYLES_DIR, ASSETS_DIR
 from src.utils import get_level_from_xp
 import src.userManager as userManager
@@ -15,7 +16,9 @@ import hashlib
 from pathlib import Path
 import json
 import os
+
 from flask import Flask, render_template, send_from_directory, request, redirect, session
+app = Flask(__name__, template_folder=TEMPLATES_DIR)
 
 def main():
     configHandler.run()
@@ -109,8 +112,8 @@ def main():
     
     # Load language files
     langstrings = {}
-    for filename in os.listdir(os.path.join("templates", "languages")):
-        with open(os.path.join("templates", "languages",
+    for filename in os.listdir(os.path.join(p, "templates", "languages")):
+        with open(os.path.join(p, "templates", "languages",
                  filename), "r", encoding="utf-8") as f:
             langstrings[filename[0:-5]] = json.loads(f.read())
         f.close()
@@ -150,12 +153,13 @@ def main():
     else:
         assets_ip = server_ip
 
-    app = Flask(__name__, template_folder=TEMPLATES_DIR)
     logging.info("Configuring server routes...")
     
     # Routing    
     @app.route("/play")
     def play():
+        print("MAX_CONTENT_LENGTH =", app.config.get("MAX_CONTENT_LENGTH"))
+
         if maintenance["maintenance"]:
             return redirect('maintenance')
         
@@ -369,6 +373,10 @@ def main():
     def page_not_found(e):
         return homepage()
     
+    @app.errorhandler(413)
+    def request_entity_too_large(e):
+        return f"Flask caught 413, Content-Length={request.content_length}", 413
+    
     # Handle all the game commands
     @app.route("/SkyApi.php", methods=['POST'])
     def handle_request():
@@ -448,7 +456,16 @@ def main():
 
     logging.info(f"Starting server on {host}:{port} (Debug mode: {'On' if configHandler.get_flask_debug() else 'Off'})")
     app.secret_key = 'SECRET_KEY'
-    app.run(host=host, port=port, debug=configHandler.get_flask_debug())
 
-if __name__ == '__main__':
-    main()
+    # Increase limits so we avoid 413 errors
+    Request.max_form_parts = 50000
+    MEGABYTE = (2 ** 10) ** 2
+    app.config['MAX_CONTENT_LENGTH'] = None
+    app.config['MAX_FORM_MEMORY_SIZE'] = 50 * MEGABYTE
+
+    # Development environment, this won't run in production with a proper web server like nginx or apache
+    if __name__ == "__main__":
+        app.run(host=host, port=port, debug=configHandler.get_flask_debug())
+
+# Start the server
+main()
