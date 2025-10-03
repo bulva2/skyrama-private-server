@@ -1,9 +1,19 @@
 import time
+import logging
 import src.userManager as userManager
 
 def run_buddy_checks(time, json_data):
     for buddy in json_data["buddyStuff"]["buddies"]:
         buddy_data = userManager.load_save_by_id(buddy["hi_player_id"])
+        
+        # load_save_by_id returns -1 if user isn't found, skip this user
+        if buddy_data == -1:
+            logging.warning(f"run_buddy_checks ({json_data["playerData"]["user_name"]}): Buddy user {buddy['hi_player_id']} not found, setting offline status")
+            buddy["last_buddyping_time"] = 0
+            buddy["xp"] = 0
+            buddy["status"] = 0  # Set to offline
+            continue
+            
         buddy["last_buddyping_time"] = buddy_data["playerData"]["last_buddyping_time"]
         buddy["xp"] = buddy_data["playerData"]["xp"]
         # if request accepted

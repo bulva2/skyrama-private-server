@@ -759,6 +759,30 @@
       "air_cash_cost": 230,
       "air_coins_cost": 6217000,
       "level": 82
+    },
+    {
+      "grid_size": 57,
+      "air_cash_cost": 269,
+      "air_coins_cost": 8987000,
+      "level": 84
+    },
+    {
+      "grid_size": 58,
+      "air_cash_cost": 315,
+      "air_coins_cost": 13620000,
+      "level": 86
+    },
+    {
+      "grid_size": 59,
+      "air_cash_cost": 369,
+      "air_coins_cost": 21000000,
+      "level": 88
+    },
+    {
+      "grid_size": 60,
+      "air_cash_cost": 432,
+      "air_coins_cost": 35000000,
+      "level": 90
     }
   ],
   "planeTypes": [

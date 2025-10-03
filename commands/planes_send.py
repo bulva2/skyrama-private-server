@@ -1,7 +1,6 @@
 import time
 from pathlib import Path
-import os
-import json
+import logging
 import random
 import src.userManager as userManager
 
@@ -73,12 +72,53 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
               json_data["planes"][j]["drop_material"] = 0
               json_data["planes"][j]["drop_material_amount"] = 0
 
-              
-              for g in json_data["locations"]:
-                if int(g["id"]) == int(json_data["planes"][j]["to_location_id"]):
-                  souvenirNum = random.randint(1,3)
-                  souvenir = g["souvenir_types_id_" + str(souvenirNum)]
-                  json_data["planes"][j]["souvenir_types_id"] = souvenir # To-do: event currency drop (= -2 ???)
+              # Handle souvenir drop / avoid race condition
+              if json_data["planes"][j]["to_location_id"] is None:
+                logging.warning("planes_send: to_location_id is None! This has to be a race condition!")
+                json_data["planes"][j]["souvenir_types_id"] = -1
+              else:
+                for g in json_data["locations"]:
+                  if int(g["id"]) == int(json_data["planes"][j]["to_location_id"]):
+
+                    # Flight time from initData
+                    flight_time_seconds = 0
+                    for plane_data in init_data["planeTypes"]:
+                        if int(plane_data["id"]) == plane_type_id:
+                            flight_time_seconds = int(plane_data.get("flight_time", 3600))
+                            break
+                      
+                    flight_time_hours = flight_time_seconds / 3600
+
+                    # Determine event currency drop chance based on flight time
+                    if flight_time_hours >= 24:
+                        event_currency_chance = 0.60
+                    elif flight_time_hours >= 18:
+                        event_currency_chance = 0.45
+                    elif flight_time_hours >= 16:
+                        event_currency_chance = 0.40
+                    elif flight_time_hours >= 12:
+                        event_currency_chance = 0.30
+                    elif flight_time_hours >= 10:
+                        event_currency_chance = 0.25
+                    elif flight_time_hours >= 8:
+                        event_currency_chance = 0.20
+                    elif flight_time_hours >= 6:
+                        event_currency_chance = 0.15
+                    elif flight_time_hours >= 4:
+                        event_currency_chance = 0.10
+                    else:
+                        event_currency_chance = 0.99 # 3% for shorter flights than 4hrs so ppl don't abuse it to farm event currency
+                    
+                    # Let's go gambliing! (Event currency drop)
+                    if random.random() < event_currency_chance:
+                        souvenir = -2  # Event currency drop yupieee
+                    else:
+                        # Oh dang it
+                        souvenir_num = random.randint(1, 3)
+                        souvenir = g["souvenir_types_id_" + str(souvenir_num)]
+
+                    json_data["planes"][j]["souvenir_types_id"] = souvenir
+                    break
                     
             if (int(request["t"]) - int(i["start_service_time"])) < ((int(service_time) / 3) * 2) or int(i["start_service_time"]) == 0:
               if int(request["t"]) > int(json_data["playerData"]["aycqs_start_time"]):

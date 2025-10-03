@@ -20,6 +20,37 @@ import os
 from flask import Flask, render_template, send_from_directory, request, redirect, session
 app = Flask(__name__, template_folder=TEMPLATES_DIR)
 
+# Command batch state - shared between related commands in the same request
+_command_batch_state = {}
+
+def resolve_command_dependencies(command_data):
+    """
+    Ensures all necessary commands are executed in the correct order to prevent race conditions.
+    """
+    
+    plane_setState_commands = []
+    plane_send_commands = []
+    plane_takeMeans_commands = []
+    other_commands = []
+    
+    for command in command_data:
+        if command["m"] == "planes.setState" and "id" in command.get("p", {}):
+            plane_setState_commands.append(command)
+        elif command["m"] == "planes.send" and "id" in command.get("p", {}):
+            plane_send_commands.append(command)
+        elif command["m"] == "planes.takeMeans" and "plane_id" in command.get("p", {}):
+            plane_takeMeans_commands.append(command)
+        else:
+            other_commands.append(command)
+    
+    ordered_commands = []
+    ordered_commands.extend(other_commands)
+    ordered_commands.extend(plane_setState_commands)
+    ordered_commands.extend(plane_send_commands)
+    ordered_commands.extend(plane_takeMeans_commands)
+    
+    return ordered_commands
+
 def main():
     configHandler.run()
     logging.info("Loading the server, please wait..")
@@ -158,8 +189,6 @@ def main():
     # Routing    
     @app.route("/play")
     def play():
-        print("MAX_CONTENT_LENGTH =", app.config.get("MAX_CONTENT_LENGTH"))
-
         if maintenance["maintenance"]:
             return redirect('maintenance')
         
@@ -392,6 +421,10 @@ def main():
         if json_data["playerData"]["token"] == request.form["t"]:
             command_data = json.loads(request.form["d"])
             total_response = {"rpcResults": []}
+            
+            # Initialize batch state for this request
+            global _command_batch_state
+            _command_batch_state = {}
     
             # Check start level based on xp
             start_level = get_level_from_xp(
@@ -399,7 +432,11 @@ def main():
     
             # Add this data to the Object, allowing for live updating in the game
             total_items_to_add_to_obj = []
-            for command in command_data:
+            
+            # Resolve command dependencies to prevent race conditions
+            ordered_command_data = resolve_command_dependencies(command_data)
+            
+            for command in ordered_command_data:
                 if command["m"] in available_commands:
                     logging.info(f"Command {command['m']} handled")
 
