@@ -6,14 +6,17 @@ The way this server works is, to say, kind of primitive. Data gets stored in JSO
 
 Keep in mind that although passwords should be properly encrypted/hashed, it is recommended to not use a password you use for any other services.
 
-
 ## Legal Issues
 
 This repository is made for educational purposes only and will not be monetized in any way. Contact me for any legal problems, and I'll take appropriate action.
 
 ## How to play
 
-You will either need a browser that supports Flash (and Flash Player itself), or an all-in-one browser like this [Pre-Bundled Firefox with Flash Player](https://www.reddit.com/r/flash/comments/kwdwci/simple_solution_to_use_flash_after_january_12_2021).
+You will either need a browser that supports Flash (and Flash Player itself), or an all-in-one browser like this [Pre-Bundled Firefox with Flash Player](https://www.reddit.com/r/flash/comments/kwdwci/simple_solution_to_use_flash_after_january_12_2021) or this [Flash Browser](https://github.com/radubirsan/FlashBrowser/releases/download/v0.81/v0.81_FlashBrowser_x64.exe).
+
+## Where can I try it out?
+
+We currently host our own test server here: https://blue-hippopotamus-84002.zap.cloud/ ^^
 
 ## How to run the code locally
 
@@ -22,6 +25,8 @@ Install the libraries from requirements.txt and start server.py. It's as simple 
 You will need a browser that supports Flash (and Flash Player itself) to run the game. Alternatively, you can try checking out this [Pre-Bundled Firefox with Flash Player](https://www.reddit.com/r/flash/comments/kwdwci/simple_solution_to_use_flash_after_january_12_2021/)
 
 ## Known issues
+- Some quest progress won't save
+- Rare race condition where to_location_id is null
 - Leaving the tutorial early causes bugs.
 - Lucky luggages pop up each time, even when there are no free spins.
 - Inconsistent int usage in JSON data. Might cause issues later on when we switch to the database

@@ -36,7 +36,7 @@ def resolve_command_dependencies(command_data):
     for command in command_data:
         if command["m"] == "planes.setState" and "id" in command.get("p", {}):
             plane_setState_commands.append(command)
-        elif command["m"] == "planes.send" and "id" in command.get("p", {}):
+        elif (command["m"] == "planes.send" or command["m"] == "planes.sendback") and "id" in command.get("p", {}):
             plane_send_commands.append(command)
         elif command["m"] == "planes.takeMeans" and "plane_id" in command.get("p", {}):
             plane_takeMeans_commands.append(command)

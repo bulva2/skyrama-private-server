@@ -107,7 +107,7 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
                     elif flight_time_hours >= 4:
                         event_currency_chance = 0.10
                     else:
-                        event_currency_chance = 0.03 # 3% for shorter flights than 4hrs so ppl don't abuse it to farm event currency
+                        event_currency_chance = 0.05 # 5% for shorter flights than 4hrs so ppl don't abuse it to farm event currency
                     
                     # Let's go gambliing! (Event currency drop)
                     if random.random() < event_currency_chance:
@@ -141,6 +141,7 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
               json2_data = json.loads(str(f.read()))
               f.close()
               '''
+
               json2_data = userManager.load_save_by_id(json_data["planes"][j]["to_player_id"])
               
               last_id = int(json2_data["playerData"]["next_object_id"])
@@ -149,9 +150,8 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
               copy["buddy_points"] = buddy_points
               copy["xp"] = xp * 2 # Servicing a buddy's plane gives double xp, but same amount of coins
               copy["air_coins"] = coins
-
-              json2_data["planes"].append(copy)
               
+              json2_data["planes"].append(copy)
               json2_data["playerData"]["next_object_id"] = int(json2_data["playerData"]["next_object_id"]) + 1
 
               rpcResult["r"]["planes"][str(request["p"]["id"])] = json_data["planes"][j]

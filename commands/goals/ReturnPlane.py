@@ -1,10 +1,9 @@
-import time
-from pathlib import Path
-import os
-import json
-
 def handle_ReturnPlane(request, user_id, json_data, task, task_number, init_data, quest_seq):
     if request["m"] == "planes.sendback":
+
+        if task["user_action"] != "ReturnPlane":
+            return json_data
+
         # In case this don't change: CashCow
         type_id = 0
         from_location_id = -1
@@ -25,12 +24,14 @@ def handle_ReturnPlane(request, user_id, json_data, task, task_number, init_data
         # Apparantly only one thing at a time, might need a fix if we ever add new missions
 
         if task["obj_type_id"] == type_id:
-            json_data["goals"]["goals"][quest_seq]["tasks"][task_number]["num_completed"] = json_data["goals"]["goals"][quest_seq]["tasks"][task_number]["num_completed"] + 1
+            json_data["goals"]["goals"][quest_seq]["tasks"][task_number]["num_completed"] += 1
         elif task["size"] == size:
-            json_data["goals"]["goals"][quest_seq]["tasks"][task_number]["num_completed"] = json_data["goals"]["goals"][quest_seq]["tasks"][task_number]["num_completed"] + 1
+            json_data["goals"]["goals"][quest_seq]["tasks"][task_number]["num_completed"] += 1
         elif task["plane_type"] == plane_type:
-            json_data["goals"]["goals"][quest_seq]["tasks"][task_number]["num_completed"] = json_data["goals"]["goals"][quest_seq]["tasks"][task_number]["num_completed"] + 1
+            json_data["goals"]["goals"][quest_seq]["tasks"][task_number]["num_completed"] += 1
         elif task["location_id"] == from_location_id:
-            json_data["goals"]["goals"][quest_seq]["tasks"][task_number]["num_completed"] = json_data["goals"]["goals"][quest_seq]["tasks"][task_number]["num_completed"] + 1
+            json_data["goals"]["goals"][quest_seq]["tasks"][task_number]["num_completed"] += 1
+        elif task["size"] == None and task["obj_type_id"] == -1 and task["plane_type"] == None and task["location_id"] == None:
+            json_data["goals"]["goals"][quest_seq]["tasks"][task_number]["num_completed"] += 1
 
     return json_data
