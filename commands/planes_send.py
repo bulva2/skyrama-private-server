@@ -107,7 +107,7 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
                     elif flight_time_hours >= 4:
                         event_currency_chance = 0.10
                     else:
-                        event_currency_chance = 0.99 # 3% for shorter flights than 4hrs so ppl don't abuse it to farm event currency
+                        event_currency_chance = 0.03 # 3% for shorter flights than 4hrs so ppl don't abuse it to farm event currency
                     
                     # Let's go gambliing! (Event currency drop)
                     if random.random() < event_currency_chance:
