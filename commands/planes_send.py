@@ -73,9 +73,9 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
               json_data["planes"][j]["drop_material_amount"] = 0
 
               # Handle souvenir drop / avoid race condition
-              if json_data["planes"][j]["to_location_id"] is None:
-                logging.warning("planes_send: to_location_id is None! This has to be a race condition!")
+              if json_data["planes"][j].get("to_location_id") is None:
                 json_data["planes"][j]["souvenir_types_id"] = -1
+                logging.warning("planes_send: to_location_id is None! This has to be a race condition!")
               else:
                 for g in json_data["locations"]:
                   if int(g["id"]) == int(json_data["planes"][j]["to_location_id"]):
