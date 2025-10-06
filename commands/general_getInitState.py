@@ -24,6 +24,13 @@ def handle_getInitState(request, user_id, rpcResult, items_to_add_to_obj, json_d
                 i["departure_time"] = request["t"] - 450
                 i["arrival_time"] = request["t"] + 450
                 i["flight_status"] = 77 # in air
+                i["start_service_time"] = 0
+                i["last_state_change_time"] = request["t"]
+                i["player_id"] = 0 # cashcow id = 0
+                i["subcontainer_id"] = -1
+                i["container_id"] = -1
+                i["to_player_id"] = user_id
+                i["instantland"] = 0
                 break
 
     # Run buddy.getAll
