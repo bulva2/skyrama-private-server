@@ -141,7 +141,7 @@ def main():
     
     # Start the asynchronous save system
     userManager.start_save_system()
-
+    
     # Load language files
     langstrings = {}
     for filename in os.listdir(os.path.join(p, "templates", "languages")):
