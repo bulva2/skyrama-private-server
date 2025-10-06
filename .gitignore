@@ -2,6 +2,7 @@
 data/users/*
 !data/users/nametoid/
 data/users/nametoid/*
+data/backups
 !data/users/nametoid/.gitkeep
 
 # Byte-compiled / optimized / DLL files
