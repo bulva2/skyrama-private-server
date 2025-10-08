@@ -2,7 +2,7 @@ import time
 
 def handle_planesUpgrade(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
-    rpcResult["t"] = str(int(time.time()))
+    rpcResult["t"] = int(time.time())
     rpcResult["r"] = None
     items_to_add_to_obj.append("planes")
     items_to_add_to_obj.append("planeUpgrades")
@@ -21,7 +21,7 @@ def handle_planesUpgrade(request, user_id, rpcResult, items_to_add_to_obj, json_
                 for g in init_data["planeUpgradeTypes"][j]["effects"]:
 #                  if g["type"] == "flight_time": # Not needed :)
 #                    i["departure_time"] = str(int(time.time()) - ((i["arrival_time"] - i["departure_time"]) * (1 - (g["percent"] / 100)))) # Might get broken with turbo fuel
-#                    i["arrival_time"] = str(int(time.time()))
+#                    i["arrival_time"] = int(time.time())
                     
                     if g["type"] == "xp":
                       i["xp"] = i["xp"] * (1 + (g["percent"] / 100))
