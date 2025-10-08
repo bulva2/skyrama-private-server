@@ -497,7 +497,17 @@ def save_players_by_location_id():
         else:
             __world_map_players[i] = [800] # NPC player
 
+def add_player_to_world_list(user_id, location_id):
+    if location_id == -1: # Prevent corruption
+        return
+    if len(__world_map_players[location_id]) == 1 and __world_map_players[location_id][0] == 800:
+        # Remove NPC player
+        __world_map_players[location_id] = []
+    __world_map_players[location_id].insert(0, int(user_id))
+
 def buddyping_enabled(user_id, location_id):
+    if location_id == -1: # When a player has not yet chosen a location in the tutorial
+        return
     player_list = __world_map_players[location_id]
     old_index = player_list.index(int(user_id))
     player_list.insert(0, player_list.pop(old_index))
