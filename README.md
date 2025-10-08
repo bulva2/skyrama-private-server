@@ -132,7 +132,7 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [ ] recycling.instant
 - [ ] recycling.collect
 - [ ] crafting.processCraftingStep
-- [ ] crafting.buyMaterials
+- [x] crafting.buyMaterials
 - [ ] crafting.start
 - [ ] crafting.instant
 - [ ] crafting.collect

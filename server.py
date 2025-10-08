@@ -124,7 +124,8 @@ def main():
         "buddy.collectPassenger": handle_buddyCollectPassenger,
         "crafting.buySlot": handle_craftingBuySlot,
         "evoucher.book": handle_evoucherBook,
-        "souvenirs.takeReward": handle_souvenirsTakeReward
+        "souvenirs.takeReward": handle_souvenirsTakeReward,
+        "crafting.buyMaterials": handle_craftingBuyMaterials
     }
     logging.info("Loading init data...")
     
