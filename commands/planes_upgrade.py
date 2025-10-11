@@ -52,3 +52,6 @@ def handle_planesUpgrade(request, user_id, rpcResult, items_to_add_to_obj, json_
       json_data["planeUpgrades"][str(request["p"]["id"])] = []
     
     json_data["planeUpgrades"][str(request["p"]["id"])].append(int(upgrade_type))
+
+    # Success, we have to return the planeUpgrades object, else the client gets stuck
+    rpcResult["r"] = json_data["planeUpgrades"]
