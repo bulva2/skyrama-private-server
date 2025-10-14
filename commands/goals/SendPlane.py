@@ -1,7 +1,5 @@
 def handle_SendPlane(request, user_id, json_data, task, task_number, init_data, quest_seq):
     if request["m"] == "planes.send":
-        print(task)
-
         conditions_completed = 0
         type_id = 34 # Edge case: Fly-By
         to_location_id = None

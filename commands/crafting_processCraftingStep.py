@@ -33,14 +33,13 @@ def handle_craftingProcessCraftingStep(request, user_id, rpcResult, items_to_add
         return
     
     if isinstance(userCurrentCraftings, list):
-        print("userCurrentCraftings is a list, converting to dict")
         userCurrentCraftings = {}
         json_data["userCurrentCraftings"] = userCurrentCraftings
 
     if planeId not in userCurrentCraftings:
         userCurrentCraftings[planeId] = {
             "id": random.randint(10000, 999999), # I suppose this is needed for database purposes
-            "UserId": user_id,
+            "UserId": int(user_id),
             "CraftingType": 0, # Not sure what this is
             "CraftingItem": int(planeId),
             "CraftingLevel": 1,
