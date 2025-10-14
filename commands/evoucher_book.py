@@ -33,7 +33,7 @@ def handle_evoucherBook(request, user_id, rpcResult, items_to_add_to_obj, json_d
     voucher = None
     voucher_index = -1
     for k, v in enumerate(voucher_data["vouchers"]):
-        if v["code"] == voucher_code:
+        if v["code"].upper() == voucher_code:
             voucher = v
             voucher_index = k
             break

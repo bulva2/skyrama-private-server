@@ -64,6 +64,7 @@ from .add_obj import handle_addObj
 from .crafting_buySlot import handle_craftingBuySlot
 from .souvenirs_takeReward import handle_souvenirsTakeReward
 from .crafting_buyMaterials import handle_craftingBuyMaterials
+from .crafting_processCraftingStep import handle_craftingProcessCraftingStep
 
 # Define what to export when "from commands import *" is used
 __all__ = [
@@ -131,5 +132,6 @@ __all__ = [
     "handle_craftingBuySlot",
     "handle_evoucherBook",
     "handle_souvenirsTakeReward",
-    "handle_craftingBuyMaterials"
+    "handle_craftingBuyMaterials",
+    "handle_craftingProcessCraftingStep"
 ]

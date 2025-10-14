@@ -119,7 +119,7 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [x] landside_buildings.buy
 - [x] landside_buildings.harvest
 - [x] goals.buyTask
-- [ ] souvenirs.takeReward
+- [x] souvenirs.takeReward - PARTIALLY (Missing Falcon)
 - [x] special_buildings.buy
 - [x] placeable.place  -  PARTIALLY
 - [x] placeable.setInStorage  -  PARTIALLY
@@ -133,7 +133,7 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [ ] recycling.start
 - [ ] recycling.instant
 - [ ] recycling.collect
-- [ ] crafting.processCraftingStep
+- [x] crafting.processCraftingStep
 - [x] crafting.buyMaterials
 - [ ] crafting.start
 - [ ] crafting.instant

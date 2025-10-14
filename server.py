@@ -125,7 +125,8 @@ def main():
         "crafting.buySlot": handle_craftingBuySlot,
         "evoucher.book": handle_evoucherBook,
         "souvenirs.takeReward": handle_souvenirsTakeReward,
-        "crafting.buyMaterials": handle_craftingBuyMaterials
+        "crafting.buyMaterials": handle_craftingBuyMaterials,
+        "crafting.processCraftingStep": handle_craftingProcessCraftingStep
     }
     logging.info("Loading init data...")
     
@@ -294,7 +295,7 @@ def main():
         # Check if input data is valid
         if not re.match(r'[^@]+@[^@]+\.[^@]+', email):
             msg = 'bgc.error.email_invalidAddress'
-        elif not re.match(r'[A-Za-z0-9]+', username):
+        elif not re.match(r'[A-Za-z0-9_-]+', username):
             msg = 'bgc.error.username_containsInvalidCharacters'
         elif not username:
             msg = 'bgc.error.username_notGiven'
