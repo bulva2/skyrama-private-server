@@ -1,6 +1,7 @@
 import json
 import time
 import requests
+import logging
 from pathlib import Path
 from src.configHandler import get_config
 
@@ -32,6 +33,10 @@ def save_error(user_id: int, request_payload: dict) -> None:
 
 # https://discord.com/developers/docs/resources/message#embed-object
 def send_webhook(json_data: dict, user_id: int, request_payload: dict, url: str = _ERROR_WEBHOOK_URL, additional_data: dict = None) -> None:
+    if url is None or url.strip() == "":
+        logging.warning("No valid webhook URL provided in the config file. Skipping error webhook.")
+        return
+
     data = {
         #"content" : "idk",
         "username" : "Skyrama Private Server - Error Logger",
@@ -61,7 +66,7 @@ def send_webhook(json_data: dict, user_id: int, request_payload: dict, url: str 
 
     data["embeds"] = [
         {
-            "description" : "An error has occured while handling the request!",
+            "description" : "An error has occurred while handling the request!",
             "title" : f"Failing command: {request_payload.get("m", "Unspecified command")}",
             "footer": {
                 "text": "Skyrama Private Server - https://github.com/Michielvde1253/skyrama-private-server",
@@ -77,11 +82,10 @@ def send_webhook(json_data: dict, user_id: int, request_payload: dict, url: str 
         }
     ]
 
-    result = requests.post(url, json = data)
-
     try:
+        result = requests.post(url, json=data, timeout=5)
         result.raise_for_status()
     except requests.exceptions.HTTPError as err:
-        print(err)
+        logging.error(f"Error sending webhook: {err}")
 
 
