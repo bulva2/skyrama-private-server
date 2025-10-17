@@ -85,7 +85,7 @@ def send_webhook(json_data: dict, user_id: int, request_payload: dict, url: str 
     try:
         result = requests.post(url, json=data, timeout=5)
         result.raise_for_status()
-    except requests.exceptions.HTTPError as err:
+    except requests.exceptions.RequestException as err:
         logging.error(f"Error sending webhook: {err}")
 
 
