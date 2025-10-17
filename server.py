@@ -127,7 +127,8 @@ def main():
         "souvenirs.takeReward": handle_souvenirsTakeReward,
         "crafting.buyMaterials": handle_craftingBuyMaterials,
         "crafting.processCraftingStep": handle_craftingProcessCraftingStep,
-        "general.trackFlashError": handle_trackFlashError
+        "crafting.start": handle_craftingStart,
+        "general.trackFlashError": handle_trackFlashError,
     }
     logging.info("Loading init data...")
     

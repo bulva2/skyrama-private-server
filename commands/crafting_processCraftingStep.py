@@ -14,12 +14,12 @@ def handle_craftingProcessCraftingStep(request, user_id, rpcResult, items_to_add
 
     if userCurrentCraftings is None:
         logging.critical(f"userCurrentCraftings is None in crafting_processCraftingStep for user_id {user_id}")
-        rpcResult["r"] = -1
+        rpcResult["i"] = -1
         return
 
     if userCraftingSlots is None:
         logging.critical(f"userCraftingSlots is None in crafting_processCraftingStep for user_id {user_id}")
-        rpcResult["r"] = -1
+        rpcResult["i"] = -1
         return
 
     for key, plane in init_data["planeBlueprints"].items():
@@ -29,7 +29,7 @@ def handle_craftingProcessCraftingStep(request, user_id, rpcResult, items_to_add
 
     if initDataPlane is None:
         logging.critical(f"initDataPlane is None in crafting_processCraftingStep for user_id {user_id}, planeId {planeId}")
-        rpcResult["r"] = -1
+        rpcResult["i"] = -1
         return
     
     if isinstance(userCurrentCraftings, list):
@@ -65,7 +65,7 @@ def handle_craftingProcessCraftingStep(request, user_id, rpcResult, items_to_add
         else:
             userCurrentCraftings[planeId]["CraftingLevel"] -= 1
 
-        rpcResult["r"] = -1 # Crash the client
+        rpcResult["i"] = -1 # Crash the client
         return
     
     # Check for lack of materials (also possible cheating)
@@ -83,7 +83,7 @@ def handle_craftingProcessCraftingStep(request, user_id, rpcResult, items_to_add
                 else:
                     userCurrentCraftings[planeId]["CraftingLevel"] -= 1
 
-                rpcResult["r"] = -1 # Crash the client
+                rpcResult["i"] = -1 # Crash the client
                 return
             else:
                 json_data["materials"][matIdStr] -= requiredAmount
