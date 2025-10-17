@@ -136,7 +136,7 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [x] crafting.processCraftingStep
 - [x] crafting.buyMaterials
 - [x] crafting.start
-- [ ] crafting.instant
+- [x] crafting.instant
 - [ ] crafting.collect
 - [x] crafting.buySlot
 - [x] general.trackFlashError

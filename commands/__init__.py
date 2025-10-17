@@ -63,6 +63,7 @@ from .check_goals import handle_goal
 from .add_obj import handle_addObj
 from .crafting_buySlot import handle_craftingBuySlot
 from .crafting_start import handle_craftingStart
+from .crafting_instant import handle_craftingInstant
 from .souvenirs_takeReward import handle_souvenirsTakeReward
 from .crafting_buyMaterials import handle_craftingBuyMaterials
 from .crafting_processCraftingStep import handle_craftingProcessCraftingStep
@@ -133,6 +134,7 @@ __all__ = [
     'handle_addObj',
     "handle_craftingBuySlot",
     "handle_craftingStart",
+    "handle_craftingInstant",
     "handle_evoucherBook",
     "handle_souvenirsTakeReward",
     "handle_craftingBuyMaterials",

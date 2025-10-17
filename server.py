@@ -128,6 +128,7 @@ def main():
         "crafting.buyMaterials": handle_craftingBuyMaterials,
         "crafting.processCraftingStep": handle_craftingProcessCraftingStep,
         "crafting.start": handle_craftingStart,
+        "crafting.instant": handle_craftingInstant,
         "general.trackFlashError": handle_trackFlashError,
     }
     logging.info("Loading init data...")

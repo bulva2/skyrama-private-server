@@ -39,6 +39,15 @@ def handle_craftingStart(request, user_id, rpcResult, items_to_add_to_obj, json_
         rpcResult["i"] = -1
         return
 
-    rpcResult["r"] = {"success": {"status": True}, 
-                      "0": activeSlot["processData"], 
-                      "params": {"slotId": slotId, "processItemId": p["processItemId"], "slotType": p["slotType"], "processType": "crafting"}}
+    rpcResult["r"] = {
+        "success": {
+            "status": True
+        }, 
+        "0": activeSlot["processData"], 
+        "params": {
+            "slotId": slotId, 
+            "processItemId": p["processItemId"], 
+            "slotType": p["slotType"], 
+            "processType": "crafting"
+        }
+    }
