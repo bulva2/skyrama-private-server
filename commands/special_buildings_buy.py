@@ -3,7 +3,7 @@ from src.utils import substract_resources
 
 def handle_specialBuildingsBuy(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
-    rpcResult["t"] = str(int(time.time()))
+    rpcResult["t"] = int(time.time())
     rpcResult["r"] = None
 
     # Prevent people from buying more than one building of each type
@@ -18,11 +18,5 @@ def handle_specialBuildingsBuy(request, user_id, rpcResult, items_to_add_to_obj,
             
         json_data["specialBuildings"].append({"sbId":"1","special_building_types_id":request["p"]["types_id"],"id":json_data["playerData"]["next_object_id"],"position_x":request["p"]["position_x"],"position_y":request["p"]["position_y"],"direction":request["p"]["direction"],"player_id":user_id})
         # What is sbId??? Doesn't seem to matter for now
-
-        # Crafting hall: init first slot
-        if request["p"]["types_id"] == 3:
-           # Not sure what slotType means? It seems only to matter for the recycling hall
-           json_data["userCraftingSlots"].append({"slotType": 1, "slotId": 1, "slotDischarge": -62169985172, "processId": 0, "processData": []})
-           items_to_add_to_obj.append("userCraftingSlots")
     
         json_data["playerData"]["next_object_id"] = int(json_data["playerData"]["next_object_id"]) + 1

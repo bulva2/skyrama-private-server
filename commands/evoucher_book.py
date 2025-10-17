@@ -6,7 +6,7 @@ from pathlib import Path
 
 def handle_evoucherBook(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
-    rpcResult["t"] = str(int(time.time()))
+    rpcResult["t"] = int(time.time())
     rpcResult["r"] = {"evoucher": {"success": False, "message": "General voucher error", "errorcode": 100}}
     voucher_code = request["p"]["code"].upper().strip()
     
@@ -33,7 +33,7 @@ def handle_evoucherBook(request, user_id, rpcResult, items_to_add_to_obj, json_d
     voucher = None
     voucher_index = -1
     for k, v in enumerate(voucher_data["vouchers"]):
-        if v["code"] == voucher_code:
+        if v["code"].upper() == voucher_code:
             voucher = v
             voucher_index = k
             break

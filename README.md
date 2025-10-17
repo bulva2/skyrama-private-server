@@ -8,7 +8,7 @@ Keep in mind that although passwords should be properly encrypted/hashed, it is 
 
 ## Legal Issues
 
-This repository is made for educational purposes only and will not be monetized in any way. Contact me for any legal problems, and I'll take appropriate action.
+This repository is made for educational purposes only and will not be monetized in any way. This project is not meant to replace Skyrama in any way. Please contact us for any legal problems, and we'll take appropriate action. You can contact us on our Discord server at https://discord.gg/uFhJRvggZy.
 
 ## How to play
 
@@ -16,7 +16,9 @@ You will either need a browser that supports Flash (and Flash Player itself), or
 
 ## Where can I try it out?
 
-We currently host our own test server here: https://blue-hippopotamus-84002.zap.cloud/ ^^
+We currently host our own test server here: https://blue-hippopotamus-84002.zap.cloud/ ^^ (credits and huge thanks to Bulva2 for managing this!). Keep in mind that we may reset your progress on this server at any time during development.
+
+Also join us on [Discord](https://discord.gg/uFhJRvggZy)!
 
 ## How to run the code locally
 
@@ -117,7 +119,7 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [x] landside_buildings.buy
 - [x] landside_buildings.harvest
 - [x] goals.buyTask
-- [ ] souvenirs.takeReward
+- [x] souvenirs.takeReward - PARTIALLY (Missing Falcon)
 - [x] special_buildings.buy
 - [x] placeable.place  -  PARTIALLY
 - [x] placeable.setInStorage  -  PARTIALLY
@@ -131,13 +133,13 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [ ] recycling.start
 - [ ] recycling.instant
 - [ ] recycling.collect
-- [ ] crafting.processCraftingStep
-- [ ] crafting.buyMaterials
+- [x] crafting.processCraftingStep
+- [x] crafting.buyMaterials
 - [ ] crafting.start
 - [ ] crafting.instant
 - [ ] crafting.collect
 - [x] crafting.buySlot
-- [ ] general.trackFlashError
+- [x] general.trackFlashError
 - [ ] materialevent.redeemItem
 
 ### Likely unused game commands

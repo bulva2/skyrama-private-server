@@ -4747,7 +4747,13 @@
     }
   ],
   "userCraftingSlots": [
-
+    {
+      "slotType": 1,
+      "slotId": 1,
+      "slotDischarge": -62169985172,
+      "processId": 0,
+      "processData": []
+    }
   ],
   "userCurrentCraftings": [
 

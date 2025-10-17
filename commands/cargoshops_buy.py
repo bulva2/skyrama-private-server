@@ -3,7 +3,7 @@ import src.utils as utils
 
 def handle_cargoshopsBuy(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
-    rpcResult["t"] = str(int(time.time()))
+    rpcResult["t"] = int(time.time())
     rpcResult["r"] = None
 
     # CHECK IF THE BUILDING IS ALREADY UNLOCKED
