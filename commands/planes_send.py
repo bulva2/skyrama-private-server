@@ -1,11 +1,8 @@
-import json
 import logging
 import random
 import time
-import urllib.error
-import urllib.request
-import src.configHandler as configHandler
 import src.userManager as userManager
+from src.debug import send_webhook
 
 def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
@@ -131,7 +128,7 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
                     logging.error(
                         f"planes_send: Cannot load buddy data for player {json_data['planes'][j]['to_player_id']}, plane will be treated as NPC plane"
                     )
-                    _send_missing_buddy_save_alert(request, json_data["planes"][j])
+                    send_webhook(json_data, user_id, request, additional_data=json_data["planes"][j])
                     json2_data = None
                 else:
                     last_id = int(json2_data["playerData"]["next_object_id"])
@@ -148,56 +145,3 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
 
             rpcResult["r"]["planes"][str(request["p"]["id"])] = json_data["planes"][j]
         j = j + 1
-
-# Debug functions
-def _truncate_for_embed(content: str, limit: int = 1000) -> str:
-    """Trim text so it fits inside a Discord embed field."""
-    if len(content) <= limit:
-        return content
-    return f"{content[: limit - 3]}..."
-
-def _send_missing_buddy_save_alert(request_payload: dict, plane_payload: dict) -> None:
-    """Notify Discord when buddy data fails to load to help diagnose data corruption/race issues."""
-    try:
-        webhook_url = configHandler.get_config().get("Alerts", "planes_send_webhook_url", fallback="").strip()
-    except Exception as error:  # Config not ready or malformed
-        logging.error(f"planes_send: Unable to read webhook configuration: {error}")
-        return
-
-    if not webhook_url:
-        return
-
-    try:
-        request_dump = _truncate_for_embed(json.dumps(request_payload, indent=2, ensure_ascii=True))
-    except (TypeError, ValueError):
-        request_dump = _truncate_for_embed(str(request_payload))
-
-    try:
-        plane_dump = _truncate_for_embed(json.dumps(plane_payload, indent=2, ensure_ascii=True))
-    except (TypeError, ValueError):
-        plane_dump = _truncate_for_embed(str(plane_payload))
-
-    embed = {
-        "title": "planes.send buddy data missing",
-        "description": "`userManager.load_save_by_id` returned -1 – treating plane as NPC.",
-        "color": 0xD9534F,
-        "fields": [
-            {"name": "Request", "value": f"```json\n{request_dump}\n```", "inline": False},
-            {"name": "Plane State", "value": f"```json\n{plane_dump}\n```", "inline": False},
-        ],
-    }
-
-    payload = json.dumps({"embeds": [embed]}, separators=(",", ":")).encode("utf-8")
-
-    http_request = urllib.request.Request(
-        webhook_url,
-        data=payload,
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-
-    try:
-        with urllib.request.urlopen(http_request, timeout=5):
-            pass
-    except urllib.error.URLError as error:
-        logging.error(f"planes_send: Failed to deliver Discord webhook: {error}")

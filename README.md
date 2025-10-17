@@ -139,7 +139,7 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [ ] crafting.instant
 - [ ] crafting.collect
 - [x] crafting.buySlot
-- [ ] general.trackFlashError
+- [x] general.trackFlashError
 - [ ] materialevent.redeemItem
 
 ### Likely unused game commands

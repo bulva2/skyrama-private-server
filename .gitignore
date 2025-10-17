@@ -4,6 +4,7 @@ data/users/*
 data/users/nametoid/*
 data/backups
 !data/users/nametoid/.gitkeep
+flasherrors.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
