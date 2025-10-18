@@ -124,7 +124,12 @@ def main():
         "buddy.collectPassenger": handle_buddyCollectPassenger,
         "crafting.buySlot": handle_craftingBuySlot,
         "evoucher.book": handle_evoucherBook,
-        "souvenirs.takeReward": handle_souvenirsTakeReward
+        "souvenirs.takeReward": handle_souvenirsTakeReward,
+        "crafting.buyMaterials": handle_craftingBuyMaterials,
+        "crafting.processCraftingStep": handle_craftingProcessCraftingStep,
+        "crafting.start": handle_craftingStart,
+        "crafting.instant": handle_craftingInstant,
+        "general.trackFlashError": handle_trackFlashError,
     }
     logging.info("Loading init data...")
     
@@ -136,10 +141,11 @@ def main():
 
     with open(os.path.join(p, "data", "obj.json.def"), "r", encoding="utf-8") as f:
         obj_data = json.loads(f.read())
-    f.close()
-
-    # Sort accounts by location id
+    f.close()    # Sort accounts by location id
     userManager.save_players_by_location_id()
+    
+    # Start the asynchronous save system
+    userManager.start_save_system()
     
     # Load language files
     langstrings = {}
@@ -292,7 +298,7 @@ def main():
         # Check if input data is valid
         if not re.match(r'[^@]+@[^@]+\.[^@]+', email):
             msg = 'bgc.error.email_invalidAddress'
-        elif not re.match(r'[A-Za-z0-9]+', username):
+        elif not re.match(r'[A-Za-z0-9_-]+', username):
             msg = 'bgc.error.username_containsInvalidCharacters'
         elif not username:
             msg = 'bgc.error.username_notGiven'
@@ -354,8 +360,7 @@ def main():
             return "Success!"
         else:
             return "good try lmao"
-    
-
+        
     @app.route("/set-maintenance/off")
     def setMaintenanceOff():
         if "userid" in session and session["userid"] in ADMINS:
@@ -363,8 +368,62 @@ def main():
             maintenance["startTime"] = 0
             return "Success!"
         else:
+            return "good try lmao"    
+        
+    @app.route("/admin/save-stats")
+    def saveStats():
+        if "userid" in session and session["userid"] in ADMINS:
+            stats = userManager.get_save_stats()
+            return f"""
+            <h2>Save System Statistics (Race-Condition Safe)</h2>
+            <div style="background: #f0f0f0; padding: 10px; margin: 10px 0;">
+                <p><strong>Dirty Users:</strong> {stats['dirty_users_count']}</p>
+                <p><strong>Currently Saving:</strong> {stats['saving_users_count']}</p>
+                <p><strong>Total Cached Users:</strong> {stats['total_users_cached']}</p>
+                <p><strong>File Locks Active:</strong> {stats['file_locks_count']}</p>
+                <p><strong>Save Thread Running:</strong> {stats['save_thread_alive']}</p>
+                <p><strong>Emergency Save Active:</strong> {stats['emergency_save_active']}</p>
+                <p><strong>Shutdown In Progress:</strong> {stats['shutdown_in_progress']}</p>
+            </div>
+            <p><strong>Sample Dirty Users:</strong> {', '.join(map(str, stats['dirty_users_sample']))}</p>
+            <p><strong>Sample Saving Users:</strong> {', '.join(map(str, stats['saving_users_sample']))}</p>
+            <br>
+            <a href="/admin/force-save">Force Save All</a> | 
+            <a href="/admin/verify-integrity">Verify Data Integrity</a>
+            """
+        else:
+            return "good try lmao"
+    
+    @app.route("/admin/verify-integrity")
+    def verifyIntegrity():
+        if "userid" in session and session["userid"] in ADMINS:
+            user_id = request.args.get('user_id', session.get('userid'))
+            if user_id:
+                result = userManager.verify_data_integrity(int(user_id))
+                return f"""
+                <h2>Data Integrity Check</h2>
+                <div style="background: #f0f0f0; padding: 10px; margin: 10px 0;">
+                    <p><strong>User ID:</strong> {result['user_id']}</p>
+                    <p><strong>In Memory:</strong> {result['in_memory']}</p>
+                    <p><strong>On Disk:</strong> {result['on_disk']}</p>
+                    <p><strong>Is Dirty:</strong> {result['is_dirty']}</p>
+                    <p><strong>Is Saving:</strong> {result['is_saving']}</p>
+                    <p><strong>Data Matches:</strong> {result['data_matches']}</p>
+                </div>
+                <a href="/admin/save-stats">Back to Stats</a>
+                """
+            else:
+                return "Please provide user_id parameter"
+        else:
             return "good try lmao"
 
+    @app.route("/admin/force-save")
+    def forceSaveAll():
+        if "userid" in session and session["userid"] in ADMINS:
+            userManager.force_save_all()
+            return "All users saved! <a href='/admin/save-stats'>Back to stats</a>"
+        else:
+            return "good try lmao"
 
     @app.route("/maintenance/")
     def maintenanceWork():
@@ -498,11 +557,36 @@ def main():
     Request.max_form_parts = 50000
     MEGABYTE = (2 ** 10) ** 2
     app.config['MAX_CONTENT_LENGTH'] = None
-    app.config['MAX_FORM_MEMORY_SIZE'] = 50 * MEGABYTE
-
-    # Development environment, this won't run in production with a proper web server like nginx or apache
+    app.config['MAX_FORM_MEMORY_SIZE'] = 50 * MEGABYTE    # Development environment, this won't run in production with a proper web server like nginx or apache
     if __name__ == "__main__":
-        app.run(host=host, port=port, debug=configHandler.get_flask_debug())
+        import signal
+        
+        def signal_handler(signum, frame):
+            logging.info("Server shutting down, saving all user data...")
+            userManager.shutdown_save_system()
+            exit(0)
+          # Register signal handlers for graceful shutdown
+        signal.signal(signal.SIGINT, signal_handler)
+        signal.signal(signal.SIGTERM, signal_handler)
+        
+        try:
+            # Disable reloader and threaded mode to prevent socket issues
+            app.run(host=host, port=port, debug=configHandler.get_flask_debug(), 
+                   use_reloader=False, threaded=False)
+        except KeyboardInterrupt:
+            # This handles Ctrl+C
+            logging.info("Server shutting down, saving all user data...")
+            userManager.shutdown_save_system()
+        except Exception as e:
+            logging.error(f"Server error: {e}")
+            logging.info("Server shutting down, saving all user data...")
+            userManager.shutdown_save_system()
+        finally:
+            # Final cleanup - but avoid double shutdown
+            if not userManager.is_save_system_shutdown():
+                logging.info("Server shutting down, saving all user data...")
+                userManager.shutdown_save_system()
 
 # Start the server
-main()
+if __name__ == "__main__":
+    main()

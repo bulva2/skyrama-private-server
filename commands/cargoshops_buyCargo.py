@@ -15,7 +15,7 @@ def handle_cargoshopsBuyCargo(request, user_id, rpcResult, items_to_add_to_obj, 
     # Buying cargo in the warehouse: 100 cargo for 1 aircash
 
     rpcResult["i"] = request["i"]
-    rpcResult["t"] = str(int(time.time()))
+    rpcResult["t"] = int(time.time())
     rpcResult["r"] = None
 
     for i in init_data["cargoTypes"]:
