@@ -9,42 +9,30 @@ def handle_planesSendback(request, user_id, rpcResult, items_to_add_to_obj, json
     rpcResult["i"] = request["i"]
     rpcResult["t"] = int(time.time())
     rpcResult["r"] = None
-    items_to_add_to_obj.append(f"planes:{request["p"]["id"]}")
+    items_to_add_to_obj.append(f"planes:{request["p"]["id"]}")  
 
-    p = Path(__file__).parents[1]     
-    
-    j = 0
-    for i in json_data["planes"]:
-        if int(i["id"]) == request["p"]["id"]:
-            plane_type_id = int(i["plane_type_id"])
+    for plane in json_data["planes"]:
+        if int(plane["id"]) == request["p"]["id"]:
+            plane_type_id = int(plane["plane_type_id"])
             if request["p"]["player_id"] == 0: # Cashcow, so make it appear on radar again.
-                json_data["planes"][j]["flight_status"] = 77
-                json_data["planes"][j]["departure_time"] = request["t"] - 450
-                json_data["planes"][j]["arrival_time"] = request["t"] + 450
-                json_data["planes"][j]["start_service_time"] = 0
-                json_data["planes"][j]["last_state_change_time"] = request["p"]["last_state_change_time"]
-                json_data["planes"][j]["player_id"] = request["p"]["player_id"]
-                json_data["planes"][j]["subcontainer_id"] = request["p"]["subcontainer_id"]
-                json_data["planes"][j]["container_id"] = request["p"]["container_id"]
-                json_data["planes"][j]["to_player_id"] = request["p"]["to_player_id"]
-                json_data["planes"][j]["instantland"] = request["p"]["instantland"]
+                plane["flight_status"] = 77
+                plane["departure_time"] = request["t"] - 450
+                plane["arrival_time"] = request["t"] + 450
+                plane["start_service_time"] = 0
+                plane["last_state_change_time"] = request["p"]["last_state_change_time"]
+                plane["player_id"] = request["p"]["player_id"]
+                plane["subcontainer_id"] = request["p"]["subcontainer_id"]
+                plane["container_id"] = request["p"]["container_id"]
+                plane["to_player_id"] = request["p"]["to_player_id"]
+                plane["instantland"] = request["p"]["instantland"]
             else:
                 for g in init_data["planeTypes"]:
                   if int(g["id"]) == plane_type_id:
                     buddy_points = int(g["buddy_points_yield"])
                     load_type = g["load_type"]
                     break
-                  
-                '''
-                for file in os.listdir(os.path.join(p, "data")):
-                    if file[0:8] == str(json_data["planes"][j]["player_id"]):
-                        player_from_file = file
-                        break
-                f = open(os.path.join(p, "data", player_from_file), "r")
-                json2_data = json.loads(str(f.read()))
-                f.close()
-                '''
-                buddy_id = int(json_data["planes"][j]["player_id"])
+
+                buddy_id = int(plane["player_id"])
 
                 json2_data = userManager.load_save_by_id(buddy_id)
 
@@ -52,7 +40,7 @@ def handle_planesSendback(request, user_id, rpcResult, items_to_add_to_obj, json
                 if json2_data == -1 or json2_data is None:
                     logging.critical(f"Crash has been prevented!")
                     logging.critical(f"[planes_sendback] Could not load buddy data for player_id {request['p']['player_id']}: invalid json2_data")
-                    json_data["planes"].pop(j)
+                    json_data["planes"].remove(plane)
                     continue
 
                 # When returning a plane from a stranger, add them to the buddylist.
@@ -67,7 +55,7 @@ def handle_planesSendback(request, user_id, rpcResult, items_to_add_to_obj, json
                     # 0 buddypoints for second player because they still have to handle the plane on their airport
                 
                 for g in json2_data["planes"]:
-                  if int(g["id"]) == int(i["fromUser_objectId"]):
+                  if int(g["id"]) == int(plane["fromUser_objectId"]):
                     # Returning plane should give buddy points and double xp, aircoins and cargo
                     g["buddy_points"] = buddy_points
                     g["xp"] = int(g["xp"]) * 2
@@ -77,10 +65,8 @@ def handle_planesSendback(request, user_id, rpcResult, items_to_add_to_obj, json
                     
                     break
 
-                json_data["planes"].pop(j)
-            
-        j = j + 1
-    
+                json_data["planes"].remove(plane)
+
     if request["p"]["player_id"] != 0:
         '''
         f = open(os.path.join(p, "data", player_from_file), "w")

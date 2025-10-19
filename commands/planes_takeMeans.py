@@ -15,10 +15,9 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
     rpcResult["t"] = int(time.time())
     rpcResult["r"] = None
 
-    j = 0
-    for i in json_data["planes"]:
-        if int(i["id"]) == request["p"]["plane_id"]:
-            plane_type_id = int(i["plane_type_id"])
+    for plane in json_data["planes"]:
+        if int(plane["id"]) == request["p"]["plane_id"]:
+            plane_type_id = int(plane["plane_type_id"])
 
             ######################################
             # Required because not being sent \/ #
@@ -27,39 +26,39 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
             # Check own/buddy plane's location
             if int(request["p"]["owner_id"]) == int(user_id):
                 # Own plane - should use destination location (to_location_id)
-                if "to_location_id" in i and i["to_location_id"] is not None:
-                    location_id = int(i["to_location_id"])
+                if "to_location_id" in plane and plane["to_location_id"] is not None:
+                    location_id = int(plane["to_location_id"])
                 else:
                     # Race condition detected - setState hasn't run yet
-                    logging.warning(f"planes_takeMeans: Race condition detected for own plane id {i['id']} - to_location_id missing/None!")
-                    if "from_location_id" in i:
-                        logging.warning(f"planes_takeMeans: Using 'from_location_id' as fallback for own plane id {i['id']} (SEMANTICALLY INCORRECT)")
-                        location_id = int(i["from_location_id"])
+                    logging.warning(f"planes_takeMeans: Race condition detected for own plane id {plane['id']} - to_location_id missing/None!")
+                    if "from_location_id" in plane:
+                        logging.warning(f"planes_takeMeans: Using 'from_location_id' as fallback for own plane id {plane['id']} (SEMANTICALLY INCORRECT)")
+                        location_id = int(plane["from_location_id"])
                     else:
-                        logging.warning(f"planes_takeMeans: Using player's location as fallback for own plane id {i['id']}")
+                        logging.warning(f"planes_takeMeans: Using player's location as fallback for own plane id {plane['id']}")
                         location_id = json_data["playerData"]["location_id"]
             else:
                 # Buddy plane - should use origin location (from_location_id) 
-                if "from_location_id" in i and i["from_location_id"] is not None:
-                    location_id = int(i["from_location_id"])
+                if "from_location_id" in plane and plane["from_location_id"] is not None:
+                    location_id = int(plane["from_location_id"])
                 else:
                     # Race condition detected
-                    logging.warning(f"planes_takeMeans: Race condition detected for buddy plane id {i['id']} - from_location_id missing/None!")
-                    if "to_location_id" in i:
-                        logging.warning(f"planes_takeMeans: Using 'to_location_id' as fallback for buddy plane id {i['id']} (SEMANTICALLY INCORRECT)")
-                        location_id = int(i["to_location_id"])
+                    logging.warning(f"planes_takeMeans: Race condition detected for buddy plane id {plane['id']} - from_location_id missing/None!")
+                    if "to_location_id" in plane:
+                        logging.warning(f"planes_takeMeans: Using 'to_location_id' as fallback for buddy plane id {plane['id']} (SEMANTICALLY INCORRECT)")
+                        location_id = int(plane["to_location_id"])
                     else:
-                        logging.warning(f"planes_takeMeans: Using player's location as fallback for buddy plane id {i['id']}")
+                        logging.warning(f"planes_takeMeans: Using player's location as fallback for buddy plane id {plane['id']}")
                         location_id = json_data["playerData"]["location_id"]
 
             # Check drop material + amount of it (+ workaround for missing data)
-            if "drop_material" in i:
-                drop_material = int(i["drop_material"])
+            if "drop_material" in plane:
+                drop_material = int(plane["drop_material"])
             else:
                 drop_material = 0
 
-            if "drop_material_amount" in i:
-                drop_material_amount = int(i["drop_material_amount"])
+            if "drop_material_amount" in plane:
+                drop_material_amount = int(plane["drop_material_amount"])
             else:
                 drop_material_amount = 0
 
@@ -67,13 +66,13 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
             # Extra cheat checks (because we don't trust anyone xD) \/ #
             ############################################################
 
-            buddy_points = int(i["buddy_points"])
+            buddy_points = int(plane["buddy_points"])
 
-            wares_revenue = int(i["wares_revenue"])
+            wares_revenue = int(plane["wares_revenue"])
 
-            contents_count = int(i["contents_count"])
+            contents_count = int(plane["contents_count"])
 
-            souvenir_types_id = int(i["souvenir_types_id"])
+            souvenir_types_id = int(plane["souvenir_types_id"])
 
             for g in init_data["planeTypes"]:
                 if int(g["id"]) == plane_type_id:
@@ -90,7 +89,7 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                     elif "buddy_points" in request["p"]:
                         for h in json_data["buddyStuff"]["buddies"]:
                             if int(request["p"]["owner_id"]) == int(user_id): # plane sent by you
-                                if int(h["hi_player_id"]) == int(i["to_player_id"]):
+                                if int(h["hi_player_id"]) == int(plane["to_player_id"]):
                                     # Possible cheat, disconnect user
                                     if int(request["p"]["buddy_points"]) != buddy_points:
                                         rpcResult["i"] = -1
@@ -98,7 +97,7 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                                     break
 
                             else: # plane sent by your friend
-                                if int(h["hi_player_id"]) == int(i["player_id"]):
+                                if int(h["hi_player_id"]) == int(plane["player_id"]):
                                     h["buddy_points"] = int(h["buddy_points"]) + buddy_points
                                     break
                     #####################################################################################
@@ -143,7 +142,7 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                                             rpcResult["i"] = -1
                                         k["num"] = int(k["num"]) + 1
                         else:
-                            logging.warning(f"planes_takeMeans: souvenir_types_id is None for plane id {i['id']}, User: {json_data['playerData']['user_name']} (ID: {user_id})")
+                            logging.warning(f"planes_takeMeans: souvenir_types_id is None for plane id {plane['id']}, User: {json_data['playerData']['user_name']} (ID: {user_id})")
 
                     #####################################################################################
                     elif "drop_material" in request["p"]:
@@ -219,7 +218,7 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                 # This should be moved to planes.setState to avoid that! #
                 ##########################################################
                 if "xp" in request["p"]:
-                    if (int(request["t"]) - int(i["start_service_time"])) < (int(service_time) / 3) or int(i["start_service_time"]) == 0:  # Own plane
+                    if (int(request["t"]) - int(plane["start_service_time"])) < (int(service_time) / 3) or int(plane["start_service_time"]) == 0:  # Own plane
                         if int(request["t"]) > int(json_data["playerData"]["aycqs_start_time"]):
                             json_data["playerData"]["air_cash"] -= int(quick_start_coins_cost)
 
@@ -230,7 +229,6 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                 ##########################################################
                 if ("xp" in request["p"]) or (int(request["p"]["plane_id"]) == 0 and "air_coins" in request["p"]):
                     # Buddy plane
-                    if (request["t"] - i["start_service_time"]) < service_time or i["start_service_time"] == 0:
+                    if (request["t"] - plane["start_service_time"]) < service_time or plane["start_service_time"] == 0:
                         if int(request["t"]) > int(json_data["playerData"]["aycqs_start_time"]):
                             json_data["playerData"]["air_cash"] -= quick_buddy_serve_coins_cost
-        j = j + 1

@@ -15,23 +15,22 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
         json_data.update(fresh_data)
 
     json2_data = None
-    #player_to_file = 0
-    j = 0
-    for i in json_data["planes"]:
-        if int(i["id"]) == request["p"]["id"]:
-            json_data["planes"][j]["departure_time"] = request["p"]["departure_time"]
-            json_data["planes"][j]["kerosene_boost_flag"] = request["p"]["kerosene_boost_flag"]
-            json_data["planes"][j]["last_state_change_time"] = request["p"]["last_state_change_time"]
-            json_data["planes"][j]["subcontainer_id"] = request["p"]["subcontainer_id"]
-            json_data["planes"][j]["container_id"] = request["p"]["container_id"]
-            json_data["planes"][j]["arrival_time"] = request["p"]["arrival_time"]  
-            json_data["planes"][j]["flight_status"] = 77
-            json_data["planes"][j]["from_user_name"] = json_data["playerData"]["user_name"]
-            json_data["planes"][j]["from_location_id"] = json_data["playerData"]["location_id"]
-            json_data["planes"][j]["buddy_points"] = 0
-            json_data["planes"][j]["fromUser_objectId"] = int(i["id"]) # So buddies know the right plane id
+
+    for plane in json_data["planes"]:
+        if int(plane["id"]) == request["p"]["id"]:
+            plane["departure_time"] = request["p"]["departure_time"]
+            plane["kerosene_boost_flag"] = request["p"]["kerosene_boost_flag"]
+            plane["last_state_change_time"] = request["p"]["last_state_change_time"]
+            plane["subcontainer_id"] = request["p"]["subcontainer_id"]
+            plane["container_id"] = request["p"]["container_id"]
+            plane["arrival_time"] = request["p"]["arrival_time"]  
+            plane["flight_status"] = 77
+            plane["from_user_name"] = json_data["playerData"]["user_name"]
+            plane["from_location_id"] = json_data["playerData"]["location_id"]
+            plane["buddy_points"] = 0
+            plane["fromUser_objectId"] = int(plane["id"]) # So buddies know the right plane id
                 
-            plane_type_id = int(i["plane_type_id"])
+            plane_type_id = int(plane["plane_type_id"])
             for g in init_data["planeTypes"]:
                 if int(g["id"]) == plane_type_id:
                     xp = g["xp_yield"]
@@ -47,14 +46,14 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
                 
             # Setup xp and coins (will be doubled in planes.sendback when the plane gets serviced by the buddy)
 
-            json_data["planes"][j]["xp"] = xp
-            json_data["planes"][j]["air_coins"] = coins            
+            plane["xp"] = xp
+            plane["air_coins"] = coins            
 
             if load_type == "Cargo":  # Cargo planes don't drop souvenirs, but cargo + L parts
 
                 # Setup cargo
-                json_data["planes"][j]["contents_count"] = contents_count
-                json_data["planes"][j]["wares_revenue"] = wares_revenue
+                plane["contents_count"] = contents_count
+                plane["wares_revenue"] = wares_revenue
 
                 # Setup L parts
                 material_chances = init_data["materialChances"][str(recycling_value)]
@@ -65,19 +64,19 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
                     if chance > random_chance:
                         material_id = int(g["MaterialId"])
                         amount = random.randint(int(g["MinAmount"]), int(g["MaxAmount"]))
-                        json_data["planes"][j]["drop_material"] = material_id
-                        json_data["planes"][j]["drop_material_amount"] = amount
+                        plane["drop_material"] = material_id
+                        plane["drop_material_amount"] = amount
                         break
             else:
-                json_data["planes"][j]["drop_material"] = 0
-                json_data["planes"][j]["drop_material_amount"] = 0
+                plane["drop_material"] = 0
+                plane["drop_material_amount"] = 0
 
-                if json_data["planes"][j].get("to_location_id") is None:
-                    json_data["planes"][j]["souvenir_types_id"] = -1
+                if plane.get("to_location_id") is None:
+                    plane["souvenir_types_id"] = -1
                     logging.warning("planes_send: to_location_id is None! This has to be a race condition!")
                 else:
                     for g in json_data["locations"]:
-                        if int(g["id"]) == int(json_data["planes"][j]["to_location_id"]):
+                        if int(g["id"]) == int(plane["to_location_id"]):
                             flight_time_seconds = 0
                             for plane_data in init_data["planeTypes"]:
                                 if int(plane_data["id"]) == plane_type_id:
@@ -114,25 +113,25 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
                                 souvenir_num = random.randint(1, 3)
                                 souvenir = g[f"souvenir_types_id_{souvenir_num}"]
 
-                            json_data["planes"][j]["souvenir_types_id"] = souvenir
+                            plane["souvenir_types_id"] = souvenir
                             break
 
-            if (int(request["t"]) - int(i["start_service_time"])) < ((int(service_time) / 3) * 2) or int(i["start_service_time"]) == 0:
+            if (int(request["t"]) - int(plane["start_service_time"])) < ((int(service_time) / 3) * 2) or int(plane["start_service_time"]) == 0:
                 if int(request["t"]) > int(json_data["playerData"]["aycqs_start_time"]):
                     json_data["playerData"]["air_cash"] = int(json_data["playerData"]["air_cash"]) - int(quick_start_coins_cost)
 
-            if int(json_data["planes"][j]["to_player_id"]) != 800:  # ID 800 = NPC player
-                json2_data = userManager.load_save_by_id(json_data["planes"][j]["to_player_id"])
+            if int(plane["to_player_id"]) != 800:  # ID 800 = NPC player
+                json2_data = userManager.load_save_by_id(plane["to_player_id"])
 
                 if json2_data == -1 or not isinstance(json2_data, dict):
                     logging.error(
-                        f"planes_send: Cannot load buddy data for player {json_data['planes'][j]['to_player_id']}, plane will be treated as NPC plane"
+                        f"planes_send: Cannot load buddy data for player {plane['to_player_id']}, plane will be treated as NPC plane"
                     )
-                    send_webhook(json_data, user_id, request, additional_data=json_data["planes"][j])
+                    send_webhook(json_data, user_id, request, additional_data=plane)
                     json2_data = None
                 else:
                     last_id = int(json2_data["playerData"]["next_object_id"])
-                    copy = json_data["planes"][j].copy()
+                    copy = plane.copy()
                     copy["id"] = last_id + 1
                     copy["buddy_points"] = buddy_points
                     copy["xp"] = xp * 2  # Servicing a buddy's plane gives double xp, but same amount of coins
@@ -143,5 +142,4 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
 
                     userManager.modify_save_by_id(json2_data["playerData"]["account_id"], json2_data)
 
-            rpcResult["r"]["planes"][str(request["p"]["id"])] = json_data["planes"][j]
-        j = j + 1
+            rpcResult["r"]["planes"][str(request["p"]["id"])] = plane
