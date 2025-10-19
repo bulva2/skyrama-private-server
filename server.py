@@ -4,6 +4,7 @@ from commands import *
 from werkzeug import Request
 from bundle import TEMPLATES_DIR, STUB_DIR, STYLES_DIR, ASSETS_DIR
 from src.utils import get_level_from_xp
+import src.debug as debug
 import src.userManager as userManager
 import src.configHandler as configHandler
 
@@ -326,11 +327,14 @@ def main():
     
                 token = str(uuid.uuid1())
                 userManager.create_new_account(uid,username,password,token)
+
                 session["username"] = username
                 session["userid"] = uid
                 session["token"] = token
+
                 userManager.add_to_player_count(1)
-    
+                debug.user_registered_webhook(uid, username)
+
                 return redirect('play')
             else:
                 msg = 'bgc.error.account_exists'
