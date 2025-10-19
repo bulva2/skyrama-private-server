@@ -1,10 +1,9 @@
 import logging
 import time
 from src.debug import send_webhook
-from src.utils import substract_resources
 from src.utils import get_crafting_level_from_xp
 
-def handle_craftingInstant(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
+def handle_craftingCollect(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
     rpcResult["t"] = int(time.time())
     rpcResult["r"] = False
@@ -20,21 +19,16 @@ def handle_craftingInstant(request, user_id, rpcResult, items_to_add_to_obj, jso
                 send_webhook(json_data, user_id, request)
                 rpcResult["i"] = -1
                 return
-
-            # Prevent cheating by injecting different planeId
-            if p["planeId"] != process_data["itemId"]:
-                # To-do: Replace with anticheat webhook
-                send_webhook(json_data, user_id, request, additional_data=process_data)
-                rpcResult["i"] = -1
-                return
             
             # Calculate the price of the skip 
             # (We start at 48 aircoins and deduct 1 for every 30min)
             time_remaining = process_data["endtime"] - int(time.time())
-            skip_cost = max(1, min(48, (time_remaining // 1800) + 1))
 
-            substract_resources(json_data, rpcResult, air_cash=skip_cost)
-            logging.debug(f"Deducted {skip_cost} air coins for crafting skip for user {user_id}")
+            if time_remaining > 0:
+                # To-do: Replace with anticheat webhook
+                send_webhook(json_data, user_id, request, additional_data=process_data)
+                rpcResult["i"] = -1
+                return
 
             slot["processData"] = []
             slot["processId"] = 0
@@ -64,15 +58,15 @@ def handle_craftingInstant(request, user_id, rpcResult, items_to_add_to_obj, jso
         logging.critical(f"Large hangar not found for user with id {user_id}")
         rpcResult["i"] = -1
         return
-
+    
     for i in init_data["planeTypes"]:
-        if int(i["id"]) == int(p["planeId"]):
+        if int(i["id"]) == int(process_data["itemId"]):
             json_data["planes"].append(
                 {
                     "souvenir_types_id":-1,
                     "active_count":1,
                     "id":json_data["playerData"]["next_object_id"],
-                    "plane_type_id":p["planeId"],
+                    "plane_type_id":process_data["itemId"],
                     "container_id": hangar_id,
                     "subcontainer_id":1, # Hangar has no subcontainers, so just 1 (i think that's what it means?)
                     "to_player_id":-1,
@@ -98,7 +92,8 @@ def handle_craftingInstant(request, user_id, rpcResult, items_to_add_to_obj, jso
             }
         )
     
-    currentCraftings.pop(str(p["planeId"]), None)
+    currentCraftings.pop(str(process_data["itemId"]), None)
+
 
     # Calculate xp
     # Got this data from the German FAQs, can't seem to find them in the config as well
@@ -127,14 +122,14 @@ def handle_craftingInstant(request, user_id, rpcResult, items_to_add_to_obj, jso
     json_data["playerData"]["crafting_level"] = level_calculation[0]
     json_data["playerData"]["crafting_levelXP"] = level_calculation[1]
     json_data["playerData"]["crafting_levelCap"] = level_calculation[2]
-    
+
     json_data["playerData"]["next_object_id"] += 1
 
     rpcResult["r"] = {
         "status": True, 
         "result": {
             "craftingXp": crafting_xp_per_craft,
-            "itemId": p["planeId"]
+            "itemId": process_data["itemId"]
         },
         "slotId": p["slotId"],
         "slotType": p["slotType"],

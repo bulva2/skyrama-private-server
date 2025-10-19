@@ -4,6 +4,7 @@ from commands import *
 from werkzeug import Request
 from bundle import TEMPLATES_DIR, STUB_DIR, STYLES_DIR, ASSETS_DIR
 from src.utils import get_level_from_xp
+from src.utils import get_crafting_level_from_xp
 import src.userManager as userManager
 import src.configHandler as configHandler
 
@@ -130,6 +131,7 @@ def main():
         "crafting.start": handle_craftingStart,
         "crafting.instant": handle_craftingInstant,
         "general.trackFlashError": handle_trackFlashError,
+        "crafting.collect": handle_craftingCollect
     }
     logging.info("Loading init data...")
     

@@ -68,6 +68,7 @@ from .souvenirs_takeReward import handle_souvenirsTakeReward
 from .crafting_buyMaterials import handle_craftingBuyMaterials
 from .crafting_processCraftingStep import handle_craftingProcessCraftingStep
 from .general_trackFlashError import handle_trackFlashError
+from .crafting_collect import handle_craftingCollect
 
 # Define what to export when "from commands import *" is used
 __all__ = [
@@ -139,5 +140,6 @@ __all__ = [
     "handle_souvenirsTakeReward",
     "handle_craftingBuyMaterials",
     "handle_craftingProcessCraftingStep",
-    "handle_trackFlashError"
+    "handle_trackFlashError",
+    "handle_craftingCollect"
 ]

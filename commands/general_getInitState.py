@@ -36,6 +36,16 @@ def handle_getInitState(request, user_id, rpcResult, items_to_add_to_obj, json_d
     # Run buddy.getAll
     run_buddy_checks(request["t"], json_data)
 
+    # Check crafting slots for completed planes (causes a visual glitch if we don't do this)
+    # It's not a critical glitch, so only checking it on logging in and not on every command (for performance reasons)
+    for slot in json_data.get("userCraftingSlots", []):
+        if "processData" not in slot or "endtime" not in slot["processData"]:
+            continue
+        process_data = slot["processData"]
+        time_remaining = process_data["endtime"] - int(time.time())
+        if time_remaining <= 0:
+            process_data["finished"] = True
+
     merger = Merger(
         [(dict, ["merge"]), (list, ["override"]), (set, ["override"])],
         ["override"],

@@ -1,10 +1,24 @@
 import logging
 
-def get_level_from_xp(xp : int, level_caps : list[int]) -> int:
+def get_level_from_xp(xp, level_caps):
   for level, cap in enumerate(level_caps):
     if int(cap) > xp:
       return level
+    
   return len(level_caps)
+
+# Returns (level, xp into current level, current level cap)
+def get_crafting_level_from_xp(xp, level_caps):
+  level_caps = level_caps.values()
+  total_xp = 0
+  xp_in_level = xp
+  for level, cap in enumerate(level_caps):
+    intcap = int(cap)
+    total_xp += intcap
+    if xp < total_xp:
+      return (level, xp_in_level, intcap)
+    xp_in_level -= intcap
+  return (len(level_caps) - 1, xp_in_level + intcap, intcap)
 
 def substract_resources(json_data, rpcResult, air_coins = None, air_cash = None, event_currency = None):
   player_data = json_data["playerData"]

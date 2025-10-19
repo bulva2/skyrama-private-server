@@ -137,7 +137,7 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [x] crafting.buyMaterials
 - [x] crafting.start
 - [x] crafting.instant
-- [ ] crafting.collect
+- [x] crafting.collect
 - [x] crafting.buySlot
 - [x] general.trackFlashError
 - [ ] materialevent.redeemItem

@@ -11,7 +11,7 @@ def handle_craftingBuyMaterials(request, user_id, rpcResult, items_to_add_to_obj
     plane_part_id = request["p"]["planePartId"]
 
     # Read config
-    air_cash_cost = amount * init_data["materialTypes"][str(material_id)]["RealCurrency"]
+    air_cash_cost = round(amount * init_data["materialTypes"][str(material_id)]["RealCurrency"])
     if air_cash_cost == 0: # This is the case for tuning parts, we don't want people to get unlimited free tuning parts this way
         rpcResult["i"] = -1 # Disconnect user without saving
 
