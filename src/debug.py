@@ -88,4 +88,32 @@ def send_webhook(json_data: dict, user_id: int, request_payload: dict, url: str 
     except requests.exceptions.RequestException as err:
         logging.error(f"Error sending webhook: {err}")
 
+def user_registered_webhook(uid: int, username: str) -> None:
+    url = _CONFIG.get("Webhooks", "registration_webhook", fallback=None)
+
+    if url is None or url.strip() == "":
+        logging.warning("No valid registration webhook URL provided in the config file. Skipping registration webhook.")
+        return
+    
+    data = {
+        "username": "New Airport Manager",
+    }
+
+    data["embeds"] = [
+        {
+            "title": f"New player took control of an airport!",
+            "description": f"Welcome **{username}** (ID: {uid}) to the server!",
+            "color": 3145631,
+            "footer": {
+                "text": "Skyrama Private Server - https://github.com/Michielvde1253/skyrama-private-server"
+            }
+        }
+    ]
+
+    try:
+        result = requests.post(url, json=data, timeout=5)
+        result.raise_for_status()
+    except requests.exceptions.RequestException as err:
+        logging.error(f"Error sending registration webhook: {err}")
+
 
