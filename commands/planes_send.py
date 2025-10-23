@@ -10,10 +10,6 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
     rpcResult["r"] = {}
     rpcResult["r"]["planes"] = {}
 
-    fresh_data = userManager.load_save_by_id(user_id)
-    if fresh_data != -1 and isinstance(fresh_data, dict):
-        json_data.update(fresh_data)
-
     json2_data = None
 
     for plane in json_data["planes"]:
