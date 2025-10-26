@@ -4721,6 +4721,7 @@
   "eventMaterials": [
 
   ],
+
   "materials": {
     "7": 0,
     "8": 0,
@@ -4729,6 +4730,7 @@
     "11": 0,
     "12": 0
   },
+
   "userRecyclingSlots": [
     {
       "slotType": "1",
@@ -4747,6 +4749,7 @@
       ]
     }
   ],
+
   "userCraftingSlots": [
     {
       "slotType": 1,
@@ -4756,6 +4759,7 @@
       "processData": []
     }
   ],
+
   "userCurrentCraftings": [
 
   ],
