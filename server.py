@@ -4,6 +4,7 @@ from commands import *
 from werkzeug import Request
 from bundle import TEMPLATES_DIR, STUB_DIR, STYLES_DIR, ASSETS_DIR
 from src.utils import get_level_from_xp
+from src.database import init_database
 import src.debug as debug
 import src.userManager as userManager
 import src.configHandler as configHandler
@@ -54,8 +55,13 @@ def resolve_command_dependencies(command_data):
 
 def main():
     configHandler.run()
+    config = configHandler.get_config()
+
     logging.info("Loading the server, please wait..")
     logging.debug("Debug mode is enabled")
+
+    # Init DB
+    init_database(config.get("Database", "connection_string"))
     
     ###############################
     # Setup list of game commands #
@@ -146,9 +152,6 @@ def main():
     f.close()    # Sort accounts by location id
     userManager.save_players_by_location_id()
     
-    # Start the asynchronous save system
-    userManager.start_save_system()
-    
     # Load language files
     langstrings = {}
     for filename in os.listdir(os.path.join(p, "templates", "languages")):
@@ -156,8 +159,6 @@ def main():
                  filename), "r", encoding="utf-8") as f:
             langstrings[filename[0:-5]] = json.loads(f.read())
         f.close()
-    
-    config = configHandler.get_config()
 
     maintenance = {"maintenance": False, "startTime": 0}
 
@@ -332,7 +333,6 @@ def main():
                 session["userid"] = uid
                 session["token"] = token
 
-                userManager.add_to_player_count(1)
                 debug.user_registered_webhook(uid, username)
 
                 return redirect('play')
@@ -480,7 +480,8 @@ def main():
 
         logging.debug(request.form)
     
-        json_data = userManager.load_save_by_id(str(request.form["userId"]))
+        user_id = int(request.form["userId"])
+        json_data = userManager.load_save_by_id(user_id)
     
         if json_data["playerData"]["token"] == request.form["t"]:
             command_data = json.loads(request.form["d"])
@@ -508,24 +509,24 @@ def main():
                     command["previous_air_coins"] = json_data["playerData"]["air_coins"]
     
                     # Check Lucky Luggage new spins
-                    handle_lucky_luggage_live(command, request.form["userId"], json_data)
+                    handle_lucky_luggage_live(command, user_id, json_data)
     
                     # Create command answer
                     rpcResult = {}
                     items_to_add_to_obj = []
                     handler = available_commands[command["m"]]
-                    handler(command, request.form["userId"],
+                    handler(command, user_id,
                             rpcResult, items_to_add_to_obj, json_data, init_data)
                     
                     if rpcResult["i"] == -1: # Command asked to disconnect user (likely due to possible cheat)
-                        logging.warning(f"User with id {request.form['userId']} has been disconnected, possible cheat detected!")
+                        logging.warning(f"User with id {user_id} has been disconnected, possible cheat detected!")
                         return "Could not get Sky_Instance_Plane object with unique id 1435_12297741"
     
                     total_response["rpcResults"].append(rpcResult)
     
                     # Check goal completion
-                    handle_goal(command, request.form["userId"], "main", items_to_add_to_obj, json_data, init_data)
-                    handle_goal(command, request.form["userId"], "pilot", items_to_add_to_obj, json_data, init_data)
+                    handle_goal(command, user_id, "main", items_to_add_to_obj, json_data, init_data)
+                    handle_goal(command, user_id, "pilot", items_to_add_to_obj, json_data, init_data)
                     
                     total_items_to_add_to_obj += items_to_add_to_obj
     
@@ -546,13 +547,13 @@ def main():
             # Create command object
             obj = {}
             handle_addObj(
-                command, request.form["userId"], obj, total_items_to_add_to_obj, json_data, init_data, obj_data)
+                command, user_id, obj, total_items_to_add_to_obj, json_data, init_data, obj_data)
             total_response["obj"] = obj
     
-            userManager.modify_save_by_id(str(request.form["userId"]), json_data)
+            userManager.modify_save_by_id(user_id, json_data)
             return total_response
         else:
-            logging.critical(f"Security alert: User {request.form['userId']} attempted to use an invalid token!")
+            logging.critical(f"Security alert: User {user_id} attempted to use an invalid token!")
             return "token_error"
 
     logging.info(f"Starting server on {host}:{port} (Debug mode: {'On' if configHandler.get_flask_debug() else 'Off'})")
@@ -567,30 +568,17 @@ def main():
         import signal
         
         def signal_handler(signum, frame):
-            logging.info("Server shutting down, saving all user data...")
-            userManager.shutdown_save_system()
+            logging.info("Server is shutting down...")
             exit(0)
-          # Register signal handlers for graceful shutdown
+        
         signal.signal(signal.SIGINT, signal_handler)
         signal.signal(signal.SIGTERM, signal_handler)
         
         try:
-            # Disable reloader and threaded mode to prevent socket issues
             app.run(host=host, port=port, debug=configHandler.get_flask_debug(), 
-                   use_reloader=False, threaded=False)
+                use_reloader=False, threaded=True)
         except KeyboardInterrupt:
-            # This handles Ctrl+C
-            logging.info("Server shutting down, saving all user data...")
-            userManager.shutdown_save_system()
-        except Exception as e:
-            logging.error(f"Server error: {e}")
-            logging.info("Server shutting down, saving all user data...")
-            userManager.shutdown_save_system()
-        finally:
-            # Final cleanup - but avoid double shutdown
-            if not userManager.is_save_system_shutdown():
-                logging.info("Server shutting down, saving all user data...")
-                userManager.shutdown_save_system()
+            logging.info("Server stopped")
 
 # Start the server
 if __name__ == "__main__":
