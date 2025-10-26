@@ -70,6 +70,8 @@
   <item name="av.settings.changePassword"><![CDATA[Изменить данные]]></item>
   <item name="av.settings.animationOff"><![CDATA[Выкл. анимацию]]></item>
   <item name="av.settings.animationOn"><![CDATA[Вкл. анимацию]]></item>
+  <item name="av.settings.buddyFlagOff"><![CDATA[Нажмите, чтобы скрыть метки друзей над самолётами]]></item>
+  <item name="av.settings.buddyFlagOn"><![CDATA[Нажмите, чтобы показать метки друзей над самолётами]]></item>
   <item name="av.settings.quickServiceOn"><![CDATA[Отключить экспресс-обслуживание]]></item>
   <item name="av.settings.quickServiceOff"><![CDATA[Включить экспресс-обслуживание]]></item>
   <item name="av.settings.superFuelOn"><![CDATA[Вкл. турбо-топливо]]></item>

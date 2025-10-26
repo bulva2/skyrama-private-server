@@ -70,6 +70,8 @@
   <item name="av.settings.changePassword"><![CDATA[Bilgileri değiştir]]></item>
   <item name="av.settings.animationOff"><![CDATA[Animasyonları kapat]]></item>
   <item name="av.settings.animationOn"><![CDATA[Animasyonları aç]]></item>
+  <item name="av.settings.buddyFlagOff"><![CDATA[Uçakların üzerindeki arkadaş etiketlerini gizlemek için tıklayın]]></item>
+  <item name="av.settings.buddyFlagOn"><![CDATA[Uçakların üzerindeki arkadaş etiketlerini göstermek için tıklayın]]></item>
   <item name="av.settings.quickServiceOn"><![CDATA[Hızlı hizmeti devre dışı bırak]]></item>
   <item name="av.settings.quickServiceOff"><![CDATA[Hızlı hizmeti etkinleştir]]></item>
   <item name="av.settings.superFuelOn"><![CDATA[Turbo yakıtı etkinleştir]]></item>

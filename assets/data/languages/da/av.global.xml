@@ -74,6 +74,8 @@
   <item name="av.settings.changePassword"><![CDATA[Ændre oplysninger]]></item>
   <item name="av.settings.animationOff"><![CDATA[Animationer til/fra]]></item>
   <item name="av.settings.animationOn"><![CDATA[Slå animationer til]]></item>
+  <item name="av.settings.buddyFlagOff"><![CDATA[Klik for at skjule vennemærker over flyene]]></item>
+  <item name="av.settings.buddyFlagOn"><![CDATA[Klik for at vise vennemærker over flyene]]></item>
   <item name="av.settings.quickServiceOn"><![CDATA[Hurtig Service/klik for at skjule "Hurtig Service" funktionen]]></item>
   <item name="av.settings.quickServiceOff"><![CDATA[Hurtig Service/klik for at vise "Hurtig Service" funktionen]]></item>
   <item name="av.settings.superFuelOn"><![CDATA[Aktiver Super Brændstof]]></item>

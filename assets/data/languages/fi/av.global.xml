@@ -70,6 +70,8 @@
   <item name="av.settings.changePassword"><![CDATA[Muuta tietoja]]></item>
   <item name="av.settings.animationOff"><![CDATA[Animaatiot/Klikkaamalla animaatiot pois]]></item>
   <item name="av.settings.animationOn"><![CDATA[Animaatiot/Klikkaamalla animaatiot päälle]]></item>
+  <item name="av.settings.buddyFlagOff"><![CDATA[Napsauta piilottaaksesi kaveritunnisteet lentokoneiden yläpuolella]]></item>
+  <item name="av.settings.buddyFlagOn"><![CDATA[Napsauta näyttääksesi kaveritunnisteet lentokoneiden yläpuolella]]></item>
   <item name="av.settings.quickServiceOn"><![CDATA[Pikapalvelu/klikkaa poistaaksesi pikapalvelun]]></item>
   <item name="av.settings.quickServiceOff"><![CDATA[Pikapalvelu/klikkaa pikapalvelu päälle]]></item>
   <item name="av.settings.superFuelOn"><![CDATA[Turbopolttoaine käyttöön]]></item>

@@ -70,6 +70,8 @@
   <item name="av.settings.changePassword"><![CDATA[Αλλαγή δεδομένων]]></item>
   <item name="av.settings.animationOff"><![CDATA[Απενεργοποίηση κινούμενων γραφικών]]></item>
   <item name="av.settings.animationOn"><![CDATA[Ενεργοποίηση κινούμενων γραφικών]]></item>
+  <item name="av.settings.buddyFlagOff"><![CDATA[Κάντε κλικ για απόκρυψη των ετικετών φίλων πάνω από τα αεροπλάνα]]></item>
+  <item name="av.settings.buddyFlagOn"><![CDATA[Κάντε κλικ για εμφάνιση των ετικετών φίλων πάνω από τα αεροπλάνα]]></item>
   <item name="av.settings.quickServiceOn"><![CDATA[Γρήγορη εξυπηρέτηση ενεργοποίηση/απενεργοποίηση]]></item>
   <item name="av.settings.quickServiceOff"><![CDATA[Γρήγορη εξυπηρέτηση/ενεργοποίηση]]></item>
   <item name="av.settings.superFuelOn"><![CDATA[Ενεργοποίηση τούρμπο καύσιμου]]></item>

@@ -1262,6 +1262,7 @@
     "sound_on": 1,
     "effects_on": 1,
     "animations_on": 1,
+    "buddyflag_on": 1,
     "quickservice_on": 0,
     "rebuy_superfuel_on": 0,
     "superfuel_active": 0,

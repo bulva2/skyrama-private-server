@@ -70,6 +70,8 @@
   <item name="av.settings.changePassword"><![CDATA[Gegevens veranderen]]></item>
   <item name="av.settings.animationOff"><![CDATA[Animaties (uit)]]></item>
   <item name="av.settings.animationOn"><![CDATA[Animaties (uit)]]></item>
+  <item name="av.settings.buddyFlagOff"><![CDATA[Klik om vriendentags boven vliegtuigen te verbergen]]></item>
+  <item name="av.settings.buddyFlagOn"><![CDATA[Klik om vriendentags boven vliegtuigen te tonen]]></item>
   <item name="av.settings.quickServiceOn"><![CDATA[Spoedafwikkeling UIT]]></item>
   <item name="av.settings.quickServiceOff"><![CDATA[Spoedafwikkeling AAN]]></item>
   <item name="av.settings.superFuelOn"><![CDATA[Turbobrandstof (aan)]]></item>

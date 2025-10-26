@@ -70,6 +70,8 @@
   <item name="av.settings.changePassword"><![CDATA[Ändra uppgifter]]></item>
   <item name="av.settings.animationOff"><![CDATA[Animation/klicka för att stoppa animationer]]></item>
   <item name="av.settings.animationOn"><![CDATA[Animation/klicka för att spela animationer]]></item>
+  <item name="av.settings.buddyFlagOff"><![CDATA[Klicka för att dölja vänetiketter ovanför planen]]></item>
+  <item name="av.settings.buddyFlagOn"><![CDATA[Klicka för att visa vänetiketter ovanför planen]]></item>
   <item name="av.settings.quickServiceOn"><![CDATA[Snabbservice/Klicka för att avaktivera snabbservice]]></item>
   <item name="av.settings.quickServiceOff"><![CDATA[Snabbservice/Klicka för att aktivera snabbservice]]></item>
   <item name="av.settings.superFuelOn"><![CDATA[Aktivera superbränsle]]></item>

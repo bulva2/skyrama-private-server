@@ -70,6 +70,8 @@
   <item name="av.settings.changePassword"><![CDATA[Endre opplysninger]]></item>
   <item name="av.settings.animationOff"><![CDATA[Animasjon/Klikk for å stoppe animasjonene]]></item>
   <item name="av.settings.animationOn"><![CDATA[Animasjon/Klikk for å avspille animasjoner]]></item>
+  <item name="av.settings.buddyFlagOff"><![CDATA[Klikk for å skjule vennemerker over flyene]]></item>
+  <item name="av.settings.buddyFlagOn"><![CDATA[Klikk for å vise vennemerker over flyene]]></item>
   <item name="av.settings.quickServiceOn"><![CDATA[Rask Service/Klikk for å skjule "Rask Service"-funksjonen]]></item>
   <item name="av.settings.quickServiceOff"><![CDATA[Rask Service/Klikk for å vise "Rask Service"-funksjonen]]></item>
   <item name="av.settings.superFuelOn"><![CDATA[Turbodrivstoff på]]></item>

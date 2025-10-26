@@ -70,6 +70,8 @@
   <item name="av.settings.changePassword"><![CDATA[Zmeniť údaje]]></item>
   <item name="av.settings.animationOff"><![CDATA[Vypnutie animácií]]></item>
   <item name="av.settings.animationOn"><![CDATA[Zapnutie animácií]]></item>
+  <item name="av.settings.buddyFlagOff"><![CDATA[Kliknite pre skrytie menoviek priateľov nad lietadlami]]></item>
+  <item name="av.settings.buddyFlagOn"><![CDATA[Kliknite pre zobrazenie menoviek priateľov nad lietadlami]]></item>
   <item name="av.settings.quickServiceOn"><![CDATA[Rýchle odbavenie/Klikni na vypnutie rýchleho odbavenia]]></item>
   <item name="av.settings.quickServiceOff"><![CDATA[Rýchle odbavenie/Klikni na vypnutie rýchleho odbavenia]]></item>
   <item name="av.settings.superFuelOn"><![CDATA[Turbopalivo zapnuté]]></item>

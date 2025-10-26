@@ -72,6 +72,8 @@
   <item name="av.settings.changePassword"><![CDATA[Modificar datos]]></item>
   <item name="av.settings.animationOff"><![CDATA[Haz clic aquí para parar las animaciones]]></item>
   <item name="av.settings.animationOn"><![CDATA[Haz clic aquí para activar las animaciones.]]></item>
+  <item name="av.settings.buddyFlagOff"><![CDATA[Haz clic para ocultar las etiquetas de amigos sobre los aviones]]></item>
+  <item name="av.settings.buddyFlagOn"><![CDATA[Haz clic para mostrar las etiquetas de amigos sobre los aviones]]></item>
   <item name="av.settings.quickServiceOn"><![CDATA[Servicio rápido/Haz clic aquí para inhabilitar el servicio rápido]]></item>
   <item name="av.settings.quickServiceOff"><![CDATA[Servicio rápido/Haz clic aquí para habilitar el servicio rápido]]></item>
   <item name="av.settings.superFuelOn"><![CDATA[Activar turbocombustible]]></item>

@@ -70,6 +70,8 @@
   <item name="av.settings.changePassword"><![CDATA[Schimbă date]]></item>
   <item name="av.settings.animationOff"><![CDATA[Animaţii OFF]]></item>
   <item name="av.settings.animationOn"><![CDATA[Animaţii ON]]></item>
+  <item name="av.settings.buddyFlagOff"><![CDATA[Fă clic pentru a ascunde etichetele prietenilor deasupra avioanelor]]></item>
+  <item name="av.settings.buddyFlagOn"><![CDATA[Fă clic pentru a afișa etichetele prietenilor deasupra avioanelor]]></item>
   <item name="av.settings.quickServiceOn"><![CDATA[Service expres /Clichează pentru a dezactiva service expres]]></item>
   <item name="av.settings.quickServiceOff"><![CDATA[Service expres / Clichează pentru a activa service expres]]></item>
   <item name="av.settings.superFuelOn"><![CDATA[Activează combustibil Turbo ]]></item>

@@ -71,6 +71,8 @@
   <item name="av.settings.changePassword"><![CDATA[Adatok megváltoztatása]]></item>
   <item name="av.settings.animationOff"><![CDATA[Animáció kikapcsolása]]></item>
   <item name="av.settings.animationOn"><![CDATA[Animáció bekapcsolása]]></item>
+  <item name="av.settings.buddyFlagOff"><![CDATA[Kattints a barátcímkék elrejtéséhez a repülők felett]]></item>
+  <item name="av.settings.buddyFlagOn"><![CDATA[Kattints a barátcímkék megjelenítéséhez a repülők felett]]></item>
   <item name="av.settings.quickServiceOn"><![CDATA[Gyors ellátás kikapcsolása]]></item>
   <item name="av.settings.quickServiceOff"><![CDATA[Gyors ellátás bekapcsolása]]></item>
   <item name="av.settings.superFuelOn"><![CDATA[Turbó üzemanyag be]]></item>

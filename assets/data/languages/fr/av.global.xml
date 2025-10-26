@@ -70,6 +70,8 @@
   <item name="av.settings.changePassword"><![CDATA[Modifier les données]]></item>
   <item name="av.settings.animationOff"><![CDATA[Animations OFF]]></item>
   <item name="av.settings.animationOn"><![CDATA[Animations ON]]></item>
+  <item name="av.settings.buddyFlagOff"><![CDATA[Cliquez pour masquer les étiquettes d’amis au-dessus des avions]]></item>
+  <item name="av.settings.buddyFlagOn"><![CDATA[Cliquez pour afficher les étiquettes d’amis au-dessus des avions]]></item>
   <item name="av.settings.quickServiceOn"><![CDATA[Cliquez pour désactiver l'entretien ultra rapide]]></item>
   <item name="av.settings.quickServiceOff"><![CDATA[Cliquez pour activer l'entretien ultra rapide]]></item>
   <item name="av.settings.superFuelOn"><![CDATA[Activer le Turbo-Carburant]]></item>

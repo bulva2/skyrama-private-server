@@ -71,6 +71,8 @@
   <item name="av.settings.changePassword"><![CDATA[Change data]]></item>
   <item name="av.settings.animationOff"><![CDATA[Animation/Click to stop animations]]></item>
   <item name="av.settings.animationOn"><![CDATA[Animation/Click to play animations]]></item>
+  <item name="av.settings.buddyFlagOff"><![CDATA[Click to hide buddy tags above planes]]></item>
+  <item name="av.settings.buddyFlagOn"><![CDATA[Click to show buddy tags above planes]]></item>
   <item name="av.settings.quickServiceOn"><![CDATA[Quick Service/Click to disable quick service]]></item>
   <item name="av.settings.quickServiceOff"><![CDATA[Quick Service/Click to enable quick service]]></item>
   <item name="av.settings.superFuelOn"><![CDATA[Activate Super Fuel]]></item>
