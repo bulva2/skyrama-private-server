@@ -3,7 +3,7 @@ import time
 import requests
 import logging
 from pathlib import Path
-from src.configHandler import get_config
+from src.config_handler import get_config
 
 _FLASH_ERRORS_PATH = Path(__file__).parents[1] / "flasherrors.json"
 _CONFIG = get_config()

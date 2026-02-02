@@ -1209,6 +1209,19 @@
         "prize_air_cash": 0,
         "prize_xp": 0,
         "prize_goods": 0
+      },
+      {
+        "id": 24,
+        "name": "AirCash",
+        "img_url": "gfx/rewards/reward_2_aircash.png",
+        "probability": 60,
+        "prize_obj_type": null,
+        "prize_obj_type_id": -1,
+        "prize_passengers": 0,
+        "prize_air_coins": 0,
+        "prize_air_cash": 5,
+        "prize_xp": 0,
+        "prize_goods": 0
       }
     ],
     "gotBonus": 1

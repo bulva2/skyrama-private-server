@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  server:
+    build: .
+    container_name: skyrama_server
+    restart: always
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - skyrama-net
+
+  nginx:
+    image: nginx:alpine
+    container_name: skyrama_nginx
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - .:/app:ro
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    depends_on:
+      - server
+    networks:
+      - skyrama-net
+
+networks:
+  skyrama-net:
+    driver: bridge

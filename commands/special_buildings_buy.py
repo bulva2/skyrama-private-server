@@ -17,6 +17,6 @@ def handle_specialBuildingsBuy(request, user_id, rpcResult, items_to_add_to_obj,
         substract_resources(json_data, rpcResult, i["air_coins_cost"], i["air_cash_cost"], i["event_currency_cost"])
             
         json_data["specialBuildings"].append({"sbId":"1","special_building_types_id":request["p"]["types_id"],"id":json_data["playerData"]["next_object_id"],"position_x":request["p"]["position_x"],"position_y":request["p"]["position_y"],"direction":request["p"]["direction"],"player_id":user_id})
-        # What is sbId??? Doesn't seem to matter for now
+        # sbId seems to be unused
     
         json_data["playerData"]["next_object_id"] = int(json_data["playerData"]["next_object_id"]) + 1

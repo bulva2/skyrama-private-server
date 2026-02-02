@@ -1,10 +1,10 @@
 import time
 import logging
-import src.userManager as userManager
+import src.user_manager as user_manager
 
 def run_buddy_checks(time, json_data):
     for buddy in json_data["buddyStuff"]["buddies"]:
-        buddy_data = userManager.load_save_by_id(buddy["hi_player_id"])
+        buddy_data = user_manager.load_save_by_id(buddy["hi_player_id"])
         
         # load_save_by_id returns -1 if user isn't found, skip this user
         if buddy_data == -1:
@@ -29,27 +29,23 @@ def handle_buddyGetAll(request, user_id, rpcResult, items_to_add_to_obj, json_da
     rpcResult["t"] = int(time.time())
     rpcResult["r"] = {}
 
-    '''
-    Stuff we need to check for:
-    - last_buddyping_time
-    - xp
-    - status
-    Stuff we intentionally DO NOT CHECK (because privacy and absolutely not needed):
-    - last_ping_time
-    - num_flights_today
-    - todays_first_flight_time
-    - online
+    #Stuff we need to check for:
+    # last_buddyping_time
+    # xp
+    # status
+    #Stuff we intentionally DO NOT CHECK (because privacy and absolutely not needed):
+    # last_ping_time
+    # num_flights_today
+    # todays_first_flight_time
+    # online
 
-
-
-    STATUS NUMBERS:
-    1 = you sent an invite to them
-    2 = they sent an invite to you
-    3 = ?
-    4 = ?
-    5 = online
-    0 = offline
-    '''
+    #STATUS NUMBERS:
+    #1 = you sent an invite to them
+    #2 = they sent an invite to you
+    #3 = ?
+    #4 = ?
+    #5 = online
+    #0 = offline
 
     run_buddy_checks(request["t"], json_data)
 

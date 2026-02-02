@@ -38,7 +38,7 @@ class ColoredFormatter(logging.Formatter):
         levelname = record.levelname
         color = self.COLORS.get(levelname, Fore.WHITE)
        
-        record.levelname = f"{color}[ {levelname} ]{Style.RESET_ALL}"
+        record.levelname = f"{color}{levelname}{Style.RESET_ALL}"
         return super().format(record)
 
 def setup_logging():
@@ -50,21 +50,26 @@ def setup_logging():
     log_level_str = config.get("Debugging", "logging_level", fallback="INFO").upper()
     log_level = getattr(logging, log_level_str, logging.INFO)
     
-    # Reset all loggers to prevent duplication & other issues
     logging.root.handlers = []
     
     # Create a colored formatter
     formatter = ColoredFormatter(fmt='%(levelname)s %(asctime)s: %(message)s', datefmt='%H:%M:%S')
-    
-    # Configure the root logger
     handler = logging.StreamHandler()
     handler.setFormatter(formatter)
     
-    # Set up the root logger
     root_logger = logging.getLogger()
     root_logger.setLevel(log_level)
     root_logger.addHandler(handler)
 
-def get_flask_debug():
-    config = get_config()
-    return config.getboolean("Debugging", "flask_debug", fallback=True)
+    logging.getLogger("sqlalchemy").setLevel(logging.WARNING)
+    logging.getLogger("sqlalchemy.engine").setLevel(logging.WARNING)
+    logging.getLogger("multipart").setLevel(logging.ERROR)
+    logging.getLogger("multipart.multipart").setLevel(logging.ERROR)
+
+    for logger_name in ("uvicorn", "uvicorn.error", "uvicorn.access", "uvicorn.asgi"):
+        ulogger = logging.getLogger(logger_name)
+        ulogger.handlers = []
+        ulogger.addHandler(handler)
+        ulogger.propagate = False
+
+

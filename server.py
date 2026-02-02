@@ -1,34 +1,191 @@
-# Import local stuff
 import time
+import json
+import logging
+import uuid
+import hashlib
+import os
+from pathlib import Path
+from contextlib import asynccontextmanager
+import asyncio
+
+from fastapi import FastAPI, Request, Form
+from fastapi.responses import HTMLResponse, RedirectResponse, PlainTextResponse
+from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
+from starlette.middleware.sessions import SessionMiddleware
+from starlette.middleware.cors import CORSMiddleware
+
 from commands import *
-from werkzeug import Request
 from bundle import TEMPLATES_DIR, STUB_DIR, STYLES_DIR, ASSETS_DIR
 from src.utils import get_level_from_xp
 from src.database import init_database
 import src.debug as debug
-import src.userManager as userManager
-import src.configHandler as configHandler
+import src.user_manager as user_manager
+import src.config_handler as config_handler
+import src.validator as validator
 
-# Import 3rd party stuff
-import logging
-import re
-import random
-import uuid
-import hashlib
-from pathlib import Path
-import json
-import os
+# Config
+config_handler.run()
+config = config_handler.get_config()
 
-from flask import Flask, render_template, send_from_directory, request, redirect, session
-app = Flask(__name__, template_folder=TEMPLATES_DIR)
+# Global state
+maintenance = {"maintenance": False, "startTime": 0}
+init_data = {}
+obj_data = {}
+langstrings = {}
+ADMINS = []
+server_ip = ""
+assets_ip = ""
 
-# Command batch state - shared between related commands in the same request
-_command_batch_state = {}
+# Request Locking to prevent race conditions
+_user_locks = {}
 
+def get_user_lock(user_id: int) -> asyncio.Lock:
+    if user_id not in _user_locks:
+        _user_locks[user_id] = asyncio.Lock()
+    return _user_locks[user_id]
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    global init_data, obj_data, langstrings, ADMINS, server_ip, assets_ip
+    logging.info("Loading the server, please wait..")
+    
+    # Init DB
+    init_database(config.get("Database", "connection_string"))
+    
+    # Load Init Data
+    p = Path(__file__).parent
+    logging.info("Loading init data...")
+    
+    with open(os.path.join(p, "data", "global_init_data.json.def"), "r", encoding="utf-8") as f:
+        init_data = json.loads(f.read())
+
+    with open(os.path.join(p, "data", "obj.json.def"), "r", encoding="utf-8") as f:
+        obj_data = json.loads(f.read())
+        
+    user_manager.save_players_by_location_id()
+    
+    # Load language files
+    for filename in os.listdir(os.path.join(p, "templates", "languages")):
+        with open(os.path.join(p, "templates", "languages", filename), "r", encoding="utf-8") as f:
+            langstrings[filename[0:-5]] = json.loads(f.read())
+
+    # Load admins
+    ADMINS = [int(x.strip()) for x in config.get("AdminUsers", "admin_ids", fallback="-1").split(",")]
+    
+    # URL setup
+    host = config.get("ServerSettings", "host", fallback="127.0.0.1").replace("http://", "").replace("https://", "")
+    port = int(config.get("ServerSettings", "port", fallback="3800"))
+    use_https = config.getboolean("ServerSettings", "use_https", fallback=False)
+    protocol = "https" if use_https else "http"
+    server_ip = f"{protocol}://{host}:{port}"
+    assets_ip = server_ip
+
+    logging.info(f"Server initialized on {server_ip}")
+    
+    yield
+    
+    # Shutdown logic
+    logging.info("Server is shutting down, have a great day! ^^")
+
+app = FastAPI(lifespan=lifespan)
+
+# Middleware
+app.add_middleware(SessionMiddleware, secret_key="SECRET_KEY")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Static files
+app.mount("/assets", StaticFiles(directory=ASSETS_DIR), name="assets")
+app.mount("/templates/styles", StaticFiles(directory=STYLES_DIR), name="styles")
+
+templates = Jinja2Templates(directory=TEMPLATES_DIR)
+
+# Available Commands Map
+available_commands = {
+    "general.getCv": handle_getCv,
+    "general.soundIsOn": handle_soundIsOn,
+    "general.getConfig": handle_getConfig,
+    "general.getInitState": handle_getInitState,
+    "playerdata.setbooster": handle_setbooster,
+    "playerdata.setLocation": handle_setLocation,
+    "buddy.getAll": handle_buddyGetAll,
+    "planes.get": handle_planesGet,
+    "planes.setState": handle_planesSetState,
+    "placeable.place": handle_placeablePlace,
+    "planes.takeMeans": handle_planesTakeMeans,
+    "planes.sendback": handle_planesSendback,
+    "planes.buy": handle_planesBuy,
+    "account.getLatest": handle_accountGetLatest,
+    "planes.send": handle_planesSend,
+    "terminals.buy": handle_terminalsBuy,
+    "landside_buildings.harvest": handle_landside_buildingsHarvest,
+    "flashCookies.set": handle_flashcookiesSet,
+    "buddy.search": handle_buddySearch,
+    "buddy.invite": handle_buddyInvite,
+    "buddy.accept": handle_buddyAccept,
+    "playerdata.updateSettings": handle_updateSettings,
+    "planes.miss": handle_planesMiss,
+    "buddy.endRelationship": handle_buddyEndRelationship,
+    "buddy.decline": handle_buddyDecline,
+    "bays.buy": handle_baysBuy,
+    "runways.buy": handle_runwaysBuy,
+    "special_buildings.buy": handle_specialBuildingsBuy,
+    "placeable.setInStorage": handle_placeableSetInStorage,
+    "lucky_luggage.spin": handle_luckyLuggageSpin,
+    "landside_buildings.buy": handle_landsideBuildingsBuy,
+    "packages.buy": handle_packagesBuy,
+    "planes.upgrade": handle_planesUpgrade,
+    "planes.scrap": handle_planesScrap,
+    "goals.buyTask": handle_goalsBuyTask,
+    "playerdata.updateLevel": handle_playerdataUpdateLevel,
+    "planes.createFlyBy": handle_planesCreateFlyBy,
+    "planes.sendbackflyby": handle_planesSendBackFlyBy,
+    "planes.removeFlyByPlane": handle_planesRemoveFlyByPlane,
+    "planes.onStartCargoTutorial": handle_planesOnStartCargoTutorial,
+    "cargoshops.fillShop": handle_cargoshopsFillShop,
+    "cargoshops.collectSalesRevenue": handle_cargoshopsCollectSalesRevenue,
+    "general.getBuddyInitState": handle_getBuddyInitState,
+    "resource_items.buy": handle_resourceItemsBuy,
+    "playerdata.updateBuddypingTime": handle_updateBuddypingTime,
+    "playerdata.deleteBuddypingTime": handle_deleteBuddypingTime,
+    "cargoshops.buy": handle_cargoshopsBuy,
+    "cargoshops.buyCargo": handle_cargoshopsBuyCargo,
+    "cargoshops.buyCapacity": handle_cargoshopsBuyCapacity,
+    "bays.sell": handle_sell,
+    "landside_buildings.sell": handle_sell,
+    "runways.sell": handle_sell,
+    "terminals.sell": handle_sell,
+    "backgrounds.buy": handle_backgroundsBuy,
+    "backgrounds.makeCurrent": handle_backgroundsMakeCurrent,
+    "landmarks.buy": handle_landmarksBuy,
+    "landmarks.makeCurrent": handle_landmarksMakeCurrent,
+    "hangars.upgrade": handle_hangarsUpgrade,
+    "map_extensions.buy": handle_mapExpansionsBuy,        
+    "hangars.buy": handle_hangarsBuy,
+    "buddy.collectPassenger": handle_buddyCollectPassenger,
+    "crafting.buySlot": handle_craftingBuySlot,
+    "evoucher.book": handle_evoucherBook,
+    "souvenirs.takeReward": handle_souvenirsTakeReward,
+    "crafting.buyMaterials": handle_craftingBuyMaterials,
+    "crafting.processCraftingStep": handle_craftingProcessCraftingStep,
+    "crafting.start": handle_craftingStart,
+    "crafting.instant": handle_craftingInstant,
+    "general.trackFlashError": handle_trackFlashError,
+    "crafting.collect": handle_craftingCollect
+}
+
+# Disabled for testing purposes, keep disabled for now -bulva2
+REORDER_COMMANDS = False
 def resolve_command_dependencies(command_data):
-    """
-    Ensures all necessary commands are executed in the correct order to prevent race conditions.
-    """
+    if not REORDER_COMMANDS:
+        return command_data
     
     plane_setState_commands = []
     plane_send_commands = []
@@ -53,533 +210,270 @@ def resolve_command_dependencies(command_data):
     
     return ordered_commands
 
-def main():
-    configHandler.run()
-    config = configHandler.get_config()
+# Routes
 
-    logging.info("Loading the server, please wait..")
-    logging.debug("Debug mode is enabled")
+@app.get("/crossdomain.xml")
+async def crossdomain():
+    return HTMLResponse(content=open(os.path.join(STUB_DIR, "crossdomain.xml")).read(), media_type="application/xml")
 
-    # Init DB
-    init_database(config.get("Database", "connection_string"))
+@app.get("/play")
+async def play(request: Request, locale: str = None):
+    if maintenance["maintenance"]:
+        return RedirectResponse(url='/maintenance')
     
-    ###############################
-    # Setup list of game commands #
-    ###############################
-    
-    available_commands = {
-        "general.getCv": handle_getCv,
-        "general.soundIsOn": handle_soundIsOn,
-        "general.getConfig": handle_getConfig,
-        "general.getInitState": handle_getInitState,
-        "playerdata.setbooster": handle_setbooster,
-        "playerdata.setLocation": handle_setLocation,
-        "buddy.getAll": handle_buddyGetAll,
-        "planes.get": handle_planesGet,
-        "planes.setState": handle_planesSetState,
-        "placeable.place": handle_placeablePlace,
-        "planes.takeMeans": handle_planesTakeMeans,
-        "planes.sendback": handle_planesSendback,
-        "planes.buy": handle_planesBuy,
-        "account.getLatest": handle_accountGetLatest,
-        "planes.send": handle_planesSend,
-        "terminals.buy": handle_terminalsBuy,
-        "landside_buildings.harvest": handle_landside_buildingsHarvest,
-        "flashCookies.set": handle_flashcookiesSet,
-        "buddy.search": handle_buddySearch,
-        "buddy.invite": handle_buddyInvite,
-        "buddy.accept": handle_buddyAccept,
-        "playerdata.updateSettings": handle_updateSettings,
-        "planes.miss": handle_planesMiss,
-        "buddy.endRelationship": handle_buddyEndRelationship,
-        "buddy.decline": handle_buddyDecline,
-        "bays.buy": handle_baysBuy,
-        "runways.buy": handle_runwaysBuy,
-        "special_buildings.buy": handle_specialBuildingsBuy,
-        "placeable.setInStorage": handle_placeableSetInStorage,
-        "lucky_luggage.spin": handle_luckyLuggageSpin,
-        "landside_buildings.buy": handle_landsideBuildingsBuy,
-        "packages.buy": handle_packagesBuy,
-        "planes.upgrade": handle_planesUpgrade,
-        "planes.scrap": handle_planesScrap,
-        "goals.buyTask": handle_goalsBuyTask,
-        "playerdata.updateLevel": handle_playerdataUpdateLevel,
-        "planes.createFlyBy": handle_planesCreateFlyBy,
-        "planes.sendbackflyby": handle_planesSendBackFlyBy,
-        "planes.removeFlyByPlane": handle_planesRemoveFlyByPlane,
-        "planes.onStartCargoTutorial": handle_planesOnStartCargoTutorial,
-        "cargoshops.fillShop": handle_cargoshopsFillShop,
-        "cargoshops.collectSalesRevenue": handle_cargoshopsCollectSalesRevenue,
-        "general.getBuddyInitState": handle_getBuddyInitState,
-        "resource_items.buy": handle_resourceItemsBuy,
-        "playerdata.updateBuddypingTime": handle_updateBuddypingTime,
-        "playerdata.deleteBuddypingTime": handle_deleteBuddypingTime,
-        "cargoshops.buy": handle_cargoshopsBuy,
-        "cargoshops.buyCargo": handle_cargoshopsBuyCargo,
-        "cargoshops.buyCapacity": handle_cargoshopsBuyCapacity,
-        "bays.sell": handle_sell,
-        "landside_buildings.sell": handle_sell,
-        "runways.sell": handle_sell,
-        "terminals.sell": handle_sell,
-        "backgrounds.buy": handle_backgroundsBuy,
-        "backgrounds.makeCurrent": handle_backgroundsMakeCurrent,
-        "landmarks.buy": handle_landmarksBuy,
-        "landmarks.makeCurrent": handle_landmarksMakeCurrent,
-        "hangars.upgrade": handle_hangarsUpgrade,
-        "map_extensions.buy": handle_mapExpansionsBuy,        
-        "hangars.buy": handle_hangarsBuy,
-        "buddy.collectPassenger": handle_buddyCollectPassenger,
-        "crafting.buySlot": handle_craftingBuySlot,
-        "evoucher.book": handle_evoucherBook,
-        "souvenirs.takeReward": handle_souvenirsTakeReward,
-        "crafting.buyMaterials": handle_craftingBuyMaterials,
-        "crafting.processCraftingStep": handle_craftingProcessCraftingStep,
-        "crafting.start": handle_craftingStart,
-        "crafting.instant": handle_craftingInstant,
-        "general.trackFlashError": handle_trackFlashError,
-        "crafting.collect": handle_craftingCollect
-    }
-    logging.info("Loading init data...")
-    
-    p = Path(__file__).parents[0]
-    
-    with open(os.path.join(p, "data", "global_init_data.json.def"), "r", encoding="utf-8") as f:
-        init_data = json.loads(f.read())
-    f.close()
-
-    with open(os.path.join(p, "data", "obj.json.def"), "r", encoding="utf-8") as f:
-        obj_data = json.loads(f.read())
-    f.close()    # Sort accounts by location id
-    userManager.save_players_by_location_id()
-    
-    # Load language files
-    langstrings = {}
-    for filename in os.listdir(os.path.join(p, "templates", "languages")):
-        with open(os.path.join(p, "templates", "languages",
-                 filename), "r", encoding="utf-8") as f:
-            langstrings[filename[0:-5]] = json.loads(f.read())
-        f.close()
-
-    maintenance = {"maintenance": False, "startTime": 0}
-
-    # List of admin user IDs
-    ADMINS = [int(x.strip()) for x in config.get("AdminUsers", "admin_ids", fallback="-1").split(",")]
-    host = config.get("ServerSettings", "host", fallback="127.0.0.1").replace("http://", "").replace("https://", "")
-    port = int(config.get("ServerSettings", "port", fallback="5050"))
-    use_https = config.getboolean("ServerSettings", "use_https", fallback=False)
-    protocol = "https" if use_https else "http"
-    server_ip = f"{protocol}://{host}:{port}"
-    
-    use_alt_assets = config.getboolean("AlternativeAssetStore", "alternative_asset_store_enabled", fallback=False)
-    if use_alt_assets:
-        alt_host = config.get("AlternativeAssetStore", "alternative_asset_store_host", fallback="")
-        alt_port = config.get("AlternativeAssetStore", "alternative_asset_store_port", fallback="")
-        alt_use_https = config.getboolean("AlternativeAssetStore", "asset_store_use_https", fallback=False)
-        alt_protocol = "https" if alt_use_https else "http"
+    session = request.session
+    if "username" not in session:
+        return RedirectResponse(url="/")
         
-        # If we have an alternative host
-        if alt_host:
-            # Clean the host (remove any protocol)
-            alt_host = alt_host.replace("http://", "").replace("https://", "")
-            
-            if alt_port:
-                assets_ip = f"{alt_protocol}://{alt_host}:{alt_port}"
-            else:
-                assets_ip = f"{alt_protocol}://{alt_host}"
-                
-            logging.info(f"Using alternative asset store: {assets_ip}")
-        else:
-            assets_ip = server_ip
+    session["error_mode"] = "error"
+    
+    lang = locale if locale else session.get("lang", "en")
+    session["lang"] = lang
+    
+    return templates.TemplateResponse("play.html", {
+        "request": request,
+        "username": session["username"],
+        "userid": session["userid"],
+        "token": session["token"],
+        "lang": lang,
+        "SERVERIP": server_ip,
+        "ASSETSIP": assets_ip,
+        "langstrings": langstrings.get(lang, {})
+    })
+
+@app.get("/")
+async def homepage(request: Request, locale: str = None):
+    if maintenance["maintenance"]:
+        return RedirectResponse(url='/maintenance')
+    
+    session = request.session
+    lang = locale if locale else session.get("lang", "en")
+    session["lang"] = lang
+    langUpper = lang.upper()
+    
+    return templates.TemplateResponse("home.html", {
+        "request": request,
+        "SERVERIP": server_ip,
+        "ASSETSIP": assets_ip,
+        "playerCount": user_manager.get_player_count(),
+        "langstrings": langstrings.get(lang, {}),
+        "lang": lang,
+        "langUpper": langUpper
+    })
+
+@app.post("/login")
+async def login(request: Request, username: str = Form(...), password: str = Form(...), locale: str = None):
+    if maintenance["maintenance"]:
+        return RedirectResponse(url='/maintenance')
+        
+    session = request.session
+    lang = locale if locale else session.get("lang", "en")
+    langUpper = lang.upper()
+    
+    pwd_hash = hashlib.sha512(password.encode('utf-8')).hexdigest()
+    
+    json_data = user_manager.load_save_by_name(username)
+    
+    msg = ''
+    if json_data == -1:
+        msg = 'bgc.error.login_invalidCredentials'
+    elif json_data["playerData"]["password"] == pwd_hash:
+        json_data["playerData"]["token"] = str(uuid.uuid1())
+        user_id = json_data["playerData"]["account_id"]
+        
+        user_manager.modify_save_by_id(user_id, json_data)
+        
+        session["username"] = username
+        session["userid"] = user_id
+        session["token"] = json_data["playerData"]["token"]
+        return RedirectResponse(url='/play', status_code=303)
     else:
-        assets_ip = server_ip
+        msg = 'bgc.error.login_invalidCredentials'
+        
+    return templates.TemplateResponse("home.html", {
+        "request": request,
+        "SERVERIP": server_ip,
+        "ASSETSIP": assets_ip,
+        "playerCount": user_manager.get_player_count(),
+        "langstrings": langstrings.get(lang, {}),
+        "lang": lang,
+        "langUpper": langUpper,
+        "msg": msg
+    })
 
-    logging.info("Configuring server routes...")
+@app.post("/register")
+async def register(request: Request, RegUsername: str = Form(...), RegPassword: str = Form(...), RegEmail: str = Form(...), locale: str = None):
+    if maintenance["maintenance"]:
+        return RedirectResponse(url='/maintenance')
+
+    session = request.session
+    lang = locale if locale else session.get("lang", "en")
+    langUpper = lang.upper()
     
-    # Routing    
-    @app.route("/play")
-    def play():
-        if maintenance["maintenance"]:
-            return redirect('maintenance')
+    pwd_hash = hashlib.sha512(RegPassword.encode('utf-8')).hexdigest()
+    
+    msg = validator.validate_registration_form(RegUsername, RegPassword, RegEmail, user_manager.user_name_exists)
+    
+    if not msg:
+        token = str(uuid.uuid1())
+        uid = user_manager.create_new_account(RegUsername, pwd_hash, token)
         
-        # If not logged in, redirect to homepage
-        if "username" not in session:
-            return redirect("/")
+        session["username"] = RegUsername
+        session["userid"] = uid
+        session["token"] = token
         
-        # Setup session
+        debug.user_registered_webhook(uid, RegUsername)
+        return RedirectResponse(url='/play', status_code=303)
+            
+    return templates.TemplateResponse("home.html", {
+        "request": request,
+        "SERVERIP": server_ip,
+        "ASSETSIP": assets_ip,
+        "playerCount": user_manager.get_player_count(),
+        "langstrings": langstrings.get(lang, {}),
+        "lang": lang,
+        "langUpper": langUpper,
+        "msg": msg
+    })
+
+# Admin Routes
+@app.get("/set-maintenance/on")
+async def setMaintenanceOn(request: Request):
+    session = request.session
+    if "userid" in session and session["userid"] in ADMINS:
+        maintenance["maintenance"] = True
+        maintenance["startTime"] = int(time.time())
+        return "Success!"
+    return "good try lmao"
+
+@app.get("/set-maintenance/off")
+async def setMaintenanceOff(request: Request):
+    session = request.session
+    if "userid" in session and session["userid"] in ADMINS:
+        maintenance["maintenance"] = False
+        maintenance["startTime"] = 0
+        return "Success!"
+    return "good try lmao"
+
+@app.get("/maintenance")
+async def maintenanceWork(request: Request):
+    return templates.TemplateResponse("maintenance.html", {"request": request})
+
+@app.get("/error")
+async def error(request: Request):
+    session = request.session
+    mode = session.get("error_mode", "error")
+    if mode == "unimplemented":
         session["error_mode"] = "error"
-        if not request.args.get('locale'):
-            if "lang" in session:
-                lang = session["lang"]
-            else:
-                lang = "en"
-        else:
-            lang = request.args.get('locale')
-        session["lang"] = lang
-        return render_template("play.html", username=session["username"], userid=session["userid"], token=session["token"], lang=lang, SERVERIP=server_ip, ASSETSIP=assets_ip, langstrings=langstrings[lang])
-    
-    
-    @app.route('/')
-    def homepage():
-        if maintenance["maintenance"]:
-            return redirect('maintenance')
-        # Setup session
-        if not request.args.get('locale'):
-            if "lang" in session:
-                lang = session["lang"]
-            else:
-                lang = "en"
-        else:
-            lang = request.args.get('locale')
-        session["lang"] = lang
-        langUpper = lang.upper()
-        return render_template("home.html", SERVERIP=server_ip, ASSETSIP=assets_ip, playerCount=userManager.get_player_count(), langstrings=langstrings[lang], lang=lang, langUpper=langUpper)
-    
-    
-    @app.route('/login', methods=['POST'])
-    def login():
-        if maintenance["maintenance"]:
-            return redirect('maintenance')
-        msg = ''
-        # Setup session
-        if not request.args.get('locale'):
-            if "lang" in session:
-                lang = session["lang"]
-            else:
-                lang = "en"
-        else:
-            lang = request.args.get('locale')
-        langUpper = lang.upper()
-    
-        if 'username' in request.form and 'password' in request.form:
-            username = request.form['username']
-            password = request.form['password']
-            password = hashlib.sha512(password.encode('utf-8')).hexdigest()
-    
-            json_data = userManager.load_save_by_name(username)
+        return templates.TemplateResponse("unimplemented.html", {"request": request})
+    elif mode == "maintenance":
+        session["error_mode"] = "error"
+        return templates.TemplateResponse("maintenance.html", {"request": request})
+    else:
+        return templates.TemplateResponse("error.html", {"request": request})
 
-            # In case there isn't an account with the selected username we return invalid credentials
-            if json_data == -1:
-                msg = 'bgc.error.login_invalidCredentials'
-                return render_template("home.html", SERVERIP=server_ip, ASSETSIP=assets_ip, playerCount=userManager.get_player_count(), langstrings=langstrings[lang], lang=lang, langUpper=langUpper, msg=msg)
+@app.get("/logout")
+async def logout(request: Request, locale: str = None):
+    session = request.session
+    if "username" in session:
+        del session["username"]
+    if "userid" in session:
+        del session["userid"]
+    if "token" in session:
+        del session["token"]
 
-            if json_data["playerData"]["password"] == password:
-                # Generate random token
-                json_data["playerData"]["token"] = str(uuid.uuid1())
-                user_id = json_data["playerData"]["account_id"]
-                msg = 'Logged in successfully!'
-                userManager.modify_save_by_id(user_id, json_data)
-                session["username"] = username
-                session["userid"] = user_id
-                session["token"] = json_data["playerData"]["token"]
-                return redirect('play')
-            else:
-                msg = 'bgc.error.login_invalidCredentials'
-                return render_template("home.html", SERVERIP=server_ip, ASSETSIP=assets_ip, playerCount=userManager.get_player_count(), langstrings=langstrings[lang], lang=lang, langUpper=langUpper, msg=msg)
-    
-        else:
-            return render_template("home.html", SERVERIP=server_ip, ASSETSIP=assets_ip, playerCount=userManager.get_player_count(), langstrings=langstrings[lang], lang=lang, langUpper=langUpper, msg='')
-    
-    
-    @app.route('/register', methods=['POST'])
-    def register():
-        if maintenance["maintenance"]:
-            return redirect('maintenance')
-        msg = ''
-        # Read form data
-        username = request.form['RegUsername']
-        password = request.form['RegPassword']
-        password = hashlib.sha512(password.encode('utf-8')).hexdigest()
-        email = request.form['RegEmail']
-    
-        # Setup session
-        if not request.args.get('locale'):
-            lang = "en"
-        else:
-            lang = request.args.get('locale')
-        langUpper = lang.upper()
-    
-        # Check if input data is valid
-        if not re.match(r'[^@]+@[^@]+\.[^@]+', email):
-            msg = 'bgc.error.email_invalidAddress'
-        elif not re.match(r'[A-Za-z0-9_-]+', username):
-            msg = 'bgc.error.username_containsInvalidCharacters'
-        elif not username:
-            msg = 'bgc.error.username_notGiven'
-        elif not password:
-            msg = 'bgc.error.password_notGiven'
-        elif len(username) < 4:
-            msg = 'bgc.error.username_isTooShort'
-        elif len(username) > 20:
-            msg = 'bgc.error.username_isTooLong'
-        # Disabled cuz of hash, needs to be checked on the site itself
-        # elif len(password) < 4:
-        #    msg = 'bgc.error.password_isTooShort'
-        # elif len(password) > 45:
-        #    msg = 'bgc.error.password_isTooLong'
-        elif not email:
-            msg = 'bgc.error.email_notGiven'
-        else:
-            # Check if account already exists
-            if not userManager.user_name_exists(username):
-                uid = random.randint(10000000, 99999999)
-                # Just in case it might be a double user id
-                while userManager.user_id_exists(uid):
-                    uid = random.randint(10000000, 99999999)
-    
-                token = str(uuid.uuid1())
-                userManager.create_new_account(uid,username,password,token)
+    lang = locale if locale else session.get("lang", "en")
+    session["lang"] = lang
+    langUpper = lang.upper()
+    return templates.TemplateResponse("logout.html", {
+        "request": request,
+        "lang": lang,
+        "langUpper": langUpper,
+        "langstrings": langstrings.get(lang, {}),
+        "ASSETSIP": assets_ip,
+        "playerCount": user_manager.get_player_count()
+    })
 
-                session["username"] = username
-                session["userid"] = uid
-                session["token"] = token
+@app.post("/SkyApi.php")
+async def handle_request(
+    request: Request,
+    userId: int = Form(...),
+    t: str = Form(...),
+    d: str = Form(...)
+):
+    session = request.session
+    if maintenance["maintenance"]:
+        session["error_mode"] = "maintenance"
+        return PlainTextResponse("Maintenance Break! We are deeply sorry for the inconvenience. Grab a coffee and come back later ^^")
 
-                debug.user_registered_webhook(uid, username)
-
-                return redirect('play')
-            else:
-                msg = 'bgc.error.account_exists'
-        return render_template("home.html", SERVERIP=server_ip, ASSETSIP=assets_ip, playerCount=userManager.get_player_count(), langstrings=langstrings[lang], lang=lang, langUpper=langUpper, msg=msg)
-    
-    
-    @app.route("/crossdomain.xml")
-    def crossdomain():
-        return send_from_directory(STUB_DIR, "crossdomain.xml")
-    
-    # Game static files
-    @app.route("/assets/<path:path>")
-    def static_assets_loader(path):
-        return send_from_directory(ASSETS_DIR, path)
-    
-    
-    @app.route("/templates/styles/<path:path>")
-    def styles(path):
-        return send_from_directory(STYLES_DIR, path)
-
-
-    # Be sure to be logged in before using this
-    @app.route("/set-maintenance/on")
-    def setMaintenanceOn():
-        if "userid" in session and session["userid"] in ADMINS:
-            maintenance["maintenance"] = True
-            maintenance["startTime"] = int(time.time())
-            return "Success!"
-        else:
-            return "good try lmao"
+    # Acquire lock for this user to prevent race conditions
+    async with get_user_lock(userId):
+        json_data = user_manager.load_save_by_id(userId)
         
-    @app.route("/set-maintenance/off")
-    def setMaintenanceOff():
-        if "userid" in session and session["userid"] in ADMINS:
-            maintenance["maintenance"] = False
-            maintenance["startTime"] = 0
-            return "Success!"
-        else:
-            return "good try lmao"    
-        
-    @app.route("/admin/save-stats")
-    def saveStats():
-        if "userid" in session and session["userid"] in ADMINS:
-            stats = userManager.get_save_stats()
-            return f"""
-            <h2>Save System Statistics (Race-Condition Safe)</h2>
-            <div style="background: #f0f0f0; padding: 10px; margin: 10px 0;">
-                <p><strong>Dirty Users:</strong> {stats['dirty_users_count']}</p>
-                <p><strong>Currently Saving:</strong> {stats['saving_users_count']}</p>
-                <p><strong>Total Cached Users:</strong> {stats['total_users_cached']}</p>
-                <p><strong>File Locks Active:</strong> {stats['file_locks_count']}</p>
-                <p><strong>Save Thread Running:</strong> {stats['save_thread_alive']}</p>
-                <p><strong>Emergency Save Active:</strong> {stats['emergency_save_active']}</p>
-                <p><strong>Shutdown In Progress:</strong> {stats['shutdown_in_progress']}</p>
-            </div>
-            <p><strong>Sample Dirty Users:</strong> {', '.join(map(str, stats['dirty_users_sample']))}</p>
-            <p><strong>Sample Saving Users:</strong> {', '.join(map(str, stats['saving_users_sample']))}</p>
-            <br>
-            <a href="/admin/force-save">Force Save All</a> | 
-            <a href="/admin/verify-integrity">Verify Data Integrity</a>
-            """
-        else:
-            return "good try lmao"
-    
-    @app.route("/admin/verify-integrity")
-    def verifyIntegrity():
-        if "userid" in session and session["userid"] in ADMINS:
-            user_id = request.args.get('user_id', session.get('userid'))
-            if user_id:
-                result = userManager.verify_data_integrity(int(user_id))
-                return f"""
-                <h2>Data Integrity Check</h2>
-                <div style="background: #f0f0f0; padding: 10px; margin: 10px 0;">
-                    <p><strong>User ID:</strong> {result['user_id']}</p>
-                    <p><strong>In Memory:</strong> {result['in_memory']}</p>
-                    <p><strong>On Disk:</strong> {result['on_disk']}</p>
-                    <p><strong>Is Dirty:</strong> {result['is_dirty']}</p>
-                    <p><strong>Is Saving:</strong> {result['is_saving']}</p>
-                    <p><strong>Data Matches:</strong> {result['data_matches']}</p>
-                </div>
-                <a href="/admin/save-stats">Back to Stats</a>
-                """
-            else:
-                return "Please provide user_id parameter"
-        else:
-            return "good try lmao"
+        if json_data == -1: # User not found or error
+            return PlainTextResponse("token_error")
 
-    @app.route("/admin/force-save")
-    def forceSaveAll():
-        if "userid" in session and session["userid"] in ADMINS:
-            userManager.force_save_all()
-            return "All users saved! <a href='/admin/save-stats'>Back to stats</a>"
-        else:
-            return "good try lmao"
-
-    @app.route("/maintenance/")
-    def maintenanceWork():
-        return render_template('maintenance.html') 
-
-
-    @app.route("/error/")
-    def error():
-        if session["error_mode"] == "unimplemented":
-            session["error_mode"] = "error"
-            return render_template('unimplemented.html')
-        elif session["error_mode"] == "maintenance":
-            session["error_mode"] = "error"
-            return render_template('maintenance.html')
-        else:
-            return render_template('error.html')
-    
-    
-    @app.route("/logout/")
-    def logout():
-        # Setup session
-        if not request.args.get('locale'):
-            if "lang" in session:
-                lang = session["lang"]
-            else:
-                lang = "en"
-        else:
-            lang = request.args.get('locale')
-        session["lang"] = lang
-        
-        langUpper = lang.upper()
-        return render_template('logout.html', lang=lang, langUpper=langUpper, langstrings=langstrings[lang], ASSETSIP=assets_ip, playerCount=userManager.get_player_count())
-    
-    @app.errorhandler(404)
-    def page_not_found(e):
-        return homepage()
-    
-    @app.errorhandler(413)
-    def request_entity_too_large(e):
-        return f"Flask caught 413, Content-Length={request.content_length}", 413
-    
-    # Handle all the game commands
-    @app.route("/SkyApi.php", methods=['POST'])
-    def handle_request():
-        # Check for maintenance
-        if maintenance["maintenance"]:
-            session["error_mode"] = "maintenance"
-            return "Maintenance going on, sorry not sorry :)"
-
-        logging.debug(request.form)
-    
-        user_id = int(request.form["userId"])
-        json_data = userManager.load_save_by_id(user_id)
-    
-        if json_data["playerData"]["token"] == request.form["t"]:
-            command_data = json.loads(request.form["d"])
+        if json_data["playerData"]["token"] == t:
+            command_data = json.loads(d)
             total_response = {"rpcResults": []}
             
-            # Initialize batch state for this request
-            global _command_batch_state
-            _command_batch_state = {}
-    
-            # Check start level based on xp
-            start_level = get_level_from_xp(
-                json_data["playerData"]["xp"], init_data["playerData"]["xp_level_caps"])
-    
-            # Add this data to the Object, allowing for live updating in the game
-            total_items_to_add_to_obj = []
+            # Start level check
+            start_level = get_level_from_xp(json_data["playerData"]["xp"], init_data["playerData"]["xp_level_caps"])
             
-            # Resolve command dependencies to prevent race conditions
+            total_items_to_add_to_obj = []
             ordered_command_data = resolve_command_dependencies(command_data)
             
-            for command in ordered_command_data:
+            command = {}
+            for cmd in ordered_command_data:
+                command = cmd # Keep track of last command
                 if command["m"] in available_commands:
                     logging.info(f"Command {command['m']} handled")
-
-                    # Add current coins to request in order to simplify the GetAirCoins tasks
                     command["previous_air_coins"] = json_data["playerData"]["air_coins"]
-    
-                    # Check Lucky Luggage new spins
-                    handle_lucky_luggage_live(command, user_id, json_data)
-    
-                    # Create command answer
+                    
+                    handle_lucky_luggage_live(command, userId, json_data)
+                    
                     rpcResult = {}
                     items_to_add_to_obj = []
                     handler = available_commands[command["m"]]
-                    handler(command, user_id,
-                            rpcResult, items_to_add_to_obj, json_data, init_data)
                     
-                    if rpcResult["i"] == -1: # Command asked to disconnect user (likely due to possible cheat)
-                        logging.warning(f"User with id {user_id} has been disconnected, possible cheat detected!")
-                        return "Could not get Sky_Instance_Plane object with unique id 1435_12297741"
-    
+                    # Handlers are sync, so we call them directly
+                    handler(command, userId, rpcResult, items_to_add_to_obj, json_data, init_data)
+                    
+                    if rpcResult.get("i") == -1:
+                        logging.warning(f"User {userId} disconnected/cheat detected.")
+                        return PlainTextResponse("Could not get Sky_Instance_Plane object with unique id 1435_12297741")
+                        
                     total_response["rpcResults"].append(rpcResult)
-    
-                    # Check goal completion
-                    handle_goal(command, user_id, "main", items_to_add_to_obj, json_data, init_data)
-                    handle_goal(command, user_id, "pilot", items_to_add_to_obj, json_data, init_data)
+                    
+                    handle_goal(command, userId, "main", items_to_add_to_obj, json_data, init_data)
+                    handle_goal(command, userId, "pilot", items_to_add_to_obj, json_data, init_data)
                     
                     total_items_to_add_to_obj += items_to_add_to_obj
-    
                 else:
                     logging.error(f"Command {command['m']} not implemented")
                     session["error_mode"] = "unimplemented"
-                    return "Could not get Sky_Instance_Plane object with unique id 1435_12297741"
-    
-            # Check start level based on xp
-            end_level = get_level_from_xp(
-                json_data["playerData"]["xp"], init_data["playerData"]["xp_level_caps"])
-    
-            if start_level != end_level:  # Check level-up
+                    return PlainTextResponse("Could not get Sky_Instance_Plane object with unique id 1435_12297741")
+
+            # Level up check
+            end_level = get_level_from_xp(json_data["playerData"]["xp"], init_data["playerData"]["xp_level_caps"])
+            if start_level != end_level:
                 for i in range(end_level - start_level):
                     json_data["playerData"]["air_coins"] += 850
-                    json_data["playerData"]["air_cash"] += 2  # YAY WE CAN BUY 0.2 HANGAR SLOTS!!!
-
-            # Create command object
+                    json_data["playerData"]["air_cash"] += 2
+            
             obj = {}
-            handle_addObj(
-                command, user_id, obj, total_items_to_add_to_obj, json_data, init_data, obj_data)
+            handle_addObj(command, userId, obj, total_items_to_add_to_obj, json_data, init_data, obj_data)
             total_response["obj"] = obj
-    
-            userManager.modify_save_by_id(user_id, json_data)
+            
+            user_manager.modify_save_by_id(userId, json_data)
             return total_response
         else:
-            logging.critical(f"Security alert: User {user_id} attempted to use an invalid token!")
-            return "token_error"
+            logging.critical(f"Security alert: User {userId} attempted to use an invalid token!")
+            return PlainTextResponse("token_error")
 
-    logging.info(f"Starting server on {host}:{port} (Debug mode: {'On' if configHandler.get_flask_debug() else 'Off'})")
-    app.secret_key = 'SECRET_KEY'
-
-    # Increase limits so we avoid 413 errors
-    Request.max_form_parts = 50000
-    MEGABYTE = (2 ** 10) ** 2
-    app.config['MAX_CONTENT_LENGTH'] = None
-    app.config['MAX_FORM_MEMORY_SIZE'] = 50 * MEGABYTE    # Development environment, this won't run in production with a proper web server like nginx or apache
-    if __name__ == "__main__":
-        import signal
-        
-        def signal_handler(signum, frame):
-            logging.info("Server is shutting down...")
-            exit(0)
-        
-        signal.signal(signal.SIGINT, signal_handler)
-        signal.signal(signal.SIGTERM, signal_handler)
-        
-        try:
-            app.run(host=host, port=port, debug=configHandler.get_flask_debug(), 
-                use_reloader=False, threaded=True)
-        except KeyboardInterrupt:
-            logging.info("Server stopped")
-
-# Start the server
+# Run only if executed directly
 if __name__ == "__main__":
-    main()
+    import uvicorn
+    host = config.get("ServerSettings", "host", fallback="127.0.0.1")
+    port = int(config.get("ServerSettings", "port", fallback="3800"))
+    uvicorn.run("server:app", host=host, port=port, reload=True)
