@@ -9,7 +9,7 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from src.database import init_database
-from config_handler import get_config
+from src.config_handler import get_config
 
 def setup_database():
     config = get_config()
