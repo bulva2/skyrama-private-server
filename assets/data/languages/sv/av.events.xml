@@ -267,5 +267,11 @@
   <item name="av.birthdayevent2025.text"><![CDATA[Skyrama fyller 14 år – blont hår är valfritt. Låren skälver, beatet vibrerar och kärlekshandtagen gungar i takt. Unna dig en bubblande Aerosol Spritz och andra småbusiga drinkar på detta födelsedagskalas i luften. Ut på landningsbanan – och glid rakt in i njutningen!]]></item>
   <item name="av.birthdayevent2025.mouseover"><![CDATA[Ljuset släcks, strålkastaren tänds! Saturday Nightflight lyfter – destination: topphemlig bikinizon. Inträde endast med höftrörelse!]]></item>
  </category> 
+
+ <category name="av.winterevent2025">
+  <item name="av.winterevent2025.title"><![CDATA[Varma och kalla vinterveckor]]></item>
+  <item name="av.winterevent2025.text"><![CDATA[Snö på taket men fortfarande härlig värme i ugnen. Den perfekta tiden att kliva ombord på de fulltankade semesterplanen, ta en rejäl klunk glögg och få lite smidighet tillbaka i de där lemmarna som har hunnit bli lite stela. Luften är isande kall men dina kinder glöder som om våren kommit för andra gången. Rulla ut på banan och låt dig dras in i ett äventyr av eld och is som inte lämnar någon i cockpit oberörd.]]></item>
+  <item name="av.winterevent2025.mouseover"><![CDATA[Varma kinder och svala spetsar. Perfekt för piloter med temperament.]]></item>
+ </category>
   
 </language>

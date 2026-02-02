@@ -267,5 +267,11 @@
   <item name="av.birthdayevent2025.text"><![CDATA[Skyrama 14 yaşında – sarı saç şart değil. Uyluklar titriyor, ritim titreşiyor ve aşk tutamaçları ahenkle sallanıyor. Kendine köpüklü bir Aerosol Spritz ve başka yaramaz içkiler ısmarla, bu yüksek irtifalı doğum günü partisinde. Pist seni bekliyor – kay ve zevke doğru süzül!]]></item>
   <item name="av.birthdayevent2025.mouseover"><![CDATA[Işıklar kapansın, spotlar yansın! Saturday Nightflight havalanıyor – hedef: gizli bikini bölgesi. Giriş yalnızca kalçalarıyla konuşanlara açık!]]></item>
  </category>
+
+ <category name="av.winterevent2025">
+  <item name="av.winterevent2025.title"><![CDATA[Sıcak soğuk kış haftaları]]></item>
+  <item name="av.winterevent2025.text"><![CDATA[Çatıda kar var ama fırında hala güzel bir sıcaklık duruyor. Tam da tatil uçaklarına atlayıp bir yudum sıcak şarap içmek ve biraz sertleşmiş uzuvlarına yeniden esneklik kazandırmak için ideal zaman. Hava buz gibi ama yanakların sanki ikinci bir bahar gelmiş gibi sıcak sıcak parlıyor. Pistte ilerle ve seni ateş ile buz arasında geçen bir maceranın içine çeken rüzgara kendini bırak. Bu yolculuk kokpitte kimseyi soğuk bırakmaz.]]></item>
+  <item name="av.winterevent2025.mouseover"><![CDATA[Sıcak yanaklar ve serin uçlar. Ateşi içinde taşıyan pilotlar için ideal.]]></item>
+ </category>
   
 </language>

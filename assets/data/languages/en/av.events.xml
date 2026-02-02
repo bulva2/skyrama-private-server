@@ -269,5 +269,11 @@
   <item name="av.birthdayevent2025.text"><![CDATA[14 years of Skyrama – blonde hair optional. Thighs trembling, the beat vibrating, and love handles grooving in sync. Treat yourself to a sparkling Aerosol Spritz and other delightfully cheeky nightcaps at our high-flying birthday bash. Hit the runway and glide straight into pleasure!]]></item>
   <item name="av.birthdayevent2025.mouseover"><![CDATA[Lights off, spotlight on! Saturday Nightflight is cleared for takeoff – destination: top-secret bikini zone. Entry by hip action only!]]></item>
  </category>
+
+ <category name="av.winterevent2025">
+  <item name="av.winterevent2025.title"><![CDATA[Hot-Cold Winter Weeks]]></item>
+  <item name="av.winterevent2025.text"><![CDATA[Snow on the roof, but still embers in the stove? Sounds like the perfect time to hop into your fully fueled holiday flyers, take a generous sip of mulled wine and get those stiff limbs nice and flexible again. The air may be icy, but your cheeks are glowing like a second spring. Roll onto the runway and let yourself be pulled into an adventure of fire and ice that will warm every cockpit in reach.]]></item>
+  <item name="av.winterevent2025.mouseover"><![CDATA[Warm cheeks, cool tips. Perfect for pilots with a little extra spark.]]></item>
+ </category>
    
 </language>

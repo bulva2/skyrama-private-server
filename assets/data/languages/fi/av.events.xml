@@ -267,5 +267,11 @@
   <item name="av.birthdayevent2025.text"><![CDATA[Skyrama täyttää 14 – blondi tukka ei ole pakollinen. Reidet tutisevat, biitti värähtelee ja rakkauskahvat keinuvat rytmissä. Nappaa kupliva Aerosol Spritz ja muita vallattomia drinkkejä tämän korkealentoisen synttäribileen kunniaksi. Suuntaa kiitotielle – ja liu’u suoraan nautintoon!]]></item>
   <item name="av.birthdayevent2025.mouseover"><![CDATA[Valot pois, spotlight päälle! Saturday Nightflight nousee ilmaan – kohteena: huippusalainen bikinivyöhyke. Sisäänpääsy vain lanteilla luvan kanssa!]]></item>
  </category> 
+
+ <category name="av.winterevent2025">
+  <item name="av.winterevent2025.title"><![CDATA[Lämpimät ja kylmät talviviikot]]></item>
+  <item name="av.winterevent2025.text"><![CDATA[Lunta katolla mutta uunissa on yhä mukava lämpö. Täydellinen hetki nousta täyteen tankattuihin lomakoneisiin, ottaa reilu kulaus glögiä ja saada vähän notkeutta takaisin niihin jäseniin jotka ovat päässeet jäykistymään. Ilma on jäätävän kylmä mutta poskesi hehkuvat kuin toinen kevät olisi jo alkanut. Rullaa kiitotielle ja anna itsesi tempautua mukaan tulen ja jään seikkailuun joka ei jätä ketään ohjaamossa kylmäksi.]]></item>
+  <item name="av.winterevent2025.mouseover"><![CDATA[Lämpimät posket ja viileät kärjet. Täydellinen yhdistelmä piloteille joilla on temperamenttia.]]></item>
+ </category>
  
 </language>

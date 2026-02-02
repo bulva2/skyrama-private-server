@@ -1159,7 +1159,25 @@
   
   <item name="av.building.summer2025_plane01"><![CDATA[SUN-LRG01]]></item>
   <item name="av.building.summer2025_plane02"><![CDATA[SUN-LRG02]]></item>
-  <item name="av.building.summer2025_plane03"><![CDATA[SUN-K1SS]]></item>  
+  <item name="av.building.summer2025_plane03"><![CDATA[SUN-K1SS]]></item>
+  
+  <item name="av.building.halloweenevent2025_loon"><![CDATA[Pumpkin Popper]]></item>
+  <item name="av.building.halloweenevent2025_plane01"><![CDATA[Night Howler]]></item>
+  <item name="av.building.halloweenevent2025_plane02"><![CDATA[WitchWing]]></item>
+  <item name="av.building.halloweenevent2025_cargo"><![CDATA[Ghost Loader]]></item>
+  
+  <item name="av.building.winter2025_background"><![CDATA[Câmpia focului și a înghețului]]></item>
+  <item name="av.building.winterevent2025_plane01"><![CDATA[Icehammer]]></item>
+  <item name="av.building.winterevent2025_plane02"><![CDATA[Inferno Liner]]></item>
+  <item name="av.building.winterevent2025_plane03"><![CDATA[Blaze Runner]]></item>
+  <item name="av.building.winterevent2025_plane04"><![CDATA[Frostfire Colossus]]></item>
+  <item name="av.building.winterevent2025_icetower"><![CDATA[Crystal Tower]]></item>
+  <item name="av.building.winterevent2025_firetower"><![CDATA[Inferno Tower]]></item>
+  <item name="av.building.winterevent2025_fireicehotel"><![CDATA[Frostfire Inn]]></item>
+  <item name="av.building.winterevent2025_firedeco"><![CDATA[Molten Pillar]]></item>
+  <item name="av.building.winterevent2025_icedeco"><![CDATA[Frozen Pillar]]></item>
+  <item name="av.building.winterevent2025_iceloon"><![CDATA[Chill McDrift]]></item>
+  <item name="av.building.winterevent2025_plane05"><![CDATA[Crystal Phoenix]]></item>  
   
  </category>
  <category name="av.storeitem">
@@ -2065,7 +2083,25 @@
   
   <item name="av.storeitem.summer2025_plane01"><![CDATA[Ediţie limitată]]></item>
   <item name="av.storeitem.summer2025_plane02"><![CDATA[Ediţie limitată]]></item>
-  <item name="av.storeitem.summer2025_plane03"><![CDATA[Ediţie limitată]]></item>  
+  <item name="av.storeitem.summer2025_plane03"><![CDATA[Ediţie limitată]]></item>
+
+  <item name="av.storeitem.halloweenevent2025_loon"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.halloweenevent2025_plane01"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.halloweenevent2025_plane02"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.halloweenevent2025_cargo"><![CDATA[Ediţie limitată]]></item>  
+
+  <item name="av.storeitem.winter2025_background"><![CDATA[Priveliște care îți taie respirația]]></item>
+  <item name="av.storeitem.winterevent2025_plane01"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.winterevent2025_plane02"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.winterevent2025_plane03"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.winterevent2025_plane04"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.winterevent2025_icetower"><![CDATA[Colectează {number} pasager(i) la fiecare {minutes} minute]]></item>
+  <item name="av.storeitem.winterevent2025_firetower"><![CDATA[Colectează {number} pasager(i) la fiecare {minutes} minute]]></item>
+  <item name="av.storeitem.winterevent2025_fireicehotel"><![CDATA[Colectează {number} pasager(i) la fiecare {minutes} minute]]></item>
+  <item name="av.storeitem.winterevent2025_firedeco"><![CDATA[Pasageri: + {number} Rază: {radius}]]></item>
+  <item name="av.storeitem.winterevent2025_icedeco"><![CDATA[Timp mentenanță: - {number}% Rază: {radius}]]></item>
+  <item name="av.storeitem.winterevent2025_iceloon"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.winterevent2025_plane05"><![CDATA[Ediţie limitată]]></item>  
   
  </category>
 </language>

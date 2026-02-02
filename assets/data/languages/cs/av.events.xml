@@ -267,5 +267,11 @@
   <item name="av.birthdayevent2025.text"><![CDATA[14 let Skyramy – blond vlasy nejsou povinné. Stehna se třesou, beat vibruje a boky se houpou v rytmu. Dopřej si šumivý Aerosol Spritz a další rošťácké drinky na této narozeninové oslavě v oblacích. Na ranvej – a sklouzni rovnou do rozkoše!]]></item>
   <item name="av.birthdayevent2025.mouseover"><![CDATA[Světla zhasnout, reflektor na scénu! Saturday Nightflight vzlétá – cíl: přísně tajná bikiny zóna. Vstup jen pro ty, co to umí rozbalit boky!]]></item>
  </category>
- 
+
+ <category name="av.winterevent2025">
+  <item name="av.winterevent2025.title"><![CDATA[Horko chladné zimní týdny]]></item>
+  <item name="av.winterevent2025.text"><![CDATA[Sníh na střeše, ale v peci stále příjemné teplo. Ideální chvíle nastoupit do plně natankovaných prázdninových letadel, dát si pořádný doušek svařeného vína a vrátit trochu pružnosti končetinám, které nějak ztuhly. Vzduch je ledový, ale tvé tváře žhnou jako při druhém jaru. Vyjeď na ranvej a nech se vtáhnout do dobrodružství ohně a ledu, které nenechá nikoho v kokpitu chladným.]]></item>
+  <item name="av.winterevent2025.mouseover"><![CDATA[Horké tváře a chladné špičky. Ideální pro piloty s temperamentem]]></item>
+ </category>
+  
 </language>

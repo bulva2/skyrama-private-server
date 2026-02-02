@@ -31926,5 +31926,527 @@
 		<AircraftBarComponent popUpX="19" popUpY="22" />
 		<ProfileTagComponent assetY="20" />
 	</Asset>	
+
+	<!-- Halloween 2025 - Balloon -->
+		
+	<Asset name="halloweenevent2025_loon" type="plane">
+		
+		<ViewComponent name="v1" dir="1" isoWidth="55"
+			isoLength="55" isoHeight="30">
+			<SpriteRenderComponent
+				name="steady"
+				colorMap="gfx/events/halloween2025/balloon/halloweenevent2025_loon_v0.png"
+				originX = "-68" originY = "-116" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				/>
+				
+			<SpriteRenderComponent name="animation"
+				colorMap="gfx/events/halloween2025/balloon/anim/halloweenevent2025_loon_v0_.swf"
+				originX = "-68" originY = "-116" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				preload="false" />
+								
+			<ShadowMapComponent colorMap="gfx/events/halloween2025/balloon/halloweenevent2025_loon_s_v0.png"
+				originX = "-81" originY = "-133" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				/>
+		</ViewComponent>
+		
+		<ViewComponent name="v0" dir="0" isoWidth="55"
+			isoLength="55" isoHeight="30">
+			 <SpriteRenderComponent
+				name="steady"
+				colorMap="gfx/events/halloween2025/balloon/halloweenevent2025_loon_v1.png"
+				originX = "-20" originY = "-99" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				/>
+				
+			<SpriteRenderComponent name="animation"
+				colorMap="gfx/events/halloween2025/balloon/anim/halloweenevent2025_loon_v1_.swf"
+				originX = "-20" originY = "-99" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				preload="false" />
+				
+			<ShadowMapComponent colorMap="gfx/events/halloween2025/balloon/halloweenevent2025_loon_s_v1.png"
+				originX = "-34" originY = "-116" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				/>
+		</ViewComponent>
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="balloon" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+	</Asset>	
+
+	<!-- Halloween 2025 - Large Plane 01 OID 451  -->
+	
+	<Asset name="halloweenevent2025_plane01" type="plane">
+
+		<ViewComponent name="v0" dir="0" isoWidth="55"
+			isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/halloween2025/plane01/halloweenevent2025_plane01_v0.png"
+				originX = "-95" originY = "-56" isoWidth = "72" isoLength = "75" isoHeight = "54" isoOffsetX = "-2" isoOffsetY = "-5" isoOffsetZ = "0"
+				/>
+			<ShadowMapComponent
+				colorMap="gfx/events/halloween2025/plane01/halloweenevent2025_plane01_s_v0.png"
+				originX = "-108" originY = "-32" isoWidth = "53" isoLength = "45" isoHeight = "30" isoOffsetX = "11" isoOffsetY = "14" isoOffsetZ = "0"
+				boundingBox="false"
+				/>
+
+		</ViewComponent>
+		<ViewComponent name="v1" dir="1" isoWidth="55"
+			isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/halloween2025/plane01/halloweenevent2025_plane01_v1.png"
+				originX = "-96" originY = "-55" isoWidth = "58" isoLength = "94" isoHeight = "54" isoOffsetX = "16" isoOffsetY = "-20" isoOffsetZ = "0"
+				/>
+			<ShadowMapComponent
+				colorMap="gfx/events/halloween2025/plane01/halloweenevent2025_plane01_s_v1.png"
+				originX = "-61" originY = "-21" isoWidth = "29" isoLength = "71" isoHeight = "30" isoOffsetX = "14" isoOffsetY = "-10" isoOffsetZ = "0"
+				boundingBox="false"
+				/>
+
+		</ViewComponent>
+
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+	</Asset>	
+
+	<!-- Halloween 2025 - Large Plane 02 OID 397  -->
+	
+	<Asset name="halloweenevent2025_plane02" type="plane">
+
+		<ViewComponent name="v0" dir="0" isoWidth="55"
+			isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/halloween2025/plane02/halloweenevent2025_plane02_v0.png"
+				originX = "-98" originY = "-54" isoWidth = "60" isoLength = "74" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "1"
+				/>
+			<ShadowMapComponent
+				colorMap="gfx/events/halloween2025/plane02/halloweenevent2025_plane02_s_v0.png"
+				originX = "-152" originY = "-53" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				boundingBox="false"
+				/>
+
+		</ViewComponent>
+		<ViewComponent name="v1" dir="1" isoWidth="55"
+			isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/halloween2025/plane02/halloweenevent2025_plane02_v1.png"
+				originX = "-62" originY = "-57" isoWidth = "60" isoLength = "74" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "1"
+				/>
+			<ShadowMapComponent
+				colorMap="gfx/events/halloween2025/plane02/halloweenevent2025_plane02_s_v1.png"
+				originX = "-59" originY = "-52" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				boundingBox="false"
+				/>
+
+		</ViewComponent>
+
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+	</Asset>	
+	
+	<!-- Halloween 2025 - Large Cargo -->
+	
+	<Asset name="halloweenevent2025_cargo" type="plane">
+		<ViewComponent name="v0" dir="0" isoWidth="55"
+			isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/halloween2025/cargo/halloweenevent2025_cargo_v0.png"
+				originX = "-139" originY = "-88" isoWidth = "72" isoLength = "75" isoHeight = "54" isoOffsetX = "-2" isoOffsetY = "-5" isoOffsetZ = "0"
+				/>
+			<ShadowMapComponent
+				colorMap="gfx/events/halloween2025/cargo/halloweenevent2025_cargo_s_v0.png"
+				originX = "-184" originY = "-97" isoWidth = "29" isoLength = "71" isoHeight = "30" isoOffsetX = "13" isoOffsetY = "-11" isoOffsetZ = "0"
+				boundingBox="false" />
+
+		</ViewComponent>
+		<ViewComponent name="v1" dir="1" isoWidth="55"
+			isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/halloween2025/cargo/halloweenevent2025_cargo_v1.png"
+				originX = "-130" originY = "-90" isoWidth = "58" isoLength = "94" isoHeight = "54" isoOffsetX = "16" isoOffsetY = "-20" isoOffsetZ = "0"
+				/>
+			<ShadowMapComponent
+				colorMap="gfx/events/halloween2025/cargo/halloweenevent2025_cargo_s_v1.png"
+				originX = "-91" originY = "-97" isoWidth = "29" isoLength = "71" isoHeight = "30" isoOffsetX = "13" isoOffsetY = "-11" isoOffsetZ = "0"
+				boundingBox="false"
+				/>
+
+		</ViewComponent>
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+	</Asset>		
+
+	<!-- Winter 2025 - Plane 01 Large Plane Ice -->
+	
+	<Asset name="winterevent2025_plane01" type="plane">
+		<ViewComponent name="v0" dir="0" isoWidth="55"
+			isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/winterevent2025/plane01/winterevent2025_plane01_v0.png"
+				originX = "-139" originY = "-88" isoWidth = "72" isoLength = "75" isoHeight = "54" isoOffsetX = "-2" isoOffsetY = "-5" isoOffsetZ = "0"
+				/>
+			<ShadowMapComponent
+				colorMap="gfx/events/winterevent2025/plane01/winterevent2025_plane01_s_v0.png"
+				originX = "-184" originY = "-97" isoWidth = "29" isoLength = "71" isoHeight = "30" isoOffsetX = "13" isoOffsetY = "-11" isoOffsetZ = "0"
+				boundingBox="false" />
+
+		</ViewComponent>
+		<ViewComponent name="v1" dir="1" isoWidth="55"
+			isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/winterevent2025/plane01/winterevent2025_plane01_v1.png"
+				originX = "-130" originY = "-90" isoWidth = "58" isoLength = "94" isoHeight = "54" isoOffsetX = "16" isoOffsetY = "-20" isoOffsetZ = "0"
+				/>
+			<ShadowMapComponent
+				colorMap="gfx/events/winterevent2025/plane01/winterevent2025_plane01_s_v1.png"
+				originX = "-91" originY = "-97" isoWidth = "29" isoLength = "71" isoHeight = "30" isoOffsetX = "13" isoOffsetY = "-11" isoOffsetZ = "0"
+				boundingBox="false"
+				/>
+
+		</ViewComponent>
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+	</Asset>	
+	
+	<!-- Winter 2025 - Plane 02 Large Plane Fire -->
+	
+	<Asset name="winterevent2025_plane02" type="plane">
+		<ViewComponent name="v0" dir="0" isoWidth="55"
+			isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/winterevent2025/plane02/winterevent2025_plane02_v0.png"
+				originX = "-139" originY = "-88" isoWidth = "72" isoLength = "75" isoHeight = "54" isoOffsetX = "-2" isoOffsetY = "-5" isoOffsetZ = "0"
+				/>
+			<ShadowMapComponent
+				colorMap="gfx/events/winterevent2025/plane02/winterevent2025_plane02_s_v0.png"
+				originX = "-184" originY = "-97" isoWidth = "29" isoLength = "71" isoHeight = "30" isoOffsetX = "13" isoOffsetY = "-11" isoOffsetZ = "0"
+				boundingBox="false" />
+
+		</ViewComponent>
+		<ViewComponent name="v1" dir="1" isoWidth="55"
+			isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/winterevent2025/plane02/winterevent2025_plane02_v1.png"
+				originX = "-130" originY = "-90" isoWidth = "58" isoLength = "94" isoHeight = "54" isoOffsetX = "16" isoOffsetY = "-20" isoOffsetZ = "0"
+				/>
+			<ShadowMapComponent
+				colorMap="gfx/events/winterevent2025/plane02/winterevent2025_plane02_s_v1.png"
+				originX = "-91" originY = "-97" isoWidth = "29" isoLength = "71" isoHeight = "30" isoOffsetX = "13" isoOffsetY = "-11" isoOffsetZ = "0"
+				boundingBox="false"
+				/>
+
+		</ViewComponent>
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+	</Asset>	
+
+	<!-- Winter 2025 - Plane 03 Medium Plane Mix -->
+	
+	<Asset name="winterevent2025_plane03" type="plane">
+
+		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="30">
+			<SpriteRenderComponent
+				colorMap="gfx/events/winterevent2025/plane03/winterevent2025_plane03_v0.png"
+				originX = "-96" originY = "-60" isoWidth = "60" isoLength = "74" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "1"
+				/>
+			<ShadowMapComponent
+				colorMap="gfx/events/winterevent2025/plane03/winterevent2025_plane03_s_v0.png"
+				originX = "-111" originY = "-64" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				boundingBox="false"
+				/>
+		</ViewComponent>
+		
+		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+			<SpriteRenderComponent
+				colorMap="gfx/events/winterevent2025/plane03/winterevent2025_plane03_v1.png"
+				originX = "-79" originY = "-55" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "1"
+				/>
+			<ShadowMapComponent
+				colorMap="gfx/events/winterevent2025/plane03/winterevent2025_plane03_s_v1.png"
+				originX = "-79" originY = "-59" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				boundingBox="false"
+				/>
+		</ViewComponent>
+
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+	</Asset>
+
+	<!-- Winter 2025 - Plane 04 Cargo Plane -->
+	
+	<Asset name="winterevent2025_plane04" type="plane">
+		<ViewComponent name="v0" dir="0" isoWidth="55"
+			isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/winterevent2025/plane04/winterevent2025_plane04_v0.png"
+				originX = "-139" originY = "-88" isoWidth = "72" isoLength = "75" isoHeight = "54" isoOffsetX = "-2" isoOffsetY = "-5" isoOffsetZ = "0"
+				/>
+			<ShadowMapComponent
+				colorMap="gfx/events/winterevent2025/plane04/winterevent2025_plane04_s_v0.png"
+				originX = "-184" originY = "-97" isoWidth = "29" isoLength = "71" isoHeight = "30" isoOffsetX = "13" isoOffsetY = "-11" isoOffsetZ = "0"
+				boundingBox="false" />
+
+		</ViewComponent>
+		<ViewComponent name="v1" dir="1" isoWidth="55"
+			isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/winterevent2025/plane04/winterevent2025_plane04_v1.png"
+				originX = "-130" originY = "-90" isoWidth = "58" isoLength = "94" isoHeight = "54" isoOffsetX = "16" isoOffsetY = "-20" isoOffsetZ = "0"
+				/>
+			<ShadowMapComponent
+				colorMap="gfx/events/winterevent2025/plane04/winterevent2025_plane04_s_v1.png"
+				originX = "-91" originY = "-97" isoWidth = "29" isoLength = "71" isoHeight = "30" isoOffsetX = "13" isoOffsetY = "-11" isoOffsetZ = "0"
+				boundingBox="false"
+				/>
+
+		</ViewComponent>
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+	</Asset>	
+
+	<!-- Winter 2025 - Ice Tower -->
+	
+	<Asset name="winterevent2025_icetower" type="landside_building">
+		
+		<ViewComponent name="v0" dir="0">
+		
+			<SpriteRenderComponent name="steady"
+				colorMap="gfx/events/winterevent2025/icetower/winterevent2025_icetower_v0.png"
+				originX="-146" originY="-184" isoWidth="96" isoLength="96" isoHeight="54"
+				isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" />
+			<ShadowMapComponent
+				colorMap="gfx/events/winterevent2025/icetower/winterevent2025_icetower_s_v0.png"
+				originX="-146" originY="-184" isoWidth="96" isoLength="96" isoHeight="1"
+				isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" scene="UndergroundScene" boundingBox="false" />	
+		</ViewComponent>
+		
+		<ViewComponent name="v1" dir="0">
+			<SpriteRenderComponent name="steady"
+				colorMap="gfx/events/winterevent2025/icetower/winterevent2025_icetower_v1.png"
+				originX="-141" originY="-187" isoWidth="96" isoLength="96" isoHeight="54"
+				isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" />
+		<ShadowMapComponent
+				colorMap="gfx/events/winterevent2025/icetower/winterevent2025_icetower_s_v1.png"
+				originX="-141" originY="-187" isoWidth="96" isoLength="96" isoHeight="1"
+				isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" scene="UndergroundScene" boundingBox="false" />
+		</ViewComponent>
+	
+		<PlaceableComponent />
+		<LandsideBuildingComponent />
+		<LandsideBuildingInfoComponent popUpX="-40" popUpY="-60" />
+	</Asset>	
+
+	<!-- Winter 2025 - Fire Tower -->
+	
+	<Asset name="winterevent2025_firetower" type="landside_building">
+		
+		<ViewComponent name="v0" dir="0">
+		
+			<SpriteRenderComponent name="steady"
+				colorMap="gfx/events/winterevent2025/firetower/winterevent2025_firetower_v0.png"
+				originX="-146" originY="-184" isoWidth="96" isoLength="96" isoHeight="54"
+				isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" />
+			<ShadowMapComponent
+				colorMap="gfx/events/winterevent2025/firetower/winterevent2025_firetower_s_v0.png"
+				originX="-146" originY="-184" isoWidth="96" isoLength="96" isoHeight="1"
+				isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" scene="UndergroundScene" boundingBox="false" />	
+		</ViewComponent>
+		
+		<ViewComponent name="v1" dir="0">
+			<SpriteRenderComponent name="steady"
+				colorMap="gfx/events/winterevent2025/firetower/winterevent2025_firetower_v1.png"
+				originX="-141" originY="-187" isoWidth="96" isoLength="96" isoHeight="54"
+				isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" />
+		<ShadowMapComponent
+				colorMap="gfx/events/winterevent2025/firetower/winterevent2025_firetower_s_v1.png"
+				originX="-141" originY="-187" isoWidth="96" isoLength="96" isoHeight="1"
+				isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" scene="UndergroundScene" boundingBox="false" />
+		</ViewComponent>
+	
+		<PlaceableComponent />
+		<LandsideBuildingComponent />
+		<LandsideBuildingInfoComponent popUpX="-40" popUpY="-60" />
+	</Asset>		
+
+	<!-- Winter 2025 - FireIce Hotel -->
+	
+	<Asset name="winterevent2025_fireicehotel" type="landside_building">
+		
+		<ViewComponent name="v0" dir="0">
+		
+			<SpriteRenderComponent name="steady"
+				colorMap="gfx/events/winterevent2025/fireicehotel/winterevent2025_fireicehotel_v0.png"
+				originX="-146" originY="-184" isoWidth="96" isoLength="96" isoHeight="54"
+				isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" />
+			<ShadowMapComponent
+				colorMap="gfx/events/winterevent2025/fireicehotel/winterevent2025_fireicehotel_s_v0.png"
+				originX="-146" originY="-184" isoWidth="96" isoLength="96" isoHeight="1"
+				isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" scene="UndergroundScene" boundingBox="false" />	
+		</ViewComponent>
+		
+		<ViewComponent name="v1" dir="0">
+			<SpriteRenderComponent name="steady"
+				colorMap="gfx/events/winterevent2025/fireicehotel/winterevent2025_fireicehotel_v1.png"
+				originX="-141" originY="-187" isoWidth="96" isoLength="96" isoHeight="54"
+				isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" />
+		<ShadowMapComponent
+				colorMap="gfx/events/winterevent2025/fireicehotel/winterevent2025_fireicehotel_s_v1.png"
+				originX="-141" originY="-187" isoWidth="96" isoLength="96" isoHeight="1"
+				isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" scene="UndergroundScene" boundingBox="false" />
+		</ViewComponent>
+	
+		<PlaceableComponent />
+		<LandsideBuildingComponent />
+		<LandsideBuildingInfoComponent popUpX="-40" popUpY="-60" />
+	</Asset>		
+
+	<!-- Winter 2025 - Fire Deco -->
+	
+	<Asset name="winterevent2025_firedeco" type="landside_building">
+		<ViewComponent name="v0" dir="0">
+			<SpriteRenderComponent
+				colorMap="gfx/events/winterevent2025/firedeco/winterevent2025_firedeco_v0.png"
+				originX = "-53" originY = "-98" isoWidth = "42" isoLength = "37" isoHeight = "1" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				preload="false"/>
+		</ViewComponent>
+		
+		<ViewComponent name="v1" dir="1">
+			<SpriteRenderComponent
+				colorMap="gfx/events/winterevent2025/firedeco/winterevent2025_firedeco_v1.png"
+				originX = "-56" originY = "-105" isoWidth = "42" isoLength = "37" isoHeight = "1" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				preload="false"/>
+		</ViewComponent>
+		<PlaceableComponent />
+		<LandsideBuildingComponent />
+	</Asset>
+
+	<!-- Winter 2025 - Ice Deco -->
+	
+	<Asset name="winterevent2025_icedeco" type="landside_building">
+		<ViewComponent name="v0" dir="0">
+			<SpriteRenderComponent
+				colorMap="gfx/events/winterevent2025/icedeco/winterevent2025_icedeco_v0.png"
+				originX = "-53" originY = "-98" isoWidth = "42" isoLength = "37" isoHeight = "1" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				preload="false"/>
+		</ViewComponent>
+		
+		<ViewComponent name="v1" dir="1">
+			<SpriteRenderComponent
+				colorMap="gfx/events/winterevent2025/icedeco/winterevent2025_icedeco_v1.png"
+				originX = "-56" originY = "-105" isoWidth = "42" isoLength = "37" isoHeight = "1" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				preload="false"/>
+		</ViewComponent>
+		<PlaceableComponent />
+		<LandsideBuildingComponent />
+	</Asset>	
+
+	<!-- Winter 2025 - Ice Loon -->
+		
+	<Asset name="winterevent2025_iceloon" type="plane">
+		
+		<ViewComponent name="v1" dir="1" isoWidth="55"
+			isoLength="55" isoHeight="30">
+			<SpriteRenderComponent
+				name="steady"
+				colorMap="gfx/events/winterevent2025/iceloon/winterevent2025_iceloon_v0.png"
+				originX = "-68" originY = "-116" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				/>
+
+			<SpriteRenderComponent name="animation"
+				colorMap="gfx/events/winterevent2025/iceloon/anim/winterevent2025_iceloon_v0_.swf"
+				originX = "-68" originY = "-116" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				preload="false" />			
+			
+			<ShadowMapComponent 
+				colorMap="gfx/events/winterevent2025/iceloon/winterevent2025_iceloon_s_v0.png"
+				originX = "-81" originY = "-133" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				/>
+		</ViewComponent>
+		
+		<ViewComponent name="v0" dir="0" isoWidth="55"
+			isoLength="55" isoHeight="30">
+			 <SpriteRenderComponent
+				name="steady"
+				colorMap="gfx/events/winterevent2025/iceloon/winterevent2025_iceloon_v1.png"
+				originX = "-20" originY = "-99" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				/>
+
+			<SpriteRenderComponent name="animation"
+				colorMap="gfx/events/winterevent2025/iceloon/anim/winterevent2025_iceloon_v1_.swf"
+				originX = "-20" originY = "-99" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				preload="false" />			
+			
+			<ShadowMapComponent 
+				colorMap="gfx/events/winterevent2025/iceloon/winterevent2025_iceloon_s_v1.png"
+				originX = "-34" originY = "-116" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				/>
+		</ViewComponent>
+		
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="balloon" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+	</Asset>		
+
+	<!-- Winter 2025 - Plane 05 Medium Crytal Phoenix -->
+	
+	<Asset name="winterevent2025_plane05" type="plane">
+
+		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="30">
+			<SpriteRenderComponent
+				colorMap="gfx/events/winterevent2025/plane05/winterevent2025_plane05_v0.png"
+				originX = "-96" originY = "-60" isoWidth = "60" isoLength = "74" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "1"
+				/>
+			<ShadowMapComponent
+				colorMap="gfx/events/winterevent2025/plane05/winterevent2025_plane05_s_v0.png"
+				originX = "-111" originY = "-64" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				boundingBox="false"
+				/>
+		</ViewComponent>
+		
+		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+			<SpriteRenderComponent
+				colorMap="gfx/events/winterevent2025/plane05/winterevent2025_plane05_v1.png"
+				originX = "-79" originY = "-55" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "1"
+				/>
+			<ShadowMapComponent
+				colorMap="gfx/events/winterevent2025/plane05/winterevent2025_plane05_s_v1.png"
+				originX = "-79" originY = "-59" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+				boundingBox="false"
+				/>
+		</ViewComponent>
+
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+	</Asset>	
+	
+	
+	
 	
 </Assets>

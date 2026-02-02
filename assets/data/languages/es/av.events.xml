@@ -270,5 +270,11 @@
   <item name="av.birthdayevent2025.text"><![CDATA[14 años de Skyrama – el rubio es opcional. Los muslos tiemblan, el ritmo vibra y las cartucheras se mueven al compás. Date un chispeante Aerosol Spritz y otros tragos traviesos en esta fiesta de cumpleaños por todo lo alto. ¡Pisa la pista y deslízate directo al placer!]]></item>
   <item name="av.birthdayevent2025.mouseover"><![CDATA[¡Luces fuera, foco encendido! El Saturday Nightflight despega – destino: zona bikini ultrasecreta. ¡Entrada solo con movimiento de caderas!]]></item>
  </category>
+
+ <category name="av.winterevent2025">
+  <item name="av.winterevent2025.title"><![CDATA[Semanas de invierno caliente y frío]]></item>
+  <item name="av.winterevent2025.text"><![CDATA[Nieve en el tejado pero todavía un buen calor en el horno. El momento ideal para subir a tus aviones de vacaciones bien llenos, disfrutar un buen sorbo de vino caliente y devolver un poco de flexibilidad a esos miembros que se han quedado un poco rígidos. El aire está helado, pero tus mejillas arden como si llegara una segunda primavera. Rueda hasta la pista y déjate llevar por una aventura de fuego y hielo que no dejará a nadie frío en la cabina.]]></item>
+  <item name="av.winterevent2025.mouseover"><![CDATA[Mejillas calientes y puntas frescas. Perfecto para pilotos con chispa.]]></item>
+ </category>
   
 </language>

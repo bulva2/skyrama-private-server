@@ -267,5 +267,11 @@
   <item name="av.birthdayevent2025.text"><![CDATA[14 éves a Skyrama – a szőke haj nem kötelező. A combok remegnek, a beat vibrál, és a szeretetfogantyúk ritmusra ringanak. Koccints egy pezsgő Aerosol Spritzre és más pajzán italokra ezen a magasra szárnyaló szülinapi bulin! Gurulj ki a kifutóra – és csússz egyenesen az élvezetbe!]]></item>
   <item name="av.birthdayevent2025.mouseover"><![CDATA[Fények le, reflektor fel! A Saturday Nightflight felszáll – célállomás: szigorúan titkos bikini-zóna. Belépés csak csípőrázással!]]></item>
  </category> 
+
+ <category name="av.winterevent2025">
+  <item name="av.winterevent2025.title"><![CDATA[Forró és jeges téli hetek]]></item>
+  <item name="av.winterevent2025.text"><![CDATA[Hó van a tetőn, de a sütőben még mindig kellemes meleg maradt. Tökéletes alkalom beszállni a tele tankolt ünnepi repülőkbe, kortyolni egy jó adag forralt bort és kicsit újra megmozgatni azokat a tagokat amelyek kissé megmerevedtek. A levegő jeges hideg, mégis az arcod úgy ragyog mintha egy második tavasz érkezne. Gurulj a kifutóra és hagyd hogy magával ragadjon egy tűzzel és jéggel teli kaland amely senkit nem hagy hidegen a pilótafülkében.]]></item>
+  <item name="av.winterevent2025.mouseover"><![CDATA[Forró orcák és hűvös végek. Tökéletes azoknak a pilótáknak akikben van egy kis temperamentum.]]></item>
+ </category>
   
 </language>

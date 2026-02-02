@@ -1162,6 +1162,24 @@
   <item name="av.building.summer2025_plane02"><![CDATA[SUN-LRG02]]></item>
   <item name="av.building.summer2025_plane03"><![CDATA[SUN-K1SS]]></item>
   
+  <item name="av.building.halloweenevent2025_loon"><![CDATA[Pumpkin Popper]]></item>
+  <item name="av.building.halloweenevent2025_plane01"><![CDATA[Night Howler]]></item>
+  <item name="av.building.halloweenevent2025_plane02"><![CDATA[WitchWing]]></item>
+  <item name="av.building.halloweenevent2025_cargo"><![CDATA[Ghost Loader]]></item>
+  
+  <item name="av.building.winter2025_background"><![CDATA[Równina ognia i mrozu]]></item>
+  <item name="av.building.winterevent2025_plane01"><![CDATA[Icehammer]]></item>
+  <item name="av.building.winterevent2025_plane02"><![CDATA[Inferno Liner]]></item>
+  <item name="av.building.winterevent2025_plane03"><![CDATA[Blaze Runner]]></item>
+  <item name="av.building.winterevent2025_plane04"><![CDATA[Frostfire Colossus]]></item>
+  <item name="av.building.winterevent2025_icetower"><![CDATA[Crystal Tower]]></item>
+  <item name="av.building.winterevent2025_firetower"><![CDATA[Inferno Tower]]></item>
+  <item name="av.building.winterevent2025_fireicehotel"><![CDATA[Frostfire Inn]]></item>
+  <item name="av.building.winterevent2025_firedeco"><![CDATA[Molten Pillar]]></item>
+  <item name="av.building.winterevent2025_icedeco"><![CDATA[Frozen Pillar]]></item>
+  <item name="av.building.winterevent2025_iceloon"><![CDATA[Chill McDrift]]></item>
+  <item name="av.building.winterevent2025_plane05"><![CDATA[Crystal Phoenix]]></item>  
+  
  </category>
  <category name="av.storeitem">
   <item name="av.storeitem.s_prop1"><![CDATA[Przewozi pasażerów (w ten sposób zarabiasz lotne i PD)]]></item>
@@ -2063,6 +2081,24 @@
   <item name="av.storeitem.summer2025_plane01"><![CDATA[Nakład ograniczony]]></item>
   <item name="av.storeitem.summer2025_plane02"><![CDATA[Nakład ograniczony]]></item>
   <item name="av.storeitem.summer2025_plane03"><![CDATA[Nakład ograniczony]]></item>  
+  
+  <item name="av.storeitem.halloweenevent2025_loon"><![CDATA[Nakład ograniczony]]></item>
+  <item name="av.storeitem.halloweenevent2025_plane01"><![CDATA[Nakład ograniczony]]></item>
+  <item name="av.storeitem.halloweenevent2025_plane02"><![CDATA[Nakład ograniczony]]></item>
+  <item name="av.storeitem.halloweenevent2025_cargo"><![CDATA[Nakład ograniczony]]></item>  
+  
+  <item name="av.storeitem.winter2025_background"><![CDATA[Zapierający dech w piersiach widok]]></item>
+  <item name="av.storeitem.winterevent2025_plane01"><![CDATA[Nakład ograniczony]]></item>
+  <item name="av.storeitem.winterevent2025_plane02"><![CDATA[Nakład ograniczony]]></item>
+  <item name="av.storeitem.winterevent2025_plane03"><![CDATA[Nakład ograniczony]]></item>
+  <item name="av.storeitem.winterevent2025_plane04"><![CDATA[Nakład ograniczony]]></item>
+  <item name="av.storeitem.winterevent2025_icetower"><![CDATA[Dodaje {number} pasażerów co {minutes}minut(y)]]></item>
+  <item name="av.storeitem.winterevent2025_firetower"><![CDATA[Dodaje {number} pasażerów co {minutes}minut(y)]]></item>
+  <item name="av.storeitem.winterevent2025_fireicehotel"><![CDATA[Dodaje {number} pasażerów co {minutes}minut(y)]]></item>
+  <item name="av.storeitem.winterevent2025_firedeco"><![CDATA[Pasażerowie: + {number}Zasięg: {radius}]]></item>
+  <item name="av.storeitem.winterevent2025_icedeco"><![CDATA[Czas odprawy: - {number}% Zasięg: {radius}]]></item>
+  <item name="av.storeitem.winterevent2025_iceloon"><![CDATA[Nakład ograniczony]]></item>
+  <item name="av.storeitem.winterevent2025_plane05"><![CDATA[Nakład ograniczony]]></item>  
   
  </category>
 </language>

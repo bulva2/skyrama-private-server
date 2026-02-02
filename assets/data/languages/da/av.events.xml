@@ -269,5 +269,11 @@
   <item name="av.birthdayevent2025.text"><![CDATA[14 år med Skyrama – blondt hår er valgfrit. Lårene sitrer, beaten vibrerer, og kærlighedshåndtagene gynger i takt. Forkæl dig selv med en boblende Aerosol Spritz og andre frække drinks til den luftige fødselsdagsfest. Ud på landingsbanen – og glid direkte ind i nydelsen!]]></item>
   <item name="av.birthdayevent2025.mouseover"><![CDATA[Lysene slukket, spotlyset tændt! Saturday Nightflight letter – destination: tophemmelig bikinizone. Adgang kun med hoftevrik!]]></item>
  </category> 
+
+ <category name="av.winterevent2025">
+  <item name="av.winterevent2025.title"><![CDATA[Vinteruger med varme og kulde]]></item>
+  <item name="av.winterevent2025.text"><![CDATA[Sne på taget men stadig dejlig varme i ovnen. Det perfekte tidspunkt til at hoppe ombord på de fuldt tankede feriefly, tage en god slurk gløgg og få de lidt stive lemmer gjort smidige igen. Luften er iskold, men dine kinder gløder som i et andet forår. Rul ud på banen og lad dig suge ind i et eventyr af ild og is, som bestemt ikke efterlader nogen kolde i cockpittet.]]></item>
+  <item name="av.winterevent2025.mouseover"><![CDATA[Varme kinder og kølige spidser. Perfekt til piloter med temperament.]]></item>
+ </category>
   
 </language>

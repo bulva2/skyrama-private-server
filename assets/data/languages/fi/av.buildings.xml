@@ -1158,7 +1158,25 @@
   
   <item name="av.building.summer2025_plane01"><![CDATA[SUN-LRG01]]></item>
   <item name="av.building.summer2025_plane02"><![CDATA[SUN-LRG02]]></item>
-  <item name="av.building.summer2025_plane03"><![CDATA[SUN-K1SS]]></item>  
+  <item name="av.building.summer2025_plane03"><![CDATA[SUN-K1SS]]></item>
+  
+  <item name="av.building.halloweenevent2025_loon"><![CDATA[Pumpkin Popper]]></item>
+  <item name="av.building.halloweenevent2025_plane01"><![CDATA[Night Howler]]></item>
+  <item name="av.building.halloweenevent2025_plane02"><![CDATA[WitchWing]]></item>
+  <item name="av.building.halloweenevent2025_cargo"><![CDATA[Ghost Loader]]></item>
+  
+  <item name="av.building.winter2025_background"><![CDATA[Tuli ja pakkanen tasanko]]></item>
+  <item name="av.building.winterevent2025_plane01"><![CDATA[Icehammer]]></item>
+  <item name="av.building.winterevent2025_plane02"><![CDATA[Inferno Liner]]></item>
+  <item name="av.building.winterevent2025_plane03"><![CDATA[Blaze Runner]]></item>
+  <item name="av.building.winterevent2025_plane04"><![CDATA[Frostfire Colossus]]></item>
+  <item name="av.building.winterevent2025_icetower"><![CDATA[Crystal Tower]]></item>
+  <item name="av.building.winterevent2025_firetower"><![CDATA[Inferno Tower]]></item>
+  <item name="av.building.winterevent2025_fireicehotel"><![CDATA[Frostfire Inn]]></item>
+  <item name="av.building.winterevent2025_firedeco"><![CDATA[Molten Pillar]]></item>
+  <item name="av.building.winterevent2025_icedeco"><![CDATA[Frozen Pillar]]></item>
+  <item name="av.building.winterevent2025_iceloon"><![CDATA[Chill McDrift]]></item>
+  <item name="av.building.winterevent2025_plane05"><![CDATA[Crystal Phoenix]]></item>  
 	 
  </category>
  <category name="av.storeitem">
@@ -2060,6 +2078,24 @@
   <item name="av.storeitem.summer2025_plane01"><![CDATA[Rajoitettu versio]]></item>
   <item name="av.storeitem.summer2025_plane02"><![CDATA[Rajoitettu versio]]></item>
   <item name="av.storeitem.summer2025_plane03"><![CDATA[Rajoitettu versio]]></item>  
-  
+
+  <item name="av.storeitem.halloweenevent2025_loon"><![CDATA[Rajoitettu versio]]></item>
+  <item name="av.storeitem.halloweenevent2025_plane01"><![CDATA[Rajoitettu versio]]></item>
+  <item name="av.storeitem.halloweenevent2025_plane02"><![CDATA[Rajoitettu versio]]></item>
+  <item name="av.storeitem.halloweenevent2025_cargo"><![CDATA[Rajoitettu versio]]></item>
+
+  <item name="av.storeitem.winter2025_background"><![CDATA[Hengästyttävä näkymä]]></item>
+  <item name="av.storeitem.winterevent2025_plane01"><![CDATA[Rajoitettu versio]]></item>
+  <item name="av.storeitem.winterevent2025_plane02"><![CDATA[Rajoitettu versio]]></item>
+  <item name="av.storeitem.winterevent2025_plane03"><![CDATA[Rajoitettu versio]]></item>
+  <item name="av.storeitem.winterevent2025_plane04"><![CDATA[Rajoitettu versio]]></item>
+  <item name="av.storeitem.winterevent2025_icetower"><![CDATA[Kerää {number} matkustajaa joka {minutes}. minuutti]]></item>
+  <item name="av.storeitem.winterevent2025_firetower"><![CDATA[Kerää {number} matkustajaa joka {minutes}. minuutti]]></item>
+  <item name="av.storeitem.winterevent2025_fireicehotel"><![CDATA[Kerää {number} matkustajaa joka {minutes}. minuutti]]></item>
+  <item name="av.storeitem.winterevent2025_firedeco"><![CDATA[Matkustajia: + {number} säteellä: {radius}]]></item>
+  <item name="av.storeitem.winterevent2025_icedeco"><![CDATA[Palveluaika: - {number}% säteellä: {radius}]]></item>
+  <item name="av.storeitem.winterevent2025_iceloon"><![CDATA[Rajoitettu versio]]></item>
+  <item name="av.storeitem.winterevent2025_plane05"><![CDATA[Rajoitettu versio]]></item>  
+ 
  </category>
 </language>

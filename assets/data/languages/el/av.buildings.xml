@@ -1158,7 +1158,25 @@
   
   <item name="av.building.summer2025_plane01"><![CDATA[SUN-LRG01]]></item>
   <item name="av.building.summer2025_plane02"><![CDATA[SUN-LRG02]]></item>
-  <item name="av.building.summer2025_plane03"><![CDATA[SUN-K1SS]]></item>   
+  <item name="av.building.summer2025_plane03"><![CDATA[SUN-K1SS]]></item>
+  
+  <item name="av.building.halloweenevent2025_loon"><![CDATA[Pumpkin Popper]]></item>
+  <item name="av.building.halloweenevent2025_plane01"><![CDATA[Night Howler]]></item>
+  <item name="av.building.halloweenevent2025_plane02"><![CDATA[WitchWing]]></item>
+  <item name="av.building.halloweenevent2025_cargo"><![CDATA[Ghost Loader]]></item>
+  
+  <item name="av.building.winter2025_background"><![CDATA[Πεδιάδα φωτιάς και πάγου]]></item>
+  <item name="av.building.winterevent2025_plane01"><![CDATA[Icehammer]]></item>
+  <item name="av.building.winterevent2025_plane02"><![CDATA[Inferno Liner]]></item>
+  <item name="av.building.winterevent2025_plane03"><![CDATA[Blaze Runner]]></item>
+  <item name="av.building.winterevent2025_plane04"><![CDATA[Frostfire Colossus]]></item>
+  <item name="av.building.winterevent2025_icetower"><![CDATA[Crystal Tower]]></item>
+  <item name="av.building.winterevent2025_firetower"><![CDATA[Inferno Tower]]></item>
+  <item name="av.building.winterevent2025_fireicehotel"><![CDATA[Frostfire Inn]]></item>
+  <item name="av.building.winterevent2025_firedeco"><![CDATA[Molten Pillar]]></item>
+  <item name="av.building.winterevent2025_icedeco"><![CDATA[Frozen Pillar]]></item>
+  <item name="av.building.winterevent2025_iceloon"><![CDATA[Chill McDrift]]></item>
+  <item name="av.building.winterevent2025_plane05"><![CDATA[Crystal Phoenix]]></item>  
 	 
  </category>
 
@@ -2060,7 +2078,25 @@
   
   <item name="av.storeitem.summer2025_plane01"><![CDATA[Περιορισμένη έκδοση]]></item>
   <item name="av.storeitem.summer2025_plane02"><![CDATA[Περιορισμένη έκδοση]]></item>
-  <item name="av.storeitem.summer2025_plane03"><![CDATA[Περιορισμένη έκδοση]]></item>   
+  <item name="av.storeitem.summer2025_plane03"><![CDATA[Περιορισμένη έκδοση]]></item>
+  
+  <item name="av.storeitem.halloweenevent2025_loon"><![CDATA[Περιορισμένη έκδοση]]></item>
+  <item name="av.storeitem.halloweenevent2025_plane01"><![CDATA[Περιορισμένη έκδοση]]></item>
+  <item name="av.storeitem.halloweenevent2025_plane02"><![CDATA[Περιορισμένη έκδοση]]></item>
+  <item name="av.storeitem.halloweenevent2025_cargo"><![CDATA[Περιορισμένη έκδοση]]></item>
+  
+  <item name="av.storeitem.winter2025_background"><![CDATA[Θέα που σου κόβει την ανάσα]]></item>
+  <item name="av.storeitem.winterevent2025_plane01"><![CDATA[Περιορισμένη έκδοση]]></item>
+  <item name="av.storeitem.winterevent2025_plane02"><![CDATA[Περιορισμένη έκδοση]]></item>
+  <item name="av.storeitem.winterevent2025_plane03"><![CDATA[Περιορισμένη έκδοση]]></item>
+  <item name="av.storeitem.winterevent2025_plane04"><![CDATA[Περιορισμένη έκδοση]]></item>
+  <item name="av.storeitem.winterevent2025_icetower"><![CDATA[Συγκεντρώνει {number} επιβάτη(ες) κάθε {minutes} λεπτό(α)]]></item>
+  <item name="av.storeitem.winterevent2025_firetower"><![CDATA[Συγκεντρώνει {number} επιβάτη(ες) κάθε {minutes} λεπτό(α)]]></item>
+  <item name="av.storeitem.winterevent2025_fireicehotel"><![CDATA[Συγκεντρώνει {number} επιβάτη(ες) κάθε {minutes} λεπτό(α)]]></item>
+  <item name="av.storeitem.winterevent2025_firedeco"><![CDATA[Επιβάτες: + {number} Ακτίνα: {radius}]]></item>
+  <item name="av.storeitem.winterevent2025_icedeco"><![CDATA[Χρόνος εξυπηρέτησης: - {number}% Ακτίνα: {radius}]]></item>
+  <item name="av.storeitem.winterevent2025_iceloon"><![CDATA[Περιορισμένη έκδοση]]></item>  
+  <item name="av.storeitem.winterevent2025_plane05"><![CDATA[Περιορισμένη έκδοση]]></item>
   
  </category>
 </language>

@@ -268,4 +268,10 @@
   <item name="av.birthdayevent2025.mouseover"><![CDATA[Licht aus, Spot an! Der Saturday Nightflight hebt ab – Ziel: streng geheime Bikini-Zone. Zutritt nur mit Hüftschwung!]]></item>
  </category>
 
+ <category name="av.winterevent2025">
+  <item name="av.winterevent2025.title"><![CDATA[Heißkalte Winterwochen]]></item>
+  <item name="av.winterevent2025.text"><![CDATA[Schnee auf dem Dach, aber noch Glut im Ofen? Genau die richtige Zeit, um in die vollgetankten Ferienflieger zu steigen, einen guten Schluck Glühwein zu süppeln und die steifen Glieder wieder geschmeidig zu bekommen. Die Luft ist frostig, doch deine Wangen glühen wie im zweiten Frühling. Roll auf die Bahn und lass dich hineinziehen in ein Abenteuer aus Feuer und Eis, das garantiert niemanden im Cockpit kalt lässt.]]></item>
+  <item name="av.winterevent2025.mouseover"><![CDATA[Heiße Wangen, kühle Spitzen. Perfekt für Piloten mit Temperament.]]></item>
+ </category>
+  
 </language>

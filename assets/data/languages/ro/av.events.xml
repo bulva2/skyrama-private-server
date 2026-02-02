@@ -267,5 +267,11 @@
   <item name="av.birthdayevent2025.text"><![CDATA[Skyrama împlinește 14 ani – părul blond este opțional. Coapsele tremură, beat-ul vibrează, iar colăceii se leagănă pe ritm. Răsfață-te cu un spumos Aerosol Spritz și alte băuturi năstrușnice la această petrecere aniversară la înălțime. Pe pista de decolare – și alunecă direct spre plăcere!]]></item>
   <item name="av.birthdayevent2025.mouseover"><![CDATA[Luminile se sting, reflectorul se aprinde! Saturday Nightflight decolează – destinație: zonă de bikini strict secretă. Accesul se face doar cu mișcări senzuale din șolduri!]]></item>
  </category> 
+
+ <category name="av.winterevent2025">
+  <item name="av.winterevent2025.title"><![CDATA[Săptămâni de iarnă fierbinți și reci]]></item>
+  <item name="av.winterevent2025.text"><![CDATA[Zăpadă pe acoperiș, dar încă o căldură plăcută în cuptor. Momentul perfect să urci în avioanele de vacanță deja pline, să iei o gură bună de vin fiert și să readuci puțină flexibilitate în acele membre care s au înțepenit puțin. Aerul este înghețat, dar obrajii tăi ard ca într o a doua primăvară. Rulează spre pistă și lasă te atras într o aventură de foc și gheață care nu va lăsa pe nimeni din cockpit indiferent.]]></item>
+  <item name="av.winterevent2025.mouseover"><![CDATA[Obraji fierbinți și vârfuri reci. Perfect pentru piloții cu temperament.]]></item>
+ </category>
  
 </language>
