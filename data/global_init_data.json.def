@@ -51485,6 +51485,42 @@
         "obj_type_id": -1
       },
       {
+        "air_cash_cost": 115,
+        "air_coins_cost": null,
+        "event_currency_cost": null,
+        "event_material_cost": null,
+        "event_material_drop": null,
+        "basket": null,
+        "required_level": 0,
+        "amount": 96,
+        "name": "allyoucanquickservice",
+        "obj_type_id": -1
+      },
+      {
+        "air_cash_cost": 10,
+        "air_coins_cost": null,
+        "event_currency_cost": null,
+        "event_material_cost": null,
+        "event_material_drop": null,
+        "basket": null,
+        "required_level": 0,
+        "amount": 10,
+        "name": "eventcurrency",
+        "obj_type_id": -1
+      },
+      {
+        "air_cash_cost": 40,
+        "air_coins_cost": null,
+        "event_currency_cost": null,
+        "event_material_cost": null,
+        "event_material_drop": null,
+        "basket": null,
+        "required_level": 0,
+        "amount": 50,
+        "name": "eventcurrency_2",
+        "obj_type_id": -1
+      },
+      {
         "air_cash_cost": 1,
         "air_coins_cost": null,
         "event_currency_cost": null,
