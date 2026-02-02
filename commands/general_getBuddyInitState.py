@@ -1,23 +1,11 @@
 import time
-import src.userManager as userManager
+import src.user_manager as user_manager
 
 def handle_getBuddyInitState(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
     rpcResult["t"] = int(time.time())
 
-    '''
-    p = Path(__file__).parents[1]  
-
-    for file in os.listdir(os.path.join(p, "data")):
-      if file[0:8] == str(request["p"]):
-        break
-    f = open(os.path.join(p, "data", file), "r")
-    json2_data = json.loads(str(f.read()))
-    f.close()
-
-    '''
-
-    json2_data = userManager.load_save_by_id(request["p"])
+    json2_data = user_manager.load_save_by_id(request["p"])
 
     buddy_data = {}
     buddy_data["hangars"] = json2_data["hangars"]

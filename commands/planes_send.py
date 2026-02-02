@@ -1,7 +1,7 @@
 import logging
 import random
 import time
-import src.userManager as userManager
+import src.user_manager as user_manager
 from src.debug import send_webhook
 
 def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
@@ -98,8 +98,10 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
                                 event_currency_chance = 0.15
                             elif flight_time_hours >= 4:
                                 event_currency_chance = 0.10
+                            elif flight_time_hours >= 2:
+                                event_currency_chance = 0.05
                             else:
-                                event_currency_chance = 0.05  # 5% for shorter flights than 4hrs so ppl don't abuse it to farm event currency
+                                event_currency_chance = 0.01  # 5% for shorter flights than 4hrs so ppl don't abuse it to farm event currency
 
                             # Let's go gambling! (Event currency drop)
                             if random.random() < event_currency_chance:
@@ -117,7 +119,7 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
                     json_data["playerData"]["air_cash"] = int(json_data["playerData"]["air_cash"]) - int(quick_start_coins_cost)
 
             if int(plane["to_player_id"]) != 800:  # ID 800 = NPC player
-                json2_data = userManager.load_save_by_id(plane["to_player_id"])
+                json2_data = user_manager.load_save_by_id(plane["to_player_id"])
 
                 if json2_data == -1 or not isinstance(json2_data, dict):
                     logging.error(
@@ -136,6 +138,6 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
                     json2_data["planes"].append(copy)
                     json2_data["playerData"]["next_object_id"] = last_id + 1
 
-                    userManager.modify_save_by_id(json2_data["playerData"]["account_id"], json2_data)
+                    user_manager.modify_save_by_id(json2_data["playerData"]["account_id"], json2_data)
 
             rpcResult["r"]["planes"][str(request["p"]["id"])] = plane

@@ -16,22 +16,63 @@ def handle_getInitState(request, user_id, rpcResult, items_to_add_to_obj, json_d
     # Store session time
     json_data["playerData"]["session_start_time"] = int(time.time())
 
-    # Make CashCow appear on the radar
-    if request["t"] > int(json_data["planes"][0]["arrival_time"]):
-        # To-do: Restart tutorial if not completed.
-        for i in json_data["planes"]:
-            if int(i["id"]) == 0:
-                i["departure_time"] = request["t"] - 450
-                i["arrival_time"] = request["t"] + 450
-                i["flight_status"] = 77 # in air
-                i["start_service_time"] = 0
-                i["last_state_change_time"] = request["t"]
-                i["player_id"] = 0 # cashcow id = 0
-                i["subcontainer_id"] = -1
-                i["container_id"] = -1
-                i["to_player_id"] = user_id
-                i["instantland"] = 0
-                break
+    # CashCow logic
+
+    # Find CashCow plane in user's planes
+    cashcow = None
+    for plane in json_data["planes"]:
+        if int(plane["id"]) == 0:
+            cashcow = plane
+            break
+    
+    # Recreate CashCow if it doesn't exist for whatever reason
+    if cashcow is None:
+        cashcow = {
+            "souvenir_types_id": -1,
+            "active_count": 1,
+            "id": 0,
+            "plane_type_id": 37,
+            "container_id": -1,
+            "subcontainer_id": -1,
+            "to_player_id": user_id,
+            "departure_time": request["t"] - 450,
+            "arrival_time": request["t"] + 450,
+            "kerosene_boost_flag": 0,
+            "flight_status": 77,
+            "buddy_points": 0,
+            "contents_count": 5,
+            "air_coins": 20,
+            "xp": 0,
+            "wares_revenue": 5,
+            "banner_id": -1,
+            "start_service_time": 0,
+            "last_state_change_time": request["t"],
+            "drop_consumable_id": 0,
+            "drop_consumable_amount": 0,
+            "instantland": 0,
+            "player_id": 0,
+            "from_location_id": -1,
+            "from_user_name": "drone",
+            "upgrade_level": 0,
+            "to_location_id": -1,
+            "to_user_name": "",
+            "drop_material": 0,
+            "drop_material_amount": 0
+        }
+        json_data["planes"].insert(0, cashcow)
+
+    # Make CashCow appear on the radar again
+    if request["t"] > int(cashcow["arrival_time"]):
+        cashcow["departure_time"] = request["t"] - 450
+        cashcow["arrival_time"] = request["t"] + 450
+        cashcow["flight_status"] = 77  # in air
+        cashcow["start_service_time"] = 0
+        cashcow["last_state_change_time"] = request["t"]
+        cashcow["player_id"] = 0  # cashcow id = 0
+        cashcow["subcontainer_id"] = -1
+        cashcow["container_id"] = -1
+        cashcow["to_player_id"] = user_id
+        cashcow["instantland"] = 0
 
     # Run buddy.getAll
     run_buddy_checks(request["t"], json_data)

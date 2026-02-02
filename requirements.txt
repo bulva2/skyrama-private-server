@@ -1,6 +1,12 @@
-Flask
+fastapi
+uvicorn[standard]
+gunicorn
+python-multipart
+jinja2
+itsdangerous
 deepmerge
 colorama
 requests
 SQLAlchemy>=2.0.0
 psycopg2-binary
+passlib[bcrypt]
