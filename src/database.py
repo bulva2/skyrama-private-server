@@ -235,7 +235,7 @@ class DatabaseManager:
             pool_size=50,
             max_overflow=50,
             pool_pre_ping=True,
-            echo=True
+            echo=False
         )
         
         self.session_factory = sessionmaker(bind=self.engine)

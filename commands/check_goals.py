@@ -1,4 +1,5 @@
 import logging
+from src.daily_goals import _get_goal_by_id
 from commands.goals import *
 
 available_task_types = {
@@ -171,7 +172,12 @@ def next_quest(quest_seq, init_data, json_data, user_id, items_to_add_to_obj):
     return json_data
 
 def handle_goal(request, user_id, quest_seq, items_to_add_to_obj, json_data, init_data):
-    current_goal = json_data["goals"]["goals"][quest_seq]
+    current_goal = json_data["goals"]["goals"].get(quest_seq)
+    
+    if current_goal is None or "tasks" not in current_goal:
+        logging.error(f"No current goal or tasks found for quest sequence: {quest_seq}, user_id: {user_id}")
+        return
+    
     num_tasks_completed = 0
 
     i = 0
@@ -187,4 +193,21 @@ def handle_goal(request, user_id, quest_seq, items_to_add_to_obj, json_data, ini
         
     if num_tasks_completed == len(json_data["goals"]["goals"][quest_seq]["tasks"]):
         # QUEST COMPLETED, GIVE REWARDS AND START NEW QUEST
+        if quest_seq == "daily":
+            if not json_data["goals"].get("daily_reward_given", False):
+                daily_goal = json_data["goals"]["goals"]["daily"]
+                goal_types_id = daily_goal.get("goal_types_id")
+                goal_def = _get_goal_by_id(goal_types_id)
+                if goal_def:
+                    json_data["playerData"]["air_coins"] += goal_def.get("reward_air_coins", 0)
+                    json_data["playerData"]["air_cash"] += goal_def.get("reward_air_cash", 0)
+                    json_data["playerData"]["xp"] += goal_def.get("reward_xp", 0)
+                    json_data["playerData"]["passengers"] += goal_def.get("reward_passengers", 0)
+                    type_id = goal_def.get("reward_obj_type_id", -1)
+                    type = goal_def.get("reward_obj_type", None)
+                    if type_id != -1 and type:
+                        json_data = give_reward(json_data, init_data, user_id, type_id, type, items_to_add_to_obj)
+                    # reward_cargo_capacity_upgrade (TODO: implement if needed)
+                    json_data["goals"]["daily_reward_given"] = True
+            return
         json_data = next_quest(quest_seq, init_data, json_data, user_id, items_to_add_to_obj)

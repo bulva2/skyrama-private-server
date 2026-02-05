@@ -2,6 +2,7 @@ import os
 import json
 import random
 import logging
+from datetime import datetime
 from typing import Dict
 from sqlalchemy import func
 from sqlalchemy.exc import SQLAlchemyError
@@ -207,7 +208,7 @@ def load_save_by_name(username: str) -> dict | int:
             
             json_data = _player_to_dict(player)
             if CACHE_ENABLED:
-                __player_cache[player.user_id] = json_data
+                __player_cache[player.user_id] = json_data # type: ignore (pylance)
             return json_data
             
     except SQLAlchemyError as e:
@@ -238,12 +239,12 @@ def load_save_by_id(user_id: int) -> dict | int:
         return -1
 
 
-def modify_save_by_id(user_id: int, json_data: dict) -> None:
+def modify_save_by_id(user_id: int, json_data: dict, set_last_login: bool = False) -> None:
     try:
         user_id = int(user_id)
+        
         with db_session_scope() as session:
             player = session.query(Player).filter_by(user_id=user_id).first()
-            
             if not player:
                 logging.error(f"Cannot modify non-existent user {user_id}")
                 return
@@ -251,13 +252,13 @@ def modify_save_by_id(user_id: int, json_data: dict) -> None:
             # Update player object directly from JSON
             _update_player_from_dict(player, json_data, session)
             
-            # Update cache (if enabled)
+            if set_last_login:
+                player.last_login = datetime.now() # type: ignore (pylance)
+
             if CACHE_ENABLED:
                 __player_cache[user_id] = json_data
-            
             # Commit happens automatically via context manager
             logging.debug(f"Updated user {user_id}")
-            
     except SQLAlchemyError as e:
         logging.error(f"Failed to modify user {user_id}: {e}")
         raise
@@ -282,7 +283,7 @@ def search_users_by_name(pattern: str) -> list[tuple[int, str]]:
         with db_session_scope() as session:
             return session.query(Player.user_id, Player.username)\
                           .filter(func.lower(Player.username).like(f"{pattern.lower()}%"))\
-                          .limit(10).all()
+                          .limit(10).all() # type: ignore (pylance)
     except SQLAlchemyError:
         return []
 
@@ -326,7 +327,7 @@ def create_new_account(username: str, password: str, token: str) -> int:
             _update_player_from_dict(new_player, json_data, session)
             
         logging.info(f"Created new account: {username} (ID: {uid})")
-        return uid
+        return uid # type: ignore (pylance)
         
     except SQLAlchemyError as e:
         logging.error(f"Failed to create account {username}: {e}")

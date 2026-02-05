@@ -1,6 +1,7 @@
 import time
 from commands.buddy_getAll import run_buddy_checks
-from deepmerge import Merger
+from src.daily_goals import handle_daily_goals
+from deepmerge.merger import Merger
 from copy import deepcopy
 
 def handle_getInitState(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
@@ -87,6 +88,8 @@ def handle_getInitState(request, user_id, rpcResult, items_to_add_to_obj, json_d
         if time_remaining <= 0:
             process_data["finished"] = True
 
+    daily_goal_def = handle_daily_goals(json_data)
+
     merger = Merger(
         [(dict, ["merge"]), (list, ["override"]), (set, ["override"])],
         ["override"],
@@ -95,6 +98,9 @@ def handle_getInitState(request, user_id, rpcResult, items_to_add_to_obj, json_d
 
     rpcResult["r"] = deepcopy(json_data)
     merger.merge(rpcResult["r"], init_data) # Deepmerge both global init and personal user init.
+
+    if daily_goal_def is not None:
+        rpcResult["r"]["dailyGoalType"] = daily_goal_def
 
     # Don't send password and token to the game
     # To-do when switching to an acutal database: don't store password between the game data!!!!!!!

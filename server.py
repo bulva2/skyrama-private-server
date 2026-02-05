@@ -280,9 +280,9 @@ async def login(request: Request, username: str = Form(...), password: str = For
     elif json_data["playerData"]["password"] == pwd_hash:
         json_data["playerData"]["token"] = str(uuid.uuid1())
         user_id = json_data["playerData"]["account_id"]
-        
-        user_manager.modify_save_by_id(user_id, json_data)
-        
+
+        user_manager.modify_save_by_id(user_id, json_data, set_last_login=True)
+
         session["username"] = username
         session["userid"] = user_id
         session["token"] = json_data["playerData"]["token"]
@@ -447,6 +447,7 @@ async def handle_request(
                     
                     handle_goal(command, userId, "main", items_to_add_to_obj, json_data, init_data)
                     handle_goal(command, userId, "pilot", items_to_add_to_obj, json_data, init_data)
+                    handle_goal(command, userId, "daily", items_to_add_to_obj, json_data, init_data)
                     
                     total_items_to_add_to_obj += items_to_add_to_obj
                 else:
