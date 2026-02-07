@@ -1,6 +1,7 @@
 import time
 from commands.buddy_getAll import run_buddy_checks
 from src.daily_goals import handle_daily_goals
+from src.easy_events import get_all_easy_events
 from deepmerge.merger import Merger
 from copy import deepcopy
 
@@ -101,6 +102,8 @@ def handle_getInitState(request, user_id, rpcResult, items_to_add_to_obj, json_d
 
     if daily_goal_def is not None:
         rpcResult["r"]["dailyGoalType"] = daily_goal_def
+
+    rpcResult["r"]["global_events"] = get_all_easy_events()
 
     # Don't send password and token to the game
     # To-do when switching to an acutal database: don't store password between the game data!!!!!!!

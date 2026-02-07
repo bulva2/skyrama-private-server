@@ -1,5 +1,7 @@
+import math
 import time
 import logging
+from src.easy_events import get_coin_multiplier, get_xp_multiplier
 
 def calculate_warehouse_capacity(upgrade_level, init_data):
     start_amount = int(init_data["cargoUpgrades"][0]["increment"])
@@ -81,10 +83,10 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                     quick_buddy_serve_coins_cost = g["quick_buddy_serve_coins_cost"]
                     #####################################################################################
                     if "air_coins" in request["p"]:
-                        json_data["playerData"]["air_coins"] = json_data["playerData"]["air_coins"] + request["p"]["air_coins"]
+                        json_data["playerData"]["air_coins"] += math.floor(request["p"]["air_coins"] * get_coin_multiplier())
                     #####################################################################################
                     elif "xp" in request["p"]:
-                        json_data["playerData"]["xp"] = json_data["playerData"]["xp"] + request["p"]["xp"]
+                        json_data["playerData"]["xp"] += math.floor(request["p"]["xp"] * get_xp_multiplier())
                     #####################################################################################
                     elif "buddy_points" in request["p"]:
                         for h in json_data["buddyStuff"]["buddies"]:
