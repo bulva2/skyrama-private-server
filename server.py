@@ -35,7 +35,6 @@ obj_data = {}
 langstrings = {}
 ADMINS = []
 server_ip = ""
-assets_ip = ""
 
 # Request Locking to prevent race conditions
 _user_locks = {}
@@ -47,7 +46,7 @@ def get_user_lock(user_id: int) -> asyncio.Lock:
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    global init_data, obj_data, langstrings, ADMINS, server_ip, assets_ip
+    global init_data, obj_data, langstrings, ADMINS, server_ip
     logging.info("Loading the server, please wait..")
     
     # Init DB
@@ -79,10 +78,8 @@ async def lifespan(app: FastAPI):
     use_https = config.getboolean("ServerSettings", "use_https", fallback=False)
     protocol = "https" if use_https else "http"
     server_ip = f"{protocol}://{host}:{port}"
-    assets_ip = server_ip
 
     logging.info(f"Server initialized on {server_ip}")
-    
     yield
     
     # Shutdown logic
@@ -237,7 +234,6 @@ async def play(request: Request, locale: str = None):
         "token": session["token"],
         "lang": lang,
         "SERVERIP": server_ip,
-        "ASSETSIP": assets_ip,
         "langstrings": langstrings.get(lang, {})
     })
 
@@ -254,7 +250,6 @@ async def homepage(request: Request, locale: str = None):
     return templates.TemplateResponse("home.html", {
         "request": request,
         "SERVERIP": server_ip,
-        "ASSETSIP": assets_ip,
         "playerCount": user_manager.get_player_count(),
         "langstrings": langstrings.get(lang, {}),
         "lang": lang,
@@ -293,7 +288,6 @@ async def login(request: Request, username: str = Form(...), password: str = For
     return templates.TemplateResponse("home.html", {
         "request": request,
         "SERVERIP": server_ip,
-        "ASSETSIP": assets_ip,
         "playerCount": user_manager.get_player_count(),
         "langstrings": langstrings.get(lang, {}),
         "lang": lang,
@@ -328,7 +322,6 @@ async def register(request: Request, RegUsername: str = Form(...), RegPassword: 
     return templates.TemplateResponse("home.html", {
         "request": request,
         "SERVERIP": server_ip,
-        "ASSETSIP": assets_ip,
         "playerCount": user_manager.get_player_count(),
         "langstrings": langstrings.get(lang, {}),
         "lang": lang,
@@ -390,7 +383,6 @@ async def logout(request: Request, locale: str = None):
         "lang": lang,
         "langUpper": langUpper,
         "langstrings": langstrings.get(lang, {}),
-        "ASSETSIP": assets_ip,
         "playerCount": user_manager.get_player_count()
     })
 

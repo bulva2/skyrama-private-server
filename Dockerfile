@@ -14,4 +14,4 @@ COPY . .
 
 EXPOSE 3800
 
-CMD ["gunicorn", "server:app", "--workers", "4", "--worker-class", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:3800"]
+CMD ["sh", "-c", "python setup_database.py && gunicorn server:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:3800"]

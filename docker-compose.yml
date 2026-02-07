@@ -1,33 +1,52 @@
-version: '3.8'
-
 services:
-  server:
+  privaterama:
     build: .
-    container_name: skyrama_server
+    container_name: privaterama
     restart: always
-    volumes:
-      - .:/app
-    environment:
-      - PYTHONUNBUFFERED=1
+    expose:
+      - "3800"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     networks:
-      - skyrama-net
+      - app-network
 
   nginx:
-    image: nginx:alpine
-    container_name: skyrama_nginx
+    image: nginx:latest
+    container_name: nginx
     restart: always
     ports:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf:ro
       - .:/app:ro
-      - /etc/letsencrypt:/etc/letsencrypt:ro
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - ./webroot:/var/www/certbot
     depends_on:
-      - server
+      - privaterama
     networks:
-      - skyrama-net
+      - app-network
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - ./webroot:/var/www/certbot
+    entrypoint: >
+      /bin/sh -c "certbot certonly --webroot -w /var/www/certbot 
+      --staging --email YOUR-EMAIL-HERE -d YOUR-DOMAIN-HERE
+      --agree-tos --no-eff-email --non-interactive;
+      trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;"
+    networks:
+      - app-network
 
 networks:
-  skyrama-net:
+  app-network:
     driver: bridge
+
+volumes:
+  certbot-etc:
+  certbot-var:

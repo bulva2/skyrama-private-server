@@ -1,395 +1,444 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Skyrama - Private Server</title>
+    <meta name="language" content="{{lang}}" />
+    <meta charset="UTF-8">
+
+    <link href="templates/styles/bgc-1.2.0.min.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="assets/favicon.ico"/>
+    <link rel="icon" href="assets/favicon.ico"/>
+
+    <script src="assets/js/jquery-1.7.1.min.js"></script>
+    <script src="assets/js/swfobject.js"></script>
+    <script src="assets/js/skyrama.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" charset="UTF-8"></script>
+    <script src="templates/styles/bgc-1.2.0.min.js" charset="UTF-8"></script>
+    <script src="https://www.google.com/recaptcha/api.js" charset="UTF-8"></script>
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-        <title>Skyrama | Free game fun in an airport manager game</title>
-    <meta name="description" content="{{langstrings['av.website.seo.description']}}" />
-    <meta name="keywords" content="SkyRama, Sky Rama, online airport game, airport game" />
-        <meta name="language" content="{{lang}}" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="author" content="Bigpoint GmbH" />
-    <meta name="publisher" content="Bigpoint GmbH" />
-    <meta name="company" content="Bigpoint GmbH" />
-        <link rel="canonical" href="//www.skyrama.co.uk/" />
-        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-info" />
-    <link rel="icon" href="assets/favicon.ico" type="image/x-info" />
-    <script type="text/javascript" src="{{ASSETSIP}}/assets/js/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="{{ASSETSIP}}/assets/js/swfobject.js"></script>
-    <script type="text/javascript" src="{{ASSETSIP}}/assets/js/skyrama.js"></script>
-        <meta name="google-site-verification" content="-zDFzR8EXkat-FMdkPIhGacr_eeymTTDJ83hlYVx1QQ" />
-    
-    <link href="{{ASSETSIP}}/templates/styles/bgc-1.2.0.min.css" rel="stylesheet" type="text/css" media="screen" />
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" charset="UTF-8"></script>
-<script type="text/javascript" src="{{ASSETSIP}}/templates/styles/bgc-1.2.0.min.js" charset="UTF-8"></script>
-<script type="text/javascript" src="https://www.google.com/recaptcha/api.js" charset="UTF-8"></script>
 
-<script  type="text/javascript">
-    window.RufflePlayer = window.RufflePlayer || {};
-window.RufflePlayer.config = {
-    // Options affecting the whole page
-    "publicPath": undefined,
-    "polyfills": true,
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.RufflePlayer.config = {
+            // Options affecting the whole page
+            "publicPath": undefined,
+            "polyfills": true,
 
-    // Options affecting files only
-    "autoplay": "on",
-    "unmuteOverlay": "hidden",
-    "backgroundColor": null,
-    "wmode": "transparent",
-    "letterbox": "fullscreen",
-    "warnOnUnsupportedContent": false,
-    "contextMenu": false,
-    "showSwfDownload": false,
-    "upgradeToHttps": window.location.protocol === "https:",
-    "maxExecutionDuration": {"secs": 15, "nanos": 0},
-    "logLevel": "error",
-    "base": null,
-    "menu": false,
-    "salign": "",
-    "scale": "showAll",
-    "forceScale": false,
-    "quality": "high",
-    "splashScreen": false,
-};
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.0.2/sha.js"></script>
-<script type="text/javascript">
-    function loginSubmit(obj) {
-          var pwdObj = document.getElementById('password');
-          var hashObj = new jsSHA("SHA-512", "TEXT", {numRounds: 1});
-          hashObj.update(pwdObj.value);
-          var hash = hashObj.getHash("HEX");
-          pwdObj.value = hash;
+            // Options affecting files only
+            "autoplay": "on",
+            "unmuteOverlay": "hidden",
+            "backgroundColor": null,
+            "wmode": "transparent",
+            "letterbox": "fullscreen",
+            "warnOnUnsupportedContent": false,
+            "contextMenu": false,
+            "showSwfDownload": false,
+            "upgradeToHttps": window.location.protocol === "https:",
+            "maxExecutionDuration": { "secs": 15, "nanos": 0 },
+            "logLevel": "error",
+            "base": null,
+            "menu": false,
+            "salign": "",
+            "scale": "showAll",
+            "forceScale": false,
+            "quality": "high",
+            "splashScreen": false,
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.3.1/sha.js"></script>
+    <script>
+        function loginSubmit(obj) {
+            var pwdObj = document.getElementById('password');
+            var hashObj = new jsSHA("SHA-512", "TEXT", { numRounds: 1 });
+            hashObj.update(pwdObj.value);
+            var hash = hashObj.getHash("HEX");
+            pwdObj.value = hash;
 
-          var form = document.getElementById("bgcdw_login_form");
-          form.submit()
-    }
-</script>
-<script type="text/javascript">
-    function regSubmit(obj) {
-          var pwdObj = document.getElementById('RegPassword');
-          var hashObj = new jsSHA("SHA-512", "TEXT", {numRounds: 1});
-          hashObj.update(pwdObj.value);
-          var hash = hashObj.getHash("HEX");
-          pwdObj.value = hash;
+            var form = document.getElementById("bgcdw_login_form");
+            form.submit()
+        }
+    </script>
+    <script>
+        function regSubmit(obj) {
+            var pwdObj = document.getElementById('RegPassword');
+            var hashObj = new jsSHA("SHA-512", "TEXT", { numRounds: 1 });
+            hashObj.update(pwdObj.value);
+            var hash = hashObj.getHash("HEX");
+            pwdObj.value = hash;
 
-          var form = document.getElementById("bgc_signup_form");
-          form.submit()
-    }
-</script>
+            var form = document.getElementById("bgc_signup_form");
+            form.submit()
+        }
+    </script>
 
-                <link rel="stylesheet" type="text/css" href="{{ASSETSIP}}/assets/landingpage/skyrama.css" />
-    <style type="text/css">
+    <link rel="stylesheet" href="assets/landingpage/skyrama.css" />
+    <style>
         input[type=submit].bgcdw_login_form_login {
-            background: url({{ASSETSIP}}/assets/landingpage/lang/{{lang}}/login.png) top left no-repeat;
+            background: url(assets/landingpage/lang/{{lang}}/login.png) top left no-repeat;
         }
 
         #content {
-            background: url({{ASSETSIP}}/assets/landingpage/lang/{{lang}}/skyrama_landingpage.jpg) top left no-repeat;
+            background: url(assets/landingpage/lang/{{lang}}/skyrama_landingpage.jpg) top left no-repeat;
         }
 
         #bgc_signup_short_container fieldset.bgc_signup_form_buttons .bgc_signup_form_register {
-            background: url({{ASSETSIP}}/assets/landingpage/lang/{{lang}}/cta.png) top left no-repeat;
+            background: url(assets/landingpage/lang/{{lang}}/cta.png) top left no-repeat;
         }
-
     </style>
-        <meta property="og:type" content="game"/>
-    <meta property="og:title" content="{{langstrings['av.website.seo.title']}}"/>
-    <meta property="og:image" content="{{ASSETSIP}}/assets/landingpage/global/background/logo_fallback.png"/>
-    <meta property="og:url" content="//skyrama.com/"/>
-    <meta property="og:description" content="{{langstrings['av.website.seo.description']}}"/>
-    <meta property="og:site_name" content="Skyrama"/>
+
     <!-- affiliateHeadTag -->
-<script type='text/javascript' language='javascript'>
-            var SemTmLocale   = 'BE';
-            var SemTmAid      = '0';
-            var SemTmAip      = '';
-            var SemTmPpid     = '696';
-            var SemTmCtype    = '0';
-            var SemTmMid      = '';
-            var SemTmCountry  = 'BE';
-            var SemTmPid      = '696';
-            var SemTmUid      = '';
-            var SemTmAit      = '';
-            var gtmLang       = 'en';
-            var gtmRealPayUser = 0;
-            var gtmSSO        = 0;
-            var gtmExternalProvider = '';
-            var gtmCNAME      = 0;
-var lplocaleMEB   = 'BE';
-                var SemTmAreaID   = '';
-                var gtmLoginCount = '';
-                var gtmLayerIds   = [];
-                var gtmRn         = 0;
-                var gtmEv         = 0;
-</script>
+    <script>
+        var SemTmLocale = 'BE';
+        var SemTmAid = '0';
+        var SemTmAip = '';
+        var SemTmPpid = '696';
+        var SemTmCtype = '0';
+        var SemTmMid = '';
+        var SemTmCountry = 'BE';
+        var SemTmPid = '696';
+        var SemTmUid = '';
+        var SemTmAit = '';
+        var gtmLang = 'en';
+        var gtmRealPayUser = 0;
+        var gtmSSO = 0;
+        var gtmExternalProvider = '';
+        var gtmCNAME = 0;
+        var lplocaleMEB = 'BE';
+        var SemTmAreaID = '';
+        var gtmLoginCount = '';
+        var gtmLayerIds = [];
+        var gtmRn = 0;
+        var gtmEv = 0;
+    </script>
 
 <body class="externalHome">
+    <form id="bgc_sasform_config">
+        <input type="hidden" name="placeholder" value="login">
+        <input type="hidden" name="hidelabels" value="login">
+        <input type="hidden" name="errors-login" value="inline">
+    </form>
 
-<!-- affiliateStartTag -->
+    <script>
+        jQuery(document).ready(function () {
+            var rememberContainer = jQuery("<div/>");
+            rememberContainer.attr("id", "rememberMeContainer");
+            var rememberField = jQuery("<input/>");
+            rememberField.attr("id", "rememberMe")
+                .attr("type", "checkbox")
+                .attr("name", "rememberMe")
+                .attr("class", "bgcdw_remember_me_checkbox")
+                .attr("value", 0);
+            var rememberFieldLabel = jQuery("<span/>");
+            rememberFieldLabel.attr("id", "rememberMeLabel").html("{{langstrings['av.website.RememberMe']}}");
+            rememberContainer.append(rememberField);
+            rememberContainer.append(rememberFieldLabel);
+            jQuery("form.bgcdw_login_form").append(rememberContainer);
+        });
+    </script>
 
-
-		<form id="bgc_sasform_config">
-		  <input type="hidden" name="placeholder" value="login">
-		  <input type="hidden" name="hidelabels" value="login">
-		  <input type="hidden" name="errors-login" value="inline">
-		</form>
-
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-        var rememberContainer = jQuery("<div/>");
-        rememberContainer.attr("id", "rememberMeContainer");
-        var rememberField = jQuery("<input/>");
-        rememberField.attr("id", "rememberMe")
-                     .attr("type", "checkbox")
-                     .attr("name", "rememberMe")
-                     .attr("class", "bgcdw_remember_me_checkbox")
-                     .attr("value", 0);
-        var rememberFieldLabel = jQuery("<span/>");
-        rememberFieldLabel.attr("id", "rememberMeLabel").html("{{langstrings['av.website.RememberMe']}}");
-        rememberContainer.append(rememberField); 
-        rememberContainer.append(rememberFieldLabel); 
-        jQuery("form.bgcdw_login_form").append(rememberContainer);
-    });
-</script>
-
-        <div id="wrapper">
-
-                        <div id="game-info" class="scrollbar-wrapper">
-               <div class="scrollbar">
-                   <div class="track-top"></div>
-                   <div class="track-bottom"></div>
-                   <div class="track">
-                       <div class="thumb">
-                           <div class="end"></div>
-                       </div>
-                   </div>
-               </div>
-               <div class="viewport">
-                   <div class="overview">
-                            {{langstrings['av.website.seo.seoText.short'] | safe}}
-                            {{langstrings['av.website.seo.text'] | safe}}
+    <div id="wrapper">
+        <div id="game-info" class="scrollbar-wrapper">
+            <div class="scrollbar">
+                <div class="track-top"></div>
+                <div class="track-bottom"></div>
+                <div class="track">
+                    <div class="thumb">
+                        <div class="end"></div>
                     </div>
                 </div>
-            </div> <!-- #game-info --> 
-            
-            <div id="top-bar">
-                <div class="separator one"></div>
-
-                <!-- language selection -->
-                <div id="language-select">
-
-                                        <div id="language-current">
-                        <div id="language-current-selection">
-                            <img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_{{langUpper}}.png" />&nbsp;{{langstrings['av.website.langShort']}}                        </div>
-
-                        <img id="language-current-dropdown-arrow" src="{{ASSETSIP}}/assets/landingpage/global/controls/dropdown_arrow.png"/>
-                    </div>
-
-                    <ul id="language-list">
-                                                <li><a href="/?locale=de"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_DE.png" /></span>&nbsp;Deutsch</a></li>
-                                                <li><a href="/?locale=en"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_EN.png" /></span>&nbsp;English UK</a></li>
-                                                <li><a href="/?locale=us"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_US.png" /></span>&nbsp;English US</a></li>
-                                                <li><a href="/?locale=pl"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_PL.png" /></span>&nbsp;Polski</a></li>
-                                                <li><a href="/?locale=fr"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_FR.png" /></span>&nbsp;Français</a></li>
-                                                <li><a href="/?locale=it"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_IT.png" /></span>&nbsp;Italiano</a></li>
-                                                <li><a href="/?locale=ru"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_RU.png" /></span>&nbsp;Pyccĸий</a></li>
-                                                <li><a href="/?locale=sv"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_SV.png" /></span>&nbsp;Svenska</a></li>
-                                                <li><a href="/?locale=es"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_ES.png" /></span>&nbsp;Español</a></li>
-                                                <li><a href="/?locale=cs"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_CS.png" /></span>&nbsp;Čeština</a></li>
-                                                <li><a href="/?locale=tr"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_TR.png" /></span>&nbsp;Tϋrkçe</a></li>
-                                                <li><a href="/?locale=fi"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_FI.png" /></span>&nbsp;Suomi</a></li>
-                                                <li><a href="/?locale=nl"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_NL.png" /></span>&nbsp;Nederlands</a></li>
-                                                <li><a href="/?locale=pt"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_PT.png" /></span>&nbsp;Português</a></li>
-                                                <li><a href="/?locale=da"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_DA.png" /></span>&nbsp;Dansk</a></li>
-                                                <li><a href="/?locale=no"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_NO.png" /></span>&nbsp;Norsk</a></li>
-                                                <li><a href="/?locale=sk"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_SK.png" /></span>&nbsp;Slovensky</a></li>
-                                                <li><a href="/?locale=pt_BR"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_PT_BR.png" /></span>&nbsp;Português</a></li>
-                                                <li><a href="/?locale=el"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_EL.png" /></span>&nbsp;Ελληνικά</a></li>
-                                                <li><a href="/?locale=ro"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_RO.png" /></span>&nbsp;Română</a></li>
-                                                <li><a href="/?locale=bg"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_BG.png" /></span>&nbsp;България</a></li>
-                                                <li><a href="/?locale=hu"><span class="flag"><img src="{{ASSETSIP}}/assets/landingpage/global/flags/flags_HU.png" /></span>&nbsp;Magyar</a></li>
-                                            </ul>
-                </div>
-
-                <div class="separator two"></div>
-                
-                <!-- login form -->
-                <div class="bgcdw_login_container bgc">
-
-    <div class="bgcdw_login_container_form">
-        <form id="bgcdw_login_form" name="bgcdw_login_form" method="POST" class="bgcdw_login_form" action="{{SERVERIP}}/login">
-            <div class="bgcdw_errors_flash"></div>
-            <div class="bgc_error_translations" style="display:none">
-                <div id="bgc.error.username_isTooShort">{{langstrings['bgc.error.username_isTooShort']}}</div>
-                <div id="bgc.error.username_isTooLong">{{langstrings['bgc.error.username_isTooLong']}}</div>
-                <div id="bgc.error.username_notGiven">{{langstrings['bgc.error.username_notGiven']}}</div>
-                <div id="bgc.error.password_isTooShort">{{langstrings['bgc.error.password_isTooShort']}}</div>
-                <div id="bgc.error.password_isTooLong">{{langstrings['bgc.error.password_isTooLong']}}</div>
-                <div id="bgc.error.password_notGiven">{{langstrings['bgc.error.password_notGiven']}}</div>
-                <div id="bgc.error.email_invalidAddress">{{langstrings['bgc.error.email_invalidAddress']}}</div>
-                <div id="bgc.error.email_notGiven">{{langstrings['bgc.error.email_notGiven']}}</div>
             </div>
-            <fieldset class="bgcdw_login_form_login"><div class="bgcdw_input_text bgcdw_login_form_username">
-                    <label for="bgcdw_login_form_username">{{langstrings['av.website.loginFieldUname']}}</label>
-                    <input id="username" name="username" type="text" maxlength="20"></div>
-                <div class="bgcdw_input_password bgcdw_login_form_password">
-                    <label for="bgcdw_login_form_password">{{langstrings['av.website.loginFieldPword']}}</label>
-                    <input id="password" name="password" type="password" maxlength="45"></div>
-            </fieldset>
-            <fieldset class="bgcdw_login_form_buttons"><input class="bgcdw_button bgcdw_login_form_login" type="submit" value="Login" onclick="loginSubmit(this)"><input class="bgcdw_button bgcdw_login_form_register" type="button" onclick="window.location='/?area=externalRegister';return false;" value="Register"></fieldset></form>
-    </div>
-</div>
+            <div class="viewport">
+                <div class="overview">
+                    {{langstrings['av.website.seo.seoText.short'] | safe}}
+                    {{langstrings['av.website.seo.text'] | safe}}
+                </div>
+            </div>
+        </div> <!-- #game-info -->
 
-                <div class="separator three"></div>
+        <div id="top-bar">
+            <div class="separator one"></div>
 
-            </div> <!-- #top-bar -->
+            <!-- language selection -->
+            <div id="language-select">
 
-            <div id="content">
-                <div id="flash-gordon">
-                    <div id="swf-logo" data-w="320" data-h="170">
-                        <img src="{{ASSETSIP}}/assets/landingpage/global/background/logo_fallback.png"/>
+                <div id="language-current">
+                    <div id="language-current-selection">
+                        <img
+                            src="assets/landingpage/global/flags/flags_{{langUpper}}.png" />&nbsp;{{langstrings['av.website.langShort']}}
                     </div>
-                                        <div class="swf" id="swf-top" data-w="840" data-h="300"></div>
-                                    </div>
 
-                <div id="user-registered">{{langstrings["av.website.registered"]}} {{playerCount}}</div>
-
-                <div id="desc-texts">
-                    <div class="desc-text-1">{{langstrings['av.website.desc.1']}}</div>
-                    <div class="desc-text-2">{{langstrings['av.website.desc.2']}}</div>
-                    <div class="desc-text-3">{{langstrings['av.website.desc.3']}}</div>
+                    <img id="language-current-dropdown-arrow"
+                        src="assets/landingpage/global/controls/dropdown_arrow.png" />
                 </div>
 
-                <ul id="link-list">
-                    <li><a target="_blank" href="/GameAPI.php?action=portal.redirectToBoard"></a></li>
-                    <li><a href="#" onclick="$('.tour.1').click()"></a></li>
+                <ul id="language-list">
+                    <li><a href="/?locale=de"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_DE.png" /></span>&nbsp;Deutsch</a></li>
+                    <li><a href="/?locale=en"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_EN.png" /></span>&nbsp;English UK</a>
+                    </li>
+                    <li><a href="/?locale=us"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_US.png" /></span>&nbsp;English US</a>
+                    </li>
+                    <li><a href="/?locale=pl"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_PL.png" /></span>&nbsp;Polski</a></li>
+                    <li><a href="/?locale=fr"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_FR.png" /></span>&nbsp;Français</a></li>
+                    <li><a href="/?locale=it"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_IT.png" /></span>&nbsp;Italiano</a></li>
+                    <li><a href="/?locale=ru"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_RU.png" /></span>&nbsp;Pyccĸий</a></li>
+                    <li><a href="/?locale=sv"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_SV.png" /></span>&nbsp;Svenska</a></li>
+                    <li><a href="/?locale=es"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_ES.png" /></span>&nbsp;Español</a></li>
+                    <li><a href="/?locale=cs"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_CS.png" /></span>&nbsp;Čeština</a></li>
+                    <li><a href="/?locale=tr"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_TR.png" /></span>&nbsp;Tϋrkçe</a></li>
+                    <li><a href="/?locale=fi"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_FI.png" /></span>&nbsp;Suomi</a></li>
+                    <li><a href="/?locale=nl"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_NL.png" /></span>&nbsp;Nederlands</a>
+                    </li>
+                    <li><a href="/?locale=pt"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_PT.png" /></span>&nbsp;Português</a></li>
+                    <li><a href="/?locale=da"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_DA.png" /></span>&nbsp;Dansk</a></li>
+                    <li><a href="/?locale=no"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_NO.png" /></span>&nbsp;Norsk</a></li>
+                    <li><a href="/?locale=sk"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_SK.png" /></span>&nbsp;Slovensky</a></li>
+                    <li><a href="/?locale=pt_BR"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_PT_BR.png" /></span>&nbsp;Português</a>
+                    </li>
+                    <li><a href="/?locale=el"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_EL.png" /></span>&nbsp;Ελληνικά</a></li>
+                    <li><a href="/?locale=ro"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_RO.png" /></span>&nbsp;Română</a></li>
+                    <li><a href="/?locale=bg"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_BG.png" /></span>&nbsp;България</a></li>
+                    <li><a href="/?locale=hu"><span class="flag"><img
+                                    src="assets/landingpage/global/flags/flags_HU.png" /></span>&nbsp;Magyar</a></li>
                 </ul>
-
-                <!-- trailer -->
-                <div id="trailer-trigger"></div>
-
-
-                <!-- screenshots -->
-                <div id="screenshots">
-                    <a id="screen1" class="screenshot" rel="screenshot" href="{{ASSETSIP}}/assets/landingpage/global/screenshots/screenshot_1.jpg">screenshot 1</a>
-                    <a id="screen2" class="screenshot" rel="screenshot" href="{{ASSETSIP}}/assets/landingpage/global/screenshots/screenshot_2.jpg">screenshot 2</a>
-                    <a id="screen3" class="screenshot" rel="screenshot" href="{{ASSETSIP}}/assets/landingpage/global/screenshots/screenshot_3.jpg">screenshot 3</a>
-                </div>
-
-                
-                <div id="bgc_signup_short_container" class="bgc_signup_container bgc">
-    <div class="bgc_signup_container_form">
-        <form id="bgc_signup_form" method="post" name="bgc_signup_form" class="bgc_signup_form" autocomplete="off" action="{{SERVERIP}}/register">
-            <div class="bgc_error_translations" style="display:none">
-                <div id="bgc.error.username_isTooShort">{{langstrings['bgc.error.username_isTooShort']}}</div>
-                <div id="bgc.error.username_isTooLong">{{langstrings['bgc.error.username_isTooLong']}}</div>
-                <div id="bgc.error.username_containsInvalidCharacters">{{langstrings['bgc.error.username_containsInvalidCharacters']}}</div>
-                <div id="bgc.error.username_notGiven">{{langstrings['bgc.error.username_notGiven']}}</div>
-                <div id="bgc.error.password_isTooShort">{{langstrings['bgc.error.password_isTooShort']}}</div>
-                <div id="bgc.error.password_isTooLong">{{langstrings['bgc.error.password_isTooLong']}}</div>
-                <div id="bgc.error.password_containsInvalidCharacters">{{langstrings['bgc.error.password_containsInvalidCharacters']}}</div>
-                <div id="bgc.error.password_repeatDoesNotMatch">{{langstrings['bgc.error.password_repeatDoesNotMatch']}}</div>
-                <div id="bgc.error.password_matchesUsername">{{langstrings['bgc.error.password_matchesUsername']}}</div>
-                <div id="bgc.error.password_notGiven">{{langstrings['bgc.error.password_notGiven']}}</div>
-                <div id="bgc.error.login_invalidCredentials">{{langstrings['bgc.error.login_invalidCredentials']}}</div>
-                <div id="bgc.error.email_invalidAddress">{{langstrings['bgc.error.email_invalidAddress']}}</div>
-                <div id="bgc.error.email_notGiven">{{langstrings['bgc.error.email_notGiven']}}</div>
-                <div id="bgc.error.captcha_incorrect">{{langstrings['bgc.error.captcha_incorrect']}}</div>
-                <div id="bgc.error.termsAndConditions_notAccepted">{{langstrings['bgc.error.termsAndConditions_notAccepted']}}</div>
-                <div id="bgc.error.account_exists">{{langstrings['bgc.error.account_exists']}}</div>
-
             </div>
-            <div class="bgc_password_indicator_translations" style="display:none">
-                <div data-complexity-key="bgc.common.password_indicator.very_low">Very weak</div>
-                <div data-complexity-key="bgc.common.password_indicator.low">Weak</div>
-                <div data-complexity-key="bgc.common.password_indicator.normal">Strong</div>
-                <div data-complexity-key="bgc.common.password_indicator.high">Very strong</div>
-            </div>
-            <fieldset class="bgc_signup_form_signup"><div class="bgc_input_text bgc_signup_form_username">
-                    <label for="bgc_signup_form_username">{{langstrings['av.website.loginFieldUname']}}</label>
-                    <input maxlength="20" minlength="4" id="RegUsername" name="RegUsername" type="text"></div>
-                <div class="bgc_input_password bgc_signup_form_password">
-                    <label for="bgc_signup_form_password">{{langstrings['av.website.loginFieldPword']}}</label>
-                    <input maxlength="45" minlength="4" id="RegPassword" name="RegPassword" type="password"></div>
-                <div class="bgc_password_indicator" id="bgc_signup_form_password_indicator">
-                    <div class="progress_bar">
-                        <div class="progress"></div>
-                    </div>
-                    <div class="status"></div>
+
+            <div class="separator two"></div>
+
+            <!-- login form -->
+            <div class="bgcdw_login_container bgc">
+
+                <div class="bgcdw_login_container_form">
+                    <form id="bgcdw_login_form" name="bgcdw_login_form" method="POST" class="bgcdw_login_form"
+                        action="{{SERVERIP}}/login">
+                        <div class="bgcdw_errors_flash"></div>
+                        <div class="bgc_error_translations" style="display:none">
+                            <div id="bgc.error.username_isTooShort">{{langstrings['bgc.error.username_isTooShort']}}
+                            </div>
+                            <div id="bgc.error.username_isTooLong">{{langstrings['bgc.error.username_isTooLong']}}</div>
+                            <div id="bgc.error.username_notGiven">{{langstrings['bgc.error.username_notGiven']}}</div>
+                            <div id="bgc.error.password_isTooShort">{{langstrings['bgc.error.password_isTooShort']}}
+                            </div>
+                            <div id="bgc.error.password_isTooLong">{{langstrings['bgc.error.password_isTooLong']}}</div>
+                            <div id="bgc.error.password_notGiven">{{langstrings['bgc.error.password_notGiven']}}</div>
+                            <div id="bgc.error.email_invalidAddress">{{langstrings['bgc.error.email_invalidAddress']}}
+                            </div>
+                            <div id="bgc.error.email_notGiven">{{langstrings['bgc.error.email_notGiven']}}</div>
+                        </div>
+                        <fieldset class="bgcdw_login_form_login">
+                            <div class="bgcdw_input_text bgcdw_login_form_username">
+                                <label
+                                    for="bgcdw_login_form_username">{{langstrings['av.website.loginFieldUname']}}</label>
+                                <input id="username" name="username" type="text" maxlength="20">
+                            </div>
+                            <div class="bgcdw_input_password bgcdw_login_form_password">
+                                <label
+                                    for="bgcdw_login_form_password">{{langstrings['av.website.loginFieldPword']}}</label>
+                                <input id="password" name="password" type="password" maxlength="45">
+                            </div>
+                        </fieldset>
+                        <fieldset class="bgcdw_login_form_buttons"><input class="bgcdw_button bgcdw_login_form_login"
+                                type="submit" value="Login" onclick="loginSubmit(this)"><input
+                                class="bgcdw_button bgcdw_login_form_register" type="button"
+                                onclick="window.location='/?area=externalRegister';return false;" value="Register">
+                        </fieldset>
+                    </form>
                 </div>
-                <div class="bgc_input_email bgc_signup_form_email">
-                    <label for="bgc_signup_form_email">{{langstrings['av.website.loginFieldEmail']}}</label>
-                    <input maxlength="260" id="RegEmail" name="RegEmail" type="email"></div>
-                
-            </fieldset>  
-            </fieldset><fieldset class="bgc_signup_form_buttons"><input class="bgc_button bgc_signup_form_back" type="button" onclick="window.location='/';return false;" value="Revert"><input class="bgc_button bgc_signup_form_register" onclick="regSubmit(this)" type="submit" value="Register"></fieldset></form>
-    </div>
-</div>
+            </div>
 
-                <!--gl footer-->
-<div id="gl_footer">
+            <div class="separator three"></div>
+
+        </div> <!-- #top-bar -->
+
+        <div id="content">
+            <div id="flash-gordon">
+                <div id="swf-logo" data-w="320" data-h="170">
+                    <img src="assets/landingpage/global/background/logo_fallback.png" />
+                </div>
+                <div class="swf" id="swf-top" data-w="840" data-h="300"></div>
+            </div>
+
+            <div id="user-registered">{{langstrings["av.website.registered"]}} {{playerCount}}</div>
+
+            <div id="desc-texts">
+                <div class="desc-text-1">{{langstrings['av.website.desc.1']}}</div>
+                <div class="desc-text-2">{{langstrings['av.website.desc.2']}}</div>
+                <div class="desc-text-3">{{langstrings['av.website.desc.3']}}</div>
+            </div>
+
+            <ul id="link-list">
+                <li><a target="_blank" href="/GameAPI.php?action=portal.redirectToBoard"></a></li>
+                <li><a href="#" onclick="$('.tour.1').click()"></a></li>
+            </ul>
+
+            <!-- trailer -->
+            <div id="trailer-trigger"></div>
 
 
-	<span id="gl_footer_element_copyright" class="gl_footer_element">&copy; Bigpoint</span>
+            <!-- screenshots -->
+            <div id="screenshots">
+                <a id="screen1" class="screenshot" rel="screenshot"
+                    href="assets/landingpage/global/screenshots/screenshot_1.jpg">screenshot 1</a>
+                <a id="screen2" class="screenshot" rel="screenshot"
+                    href="assets/landingpage/global/screenshots/screenshot_2.jpg">screenshot 2</a>
+                <a id="screen3" class="screenshot" rel="screenshot"
+                    href="assets/landingpage/global/screenshots/screenshot_3.jpg">screenshot 3</a>
+            </div>
 
-	<span class="gl_footer_element_separator">&nbsp;·&nbsp;</span>
-	<span id="gl_footer_element_allrights" class="gl_footer_element">All rights reserved</span>
 
-	<span class="gl_footer_element_separator">&nbsp;·&nbsp;</span>
-	<span id="gl_footer_element_allrights" class="gl_footer_element">This game is a fan-made game and is in no way affiliated to Bigpoint GmbH.</span>
+            <div id="bgc_signup_short_container" class="bgc_signup_container bgc">
+                <div class="bgc_signup_container_form">
+                    <form id="bgc_signup_form" method="post" name="bgc_signup_form" class="bgc_signup_form"
+                        autocomplete="off" action="{{SERVERIP}}/register">
+                        <div class="bgc_error_translations" style="display:none">
+                            <div id="bgc.error.username_isTooShort">{{langstrings['bgc.error.username_isTooShort']}}
+                            </div>
+                            <div id="bgc.error.username_isTooLong">{{langstrings['bgc.error.username_isTooLong']}}</div>
+                            <div id="bgc.error.username_containsInvalidCharacters">
+                                {{langstrings['bgc.error.username_containsInvalidCharacters']}}</div>
+                            <div id="bgc.error.username_notGiven">{{langstrings['bgc.error.username_notGiven']}}</div>
+                            <div id="bgc.error.password_isTooShort">{{langstrings['bgc.error.password_isTooShort']}}
+                            </div>
+                            <div id="bgc.error.password_isTooLong">{{langstrings['bgc.error.password_isTooLong']}}</div>
+                            <div id="bgc.error.password_containsInvalidCharacters">
+                                {{langstrings['bgc.error.password_containsInvalidCharacters']}}</div>
+                            <div id="bgc.error.password_repeatDoesNotMatch">
+                                {{langstrings['bgc.error.password_repeatDoesNotMatch']}}</div>
+                            <div id="bgc.error.password_matchesUsername">
+                                {{langstrings['bgc.error.password_matchesUsername']}}</div>
+                            <div id="bgc.error.password_notGiven">{{langstrings['bgc.error.password_notGiven']}}</div>
+                            <div id="bgc.error.login_invalidCredentials">
+                                {{langstrings['bgc.error.login_invalidCredentials']}}</div>
+                            <div id="bgc.error.email_invalidAddress">{{langstrings['bgc.error.email_invalidAddress']}}
+                            </div>
+                            <div id="bgc.error.email_notGiven">{{langstrings['bgc.error.email_notGiven']}}</div>
+                            <div id="bgc.error.captcha_incorrect">{{langstrings['bgc.error.captcha_incorrect']}}</div>
+                            <div id="bgc.error.termsAndConditions_notAccepted">
+                                {{langstrings['bgc.error.termsAndConditions_notAccepted']}}</div>
+                            <div id="bgc.error.account_exists">{{langstrings['bgc.error.account_exists']}}</div>
 
-	<span class="gl_footer_element_separator">&nbsp;·&nbsp;</span>
-	<span id="gl_footer_element_logo" class="gl_footer_element"><a class="gl_footer_element_link" id="gl_footer_element_link_logo" href="https://www.bigpoint.net/" target="_blank"><img class="gl_footer_element_image" id="gl_footer_element_image_logo" src="https://pit-835.bpsecure.com/published/globalfooter/bigpoint_logo_dark.png" alt=""/></a></span>
+                        </div>
+                        <div class="bgc_password_indicator_translations" style="display:none">
+                            <div data-complexity-key="bgc.common.password_indicator.very_low">Very weak</div>
+                            <div data-complexity-key="bgc.common.password_indicator.low">Weak</div>
+                            <div data-complexity-key="bgc.common.password_indicator.normal">Strong</div>
+                            <div data-complexity-key="bgc.common.password_indicator.high">Very strong</div>
+                        </div>
+                        <fieldset class="bgc_signup_form_signup">
+                            <div class="bgc_input_text bgc_signup_form_username">
+                                <label
+                                    for="bgc_signup_form_username">{{langstrings['av.website.loginFieldUname']}}</label>
+                                <input maxlength="20" minlength="4" id="RegUsername" name="RegUsername" type="text">
+                            </div>
+                            <div class="bgc_input_password bgc_signup_form_password">
+                                <label
+                                    for="bgc_signup_form_password">{{langstrings['av.website.loginFieldPword']}}</label>
+                                <input maxlength="45" minlength="4" id="RegPassword" name="RegPassword" type="password">
+                            </div>
+                            <div class="bgc_password_indicator" id="bgc_signup_form_password_indicator">
+                                <div class="progress_bar">
+                                    <div class="progress"></div>
+                                </div>
+                                <div class="status"></div>
+                            </div>
+                            <div class="bgc_input_email bgc_signup_form_email">
+                                <label for="bgc_signup_form_email">{{langstrings['av.website.loginFieldEmail']}}</label>
+                                <input maxlength="260" id="RegEmail" name="RegEmail" type="email">
+                            </div>
 
+                        </fieldset>
+                        </fieldset>
+                        <fieldset class="bgc_signup_form_buttons"><input class="bgc_button bgc_signup_form_back"
+                                type="button" onclick="window.location='/';return false;" value="Revert"><input
+                                class="bgc_button bgc_signup_form_register" onclick="regSubmit(this)" type="submit"
+                                value="Register"></fieldset>
+                    </form>
+                </div>
+            </div>
+
+            <!--gl footer-->
+            <div id="gl_footer">
+                <span id="gl_footer_element_copyright" class="gl_footer_element">This project is an independent community-run project and is not affiliated with Bigpoint GmbH. All game content, imagery, and trademarks are the property of Bigpoint GmbH. This server is operated for educational and archival purposes. For copyright inquiries, please contact us on our <a href="https://discord.gg/uFhJRvggZy">[Discord].</a></span>
             </div> <!-- #content -->
         </div> <!-- #wrapper -->
 
         <!-- new game tour -->
         <div id="tour">
-                        <a class="tour 1" rel="tour" href="{{ASSETSIP}}/assets/landingpage/global/gametour/screenshot_1.jpg">{{langstrings['av.website.gametour.1']}}</a>
-                        <a class="tour 2" rel="tour" href="{{ASSETSIP}}/assets/landingpage/global/gametour/screenshot_2.jpg">{{langstrings['av.website.gametour.2']}}</a>
-                        <a class="tour 3" rel="tour" href="{{ASSETSIP}}/assets/landingpage/global/gametour/screenshot_3.jpg">{{langstrings['av.website.gametour.3']}}</a>
-                        <a class="tour 4" rel="tour" href="{{ASSETSIP}}/assets/landingpage/global/gametour/screenshot_4.jpg">{{langstrings['av.website.gametour.4']}}</a>
-                        <a class="tour 5" rel="tour" href="{{ASSETSIP}}/assets/landingpage/global/gametour/screenshot_5.jpg">{{langstrings['av.website.gametour.5']}}</a>
-                        <a class="tour 6" rel="tour" href="{{ASSETSIP}}/assets/landingpage/global/gametour/screenshot_6.jpg">{{langstrings['av.website.gametour.6']}}</a>
-                        <a class="tour 7" rel="tour" href="{{ASSETSIP}}/assets/landingpage/global/gametour/screenshot_7.jpg">{{langstrings['av.website.gametour.7']}}</a>
-                        <a class="tour 8" rel="tour" href="{{ASSETSIP}}/assets/landingpage/global/gametour/screenshot_8.jpg">{{langstrings['av.website.gametour.8']}}</a>
-                        <a class="tour 9" rel="tour" href="{{ASSETSIP}}/assets/landingpage/global/gametour/screenshot_9.jpg">{{langstrings['av.website.gametour.9']}}</a>
-                        <a class="tour 10" rel="tour" href="{{ASSETSIP}}/assets/landingpage/global/gametour/screenshot_10.jpg">{{langstrings['av.website.gametour.10']}}</a>
-                    </div>
+            <a class="tour 1" rel="tour"
+                href="assets/landingpage/global/gametour/screenshot_1.jpg">{{langstrings['av.website.gametour.1']}}</a>
+            <a class="tour 2" rel="tour"
+                href="assets/landingpage/global/gametour/screenshot_2.jpg">{{langstrings['av.website.gametour.2']}}</a>
+            <a class="tour 3" rel="tour"
+                href="assets/landingpage/global/gametour/screenshot_3.jpg">{{langstrings['av.website.gametour.3']}}</a>
+            <a class="tour 4" rel="tour"
+                href="assets/landingpage/global/gametour/screenshot_4.jpg">{{langstrings['av.website.gametour.4']}}</a>
+            <a class="tour 5" rel="tour"
+                href="assets/landingpage/global/gametour/screenshot_5.jpg">{{langstrings['av.website.gametour.5']}}</a>
+            <a class="tour 6" rel="tour"
+                href="assets/landingpage/global/gametour/screenshot_6.jpg">{{langstrings['av.website.gametour.6']}}</a>
+            <a class="tour 7" rel="tour"
+                href="assets/landingpage/global/gametour/screenshot_7.jpg">{{langstrings['av.website.gametour.7']}}</a>
+            <a class="tour 8" rel="tour"
+                href="assets/landingpage/global/gametour/screenshot_8.jpg">{{langstrings['av.website.gametour.8']}}</a>
+            <a class="tour 9" rel="tour"
+                href="assets/landingpage/global/gametour/screenshot_9.jpg">{{langstrings['av.website.gametour.9']}}</a>
+            <a class="tour 10" rel="tour"
+                href="assets/landingpage/global/gametour/screenshot_10.jpg">{{langstrings['av.website.gametour.10']}}</a>
+        </div>
 
-                
-        <script type="text/javascript" src="{{ASSETSIP}}/assets/landingpage/jwplayer.js"></script>
-        <script type="text/javascript" src="{{ASSETSIP}}/assets/landingpage/jqueryToolsFlashembed.js"></script>
-        <script type="text/javascript" src="{{ASSETSIP}}/assets/landingpage/jquery.tinyscrollbar.min.js"></script>
-        <script type="text/javascript" src="{{ASSETSIP}}/assets/landingpage/jquery.colorbox-min.js"></script>
-        <script type="text/javascript">
-        //<![CDATA[
 
-            function Screen2opener(screenShot){
-                $('#'+screenShot).click();      
+        <script src="assets/landingpage/jwplayer.js"></script>
+        <script src="assets/landingpage/jqueryToolsFlashembed.js"></script>
+        <script src="assets/landingpage/jquery.tinyscrollbar.min.js"></script>
+        <script src="assets/landingpage/jquery.colorbox-min.js"></script>
+        <script>
+            //<![CDATA[
+
+            function Screen2opener(screenShot) {
+                $('#' + screenShot).click();
             }
 
-            function openTrailer(){
+            function openTrailer() {
                 $('#trailer-trigger').click();
             }
 
 
 
-            $(document).ready(function(){
-            	
+            $(document).ready(function () {
+
                 /** language selector **/
-                $('#language-select').mouseover(function(){
+                $('#language-select').mouseover(function () {
                     $('#language-list').show();
                 });
 
-                $('#language-list').mouseout(function(){
+                $('#language-list').mouseout(function () {
                     $(this).hide();
                 });
 
                 /** bookmark link **/
                 var bookmark = $('#loginForm_bookmark_container').html();
-                $('#bookmark').html( bookmark );
+                $('#bookmark').html(bookmark);
 
 
                 /** custom scrollbar **/
@@ -404,10 +453,10 @@ var lplocaleMEB   = 'BE';
                     title: function () {
                         return $(this).html();
                     }
-                });                
+                });
 
                 /** screenshots lightbox **/
-                
+
                 $('a.screenshot').colorbox({
                     fixed: true,
                     opacity: 1,
@@ -418,22 +467,22 @@ var lplocaleMEB   = 'BE';
                 });
 
                 /** fix tour lightbox titles **/
-                $(document).bind("cbox_complete", function() {
+                $(document).bind("cbox_complete", function () {
                     var el = $.colorbox.element();
-                    if( $(el).hasClass('tour') ) {
+                    if ($(el).hasClass('tour')) {
                         var newHeight = $('#cboxLoadedContent').height() + $('#cboxTitle').height() + 20;
-                        $('#cboxContent,#cboxMiddleLeft,#cboxMiddleRight').height( newHeight );
-                        $('#cboxTitle').css('display','block');
+                        $('#cboxContent,#cboxMiddleLeft,#cboxMiddleRight').height(newHeight);
+                        $('#cboxTitle').css('display', 'block');
                     }
                     else {
-                        $('#cboxTitle').css('display','none');
+                        $('#cboxTitle').css('display', 'none');
                     }
                 });
 
 
                 /** embed the flash animations **/
                 // set SWFObject params
-                var flashvars = { }; // space between brackets is required or smarty will bail out
+                var flashvars = {}; // space between brackets is required or smarty will bail out
                 var params = {
                     wmode: 'transparent',
                     autoplay: "on",
@@ -445,7 +494,7 @@ var lplocaleMEB   = 'BE';
                     contextMenu: false,
                     showSwfDownload: false,
                     upgradeToHttps: window.location.protocol === "https:",
-                    maxExecutionDuration: {"secs": 15, "nanos": 0},
+                    maxExecutionDuration: { "secs": 15, "nanos": 0 },
                     logLevel: "error",
                     base: null,
                     menu: false,
@@ -455,28 +504,28 @@ var lplocaleMEB   = 'BE';
                     quality: "high",
                     splashScreen: false,
                 };
-                var attributes = { };
+                var attributes = {};
 
                 // embed the animations
-                $('div.swf').each(function() {
-                    var id  = $(this).attr('id');
-                    var swf = '{{ASSETSIP}}/assets/landingpage/swf/'+id+'.swf';
+                $('div.swf').each(function () {
+                    var id = $(this).attr('id');
+                    var swf = 'assets/landingpage/swf/' + id + '.swf';
                     var w = $(this).data('w');
                     var h = $(this).data('h');
 
-                    flashembed('#'+id, {
-                        src: '{{ASSETSIP}}/assets/landingpage/swf/'+id+'.swf',
-                        version: [10,0],
+                    flashembed('#' + id, {
+                        src: 'assets/landingpage/swf/' + id + '.swf',
+                        version: [10, 0],
                         width: w,
                         height: h,
                         wmode: 'transparent'
                     });
 
-                    $('#'+id).css({
+                    $('#' + id).css({
                         width: w,
                         height: h
                     });
-                }); 
+                });
 
 
                 /** ColorBox stuff **/
@@ -494,9 +543,9 @@ var lplocaleMEB   = 'BE';
                     iframe: true
                 });
 
-                var otherElements = ['#errorLayer','#successLayer','.bgc_erroroverlay_box', '#lastError', '.bgcdw_errors_flash'];
-                for( x in otherElements ) {
-                    if( $( otherElements[x] ).length == 1 ) {
+                var otherElements = ['#errorLayer', '#successLayer', '.bgc_erroroverlay_box', '#lastError', '.bgcdw_errors_flash'];
+                for (x in otherElements) {
+                    if ($(otherElements[x]).length == 1) {
                         $.colorbox({
                             fixed: true,
                             opacity: 1,
@@ -505,31 +554,32 @@ var lplocaleMEB   = 'BE';
                             innerWidth: '600px',
                             innerHeight: '300px',
                             inline: true,
-                            href: $( otherElements[x] ),
+                            href: $(otherElements[x]),
                             open: true
                         });
                     }
                 }
             });
-        //]]>
+            //]]>
         </script>
 
-<script type="text/javascript">
-    // Show error message (if there is one)
-    if ("{{msg}}" == "") {
-        var x = document.getElementsByClassName("bgcdw_errors_flash");
-            for(var i = 0; i < x.length; i++) { 
-                x[i].remove();
+        <script>
+            // Show error message (if there is one)
+            if ("{{msg}}" == "") {
+                var x = document.getElementsByClassName("bgcdw_errors_flash");
+                for (var i = 0; i < x.length; i++) {
+                    x[i].remove();
+                }
+            } else {
+                var errorText = document.getElementById("{{msg}}").innerHTML;
+                var x = document.getElementsByClassName("bgcdw_errors_flash");
+                for (var i = 0; i < x.length; i++) {
+                    x[i].innerText = errorText;
+                }
             }
-    } else {
-        var errorText = document.getElementById("{{msg}}").innerHTML;
-        var x = document.getElementsByClassName("bgcdw_errors_flash");
-        for(var i = 0; i < x.length; i++) { 
-            x[i].innerText = errorText;
-        }
-    }
-</script>
+        </script>
 
-<!-- affiliateEndTag -->
+        <!-- affiliateEndTag -->
 </body>
+
 </html>

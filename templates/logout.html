@@ -1,69 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{lang}}">
 <head>
-    <title>{{langstrings['av.website.seo.titleAid']}}</title>
-    <meta name="description" content="{{langstrings['av.website.seo.description']}}" />
-    <meta name="keywords" content="SkyRama, Sky Rama, online airport game, airport game" />
-    <meta name="language" content="{{lang}}" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="author" content="Bigpoint GmbH" />
-    <meta name="publisher" content="Bigpoint GmbH" />
-    <meta name="company" content="Bigpoint GmbH" />
-    <link rel="shortcut icon" href="{{ASSETSIP}}/assets/favicon.ico" type="image/x-info" />
-    <link rel="icon" href="{{ASSETSIP}}/assets/favicon.ico" type="image/x-info" />
-    <script type="text/javascript" src="{{ASSETSIP}}/assets/js/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="{{ASSETSIP}}/assets/js/swfobject.js"></script>
-    <script type="text/javascript" src="{{ASSETSIP}}/assets/js/skyrama.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{ASSETSIP}}/assets/style/skyrama.css" />
-    <link rel="stylesheet" href="/templates/styles/logout.css">
+    <title>See ya next time!</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="assets/favicon.ico"/>
+    <link rel="icon" href="assets/favicon.ico"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" >
+
+    <link rel="stylesheet" href="templates/styles/logout.css">
 </head>
 
 <body>
     <div id="background">
         <div id="left-background">
-            <img src="{{ASSETSIP}}/assets/style/global/external/bg_left.jpg" />
+            <img src="assets/style/global/external/bg_left.jpg" />
         </div>
         <div id="center-background">
-            <img src="{{ASSETSIP}}/assets/style/global/external/bg_center.jpg" />
+            <img src="assets/style/global/external/bg_center.jpg" />
         </div>
         <div id="right-background">
-            <img src="{{ASSETSIP}}/assets/style/global/external/bg_right.jpg" />
+            <img src="assets/style/global/external/bg_right.jpg" />
         </div>
     </div>
     
     <div class="external-container">
         <div class="top-bar">
-            <div class="user-registered">{{langstrings['av.website.registered']}} {{playerCount}}</div>
-            <div class="language-selector" onmouseover="showLanguageList()" onmouseout="hideLanguageList()">
+            <div class="user-registered"><i class="fa-solid fa-users"></i> {{langstrings['av.website.registered']}} {{playerCount}}</div>
+            <div class="language-selector">
 
                 <span>{{langstrings['av.website.language']}}</span>
                 <div class="language-current">
-                    <img src="{{ASSETSIP}}/assets/style/global/flags/{{lang}}.png" />
+                    <img src="assets/style/global/flags/{{lang}}.png" />
                     <span>{{langstrings['av.website.langShort']}}</span>
                 </div>
                 <ul class="language-list" id="languageList">
-                    <li><a href="/logout/?locale=de"><img src="{{ASSETSIP}}/assets/style/global/flags/de.png" />Deutsch</a></li>
-                    <li><a href="/logout/?locale=en"><img src="{{ASSETSIP}}/assets/style/global/flags/en.png" />English UK</a></li>
-                    <li><a href="/logout/?locale=us"><img src="{{ASSETSIP}}/assets/style/global/flags/us.png" />English US</a></li>
-                    <li><a href="/logout/?locale=pl"><img src="{{ASSETSIP}}/assets/style/global/flags/pl.png" />Polski</a></li>
-                    <li><a href="/logout/?locale=fr"><img src="{{ASSETSIP}}/assets/style/global/flags/fr.png" />Français</a></li>
-                    <li><a href="/logout/?locale=it"><img src="{{ASSETSIP}}/assets/style/global/flags/it.png" />Italiano</a></li>
-                    <li><a href="/logout/?locale=ru"><img src="{{ASSETSIP}}/assets/style/global/flags/ru.png" />Pyccĸий</a></li>
-                    <li><a href="/logout/?locale=sv"><img src="{{ASSETSIP}}/assets/style/global/flags/sv.png" />Svenska</a></li>
-                    <li><a href="/logout/?locale=es"><img src="{{ASSETSIP}}/assets/style/global/flags/es.png" />Español</a></li>
-                    <li><a href="/logout/?locale=cs"><img src="{{ASSETSIP}}/assets/style/global/flags/cs.png" />Čeština</a></li>
-                    <li><a href="/logout/?locale=tr"><img src="{{ASSETSIP}}/assets/style/global/flags/tr.png" />Tϋrkçe</a></li>
-                    <li><a href="/logout/?locale=fi"><img src="{{ASSETSIP}}/assets/style/global/flags/fi.png" />Suomi</a></li>
-                    <li><a href="/logout/?locale=nl"><img src="{{ASSETSIP}}/assets/style/global/flags/nl.png" />Nederlands</a></li>
-                    <li><a href="/logout/?locale=pt"><img src="{{ASSETSIP}}/assets/style/global/flags/pt.png" />Português</a></li>
-                    <li><a href="/logout/?locale=da"><img src="{{ASSETSIP}}/assets/style/global/flags/da.png" />Dansk</a></li>
-                    <li><a href="/logout/?locale=no"><img src="{{ASSETSIP}}/assets/style/global/flags/no.png" />Norsk</a></li>
-                    <li><a href="/logout/?locale=sk"><img src="{{ASSETSIP}}/assets/style/global/flags/sk.png" />Slovensky</a></li>
-                    <li><a href="/logout/?locale=pt_BR"><img src="{{ASSETSIP}}/assets/style/global/flags/pt_BR.png" />Português</a></li>
-                    <li><a href="/logout/?locale=el"><img src="{{ASSETSIP}}/assets/style/global/flags/el.png" />Ελληνικά</a></li>
-                    <li><a href="/logout/?locale=ro"><img src="{{ASSETSIP}}/assets/style/global/flags/ro.png" />Română</a></li>
-                    <li><a href="/logout/?locale=bg"><img src="{{ASSETSIP}}/assets/style/global/flags/bg.png" />България</a></li>
-                    <li><a href="/logout/?locale=hu"><img src="{{ASSETSIP}}/assets/style/global/flags/hu.png" />Magyar</a></li>
+                    <li><a href="/logout/?locale=de"><img src="assets/style/global/flags/de.png" />Deutsch</a></li>
+                    <li><a href="/logout/?locale=en"><img src="assets/style/global/flags/en.png" />English UK</a></li>
+                    <li><a href="/logout/?locale=us"><img src="assets/style/global/flags/us.png" />English US</a></li>
+                    <li><a href="/logout/?locale=pl"><img src="assets/style/global/flags/pl.png" />Polski</a></li>
+                    <li><a href="/logout/?locale=fr"><img src="assets/style/global/flags/fr.png" />Français</a></li>
+                    <li><a href="/logout/?locale=it"><img src="assets/style/global/flags/it.png" />Italiano</a></li>
+                    <li><a href="/logout/?locale=ru"><img src="assets/style/global/flags/ru.png" />Pyccĸий</a></li>
+                    <li><a href="/logout/?locale=sv"><img src="assets/style/global/flags/sv.png" />Svenska</a></li>
+                    <li><a href="/logout/?locale=es"><img src="assets/style/global/flags/es.png" />Español</a></li>
+                    <li><a href="/logout/?locale=cs"><img src="assets/style/global/flags/cs.png" />Čeština</a></li>
+                    <li><a href="/logout/?locale=tr"><img src="assets/style/global/flags/tr.png" />Tϋrkçe</a></li>
+                    <li><a href="/logout/?locale=fi"><img src="assets/style/global/flags/fi.png" />Suomi</a></li>
+                    <li><a href="/logout/?locale=nl"><img src="assets/style/global/flags/nl.png" />Nederlands</a></li>
+                    <li><a href="/logout/?locale=pt"><img src="assets/style/global/flags/pt.png" />Português</a></li>
+                    <li><a href="/logout/?locale=da"><img src="assets/style/global/flags/da.png" />Dansk</a></li>
+                    <li><a href="/logout/?locale=no"><img src="assets/style/global/flags/no.png" />Norsk</a></li>
+                    <li><a href="/logout/?locale=sk"><img src="assets/style/global/flags/sk.png" />Slovensky</a></li>
+                    <li><a href="/logout/?locale=pt_BR"><img src="assets/style/global/flags/pt_BR.png" />Português</a></li>
+                    <li><a href="/logout/?locale=el"><img src="assets/style/global/flags/el.png" />Ελληνικά</a></li>
+                    <li><a href="/logout/?locale=ro"><img src="assets/style/global/flags/ro.png" />Română</a></li>
+                    <li><a href="/logout/?locale=bg"><img src="assets/style/global/flags/bg.png" />България</a></li>
+                    <li><a href="/logout/?locale=hu"><img src="assets/style/global/flags/hu.png" />Magyar</a></li>
                 </ul>
             </div>
         </div>
@@ -71,10 +64,15 @@
         <div class="content-area">
             <div class="logout-window">
                 <div class="logout-content">
-                    <!-- <div class="logout-title">{{langstrings['av.website.gametour.1']}}</div> -->
-                    <div class="logout-title">Logout complete</div>
-                    <!-- <div class="logout-message">{{langstrings['av.website.gametour.2']}}</div> -->
-                    <div class="logout-message">Thanks for trying out SkyRama private server!</div>
+                    <div class="logout-title">Logout successful</div>
+                    <div class="logout-message">Thanks for trying out Skyrama private server!</div>
+                    <p>
+                        We hope that you've enjoyed the experience and we are looking forward to seeing you again!
+                        <br>
+                        This project is made from our love and dedication to actual Skyrama. So please don't
+                        <br>
+                        forget to show your love to the actual game. Have a great day, manager!
+                    </p>
                     
                     <div class="logout-buttons">
                         <a href="/" class="logout-button">Back to the game</a>
@@ -84,28 +82,9 @@
             </div>
         </div>
 
-    <footer>
-        <span id="gl_footer_element_copyright" class="gl_footer_element">&copy; Bigpoint</span>
-
-        <span class="gl_footer_element_separator">&nbsp;·&nbsp;</span>
-        <span id="gl_footer_element_allrights" class="gl_footer_element">All rights reserved</span>
-    
-        <span class="gl_footer_element_separator">&nbsp;·&nbsp;</span>
-        <span id="gl_footer_element_allrights" class="gl_footer_element">This game is a fan-made game and is in no way affiliated to Bigpoint GmbH.</span>
-    
-        <span class="gl_footer_element_separator">&nbsp;·&nbsp;</span>
-        <span id="gl_footer_element_logo" class="gl_footer_element"><a class="gl_footer_element_link" id="gl_footer_element_link_logo" href="https://www.bigpoint.net/" target="_blank"><img class="gl_footer_element_image" id="gl_footer_element_image_logo" src="https://pit-835.bpsecure.com/published/globalfooter/bigpoint_logo_light.png" alt=""/></a></span>
-    </footer>
+        <footer>
+            <span id="gl_footer_element_copyright" class="gl_footer_element">This project is an independent community-run project and is not affiliated with Bigpoint GmbH. All game content, imagery, and trademarks are the property of Bigpoint GmbH. This server is operated for educational and archival purposes. For copyright inquiries, please contact us on our <a href="https://discord.gg/uFhJRvggZy">[Discord].</a></span>
+        </footer>
     </div>
-
-    <script type="text/javascript">
-        function showLanguageList() {
-            document.getElementById('languageList').style.display = 'block';
-        }
-        
-        function hideLanguageList() {
-            document.getElementById('languageList').style.display = 'none';
-        }
-    </script>
 </body>
 </html>

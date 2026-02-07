@@ -1,479 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <!-- Meta -->
-      <meta charset="utf-8" />
-      <!-- Title and Icon -->
-      <title id="pageTitle">Skyrama</title>
-      <link rel="shortcut icon" href="{{ASSETSIP}}/assets/favicon.ico" />
-      <link rel="icon" type="image/png" href="{{ASSETSIP}}/assets/favicon.ico" />
-      <script type="text/javascript" src="{{ASSETSIP}}/assets/js/jquery-1.7.1.min.js"></script>
-      <script type="text/javascript" src="{{ASSETSIP}}/assets/js/swfobject.js"></script>
-      <script type="text/javascript" src="{{ASSETSIP}}/assets/js/skyrama.js"></script>
-      <link rel="stylesheet" type="text/css" href="{{SERVERIP}}/templates/styles/play.css" />
-      <script src="https://kit.fontawesome.com/9184ea9ca6.js" crossorigin="anonymous"></script>
-   </head>
-   <!-- EMBED GAME -->
-   <table class="internalHome" cellpadding="0" cellspacing="0">
-      <tr>
-         <td class="frame-bg-left"></td>
-         <td class="frame-bg-center">
+
+<head>
+    <meta charset="utf-8" />
+    <title id="pageTitle">Skyrama - Private Server</title>
+
+    <script src="assets/js/jquery-1.7.1.min.js"></script>
+    <script src="assets/js/swfobject.js"></script>
+    <script src="assets/js/skyrama.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="templates/styles/play.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="shortcut icon" href="assets/favicon.ico" />
+    <link rel="icon" href="assets/favicon.ico" />
+</head>
+
+<!-- EMBED GAME -->
+<table class="internalHome" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="frame-bg-left"></td>
+        <td class="frame-bg-center">
             <div class="frame-container">
-               <div id="flashbench-container" style="background: #3f85c1; position: absolute; top: 0px; left:210px; height:1px; width:1px;"></div>
-               <div class="cobrand"><img id="PartnerCobrandLogo" src="https://pit-835.bpsecure.com/published/cobrands/0_696_1.png" /></div>
-               <div class="user-info">{{langstrings['av.website.username']}} {{username}}, {{langstrings['av.website.userId']}} {{userid}}</div>
-               <div class="socialIcons">
-                  <!-- We don't have a discord server right now -->
-                  <!-- <div class="socialIcons-discord"><a href="https://discord.gg/rdpFXhja5Q" target="_blank"><i class="fa-brands fa-discord"></i></a></div> -->
-                  <div class="socialIcons-facebook"><a href="https://www.facebook.com/skyrama/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a></div>
-                  <div class="socialIcons-twitter"><a href="https://twitter.com/skyrama_com/" target="_blank"><i class="fa-brands fa-square-twitter"></i></a></div>
-                  <div class="socialIcons-youtube"><a href="https://www.youtube.com/bigpoint/" target="_blank"><i class="fa-brands fa-square-youtube"></i></a></div>
-               </div>
-               <div class="client-frame">
-                  <div class="payment hidden" id="payment">
-                     <div class="payment-close" id="paymentClose" onclick="hidePayment();"></div>
-                     <div id="paymentIframe"></div>
-                  </div>
-                  <div class="profile hidden" id="profile">
-                     <div class="profile-close" id="profileClose" onclick="hideProfilePage();"></div>
-                     <div id="profileIframe"></div>
-                  </div>
-                  <div id="client-placeholder"
-                     style="margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%); left: 40%;">
-                     <div style="text-align: center"><a href="https://www.adobe.com/go/getflashplayer" target="_blank"><img
-                        src="{{ASSETSIP}}/assets/style/global/get_flash.jpg"></a>
-                     </div>
-                  </div>
-               </div>
-               <div class="banner">
-                  <!-- affiliateBanner: banner disabled -->
-               </div>
-               <div class="footer">
-                  <!--gl footer-->
-                  <div id="gl_footer">
-                     &copy; Bigpoint
-                     &nbsp;·&nbsp;
-                     All rights reserved
-                     &nbsp;·&nbsp;
-                     This game is a fan-made game and is in no way affiliated to Bigpoint GmbH.
-                     &nbsp;·&nbsp;
-                     <a class="gl_footer_element_link" id="gl_footer_element_link_logo" href="https://www.bigpoint.net/" target="_blank"><img class="gl_footer_element_image" id="gl_footer_element_image_logo" src="https://pit-835.bpsecure.com/published/globalfooter/bigpoint_logo_light.png" alt=""/></a>
-                  </div>
-               </div>
+                <div id="flashbench-container"
+                    style="background: #3f85c1; position: absolute; top: 0px; left:210px; height:1px; width:1px;"></div>
+                <div class="cobrand"><img id="PartnerCobrandLogo"
+                        src="https://pit-835.bpsecure.com/published/cobrands/0_696_1.png" /></div>
+                <div class="user-info">{{langstrings['av.website.username']}} {{username}},
+                    {{langstrings['av.website.userId']}} {{userid}}</div>
+                <div class="socialIcons">
+                    <div>
+                        <a href="https://discord.gg/uFhJRvggZy" target="_blank">
+                            <i id="discord" class="fa-brands fa-discord"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://github.com/Michielvde1253/skyrama-private-server" target="_blank">
+                            <i id="github" class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="client-frame">
+                    <div class="payment hidden" id="payment">
+                        <div class="payment-close" id="paymentClose" onclick="hidePayment();"></div>
+                        <div id="paymentIframe"></div>
+                    </div>
+                    <div class="profile hidden" id="profile">
+                        <div class="profile-close" id="profileClose" onclick="hideProfilePage();"></div>
+                        <div id="profileIframe"></div>
+                    </div>
+                    <div id="client-placeholder" class="flash-placeholder-container">
+                        <div class="flash-box">
+                            <div class="spinner"></div>
+                            <h3>Waiting for Flash Player to load...</h3>
+                            <p>
+                                Make sure that you have <span class="highlight">Chromium with Flash Player</span> installed 
+                                or that you have downloaded <span class="highlight">Flash Browser</span>.
+                            </p>
+                            <p>If you've read to this part then flash is most likely blocked on this page or you didn't install it at all. In case you did then in the top-left side of the browser you need to allow it and then reload the page. Good luck our beloved airport manager! 🧡</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner">
+                    <!-- affiliateBanner: banner disabled -->
+                </div>
+                <div class="footer">
+                    <!--gl footer-->
+                    <div id="gl_footer">
+                        This project is an independent community-run project and is not affiliated with Bigpoint GmbH
+                        &nbsp;·&nbsp;
+                        All game content, imagery, and trademarks are the property of Bigpoint GmbH
+                    </div>
+                </div>
             </div>
-         </td>
-         <td class="frame-bg-right"></td>
-      </tr>
-   </table>
-   </div>
-   <script type="text/javascript">
-      //<![CDATA[
-      var flashVars = {
-          userId: '{{userid}}',
-          token: '{{token}}',
-          apiHost: '{{SERVERIP}}',
-          dataHost: '{{ASSETSIP}}/assets/',
-          language: '{{lang}}',
-          preloaderbg: 'largeplanes',
-          isHTTPS: '1',
-          music: 'sound/streams/airville_streams_intro.mp3',
-          eventStreamContext: "",
-          openSocial: 0,
-          ssoUser: 0,
-          friendInvite: 0,
-          logging: 0
-      };
-      
-      var flashParams = {
-          menu: 'false',
-          scale: 'noScale',
-          allowFullscreen: 'true',
-          allowScriptAccess: 'always',
-          bgcolor: '#FFFFFF'
-      };
-      
-      var flashAttributes = {
-          id: 'Skyrama_Flash',
-          name: 'Skyrama_Flash_Name'
-      };
-      
-      swfobject.embedSWF('{{ASSETSIP}}/assets/airville.swf?__cv=144b4732e1ce320eca16c53e28066900', 'client-placeholder', '100%', '100%', '10.2.0', '{{ASSETSIP}}/assets/js/expressInstall.swf', flashVars, flashParams, flashAttributes);
-      
-      function hideClient() {
-          $('#client-content').css("visibility", "hidden");
-          $('#client-content').css("top", "-1000px");
-      }
-      
-      function showClient() {
-          $('#client-content').css("visibility", "visible");
-          $('#client-content').css("top", "0px");
-      }
-      
-      function fixClient() {
-          showClient();
-          $('#client-content').css("width", "100%");
-          $('#client-content').css("height", "100%");
-          $('#client-placeholder').css("width", "100%");
-          $('#client-placeholder').css("height", "100%");
-      }
-      
-      function closeDlLayer() {
-          $('#downloadStandaloneClientOverlay').css("visibility", "hidden");
-      }
-      
-      function openPayment(sub) {
-      
-      
-          hideClient();
-          $('#paymentIframe').empty();
-      
-          var paymentIframe = jQuery('<iframe />');
-          paymentIframe.css('width', '1000px');
-          paymentIframe.css('height', '600px');
-          paymentIframe.attr('marginheight', '0');
-          paymentIframe.attr('marginwidth', '0');
-          paymentIframe.attr('frameborder', '0');
-          paymentIframe.attr('allowTransparency', 'true');
-          paymentIframe.attr('src', '/?action=internalPayment&iframe=1&sub=' + sub);
-      
-          $('#paymentIframe').append(paymentIframe);
-      
-          $('#payment').removeClass('hidden');
-      
-      }
-      
-      function hidePayment() {
-          $('#payment').addClass('hidden');
-      
-          showClient();
-      
-          document.getElementById('Skyrama_Flash').onPaymentFinished();
-      }
-      
-      function openPaymentDiscount(paymentUrl) {
-      
-          hideClient();
-          $('#paymentIframe').empty();
-          var paymentIframe = jQuery('<iframe />');
-          paymentIframe.css('width', '1000px');
-          paymentIframe.css('height', '600px');
-          paymentIframe.attr('marginheight', '0');
-          paymentIframe.attr('marginwidth', '0');
-          paymentIframe.attr('frameborder', '0');
-          paymentIframe.attr('allowTransparency', 'true');
-          paymentIframe.attr('src', paymentUrl);
-          $('#paymentIframe').append(paymentIframe);
-          $('#payment').removeClass('hidden');
-      
-      
-      }
-      
-      function openProfilePage() {
-          /*
-          hideClient();
-      
-          $('#profileIframe').empty();
-      
-          var profileIframe = jQuery('<iframe />');
-          profileIframe.css('width', '1000px');
-          profileIframe.css('height', '600px');
-          profileIframe.attr('marginheight', '0');
-          profileIframe.attr('marginwidth', '0');
-          profileIframe.attr('frameborder', '0');
-          profileIframe.attr('allowTransparency', 'true');
-          profileIframe.attr('src', '/?action=internalProfile');
-      
-          $('#profileIframe').append(profileIframe);
-      
-          $('#profile').removeClass('hidden');
-          */
-      
-          // New SAS Account Center, now a new tab and not an iframe
-          window.open('/?action=internalProfile');
-      }
-      
-      function hideProfilePage() {
-          /*
-          $('#profile').addClass('hidden');
-      
-          showClient();
-          */
-      }
-      
-      /*SLAYER.init(
-          {
-              jQueryLibrary: jQuery,
-              //gameId: 696,
-              gameId: 696,
-              affiliateId: 829,
-              gameTitle: 'Skyrama',
-              dispatcherUrl: '/slayer/dispatcher.php',
-              hideClient: {
-                  container: 'Skyrama_Flash',
-                  imageUrl: 'https://airville-696.bpsecure.com/style/global/slayer/bg.png?__cv=b6d45a3f5997a634068d82a71994d900'
-                  },
-              invite: {
-                  buddyList: false,
-                  renderTarget: 'overlay',
-                  language: 'nl',
-                  shareUrl: false,
-                  defaultTab: 'Invite',
-                  facebookTab: false,
-                  friendSearch: {
-                      enable: false,
-                      endpoint: '',
-                      url: ''
-                  },
-                  currentUsername: 'michielvde'
-              }
-          }
-          );
-      */
-      // Compat functions
-      function onLogout() {
-          window.location.href = "/logout";
-      }
-      
-      function createPaymentSession() {
-          openPayment();
-      }
-      
-      function onAddCashButton() {
-          openPayment();
-      }
-      
-      function param(initValue) {
-          this.value = initValue;
-      }
-      
-      function calcWindowSize(winW, winH) {
-          winW.value = 800;
-          winH.value = 600;
-          if (document.body && document.body.offsetWidth) {
-              winW.value = document.body.offsetWidth;
-              winH.value = document.body.offsetHeight;
-          }
-          if (document.compatMode == 'CSS1Compat' && document.documentElement
-              && document.documentElement.offsetWidth) {
-              winW.value = document.documentElement.offsetWidth;
-              winH.value = document.documentElement.offsetHeight;
-          }
-          if (window.innerWidth && window.innerHeight) {
-              winW.value = window.innerWidth;
-              winH.value = window.innerHeight;
-          }
-      }
-      
-      function showErrorPopup(url, containerName, addCloseButton, wndWidth, wndHeight, doScrolling, onCloseCallback) {
-          var iframeContainer = document.getElementById(containerName);
-      
-          if (undefined != iframeContainer) {
-              window.document.body.removeChild(iframeContainer);
-          }
-      
-          var containerWidth = wndWidth;
-          var containerHeight = wndHeight;
-      
-          var winW = new param();
-          var winH = new param();
-          calcWindowSize(winW, winH);
-      
-          var marginX = (winW.value - wndWidth) / 2;
-          if (marginX < 0)
-              marginX = 0;
-          var marginY = (winH.value - wndHeight) / 2;
-          //marginY += 100;
-          if (marginY < 20)
-              marginY = 20;
-      
-          iframeContainer = document.createElement('div');
-          iframeContainer.id = containerName;
-          iframeContainer.style.position = "absolute";
-          iframeContainer.style.width = containerWidth + 'px';
-          iframeContainer.style.height = containerHeight + 'px';
-          iframeContainer.style.left = marginX + 'px';
-          iframeContainer.style.top = marginY + 'px';
-          iframeContainer.style.zIndex = "10";
-          iframeContainer.style.backgroundColor = "#DDDDDD";
-      
-          window.document.body.appendChild(iframeContainer);
-      
-          if (addCloseButton) {
-              var closeButton = document.createElement('a');
-              closeButton.style.zIndex = "20";
-              closeButton.className = 'closebox';
-              closeButton.href = '';
-      
-              closeButton.style.display = 'block';
-              closeButton.style.position = 'absolute';
-              closeButton.style.top = '-15px';
-              closeButton.style.right = '-15px';
-              closeButton.style.overflow = 'hidden';
-              closeButton.style.textIndent = '-999em';
-              closeButton.style.width = '30px';
-              closeButton.style.height = '30px';
-              closeButton.style.background = 'transparent url(https://airville-696.bpsecure.com/assets/img/closebox.png?__cv=f2aace763cfcc4d6f3427a8a0842e500) no-repeat top right';
-      
-              closeButton.onclick = function () {
-                  showClient();
-                  window.document.body.removeChild(iframeContainer);
-                  if (onCloseCallback)
-                      onCloseCallback.call(null);
-                  return false;
-              };
-              var closeText = document.createTextNode('Close');
-              closeButton.appendChild(closeText);
-              iframeContainer.appendChild(closeButton);
-          }
-      
-          var progressBarWidth = 220;
-          var progressBarHeight = 19;
-          var progressBar = document.createElement('img');
-          progressBar.id = "popupProgress";
-          progressBar.src = "https://airville-696.bpsecure.com/style/global/ajax-loader.gif?__cv=57ca1a2085d82f0574e3ef740b9a5e00";
-          progressBar.style.position = "absolute";
-          progressBar.style.display = "block";
-          progressBar.style.left = Math.round(containerWidth / 2
-              - progressBarWidth / 2)
-              + 'px';
-          progressBar.style.top = Math.round(containerHeight / 2
-              - progressBarHeight / 2)
-              + 'px';
-          progressBar.style.width = progressBarWidth + 'px';
-          progressBar.style.height = progressBarHeight + 'px';
-          progressBar.style.zIndex = "11";
-          iframeContainer.appendChild(progressBar);
-      
-          var theIframe = document.createElement('iframe');
-      
-          theIframe.id = containerName + 'Iframe';
-          theIframe.name = containerName + 'Iframe';
-          theIframe.frameborder = 0;
-          theIframe.border = 0;
-          if (doScrolling)
-              theIframe.scrolling = 'auto';
-          else
-              theIframe.scrolling = 'no';
-          theIframe.style.width = '100%';
-          theIframe.style.height = '100%';
-          theIframe.style.display = 'block';
-          theIframe.style.margin = '0';
-          theIframe.style.padding = '0';
-          theIframe.style.zIndex = "12";
-          theIframe.style.position = "absolute";
-          theIframe.style.border = '0';
-          theIframe.src = url;
-      
-          iframeContainer.appendChild(theIframe);
-      }
-      
-      function onError() {
-          hideClient();
-          // Show toolbox error
-          showErrorPopup('/error/', 'errorContainer', false, 600, 400, false, null);
-      }
-      
-      function sendJSONRequest(url, paramD, paramT) {
-          jQuery.get(
-              url,
-              { d: paramD, t: paramT },
-              function (data) {
-                  try {
-                      var flash = document.getElementById("Skyrama_Flash");
-                      flash.onExternalResult(data);
-                  }
-                  catch (err) {
-                      //txt="There was an error on this page.\n\n";
-                      //txt+="Error description: " + err + "\n\n";
-                      //txt+="Click OK to continue.\n\n";
-                      //alert(txt);
-                  }
-              }
-          );
-      }
-      
-      function createFlashBenchmark() {
-          return true;
-          /*
-          if ($('#flashbench-container').length <= 0) return; //benchmark was already done for this user.
-          
-          // detect flash player version
-          var plugin = false;
-          var playerVersion = [0,0,0];
-          var d = null;
-      
-          if (typeof navigator.plugins != "undefined" && typeof navigator.plugins["Shockwave Flash"] == "object") {
-              d = navigator.plugins["Shockwave Flash"].description;
-              if (d && !(typeof navigator.mimeTypes != "undefined" && navigator.mimeTypes["application/x-shockwave-flash"] && !navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin)) {
-                  plugin = true;
-                  d = d.replace(/^.*\s+(\S+\s+\S+$)/, "$1");
-                  playerVersion[0] = parseInt(d.replace(/^(.*)\..*$/, "$1"), 10); //major version
-                  playerVersion[1] = parseInt(d.replace(/^.*\.(.*)\s.*$/, "$1"), 10); //minor version
-                  playerVersion[2] = /[a-zA-Z]/.test(d) ? parseInt(d.replace(/^.*[a-zA-Z]+(.*)$/, "$1"), 10) : 0; //rev
-              }
-          } else if (typeof window.ActiveXObject != "undefined") {
-              try {
-                  var a = new ActiveXObject("ShockwaveFlash.ShockwaveFlash");
-      
-                  if (a) {
-                      d = a.GetVariable("$version");
-                      if (d) {
-                          plugin = true;
-                          d = d.split(" ")[1].split(",");
-                          playerVersion = [parseInt(d[0], 10), parseInt(d[1], 10), parseInt(d[2], 10)];
-                      }
-                  }
-              } catch(e) {}
-          }
-          
-          if (plugin && playerVersion[0] >= 11){
-                 appendBenchmark();
-          } else {
-              // do ajax call to save stuff
-              jQuery.post(
-                  '/benchmark.php',
-                  {
-                      os: navigator.userAgent,
-                      fpVersion: playerVersion[0] + '.' + playerVersion[1] + '.' + playerVersion[2]
-                  }
-              );
-          }
-          */
-      }
-      
-      function appendBenchmark() {
-          return true;
-          /*
-          var benchRoot = jQuery('<div>');
-          benchRoot.attr('id', 'flashbench-root');
-      
-          jQuery('#flashbench-container').append(benchRoot);
-      
-          swfobject.embedSWF(
-                                     'https://airville-696.bpsecure.com/data/profiling/bench_fp11_new.swf?__cv=987232d0100abb00eddfb51302cc7b00',
-                      'flashbench-root', 
-                      '100%', '100%', 
-                      '11.0.0', 
-                      'https://airville-696.bpsecure.com/js/expressInstall.swf?__cv=7b65fbfaec8b2955090389af60646e00',
-                      {}, 
-                      {bgColor:'#3f85c1', wmode:'gpu', allowscriptaccess:'always', menu:'false'}, 
-                      {id: 'Skyrama_Flash_Bench',name: 'Skyrama_Flash_Bench_Name'}
-                  );
-          */
-      }
-      
-      function showFlashBenchmark() {
-          //jQuery('#flashbench-container').css('width', '100px');
-          //jQuery('#flashbench-container').css('height', '100px');
-      }
-      
-      function destroyFlashBenchmark() {
-          //jQuery('#flashbench-container').css('width', '1px');
-          //jQuery('#flashbench-container').css('height', '1px');
-          //jQuery('#flashbench-container').empty();
-      }
-          //]]>
-      
-   </script>
-   </body>
+        </td>
+        <td class="frame-bg-right"></td>
+    </tr>
+</table>
+</div>
+<script>
+    //<![CDATA[
+    var flashVars = {
+        userId: '{{userid}}',
+        token: '{{token}}',
+        apiHost: '{{SERVERIP}}',
+        dataHost: 'assets/',
+        language: '{{lang}}',
+        preloaderbg: 'largeplanes',
+        isHTTPS: '1',
+        music: 'sound/streams/airville_streams_intro.mp3',
+        eventStreamContext: "",
+        openSocial: 0,
+        ssoUser: 0,
+        friendInvite: 0,
+        logging: 1
+    };
+
+    var flashParams = {
+        menu: 'false',
+        scale: 'noScale',
+        allowFullscreen: 'true',
+        allowScriptAccess: 'always',
+        bgcolor: '#FFFFFF'
+    };
+
+    var flashAttributes = {
+        id: 'Skyrama_Flash',
+        name: 'Skyrama_Flash_Name'
+    };
+
+    swfobject.embedSWF('assets/airville.swf?__cv=144b4732e1ce320eca16c53e28066900', 'client-placeholder', '100%', '100%', '10.2.0', 'assets/js/expressInstall.swf', flashVars, flashParams, flashAttributes);
+
+    function hideClient() {
+        $('#client-content').css("visibility", "hidden");
+        $('#client-content').css("top", "-1000px");
+    }
+
+    function showClient() {
+        $('#client-content').css("visibility", "visible");
+        $('#client-content').css("top", "0px");
+    }
+
+    function fixClient() {
+        showClient();
+        $('#client-content').css("width", "100%");
+        $('#client-content').css("height", "100%");
+        $('#client-placeholder').css("width", "100%");
+        $('#client-placeholder').css("height", "100%");
+    }
+
+    function closeDlLayer() {
+        $('#downloadStandaloneClientOverlay').css("visibility", "hidden");
+    }
+
+    function openPayment(sub) {
+
+
+        hideClient();
+        $('#paymentIframe').empty();
+
+        var paymentIframe = jQuery('<iframe />');
+        paymentIframe.css('width', '1000px');
+        paymentIframe.css('height', '600px');
+        paymentIframe.attr('marginheight', '0');
+        paymentIframe.attr('marginwidth', '0');
+        paymentIframe.attr('frameborder', '0');
+        paymentIframe.attr('allowTransparency', 'true');
+        paymentIframe.attr('src', '/?action=internalPayment&iframe=1&sub=' + sub);
+
+        $('#paymentIframe').append(paymentIframe);
+
+        $('#payment').removeClass('hidden');
+
+    }
+
+    function hidePayment() {
+        $('#payment').addClass('hidden');
+
+        showClient();
+
+        document.getElementById('Skyrama_Flash').onPaymentFinished();
+    }
+
+    function openPaymentDiscount(paymentUrl) {
+
+        hideClient();
+        $('#paymentIframe').empty();
+        var paymentIframe = jQuery('<iframe />');
+        paymentIframe.css('width', '1000px');
+        paymentIframe.css('height', '600px');
+        paymentIframe.attr('marginheight', '0');
+        paymentIframe.attr('marginwidth', '0');
+        paymentIframe.attr('frameborder', '0');
+        paymentIframe.attr('allowTransparency', 'true');
+        paymentIframe.attr('src', paymentUrl);
+        $('#paymentIframe').append(paymentIframe);
+        $('#payment').removeClass('hidden');
+
+
+    }
+
+    function openProfilePage() {
+        /*
+        hideClient();
+    
+        $('#profileIframe').empty();
+    
+        var profileIframe = jQuery('<iframe />');
+        profileIframe.css('width', '1000px');
+        profileIframe.css('height', '600px');
+        profileIframe.attr('marginheight', '0');
+        profileIframe.attr('marginwidth', '0');
+        profileIframe.attr('frameborder', '0');
+        profileIframe.attr('allowTransparency', 'true');
+        profileIframe.attr('src', '/?action=internalProfile');
+    
+        $('#profileIframe').append(profileIframe);
+    
+        $('#profile').removeClass('hidden');
+        */
+
+        // New SAS Account Center, now a new tab and not an iframe
+        window.open('/?action=internalProfile');
+    }
+
+    function hideProfilePage() {
+        /*
+        $('#profile').addClass('hidden');
+    
+        showClient();
+        */
+    }
+
+    /*SLAYER.init(
+        {
+            jQueryLibrary: jQuery,
+            //gameId: 696,
+            gameId: 696,
+            affiliateId: 829,
+            gameTitle: 'Skyrama',
+            dispatcherUrl: '/slayer/dispatcher.php',
+            hideClient: {
+                container: 'Skyrama_Flash',
+                imageUrl: 'https://airville-696.bpsecure.com/style/global/slayer/bg.png?__cv=b6d45a3f5997a634068d82a71994d900'
+                },
+            invite: {
+                buddyList: false,
+                renderTarget: 'overlay',
+                language: 'nl',
+                shareUrl: false,
+                defaultTab: 'Invite',
+                facebookTab: false,
+                friendSearch: {
+                    enable: false,
+                    endpoint: '',
+                    url: ''
+                },
+                currentUsername: 'michielvde'
+            }
+        }
+        );
+    */
+    // Compat functions
+    function onLogout() {
+        window.location.href = "/logout";
+    }
+
+    function createPaymentSession() {
+        openPayment();
+    }
+
+    function onAddCashButton() {
+        openPayment();
+    }
+
+    function param(initValue) {
+        this.value = initValue;
+    }
+
+    function calcWindowSize(winW, winH) {
+        winW.value = 800;
+        winH.value = 600;
+        if (document.body && document.body.offsetWidth) {
+            winW.value = document.body.offsetWidth;
+            winH.value = document.body.offsetHeight;
+        }
+        if (document.compatMode == 'CSS1Compat' && document.documentElement
+            && document.documentElement.offsetWidth) {
+            winW.value = document.documentElement.offsetWidth;
+            winH.value = document.documentElement.offsetHeight;
+        }
+        if (window.innerWidth && window.innerHeight) {
+            winW.value = window.innerWidth;
+            winH.value = window.innerHeight;
+        }
+    }
+
+    function showErrorPopup(url, containerName, addCloseButton, wndWidth, wndHeight, doScrolling, onCloseCallback) {
+        var iframeContainer = document.getElementById(containerName);
+
+        if (undefined != iframeContainer) {
+            window.document.body.removeChild(iframeContainer);
+        }
+
+        var containerWidth = wndWidth;
+        var containerHeight = wndHeight;
+
+        var winW = new param();
+        var winH = new param();
+        calcWindowSize(winW, winH);
+
+        var marginX = (winW.value - wndWidth) / 2;
+        if (marginX < 0)
+            marginX = 0;
+        var marginY = (winH.value - wndHeight) / 2;
+        //marginY += 100;
+        if (marginY < 20)
+            marginY = 20;
+
+        iframeContainer = document.createElement('div');
+        iframeContainer.id = containerName;
+        iframeContainer.style.position = "absolute";
+        iframeContainer.style.width = containerWidth + 'px';
+        iframeContainer.style.height = containerHeight + 'px';
+        iframeContainer.style.left = marginX + 'px';
+        iframeContainer.style.top = marginY + 'px';
+        iframeContainer.style.zIndex = "10";
+        iframeContainer.style.backgroundColor = "#DDDDDD";
+
+        window.document.body.appendChild(iframeContainer);
+
+        if (addCloseButton) {
+            var closeButton = document.createElement('a');
+            closeButton.style.zIndex = "20";
+            closeButton.className = 'closebox';
+            closeButton.href = '';
+
+            closeButton.style.display = 'block';
+            closeButton.style.position = 'absolute';
+            closeButton.style.top = '-15px';
+            closeButton.style.right = '-15px';
+            closeButton.style.overflow = 'hidden';
+            closeButton.style.textIndent = '-999em';
+            closeButton.style.width = '30px';
+            closeButton.style.height = '30px';
+            closeButton.style.background = 'transparent url(https://airville-696.bpsecure.com/assets/img/closebox.png?__cv=f2aace763cfcc4d6f3427a8a0842e500) no-repeat top right';
+
+            closeButton.onclick = function () {
+                showClient();
+                window.document.body.removeChild(iframeContainer);
+                if (onCloseCallback)
+                    onCloseCallback.call(null);
+                return false;
+            };
+            var closeText = document.createTextNode('Close');
+            closeButton.appendChild(closeText);
+            iframeContainer.appendChild(closeButton);
+        }
+
+        var progressBarWidth = 220;
+        var progressBarHeight = 19;
+        var progressBar = document.createElement('img');
+        progressBar.id = "popupProgress";
+        progressBar.src = "https://airville-696.bpsecure.com/style/global/ajax-loader.gif?__cv=57ca1a2085d82f0574e3ef740b9a5e00";
+        progressBar.style.position = "absolute";
+        progressBar.style.display = "block";
+        progressBar.style.left = Math.round(containerWidth / 2
+            - progressBarWidth / 2)
+            + 'px';
+        progressBar.style.top = Math.round(containerHeight / 2
+            - progressBarHeight / 2)
+            + 'px';
+        progressBar.style.width = progressBarWidth + 'px';
+        progressBar.style.height = progressBarHeight + 'px';
+        progressBar.style.zIndex = "11";
+        iframeContainer.appendChild(progressBar);
+
+        var theIframe = document.createElement('iframe');
+
+        theIframe.id = containerName + 'Iframe';
+        theIframe.name = containerName + 'Iframe';
+        theIframe.frameborder = 0;
+        theIframe.border = 0;
+        if (doScrolling)
+            theIframe.scrolling = 'auto';
+        else
+            theIframe.scrolling = 'no';
+        theIframe.style.width = '100%';
+        theIframe.style.height = '100%';
+        theIframe.style.display = 'block';
+        theIframe.style.margin = '0';
+        theIframe.style.padding = '0';
+        theIframe.style.zIndex = "12";
+        theIframe.style.position = "absolute";
+        theIframe.style.border = '0';
+        theIframe.src = url;
+
+        iframeContainer.appendChild(theIframe);
+    }
+
+    function onError() {
+        hideClient();
+        // Show toolbox error
+        showErrorPopup('/error/', 'errorContainer', false, 600, 400, false, null);
+    }
+
+    function sendJSONRequest(url, paramD, paramT) {
+        jQuery.get(
+            url,
+            { d: paramD, t: paramT },
+            function (data) {
+                try {
+                    var flash = document.getElementById("Skyrama_Flash");
+                    flash.onExternalResult(data);
+                }
+                catch (err) {
+                    //txt="There was an error on this page.\n\n";
+                    //txt+="Error description: " + err + "\n\n";
+                    //txt+="Click OK to continue.\n\n";
+                    //alert(txt);
+                }
+            }
+        );
+    }
+</script>
+</body>
+
 </html>

@@ -1,1 +1,972 @@
-.bgc a,.bgc div,.bgc fieldset,.bgc form,.bgc h1,.bgc h2,.bgc h3,.bgc h4,.bgc h5,.bgc h6,.bgc img,.bgc label,.bgc legend,.bgc li,.bgc ol,.bgc p,.bgc span,.bgc table,.bgc tbody,.bgc td,.bgc tfoot,.bgc th,.bgc thead,.bgc tr,.bgc ul{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}.bgc ul{list-style:none}.bgc table{border-collapse:collapse;border-spacing:0}.bgc{font-family:Arial,Helvetica,sans-serif;font-size:12px}.bgc h1,.bgc h2,.bgc h3{font-size:16px;font-weight:700}.bgc_closeButton{background:url('../img/bgcSprite-0.10.14.png');background-position:-291px -20px;width:9px;height:9px;cursor:pointer}.bgc a,.bgc a:link,.bgc a:visited{text-decoration:none;font-size:11px;color:#004b91}.bgc a:hover{text-decoration:underline}.bgc option,input,select{font-size:12px;font-family:Arial,Helvetica,sans-serif}.bgc input[type=email],.bgc input[type=password],.bgc input[type=text]{display:block;float:left;width:200px;padding:3px;border:1px #ccc solid}#bgc_fbconnect_wrapper input[type=password].bgcdw_errors,#bgc_fbconnect_wrapper input[type=text].bgcdw_errors,.bgc .bgcdw_errors_date,.bgc input[type=email].bgcdw_errors,.bgc input[type=password].bgcdw_errors,.bgc input[type=text].bgcdw_errors{background-color:#ffefef;border:1px solid red;box-shadow:0 0 3px red;color:#000}.bgc .bgcdw_date_fields.bgcdw_errors_date{background-color:transparent;background-image:none;height:21px;left:165px;margin:0;max-width:500px}.bgc .bgcdw_date_fields.bgcdw_errors_date div{border-left:1px solid #ccc;border-bottom:medium none;border-top:medium none;margin-left:0;margin-top:0}.bgc .bgcdw_date_fields.bgcdw_errors_date select{background-color:#ffefef}.bgc .bgcdw_date_fields.bgcdw_errors_date span{margin-top:-1px}.bgc .bgcdw_date_fields.bgcdw_errors_date div:first-child{border-left:none}.bgc .bgcdw_date_fields.bgcdw_errors_date div:last-child{border-right:none}.bgc .bgcdw_errors~input{border:5px solid red}.bgc input[type=checkbox].bgcdw_errors{box-shadow:0 0 2px 2px red}.bgc input[type=email].success,.bgc input[type=password].success,.bgc input[type=text].success{background-color:#efffef;border:2px solid #0a4;box-shadow:0 0 3px #0a4;color:#000}.bgc_button,.bgcdw_button{background-color:#eee;border:1px solid #aaa;border-radius:5px 5px 5px 5px;margin-right:11px;padding:2px 5px;cursor:pointer}.bgc_button:hover,.bgcdw_button:hover{background-color:#fff}#fb-connect-login-form-container,#pacman,.bgc_passwordReminder_container,.bgc_signup_container,.bgcdw_login_container{border:1px dotted #000;padding:15px;margin-left:auto;margin-right:auto;position:relative}.bgc fieldset{padding:0;margin:0;border:none}.bgc fieldset div{clear:both;height:30px}.bgc form{padding:0;margin:0}.bgc fieldset div label{display:block;float:left;line-height:25px;width:150px}.bgc .placeholder-fallback{color:#888}.bgcdw_login_container{width:326px}.bgc .bgc_login_form_authenticatorCode label,.bgc .bgcdw_login_form_login div label{width:100px}.bgc .bgcdw_login_container_remindpassword{margin-top:5px;padding-right:17px;text-align:right}.bgc .bgcdw_login_form_buttons{margin-top:16px;padding-right:5px;text-align:right}.bgc .bgcdw_captcha{margin-top:15px}.bgc .bgcdw_capcha_response_container label,.bgc .bgcdw_captcha_response_container label{display:block;float:left;line-height:25px;width:150px}.bgc .bgcdw_capcha_response_container,.bgc .bgcdw_captcha_response_container{margin-top:15px;padding-bottom:26px}.bgc .bgcdw_capcha_reload,.bgc .bgcdw_captcha_reload{cursor:pointer}#recaptcha_image{margin-bottom:15px;margin-top:15px}.bgc_signup_container{width:376px}.bgc div.bgc_password_indicator{display:block;width:200px;height:auto;padding-left:150px}.bgc div.bgc_password_indicator .progress_bar{height:auto;background:#f8f8f8;border:1px #ccc solid}.bgc div.bgc_password_indicator .progress_bar .progress{height:8px;transition:width 1s}.bgc div.bgc_password_indicator .status{height:auto;padding:2px 0;text-align:center;color:#000}.bgc .bgc_signup_form_signup div label{width:150px}.bgc .bgc_signup_form_legal label{float:left;font-size:11px;line-height:21px;margin-left:12px;width:328px}.bgc_signup_form_legal input[type=checkbox]{float:left;margin-left:0;margin-right:0}.bgc_signup_form_back{display:none}.bgc_signup_form_register{float:right;margin-right:17px}.bgc_input_text_day,.bgc_input_text_year{width:30px;float:left}.bgc .bgcdw_date_fields{float:left;clear:none;padding:0;height:30px}.bgc .bgcdw_date_separator{display:block;float:left;height:12px;width:3px;padding:6px 1px;margin-top:0;-webkit-margin-before:2px}.bgc .bgcdw_date_fields div{border:1px solid #ccc;clear:none;float:left;height:16px;width:57px;padding:0;padding-top:5px;margin-top:0;-webkit-margin-before:2px;-webkit-appearance:none}.bgc .bgcdw_date_fields .bgcdw_day_list{width:44px}.bgc .bgcdw_date_fields .bgcdw_month_list{width:91px}.bgc .bgcdw_date_fields select{background:none repeat scroll 0 0 transparent;border:1px none #000;clear:none;float:left;height:21px;margin:-5px -1px 0 0;padding:1px 1px 1px 0;width:100%}.bgc .bgcdw_date_fields select option{padding:2px}.bgc .bgc_signup_container_description{font-weight:700;padding-bottom:15px;padding-left:2px}.bgc .bgc_signup_form_legal{margin-top:10px;margin-bottom:10px}#bgc_signup_short_container .bgc_doi_hint,#bgc_signup_short_container .bgc_signup_form_legal,#bgc_signup_short_container .bgc_signup_gamblinghint{font-size:11px;line-height:16px}#bgc_signup_short_container .bgc_signup_gamblinghint{margin-bottom:10px;margin-top:10px}#bgc_signup_short_container .bgc_doi_hint{font-size:11px;display:block;width:358px}#bgc_signup_short_container .bgc_signup_form_legal a:before{content:'•';margin-right:3px;display:inline-block}#bgc_signup_short_container .bgc_signup_form_legal .bgc_signup_form_termsAndConditions a:before{content:'';margin-right:0}#bgc_signup_short_container .bgc_signup_form_legal .link_tac:before{content:''}#bgc_signup_short_container .bgc_signup_form_newsletterPartner label{font-size:11px;line-height:16px;margin-bottom:10px}#bgc_signup_short_container .bgcdw_captcha p{font-size:11px}.bgc_passwordReminder_container{width:500px;padding-bottom:20px}.bgc_passwordReminder_container.bgc input[type=text]{clear:left}.bgc fieldset.bgc_passwordReminder_form_passwordReminder{margin:0 0 24px;padding:0;height:70px}.bgc_passwordReminder_container_description{padding:0}.bgc_passwordReminder_container input[type=text]{clear:left;margin-right:5px;margin-top:2px}.bgc fieldset .bgc_passwordReminder_form_searchValue{padding-top:20px;padding-bottom:5px}.bgc fieldset div.bgc_passwordReminder_form_searchValue label{width:200px}.bgc div.bgcdw_errors{padding:0;margin:0;background-image:url('../img/bgcSprite-0.10.14.png');background-position:0 center;background-repeat:no-repeat;position:absolute;z-index:6;color:transparent;height:16px;width:16px;max-width:16px;right:9px;margin-top:4px;border:none}.bgc div.bgcdw_errors:hover{z-index:7}.bgc div.bgcdw_errors ul{display:none}.bgc .bgcdw_errors_flash ul,.bgc div.bgcdw_errors:hover ul{display:block;background-color:#fff;border:1px solid red;border-radius:5px;box-shadow:0 0 6px #aaa;color:#000;font-size:12px;height:auto;margin-left:30px;margin-top:-10px;max-width:300px;padding:10px;position:absolute;width:300px;z-index:5000}.bgc div.bgcdw_errors:hover ul:before{position:absolute;display:inline-block;border-top:7px solid transparent;border-right:15px solid #eee;border-bottom:7px solid transparent;border-right-color:red;left:-15px;top:10px;content:''}.bgc .bgcdw_errors[generated=true]+.bgcdw_errors{display:none}.bgc .bgcdw_errors_flash ul{background-image:url('../img/bgcSprite-0.10.14.png');background-position:8px -483px;background-repeat:no-repeat;margin:0 auto 20px;padding-left:30px;position:static;width:252px;z-index:auto}.bgc_passwordReminder_container .bgcdw_errors_flash ul{position:absolute;right:15px;top:313px;width:147px}.bgc input.bgcdw_errors~label{color:red}.bgc input.bgcdw_errors~label a{color:#a00}.bgc .bgcdw_date_fields div.bgcdw_errors{margin:-3px 0 0}.bgc_passwordReminder_container_form div.bgcdw_errors{left:230px;top:211px}.bgc .bgcdw_errors ul:hover .bgcdw_errors_usernameSuggestions,.bgc div.bgcdw_errors:hover ul.bgcdw_errors_usernameSuggestions{background-color:red;margin-top:10px;background-color:transparent;padding:5px;position:static;width:80%}.bgc .bgcdw_errors ul:hover .bgcdw_errors_usernameSuggestions li,.bgc div.bgcdw_errors:hover ul.bgcdw_errors_usernameSuggestions li{cursor:pointer;text-align:center;margin-bottom:0;display:block;height:18px}.bgc_fbconnect_overlay,.bgcdw_errors_all_wrapper{display:none;background:url(about:blank);zoom:1;background-color:rgba(0,0,0,.5);border:1px solid #ccc;position:fixed;top:0;left:0;height:100%;width:100%;z-index:200}.bgcdw_errors_all ul{list-style-type:none}.bgc .bgcdw_errors_usernameSuggestions{background-image:none;border:1px solid #ddd;border-radius:10px 10px 10px 10px;font-weight:700;margin-left:auto;margin-right:auto;margin-top:15px;padding:15px 15px 15px 0;text-align:center;width:50%}.bgc .bgcdw_errors_usernameSuggestions li{background-image:none;margin-bottom:10px;margin-left:0;cursor:pointer}.bgc .bgcdw_errors_usernameSuggestions li:hover{color:#666}.bgcdw_errors_all{background-color:#fff;border-radius:12px 12px 12px 12px;box-shadow:0 3px 23px 6px #333;list-style-type:none;margin-bottom:auto;margin-left:auto;margin-right:auto;padding:20px;width:500px;position:fixed;top:50%;left:50%;margin-left:-250px;margin-top:-250px;background-repeat:no-repeat;background-position:512px 12px}.bgcdw_errors_all li{background-image:url('../img/bgcSprite-0.10.14.png');background-position:0 center;background-repeat:no-repeat;margin-bottom:20px;padding-left:24px;width:90%}.bgcdw_errors_all li:last-child{margin-bottom:0}.bgcdw_errors_all_close{background-image:url('../img/bgcSprite-0.10.14.png');background-position:-99px 0;cursor:pointer;height:16px;position:absolute;right:12px;top:12px;width:16px}.gl_facebookButtonContainer{float:right;height:20px;border:1px solid;padding:0 6px;display:inline-block;cursor:pointer;position:relative;margin-right:15px}.gl_facebookButton .gl_facebookButton_input{border-color:#afafaf;background:#fff;border:0 none;font-size:12px;font-weight:700;display:inline-block;cursor:pointer;padding:1px 0 2px 0;overflow:visible}.bgc_facebookIcon{width:25px;height:25px;background:url('../img/bgcSprite-0.10.14.png');background-position:1px 0}.layout2 .bgc_facebookIcon{width:75px;height:22px;background:url('../img/bgcSprite-0.10.14.png');background-position:-24px 0}#fb-connect-login-form-container{width:482px}#fb-connect-login-form-container label{width:260px}#fb-connect-login-form-container .bgc_fbSignup_form_buttons{border-bottom:1px dotted #000;margin-bottom:25px;padding-bottom:17px;padding-top:20px}#fb-connect-login-form-container .bgc_button.bgc_fbConnect_form_connect,#fb-connect-login-form-container .bgc_button.bgc_fbSignup_form_signup{float:right;margin-right:17px}#fb-connect-login-form-container h1{margin-bottom:20px;color:#000}#fb-connect-login-form-container .teaser{margin-bottom:20px}#fb-connect-login-form-container .bgc_fbConnect_form_connect{margin-top:20px}.bgc_fbConnect_container_signup{font-family:Verdana,Arial,sans-serif;font-size:11px}.bgc .bgc_fbConnect_form_cancel,.bgc .bgc_fbSignup_form_cancel{display:none}#bgc_fbconnect_wrapper{-moz-background-clip:padding;-webkit-background-clip:padding;background-clip:padding-box;background-color:#fff;border:10px solid #ccc;border:10px solid rgba(255,255,255,.5);border-radius:15px;font-size:12px;left:50%;margin-left:-350px;margin-top:-227px;position:absolute;top:50%;width:700px;z-index:10010}#bgc_fbconnect_wrapper h1{color:#627aac;font-size:26px;letter-spacing:-1px;height:75px;margin-top:0;margin-bottom:15px;cursor:pointer}#bgc_fbconnect_wrapper .bgc_fbconnect_link,#bgc_fbconnect_wrapper .bgc_fbconnect_signup{border-top:1px solid #ccc;color:#666;float:left;padding:25px;position:relative;text-align:center;width:299px}#bgc_fbconnect_wrapper .bgc_fbconnect_link{border-right:1px solid #ccc}#bgc_fbconnect_wrapper .bgc_fbconnect_signup{border-left:1px solid #ccc;margin-left:-1px}#bgc_fbconnect_wrapper .teaser{height:40px;margin-top:0}#bgc_fbconnect_wrapper fieldset{border:none;padding:0}#bgc_fbconnect_wrapper input[type=password],#bgc_fbconnect_wrapper input[type=text],#bgc_fbconnect_wrapper label{width:208px}#bgc_fbconnect_wrapper label{display:inline-block;font-size:13px;margin-bottom:5px;margin-top:11px;float:none}#bgc_fbconnect_wrapper input[type=password],#bgc_fbconnect_wrapper input[type=text]{background:none repeat scroll 0 0 #fff;border:1px solid #bdc7d8;color:#333;font-size:13px;margin-top:1px;padding:3px;text-align:left;float:none;display:inline}#bgc_fbconnect_wrapper input[type=submit]{border-color:#29447e #29447e #1a356e;border-radius:0 0 0 0;cursor:pointer;display:inline-block;font-size:15px;font-weight:700;height:35px;margin-top:25px;margin-right:0;width:216px;padding-bottom:6px;background-color:#6079ab;color:#fff}#bgc_fbconnect_wrapper input[type=submit]:hover{background-color:#9099cb}#bgc_fbconnect_wrapper .bgc_fbconnect_disabled input[type=submit]:hover{background-color:#9099cb}#bgc_fbconnect_wrapper input[type=submit].bgc_fbSignup_form_signup{margin-top:92px}#bgc_fbconnect_wrapper fieldset div{height:auto}#bgc_fbconnect_wrapper div.bgcdw_errors{height:16px;margin:-22px 30px 0;text-align:left}#bgc_fbconnect_wrapper .bgc_fbconnect_disabled div.bgcdw_errors:hover ul{display:none}#bgc_fbconnect_wrapper .bgcdw_errors_flash{margin-bottom:-15px;margin-top:30px;text-align:left}#bgc_fbconnect_wrapper h1.trigger_active .arrow{background:0 0}#bgc_fbconnect_wrapper input[type=button].bgc_fbConnect_form_cancel,#bgc_fbconnect_wrapper input[type=button].bgc_fbSignup_form_cancel{display:none}#bgc_fbconnect_wrapper .close{color:#888;cursor:pointer;float:right;font-size:19px;font-weight:700;height:16px;margin-right:15px;margin-top:-35px;text-decoration:none;width:16px;background:url('../img/bgcSprite-0.10.14.png') no-repeat scroll -114px 0 transparent}#bgc_fbconnect_wrapper .bgc_button.bgc_fbConnect_form_connect,#bgc_fbconnect_wrapper .bgc_button.bgc_fbSignup_form_signup{float:none;margin-right:0}#bgc_fbconnect_wrapper .bgc_fbSignup_form_buttons{border:none;margin:0;padding:0}#bgc_fbconnect_name{color:#627aac;float:left;font-size:16px;margin-bottom:15px;margin-top:15px;text-align:center;width:100%}.bgc_fbconnect_overlay{display:block}.bgc_welcomeBack_container{border:1px dotted #000;width:326px;margin-left:auto;margin-right:auto;padding:10px 0}#bgc_welcomeBack_message,#bgc_welcomeBack_username{display:block;margin:auto;line-height:21px;width:inherit;text-align:center}.bgc_welcomeBack_container form{margin:auto;width:inherit}.bgc_welcomeBack_button{background-color:#eee;border-radius:5px;border:1px solid #aaa;cursor:pointer;display:block;margin-left:auto;margin-right:auto;margin-top:10px;margin-bottom:10px;padding:2px 10px 0;text-align:center}#bgc_welcomeBack_question{display:block;margin:auto;line-height:25px;width:inherit;text-align:center}#bgc_welcomeBack_logout{display:block;margin:auto;width:inherit;text-align:center}
+.bgc a,
+.bgc div,
+.bgc fieldset,
+.bgc form,
+.bgc h1,
+.bgc h2,
+.bgc h3,
+.bgc h4,
+.bgc h5,
+.bgc h6,
+.bgc img,
+.bgc label,
+.bgc legend,
+.bgc li,
+.bgc ol,
+.bgc p,
+.bgc span,
+.bgc table,
+.bgc tbody,
+.bgc td,
+.bgc tfoot,
+.bgc th,
+.bgc thead,
+.bgc tr,
+.bgc ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+
+.bgc ul {
+    list-style: none
+}
+
+.bgc table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+.bgc {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px
+}
+
+.bgc h1,
+.bgc h2,
+.bgc h3 {
+    font-size: 16px;
+    font-weight: 700
+}
+
+.bgc_closeButton {
+    background: url('../img/bgcSprite-0.10.14.png');
+    background-position: -291px -20px;
+    width: 9px;
+    height: 9px;
+    cursor: pointer
+}
+
+.bgc a,
+.bgc a:link,
+.bgc a:visited {
+    text-decoration: none;
+    font-size: 11px;
+    color: #004b91
+}
+
+.bgc a:hover {
+    text-decoration: underline
+}
+
+.bgc option,
+input,
+select {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.bgc input[type=email],
+.bgc input[type=password],
+.bgc input[type=text] {
+    display: block;
+    float: left;
+    width: 200px;
+    padding: 3px;
+    border: 1px #ccc solid
+}
+
+#bgc_fbconnect_wrapper input[type=password].bgcdw_errors,
+#bgc_fbconnect_wrapper input[type=text].bgcdw_errors,
+.bgc .bgcdw_errors_date,
+.bgc input[type=email].bgcdw_errors,
+.bgc input[type=password].bgcdw_errors,
+.bgc input[type=text].bgcdw_errors {
+    background-color: #ffefef;
+    border: 1px solid red;
+    box-shadow: 0 0 3px red;
+    color: #000
+}
+
+.bgc .bgcdw_date_fields.bgcdw_errors_date {
+    background-color: transparent;
+    background-image: none;
+    height: 21px;
+    left: 165px;
+    margin: 0;
+    max-width: 500px
+}
+
+.bgc .bgcdw_date_fields.bgcdw_errors_date div {
+    border-left: 1px solid #ccc;
+    border-bottom: medium none;
+    border-top: medium none;
+    margin-left: 0;
+    margin-top: 0
+}
+
+.bgc .bgcdw_date_fields.bgcdw_errors_date select {
+    background-color: #ffefef
+}
+
+.bgc .bgcdw_date_fields.bgcdw_errors_date span {
+    margin-top: -1px
+}
+
+.bgc .bgcdw_date_fields.bgcdw_errors_date div:first-child {
+    border-left: none
+}
+
+.bgc .bgcdw_date_fields.bgcdw_errors_date div:last-child {
+    border-right: none
+}
+
+.bgc .bgcdw_errors~input {
+    border: 5px solid red
+}
+
+.bgc input[type=checkbox].bgcdw_errors {
+    box-shadow: 0 0 2px 2px red
+}
+
+.bgc input[type=email].success,
+.bgc input[type=password].success,
+.bgc input[type=text].success {
+    background-color: #efffef;
+    border: 2px solid #0a4;
+    box-shadow: 0 0 3px #0a4;
+    color: #000
+}
+
+.bgc_button,
+.bgcdw_button {
+    background-color: #eee;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 5px 5px;
+    margin-right: 11px;
+    padding: 2px 5px;
+    cursor: pointer
+}
+
+.bgc_button:hover,
+.bgcdw_button:hover {
+    background-color: #fff
+}
+
+#fb-connect-login-form-container,
+#pacman,
+.bgc_passwordReminder_container,
+.bgc_signup_container,
+.bgcdw_login_container {
+    border: 1px dotted #000;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative
+}
+
+.bgc fieldset {
+    padding: 0;
+    margin: 0;
+    border: none
+}
+
+.bgc fieldset div {
+    clear: both;
+    height: 30px
+}
+
+.bgc form {
+    padding: 0;
+    margin: 0
+}
+
+.bgc fieldset div label {
+    display: block;
+    float: left;
+    line-height: 25px;
+    width: 150px
+}
+
+.bgc .placeholder-fallback {
+    color: #888
+}
+
+.bgcdw_login_container {
+    width: 326px
+}
+
+.bgc .bgc_login_form_authenticatorCode label,
+.bgc .bgcdw_login_form_login div label {
+    width: 100px
+}
+
+.bgc .bgcdw_login_container_remindpassword {
+    margin-top: 5px;
+    padding-right: 17px;
+    text-align: right
+}
+
+.bgc .bgcdw_login_form_buttons {
+    margin-top: 16px;
+    padding-right: 5px;
+    text-align: right
+}
+
+.bgc .bgcdw_captcha {
+    margin-top: 15px
+}
+
+.bgc .bgcdw_capcha_response_container label,
+.bgc .bgcdw_captcha_response_container label {
+    display: block;
+    float: left;
+    line-height: 25px;
+    width: 150px
+}
+
+.bgc .bgcdw_capcha_response_container,
+.bgc .bgcdw_captcha_response_container {
+    margin-top: 15px;
+    padding-bottom: 26px
+}
+
+.bgc .bgcdw_capcha_reload,
+.bgc .bgcdw_captcha_reload {
+    cursor: pointer
+}
+
+#recaptcha_image {
+    margin-bottom: 15px;
+    margin-top: 15px
+}
+
+.bgc_signup_container {
+    width: 376px
+}
+
+.bgc div.bgc_password_indicator {
+    display: block;
+    width: 200px;
+    height: auto;
+    padding-left: 150px
+}
+
+.bgc div.bgc_password_indicator .progress_bar {
+    height: auto;
+    background: #f8f8f8;
+    border: 1px #ccc solid
+}
+
+.bgc div.bgc_password_indicator .progress_bar .progress {
+    height: 8px;
+    transition: width 1s
+}
+
+.bgc div.bgc_password_indicator .status {
+    height: auto;
+    padding: 2px 0;
+    text-align: center;
+    color: #000
+}
+
+.bgc .bgc_signup_form_signup div label {
+    width: 150px
+}
+
+.bgc .bgc_signup_form_legal label {
+    float: left;
+    font-size: 11px;
+    line-height: 21px;
+    margin-left: 12px;
+    width: 328px
+}
+
+.bgc_signup_form_legal input[type=checkbox] {
+    float: left;
+    margin-left: 0;
+    margin-right: 0
+}
+
+.bgc_signup_form_back {
+    display: none
+}
+
+.bgc_signup_form_register {
+    float: right;
+    margin-right: 17px
+}
+
+.bgc_input_text_day,
+.bgc_input_text_year {
+    width: 30px;
+    float: left
+}
+
+.bgc .bgcdw_date_fields {
+    float: left;
+    clear: none;
+    padding: 0;
+    height: 30px
+}
+
+.bgc .bgcdw_date_separator {
+    display: block;
+    float: left;
+    height: 12px;
+    width: 3px;
+    padding: 6px 1px;
+    margin-top: 0;
+    -webkit-margin-before: 2px
+}
+
+.bgc .bgcdw_date_fields div {
+    border: 1px solid #ccc;
+    clear: none;
+    float: left;
+    height: 16px;
+    width: 57px;
+    padding: 0;
+    padding-top: 5px;
+    margin-top: 0;
+    -webkit-margin-before: 2px;
+    -webkit-appearance: none
+}
+
+.bgc .bgcdw_date_fields .bgcdw_day_list {
+    width: 44px
+}
+
+.bgc .bgcdw_date_fields .bgcdw_month_list {
+    width: 91px
+}
+
+.bgc .bgcdw_date_fields select {
+    background: none repeat scroll 0 0 transparent;
+    border: 1px none #000;
+    clear: none;
+    float: left;
+    height: 21px;
+    margin: -5px -1px 0 0;
+    padding: 1px 1px 1px 0;
+    width: 100%
+}
+
+.bgc .bgcdw_date_fields select option {
+    padding: 2px
+}
+
+.bgc .bgc_signup_container_description {
+    font-weight: 700;
+    padding-bottom: 15px;
+    padding-left: 2px
+}
+
+.bgc .bgc_signup_form_legal {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+#bgc_signup_short_container .bgc_doi_hint,
+#bgc_signup_short_container .bgc_signup_form_legal,
+#bgc_signup_short_container .bgc_signup_gamblinghint {
+    font-size: 11px;
+    line-height: 16px
+}
+
+#bgc_signup_short_container .bgc_signup_gamblinghint {
+    margin-bottom: 10px;
+    margin-top: 10px
+}
+
+#bgc_signup_short_container .bgc_doi_hint {
+    font-size: 11px;
+    display: block;
+    width: 358px
+}
+
+#bgc_signup_short_container .bgc_signup_form_legal a:before {
+    content: '•';
+    margin-right: 3px;
+    display: inline-block
+}
+
+#bgc_signup_short_container .bgc_signup_form_legal .bgc_signup_form_termsAndConditions a:before {
+    content: '';
+    margin-right: 0
+}
+
+#bgc_signup_short_container .bgc_signup_form_legal .link_tac:before {
+    content: ''
+}
+
+#bgc_signup_short_container .bgc_signup_form_newsletterPartner label {
+    font-size: 11px;
+    line-height: 16px;
+    margin-bottom: 10px
+}
+
+#bgc_signup_short_container .bgcdw_captcha p {
+    font-size: 11px
+}
+
+.bgc_passwordReminder_container {
+    width: 500px;
+    padding-bottom: 20px
+}
+
+.bgc_passwordReminder_container.bgc input[type=text] {
+    clear: left
+}
+
+.bgc fieldset.bgc_passwordReminder_form_passwordReminder {
+    margin: 0 0 24px;
+    padding: 0;
+    height: 70px
+}
+
+.bgc_passwordReminder_container_description {
+    padding: 0
+}
+
+.bgc_passwordReminder_container input[type=text] {
+    clear: left;
+    margin-right: 5px;
+    margin-top: 2px
+}
+
+.bgc fieldset .bgc_passwordReminder_form_searchValue {
+    padding-top: 20px;
+    padding-bottom: 5px
+}
+
+.bgc fieldset div.bgc_passwordReminder_form_searchValue label {
+    width: 200px
+}
+
+.bgc div.bgcdw_errors {
+    padding: 0;
+    margin: 0;
+    background-image: url('../img/bgcSprite-0.10.14.png');
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 6;
+    color: transparent;
+    height: 16px;
+    width: 16px;
+    max-width: 16px;
+    right: 9px;
+    margin-top: 4px;
+    border: none
+}
+
+.bgc div.bgcdw_errors:hover {
+    z-index: 7
+}
+
+.bgc div.bgcdw_errors ul {
+    display: none
+}
+
+.bgc .bgcdw_errors_flash ul,
+.bgc div.bgcdw_errors:hover ul {
+    display: block;
+    background-color: #fff;
+    border: 1px solid red;
+    border-radius: 5px;
+    box-shadow: 0 0 6px #aaa;
+    color: #000;
+    font-size: 12px;
+    height: auto;
+    margin-left: 30px;
+    margin-top: -10px;
+    max-width: 300px;
+    padding: 10px;
+    position: absolute;
+    width: 300px;
+    z-index: 5000
+}
+
+.bgc div.bgcdw_errors:hover ul:before {
+    position: absolute;
+    display: inline-block;
+    border-top: 7px solid transparent;
+    border-right: 15px solid #eee;
+    border-bottom: 7px solid transparent;
+    border-right-color: red;
+    left: -15px;
+    top: 10px;
+    content: ''
+}
+
+.bgc .bgcdw_errors[generated=true]+.bgcdw_errors {
+    display: none
+}
+
+.bgc .bgcdw_errors_flash ul {
+    background-image: url('../img/bgcSprite-0.10.14.png');
+    background-position: 8px -483px;
+    background-repeat: no-repeat;
+    margin: 0 auto 20px;
+    padding-left: 30px;
+    position: static;
+    width: 252px;
+    z-index: auto
+}
+
+.bgc_passwordReminder_container .bgcdw_errors_flash ul {
+    position: absolute;
+    right: 15px;
+    top: 313px;
+    width: 147px
+}
+
+.bgc input.bgcdw_errors~label {
+    color: red
+}
+
+.bgc input.bgcdw_errors~label a {
+    color: #a00
+}
+
+.bgc .bgcdw_date_fields div.bgcdw_errors {
+    margin: -3px 0 0
+}
+
+.bgc_passwordReminder_container_form div.bgcdw_errors {
+    left: 230px;
+    top: 211px
+}
+
+.bgc .bgcdw_errors ul:hover .bgcdw_errors_usernameSuggestions,
+.bgc div.bgcdw_errors:hover ul.bgcdw_errors_usernameSuggestions {
+    background-color: red;
+    margin-top: 10px;
+    background-color: transparent;
+    padding: 5px;
+    position: static;
+    width: 80%
+}
+
+.bgc .bgcdw_errors ul:hover .bgcdw_errors_usernameSuggestions li,
+.bgc div.bgcdw_errors:hover ul.bgcdw_errors_usernameSuggestions li {
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 0;
+    display: block;
+    height: 18px
+}
+
+.bgc_fbconnect_overlay,
+.bgcdw_errors_all_wrapper {
+    display: none;
+    background: url(about:blank);
+    zoom: 1;
+    background-color: rgba(0, 0, 0, .5);
+    border: 1px solid #ccc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 200
+}
+
+.bgcdw_errors_all ul {
+    list-style-type: none
+}
+
+.bgc .bgcdw_errors_usernameSuggestions {
+    background-image: none;
+    border: 1px solid #ddd;
+    border-radius: 10px 10px 10px 10px;
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    padding: 15px 15px 15px 0;
+    text-align: center;
+    width: 50%
+}
+
+.bgc .bgcdw_errors_usernameSuggestions li {
+    background-image: none;
+    margin-bottom: 10px;
+    margin-left: 0;
+    cursor: pointer
+}
+
+.bgc .bgcdw_errors_usernameSuggestions li:hover {
+    color: #666
+}
+
+.bgcdw_errors_all {
+    background-color: #fff;
+    border-radius: 12px 12px 12px 12px;
+    box-shadow: 0 3px 23px 6px #333;
+    list-style-type: none;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -250px;
+    background-repeat: no-repeat;
+    background-position: 512px 12px
+}
+
+.bgcdw_errors_all li {
+    background-image: url('../img/bgcSprite-0.10.14.png');
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    padding-left: 24px;
+    width: 90%
+}
+
+.bgcdw_errors_all li:last-child {
+    margin-bottom: 0
+}
+
+.bgcdw_errors_all_close {
+    background-image: url('../img/bgcSprite-0.10.14.png');
+    background-position: -99px 0;
+    cursor: pointer;
+    height: 16px;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 16px
+}
+
+.gl_facebookButtonContainer {
+    float: right;
+    height: 20px;
+    border: 1px solid;
+    padding: 0 6px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    margin-right: 15px
+}
+
+.gl_facebookButton .gl_facebookButton_input {
+    border-color: #afafaf;
+    background: #fff;
+    border: 0 none;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+    cursor: pointer;
+    padding: 1px 0 2px 0;
+    overflow: visible
+}
+
+.bgc_facebookIcon {
+    width: 25px;
+    height: 25px;
+    background: url('../img/bgcSprite-0.10.14.png');
+    background-position: 1px 0
+}
+
+.layout2 .bgc_facebookIcon {
+    width: 75px;
+    height: 22px;
+    background: url('../img/bgcSprite-0.10.14.png');
+    background-position: -24px 0
+}
+
+#fb-connect-login-form-container {
+    width: 482px
+}
+
+#fb-connect-login-form-container label {
+    width: 260px
+}
+
+#fb-connect-login-form-container .bgc_fbSignup_form_buttons {
+    border-bottom: 1px dotted #000;
+    margin-bottom: 25px;
+    padding-bottom: 17px;
+    padding-top: 20px
+}
+
+#fb-connect-login-form-container .bgc_button.bgc_fbConnect_form_connect,
+#fb-connect-login-form-container .bgc_button.bgc_fbSignup_form_signup {
+    float: right;
+    margin-right: 17px
+}
+
+#fb-connect-login-form-container h1 {
+    margin-bottom: 20px;
+    color: #000
+}
+
+#fb-connect-login-form-container .teaser {
+    margin-bottom: 20px
+}
+
+#fb-connect-login-form-container .bgc_fbConnect_form_connect {
+    margin-top: 20px
+}
+
+.bgc_fbConnect_container_signup {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 11px
+}
+
+.bgc .bgc_fbConnect_form_cancel,
+.bgc .bgc_fbSignup_form_cancel {
+    display: none
+}
+
+#bgc_fbconnect_wrapper {
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 10px solid #ccc;
+    border: 10px solid rgba(255, 255, 255, .5);
+    border-radius: 15px;
+    font-size: 12px;
+    left: 50%;
+    margin-left: -350px;
+    margin-top: -227px;
+    position: absolute;
+    top: 50%;
+    width: 700px;
+    z-index: 10010
+}
+
+#bgc_fbconnect_wrapper h1 {
+    color: #627aac;
+    font-size: 26px;
+    letter-spacing: -1px;
+    height: 75px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    cursor: pointer
+}
+
+#bgc_fbconnect_wrapper .bgc_fbconnect_link,
+#bgc_fbconnect_wrapper .bgc_fbconnect_signup {
+    border-top: 1px solid #ccc;
+    color: #666;
+    float: left;
+    padding: 25px;
+    position: relative;
+    text-align: center;
+    width: 299px
+}
+
+#bgc_fbconnect_wrapper .bgc_fbconnect_link {
+    border-right: 1px solid #ccc
+}
+
+#bgc_fbconnect_wrapper .bgc_fbconnect_signup {
+    border-left: 1px solid #ccc;
+    margin-left: -1px
+}
+
+#bgc_fbconnect_wrapper .teaser {
+    height: 40px;
+    margin-top: 0
+}
+
+#bgc_fbconnect_wrapper fieldset {
+    border: none;
+    padding: 0
+}
+
+#bgc_fbconnect_wrapper input[type=password],
+#bgc_fbconnect_wrapper input[type=text],
+#bgc_fbconnect_wrapper label {
+    width: 208px
+}
+
+#bgc_fbconnect_wrapper label {
+    display: inline-block;
+    font-size: 13px;
+    margin-bottom: 5px;
+    margin-top: 11px;
+    float: none
+}
+
+#bgc_fbconnect_wrapper input[type=password],
+#bgc_fbconnect_wrapper input[type=text] {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #bdc7d8;
+    color: #333;
+    font-size: 13px;
+    margin-top: 1px;
+    padding: 3px;
+    text-align: left;
+    float: none;
+    display: inline
+}
+
+#bgc_fbconnect_wrapper input[type=submit] {
+    border-color: #29447e #29447e #1a356e;
+    border-radius: 0 0 0 0;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    height: 35px;
+    margin-top: 25px;
+    margin-right: 0;
+    width: 216px;
+    padding-bottom: 6px;
+    background-color: #6079ab;
+    color: #fff
+}
+
+#bgc_fbconnect_wrapper input[type=submit]:hover {
+    background-color: #9099cb
+}
+
+#bgc_fbconnect_wrapper .bgc_fbconnect_disabled input[type=submit]:hover {
+    background-color: #9099cb
+}
+
+#bgc_fbconnect_wrapper input[type=submit].bgc_fbSignup_form_signup {
+    margin-top: 92px
+}
+
+#bgc_fbconnect_wrapper fieldset div {
+    height: auto
+}
+
+#bgc_fbconnect_wrapper div.bgcdw_errors {
+    height: 16px;
+    margin: -22px 30px 0;
+    text-align: left
+}
+
+#bgc_fbconnect_wrapper .bgc_fbconnect_disabled div.bgcdw_errors:hover ul {
+    display: none
+}
+
+#bgc_fbconnect_wrapper .bgcdw_errors_flash {
+    margin-bottom: -15px;
+    margin-top: 30px;
+    text-align: left
+}
+
+#bgc_fbconnect_wrapper h1.trigger_active .arrow {
+    background: 0 0
+}
+
+#bgc_fbconnect_wrapper input[type=button].bgc_fbConnect_form_cancel,
+#bgc_fbconnect_wrapper input[type=button].bgc_fbSignup_form_cancel {
+    display: none
+}
+
+#bgc_fbconnect_wrapper .close {
+    color: #888;
+    cursor: pointer;
+    float: right;
+    font-size: 19px;
+    font-weight: 700;
+    height: 16px;
+    margin-right: 15px;
+    margin-top: -35px;
+    text-decoration: none;
+    width: 16px;
+    background: url('../img/bgcSprite-0.10.14.png') no-repeat scroll -114px 0 transparent
+}
+
+#bgc_fbconnect_wrapper .bgc_button.bgc_fbConnect_form_connect,
+#bgc_fbconnect_wrapper .bgc_button.bgc_fbSignup_form_signup {
+    float: none;
+    margin-right: 0
+}
+
+#bgc_fbconnect_wrapper .bgc_fbSignup_form_buttons {
+    border: none;
+    margin: 0;
+    padding: 0
+}
+
+#bgc_fbconnect_name {
+    color: #627aac;
+    float: left;
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-align: center;
+    width: 100%
+}
+
+.bgc_fbconnect_overlay {
+    display: block
+}
+
+.bgc_welcomeBack_container {
+    border: 1px dotted #000;
+    width: 326px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 0
+}
+
+#bgc_welcomeBack_message,
+#bgc_welcomeBack_username {
+    display: block;
+    margin: auto;
+    line-height: 21px;
+    width: inherit;
+    text-align: center
+}
+
+.bgc_welcomeBack_container form {
+    margin: auto;
+    width: inherit
+}
+
+.bgc_welcomeBack_button {
+    background-color: #eee;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 2px 10px 0;
+    text-align: center
+}
+
+#bgc_welcomeBack_question {
+    display: block;
+    margin: auto;
+    line-height: 25px;
+    width: inherit;
+    text-align: center
+}
+
+#bgc_welcomeBack_logout {
+    display: block;
+    margin: auto;
+    width: inherit;
+    text-align: center
+}

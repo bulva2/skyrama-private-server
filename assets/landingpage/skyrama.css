@@ -2,8 +2,38 @@
  * Skyrama CSS
  */
 
+@media screen and (min-width: 1800px) {
+    #wrapper {
+        zoom: 1.15;
+        -moz-transform-origin: top center;
+        -moz-transform: scale(1.15);
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    #wrapper {
+        zoom: 1.58;
+        -moz-transform-origin: top center;
+        -moz-transform: scale(1.58);
+    }
+}
+
+@media screen and (min-width: 3000px) {
+    #wrapper {
+        zoom: 2.58;
+        -moz-transform-origin: top center;
+        -moz-transform: scale(2.58);
+    }
+}
+
 /* Basics */
-html, body, div, form, fieldset, legend, label {
+html,
+body,
+div,
+form,
+fieldset,
+legend,
+label {
     margin: 0;
     padding: 0;
 }
@@ -13,9 +43,14 @@ table {
     border-spacing: 0;
 }
 
-th, td {
+th,
+td {
     text-align: left;
     vertical-align: top;
+}
+
+#gl_footer_element_copyright {
+    font-size: 8px;
 }
 
 img {
@@ -408,17 +443,20 @@ body {
     text-align: center;
 }
 
-.externalInfo .gameInfoShort p, .externalInfo .gameInfo p {
+.externalInfo .gameInfoShort p,
+.externalInfo .gameInfo p {
     font-weight: normal;
 }
 
-.externalInfo .gameInfoShort h1, .externalInfo .gameInfo h1 {
+.externalInfo .gameInfoShort h1,
+.externalInfo .gameInfo h1 {
     font-size: 1.3em;
     font-weight: bold;
     padding: 5px 0;
 }
 
-.externalInfo .gameInfoShort .seoCloseTag, .externalInfo .gameInfo .seoCloseTag {
+.externalInfo .gameInfoShort .seoCloseTag,
+.externalInfo .gameInfo .seoCloseTag {
     float: right;
     cursor: pointer;
     height: 20px;
@@ -501,11 +539,13 @@ body {
     width: 220px;
 }
 
-.externalRegister .register-content .bgc_signup_form_birthday, .externalRegister .register-content .bgc_signup_form_birthdate {
+.externalRegister .register-content .bgc_signup_form_birthday,
+.externalRegister .register-content .bgc_signup_form_birthdate {
     visibility: hidden;
 }
 
-.externalRegister .register-content .bgc_signup_container_form .bgc_signup_form_termsAndConditions label, .externalRegister .register-content .bgc_signup_container_form .bgc_signup_form_newsletter label {
+.externalRegister .register-content .bgc_signup_container_form .bgc_signup_form_termsAndConditions label,
+.externalRegister .register-content .bgc_signup_container_form .bgc_signup_form_newsletter label {
     font-size: 12px;
     font-weight: bold;
     height: 30px;
@@ -513,7 +553,8 @@ body {
     padding: 4px 10px 4px 0;
 }
 
-.externalRegister .register-content .bgc_signup_container_form .bgc_signup_form_termsAndConditions #bgc_signup_form_termsAndConditions, .externalRegister .register-content .bgc_signup_container_form .bgc_signup_form_newsletter #bgc_signup_form_newsletter {
+.externalRegister .register-content .bgc_signup_container_form .bgc_signup_form_termsAndConditions #bgc_signup_form_termsAndConditions,
+.externalRegister .register-content .bgc_signup_container_form .bgc_signup_form_newsletter #bgc_signup_form_newsletter {
     margin: 10px 10px 0 0;
 }
 
@@ -522,7 +563,8 @@ body {
     text-decoration: underline;
 }
 
-.externalRegister .register-content .bgc_signup_container_form .bgc_signup_form_buttons .bgc_signup_form_back, .externalRegister .register-content .bgc_signup_container_form .bgc_signup_form_buttons .bgc_signup_form_register {
+.externalRegister .register-content .bgc_signup_container_form .bgc_signup_form_buttons .bgc_signup_form_back,
+.externalRegister .register-content .bgc_signup_container_form .bgc_signup_form_buttons .bgc_signup_form_register {
     background-image: url(https://cdn.jsdelivr.net/gh/Mima2370/skyrama-private-server/assets/style/global/buttons/btn_115x27_normal.png?__cv=689d5011febbe1d1e5f9f830a86fcf00);
     background-color: transparent;
     color: white;
@@ -558,7 +600,8 @@ body {
     left: -65px;
 }
 
-.externalRegister .register-content .bgcdw_login_container_form .bgc_erroroverlay_box_header_close, .externalRegister .register-content #bgc_signup_container .bgc_erroroverlay_box_header_close {
+.externalRegister .register-content .bgcdw_login_container_form .bgc_erroroverlay_box_header_close,
+.externalRegister .register-content #bgc_signup_container .bgc_erroroverlay_box_header_close {
     background-image: url(https://cdn.jsdelivr.net/gh/Mima2370/skyrama-private-server/assets/style/global/buttons/btn_close.png?__cv=a8ed3f3dfc30eadbf9e559cd8c077200);
     height: 54px;
     position: absolute;
@@ -568,7 +611,8 @@ body {
     width: 55px;
 }
 
-.externalRegister .register-content .bgcdw_login_container_form .bgc_erroroverlay_box_header_title, .externalRegister .register-content #bgc_signup_container .bgc_erroroverlay_box_header_title {
+.externalRegister .register-content .bgcdw_login_container_form .bgc_erroroverlay_box_header_title,
+.externalRegister .register-content #bgc_signup_container .bgc_erroroverlay_box_header_title {
     display: block;
     font-family: Arial;
     font-size: 24px;
@@ -576,16 +620,19 @@ body {
     margin: 50px 0 10px;
 }
 
-.externalRegister .register-content ul, .external .register-content li {
+.externalRegister .register-content ul,
+.external .register-content li {
     list-style: none outside none;
     padding-left: 0;
 }
 
-.externalRegister .register-content .bgcdw_login_container_form .bgc_erroroverlay_box_body_list li, .externalRegister .register-content #bgc_signup_container .bgc_erroroverlay_box_body_list li {
+.externalRegister .register-content .bgcdw_login_container_form .bgc_erroroverlay_box_body_list li,
+.externalRegister .register-content #bgc_signup_container .bgc_erroroverlay_box_body_list li {
     padding: 5px 0;
 }
 
-.externalRegister .register-content .bgcdw_login_container_form .bgc_erroroverlay_blackout, .externalRegister .register-content #bgc_signup_container .bgc_erroroverlay_blackout {
+.externalRegister .register-content .bgcdw_login_container_form .bgc_erroroverlay_blackout,
+.externalRegister .register-content #bgc_signup_container .bgc_erroroverlay_blackout {
     height: 100%;
     left: 0;
     opacity: 0.7;
@@ -666,7 +713,8 @@ body {
     height: 60px;
 }
 
-.externalForgotPassword .forgotPassword-content .signup_back, .externalForgotPassword .forgotPassword-content .signup_submit {
+.externalForgotPassword .forgotPassword-content .signup_back,
+.externalForgotPassword .forgotPassword-content .signup_submit {
     background-image: url(https://cdn.jsdelivr.net/gh/Mima2370/skyrama-private-server/assets/style/global/buttons/btn_115x27_normal.png?__cv=689d5011febbe1d1e5f9f830a86fcf00);
     background-color: transparent;
     height: 28px;
@@ -710,7 +758,8 @@ body {
     font-size: 30px;
 }
 
-.externalLogout .logout .buttonGameLink, .externalLogout .logout .buttonPortalLink {
+.externalLogout .logout .buttonGameLink,
+.externalLogout .logout .buttonPortalLink {
     background-image: url(https://cdn.jsdelivr.net/gh/Mima2370/skyrama-private-server/assets/style/global/buttons/btn_180x27_normal.png?__cv=958adb89a256f24d66a27a011b54b100);
     background-color: transparent;
     width: 180px;
@@ -732,7 +781,8 @@ body {
     text-decoration: underline;
 }
 
-.externalLogout .logout .buttonGameLink:hover, .externalLogout .logout .buttonPortalLink:hover {
+.externalLogout .logout .buttonGameLink:hover,
+.externalLogout .logout .buttonPortalLink:hover {
     background-image: url(https://cdn.jsdelivr.net/gh/Mima2370/skyrama-private-server/assets/style/global/buttons/btn_180x27_hover.png?__cv=d6c86d77933d4922420cef1c4cc99e00);
 }
 
@@ -940,7 +990,8 @@ body {
     left: 78px;
 }
 
-.internalHome .payment, .internalHome .profile {
+.internalHome .payment,
+.internalHome .profile {
     position: absolute;
     top: 0;
     left: 0;
@@ -948,7 +999,8 @@ body {
     height: 600px;
 }
 
-.internalHome .payment .payment-close, .internalHome .profile .profile-close {
+.internalHome .payment .payment-close,
+.internalHome .profile .profile-close {
     background-image: url(https://cdn.jsdelivr.net/gh/Mima2370/skyrama-private-server/assets/style/global/buttons/btn_close.png?__cv=a8ed3f3dfc30eadbf9e559cd8c077200);
     position: absolute;
     right: -10px;
@@ -1029,7 +1081,7 @@ body {
     padding: 0;
 }
 
-body.externalHome  {
+body.externalHome {
     text-align: center;
     font: 12px Verdana, sans-serif;
     font-weight: bold;
@@ -1048,7 +1100,7 @@ body.externalHome  {
     text-align: center;
     line-height: 60px;
     font-size: 16px;
-    display:none;
+    display: none;
 }
 
 #wrapper {
@@ -1095,9 +1147,17 @@ body.externalHome  {
     background: url(https://cdn.jsdelivr.net/gh/Mima2370/skyrama-private-server/assets/landingpage/global/background/seperator_top_bar.png?__cv=b2cef89db5d044af23d1642b78ddcf00) top left no-repeat;
 }
 
-.separator.one   { left: 450px; }
-.separator.two   { left: 763px; }
-.separator.three { left: 1500px; }
+.separator.one {
+    left: 450px;
+}
+
+.separator.two {
+    left: 763px;
+}
+
+.separator.three {
+    left: 1500px;
+}
 
 #language-select {
     position: absolute;
@@ -1111,7 +1171,7 @@ body.externalHome  {
 
 #language-current {
     width: 155px;
-    height:23px;
+    height: 23px;
     background: url(https://cdn.jsdelivr.net/gh/Mima2370/skyrama-private-server/assets/landingpage/global/controls/language_input.png?__cv=133bd827972a9626ff6c572b1d60c500) top left no-repeat;
 }
 
@@ -1203,7 +1263,7 @@ body.externalHome  {
     height: 23px;
     line-height: 23px;
     width: 102px;
-    height:23px;
+    height: 23px;
     background: url(https://cdn.jsdelivr.net/gh/Mima2370/skyrama-private-server/assets/landingpage/global/controls/input_login.png?__cv=824033baef3e58c1b0e1cde603659e00) top left no-repeat;
     border: none;
     position: absolute;
@@ -1236,7 +1296,7 @@ input[type=submit].bgcdw_login_form_login {
 
 .bgc a.bgcdw_remindpassword {
     color: #000000;
-    font-family: Verdana,sans-serif;
+    font-family: Verdana, sans-serif;
     font-size: 11px;
     font-weight: normal;
     height: 34px;
@@ -1262,7 +1322,8 @@ input[type=submit].bgcdw_login_form_login {
 }
 
 #loginForm_default_container {
-    display: none; /* we hide that if JS isn't available */
+    display: none;
+    /* we hide that if JS isn't available */
 }
 
 #bookmark #bookmark_text {
@@ -1385,7 +1446,9 @@ input[type=submit].bgcdw_login_form_login {
     color: #003399;
 }
 
-#desc-texts .desc-text-1, #desc-texts .desc-text-2, #desc-texts .desc-text-3 {
+#desc-texts .desc-text-1,
+#desc-texts .desc-text-2,
+#desc-texts .desc-text-3 {
     height: 36px;
     width: 280px;
     padding: 11px 10px;
@@ -1469,9 +1532,7 @@ input[type=submit].bgcdw_login_form_login {
     margin-bottom: 50px;
 }
 
-#bgc_signup_short_container fieldset.bgc_signup_form_captcha {
-
-}
+#bgc_signup_short_container fieldset.bgc_signup_form_captcha {}
 
 #bgc_signup_short_container fieldset.bgc_signup_form_legal {
     padding-top: 10px;
@@ -1596,76 +1657,76 @@ body.externalHome #gl_footer img {
 
 /** custom scrollbar **/
 .scrollbar-wrapper {
-  clear: both;
-  margin: 0;
-  width: 646px;
-  height: 109px;
+    clear: both;
+    margin: 0;
+    width: 646px;
+    height: 109px;
 }
 
 .scrollbar-wrapper .scrollbar {
-  position: relative;
-  float: right;
-  width: 12px;
-  height: 90px;
-  top: 12px;
+    position: relative;
+    float: right;
+    width: 12px;
+    height: 90px;
+    top: 12px;
 }
 
 .scrollbar-wrapper .scrollbar .track-top {
-  position: absolute;
-  top: -12px;
-  left: 0px;
-  width: 12px;
-  height: 8px;
-  background: url(https://cdn.jsdelivr.net/gh/Mima2370/skyrama-private-server/assets/landingpage/global/controls/scroll_arrow_top.png?__cv=8821def2648d23642f3af10fae018a00) top left no-repeat;
+    position: absolute;
+    top: -12px;
+    left: 0px;
+    width: 12px;
+    height: 8px;
+    background: url(https://cdn.jsdelivr.net/gh/Mima2370/skyrama-private-server/assets/landingpage/global/controls/scroll_arrow_top.png?__cv=8821def2648d23642f3af10fae018a00) top left no-repeat;
 }
 
 .scrollbar-wrapper .scrollbar .track-bottom {
-  position: absolute;
-  bottom: -12px;
-  left: 0px;
-  width: 12px;
-  height: 8px;
-  background: url(https://cdn.jsdelivr.net/gh/Mima2370/skyrama-private-server/assets/landingpage/global/controls/scroll_arrow_down.png?__cv=fc90db331dcc8031f78d2e3e8b80bc00) top left no-repeat;
+    position: absolute;
+    bottom: -12px;
+    left: 0px;
+    width: 12px;
+    height: 8px;
+    background: url(https://cdn.jsdelivr.net/gh/Mima2370/skyrama-private-server/assets/landingpage/global/controls/scroll_arrow_down.png?__cv=fc90db331dcc8031f78d2e3e8b80bc00) top left no-repeat;
 }
 
 .scrollbar-wrapper .scrollbar .track {
-  width: 11px;
-  position: relative;
-  background: url(https://cdn.jsdelivr.net/gh/Mima2370/skyrama-private-server/assets/landingpage/global/controls/scrollbar.png?__cv=7a35b2dea1f6971f886b717a358ccc00) top left repeat-y;
+    width: 11px;
+    position: relative;
+    background: url(https://cdn.jsdelivr.net/gh/Mima2370/skyrama-private-server/assets/landingpage/global/controls/scrollbar.png?__cv=7a35b2dea1f6971f886b717a358ccc00) top left repeat-y;
 }
 
 .scrollbar-wrapper .scrollbar .track .thumb {
-  height: 41px;
-  width: 11px;
-  cursor: pointer;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0px;
-  background: url(https://cdn.jsdelivr.net/gh/Mima2370/skyrama-private-server/assets/landingpage/global/controls/scroller.png?__cv=0afef9d54a81a23309e6c875f394ec00) center center no-repeat;
+    height: 41px;
+    width: 11px;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    background: url(https://cdn.jsdelivr.net/gh/Mima2370/skyrama-private-server/assets/landingpage/global/controls/scroller.png?__cv=0afef9d54a81a23309e6c875f394ec00) center center no-repeat;
 }
 
 .scrollbar-wrapper .scrollbar .track .thumb .end {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 
 .scrollbar-wrapper .viewport {
-  width: 600px;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
+    width: 600px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
 .scrollbar-wrapper .viewport .overview {
-  list-style: none;
-  position: absolute;
-  left: 0;
-  top: 0;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .scrollbar-wrapper .disable {
-  display: none;
+    display: none;
 }
 
 
@@ -1807,7 +1868,9 @@ body.externalHome #gl_footer img {
     padding-left: 1em;
 }
 
-#errorLayer, #successLayer, .bgcdw_errors_flash {
+#errorLayer,
+#successLayer,
+.bgcdw_errors_flash {
     color: #fff;
 }
 
@@ -1825,7 +1888,7 @@ body.externalHome #gl_footer img {
     margin-top: 50px;
 }
 
-#errorLayer.signup_errorLayer div.signup_errorMessages{
+#errorLayer.signup_errorLayer div.signup_errorMessages {
     width: 500px;
     margin: 0 50px;
 }
@@ -1850,24 +1913,21 @@ body.externalHome #gl_footer img {
     right: 5px;
 }
 
-.bgcdw_login_form_username, .bgcdw_login_form_password {
+.bgcdw_login_form_username,
+.bgcdw_login_form_password {
     width: 115px;
     position: relative;
     float: left;
-    clear:none !important;
+    clear: none !important;
 }
 
 fieldset.bgcdw_login_form_login {
     width: 240px;
 }
 
-.bgcdw_login_container .bgcdw_login_form_password .bgcdw_errors {
+.bgcdw_login_container .bgcdw_login_form_password .bgcdw_errors {}
 
-}
-
-.bgcdw_login_container .bgcdw_login_form_username .bgcdw_errors {
-
-}
+.bgcdw_login_container .bgcdw_login_form_username .bgcdw_errors {}
 
 #bgc_signup_short_container .bgc_signup_form_username .bgcdw_errors {
     top: -2px;
@@ -1890,7 +1950,9 @@ fieldset.bgcdw_login_form_login {
 }
 
 /** colorbox styles **/
-#colorbox, #cboxOverlay, #cboxWrapper {
+#colorbox,
+#cboxOverlay,
+#cboxWrapper {
     left: 0;
     position: absolute;
     top: 0;
@@ -1903,7 +1965,8 @@ fieldset.bgcdw_login_form_login {
     width: 100%;
 }
 
-#cboxMiddleLeft, #cboxBottomLeft {
+#cboxMiddleLeft,
+#cboxBottomLeft {
     clear: left;
 }
 
@@ -1934,24 +1997,30 @@ fieldset.bgcdw_login_form_login {
     padding: 10px;
 }
 
-#cboxLoadingOverlay, #cboxLoadingGraphic {
+#cboxLoadingOverlay,
+#cboxLoadingGraphic {
     left: 0;
     position: absolute;
     top: 0;
     width: 100%;
 }
-#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
+
+#cboxPrevious,
+#cboxNext,
+#cboxClose,
+#cboxSlideshow {
     cursor: pointer;
 }
 
-#cboxPrevious, #cboxNext {
+#cboxPrevious,
+#cboxNext {
     top: 50%;
     margin-top: -45px;
 }
 
 #cboxOverlay {
-    background-color: rgb(0,0,0);
-    background: rgba(0,0,0,.5);
+    background-color: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, .5);
     background-color: transparent\9;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#55000000, endColorstr=#55000000);
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#55000000, endColorstr=#55000000)";
@@ -2052,7 +2121,9 @@ fieldset.bgcdw_login_form_login {
     width: 40px;
 }
 
-#tour { display: none; }
+#tour {
+    display: none;
+}
 
 
 
@@ -2063,7 +2134,7 @@ fieldset.bgcdw_login_form_login {
     height: 95px;
     width: 300px;
     border: 1px solid red;
-    background-color: rgba(205,125,65,0.6);
+    background-color: rgba(205, 125, 65, 0.6);
     text-align: center;
 }
 
@@ -2085,7 +2156,7 @@ fieldset.bgcdw_login_form_login {
     left: 435px;
     height: 34px;
     width: 150px;
-    font-family: Verdana,sans-serif;
+    font-family: Verdana, sans-serif;
     font-size: 11px;
     font-weight: normal;
     text-align: left;

@@ -4,36 +4,43 @@ Skyrama Private Server is an attempt to create a custom server for Skyrama, a Bi
 
 Keep in mind that although passwords should be properly encrypted/hashed, it is recommended to not use a password you use for any other services.
 
-## Legal Issues
+## Legal Notice / DMCA
 
-This repository is made for educational purposes only and will not be monetized in any way. This project is not meant to replace Skyrama in any way. Please contact us for any legal problems, and we'll take appropriate action. You can contact us on our Discord server at https://discord.gg/uFhJRvggZy.
+This repository is made for educational and archival purposes only and will not be monetized in any way. We are NOT affiliated nor sponsored by Bigpoint GmbH. All game content, imagery, and trademarks are the property of Bigpoint GmbH. This project is not meant to replace Skyrama in any way. Please contact us for any legal problems, and we'll quickly take appropriate action. You can contact the repository owner on this Discord server: https://discord.gg/uFhJRvggZy.
 
 ## How to play
 
-You will either need a browser that supports Flash (and Flash Player itself), or an all-in-one browser like this [Pre-Bundled Firefox with Flash Player](https://www.reddit.com/r/flash/comments/kwdwci/simple_solution_to_use_flash_after_january_12_2021) or this [Flash Browser](https://github.com/radubirsan/FlashBrowser/releases/download/v0.81/v0.81_FlashBrowser_x64.exe).
+You will either need a browser that supports Flash (and Flash Player itself). We do NOT have own launcher so we cannot vouch fully for any available options but we have a good experience with:
+- Older Chromium with Flash Player installed:
+[Older Chromium 82](https://cdn.discordapp.com/attachments/1422989171009654804/1469480781263929354/chromium-82-0-4050.zip?ex=698878df&is=6987275f&hm=25f577b9b57b065f6d8bc25e3bd661461de0c9dcfb53d86675f1ce7f55663b41&)
+[Compatible Flash Player](https://cdn.discordapp.com/attachments/1422989171009654804/1469480781679427616/flashplayer32_0r0_371_winpep_debug.exe?ex=698878df&is=6987275f&hm=4f1a4562d2445bf20d2606f7a79e385a166b9d25d2ef05243465821be319f9d4&)
+- Standalone Flash Browser, no Flash Player required (may contain ads):
+[Flash Browser](https://github.com/radubirsan/FlashBrowser/releases/download/v0.81/v0.81_FlashBrowser_x64.exe).
 
 ## Where can I try it out?
 
-We currently host our own test server here: https://crimson-goat-16936.zap.cloud/ ^^ (credits and huge thanks to Bulva2 for managing this!). Keep in mind that we may reset your progress on this server at any time during development.
+We currently host our own test server here: https://crimson-goat-16936.zap.cloud/
+The server may be down anytime for maintenance or updates, use different login/password than you use in skyrama!
 
 Also join us on [Discord](https://discord.gg/uFhJRvggZy)!
 
 ## How to run the code locally
 
-1. Install PostgreSQL and create a database
-2. Change the database connection uri in config.cfg
-3. Run setup_database.py
-4. Install the libraries from requirements.txt
-5. Start server.py :)
-
-You will need a browser that supports Flash (and Flash Player itself) to run the game. Alternatively, you can try checking out this [Pre-Bundled Firefox with Flash Player](https://www.reddit.com/r/flash/comments/kwdwci/simple_solution_to_use_flash_after_january_12_2021/)
+1. Obtain Skyrama .swf file, we cannot provide this on GitHub
+2. Place Skyrama .swf file into assets folder
+3. Install PostgreSQL and create a database
+4. Change the database connection uri in config.cfg
+5. Run setup_database.py
+6. Run scripts\setup.bat (.sh)
+7. Run scripts\start.bat (.sh)
+8. Enjoy!
 
 ## Known issues
-- Some quest progress won't save
-- Rare race condition where to_location_id is null
-- Leaving the tutorial early causes bugs.
-- Inconsistent int usage in JSON data. Might cause issues later on when we switch to the database
-- (and a bunch more xD)
+- Some anticheat checks are currently incorrectly set-up
+- Buying hangar and upgrading it right away may cause a crash
+- Recycling Center isn't implemented
+- Some daily quest may be incorrectly setup
+- Probably much more xD
 
 ## List of quest task types
 These are all the types of tasks that can be in a quest. Doing an unimplemented one will work in-game, but after refreshing all further progress on quests will be gone! The tutorial (as well as the mid-game "cargo tutorial") and most important other types are working as well.

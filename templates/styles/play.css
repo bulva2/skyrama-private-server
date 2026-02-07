@@ -1,12 +1,29 @@
-html,
-body,
-div,
-form,
-fieldset,
-legend,
-label {
-  margin: 0;
-  padding: 0;
+@media screen and (min-width: 2000px) {
+    .internalHome {
+        zoom: 1.5; 
+        -moz-transform: scale(1.5);
+        -moz-transform-origin: top center;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 3000px) {
+    .internalHome {
+        zoom: 2.3;
+        -moz-transform: scale(2.3);
+    }
+}
+
+body {
+    background-size: cover;
+    min-height: 100vh;
+    font-family: 'Fira Sans';
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    background-color: #8cbf3e;
 }
 
 table {
@@ -22,12 +39,6 @@ td {
 
 img {
   border: 0;
-}
-
-body {
-  font: 12px Arial, sans-serif;
-  font-weight: bold;
-  background-color: #8cbf3e;
 }
 
 .footer {
@@ -113,32 +124,91 @@ body {
 
 .internalHome .user-info {
   position: absolute;
-  top: 125px;
-  left: 160px;
+  top: 123px;
+  left: 165px;
 }
 
 .internalHome .socialIcons {
   position: absolute;
-  top: 117px;
+  top: 119px;
   left: 840px;
 }
 
 .internalHome .socialIcons div {
   float: left;
-  margin-right: 10px;
-  font-size: 20px;
+  margin-right: 2px;
+  font-size: 15px;
 }
 
-.internalHome .socialIcons div i {
+#discord {
   color: #fff;
-  background-color: #223057;
+  background-color: #174fe8;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 3px;
+}
+
+#github {
+  color: #fff;
+  background-color: #808080;
+  padding: 5px;
+  border-radius: 3px;
 }
 
 .internalHome .footer {
   position: absolute;
   text-align: center;
-  top: 764px;
+  top: 768px;
   width: 1225px;
+}
+
+.flash-placeholder-container {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.flash-box {
+    text-align: center;
+    font-family: 'Fira Sans', 'Segoe UI', sans-serif;
+    padding: 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    max-width: 420px;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #ff5722;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    animation: spin 1.5s linear infinite;
+    margin: 0 auto 20px;
+}
+
+.flash-box h3 {
+    color: #222;
+    margin: 0 0 12px 0;
+    font-weight: 600;
+}
+
+.flash-box p {
+    color: #5f6368;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 0.5vh;
+}
+
+.highlight {
+    color: #000;
+    font-weight: 600;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
