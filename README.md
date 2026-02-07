@@ -2,8 +2,6 @@
 
 Skyrama Private Server is an attempt to create a custom server for Skyrama, a Bigpoint game. Not all features have been implemented, and those that are likely contain bugs. All help is welcome!
 
-The way this server works is, to say, kind of primitive. Data gets stored in JSON files directly on your pc instead of using a proper database. However, it runs just fine! We plan to switch to a database when we implement all the game functionality.
-
 Keep in mind that although passwords should be properly encrypted/hashed, it is recommended to not use a password you use for any other services.
 
 ## Legal Issues
@@ -16,13 +14,17 @@ You will either need a browser that supports Flash (and Flash Player itself), or
 
 ## Where can I try it out?
 
-We currently host our own test server here: https://blue-hippopotamus-84002.zap.cloud/ ^^ (credits and huge thanks to Bulva2 for managing this!). Keep in mind that we may reset your progress on this server at any time during development.
+We currently host our own test server here: https://crimson-goat-16936.zap.cloud/ ^^ (credits and huge thanks to Bulva2 for managing this!). Keep in mind that we may reset your progress on this server at any time during development.
 
 Also join us on [Discord](https://discord.gg/uFhJRvggZy)!
 
 ## How to run the code locally
 
-Install the libraries from requirements.txt and start server.py. It's as simple as that!
+1. Install PostgreSQL and create a database
+2. Change the database connection uri in config.cfg
+3. Run setup_database.py
+4. Install the libraries from requirements.txt
+5. Start server.py :)
 
 You will need a browser that supports Flash (and Flash Player itself) to run the game. Alternatively, you can try checking out this [Pre-Bundled Firefox with Flash Player](https://www.reddit.com/r/flash/comments/kwdwci/simple_solution_to_use_flash_after_january_12_2021/)
 
@@ -30,7 +32,6 @@ You will need a browser that supports Flash (and Flash Player itself) to run the
 - Some quest progress won't save
 - Rare race condition where to_location_id is null
 - Leaving the tutorial early causes bugs.
-- Lucky luggages pop up each time, even when there are no free spins.
 - Inconsistent int usage in JSON data. Might cause issues later on when we switch to the database
 - (and a bunch more xD)
 
