@@ -1,7 +1,7 @@
 import logging
 import time
-from src.debug import send_webhook
-from src.utils import substract_resources
+from src.debug import report_issue
+from src.utils import subtract_resources
 from src.utils import get_crafting_level_from_xp
 
 def handle_craftingInstant(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
@@ -17,14 +17,13 @@ def handle_craftingInstant(request, user_id, rpcResult, items_to_add_to_obj, jso
             process_data = slot.get("processData", -1)
 
             if process_data == -1:
-                send_webhook(json_data, user_id, request)
+                report_issue("warning", f"crafting_instant: processData is -1 for user {user_id} in craftingInstant command")
                 rpcResult["i"] = -1
                 return
 
             # Prevent cheating by injecting different planeId
             if p["planeId"] != process_data["itemId"]:
-                # To-do: Replace with anticheat webhook
-                send_webhook(json_data, user_id, request, additional_data=process_data)
+                report_issue("warning", f"crafting_instant: User {user_id} tried to instantly collect crafting for item {p['planeId']}, but processData has itemId {process_data['itemId']}, possible cheat attempt")
                 rpcResult["i"] = -1
                 return
             
@@ -33,7 +32,7 @@ def handle_craftingInstant(request, user_id, rpcResult, items_to_add_to_obj, jso
             time_remaining = process_data["endtime"] - int(time.time())
             skip_cost = max(1, min(48, (time_remaining // 1800) + 1))
 
-            substract_resources(json_data, rpcResult, air_cash=skip_cost)
+            subtract_resources(json_data, rpcResult, air_cash=skip_cost)
             logging.debug(f"Deducted {skip_cost} air coins for crafting skip for user {user_id}")
 
             slot["processData"] = []
@@ -43,14 +42,14 @@ def handle_craftingInstant(request, user_id, rpcResult, items_to_add_to_obj, jso
             break
 
     if not found:
-        send_webhook(json_data, user_id, request)
+        report_issue("warning", f"crafting_instant: No active crafting slot found for user {user_id} in craftingInstant command")
         rpcResult["i"] = -1
         return
     
     currentCraftings = json_data.get("userCurrentCraftings", -1)
 
     if currentCraftings == -1:
-        send_webhook(json_data, user_id, request)
+        report_issue("warning", f"crafting_instant: userCurrentCraftings is -1 for user {user_id} in craftingInstant command")
         rpcResult["i"] = -1
         return
     
@@ -61,7 +60,7 @@ def handle_craftingInstant(request, user_id, rpcResult, items_to_add_to_obj, jso
             hangar_id = hangar["id"]
             break
     if hangar_id is None:
-        logging.critical(f"Large hangar not found for user with id {user_id}")
+        report_issue("error", f"crafting_instant: Large hangar not found for user {user_id} in craftingInstant command")
         rpcResult["i"] = -1
         return
 

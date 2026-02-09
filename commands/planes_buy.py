@@ -1,5 +1,5 @@
 import time
-from src.utils import substract_resources
+from src.utils import subtract_resources
 
 def handle_planesBuy(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
@@ -8,7 +8,7 @@ def handle_planesBuy(request, user_id, rpcResult, items_to_add_to_obj, json_data
 
     for i in init_data["planeTypes"]:
         if int(i["id"]) == int(request["p"]["typeId"]):
-            substract_resources(json_data, rpcResult, i["air_coins_cost"], i["air_cash_cost"], i["event_currency_cost"])
+            subtract_resources(json_data, rpcResult, i["air_coins_cost"], i["air_cash_cost"], i["event_currency_cost"])
 
             if rpcResult["i"] == -1:
                 rpcResult["r"] = "Not enough resources. Forcing client to reset."

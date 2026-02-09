@@ -1,38 +1,48 @@
 import json
-import time
 import requests
 import logging
-from pathlib import Path
 from src.config_handler import get_config
 
-_FLASH_ERRORS_PATH = Path(__file__).parents[1] / "flasherrors.json"
 _CONFIG = get_config()
-_ERROR_WEBHOOK_URL = _CONFIG.get("Webhooks", "error_webhook", fallback=None)
+_ERROR_WEBHOOK_URL = _CONFIG.get("Webhooks", "error_webhook", fallback="")
 
-def save_error(user_id: int, request_payload: dict) -> None:
-    if _FLASH_ERRORS_PATH.exists():
-        try:
-            with _FLASH_ERRORS_PATH.open("r", encoding="utf-8") as src:
-                existing = json.load(src)
-            if not isinstance(existing, list):
-                existing = []
-        except (json.JSONDecodeError, OSError):
-            existing = []
+def report_issue(severity: str, msg: str):
+    severity = severity.lower()
+
+    if severity == "debug":
+        logging.debug(msg)
+    elif severity == "info":
+        logging.info(msg)
+    elif severity == "warning":
+        logging.warning(msg)
+    elif severity == "error":
+        logging.error(msg)
+    elif severity == "critical":
+        logging.critical(msg)
     else:
-        existing = []
+        logging.warning(msg)
 
-    entry = {
-        "timestamp": int(time.time()),
-        "userId": user_id,
-        "payload": request_payload,
+    if severity in ["warning", "error", "critical"] and _ERROR_WEBHOOK_URL:
+        send_short_webhook(f"**{severity.upper()}**: {msg}")
+
+def send_short_webhook(content: str, url: str = _ERROR_WEBHOOK_URL) -> None:
+    if url is None or url.strip() == "":
+        logging.warning("No valid webhook URL provided in the config file. Skipping short webhook.")
+        return
+
+    data = {
+        "content": content,
+        "username": "Skyrama Private Server - Problem Reporter",
     }
-    existing.append(entry)
 
-    with _FLASH_ERRORS_PATH.open("w", encoding="utf-8") as dst:
-        json.dump(existing, dst, ensure_ascii=False, indent=2)
+    try:
+        result = requests.post(url, json=data, timeout=5)
+        result.raise_for_status()
+    except requests.exceptions.RequestException as err:
+        logging.error(f"Error sending short webhook: {err}")
 
 # https://discord.com/developers/docs/resources/message#embed-object
-def send_webhook(json_data: dict, user_id: int, request_payload: dict, url: str = _ERROR_WEBHOOK_URL, additional_data: dict = None) -> None:
+def send_trackflash_webhook(json_data: dict, user_id: int, request_payload: dict, url: str = _ERROR_WEBHOOK_URL, additional_data: dict = None) -> None:
     if url is None or url.strip() == "":
         logging.warning("No valid webhook URL provided in the config file. Skipping error webhook.")
         return

@@ -1,3 +1,5 @@
+from src.debug import report_issue
+from src.utils import subtract_resources
 import time
 
 def calculate_cargo_capacity(level, init_data):
@@ -29,8 +31,10 @@ def handle_cargoshopsBuyCargo(request, user_id, rpcResult, items_to_add_to_obj, 
             cargo_capacity = calculate_cargo_capacity(json_data["playerData"]["cargo_capacity_level"], init_data)
             if (i["num_in_warehouse"] + amount) > cargo_capacity or json_data["playerData"]["air_cash"] < cost:
                 # Possibly a cheat, disconnect the user
+                report_issue("warning", f"cargoshops_buyCargo: User {user_id} attempted to buy cargo type id {request['p']['cargo_types_id']} with amount {amount} which exceeds capacity {cargo_capacity} or has insufficient air cash, possible cheat attempt")
                 rpcResult["i"] = -1
+                return
             else:
+                    subtract_resources(json_data, rpcResult, air_cash=cost)                    
                     i["num_in_warehouse"] += amount
-                    json_data["playerData"]["air_cash"] -= cost
             break

@@ -1,4 +1,5 @@
 import time
+from src.debug import report_issue
 
 def handle_backgroundsMakeCurrent(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
@@ -17,4 +18,6 @@ def handle_backgroundsMakeCurrent(request, user_id, rpcResult, items_to_add_to_o
             found = True
 
     if not found:
+        report_issue("warning", f"backgrounds_makeCurrent: Background type id {request['p']['background_types_id']} not found for user {user_id}")
         rpcResult["i"] = -1
+        return

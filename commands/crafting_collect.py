@@ -1,6 +1,6 @@
 import logging
 import time
-from src.debug import send_webhook
+from src.debug import report_issue
 from src.utils import get_crafting_level_from_xp
 
 def handle_craftingCollect(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
@@ -16,7 +16,7 @@ def handle_craftingCollect(request, user_id, rpcResult, items_to_add_to_obj, jso
             process_data = slot.get("processData", -1)
 
             if process_data == -1:
-                send_webhook(json_data, user_id, request)
+                report_issue("warning", f"crafting_collect: processData is -1 for user {user_id} in craftingCollect command")
                 rpcResult["i"] = -1
                 return
             
@@ -25,8 +25,7 @@ def handle_craftingCollect(request, user_id, rpcResult, items_to_add_to_obj, jso
             time_remaining = process_data["endtime"] - int(time.time())
 
             if time_remaining > 0:
-                # To-do: Replace with anticheat webhook
-                send_webhook(json_data, user_id, request, additional_data=process_data)
+                report_issue("warning", f"crafting_collect: User {user_id} tried to collect crafting with {time_remaining} seconds remaining, possible skip attempt")
                 rpcResult["i"] = -1
                 return
 
@@ -37,14 +36,14 @@ def handle_craftingCollect(request, user_id, rpcResult, items_to_add_to_obj, jso
             break
 
     if not found:
-        send_webhook(json_data, user_id, request)
+        report_issue("warning", f"crafting_collect: No active crafting slot found for user {user_id} in craftingCollect command")
         rpcResult["i"] = -1
         return
     
     currentCraftings = json_data.get("userCurrentCraftings", -1)
 
     if currentCraftings == -1:
-        send_webhook(json_data, user_id, request)
+        report_issue("warning", f"crafting_collect: userCurrentCraftings is -1 for user {user_id} in craftingCollect command")
         rpcResult["i"] = -1
         return
     
@@ -55,7 +54,7 @@ def handle_craftingCollect(request, user_id, rpcResult, items_to_add_to_obj, jso
             hangar_id = hangar["id"]
             break
     if hangar_id is None:
-        logging.critical(f"Large hangar not found for user with id {user_id}")
+        report_issue("error", f"crafting_collect: Large hangar not found for user {user_id} in craftingCollect command")
         rpcResult["i"] = -1
         return
     

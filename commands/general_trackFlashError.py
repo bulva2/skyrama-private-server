@@ -1,6 +1,6 @@
 import logging
 import time
-from src.debug import save_error, send_webhook
+from src.debug import send_trackflash_webhook
 
 def handle_trackFlashError(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
@@ -10,11 +10,6 @@ def handle_trackFlashError(request, user_id, rpcResult, items_to_add_to_obj, jso
     logging.warning(f"Flash error tracked for user {user_id}: {request}")
 
     try:
-        send_webhook(json_data, user_id, request)
+        send_trackflash_webhook(json_data, user_id, request)
     except Exception as error:
         logging.error(f"general.trackFlashError: failed to send webhook: {error}")
-
-    try:
-        save_error(user_id, request)
-    except Exception as error:
-        logging.error(f"general.trackFlashError: failed to persist flash error: {error}")

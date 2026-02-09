@@ -1,3 +1,4 @@
+from src.debug import report_issue
 import time
 
 def handle_planesScrap(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
@@ -8,6 +9,7 @@ def handle_planesScrap(request, user_id, rpcResult, items_to_add_to_obj, json_da
 
     if json_data["playerData"]["scrap_block_time"] > int(time.time()):
        # Possible cheat, disconnect user
+       report_issue("warning", f"planes_scrap: User {json_data['playerData']['user_name']} (ID: {user_id}) attempted to scrap a plane while on cooldown. Block time remaining: {json_data['playerData']['scrap_block_time'] - int(time.time())} seconds.")
        rpcResult["i"] = -1
     
     for idx, plane in enumerate(json_data["planes"]):

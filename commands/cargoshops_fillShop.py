@@ -1,3 +1,4 @@
+from src.debug import report_issue
 import time
 
 def handle_cargoshopsFillShop(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
@@ -30,7 +31,9 @@ def handle_cargoshopsFillShop(request, user_id, rpcResult, items_to_add_to_obj, 
                 lowest_stock = int(l["num_in_warehouse"])
 
     if lowest_stock == 0: # Possible cheat, disconnect user
+        report_issue("warning", f"cargoshops_fillShop: User {user_id} attempted to fill cargo shop id {request['p']['shops_id']} but has no stock of needed cargo types {needed_cargo_types}, possible cheat attempt")
         rpcResult["i"] = -1
+        return
 
     for l in json_data["cargo"]:
         if int(l["cargo_types_id"]) in needed_cargo_types:

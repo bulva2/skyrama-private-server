@@ -1,3 +1,4 @@
+from src.debug import report_issue
 import time
 
 def handle_landmarksBuy(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
@@ -30,6 +31,8 @@ def handle_landmarksBuy(request, user_id, rpcResult, items_to_add_to_obj, json_d
 
             # Landmark is already bought, disconnect user
             if int(i["landmark_types_id"]) == int(request["p"]["landmark_types_id"]):
+                report_issue("warning", f"landmarks_buy: User {user_id} already owns landmark type id {request['p']['landmark_types_id']}, possible duplicate buy attempt")
                 rpcResult["i"] = -1
+                return
             
         json_data["landmarks"].append({"landmark_types_id": request["p"]["landmark_types_id"],"in_storage": "0","player_id": user_id})

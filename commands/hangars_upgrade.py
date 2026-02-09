@@ -1,3 +1,4 @@
+from src.debug import report_issue
 import time
 
 def handle_hangarsUpgrade(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
@@ -32,6 +33,8 @@ def handle_hangarsUpgrade(request, user_id, rpcResult, items_to_add_to_obj, json
     air_cash_cost = int(costs[i+1])
 
     if json_data["playerData"]["air_cash"] < air_cash_cost:
+        report_issue("warning", f"hangars_upgrade: User {user_id} attempted to upgrade hangar id {request['p']['id']} to upgrade level {current_upgrade_level + 1} but has insufficient air cash ({json_data['playerData']['air_cash']}), possible cheat attempt")
         rpcResult["i"] = -1
+        return
 
     json_data["playerData"]["air_cash"] -= air_cash_cost

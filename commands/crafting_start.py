@@ -1,5 +1,5 @@
 import time
-from src.debug import send_webhook
+from src.debug import report_issue
 
 def handle_craftingStart(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
@@ -11,7 +11,7 @@ def handle_craftingStart(request, user_id, rpcResult, items_to_add_to_obj, json_
     userCraftingSlots = json_data.get("userCraftingSlots", None)
 
     if userCraftingSlots is None:
-        send_webhook(json_data, user_id, request)
+        report_issue("warning", f"crafting_start: userCraftingSlots is None for user {user_id} in craftingStart command")
         rpcResult["i"] = -1
         return
     
@@ -35,7 +35,7 @@ def handle_craftingStart(request, user_id, rpcResult, items_to_add_to_obj, json_
             break
 
     if activeSlot is None:
-        send_webhook(json_data, user_id, request)
+        report_issue("warning", f"crafting_start: No active crafting slot found for user {user_id} in craftingStart command")
         rpcResult["i"] = -1
         return
     
@@ -43,12 +43,14 @@ def handle_craftingStart(request, user_id, rpcResult, items_to_add_to_obj, json_
     # Level check
     crafting_level = json_data["playerData"]["crafting_level"] + 1 # Stored from 0 to 4 instead of 1 to 5 like the init data
     if crafting_level < init_data["planeBlueprints"][str(p["processItemId"])]["Level"]:
+        report_issue("warning", f"crafting_start: Crafting level {crafting_level} too low for item {p['processItemId']} for user {user_id}")
         rpcResult["i"] = -1
         return
     # Items check
     num_steps = json_data["userCurrentCraftings"][str(p["processItemId"])]["CraftingLevel"]
     num_required_steps = len(init_data["planeBlueprints"][str(p["processItemId"])]["planeParts"]) # Always 4, but doesn't hurt to check
     if num_steps != num_required_steps:
+        report_issue("warning", f"crafting_start: User {user_id} has {num_steps} crafting steps for item {p['processItemId']}, but {num_required_steps} are required")
         rpcResult["i"] = -1
         return
 

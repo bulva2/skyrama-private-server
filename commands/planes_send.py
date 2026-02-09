@@ -2,7 +2,8 @@ import logging
 import random
 import time
 import src.user_manager as user_manager
-from src.debug import send_webhook
+from src.debug import report_issue
+from src.utils import subtract_resources
 
 def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
@@ -69,7 +70,7 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
 
                 if plane.get("to_location_id") is None:
                     plane["souvenir_types_id"] = -1
-                    logging.warning("planes_send: to_location_id is None! This has to be a race condition!")
+                    report_issue("warning", f"planes_send: to_location_id is None for plane id {plane['id']}, User: {json_data['playerData']['user_name']} (ID: {user_id}). This has to be a race condition!")
                 else:
                     for g in json_data["locations"]:
                         if int(g["id"]) == int(plane["to_location_id"]):
@@ -116,16 +117,13 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
 
             if (int(request["t"]) - int(plane["start_service_time"])) < ((int(service_time) / 3) * 2) or int(plane["start_service_time"]) == 0:
                 if int(request["t"]) > int(json_data["playerData"]["aycqs_start_time"]):
-                    json_data["playerData"]["air_cash"] = int(json_data["playerData"]["air_cash"]) - int(quick_start_coins_cost)
+                    subtract_resources(json_data, rpcResult, air_cash = quick_start_coins_cost)
 
             if int(plane["to_player_id"]) != 800:  # ID 800 = NPC player
                 json2_data = user_manager.load_save_by_id(plane["to_player_id"])
 
                 if json2_data == -1 or not isinstance(json2_data, dict):
-                    logging.error(
-                        f"planes_send: Cannot load buddy data for player {plane['to_player_id']}, plane will be treated as NPC plane"
-                    )
-                    send_webhook(json_data, user_id, request, additional_data=plane)
+                    report_issue("error", f"planes_send: Cannot load buddy data for player {plane['to_player_id']}, plane will be treated as NPC plane")
                     json2_data = None
                 else:
                     last_id = int(json2_data["playerData"]["next_object_id"])

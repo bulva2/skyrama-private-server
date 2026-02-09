@@ -1,4 +1,4 @@
-import logging
+from src.debug import report_issue
 import time
 import random
 
@@ -13,12 +13,12 @@ def handle_craftingProcessCraftingStep(request, user_id, rpcResult, items_to_add
     initDataPlane = None
 
     if userCurrentCraftings is None:
-        logging.critical(f"userCurrentCraftings is None in crafting_processCraftingStep for user_id {user_id}")
+        report_issue("error", f"userCurrentCraftings is None in crafting_processCraftingStep for user_id {user_id}")
         rpcResult["i"] = -1
         return
 
     if userCraftingSlots is None:
-        logging.critical(f"userCraftingSlots is None in crafting_processCraftingStep for user_id {user_id}")
+        report_issue("error", f"userCraftingSlots is None in crafting_processCraftingStep for user_id {user_id}")
         rpcResult["i"] = -1
         return
 
@@ -28,7 +28,7 @@ def handle_craftingProcessCraftingStep(request, user_id, rpcResult, items_to_add
             break
 
     if initDataPlane is None:
-        logging.critical(f"initDataPlane is None in crafting_processCraftingStep for user_id {user_id}, planeId {planeId}")
+        report_issue("error", f"initDataPlane is None in crafting_processCraftingStep for user_id {user_id}, planeId {planeId}")
         rpcResult["i"] = -1
         return
     
@@ -57,7 +57,7 @@ def handle_craftingProcessCraftingStep(request, user_id, rpcResult, items_to_add
 
     # Check for lack of aircoins (possible cheating)
     if (json_data["playerData"]["air_coins"] - upgradePrice) < 0:
-        logging.critical(f"Player {json_data['playerData']['user_name']} ({user_id}) tried to upgrade crafting but didn't have enough aircoins. He is most likely cheating!")
+        report_issue("warning", f"crafting_processCraftingStep: Player {json_data['playerData']['user_name']} ({user_id}) tried to upgrade crafting but didn't have enough aircoins. He is most likely cheating!")
 
         # Revert cheated changes (needs testing)
         if userCurrentCraftings[planeId]["CraftingLevel"] - 1 == 0:
@@ -75,7 +75,7 @@ def handle_craftingProcessCraftingStep(request, user_id, rpcResult, items_to_add
             playerAmount = json_data["materials"][matIdStr]
 
             if playerAmount < requiredAmount:
-                logging.critical(f"Player {json_data['playerData']['user_name']} ({user_id}) tried to upgrade crafting but didn't have enough materials (id {matIdStr}). He is most likely cheating!")
+                report_issue("warning", f"crafting_processCraftingStep: Player {json_data['playerData']['user_name']} ({user_id}) tried to upgrade crafting but didn't have enough of material id {matIdStr}. He is most likely cheating!")
 
                 # Revert cheated changes (needs testing)
                 if userCurrentCraftings[planeId]["CraftingLevel"] - 1 == 0:

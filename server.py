@@ -16,9 +16,11 @@ from starlette.middleware.sessions import SessionMiddleware
 from starlette.middleware.cors import CORSMiddleware
 
 from commands import *
+
 from bundle import TEMPLATES_DIR, STUB_DIR, STYLES_DIR, ASSETS_DIR
 from src.utils import get_level_from_xp
 from src.database import init_database
+from src.cache_manager import initialize_cache
 import src.debug as debug
 import src.user_manager as user_manager
 import src.config_handler as config_handler
@@ -59,6 +61,10 @@ async def lifespan(app: FastAPI):
     with open(os.path.join(p, "data", "global_init_data.json.def"), "r", encoding="utf-8") as f:
         init_data = json.loads(f.read())
 
+        # Cache static data from global_init_data for quick access
+        # To-do, add more caches as needed
+        initialize_cache(init_data)
+
     with open(os.path.join(p, "data", "obj.json.def"), "r", encoding="utf-8") as f:
         obj_data = json.loads(f.read())
         
@@ -78,6 +84,12 @@ async def lifespan(app: FastAPI):
     use_https = config.getboolean("ServerSettings", "use_https", fallback=False)
     protocol = "https" if use_https else "http"
     server_ip = f"{protocol}://{host}:{port}"
+
+    if config.get("Webhooks", "error_webhook", fallback="") == "":
+        logging.warning("No error webhook configured, errors will not be sent to Discord!")
+
+    if config.get("Webhooks", "registration_webhook", fallback="") == "":
+        logging.warning("No registration webhook configured, registrations will not be sent to Discord!")
 
     logging.info(f"Server initialized on {server_ip}")
     yield
@@ -177,35 +189,6 @@ available_commands = {
     "general.trackFlashError": handle_trackFlashError,
     "crafting.collect": handle_craftingCollect
 }
-
-# Disabled for testing purposes, keep disabled for now -bulva2
-REORDER_COMMANDS = False
-def resolve_command_dependencies(command_data):
-    if not REORDER_COMMANDS:
-        return command_data
-    
-    plane_setState_commands = []
-    plane_send_commands = []
-    plane_takeMeans_commands = []
-    other_commands = []
-    
-    for command in command_data:
-        if command["m"] == "planes.setState" and "id" in command.get("p", {}):
-            plane_setState_commands.append(command)
-        elif (command["m"] == "planes.send" or command["m"] == "planes.sendback") and "id" in command.get("p", {}):
-            plane_send_commands.append(command)
-        elif command["m"] == "planes.takeMeans" and "plane_id" in command.get("p", {}):
-            plane_takeMeans_commands.append(command)
-        else:
-            other_commands.append(command)
-    
-    ordered_commands = []
-    ordered_commands.extend(other_commands)
-    ordered_commands.extend(plane_setState_commands)
-    ordered_commands.extend(plane_send_commands)
-    ordered_commands.extend(plane_takeMeans_commands)
-    
-    return ordered_commands
 
 # Routes
 
@@ -413,10 +396,9 @@ async def handle_request(
             start_level = get_level_from_xp(json_data["playerData"]["xp"], init_data["playerData"]["xp_level_caps"])
             
             total_items_to_add_to_obj = []
-            ordered_command_data = resolve_command_dependencies(command_data)
             
             command = {}
-            for cmd in ordered_command_data:
+            for cmd in command_data:
                 command = cmd # Keep track of last command
                 if command["m"] in available_commands:
                     logging.info(f"Command {command['m']} handled")

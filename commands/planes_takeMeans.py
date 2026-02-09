@@ -1,6 +1,6 @@
 import math
 import time
-import logging
+from src.debug import report_issue
 from src.easy_events import get_coin_multiplier, get_xp_multiplier
 
 def calculate_warehouse_capacity(upgrade_level, init_data):
@@ -32,12 +32,12 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                     location_id = int(plane["to_location_id"])
                 else:
                     # Race condition detected - setState hasn't run yet
-                    logging.warning(f"planes_takeMeans: Race condition detected for own plane id {plane['id']} - to_location_id missing/None!")
+                    report_issue("warning", f"planes_takeMeans: Race condition detected for own plane id {plane['id']} - to_location_id missing/None!")
                     if "from_location_id" in plane:
-                        logging.warning(f"planes_takeMeans: Using 'from_location_id' as fallback for own plane id {plane['id']} (SEMANTICALLY INCORRECT)")
+                        report_issue("warning", f"planes_takeMeans: Using 'from_location_id' as fallback for own plane id {plane['id']} (SEMANTICALLY INCORRECT)")
                         location_id = int(plane["from_location_id"])
                     else:
-                        logging.warning(f"planes_takeMeans: Using player's location as fallback for own plane id {plane['id']}")
+                        report_issue("warning", f"planes_takeMeans: Using player's location as fallback for own plane id {plane['id']}")
                         location_id = json_data["playerData"]["location_id"]
             else:
                 # Buddy plane - should use origin location (from_location_id) 
@@ -45,12 +45,12 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                     location_id = int(plane["from_location_id"])
                 else:
                     # Race condition detected
-                    logging.warning(f"planes_takeMeans: Race condition detected for buddy plane id {plane['id']} - from_location_id missing/None!")
+                    report_issue("warning", f"planes_takeMeans: Race condition detected for buddy plane id {plane['id']} - from_location_id missing/None!")
                     if "to_location_id" in plane:
-                        logging.warning(f"planes_takeMeans: Using 'to_location_id' as fallback for buddy plane id {plane['id']} (SEMANTICALLY INCORRECT)")
+                        report_issue("warning", f"planes_takeMeans: Using 'to_location_id' as fallback for buddy plane id {plane['id']} (SEMANTICALLY INCORRECT)")
                         location_id = int(plane["to_location_id"])
                     else:
-                        logging.warning(f"planes_takeMeans: Using player's location as fallback for buddy plane id {plane['id']}")
+                        report_issue("warning", f"planes_takeMeans: Using player's location as fallback for buddy plane id {plane['id']}")
                         location_id = json_data["playerData"]["location_id"]
 
             # Check drop material + amount of it (+ workaround for missing data)
@@ -94,7 +94,9 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                                 if int(h["hi_player_id"]) == int(plane["to_player_id"]):
                                     # Possible cheat, disconnect user
                                     if int(request["p"]["buddy_points"]) != buddy_points:
+                                        report_issue("warning", f"planes_takeMeans: Buddy points mismatch for plane id {plane['id']}, User: {json_data['playerData']['user_name']} (ID: {user_id}). Expected: {buddy_points}, Reported: {request['p']['buddy_points']}")
                                         rpcResult["i"] = -1
+                                        return
                                     h["buddy_points"] = int(h["buddy_points"]) + int(request["p"]["buddy_points"])
                                     break
 
@@ -117,7 +119,9 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                                 setup_new_cargo_item = False
                                 # Possible cheat, disconnect user
                                 if int(request["p"]["cargo"] != contents_count):
+                                    report_issue("warning", f"planes_takeMeans: Cargo amount mismatch for plane id {plane['id']}, User: {json_data['playerData']['user_name']} (ID: {user_id}). Expected: {contents_count}, Reported: {request['p']['cargo']}")
                                     rpcResult["i"] = -1
+                                    return
                                 k["num_in_warehouse"] += int(
                                     request["p"]["cargo"])
                                 warehouse_capacity = calculate_warehouse_capacity(
@@ -141,16 +145,20 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                                     if int(k["type_id"]) == int(request["p"]["souvenir_types_id"]):
                                         # Possible cheat, disconnect user
                                         if int(request["p"]["souvenir_types_id"]) != souvenir_types_id:
+                                            report_issue("warning", f"planes_takeMeans: Souvenir type mismatch for plane id {plane['id']}, User: {json_data['playerData']['user_name']} (ID: {user_id}). Expected: {souvenir_types_id}, Reported: {request['p']['souvenir_types_id']}")
                                             rpcResult["i"] = -1
+                                            return
                                         k["num"] = int(k["num"]) + 1
                         else:
-                            logging.warning(f"planes_takeMeans: souvenir_types_id is None for plane id {plane['id']}, User: {json_data['playerData']['user_name']} (ID: {user_id})")
+                            report_issue("warning", f"planes_takeMeans: souvenir_types_id is None for plane id {plane['id']}, User: {json_data['playerData']['user_name']} (ID: {user_id})")
 
                     #####################################################################################
                     elif "drop_material" in request["p"]:
                         # Possible cheat, disconnect user
                         if int(request["p"]["drop_material"]) != drop_material:
+                            report_issue("warning", f"planes_takeMeans: Drop material mismatch for plane id {plane['id']}, User: {json_data['playerData']['user_name']} (ID: {user_id}). Expected: {drop_material}, Reported: {request['p']['drop_material']}")
                             rpcResult["i"] = -1
+                            return
                         str_drop_mat = str(request["p"]["drop_material"])
                         if str_drop_mat not in json_data["materials"]:
                             json_data["materials"][str_drop_mat] = drop_material_amount
@@ -212,7 +220,6 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                     break
 
             # CHECK IF QUICK SERVICE IS USED
-            # To-do: properly test if this works
 
             if int(request["p"]["owner_id"]) == int(user_id) and "xp" in request["p"]:
                 # Add xp as temporary fix to check if it's the last drop before going into hangar.

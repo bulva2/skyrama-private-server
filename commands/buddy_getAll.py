@@ -1,6 +1,6 @@
 import time
-import logging
 import src.user_manager as user_manager
+from src.debug import report_issue
 
 def run_buddy_checks(time, json_data):
     for buddy in json_data["buddyStuff"]["buddies"]:
@@ -8,7 +8,7 @@ def run_buddy_checks(time, json_data):
         
         # load_save_by_id returns -1 if user isn't found, skip this user
         if buddy_data == -1:
-            logging.warning(f"run_buddy_checks ({json_data["playerData"]["user_name"]}): Buddy user {buddy['hi_player_id']} not found, setting offline status")
+            report_issue("warning", f"run_buddy_checks: Buddy user {buddy['hi_player_id']} not found for user {json_data['playerData']['user_name']} (ID: {json_data['playerData']['account_id']}), setting offline status")
             buddy["last_buddyping_time"] = 0
             buddy["xp"] = 0
             buddy["status"] = 0  # Set to offline

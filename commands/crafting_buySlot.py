@@ -1,5 +1,5 @@
 import time
-from src.utils import substract_resources
+from src.utils import subtract_resources
 
 def handle_craftingBuySlot(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
@@ -15,7 +15,7 @@ def handle_craftingBuySlot(request, user_id, rpcResult, items_to_add_to_obj, jso
             air_cash_cost = v["RealCurrency"]
             break
 
-    substract_resources(json_data, rpcResult, air_cash = air_cash_cost)
+    subtract_resources(json_data, rpcResult, air_cash = air_cash_cost)
 
     # I don't know any cases where this wouldn't be success
     rpcResult["r"] = {"success": True, "slotId": slot_id, "slotType": slot_type} # i offered 10 aircash to find this, it better be worth it :(

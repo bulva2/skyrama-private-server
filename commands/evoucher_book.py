@@ -2,6 +2,7 @@ import time
 import logging
 from sqlalchemy.exc import SQLAlchemyError, IntegrityError
 from src.database import Voucher, VoucherRedemption, session_scope
+from src.debug import report_issue
 
 def handle_evoucherBook(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
@@ -96,7 +97,7 @@ def handle_evoucherBook(request, user_id, rpcResult, items_to_add_to_obj, json_d
     # Apparently this happens if you try to redeem it twice in quick succession
     except IntegrityError:
         rpcResult["r"]["evoucher"]["message"] = "You have already redeemed this voucher code"
-        logging.warning(f"User {user_id} attempted duplicate redemption of '{voucher_code}'")
+        report_issue("warning", f"User {user_id} attempted duplicate redemption of voucher code '{voucher_code}'")
         
     except SQLAlchemyError as e:
         logging.error(f"Database error during voucher redemption: {e}")

@@ -4776,5 +4776,5 @@
   "userCurrentCraftings": [
 
   ],
-  "isUserBeingLogTraced": false
+  "isUserBeingLogTraced": true
 }
