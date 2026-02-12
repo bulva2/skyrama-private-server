@@ -14,7 +14,8 @@ def handle_recyclingStart(request, user_id, rpcResult, items_to_add_to_obj, json
     slotId = int(p["slotId"])
     slotType = int(p["slotType"])
 
-    recycling_duration = 3600  # 1 Hour
+    defaultRecyclingData = init_data["defaultRecyclingData"]
+    recycling_duration = int(defaultRecyclingData["small"]["time"] if slotType == 1 else defaultRecyclingData["medium"]["time"])
     start_time = int(time.time())
     end_time = start_time + recycling_duration
 
