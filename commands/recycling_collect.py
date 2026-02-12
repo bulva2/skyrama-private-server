@@ -81,8 +81,25 @@ def handle_recyclingCollect(request, user_id, rpcResult, items_to_add_to_obj, js
         return   
 
     # To-do: add to playerData
-        
+    level_cap = json_data["playerData"]["recycling_levelCap"]
 
+    json_data["playerData"]["recycling_totalXP"] += recycling_xp
+    json_data["playerData"]["recycling_levelXP"] += recycling_xp
+
+    # Idk how anyone would be able to level up twice but just in case
+    while json_data["playerData"]["recycling_levelXP"] >= level_cap:
+        json_data["playerData"]["recycling_level"] += 1
+        json_data["playerData"]["recycling_levelXP"] -= level_cap
+    
+    for drop in material_drops:
+        m_id = str(drop["materialId"])
+        amount = drop["amount"]
+
+        if m_id in json_data["materials"]:
+            json_data["materials"][m_id] += amount
+        else:
+            json_data["materials"][m_id] = amount
+        
     slot["processData"] = [] # No need for it to be an array but it doesn't hurt either i guess
     slot["processId"] = 0
 

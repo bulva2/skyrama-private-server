@@ -4746,16 +4746,16 @@
 
   "userRecyclingSlots": [
     {
-      "slotType": "1",
-      "slotId": "0",
+      "slotType": 1,
+      "slotId": 0,
       "processId": 0,
       "processData": [
 
       ]
     },
     {
-      "slotType": "2",
-      "slotId": "0",
+      "slotType": 2,
+      "slotId": 0,
       "processId": 0,
       "processData": [
 
