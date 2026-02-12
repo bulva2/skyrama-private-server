@@ -138,9 +138,9 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [x] landside_buildings.sell
 - [x] runways.sell
 - [x] terminals.sell
-- [ ] recycling.start
+- [x] recycling.start
 - [ ] recycling.instant
-- [ ] recycling.collect
+- [x] recycling.collect
 - [x] crafting.processCraftingStep
 - [x] crafting.buyMaterials
 - [x] crafting.start
