@@ -2,6 +2,7 @@ import time
 from commands.buddy_getAll import run_buddy_checks
 from src.daily_goals import handle_daily_goals
 from src.easy_events import get_all_easy_events
+from src.enums import PlaneState
 from deepmerge.merger import Merger
 from copy import deepcopy
 
@@ -17,8 +18,6 @@ def handle_getInitState(request, user_id, rpcResult, items_to_add_to_obj, json_d
 
     # Store session time
     json_data["playerData"]["session_start_time"] = int(time.time())
-
-    # CashCow logic
 
     # Find CashCow plane in user's planes
     cashcow = None
@@ -40,7 +39,7 @@ def handle_getInitState(request, user_id, rpcResult, items_to_add_to_obj, json_d
             "departure_time": request["t"] - 450,
             "arrival_time": request["t"] + 450,
             "kerosene_boost_flag": 0,
-            "flight_status": 77,
+            "flight_status": PlaneState.FLYING_TO_BUDDY.value, # 77
             "buddy_points": 0,
             "contents_count": 5,
             "air_coins": 20,
@@ -67,7 +66,7 @@ def handle_getInitState(request, user_id, rpcResult, items_to_add_to_obj, json_d
     if request["t"] > int(cashcow["arrival_time"]):
         cashcow["departure_time"] = request["t"] - 450
         cashcow["arrival_time"] = request["t"] + 450
-        cashcow["flight_status"] = 77  # in air
+        cashcow["flight_status"] = PlaneState.FLYING_TO_BUDDY.value  # 77
         cashcow["start_service_time"] = 0
         cashcow["last_state_change_time"] = request["t"]
         cashcow["player_id"] = 0  # cashcow id = 0

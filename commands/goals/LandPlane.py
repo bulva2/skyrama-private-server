@@ -1,13 +1,10 @@
-import time
-from pathlib import Path
-import os
-import json
+from src.enums import PlaneState
 
 def handle_LandPlane(request, user_id, json_data, task, task_number, init_data, quest_seq):
     if request["m"] == "planes.setState":
         # 1005 = landed, plane still on runway (own plane)
         # 105 = landed, plane still on runway (buddy plane)
-        if request["p"]["flight_status"] == 105 or request["p"]["flight_status"] == 1005:
+        if request["p"]["flight_status"] in (PlaneState.WAITING_FOR_TRANSFER_BUDDY.value, PlaneState.WAITING_FOR_TRANSFER_HOME.value):
             for i in json_data["planes"]:
                 if int(i["id"]) == int(request["p"]["id"]):
                     type_id = int(i["plane_type_id"])

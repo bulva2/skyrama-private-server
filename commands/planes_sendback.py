@@ -1,3 +1,4 @@
+from src.enums import PlaneState
 import time
 import logging
 import src.user_manager as user_manager
@@ -17,7 +18,7 @@ def handle_planesSendback(request, user_id, rpcResult, items_to_add_to_obj, json
 
             # CashCow Respawn logic
             if player_id == 0:
-                plane["flight_status"] = 77
+                plane["flight_status"] = PlaneState.FLYING_TO_BUDDY.value # 77
                 plane["departure_time"] = request["t"] - 450
                 plane["arrival_time"] = request["t"] + 450
                 plane["start_service_time"] = 0

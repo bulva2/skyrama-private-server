@@ -86,8 +86,10 @@ def _safe_update(obj, attr: str, data: dict, key: str) -> None:
     if key in data:
         setattr(obj, attr, data[key])
 
+# Probably remove this soon, inconsistent
 CACHE_ENABLED = False
 __player_cache: Dict[int, dict] = {}
+
 __world_map_players = {}
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))

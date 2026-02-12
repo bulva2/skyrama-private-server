@@ -1,9 +1,9 @@
-import logging
+from src.debug import report_issue
+from src.utils import subtract_resources
+from src.enums import PlaneState
 import random
 import time
 import src.user_manager as user_manager
-from src.debug import report_issue
-from src.utils import subtract_resources
 
 def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
@@ -21,7 +21,7 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
             plane["subcontainer_id"] = request["p"]["subcontainer_id"]
             plane["container_id"] = request["p"]["container_id"]
             plane["arrival_time"] = request["p"]["arrival_time"]  
-            plane["flight_status"] = 77
+            plane["flight_status"] = PlaneState.FLYING_TO_BUDDY.value # 77
             plane["from_user_name"] = json_data["playerData"]["user_name"]
             plane["from_location_id"] = json_data["playerData"]["location_id"]
             plane["buddy_points"] = 0

@@ -1,5 +1,5 @@
+from src.enums import PlaneState
 import time
-
 
 def handle_planesMiss(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
@@ -12,7 +12,7 @@ def handle_planesMiss(request, user_id, rpcResult, items_to_add_to_obj, json_dat
     for idx, plane in enumerate(json_data["planes"]):
         if int(plane["id"]) == plane_id:
             if player_id == 0:
-                plane["flight_status"] = 77
+                plane["flight_status"] = PlaneState.FLYING_TO_BUDDY.value # 77
                 plane["departure_time"] = request["t"] - 450
                 plane["arrival_time"] = request["t"] + 450
                 plane["start_service_time"] = 0

@@ -1,8 +1,8 @@
+from src.debug import report_issue
+from src.utils import subtract_resources, get_crafting_level_from_xp
+from src.enums import PlaneState
 import logging
 import time
-from src.debug import report_issue
-from src.utils import subtract_resources
-from src.utils import get_crafting_level_from_xp
 
 def handle_craftingInstant(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
@@ -78,7 +78,7 @@ def handle_craftingInstant(request, user_id, rpcResult, items_to_add_to_obj, jso
                     "departure_time":-1,
                     "arrival_time":-1,
                     "kerosene_boost_flag":"0",
-                    "flight_status":"77",
+                    "flight_status": PlaneState.HANGAR.value, # 0,
                     "buddy_points":i["buddy_points_yield"],
                     "contents_count":i["capacity"],
                     "air_coins":i["air_coins_yield"],
@@ -92,7 +92,7 @@ def handle_craftingInstant(request, user_id, rpcResult, items_to_add_to_obj, jso
                     "instantland":0,
                     "player_id":user_id,
                     "from_location_id":-1,
-                    "from_user_name":"drone",
+                    "from_user_name":"",
                     "upgrade_level":0
             }
         )
@@ -115,18 +115,17 @@ def handle_craftingInstant(request, user_id, rpcResult, items_to_add_to_obj, jso
     else:
         crafting_xp_per_craft = 5 # Fallback to fewest xp, just in case
 
-
     json_data["playerData"]["crafting_totalXP"] += crafting_xp_per_craft
+
     # Don't go over the xp limit (causes weird visual glitches)
     if json_data["playerData"]["crafting_totalXP"] > 3850: # All the level caps added = total xp for the end of the maximum level
         json_data["playerData"]["crafting_totalXP"] = 3850
     # To prevent issues: recalculate everything except total xp
-    level_calculation = get_crafting_level_from_xp(json_data["playerData"]["crafting_totalXP"],
-                                                    init_data["playerData"]["crafting_level_caps"])
+    level_calculation = get_crafting_level_from_xp(json_data["playerData"]["crafting_totalXP"], init_data["playerData"]["crafting_level_caps"])
+    
     json_data["playerData"]["crafting_level"] = level_calculation[0]
     json_data["playerData"]["crafting_levelXP"] = level_calculation[1]
     json_data["playerData"]["crafting_levelCap"] = level_calculation[2]
-    
     json_data["playerData"]["next_object_id"] += 1
 
     rpcResult["r"] = {

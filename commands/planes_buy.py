@@ -1,5 +1,6 @@
 import time
 from src.utils import subtract_resources
+from src.enums import PlaneState
 
 def handle_planesBuy(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
@@ -28,7 +29,7 @@ def handle_planesBuy(request, user_id, rpcResult, items_to_add_to_obj, json_data
                     "departure_time":-1,
                     "arrival_time":-1,
                     "kerosene_boost_flag":"0",
-                    "flight_status":"77",
+                    "flight_status": PlaneState.HANGAR.value, # 0
                     "buddy_points":i["buddy_points_yield"],
                     "contents_count":i["capacity"],
                     "air_coins":i["air_coins_yield"],
@@ -46,7 +47,7 @@ def handle_planesBuy(request, user_id, rpcResult, items_to_add_to_obj, json_data
                     "upgrade_level":0
                 }
             )
-            json_data["playerData"]["next_object_id"] = int(json_data["playerData"]["next_object_id"]) + 1
+            json_data["playerData"]["next_object_id"] += 1
             return
             
     

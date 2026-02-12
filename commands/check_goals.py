@@ -1,5 +1,6 @@
 import logging
 from src.daily_goals import _get_goal_by_id
+from src.enums import PlaneState
 from commands.goals import *
 
 available_task_types = {
@@ -46,8 +47,37 @@ def give_reward(json_data, init_data, user_id, type_id, type, items_to_add_to_ob
                             items_to_add_to_obj.append(f"hangars:{container_id}")
                             break
 
-                    json_data["planes"].append({"souvenir_types_id":-1,"active_count":1,"id":json_data["playerData"]["next_object_id"],"plane_type_id":type_id,"container_id":container_id,"subcontainer_id":1,"to_player_id":-1,"departure_time":-1,"arrival_time":-1,"kerosene_boost_flag":"0","flight_status":"77","buddy_points":h["buddy_points_yield"],"contents_count":h["capacity"],"air_coins":h["air_coins_yield"],"xp":h["xp_yield"],"wares_revenue":h["wares_revenue_capacity"],"banner_id":"-1","start_service_time":"0","last_state_change_time":"0","drop_consumable_id":"0","drop_consumable_amount":"0","instantland":0,"player_id":user_id,"from_location_id":-1,"from_user_name":"drone","upgrade_level":0})
-                    json_data["playerData"]["next_object_id"] = int(json_data["playerData"]["next_object_id"]) + 1
+                    json_data["planes"].append(
+                        {
+                            "souvenir_types_id":-1,
+                            "active_count":1,
+                            "id":json_data["playerData"]["next_object_id"],
+                            "plane_type_id":type_id,
+                            "container_id":container_id,
+                            "subcontainer_id":1,
+                            "to_player_id":-1,
+                            "departure_time":-1,
+                            "arrival_time":-1,
+                            "kerosene_boost_flag":"0",
+                            "flight_status": PlaneState.HANGAR.value, # 0
+                            "buddy_points":h["buddy_points_yield"],
+                            "contents_count":h["capacity"],
+                            "air_coins":h["air_coins_yield"],
+                            "xp":h["xp_yield"],
+                            "wares_revenue":h["wares_revenue_capacity"],
+                            "banner_id":"-1",
+                            "start_service_time":"0",
+                            "last_state_change_time":"0",
+                            "drop_consumable_id":"0",
+                            "drop_consumable_amount":"0",
+                            "instantland":0,
+                            "player_id":user_id,
+                            "from_location_id":-1,
+                            "from_user_name":"",
+                            "upgrade_level":0
+                        }
+                    )
+                    json_data["playerData"]["next_object_id"] += 1
                     break
 
 

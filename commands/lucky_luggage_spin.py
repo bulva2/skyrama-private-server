@@ -1,3 +1,4 @@
+from src.enums import PlaneState
 import time
 
 def handle_luckyLuggageSpin(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
@@ -42,7 +43,35 @@ def handle_luckyLuggageSpin(request, user_id, rpcResult, items_to_add_to_obj, js
                 container_id = int(g["id"])
                 g["upgrade_level"] += 1 # Add free new hangar spot
                 
-            json_data["planes"].append({"souvenir_types_id":-1,"active_count":1,"id":json_data["playerData"]["next_object_id"],"plane_type_id":i["prize_obj_type_id"],"container_id":container_id,"subcontainer_id":1,"to_player_id":-1,"departure_time":-1,"arrival_time":-1,"kerosene_boost_flag":"0","flight_status":"77","buddy_points":buddy_points,"contents_count":contents_count,"air_coins":air_coins,"xp":xp,"wares_revenue":wares_revenue,"banner_id":"-1","start_service_time":"0","last_state_change_time":"0","drop_consumable_id":"0","drop_consumable_amount":"0","instantland":0,"player_id":user_id,"from_location_id":-1,"from_user_name":"drone","upgrade_level":0})
+            json_data["planes"].append(
+              {
+                "souvenir_types_id": -1,
+                "active_count": 1,
+                "id": json_data["playerData"]["next_object_id"],
+                "plane_type_id": i["prize_obj_type_id"],"container_id":container_id,
+                "subcontainer_id": 1,
+                "to_player_id": -1,
+                "departure_time": -1,
+                "arrival_time": -1,
+                "kerosene_boost_flag": "0",
+                "flight_status": PlaneState.HANGAR.value, # 0
+                "buddy_points": buddy_points,
+                "contents_count": contents_count,
+                "air_coins": air_coins,
+                "xp": xp,
+                "wares_revenue": wares_revenue,
+                "banner_id": "-1",
+                "start_service_time": "0",
+                "last_state_change_time": "0",
+                "drop_consumable_id": "0",
+                "drop_consumable_amount": "0",
+                "instantland": 0,
+                "player_id": user_id,
+                "from_location_id": -1,
+                "from_user_name": "",
+                "upgrade_level": 0
+              }
+            )
           
           # GIVE SOUVENIR REWARD
           if i["prize_obj_type"] == "Souvenir":
