@@ -6,8 +6,10 @@ def handle_planesBuy(request, user_id, rpcResult, items_to_add_to_obj, json_data
     rpcResult["t"] = int(time.time())
     rpcResult["r"] = None
 
+    p = request["p"]
+
     for i in init_data["planeTypes"]:
-        if int(i["id"]) == int(request["p"]["typeId"]):
+        if int(i["id"]) == int(p["typeId"]):
             subtract_resources(json_data, rpcResult, i["air_coins_cost"], i["air_cash_cost"], i["event_currency_cost"])
 
             if rpcResult["i"] == -1:
@@ -19,9 +21,9 @@ def handle_planesBuy(request, user_id, rpcResult, items_to_add_to_obj, json_data
                     "souvenir_types_id":-1,
                     "active_count":1,
                     "id":json_data["playerData"]["next_object_id"],
-                    "plane_type_id":request["p"]["typeId"],
-                    "container_id":request["p"]["container_id"],
-                    "subcontainer_id":request["p"]["subcontainer_id"],
+                    "plane_type_id":p["typeId"],
+                    "container_id":p["container_id"],
+                    "subcontainer_id":p["subcontainer_id"],
                     "to_player_id":-1,
                     "departure_time":-1,
                     "arrival_time":-1,
@@ -40,7 +42,7 @@ def handle_planesBuy(request, user_id, rpcResult, items_to_add_to_obj, json_data
                     "instantland":0,
                     "player_id":user_id,
                     "from_location_id":-1,
-                    "from_user_name":"drone",
+                    "from_user_name":"",
                     "upgrade_level":0
                 }
             )
