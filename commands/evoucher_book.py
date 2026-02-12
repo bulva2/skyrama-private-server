@@ -84,7 +84,8 @@ def handle_evoucherBook(request, user_id, rpcResult, items_to_add_to_obj, json_d
             session.add(redemption)
             
             # Update global usage count
-            voucher.current_uses += 1
+            if voucher.current_uses is not None:
+                voucher.current_uses += 1
             
             # Success response
             rpcResult["r"]["evoucher"]["success"] = True

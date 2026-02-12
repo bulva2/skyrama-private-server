@@ -1,4 +1,5 @@
 import time
+from src.debug import report_issue
 
 # Work in progress, not fully implemented yet
 def handle_recyclingStart(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
@@ -26,13 +27,20 @@ def handle_recyclingStart(request, user_id, rpcResult, items_to_add_to_obj, json
             plane_type_id = int(plane["plane_type_id"])
             break
 
+    if plane_type_id is None:
+        report_issue("warning", f"recycling_start: Plane not found for user {user_id}")
+        rpcResult["i"] = -1
+        return
+    
+    json_data["planes"].remove(plane)
+
     # ProcessDataVO
     processData = {
-        "endTime": end_time,
+        "endtime": end_time,
         "finished": False,
         # Now it's plane_type_id instead of plane_id!
         "itemId": plane_type_id,
-        "startTime": start_time
+        "starttime": start_time
     }
 
     # PlaneRecycleBundleVO class
@@ -43,13 +51,24 @@ def handle_recyclingStart(request, user_id, rpcResult, items_to_add_to_obj, json
         "processData": processData
     }
 
-    # Same as crafting, I guess we can just make it dict in the new player data
-    if "userRecyclingSlots" not in json_data or not isinstance(json_data["userRecyclingSlots"], dict):
-        json_data["userRecyclingSlots"] = {}
+    recycling_slots = json_data["userRecyclingSlots"]
 
-    # This needs to be checked, I tried to do it bit differently than in crafting and yeaaah
-    # I need to go sleep fr
-    json_data["userRecyclingSlots"][str(slotType)] = slot_bundle
+    active_slot = None
+    for slot in recycling_slots:
+        if slot["slotId"] == slotId and slot["slotType"] == slotType:
+            if slot["processId"] != 0:
+                report_issue("warning", f"recycling_start: Recycling slot has been found but is already in use for user {user_id}")
+                rpcResult["i"] = -1
+                return
+            slot["processId"] = processItemId
+            slot["processData"] = processData
+            active_slot = slot
+            break
+
+    if active_slot is None:
+        report_issue("warning", f"recycling_start: No active recycling slot found for user {user_id} in recyclingStart command")
+        rpcResult["i"] = -1
+        return
 
     # Return slot_bundle + status: true
     rpcResult["r"] = {

@@ -168,3 +168,4 @@ cython_debug/
 #.idea/
 
 *.ignore
+assets/airville.swf
