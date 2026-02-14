@@ -1,5 +1,5 @@
 import time
-import json
+import orjson
 import logging
 import uuid
 import hashlib
@@ -7,9 +7,11 @@ import os
 from pathlib import Path
 from contextlib import asynccontextmanager
 import asyncio
+import typing
 
 from fastapi import FastAPI, Request, Form
-from fastapi.responses import HTMLResponse, RedirectResponse, PlainTextResponse
+from fastapi.responses import HTMLResponse, RedirectResponse, PlainTextResponse, Response
+from fastapi.responses import ORJSONResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from starlette.middleware.sessions import SessionMiddleware
@@ -58,22 +60,22 @@ async def lifespan(app: FastAPI):
     p = Path(__file__).parent
     logging.info("Loading init data...")
     
-    with open(os.path.join(p, "data", "global_init_data.json.def"), "r", encoding="utf-8") as f:
-        init_data = json.loads(f.read())
+    with open(os.path.join(p, "data", "global_init_data.json.def"), "rb") as f:
+        init_data = orjson.loads(f.read())
 
         # Cache static data from global_init_data for quick access
         # To-do, add more caches as needed
         initialize_cache(init_data)
 
-    with open(os.path.join(p, "data", "obj.json.def"), "r", encoding="utf-8") as f:
-        obj_data = json.loads(f.read())
+    with open(os.path.join(p, "data", "obj.json.def"), "rb") as f:
+        obj_data = orjson.loads(f.read())
         
     user_manager.save_players_by_location_id()
     
     # Load language files
     for filename in os.listdir(os.path.join(p, "templates", "languages")):
-        with open(os.path.join(p, "templates", "languages", filename), "r", encoding="utf-8") as f:
-            langstrings[filename[0:-5]] = json.loads(f.read())
+        with open(os.path.join(p, "templates", "languages", filename), "rb") as f:
+            langstrings[filename[0:-5]] = orjson.loads(f.read())
 
     # Load admins
     ADMINS = [int(x.strip()) for x in config.get("AdminUsers", "admin_ids", fallback="-1").split(",")]
@@ -97,7 +99,7 @@ async def lifespan(app: FastAPI):
     # Shutdown logic
     logging.info("Server is shutting down, have a great day! ^^")
 
-app = FastAPI(lifespan=lifespan)
+app = FastAPI(lifespan=lifespan, default_response_class=ORJSONResponse)
 
 # Middleware
 app.add_middleware(SessionMiddleware, secret_key="SECRET_KEY")
@@ -199,7 +201,7 @@ async def crossdomain():
     return HTMLResponse(content=open(os.path.join(STUB_DIR, "crossdomain.xml")).read(), media_type="application/xml")
 
 @app.get("/play")
-async def play(request: Request, locale: str = None):
+async def play(request: Request, locale: typing.Optional[str] = None):
     if maintenance["maintenance"]:
         return RedirectResponse(url='/maintenance')
     
@@ -223,7 +225,7 @@ async def play(request: Request, locale: str = None):
     })
 
 @app.get("/")
-async def homepage(request: Request, locale: str = None):
+async def homepage(request: Request, locale: typing.Optional[str] = None):
     if maintenance["maintenance"]:
         return RedirectResponse(url='/maintenance')
     
@@ -242,7 +244,7 @@ async def homepage(request: Request, locale: str = None):
     })
 
 @app.post("/login")
-async def login(request: Request, username: str = Form(...), password: str = Form(...), locale: str = None):
+async def login(request: Request, username: str = Form(...), password: str = Form(...), locale: typing.Optional[str] = None):
     if maintenance["maintenance"]:
         return RedirectResponse(url='/maintenance')
         
@@ -281,7 +283,7 @@ async def login(request: Request, username: str = Form(...), password: str = For
     })
 
 @app.post("/register")
-async def register(request: Request, RegUsername: str = Form(...), RegPassword: str = Form(...), RegEmail: str = Form(...), locale: str = None):
+async def register(request: Request, RegUsername: str = Form(...), RegPassword: str = Form(...), RegEmail: str = Form(...), locale: typing.Optional[str] = None):
     if maintenance["maintenance"]:
         return RedirectResponse(url='/maintenance')
 
@@ -290,7 +292,6 @@ async def register(request: Request, RegUsername: str = Form(...), RegPassword: 
     langUpper = lang.upper()
     
     pwd_hash = hashlib.sha512(RegPassword.encode('utf-8')).hexdigest()
-    
     msg = validator.validate_registration_form(RegUsername, RegPassword, RegEmail, user_manager.user_name_exists)
     
     if not msg:
@@ -351,14 +352,9 @@ async def error(request: Request):
         return templates.TemplateResponse("error.html", {"request": request})
 
 @app.get("/logout")
-async def logout(request: Request, locale: str = None):
+async def logout(request: Request, locale: typing.Optional[str] = None):
     session = request.session
-    if "username" in session:
-        del session["username"]
-    if "userid" in session:
-        del session["userid"]
-    if "token" in session:
-        del session["token"]
+    session.clear()
 
     lang = locale if locale else session.get("lang", "en")
     session["lang"] = lang
@@ -386,14 +382,19 @@ async def handle_request(
     # Acquire lock for this user to prevent race conditions
     async with get_user_lock(userId):
         json_data = user_manager.load_save_by_id(userId)
-        
-        if json_data == -1: # User not found or error
+        if not isinstance(json_data, dict):
             return PlainTextResponse("token_error")
 
-        if json_data["playerData"]["token"] == t:
-            command_data = json.loads(d)
-            total_response = {"rpcResults": []}
+        if json_data.get("playerData", {}).get("token") == t:
+            command_data = orjson.loads(d.encode())
+
+            if not isinstance(command_data, list):
+                session.clear()
+                session["error_mode"] = "error"
+                return templates.TemplateResponse("error.html", {"request": request})
             
+            total_response = {"rpcResults": []}
+
             # Start level check
             start_level = get_level_from_xp(json_data["playerData"]["xp"], init_data["playerData"]["xp_level_caps"])
             
@@ -443,11 +444,11 @@ async def handle_request(
             total_response["obj"] = obj
             
             user_manager.modify_save_by_id(userId, json_data)
-            return total_response
+            return Response(orjson.dumps(total_response))
         else:
             logging.critical(f"Security alert: User {userId} attempted to use an invalid token!")
             return PlainTextResponse("token_error")
-
+        
 # Run only if executed directly
 if __name__ == "__main__":
     import uvicorn

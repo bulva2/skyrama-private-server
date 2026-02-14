@@ -1,5 +1,5 @@
 import os
-import json
+import orjson
 import random
 import logging
 from datetime import datetime
@@ -95,8 +95,8 @@ __world_map_players = {}
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, ".."))
 
-with open(os.path.join(PROJECT_ROOT, "data", "new_player.json.def"), "r", encoding="utf-8") as file:
-    NEW_ACCOUNT_DATA = json.load(file)
+with open(os.path.join(PROJECT_ROOT, "data", "new_player.json.def"), "rb") as file:
+    NEW_ACCOUNT_DATA = orjson.loads(file.read())
 
 @contextmanager
 def db_session_scope():
@@ -292,7 +292,7 @@ def search_users_by_name(pattern: str) -> list[tuple[int, str]]:
 
 def create_new_account(username: str, password: str, token: str) -> int:
     try:
-        json_data = json.loads(json.dumps(NEW_ACCOUNT_DATA))
+        json_data = orjson.loads(orjson.dumps(NEW_ACCOUNT_DATA))
         
         with db_session_scope() as session:
             new_player = Player(

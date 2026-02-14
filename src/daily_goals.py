@@ -1,4 +1,4 @@
-import json
+import orjson
 import os
 import time
 import copy
@@ -18,8 +18,8 @@ def _load_daily_goals(force_reload: bool = False) -> dict:
     
     if _CACHED_GOALS is None:
         _daily_goals_path = os.path.join(os.path.dirname(__file__), "..", "data", "daily_goals.json")
-        with open(_daily_goals_path, "r") as f:
-            _CACHED_GOALS = json.load(f)
+        with open(_daily_goals_path, "rb") as f:
+            _CACHED_GOALS = orjson.loads(f.read())
     
     return _CACHED_GOALS
 

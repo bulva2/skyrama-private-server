@@ -3,10 +3,10 @@ uvicorn[standard]
 gunicorn
 python-multipart
 jinja2
-itsdangerous
 deepmerge
 colorama
 requests
+orjson
 SQLAlchemy>=2.0.0
 psycopg2-binary
 passlib[bcrypt]

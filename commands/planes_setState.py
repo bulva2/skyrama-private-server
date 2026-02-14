@@ -41,7 +41,7 @@ def handle_planesSetState(request, user_id, rpcResult, items_to_add_to_obj, json
                         break
 
                 if load_type == "Cargo": # Reduce air coins for starting cargo planes (amount = wares capacity)
-                    subtract_resources(json_data, rpcResult, air_cash=contents_count)
+                    subtract_resources(json_data, rpcResult, air_coins=contents_count)
 
             # Instantland aircash reduction
             if int(request["p"]["instantland"]) == 1 and flight_status == PlaneState.WAITING_FOR_TRANSFER_BUDDY.value: # 105

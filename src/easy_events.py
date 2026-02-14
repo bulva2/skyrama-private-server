@@ -1,4 +1,4 @@
-import json
+import orjson
 import os
 import time
 
@@ -35,8 +35,8 @@ def _refresh_active_easy_events():
     _CACHED_PAX_MULTIPLIER = None
     
     _easy_events_path = os.path.join(os.path.dirname(__file__), "..", "data", "easy_events.json")
-    with open(_easy_events_path, "r") as f:
-        _CACHED_EVENTS = json.load(f)
+    with open(_easy_events_path, "rb") as f:
+        _CACHED_EVENTS = orjson.loads(f.read())
         current_time = time.time()
         for event in _CACHED_EVENTS:
             # Check active events
