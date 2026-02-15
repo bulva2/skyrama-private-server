@@ -1,13 +1,6 @@
-import time
-import orjson
-import logging
-import uuid
-import hashlib
-import os
 from pathlib import Path
 from contextlib import asynccontextmanager
-import asyncio
-import typing
+from typing import Dict, Any, Optional
 
 from fastapi import FastAPI, Request, Form
 from fastapi.responses import HTMLResponse, RedirectResponse, PlainTextResponse, Response
@@ -16,8 +9,6 @@ from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from starlette.middleware.sessions import SessionMiddleware
 from starlette.middleware.cors import CORSMiddleware
-
-from commands import *
 
 from bundle import TEMPLATES_DIR, STUB_DIR, STYLES_DIR, ASSETS_DIR
 from src.utils import get_level_from_xp
@@ -28,17 +19,25 @@ import src.user_manager as user_manager
 import src.config_handler as config_handler
 import src.validator as validator
 
+from commands import *
+from state import state
+
+import asyncio
+import time
+import orjson
+import logging
+import pyfiglet
+import uuid
+import hashlib
+import os
+
 # Config
 config_handler.run()
 config = config_handler.get_config()
 
 # Global state
 maintenance = {"maintenance": False, "startTime": 0}
-init_data = {}
-obj_data = {}
 langstrings = {}
-ADMINS = []
-server_ip = ""
 
 # Request Locking to prevent race conditions
 _user_locks = {}
@@ -50,25 +49,38 @@ def get_user_lock(user_id: int) -> asyncio.Lock:
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    global init_data, obj_data, langstrings, ADMINS, server_ip
+    global langstrings
+
+    print(pyfiglet.figlet_format("Skyrama Private Server", font="slant", width=200))
     logging.info("Loading the server, please wait..")
     
-    # Init DB
-    init_database(config.get("Database", "connection_string"))
+    raw_conn_str = config.get("Database", "connection_string")
+    db_password = os.environ.get("DB_PASSWORD")
+
+    if db_password == "Your-Database-Password-Here":
+        logging.critical("You haven't changed the database password from the .env-example!")
+        logging.critical("Please change the DB_PASSWORD variable in the .env file to your database password before running the server!\n")
+        exit(1)
+
+    if db_password:
+        conn_str = raw_conn_str.replace("${DB_PASSWORD}", db_password)
+        init_database(conn_str)
+    else:
+        logging.critical("Database password not found in .env file. Make sure that you renamed .env-example to .env and that you set the DB_PASSWORD variable to your password!")
+        exit(2)
     
     # Load Init Data
     p = Path(__file__).parent
     logging.info("Loading init data...")
     
-    with open(os.path.join(p, "data", "global_init_data.json.def"), "rb") as f:
-        init_data = orjson.loads(f.read())
+    with open(state.data_path / "global_init_data.json.def", "rb") as f:
+        state.init_data = orjson.loads(f.read())
 
-        # Cache static data from global_init_data for quick access
-        # To-do, add more caches as needed
-        initialize_cache(init_data)
+    # Load global cache
+    initialize_cache(state.init_data)
 
-    with open(os.path.join(p, "data", "obj.json.def"), "rb") as f:
-        obj_data = orjson.loads(f.read())
+    with open(state.data_path / "obj.json.def", "rb") as f:
+        state.obj_data = orjson.loads(f.read())
         
     user_manager.save_players_by_location_id()
     
@@ -78,14 +90,14 @@ async def lifespan(app: FastAPI):
             langstrings[filename[0:-5]] = orjson.loads(f.read())
 
     # Load admins
-    ADMINS = [int(x.strip()) for x in config.get("AdminUsers", "admin_ids", fallback="-1").split(",")]
+    state.admins = [int(x.strip()) for x in config.get("AdminUsers", "admin_ids", fallback="-1").split(",")]
     
     # URL setup
     host = config.get("ServerSettings", "host", fallback="127.0.0.1").replace("http://", "").replace("https://", "")
     port = int(config.get("ServerSettings", "port", fallback="3800"))
     use_https = config.getboolean("ServerSettings", "use_https", fallback=False)
     protocol = "https" if use_https else "http"
-    server_ip = f"{protocol}://{host}:{port}"
+    state.server_ip = f"{protocol}://{host}:{port}"
 
     if config.get("Webhooks", "error_webhook", fallback="") == "":
         logging.warning("No error webhook configured, errors will not be sent to Discord!")
@@ -93,7 +105,7 @@ async def lifespan(app: FastAPI):
     if config.get("Webhooks", "registration_webhook", fallback="") == "":
         logging.warning("No registration webhook configured, registrations will not be sent to Discord!")
 
-    logging.info(f"Server initialized on {server_ip}")
+    logging.info(f"Server initialized on {state.server_ip}")
     yield
     
     # Shutdown logic
@@ -202,7 +214,7 @@ async def crossdomain():
     return HTMLResponse(content=open(os.path.join(STUB_DIR, "crossdomain.xml")).read(), media_type="application/xml")
 
 @app.get("/play")
-async def play(request: Request, locale: typing.Optional[str] = None):
+async def play(request: Request, locale: Optional[str] = None):
     if maintenance["maintenance"]:
         return RedirectResponse(url='/maintenance')
     
@@ -221,12 +233,12 @@ async def play(request: Request, locale: typing.Optional[str] = None):
         "userid": session["userid"],
         "token": session["token"],
         "lang": lang,
-        "SERVERIP": server_ip,
+        "SERVERIP": state.server_ip,
         "langstrings": langstrings.get(lang, {})
     })
 
 @app.get("/")
-async def homepage(request: Request, locale: typing.Optional[str] = None):
+async def homepage(request: Request, locale: Optional[str] = None):
     if maintenance["maintenance"]:
         return RedirectResponse(url='/maintenance')
     
@@ -237,7 +249,7 @@ async def homepage(request: Request, locale: typing.Optional[str] = None):
     
     return templates.TemplateResponse("home.html", {
         "request": request,
-        "SERVERIP": server_ip,
+        "SERVERIP": state.server_ip,
         "playerCount": user_manager.get_player_count(),
         "langstrings": langstrings.get(lang, {}),
         "lang": lang,
@@ -245,7 +257,7 @@ async def homepage(request: Request, locale: typing.Optional[str] = None):
     })
 
 @app.post("/login")
-async def login(request: Request, username: str = Form(...), password: str = Form(...), locale: typing.Optional[str] = None):
+async def login(request: Request, username: str = Form(...), password: str = Form(...), locale: Optional[str] = None):
     if maintenance["maintenance"]:
         return RedirectResponse(url='/maintenance')
         
@@ -275,7 +287,7 @@ async def login(request: Request, username: str = Form(...), password: str = For
         
     return templates.TemplateResponse("home.html", {
         "request": request,
-        "SERVERIP": server_ip,
+        "SERVERIP": state.server_ip,
         "playerCount": user_manager.get_player_count(),
         "langstrings": langstrings.get(lang, {}),
         "lang": lang,
@@ -284,7 +296,7 @@ async def login(request: Request, username: str = Form(...), password: str = For
     })
 
 @app.post("/register")
-async def register(request: Request, RegUsername: str = Form(...), RegPassword: str = Form(...), RegEmail: str = Form(...), locale: typing.Optional[str] = None):
+async def register(request: Request, RegUsername: str = Form(...), RegPassword: str = Form(...), RegEmail: str = Form(...), locale: Optional[str] = None):
     if maintenance["maintenance"]:
         return RedirectResponse(url='/maintenance')
 
@@ -308,7 +320,7 @@ async def register(request: Request, RegUsername: str = Form(...), RegPassword: 
             
     return templates.TemplateResponse("home.html", {
         "request": request,
-        "SERVERIP": server_ip,
+        "SERVERIP": state.server_ip,
         "playerCount": user_manager.get_player_count(),
         "langstrings": langstrings.get(lang, {}),
         "lang": lang,
@@ -320,7 +332,7 @@ async def register(request: Request, RegUsername: str = Form(...), RegPassword: 
 @app.get("/set-maintenance/on")
 async def setMaintenanceOn(request: Request):
     session = request.session
-    if "userid" in session and session["userid"] in ADMINS:
+    if "userid" in session and session["userid"] in state.admins:
         maintenance["maintenance"] = True
         maintenance["startTime"] = int(time.time())
         return "Success!"
@@ -329,7 +341,7 @@ async def setMaintenanceOn(request: Request):
 @app.get("/set-maintenance/off")
 async def setMaintenanceOff(request: Request):
     session = request.session
-    if "userid" in session and session["userid"] in ADMINS:
+    if "userid" in session and session["userid"] in state.admins:
         maintenance["maintenance"] = False
         maintenance["startTime"] = 0
         return "Success!"
@@ -353,7 +365,7 @@ async def error(request: Request):
         return templates.TemplateResponse("error.html", {"request": request})
 
 @app.get("/logout")
-async def logout(request: Request, locale: typing.Optional[str] = None):
+async def logout(request: Request, locale: Optional[str] = None):
     session = request.session
     session.clear()
 
@@ -394,10 +406,10 @@ async def handle_request(
                 session["error_mode"] = "error"
                 return templates.TemplateResponse("error.html", {"request": request})
             
-            total_response = {"rpcResults": []}
+            total_response: Dict[str, Any] = {"rpcResults": []}
 
             # Start level check
-            start_level = get_level_from_xp(json_data["playerData"]["xp"], init_data["playerData"]["xp_level_caps"])
+            start_level = get_level_from_xp(json_data["playerData"]["xp"], state.init_data["playerData"]["xp_level_caps"])
             
             total_items_to_add_to_obj = []
             
@@ -415,7 +427,7 @@ async def handle_request(
                     handler = available_commands[command["m"]]
                     
                     # Handlers are sync, so we call them directly
-                    handler(command, userId, rpcResult, items_to_add_to_obj, json_data, init_data)
+                    handler(command, userId, rpcResult, items_to_add_to_obj, json_data, state.init_data)
                     
                     if rpcResult.get("i") == -1:
                         logging.warning(f"User {userId} disconnected/cheat detected.")
@@ -423,9 +435,9 @@ async def handle_request(
                         
                     total_response["rpcResults"].append(rpcResult)
                     
-                    handle_goal(command, userId, "main", items_to_add_to_obj, json_data, init_data)
-                    handle_goal(command, userId, "pilot", items_to_add_to_obj, json_data, init_data)
-                    handle_goal(command, userId, "daily", items_to_add_to_obj, json_data, init_data)
+                    handle_goal(command, userId, "main", items_to_add_to_obj, json_data, state.init_data)
+                    handle_goal(command, userId, "pilot", items_to_add_to_obj, json_data, state.init_data)
+                    handle_goal(command, userId, "daily", items_to_add_to_obj, json_data, state.init_data)
                     
                     total_items_to_add_to_obj += items_to_add_to_obj
                 else:
@@ -434,14 +446,14 @@ async def handle_request(
                     return PlainTextResponse("Could not get Sky_Instance_Plane object with unique id 1435_12297741")
 
             # Level up check
-            end_level = get_level_from_xp(json_data["playerData"]["xp"], init_data["playerData"]["xp_level_caps"])
+            end_level = get_level_from_xp(json_data["playerData"]["xp"], state.init_data["playerData"]["xp_level_caps"])
             if start_level != end_level:
                 for i in range(end_level - start_level):
                     json_data["playerData"]["air_coins"] += 850
                     json_data["playerData"]["air_cash"] += 2
             
             obj = {}
-            handle_addObj(command, userId, obj, total_items_to_add_to_obj, json_data, init_data, obj_data)
+            handle_addObj(command, userId, obj, total_items_to_add_to_obj, json_data, state.init_data, state.obj_data)
             total_response["obj"] = obj
             
             user_manager.modify_save_by_id(userId, json_data)

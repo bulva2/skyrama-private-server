@@ -1,3 +1,4 @@
+from dotenv import load_dotenv
 from pathlib import Path
 from colorama import init, Fore, Style
 import configparser
@@ -11,9 +12,11 @@ def run():
     os.system('cls' if os.name == 'nt' else 'clear')
     setup_logging()
 
-def load_config(file_path: str) -> configparser.ConfigParser:
+def load_config(file_path: Path) -> configparser.ConfigParser:
     global _config
     if _config is None:
+        load_dotenv()
+
         _config = configparser.ConfigParser()
         _config.read(file_path)
     return _config

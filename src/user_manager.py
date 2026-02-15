@@ -3,7 +3,7 @@ import orjson
 import random
 import logging
 from datetime import datetime
-from typing import Dict
+from typing import Any, Dict
 from sqlalchemy import func
 from sqlalchemy.exc import SQLAlchemyError
 from contextlib import contextmanager
@@ -200,7 +200,7 @@ def _sync_planes(player: Player, incoming_planes: list, session):
         if p_id not in processed_ids and p_id != 0:
             session.delete(plane)
         
-def load_save_by_name(username: str) -> dict | int:
+def load_save_by_name(username: str) -> Any:
     try:
         with db_session_scope() as session:
             player = session.query(Player).filter_by(username=username).first()

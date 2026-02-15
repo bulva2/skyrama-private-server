@@ -2,8 +2,8 @@ import sys
 import os
 
 # Bundled data (extracted to a temp dir)
-
-TMP_BUNDLED_DIR = sys._MEIPASS if getattr(sys, 'frozen', None) else "."
+# Maybe for future use, else remove this in upcoming updates
+TMP_BUNDLED_DIR = getattr(sys, '_MEIPASS', ".") if getattr(sys, 'frozen', False) else "."
 
 ASSETS_DIR = os.path.join(TMP_BUNDLED_DIR, "assets")
 TEMPLATES_DIR = os.path.join(TMP_BUNDLED_DIR, "templates")

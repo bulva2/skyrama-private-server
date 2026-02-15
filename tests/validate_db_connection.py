@@ -1,7 +1,6 @@
 import os
 import configparser
-import psycopg2
-from psycopg2 import OperationalError
+import psycopg
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 CONFIG_PATH = os.path.join(ROOT, "config.cfg")
@@ -22,18 +21,14 @@ def test_connection():
         return
 
     try:
-        connection = psycopg2.connect(conn_str)
-        cursor = connection.cursor()
-        cursor.execute("SELECT version();")
-        db_version = cursor.fetchone()
+        with psycopg.connect(conn_str) as connection:
+            with connection.cursor() as cursor:
+                cursor.execute("SELECT version();")
+                db_version = cursor.fetchone()
 
-        print("Connected! You did everything right, give yourself a pat on the back!")
-        print(f"Database version: {db_version[0]}")
-
-        cursor.close()
-        connection.close()
-
-    except OperationalError as e:
+                print("Connected! You did everything right, give yourself a pat on the back!")
+                print(f"Database version: {db_version[0]}")
+    except psycopg.OperationalError as e:
         print("Connection failed!")
         print(f"Error: {e}")
     except Exception as exc:

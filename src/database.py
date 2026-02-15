@@ -241,11 +241,11 @@ class DatabaseManager:
         self.session_factory = sessionmaker(bind=self.engine)
         self.Session = scoped_session(self.session_factory)
         
-        logging.info("[DB] Connection established.")
+        logging.info("Database connection established!")
     
     def create_tables(self): 
         Base.metadata.create_all(self.engine)
-        logging.info("[DB] Tables created.")
+        logging.info("Database tables created.")
 
     def get_session(self):
         return self.Session()
@@ -253,7 +253,7 @@ class DatabaseManager:
     def close_session(self):
         self.Session.remove()
 
-db_manager = None
+db_manager: DatabaseManager | None = None
 
 def init_database(connection_string):
     global db_manager
@@ -276,4 +276,5 @@ def session_scope():
         session.rollback()
         raise
     finally:
-        db_manager.close_session()
+        if db_manager:
+            db_manager.close_session()

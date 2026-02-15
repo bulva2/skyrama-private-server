@@ -29,11 +29,12 @@ Also join us on [Discord](https://discord.gg/uFhJRvggZy)!
 1. Obtain Skyrama .swf file, we cannot provide this on GitHub
 2. Place Skyrama .swf file into assets folder
 3. Install PostgreSQL and create a database
-4. Change the database connection uri in config.cfg
-5. Run setup_database.py
-6. Run scripts\setup.bat (.sh)
-7. Run scripts\start.bat (.sh)
-8. Enjoy!
+4. Rename .env-example to .env and set your database password
+5. Change the database connection URI in config.cfg
+6. Run setup_database.py
+7. Run scripts\setup.bat (.sh)
+8. Run scripts\start.bat (.sh)
+9. Enjoy!
 
 ## Known issues
 - Some anticheat checks are currently incorrectly set-up
@@ -139,7 +140,7 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [x] runways.sell
 - [x] terminals.sell
 - [x] recycling.start
-- [ ] recycling.instant
+- [x] recycling.instant
 - [x] recycling.collect
 - [x] crafting.processCraftingStep
 - [x] crafting.buyMaterials

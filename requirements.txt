@@ -7,6 +7,8 @@ deepmerge
 colorama
 requests
 orjson
+python-dotenv
 SQLAlchemy>=2.0.0
-psycopg2-binary
+psycopg[binary]
 passlib[bcrypt]
+pyfiglet

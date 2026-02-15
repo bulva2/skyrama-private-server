@@ -89,17 +89,46 @@ def handle_recyclingInstant(request, user_id, rpcResult, items_to_add_to_obj, js
         rpcResult["i"] = -1
         return   
 
-    # To-Do: I forgot to implement recycling_level_caps from initData..
-    level_cap = json_data["playerData"]["recycling_levelCap"]
+    # The level caps from initData 'recycling_level_caps'
+    init_player_data = init_data.get("playerData", -1)
+
+    if init_player_data == -1:
+        report_issue("warning", f"recycling_collect: playerData not found in init data for user {user_id}")
+        rpcResult["i"] = -1
+        return
+
+    recycling_level_caps = init_player_data.get("recycling_level_caps")
+    if recycling_level_caps is None:
+        report_issue("warning", f"recycling_collect: recycling_level_caps not found in init data for user {user_id}")
+        rpcResult["i"] = -1
+        return
+    
+    current_level = json_data["playerData"].get("recycling_level", 0)
+    level_cap = recycling_level_caps.get(str(current_level + 1), 35000)
+
+    print(f"Current level: {current_level}, Level cap for next level: {level_cap}")
+
+    # Level out of scope, idk what actually happens so log for future me or before I test it, for now set it to 35k
+    if (level_cap == 35000):
+        report_issue("warning", f"recycling_instant: Level cap for level cap (current_level + 1) => {current_level + 1} not found in init data for user {user_id}, defaulting to 35k")
+
+    json_data["playerData"]["recycling_levelCap"] = level_cap
 
     json_data["playerData"]["recycling_totalXP"] += recycling_xp
     json_data["playerData"]["recycling_levelXP"] += recycling_xp
 
-    # Idk how anyone would be able to level up twice but just in case
+    # Multi-level up handling even tho it shouldn't ever happen
     while json_data["playerData"]["recycling_levelXP"] >= level_cap:
         json_data["playerData"]["recycling_level"] += 1
         json_data["playerData"]["recycling_levelXP"] -= level_cap
-    
+        current_level = json_data["playerData"]["recycling_level"]
+
+        new_cap = recycling_level_caps.get(str(current_level + 1))
+
+        if new_cap:
+            json_data["playerData"]["recycling_levelCap"] = new_cap
+            level_cap = new_cap
+
     for drop in material_drops:
         m_id = str(drop["materialId"])
         amount = drop["amount"]
