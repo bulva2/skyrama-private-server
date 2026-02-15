@@ -71,6 +71,7 @@ from .general_trackFlashError import handle_trackFlashError
 from .crafting_collect import handle_craftingCollect
 from .recycling_start import handle_recyclingStart
 from .recycling_collect import handle_recyclingCollect
+from .recycling_instant import handle_recyclingInstant
 
 # Define what to export when "from commands import *" is used
 __all__ = [
@@ -145,5 +146,6 @@ __all__ = [
     "handle_trackFlashError",
     "handle_craftingCollect",
     "handle_recyclingStart",
-    "handle_recyclingCollect"
+    "handle_recyclingCollect",
+    "handle_recyclingInstant"
 ]

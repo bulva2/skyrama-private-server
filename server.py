@@ -191,7 +191,8 @@ available_commands = {
     "general.trackFlashError": handle_trackFlashError,
     "crafting.collect": handle_craftingCollect,
     "recycling.start": handle_recyclingStart,
-    "recycling.collect": handle_recyclingCollect
+    "recycling.collect": handle_recyclingCollect,
+    "recycling.instant": handle_recyclingInstant
 }
 
 # Routes
