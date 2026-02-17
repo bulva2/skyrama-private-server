@@ -1,5 +1,6 @@
 import time
 import src.user_manager as user_manager
+from src.enums import BuddyStatus
 from src.debug import report_issue
 
 def run_buddy_checks(time, json_data):
@@ -7,22 +8,22 @@ def run_buddy_checks(time, json_data):
         buddy_data = user_manager.load_save_by_id(buddy["hi_player_id"])
         
         # load_save_by_id returns -1 if user isn't found, skip this user
-        if buddy_data == -1:
+        if isinstance(buddy_data, int):
             report_issue("warning", f"run_buddy_checks: Buddy user {buddy['hi_player_id']} not found for user {json_data['playerData']['user_name']} (ID: {json_data['playerData']['account_id']}), setting offline status")
             buddy["last_buddyping_time"] = 0
             buddy["xp"] = 0
-            buddy["status"] = 0  # Set to offline
+            buddy["status"] = BuddyStatus.NONE.value  # Set to offline
             continue
             
         buddy["last_buddyping_time"] = buddy_data["playerData"]["last_buddyping_time"]
         buddy["xp"] = buddy_data["playerData"]["xp"]
         # if request accepted
-        if int(buddy["status"]) != 1 and int(buddy["status"]) != 2:
+        if int(buddy["status"]) != BuddyStatus.INVITED.value and int(buddy["status"]) != BuddyStatus.INVITED_BY.value:
             # if buddyping activated
             if time < int(buddy["last_buddyping_time"]):
-                buddy["status"] = 5
+                buddy["status"] = BuddyStatus.ACTIVE.value #5
             else:
-                buddy["status"] = 0
+                buddy["status"] = BuddyStatus.NONE.value #0
 
 def handle_buddyGetAll(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
@@ -38,14 +39,6 @@ def handle_buddyGetAll(request, user_id, rpcResult, items_to_add_to_obj, json_da
     # num_flights_today
     # todays_first_flight_time
     # online
-
-    #STATUS NUMBERS:
-    #1 = you sent an invite to them
-    #2 = they sent an invite to you
-    #3 = ?
-    #4 = ?
-    #5 = online
-    #0 = offline
 
     run_buddy_checks(request["t"], json_data)
 

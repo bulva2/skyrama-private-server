@@ -1,5 +1,13 @@
 from enum import Enum
 
+class BuddyStatus(Enum):
+    NONE = 0
+    INVITED = 1
+    INVITED_BY = 2
+    DECLINED = 3
+    DELETED = 4
+    ACTIVE = 5
+
 class PlaneState(Enum):
     HANGAR = 0
     EXIT_HANGAR = 1
