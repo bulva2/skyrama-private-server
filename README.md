@@ -87,7 +87,7 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [x] lucky_luggage.spin
 - [x] buddy.getAll
 - [x] buddy.collectPassenger
-- [ ] buddy.receivePassengers - Not sure if this is actually used?
+- [x] buddy.receivePassengers
 - [x] buddy.endRelationship
 - [x] buddy.accept
 - [x] buddy.decline
