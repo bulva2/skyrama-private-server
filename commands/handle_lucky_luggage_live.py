@@ -23,7 +23,7 @@ def handle_lucky_luggage_live(request, user_id, json_data):
         num_spins = int(json_data["lucky_luggage_data"]["free_spin_table"][4])
         
       json_data["lucky_luggage_data"]["free_spins"] = json_data["lucky_luggage_data"]["free_spins"] + num_spins
-      #json_data["playerData"]["lucky_luggage_free_spins"] = json_data["lucky_luggage_data"]["free_spins"] # Unreferenced client code, if no problems arise, remove
+      json_data["playerData"]["lucky_luggage_free_spins"] = json_data["lucky_luggage_data"]["free_spins"]
       
       json_data["lucky_luggage_data"]["gotBonus"] = 1 if json_data["lucky_luggage_data"]["free_spins"] > 0 else 0
     else:

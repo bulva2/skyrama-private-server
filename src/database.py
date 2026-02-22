@@ -3,6 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, scoped_session, relationship
 from sqlalchemy.dialects.postgresql import JSONB
 from datetime import datetime
+from src.enums import PlaneState
 from contextlib import contextmanager
 import logging
 
@@ -24,7 +25,7 @@ class Plane(Base):
     plane_type_id = Column(Integer, nullable=False)
     
     # State
-    flight_status = Column(Integer, default=77)
+    flight_status = Column(Integer, default=PlaneState.HANGAR.value)
     container_id = Column(Integer, default=-1)
     subcontainer_id = Column(Integer, default=-1)
     

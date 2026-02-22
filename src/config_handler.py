@@ -8,6 +8,7 @@ import os
 # Singleton, so we don't load the config multiple times
 _config = None
 
+# Mby move this to startup.py
 def run():
     os.system('cls' if os.name == 'nt' else 'clear')
     setup_logging()

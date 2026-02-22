@@ -9,8 +9,11 @@ class ServerState:
         self.obj_data: Dict[str, Any] = {}
         self.admins: List[int] = []
         self.server_ip: str = ""
-
+        self.maintenance: bool = False
+        self.goal_types = ["main", "pilot", "daily"]
+        self.langstrings: Dict[str, Any] = {}
         self.data_path = ROOT_DIR / "data"
         self.template_path = ROOT_DIR / "templates"
+        self.root_path = ROOT_DIR
 
 state = ServerState()
