@@ -66,7 +66,8 @@ async def play(request: Request, locale: Optional[str] = None):
         "token": session["token"],
         "lang": lang,
         "SERVERIP": state.server_ip,
-        "langstrings": state.langstrings.get(lang, {})
+        "langstrings": state.langstrings.get(lang, {}),
+        "airville_cv": state.airville_cv
     })
 
 @router.post("/login")

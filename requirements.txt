@@ -8,6 +8,7 @@ colorama
 requests
 orjson
 python-dotenv
+itsdangerous
 SQLAlchemy>=2.0.0
 psycopg[binary]
 passlib[bcrypt]

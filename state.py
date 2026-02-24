@@ -15,5 +15,6 @@ class ServerState:
         self.data_path = ROOT_DIR / "data"
         self.template_path = ROOT_DIR / "templates"
         self.root_path = ROOT_DIR
+        self.airville_cv: str = ""
 
 state = ServerState()

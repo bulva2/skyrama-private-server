@@ -2,6 +2,7 @@ import os
 import orjson
 import logging
 import pyfiglet
+import hashlib
 
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
@@ -66,6 +67,13 @@ async def lifespan(app: FastAPI):
     use_https = config.getboolean("ServerSettings", "use_https", fallback=False)
     protocol = "https" if use_https else "http"
     state.server_ip = f"{protocol}://{host}:{port}"
+
+    swf_path = state.root_path / "assets" / "airville.swf"
+    if swf_path.exists():
+        with open(swf_path, "rb") as f:
+            state.airville_cv = hashlib.md5(f.read()).hexdigest()
+    else:
+        state.airville_cv = "devcv"
 
     if config.get("Webhooks", "error_webhook", fallback="") == "":
         logging.warning("No error webhook configured, errors will not be sent to Discord!")
