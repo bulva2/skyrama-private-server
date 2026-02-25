@@ -7,11 +7,12 @@ from bundle import TEMPLATES_DIR, STUB_DIR
 from state import state
 
 from src.validator import validate_registration_form
-from src.debug import user_registered_webhook
+from src.debug import user_registered_webhook, report_issue
 
-import uuid
+import bcrypt
 import hashlib
 import os
+import uuid
 
 import src.user_manager as user_manager
 
@@ -76,26 +77,28 @@ async def login(request: Request, username: str = Form(...), password: str = For
     lang = locale if locale else session.get("lang", "en")
     langUpper = lang.upper()
     
-    pwd_hash = hashlib.sha512(password.encode('utf-8')).hexdigest()
-    
-    json_data = user_manager.load_save_by_name(username)
-    
-    msg = ''
-    if json_data == -1:
-        msg = 'bgc.error.login_invalidCredentials'
-    elif json_data["playerData"]["password"] == pwd_hash:
-        json_data["playerData"]["token"] = str(uuid.uuid1())
-        user_id = json_data["playerData"]["account_id"]
+    stored_hash = user_manager.fetch_pwd_hash_by_name(username)
 
-        user_manager.modify_save_by_id(user_id, json_data, set_last_login=True)
-
-        session["username"] = username
-        session["userid"] = user_id
-        session["token"] = json_data["playerData"]["token"]
-        return RedirectResponse(url='/play', status_code=303)
-    else:
-        msg = 'bgc.error.login_invalidCredentials'
+    if stored_hash:
+        # SHA-256 pwd that will be checked against the salt and hash stored in the database
+        hashed_pwd = hashlib.sha256(password.encode('utf-8')).hexdigest().encode('utf-8')
         
+        if bcrypt.checkpw(hashed_pwd, stored_hash):
+            json_data = user_manager.load_save_by_name(username)
+
+            # if not (false or false)
+            if not (isinstance(json_data, int) or "playerData" not in json_data):
+                json_data["playerData"]["token"] = str(uuid.uuid1())
+                user_id = json_data["playerData"]["account_id"]
+                user_manager.modify_save_by_id(user_id, json_data, set_last_login=True)
+
+                session["username"] = username
+                session["userid"] = user_id
+                session["token"] = json_data["playerData"]["token"]
+                return RedirectResponse(url='/play', status_code=303)
+            else:
+                report_issue("error", f"Failed to load save for user {username} after successful login. Data might be corrupted.", "error")
+    
     return templates.TemplateResponse("home.html", {
         "request": request,
         "SERVERIP": state.server_ip,
@@ -103,8 +106,9 @@ async def login(request: Request, username: str = Form(...), password: str = For
         "langstrings": state.langstrings.get(lang, {}),
         "lang": lang,
         "langUpper": langUpper,
-        "msg": msg
-    })
+        "msg": 'bgc.error.login_invalidCredentials'
+    }, status_code=401)  
+
 
 @router.post("/register")
 async def register(request: Request, RegUsername: str = Form(...), RegPassword: str = Form(...), RegEmail: str = Form(...), locale: Optional[str] = None):
@@ -112,12 +116,17 @@ async def register(request: Request, RegUsername: str = Form(...), RegPassword: 
     lang = locale if locale else session.get("lang", "en")
     langUpper = lang.upper()
     
-    pwd_hash = hashlib.sha512(RegPassword.encode('utf-8')).hexdigest()
+    # Firstly prehash with SHA-256 to always have 32 bytes (bcrypt has limit of 72 bytes, found out the hard way)
+    pre_hashed_pwd = hashlib.sha256(RegPassword.encode('utf-8')).hexdigest().encode('utf-8')
+
+    # Then hash with bcrypt to add salt and make it secure againt brute-force
+    pwd_hash = bcrypt.hashpw(pre_hashed_pwd, bcrypt.gensalt())
+
     msg = validate_registration_form(RegUsername, RegPassword, RegEmail, user_manager.user_name_exists)
     
     if not msg:
         token = str(uuid.uuid1())
-        uid = user_manager.create_new_account(RegUsername, pwd_hash, token)
+        uid = user_manager.create_new_account(RegUsername, pwd_hash.decode('utf-8'), token)
         
         session["username"] = RegUsername
         session["userid"] = uid

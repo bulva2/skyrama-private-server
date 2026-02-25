@@ -1,6 +1,7 @@
 import re
+from typing import Callable
 
-def validate_registration_form(username: str, password: str, email: str, user_exists_check: callable) -> str:
+def validate_registration_form(username: str, password: str, email: str, user_exists_check: Callable) -> str:
     """
     Validates the registration form data.
     

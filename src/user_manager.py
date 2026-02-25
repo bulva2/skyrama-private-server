@@ -216,6 +216,15 @@ def load_save_by_name(username: str) -> Any:
     except SQLAlchemyError as e:
         logging.error(f"Failed to load user {username}: {e}")
         return -1
+    
+def fetch_pwd_hash_by_name(username: str) -> bytes | None:
+    try:
+        with db_session_scope() as session:
+            player = session.query(Player).filter_by(username=username).first()
+            return player.password.encode('utf-8') if player else None
+    except SQLAlchemyError as e:
+        logging.error(f"Failed to fetch password hash for {username}: {e}")
+        return None
 
 def load_save_by_id(user_id: int) -> dict | int:
     try:
