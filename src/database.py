@@ -1,71 +1,71 @@
-from sqlalchemy import create_engine, Column, Integer, String, DateTime, Boolean, Index, ForeignKey, BigInteger, UniqueConstraint, func
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker, scoped_session, relationship
+from sqlalchemy import create_engine, event, Integer, String, DateTime, Boolean, Index, ForeignKey, BigInteger, UniqueConstraint, func
+from sqlalchemy.orm import sessionmaker, scoped_session, relationship, DeclarativeBase, Mapped, mapped_column
 from sqlalchemy.dialects.postgresql import JSONB
 from datetime import datetime
 from src.enums import PlaneState
 from contextlib import contextmanager
 import logging
 
-# To-do?: Possibly change Columns to mapped_column in the future
-Base = declarative_base()
+class Base(DeclarativeBase):
+    pass
 
 # Plane Table
 class Plane(Base):
     __tablename__ = 'planes'
+
+    # Player relationship (n-1)
+    owner: Mapped["Player"] = relationship("Player", back_populates="planes")
     
-    # Internal DB ID
-    db_id = Column(Integer, primary_key=True, autoincrement=True)
+    # Internal global ID for the plane record
+    db_id: Mapped[int] = mapped_column(Integer, primary_key=True)
     
-    # Owner
-    owner_id = Column(Integer, ForeignKey('players.user_id'), nullable=False, index=True)
+    # Owner ID -> ID of the player that owns this plane
+    owner_id: Mapped[int] = mapped_column(ForeignKey("players.user_id"), nullable=False, index=True)
     
-    # Plane Data
-    plane_id = Column(Integer, nullable=False, index=True) # "id" in JSON
-    plane_type_id = Column(Integer, nullable=False)
+    # Plane ID -> ID of the plane for the player, it is not global ID
+    plane_id: Mapped[int] = mapped_column(Integer, nullable=False, index=True) # "id" in JSON
+    # Plane type ID -> ID of the plane type (model)
+    plane_type_id: Mapped[int] = mapped_column(nullable=False)
     
     # State
-    flight_status = Column(Integer, default=PlaneState.HANGAR.value)
-    container_id = Column(Integer, default=-1)
-    subcontainer_id = Column(Integer, default=-1)
+    flight_status: Mapped[int] = mapped_column(Integer, default=PlaneState.HANGAR.value)
+    container_id: Mapped[int] = mapped_column(Integer, default=-1)
+    subcontainer_id: Mapped[int] = mapped_column(Integer, default=-1)
     
     # Timestamps (BigInt for unix timestamps)
-    departure_time = Column(BigInteger, default=0)
-    arrival_time = Column(BigInteger, default=0)
-    start_service_time = Column(BigInteger, default=0)
-    last_state_change_time = Column(BigInteger, default=0)
+    departure_time: Mapped[int] = mapped_column(BigInteger, default=0)
+    arrival_time: Mapped[int] = mapped_column(BigInteger, default=0)
+    start_service_time: Mapped[int] = mapped_column(BigInteger, default=0)
+    last_state_change_time: Mapped[int] = mapped_column(BigInteger, default=0)
     
     # Flight details
-    from_player_id = Column(Integer, default=0) # "player_id" in JSON usually denotes owner, but "from_user_name" exists
-    from_user_object_id = Column(Integer, default=-1)  # Original plane ID on sender's airport
-    to_player_id = Column(Integer, default=-1)
-    from_location_id = Column(Integer, default=-1)
-    to_location_id = Column(Integer, default=-1)
-    from_user_name = Column(String(50), default="")
-    to_user_name = Column(String(50), default="")
+    from_player_id: Mapped[int] = mapped_column(Integer, default=0) # "player_id" in JSON usually denotes owner, but "from_user_name" exists
+    from_user_object_id: Mapped[int] = mapped_column(Integer, default=-1)  # Original plane ID on sender's airport
+    to_player_id: Mapped[int] = mapped_column(Integer, default=-1)
+    from_location_id: Mapped[int] = mapped_column(Integer, default=-1)
+    to_location_id: Mapped[int] = mapped_column(Integer, default=-1)
+    from_user_name: Mapped[str] = mapped_column(String(20), default="")
+    to_user_name: Mapped[str] = mapped_column(String(20), default="")
     
     # Stats / Configuration
-    active_count = Column(Integer, default=1)
-    contents_count = Column(Integer, default=0)
-    wares_revenue = Column(Integer, default=0)
-    buddy_points = Column(Integer, default=0)
-    xp = Column(Integer, default=0)
-    air_coins = Column(Integer, default=0)
-    kerosene_boost_flag = Column(Integer, default=0)
-    instantland = Column(Integer, default=0)
-    upgrade_level = Column(Integer, default=0)
+    active_count: Mapped[int] = mapped_column(Integer, default=1)
+    contents_count: Mapped[int] = mapped_column(Integer, default=0)
+    wares_revenue: Mapped[int] = mapped_column(Integer, default=0)
+    buddy_points: Mapped[int] = mapped_column(Integer, default=0)
+    xp: Mapped[int] = mapped_column(Integer, default=0)
+    air_coins: Mapped[int] = mapped_column(Integer, default=0)
+    kerosene_boost_flag: Mapped[int] = mapped_column(Integer, default=0)
+    instantland: Mapped[int] = mapped_column(Integer, default=0)
+    upgrade_level: Mapped[int] = mapped_column(Integer, default=0)
     
     # Drops / Items
-    souvenir_types_id = Column(Integer, default=-1)
-    drop_consumable_id = Column(Integer, default=0)
-    drop_consumable_amount = Column(Integer, default=0)
-    drop_material = Column(Integer, default=0)
-    drop_material_amount = Column(Integer, default=0)
-    banner_id = Column(Integer, default=-1)
-    banner_text = Column(String(500), default="")  # Custom text for fly-by banners
-
-    # Relationships
-    owner = relationship("Player", back_populates="planes_rel")
+    souvenir_types_id: Mapped[int] = mapped_column(Integer, default=-1)
+    drop_consumable_id: Mapped[int] = mapped_column(Integer, default=0)
+    drop_consumable_amount: Mapped[int] = mapped_column(Integer, default=0)
+    drop_material: Mapped[int] = mapped_column(Integer, default=0)
+    drop_material_amount: Mapped[int] = mapped_column(Integer, default=0)
+    banner_id: Mapped[int] = mapped_column(Integer, default=-1)
+    banner_text: Mapped[str] = mapped_column(String(500), default="")  # Custom text for fly-by banners
 
     __table_args__ = (
         UniqueConstraint('owner_id', 'plane_id', name='uix_owner_plane'),
@@ -110,70 +110,75 @@ class Plane(Base):
 # Main Player Table
 class Player(Base):
     __tablename__ = 'players'
+
+    # Plane relationship (1-n)
+    planes: Mapped[list["Plane"]] = relationship("Plane", back_populates="owner", cascade="all, delete-orphan")
     
-    # Primary identification
-    user_id = Column(Integer, primary_key=True)
-    username = Column(String(20), unique=True, nullable=False, index=True)
-    password = Column(String(128), nullable=False)
-    token = Column(String(36), index=True)
-    location_id = Column(Integer, default=-1, index=True)
+    # Primary identifications
+    user_id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    username: Mapped[str] = mapped_column(String(20), unique=True, nullable=False, index=True)
+    password: Mapped[str] = mapped_column(String(128), nullable=False)
+    token: Mapped[str] = mapped_column(String(36), index=True)
+    location_id: Mapped[int] = mapped_column(Integer, default=-1, index=True)
+
+    # Player states
+    is_admin: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
+    is_banned: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
+    is_user_being_log_traced: Mapped[bool] = mapped_column(Boolean, default=False)
     
     # Session data
-    last_login = Column(DateTime, default=datetime.utcnow)
+    last_login: Mapped[datetime] = mapped_column(DateTime, default=datetime.now)
     
-    # Game state tracking
-    saved_sequence_num = Column(Integer, default=-1)
-    is_user_being_log_traced = Column(Boolean, default=False)
+    saved_sequence_num: Mapped[int] = mapped_column(Integer, default=-1) # unused
     
-    player_data = Column(JSONB, nullable=False)
-    account_data = Column(JSONB, nullable=False)
-    goals_data = Column(JSONB, nullable=False)
+    # Data blobs
+    player_data: Mapped[dict] = mapped_column(JSONB, nullable=False)
+    account_data: Mapped[dict] = mapped_column(JSONB, nullable=False)
+    goals_data: Mapped[dict] = mapped_column(JSONB, nullable=False)
     
-    # Collections (as JSONB arrays)
-    backgrounds = Column(JSONB, default=list)
-    landmarks = Column(JSONB, default=list)
-    consumables = Column(JSONB, default=list)
-    runways = Column(JSONB, default=list)
-    terminals = Column(JSONB, default=list)
-    hangars = Column(JSONB, default=list)
+    # Player item collections
+    backgrounds: Mapped[list] = mapped_column(JSONB, default=list)
+    landmarks: Mapped[list] = mapped_column(JSONB, default=list)
+    consumables: Mapped[list] = mapped_column(JSONB, default=list)
+    runways: Mapped[list] = mapped_column(JSONB, default=list)
+    terminals: Mapped[list] = mapped_column(JSONB, default=list)
+    hangars: Mapped[list] = mapped_column(JSONB, default=list)
+    landside_buildings: Mapped[list] = mapped_column(JSONB, default=list)
+    cargo_shops: Mapped[list] = mapped_column(JSONB, default=list)
+    cargo: Mapped[list] = mapped_column(JSONB, default=list)
+    warehouses: Mapped[list] = mapped_column(JSONB, default=list)
+    bays: Mapped[list] = mapped_column(JSONB, default=list)
     
-    planes_rel = relationship("Plane", back_populates="owner", cascade="all, delete-orphan")
-    landside_buildings = Column(JSONB, default=list)
-    cargo_shops = Column(JSONB, default=list)
-    cargo = Column(JSONB, default=list)
-    warehouses = Column(JSONB, default=list)
-    bays = Column(JSONB, default=list)
-    
-    # Buddy system
-    buddy_stuff = Column(JSONB, default=dict)  # buddyStuff object
+    # Buddies and buddy points
+    buddy_stuff: Mapped[dict] = mapped_column(JSONB, default=dict)
     
     # Other game data
-    souvenir_collections = Column(JSONB, default=list)
-    lucky_luggage_data = Column(JSONB, default=dict)
-    crafting_data = Column(JSONB, default=dict)
-    expedition_status = Column(JSONB, default=dict)
+    souvenir_collections: Mapped[list] = mapped_column(JSONB, default=list)
+    lucky_luggage_data: Mapped[dict] = mapped_column(JSONB, default=dict)
+    crafting_data: Mapped[dict] = mapped_column(JSONB, default=dict)
+    expedition_status: Mapped[dict] = mapped_column(JSONB, default=dict) # never released feature
     
     # Location/world map data (per-player visited status)
-    locations = Column(JSONB, default=list)
+    locations: Mapped[list] = mapped_column(JSONB, default=list)
     
     # Special/event buildings
-    special_buildings = Column(JSONB, default=list)
+    special_buildings: Mapped[list] = mapped_column(JSONB, default=list)
     
     # News/messages
-    news = Column(JSONB, nullable=True)
+    news: Mapped[dict] = mapped_column(JSONB, nullable=True)
     
     # Event and crafting materials
-    event_materials = Column(JSONB, default=list)
-    materials = Column(JSONB, default=dict)
+    event_materials: Mapped[list] = mapped_column(JSONB, default=list)
+    materials: Mapped[dict] = mapped_column(JSONB, default=dict)
     
     # Recycling and crafting slots
-    user_recycling_slots = Column(JSONB, default=list)
-    user_crafting_slots = Column(JSONB, default=list)
-    user_current_craftings = Column(JSONB, default=list)
+    user_recycling_slots: Mapped[list] = mapped_column(JSONB, default=list)
+    user_crafting_slots: Mapped[list] = mapped_column(JSONB, default=list)
+    user_current_craftings: Mapped[list] = mapped_column(JSONB, default=list)
     
     # Metadata
-    created_at = Column(DateTime, default=datetime.utcnow)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.now())
+    updated_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.now())
     
     # Indexes for performance
     __table_args__ = (
@@ -183,33 +188,38 @@ class Player(Base):
         Index('idx_username_lower', func.lower(username)),
     )
 
+def update_timestamp(mapper, connection, target):
+    target.updated_at = datetime.now()
+
+event.listen(Player, 'before_update', update_timestamp)
+
 class Voucher(Base):
     __tablename__ = 'vouchers'
     
     # Primary key
-    id = Column(Integer, primary_key=True, autoincrement=True)
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     
     # Voucher identification
-    code = Column(String(50), unique=True, nullable=False, index=True)
-    description = Column(String(255), nullable=True)
+    code: Mapped[str] = mapped_column(String(50), unique=True, nullable=False, index=True)
+    description: Mapped[str] = mapped_column(String(255), nullable=True)
     
-    # Rewards (stored as JSONB for flexibility)
+    # Rewards (in JSON)
     # Contains: air_coins, air_cash, passengers, xp, super_fuel, etc.
-    rewards = Column(JSONB, nullable=False)
+    rewards: Mapped[dict] = mapped_column(JSONB, nullable=False)
     
     # Usage limits
-    max_uses = Column(Integer, nullable=True)  # NULL = unlimited
-    current_uses = Column(Integer, default=0)
+    max_uses: Mapped[int] = mapped_column(Integer, nullable=True)  # NULL = unlimited
+    current_uses: Mapped[int] = mapped_column(Integer, default=0)
     
     # Expiration
-    expires = Column(Integer, nullable=True)  # Unix timestamp, NULL = never expires
+    expires: Mapped[int] = mapped_column(Integer, nullable=True)  # Unix timestamp, NULL = never expires
     
     # Status
-    active = Column(Boolean, default=True)
+    active: Mapped[bool] = mapped_column(Boolean, default=True)
     
     # Metadata
-    created_at = Column(DateTime, default=datetime.utcnow)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    updated_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     
     __table_args__ = (
         Index('idx_code', 'code'),
@@ -220,10 +230,10 @@ class VoucherRedemption(Base):
     """Track which users have redeemed which vouchers"""
     __tablename__ = 'voucher_redemptions'
     
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    user_id = Column(Integer, nullable=False, index=True)
-    voucher_id = Column(Integer, nullable=False, index=True)
-    redeemed_at = Column(DateTime, default=datetime.utcnow)
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    user_id: Mapped[int] = mapped_column(Integer, nullable=False, index=True)
+    voucher_id: Mapped[int] = mapped_column(Integer, nullable=False, index=True)
+    redeemed_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
     
     __table_args__ = (
         Index('idx_user_voucher', 'user_id', 'voucher_id', unique=True),  # Prevent duplicate redemptions

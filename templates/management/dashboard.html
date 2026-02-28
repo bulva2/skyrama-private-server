@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privaterama - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="/management">Privaterama Management Panel</a>
+            <div class="d-flex text-white align-items-center">
+                <span class="me-3">Logged in as: <strong>{{ admin_user.username }}</strong></span>
+                <a href="/logout" class="btn btn-sm btn-outline-light">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card shadow-sm">
+            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                <h4 class="mb-0">Player Management</h4>
+                <form class="d-flex" method="GET" action="/management">
+                    <input class="form-control me-2" type="search" name="search" value="{{ search }}" placeholder="Search username..." aria-label="Search">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                    {% if search %}
+                        <a href="/management" class="btn btn-secondary ms-2">Clear</a>
+                    {% endif %}
+                </form>
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-hover table-striped mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Location ID</th>
+                            <th>Last Login</th>
+                            <th>Last Updated</th>
+                            <th class="text-end">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for player in players %}
+                        <tr>
+                            <td>{{ player.user_id }}</td>
+                            <td><strong>{{ player.username }}</strong> {% if player.is_admin %}<span class="ms-1 badge bg-danger">Admin</span>{% endif %}</td>
+                            <td>{{ player.location_id }}</td>
+                            <td>{{ player.last_login.strftime('%Y-%m-%d %H:%M') if player.last_login else 'Never' }}</td>
+                            <td>{{ player.updated_at.strftime('%Y-%m-%d %H:%M') if player.updated_at else 'Never' }}</td>
+                            <td class="text-end">
+                                <a href="/management/player/{{ player.user_id }}" class="btn btn-sm btn-info text-white">View Details</a>
+                            </td>
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td colspan="5" class="text-center py-4 text-muted">No players found.</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            
+            {% if total_pages > 1 %}
+            <div class="card-footer bg-white d-flex justify-content-center">
+                <nav>
+                    <ul class="pagination mb-0">
+                        <li class="page-item {% if page <= 1 %}disabled{% endif %}">
+                            <a class="page-link" href="/management?page={{ page - 1 }}{% if search %}&search={{ search }}{% endif %}">Previous</a>
+                        </li>
+                        <li class="page-item disabled"><span class="page-link">Page {{ page }} of {{ total_pages }}</span></li>
+                        <li class="page-item {% if page >= total_pages %}disabled{% endif %}">
+                            <a class="page-link" href="/management?page={{ page + 1 }}{% if search %}&search={{ search }}{% endif %}">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

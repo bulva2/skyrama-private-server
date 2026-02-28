@@ -1,18 +1,12 @@
+
 import os
-import configparser
+from dotenv import load_dotenv
 import psycopg
 
-ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-CONFIG_PATH = os.path.join(ROOT, "config.cfg")
-
-config = configparser.ConfigParser()
-read_ok = config.read(CONFIG_PATH)
-
-conn_str = None
-if config.has_section("Database") and config.has_option("Database", "connection_string"):
-    conn_str = config.get("Database", "connection_string")
-else:
-    print(f"No connection_string found in {CONFIG_PATH} under [Database]")
+load_dotenv()
+conn_str = os.environ.get("DB_CONNECTION_STRING", None)
+if not conn_str:
+    print("No DB_CONNECTION_STRING found in .env file.")
 
 
 def test_connection():

@@ -1297,7 +1297,6 @@
   "accountData": {
     "id": 13789283,
     "last_error_time": 0,
-    "blocked": 0,
     "active": 1,
     "user_name": "testAccount123"
   },

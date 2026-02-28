@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Detail - {{ player.username }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-light">
+    <div aria-live="polite" aria-atomic="true" class="position-relative">
+        <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3" style="z-index: 1080;">
+            <div id="actionToast" class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body" id="toastBody">
+
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="/management">Privaterama Management Panel</a>
+            <div class="d-flex text-white align-items-center">
+                <a href="/management" class="btn btn-sm btn-outline-light me-3">Back to Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Basic Info</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>ID:</strong> {{ player.user_id }}</li>
+                        <li class="list-group-item"><strong>Username:</strong> {{ player.username }}</li>
+                        <li class="list-group-item"><strong>Location ID:</strong> {{ player.location_id }}</li>
+                        <li class="list-group-item"><strong>Last Login:</strong> {{ player.last_login }}</li>
+                        <li class="list-group-item"><strong>Role:</strong> {{ 'Admin' if player.is_admin else 'Player' }}</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-md-8">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-white">
+                        <h5 class="mb-0">Account Actions</h5>
+                    </div>
+                    <div class="card-body">
+                        {% if player.is_banned %}
+                        <form id="unbanForm" method="post" action="/management/player/{{ player.user_id }}/unban" style="display:inline;">
+                            <button type="submit" class="btn btn-success">Unban Player</button>
+                        </form>
+                        {% else %}
+                        <form id="banForm" method="post" action="/management/player/{{ player.user_id }}/ban" style="display:inline;">
+                            <button type="submit" class="btn btn-danger">Ban Player</button>
+                        </form>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="card shadow-sm">
+                    <div class="card-header bg-white">
+                        <h5 class="mb-0">Raw Player Data Overview</h5>
+                    </div>
+                    <div class="card-body bg-light" style="max-height: 400px; overflow-y: auto;">
+                        <pre><code>{{ player.player_data | pprint }}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        {% if flash_message %}
+            document.getElementById('toastBody').textContent = "{{ flash_message }}";
+            
+            var toastEl = document.getElementById('actionToast');
+            var toast = new bootstrap.Toast(toastEl, { delay: 3000 });
+            toast.show();
+        {% endif %}
+    });
+</script>
+</body>
+</html>

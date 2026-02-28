@@ -86,10 +86,21 @@ async def login(request: Request, username: str = Form(...), password: str = For
         if bcrypt.checkpw(hashed_pwd, stored_hash):
             json_data = user_manager.load_save_by_name(username)
 
-            # if not (false or false)
             if not (isinstance(json_data, int) or "playerData" not in json_data):
                 json_data["playerData"]["token"] = str(uuid.uuid1())
                 user_id = json_data["playerData"]["account_id"]
+
+                if user_manager.is_user_banned(username):
+                    return templates.TemplateResponse("home.html", {
+                        "request": request,
+                        "SERVERIP": state.server_ip,
+                        "playerCount": user_manager.get_player_count(),
+                        "langstrings": state.langstrings.get(lang, {}),
+                        "lang": lang,
+                        "langUpper": langUpper,
+                        "msg": 'privaterama.banned'
+                    }, status_code=403)
+
                 user_manager.modify_save_by_id(user_id, json_data, set_last_login=True)
 
                 session["username"] = username
@@ -97,7 +108,7 @@ async def login(request: Request, username: str = Form(...), password: str = For
                 session["token"] = json_data["playerData"]["token"]
                 return RedirectResponse(url='/play', status_code=303)
             else:
-                report_issue("error", f"Failed to load save for user {username} after successful login. Data might be corrupted.", "error")
+                report_issue("error", f"Failed to load save for user {username} after successful login. Data might be corrupted.")
     
     return templates.TemplateResponse("home.html", {
         "request": request,

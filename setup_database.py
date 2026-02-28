@@ -1,7 +1,6 @@
-"""
-!!! Run this ONCE to create all database tables !!!
-"""
 
+#!!! Run this ONCE to create all database tables !!!
+import dotenv
 import sys
 import os
 
@@ -9,22 +8,20 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from src.database import init_database
-from src.config_handler import get_config
 
 def setup_database():
-    config = get_config()
+    dotenv.load_dotenv()
 
     try:
-        connection_string = config.get(
-            "Database", 
-            "connection_string"
-        )
+        connection_string = os.environ.get("DB_CONNECTION_STRING", "")
+        if not connection_string:
+            raise ValueError("DB_CONNECTION_STRING not set in .env")
     except Exception as e:
-        print("Failed to read database connection string from config. Make sure it is there.")
+        print("Failed to read DB_CONNECTION_STRING from .env, make sure it exists and is correct.")
         print(f"Error: {e}")
         return
     
-    print(f"Connecting to: {connection_string}")
+    print(f"Connecting to: {connection_string} ⏳")
     
     try:
         manager = init_database(connection_string)
@@ -38,8 +35,6 @@ def setup_database():
         
     except Exception as e:
         print(f"ERROR: Failed to initialize database: {e}")
-        import traceback
-        traceback.print_exc()
         return
 
 if __name__ == "__main__":

@@ -113,7 +113,7 @@ def db_session_scope():
 
 # Convert Player object to json_data
 def _player_to_dict(player: Player) -> dict:
-    planes_list = [p.to_dict() for p in player.planes_rel]
+    planes_list = [p.to_dict() for p in player.planes]
     
     return {
         "playerData": player.player_data,
@@ -171,7 +171,7 @@ def _sync_planes(player: Player, incoming_planes: list, session):
     - Creates new planes with defaults
     - Deletes planes no longer in JSON
     """
-    existing_planes = {p.plane_id: p for p in player.planes_rel}
+    existing_planes = {p.plane_id: p for p in player.planes}
     processed_ids = set()
     
     for p_data in incoming_planes:
@@ -225,6 +225,15 @@ def fetch_pwd_hash_by_name(username: str) -> bytes | None:
     except SQLAlchemyError as e:
         logging.error(f"Failed to fetch password hash for {username}: {e}")
         return None
+    
+def is_user_banned(username: str) -> bool:
+    try:
+        with db_session_scope() as session:
+            player = session.query(Player).filter_by(username=username).first()
+            return player.is_banned if player else False
+    except SQLAlchemyError as e:
+        logging.error(f"Failed to check ban status for {username}: {e}")
+        return False
 
 def load_save_by_id(user_id: int) -> dict | int:
     try:

@@ -38,6 +38,9 @@ async def handle_request(
         response_data: Dict[str, Any] | int = process_game_commands(userId, raw_commands, json_data, session)
         if isinstance(response_data, int) and response_data == -1:
             return PlainTextResponse("An error occured while verifying your data. If you believe this to be a mistake, please contact us on discord.", status_code=400)
+        elif isinstance(response_data, int) and response_data == -2:
+            session["error_mode"] = "unimplemented"
+            return PlainTextResponse("You have attempted to use a command that is not yet implemented on the server. If you believe this to be a mistake, please contact us on discord.", status_code=400)
         
         user_manager.modify_save_by_id(userId, json_data)
         return Response(orjson.dumps(response_data))

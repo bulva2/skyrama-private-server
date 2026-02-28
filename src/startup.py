@@ -3,6 +3,7 @@ import orjson
 import logging
 import pyfiglet
 import hashlib
+import dotenv
 
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
@@ -20,20 +21,12 @@ async def lifespan(app: FastAPI):
     print(pyfiglet.figlet_format("Skyrama Private Server", font="slant", width=200))
     logging.info("Loading the server, please wait..")
     
-    raw_conn_str = config.get("Database", "connection_string")
-    db_password = os.environ.get("DB_PASSWORD")
-
-    if db_password == "Your-Database-Password-Here":
-        logging.critical("You haven't changed the database password from the .env-example!")
-        logging.critical("Please change the DB_PASSWORD variable in the .env file to your database password before running the server!\n")
-        exit(1)
-
-    if db_password:
-        conn_str = raw_conn_str.replace("${DB_PASSWORD}", db_password)
-        init_database(conn_str)
-    else:
-        logging.critical("Database password not found in .env file. Make sure that you renamed .env-example to .env and that you set the DB_PASSWORD variable to your password!")
+    dotenv.load_dotenv()
+    conn_str = os.environ.get("DB_CONNECTION_STRING", "")
+    if not conn_str:
+        logging.critical("DB_CONNECTION_STRING not found in .env file. Make sure that you renamed .env-example to .env and that you set the DB_CONNECTION_STRING variable to your connection string!")
         exit(2)
+    init_database(conn_str)
     
     # Load Init Data
     logging.info("Loading init data...")
