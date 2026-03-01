@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<script type="text/javascript">	
+		//<!--
+        	
+
+        		function onBodyReady()
+        		{
+            		var progressbar = parent.document.getElementById('popupProgress');
+            		if (progressbar)
+            			progressbar.style.display = 'none';            		
+        		}
+
+			
+		//-->
+	</script>
+</head>
+
+<body onLoad="javascript:onBodyReady()">
+	<h2 class="error_header" style="align-content: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Banned</h2>
+	<div class="error_desc" style="align-content: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Your account has been permanently banned. If you believe this to be a mistake, please contact us on discord.</div>
+	<br>
+	<br>
+	<br>
+	<center>
+		<input class="error_reload" type="button" value="Return"
+    		onclick="parent.window.location.href='/'" />
+	</center>
+	<br>
+  	<center>
+    	<img src="/templates/styles/unimplemented_footer.png" width="356" height="200">
+  	</center>
+</body>
+</html>

@@ -145,6 +145,30 @@ img {
   font-size: 15px;
 }
 
+.hidden {
+    display: none;
+}
+
+.internalHome .payment, .internalHome .profile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    height: 600px;
+}
+
+.internalHome .payment .payment-close, .internalHome .profile .profile-close {
+    background-image: url(/assets/style/global/buttons/btn_close.png);
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    width: 55px;
+    height: 54px;
+    cursor: pointer;
+    display: block;
+    z-index: 12;
+}
+
 #discord {
   color: #fff;
   background-color: #174fe8;

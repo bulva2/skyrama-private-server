@@ -1,7 +1,10 @@
+import uuid
+
 from fastapi import APIRouter, Request, Depends, HTTPException, status, Query
 from fastapi.responses import RedirectResponse
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
+from sqlalchemy.orm.attributes import flag_modified
 
 from src.database import get_db_session, Player
 from bundle import TEMPLATES_DIR
@@ -93,6 +96,8 @@ async def admin_ban_player(
         raise HTTPException(status_code=404, detail="Player not found")
 
     player.is_banned = True
+    player.player_data["token"] = str(uuid.uuid1()) # Rotate token to force a disconnect if the player is online
+    flag_modified(player, "player_data")
     db.commit()
 
     request.session["flash_message"] = f"Player {player.username} has been banned!"

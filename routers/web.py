@@ -20,7 +20,9 @@ router = APIRouter()
 templates = Jinja2Templates(directory=TEMPLATES_DIR)
 
 @router.get("/")
-async def homepage(request: Request, locale: Optional[str] = None):
+async def homepage(request: Request, locale: Optional[str] = None, action: Optional[str] = None):
+    if action == "internalPayment":
+        return templates.TemplateResponse("payment.html", {"request": request})
     session = request.session
     lang = locale if locale else session.get("lang", "en")
     session["lang"] = lang
@@ -42,6 +44,9 @@ async def error(request: Request):
     if mode == "unimplemented":
         session["error_mode"] = "error"
         return templates.TemplateResponse("unimplemented.html", {"request": request})
+    elif mode == "banned":
+        session["error_mode"] = "error"
+        return templates.TemplateResponse("banned.html", {"request": request})
     else:
         return templates.TemplateResponse("error.html", {"request": request})
 
@@ -90,7 +95,7 @@ async def login(request: Request, username: str = Form(...), password: str = For
                 json_data["playerData"]["token"] = str(uuid.uuid1())
                 user_id = json_data["playerData"]["account_id"]
 
-                if user_manager.is_user_banned(username):
+                if user_manager.is_user_banned(username=username):
                     return templates.TemplateResponse("home.html", {
                         "request": request,
                         "SERVERIP": state.server_ip,

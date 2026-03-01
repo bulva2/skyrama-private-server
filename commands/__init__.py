@@ -59,6 +59,7 @@ from .planes_setState import handle_planesSetState
 from .planes_takeMeans import handle_planesTakeMeans
 from .planes_upgrade import handle_planesUpgrade
 from .playerdata_deleteBuddypingTime import handle_deleteBuddypingTime
+from .playerdata_getStats import handle_getStats
 from .playerdata_setbooster import handle_setbooster
 from .playerdata_setLocation import handle_setLocation
 from .playerdata_updateBuddypingTime import handle_updateBuddypingTime
@@ -134,6 +135,7 @@ available_commands = {
     "planes.takeMeans": handle_planesTakeMeans,
     "planes.upgrade": handle_planesUpgrade,
     "playerdata.deleteBuddypingTime": handle_deleteBuddypingTime,
+    "playerdata.getStats": handle_getStats,
     "playerdata.setbooster": handle_setbooster,
     "playerdata.setLocation": handle_setLocation,
     "playerdata.updateBuddypingTime": handle_updateBuddypingTime,

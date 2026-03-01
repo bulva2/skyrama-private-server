@@ -30,6 +30,9 @@ async def handle_request(
             return PlainTextResponse("Error loading data for this user. Please try again later or contact us on discord.", status_code=500)
         
         if json_data.get("playerData", {}).get("token") != t:
+            # Could also mean that user is banned, in that case show the ban message instead of TF
+            if user_manager.is_user_banned(userid=userId):
+                session["error_mode"] = "banned"
             report_issue("warning", f"Token mismatch for user_id {userId} in handle_request")
             return RedirectResponse(url='/')
         

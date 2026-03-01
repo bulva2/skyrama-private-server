@@ -226,10 +226,13 @@ def fetch_pwd_hash_by_name(username: str) -> bytes | None:
         logging.error(f"Failed to fetch password hash for {username}: {e}")
         return None
     
-def is_user_banned(username: str) -> bool:
+def is_user_banned(username: str = "", userid: int = -1) -> bool:
     try:
         with db_session_scope() as session:
-            player = session.query(Player).filter_by(username=username).first()
+            if userid != -1:
+                player = session.query(Player).filter_by(user_id=userid).first()
+            else:
+                player = session.query(Player).filter_by(username=username).first()
             return player.is_banned if player else False
     except SQLAlchemyError as e:
         logging.error(f"Failed to check ban status for {username}: {e}")
