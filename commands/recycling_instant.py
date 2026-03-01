@@ -106,8 +106,6 @@ def handle_recyclingInstant(request, user_id, rpcResult, items_to_add_to_obj, js
     current_level = json_data["playerData"].get("recycling_level", 0)
     level_cap = recycling_level_caps.get(str(current_level + 1), 35000)
 
-    print(f"Current level: {current_level}, Level cap for next level: {level_cap}")
-
     # Level out of scope, idk what actually happens so log for future me or before I test it, for now set it to 35k
     if (level_cap == 35000):
         report_issue("warning", f"recycling_instant: Level cap for level cap (current_level + 1) => {current_level + 1} not found in init data for user {user_id}, defaulting to 35k")

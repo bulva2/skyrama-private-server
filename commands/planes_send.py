@@ -11,7 +11,7 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
     rpcResult["r"] = {}
     rpcResult["r"]["planes"] = {}
 
-    json2_data = None
+    receiver_data = None
 
     for plane in json_data["planes"]:
         if int(plane["id"]) == request["p"]["id"]:
@@ -28,26 +28,36 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
             plane["fromUser_objectId"] = int(plane["id"]) # So buddies know the right plane id
                 
             plane_type_id = int(plane["plane_type_id"])
-            for g in init_data["planeTypes"]:
-                if int(g["id"]) == plane_type_id:
-                    xp = g["xp_yield"]
-                    coins = g["air_coins_yield"]
-                    service_time = g["service_length"]
-                    quick_start_coins_cost = g["quick_start_coins_cost"]
-                    buddy_points = int(g["buddy_points_yield"])
-                    load_type = g["load_type"]
-                    wares_revenue = int(g["wares_revenue_capacity"])
-                    contents_count = int(g["capacity"])
-                    recycling_value = int(g["recyclingValue"]) # L parts drop is depending on this number (6 random sequences)
+
+            for plane_type in init_data["planeTypes"]:
+                if int(plane_type["id"]) == plane_type_id:
+                    xp = plane_type["xp_yield"]
+                    coins = plane_type["air_coins_yield"]
+                    service_time = plane_type["service_length"]
+                    quick_start_coins_cost = plane_type["quick_start_coins_cost"]
+                    buddy_points = int(plane_type["buddy_points_yield"])
+                    load_type = plane_type["load_type"]
+                    wares_revenue = int(plane_type["wares_revenue_capacity"])
+                    contents_count = int(plane_type["capacity"])
+                    recycling_value = int(plane_type["recyclingValue"]) # L parts drop is depending on this number (6 random sequences)
                     break
                 
             # Setup xp and coins (will be doubled in planes.sendback when the plane gets serviced by the buddy)
-
             plane["xp"] = xp
-            plane["air_coins"] = coins            
+            plane["air_coins"] = coins    
+
+            location = get_location_from_id(json_data, plane["to_location_id"])
+
+            if location is None:
+                report_issue("warning", f"planes_send: Location not found for plane id {plane['id']}, User: {json_data['playerData']['user_name']}")
+                rpcResult["i"] = -1
+                return
+
+            if not location["visited"]:
+                print(f"Player {json_data['playerData']['user_name']} is visiting location {location['id']} for the first time by sending a plane there.")
+                location["visited"] = True
 
             if load_type == "Cargo":  # Cargo planes don't drop souvenirs, but cargo + L parts
-
                 # Setup cargo
                 plane["contents_count"] = contents_count
                 plane["wares_revenue"] = wares_revenue
@@ -56,11 +66,12 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
                 material_chances = init_data["materialChances"][str(recycling_value)]
                 random_chance = random.random()
                 chance = float(0)
-                for g in material_chances:
-                    chance += float(g["Chance"])
+
+                for material in material_chances:
+                    chance += float(material["Chance"])
                     if chance > random_chance:
-                        material_id = int(g["MaterialId"])
-                        amount = random.randint(int(g["MinAmount"]), int(g["MaxAmount"]))
+                        material_id = int(material["MaterialId"])
+                        amount = random.randint(int(material["MinAmount"]), int(material["MaxAmount"]))
                         plane["drop_material"] = material_id
                         plane["drop_material_amount"] = amount
                         break
@@ -70,72 +81,79 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
 
                 if plane.get("to_location_id") is None:
                     plane["souvenir_types_id"] = -1
-                    report_issue("warning", f"planes_send: to_location_id is None for plane id {plane['id']}, User: {json_data['playerData']['user_name']} (ID: {user_id}). This has to be a race condition!")
-                else:
-                    for g in json_data["locations"]:
-                        if int(g["id"]) == int(plane["to_location_id"]):
-                            flight_time_seconds = 0
-                            for plane_data in init_data["planeTypes"]:
-                                if int(plane_data["id"]) == plane_type_id:
-                                    flight_time_seconds = int(plane_data.get("flight_time", 3600))
-                                    break
+                    report_issue("warning", f"planes_send: to_location_id is None for plane id {plane['id']}, User: {json_data['playerData']['user_name']}")
+                    rpcResult["i"] = -1
+                    return
 
-                            flight_time_hours = flight_time_seconds / 3600 # Seconds to hours
+                flight_time_seconds = 0
+                for plane_data in init_data["planeTypes"]:
+                    if int(plane_data["id"]) == plane_type_id:
+                        flight_time_seconds = int(plane_data.get("flight_time", 3600))
+                        break
 
-                            # Determine event currency drop chance based on flight time
-                            if flight_time_hours >= 24:
-                                event_currency_chance = 0.60
-                            elif flight_time_hours >= 18:
-                                event_currency_chance = 0.45
-                            elif flight_time_hours >= 16:
-                                event_currency_chance = 0.40
-                            elif flight_time_hours >= 12:
-                                event_currency_chance = 0.30
-                            elif flight_time_hours >= 10:
-                                event_currency_chance = 0.25
-                            elif flight_time_hours >= 8:
-                                event_currency_chance = 0.20
-                            elif flight_time_hours >= 6:
-                                event_currency_chance = 0.15
-                            elif flight_time_hours >= 4:
-                                event_currency_chance = 0.10
-                            elif flight_time_hours >= 2:
-                                event_currency_chance = 0.05
-                            else:
-                                event_currency_chance = 0.01  # 5% for shorter flights than 4hrs so ppl don't abuse it to farm event currency
+                event_currency_chance = determine_event_currency_drop_chance(flight_time_seconds)
+                souvenir = pick_souvenir(event_currency_chance, location)
 
-                            # Let's go gambling! (Event currency drop)
-                            if random.random() < event_currency_chance:
-                                souvenir = -2  # Event currency drop yupieee
-                            else:
-                                # Oh dang it
-                                souvenir_num = random.randint(1, 3)
-                                souvenir = g[f"souvenir_types_id_{souvenir_num}"]
-
-                            plane["souvenir_types_id"] = souvenir
-                            break
+                plane["souvenir_types_id"] = souvenir
 
             if (int(request["t"]) - int(plane["start_service_time"])) < ((int(service_time) / 3) * 2) or int(plane["start_service_time"]) == 0:
                 if int(request["t"]) > int(json_data["playerData"]["aycqs_start_time"]):
                     subtract_resources(json_data, rpcResult, air_cash = quick_start_coins_cost)
 
             if int(plane["to_player_id"]) != 800:  # ID 800 = NPC player
-                json2_data = user_manager.load_save_by_id(plane["to_player_id"])
+                receiver_data = user_manager.load_save_by_id(plane["to_player_id"])
 
-                if json2_data == -1 or not isinstance(json2_data, dict):
+                if receiver_data == -1 or not isinstance(receiver_data, dict):
                     report_issue("error", f"planes_send: Cannot load buddy data for player {plane['to_player_id']}, plane will be treated as NPC plane")
-                    json2_data = None
+                    receiver_data = None
                 else:
-                    last_id = int(json2_data["playerData"]["next_object_id"])
+                    last_id = int(receiver_data["playerData"]["next_object_id"])
                     copy = plane.copy()
                     copy["id"] = last_id + 1
                     copy["buddy_points"] = buddy_points
                     copy["xp"] = xp * 2  # Servicing a buddy's plane gives double xp, but same amount of coins
                     copy["air_coins"] = coins
 
-                    json2_data["planes"].append(copy)
-                    json2_data["playerData"]["next_object_id"] = last_id + 1
+                    receiver_data["planes"].append(copy)
+                    receiver_data["playerData"]["next_object_id"] = last_id + 1
 
-                    user_manager.modify_save_by_id(json2_data["playerData"]["account_id"], json2_data)
+                    user_manager.modify_save_by_id(receiver_data["playerData"]["account_id"], receiver_data)
 
             rpcResult["r"]["planes"][str(request["p"]["id"])] = plane
+
+def get_location_from_id(json_data: dict, location_id: int) -> dict | None:
+    for location in json_data["locations"]:
+        if int(location["id"]) == int(location_id):
+            return location
+    return None
+
+def determine_event_currency_drop_chance(flight_time_seconds: int) -> float:
+    flight_time_hours = flight_time_seconds / 3600
+
+    if flight_time_hours >= 24:
+        return 0.60
+    elif flight_time_hours >= 18:
+        return 0.45
+    elif flight_time_hours >= 16:
+        return 0.40
+    elif flight_time_hours >= 12:
+        return 0.30
+    elif flight_time_hours >= 10:
+        return 0.25
+    elif flight_time_hours >= 8:
+        return 0.20
+    elif flight_time_hours >= 6:
+        return 0.15
+    elif flight_time_hours >= 4:
+        return 0.10
+    elif flight_time_hours >= 2:
+        return 0.05
+    else:
+        return 0.01
+    
+def pick_souvenir(event_currency_chance: float, location: dict) -> int:
+    if random.random() < event_currency_chance:
+        return -2  # Event currency drop
+    else:
+        souvenir_num = random.randint(1, 3)
+        return location[f"souvenir_types_id_{souvenir_num}"]
