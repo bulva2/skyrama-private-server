@@ -80,6 +80,7 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [x] general.getInitState
 - [x] general.soundIsOn
 - [x] general.getBuddyInitState
+- [x] playerdata.getStats -> Stubbed for our purposes
 - [x] playerdata.setLocation
 - [x] playerdata.updateLevel
 - [x] playerdata.updateSettings
@@ -96,7 +97,7 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [x] planes.upgrade
 - [x] planes.buy
 - [x] planes.scrap
-- [x] resource_items.buy  -  Only QS for now
+- [x] resource_items.buy
 - [x] packages.buy
 - [x] planes.createFlyBy
 - [x] planes.send
@@ -107,7 +108,7 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [x] planes.takeMeans
 - [x] planes.setState
 - [x] planes.get
-- [x] planes.onStartCargoTutorial  -  Doesn't seem necessary?
+- [x] planes.onStartCargoTutorial
 - [x] backgrounds.buy
 - [x] backgrounds.makeCurrent
 - [x] landmarks.buy
@@ -123,15 +124,15 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [x] map_extensions.buy
 - [x] hangars.buy
 - [x] hangars.upgrade
-- [ ] warehouses.buy
 - [x] playerdata.setbooster
 - [x] landside_buildings.buy
+- [ ] landside_buildings.get
 - [x] landside_buildings.harvest
 - [x] goals.buyTask
-- [x] souvenirs.takeReward - PARTIALLY (Missing Falcon)
+- [x] souvenirs.takeReward -> PARTIALLY (Missing Falcon)
 - [x] special_buildings.buy
-- [x] placeable.place  -  PARTIALLY
-- [x] placeable.setInStorage  -  PARTIALLY
+- [x] placeable.place
+- [x] placeable.setInStorage
 - [x] flashCookies.set
 - [ ] backgrounds.sell
 - [x] bays.sell
@@ -150,6 +151,7 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [x] crafting.buySlot
 - [x] general.trackFlashError
 - [ ] materialevent.redeemItem
+- [ ] offers.buyOffer -> Probably just stub this one
 
 ### Likely unused game commands
 - account.getAll
@@ -157,7 +159,9 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - account.getRandom
 - account.getDataByUserId
 - buddy.getTutorialBuddy
-- playerdata.getStats
+- catchits.catchPrize
+- catchits.get
+- planes.rebateMiss
 - locations.get
 - packets.get
 - planes.changeFlightStatus
@@ -169,8 +173,6 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - runways.get
 - terminals.get
 - hangars.get
-- warehouses.get
-- landside_buildings.get
 - souvenirs.buy
 - expeditions.start
 - expeditions.land
@@ -179,8 +181,6 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - expeditions.fillfuel
 - expeditions.addfuel
 
-### Not sure what those are
-- catchits.get
-- catchits.catchPrize
-- planes.rebateMiss
-- offers.buyOffer
+### Unsure when is this used
+- warehouses.buy -> (What is a warehouse??)
+- warehouses.get -> (What is a warehouse??)
