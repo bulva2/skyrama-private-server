@@ -126,7 +126,7 @@ I'm not 100% sure if all of these are still being used in the latest version of 
 - [x] hangars.upgrade
 - [x] playerdata.setbooster
 - [x] landside_buildings.buy
-- [ ] landside_buildings.get
+- [x] landside_buildings.get
 - [x] landside_buildings.harvest
 - [x] goals.buyTask
 - [x] souvenirs.takeReward -> PARTIALLY (Missing Falcon)

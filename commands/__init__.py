@@ -39,6 +39,7 @@ from .hangars_upgrade import handle_hangarsUpgrade
 from .landmarks_buy import handle_landmarksBuy
 from .landmarks_makeCurrent import handle_landmarksMakeCurrent
 from .landside_buildings_buy import handle_landsideBuildingsBuy
+from .landside_buildings_get import handle_landsideBuildingsGet
 from .landside_buildings_harvest import handle_landside_buildingsHarvest
 from .lucky_luggage_spin import handle_luckyLuggageSpin
 from .map_extensions_buy import handle_mapExpansionsBuy
@@ -114,6 +115,7 @@ available_commands = {
     "landmarks.buy": handle_landmarksBuy,
     "landmarks.makeCurrent": handle_landmarksMakeCurrent,
     "landside_buildings.buy": handle_landsideBuildingsBuy,
+    "landside_buildings.get": handle_landsideBuildingsGet,
     "landside_buildings.harvest": handle_landside_buildingsHarvest,
     "landside_buildings.sell": handle_sell,
     "lucky_luggage.spin": handle_luckyLuggageSpin,
@@ -150,5 +152,5 @@ available_commands = {
     "souvenirs.takeReward": handle_souvenirsTakeReward,
     "special_buildings.buy": handle_specialBuildingsBuy,
     "terminals.buy": handle_terminalsBuy,
-    "terminals.sell": handle_sell,
+    "terminals.sell": handle_sell
 }
