@@ -43,11 +43,18 @@ def handle_planesSetState(request, user_id, rpcResult, items_to_add_to_obj, json
                 if load_type == "Cargo": # Reduce air coins for starting cargo planes (amount = wares capacity)
                     subtract_resources(json_data, rpcResult, air_coins=contents_count)
 
-            # Instantland aircash reduction
+            # Instant land aircash reduction
             if int(request["p"]["instantland"]) == 1 and flight_status == PlaneState.WAITING_FOR_TRANSFER_BUDDY.value: # 105
                 for plane_type in init_data["planeTypes"]:
                     if int(plane_type["id"]) == int(plane["plane_type_id"]):
                         air_cash_cost = int(plane_type["quick_land_coins_cost"])
                         subtract_resources(json_data, rpcResult, air_cash=air_cash_cost)
                         break
-            break
+            
+            # Quick Start aircash reduction
+            if request["p"]["flight_status"] == PlaneState.QUICK_START.value: # 18:
+                for plane_type in init_data["planeTypes"]:
+                    if int(plane_type["id"]) == int(plane["plane_type_id"]):
+                        quick_start_coins_cost = int(plane_type["quick_start_coins_cost"])
+                        subtract_resources(json_data, rpcResult, air_cash=quick_start_coins_cost)
+                        break

@@ -1,6 +1,8 @@
 from src.debug import report_issue
-from src.utils import subtract_resources
+from src.plane_manager import add_plane
+
 from src.enums import PlaneState
+
 import random
 import time
 import src.user_manager as user_manager
@@ -33,8 +35,6 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
                 if int(plane_type["id"]) == plane_type_id:
                     xp = plane_type["xp_yield"]
                     coins = plane_type["air_coins_yield"]
-                    service_time = plane_type["service_length"]
-                    quick_start_coins_cost = plane_type["quick_start_coins_cost"]
                     buddy_points = int(plane_type["buddy_points_yield"])
                     load_type = plane_type["load_type"]
                     wares_revenue = int(plane_type["wares_revenue_capacity"])
@@ -53,9 +53,7 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
                 rpcResult["i"] = -1
                 return
 
-            if not location["visited"]:
-                print(f"Player {json_data['playerData']['user_name']} is visiting location {location['id']} for the first time by sending a plane there.")
-                location["visited"] = True
+            check_and_handle_continent_progress(location, json_data, init_data, user_id)
 
             if load_type == "Cargo":  # Cargo planes don't drop souvenirs, but cargo + L parts
                 # Setup cargo
@@ -93,12 +91,7 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
 
                 event_currency_chance = determine_event_currency_drop_chance(flight_time_seconds)
                 souvenir = pick_souvenir(event_currency_chance, location)
-
                 plane["souvenir_types_id"] = souvenir
-
-            if (int(request["t"]) - int(plane["start_service_time"])) < ((int(service_time) / 3) * 2) or int(plane["start_service_time"]) == 0:
-                if int(request["t"]) > int(json_data["playerData"]["aycqs_start_time"]):
-                    subtract_resources(json_data, rpcResult, air_cash = quick_start_coins_cost)
 
             if int(plane["to_player_id"]) != 800:  # ID 800 = NPC player
                 receiver_data = user_manager.load_save_by_id(plane["to_player_id"])
@@ -157,3 +150,56 @@ def pick_souvenir(event_currency_chance: float, location: dict) -> int:
     else:
         souvenir_num = random.randint(1, 3)
         return location[f"souvenir_types_id_{souvenir_num}"]
+    
+def check_and_handle_continent_progress(location: dict, json_data: dict, init_data: dict, user_id: int) -> None:
+    continent_finished = _handle_continent_progress(location, json_data, init_data, user_id)
+
+    if continent_finished:
+        _handle_world_progress(json_data, init_data)
+
+def _handle_continent_progress(location: dict, json_data: dict, init_data: dict, user_id: int) -> bool:
+    if location["visited"]:
+        return False
+    
+    location["visited"] = True
+    continent_name = location["continent"]
+
+    # Get all locations in the same continent
+    continent_locations = [loc for loc in json_data["locations"] if loc["continent"] == continent_name]
+
+    # Check if all locations in the continent have been visited
+    if all(loc["visited"] for loc in continent_locations):
+        for reward in init_data["unlock_rewards"]:
+            if reward["region"] == continent_name:
+                if reward["air_coins"] > 0:
+                    json_data["playerData"]["air_coins"] += reward["air_coins"]
+
+                if reward["reward_obj_type"] == "Landside_Building":
+                    building_id = reward["reward_obj_id"]
+                    
+                    landside_building = {
+                        "landside_building_types_id": building_id,
+                        "last_harvest_time": 0,
+                        "set_in_storage_time": 0,
+                        "id": json_data["playerData"]["next_object_id"],
+                        "position_x": -100,
+                        "position_y": -100,
+                        "direction": 0,
+                        "player_id": user_id
+                    }
+
+                    json_data["landsideBuildings"].append(landside_building)
+                    json_data["playerData"]["next_object_id"] += 1
+        return True
+    return False
+
+def _handle_world_progress(json_data: dict, init_data: dict) -> None:
+    if all(location["visited"] for location in json_data["locations"]):
+        for reward in init_data["unlock_rewards"]:
+            if reward["region"] == "world":
+                if reward["air_coins"] > 0:
+                    json_data["playerData"]["air_coins"] += reward["air_coins"]
+
+                if reward["reward_obj_type"] == "Plane":
+                    add_plane(json_data, reward["reward_obj_id"], json_data["playerData"]["account_id"], init_data)
+
