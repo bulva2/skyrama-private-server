@@ -206,6 +206,15 @@
 	<Event name="helicopter_medium_zeppelin_take_off" >
 		<SoundName>space_zeppelin_engine_take_off_01</SoundName>
 	</Event>	
+		<Event name="helicopter_small_zeppelin_idle" >
+		<SoundName>space_zeppelin_engine_idle_loop_01</SoundName>
+	</Event>
+	<Event name="helicopter_small_zeppelin_land" >
+		<SoundName>space_zeppelin_engine_land_01</SoundName>
+	</Event>
+	<Event name="helicopter_small_zeppelin_take_off" >
+		<SoundName>space_zeppelin_engine_take_off_01</SoundName>
+	</Event>
 	<Event name="helicopter_small_balloon_idle" >
 		<SoundName>helicopter_small_balloon_idle</SoundName>
 	</Event>

@@ -55,6 +55,10 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
 
             check_and_handle_continent_progress(location, json_data, init_data, user_id)
 
+            if not process_super_fuel(json_data, plane["kerosene_boost_flag"]):
+                rpcResult["i"] = -1
+                return
+
             if load_type == "Cargo":  # Cargo planes don't drop souvenirs, but cargo + L parts
                 # Setup cargo
                 plane["contents_count"] = contents_count
@@ -123,26 +127,10 @@ def get_location_from_id(json_data: dict, location_id: int) -> dict | None:
 def determine_event_currency_drop_chance(flight_time_seconds: int) -> float:
     flight_time_hours = flight_time_seconds / 3600
 
-    if flight_time_hours >= 24:
-        return 0.60
-    elif flight_time_hours >= 18:
-        return 0.45
-    elif flight_time_hours >= 16:
-        return 0.40
-    elif flight_time_hours >= 12:
-        return 0.30
-    elif flight_time_hours >= 10:
-        return 0.25
-    elif flight_time_hours >= 8:
-        return 0.20
-    elif flight_time_hours >= 6:
-        return 0.15
-    elif flight_time_hours >= 4:
-        return 0.10
-    elif flight_time_hours >= 2:
-        return 0.05
-    else:
-        return 0.01
+    if flight_time_hours < 2:
+        return 0.025 # 2.5%
+
+    return flight_time_hours / 40 # According to testing, Skyrama uses this formula
     
 def pick_souvenir(event_currency_chance: float, location: dict) -> int:
     if random.random() < event_currency_chance:
@@ -202,4 +190,14 @@ def _handle_world_progress(json_data: dict, init_data: dict) -> None:
 
                 if reward["reward_obj_type"] == "Plane":
                     add_plane(json_data, reward["reward_obj_id"], json_data["playerData"]["account_id"], init_data)
-
+                return
+            
+def process_super_fuel(json_data: dict, fuel_used: int) -> bool:
+    if fuel_used > 0:
+        if json_data["playerData"]["super_fuel"] < fuel_used:
+            report_issue("warning", f"planes_send: Player {json_data['playerData']['user_name']} tried to use more super fuel than they have. Fuel usage will be ignored.")
+            return False
+        
+        json_data["playerData"]["super_fuel"] -= fuel_used
+        return True
+    return True

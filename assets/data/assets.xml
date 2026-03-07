@@ -11221,7 +11221,6 @@
 		<AircraftBarComponent popUpX="19" popUpY="22" />
 		<ProfileTagComponent assetY="20" />
 	</Asset>
-
 	<Asset name="halloween_102013_zeppelin" type="plane">
 		<ViewComponent name="v0" dir="0" isoWidth="55"
 			isoLength="55" isoHeight="30">
@@ -32446,7 +32445,29 @@
 		<ProfileTagComponent assetY="20" />
 	</Asset>	
 	
-	
-	
-	
+	<!-- Put Custom Planes Under here -->
+
+	<!-- Zeppelin -->
+	<Asset name="zeppelin" type="plane">
+		<ViewComponent name="v0" dir="0" isoWidth="55"
+			 isoLength="55" isoHeight="30">
+			<SpriteRenderComponent colorMap="gfx/planes/zeppelin/animation/zeppelin_0.swf" 
+				originX="-70" originY="-51" animationSpeed="1" preload="false" 
+				isoOffsetZ="1" />
+			<ShadowMapComponent colorMap="gfx/planes/zeppelin/zeppelin_s.swf@0" 
+				originX="-74" originY="-54" /> <!-- @0/1 controls direction -->
+		</ViewComponent>
+		<ViewComponent name="v1" dir="1" isoWidth="55"
+		 	isoLength="55" isoHeight="30">
+			<SpriteRenderComponent colorMap="gfx/planes/zeppelin/animation/zeppelin_1.swf" 
+				originX="-120" originY="-61" animationSpeed="1" preload="false" 
+				isoOffsetZ="1" />
+			<ShadowMapComponent colorMap="gfx/planes/zeppelin/zeppelin_s.swf@1" 
+				originX="-124" originY="-64" /> <!-- @0/1 controls direction -->
+		</ViewComponent>
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="zeppelin" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+	</Asset>
 </Assets>
