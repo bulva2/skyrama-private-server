@@ -15,10 +15,11 @@ You will either need a browser that supports Flash (and Flash Player itself). We
 - **[Recommended!] Older Ungoogled Chromium with Clean Flash:**
 [Latest Ungoogled Chromium 87](https://github.com/tangalbert919/ungoogled-chromium-binaries/releases/download/87.0.4280.141-1/ungoogled-chromium_87.0.4280.141-1.1_installer-x64.exe)
 &
-[Clean Flash](https://cdn.cleanflash.org/CleanFlash_34.0.0.330_Installer.exe) (♥️ to Darktohka)
+[Clean Flash](https://cdn.cleanflash.org/CleanFlash_34.0.0.330_Installer.exe)<br>(Huge ♥️ to Darktohka for this project)
 
-- **Standalone Flash Browser, no Flash Player required (may contain un-moderated ads, we suggest using the method above!):**
-[Flash Browser](https://github.com/radubirsan/FlashBrowser/releases/download/v0.81/v0.81_FlashBrowser_x64.exe).
+- **Standalone Flash Browser, no Flash Player required:**
+[Flash Browser](https://github.com/radubirsan/FlashBrowser/releases/download/v0.81/v0.81_FlashBrowser_x64.exe)<br>
+⚠️ May contain unmoderated ads, as the homepage is down, we recommend using the method above!
 
 ## Where can I try it out?
 
