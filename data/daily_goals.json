@@ -2,15 +2,15 @@
   "dailyGoals": [
     {
       "id": 201,
-      "name": "sendplanes15",
+      "name": "sendplanes10",
       "min_lvl": 1,
-      "max_lvl": 10,
+      "max_lvl": 20,
       "reward_obj_type": null,
       "reward_obj_type_id": -1,
-      "reward_passengers": 5000,
-      "reward_air_coins": 2000,
-      "reward_air_cash": 5,
-      "reward_xp": 100,
+      "reward_passengers": 500,
+      "reward_air_coins": 800,
+      "reward_air_cash": 1,
+      "reward_xp": 60,
       "reward_cargo_capacity_upgrade": 0,
       "character_url": "dummy_character2.png",
       "characterReward_url": "",
@@ -19,64 +19,6 @@
         {
           "task_id": 1,
           "user_action": "SendPlane",
-          "num_completed": 0,
-          "num_required": 15,
-          "obj_type_id": -1,
-          "size": null,
-          "plane_type": null,
-          "location_id": null,
-          "continent": null,
-          "air_cash_cost": 0,
-          "icon_url": "dummy_task.png",
-          "loca": {
-            "locaString": "av.task.send",
-            "locaParam": {
-              "amount": 15,
-              "item": "av.storeitem.cat_planes"
-            }
-          }
-        },
-        {
-          "task_id": 2,
-          "user_action": "GetPassengers",
-          "num_completed": 0,
-          "num_required": 500,
-          "obj_type_id": -1,
-          "size": null,
-          "plane_type": null,
-          "location_id": null,
-          "continent": null,
-          "air_cash_cost": 0,
-          "icon_url": "icon_passengers.png",
-          "loca": {
-            "locaString": "av.task.collect",
-            "locaParam": {
-              "amount": 500,
-              "item": "av.global.passengers"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "id": 202,
-      "name": "returnplanes10",
-      "min_lvl": 1,
-      "max_lvl": 999,
-      "reward_obj_type": null,
-      "reward_obj_type_id": -1,
-      "reward_passengers": 50,
-      "reward_air_coins": 250,
-      "reward_air_cash": 0,
-      "reward_xp": 15,
-      "reward_cargo_capacity_upgrade": 0,
-      "character_url": "dummy_character2.png",
-      "characterReward_url": "",
-      "icon_url": "bonusstar.png",
-      "taskTypes": [
-        {
-          "task_id": 1,
-          "user_action": "ReturnPlane",
           "num_completed": 0,
           "num_required": 10,
           "obj_type_id": -1,
@@ -87,36 +29,18 @@
           "air_cash_cost": 0,
           "icon_url": "icon_sendplane.png",
           "loca": {
-            "locaString": "av.task.return",
+            "locaString": "av.task.send",
             "locaParam": {
               "amount": 10,
               "item": "av.storeitem.cat_planes"
             }
           }
-        }
-      ]
-    },
-    {
-      "id": 203,
-      "name": "getpassengers2000",
-      "min_lvl": 5,
-      "max_lvl": 999,
-      "reward_obj_type": null,
-      "reward_obj_type_id": -1,
-      "reward_passengers": 100,
-      "reward_air_coins": 300,
-      "reward_air_cash": 0,
-      "reward_xp": 20,
-      "reward_cargo_capacity_upgrade": 0,
-      "character_url": "dummy_character2.png",
-      "characterReward_url": "",
-      "icon_url": "bonusstar.png",
-      "taskTypes": [
+        },
         {
-          "task_id": 1,
+          "task_id": 2,
           "user_action": "GetPassengers",
-          "num_completed": 0,          
-          "num_required": 2000,
+          "num_completed": 0,
+          "num_required": 400,
           "obj_type_id": -1,
           "size": null,
           "plane_type": null,
@@ -127,7 +51,83 @@
           "loca": {
             "locaString": "av.task.collect",
             "locaParam": {
-              "amount": 2000,
+              "amount": 400,
+              "item": "av.global.passengers"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 202,
+      "name": "returnplanes12",
+      "min_lvl": 1,
+      "max_lvl": 999,
+      "reward_obj_type": null,
+      "reward_obj_type_id": -1,
+      "reward_passengers": 300,
+      "reward_air_coins": 600,
+      "reward_air_cash": 1,
+      "reward_xp": 40,
+      "reward_cargo_capacity_upgrade": 0,
+      "character_url": "dummy_character2.png",
+      "characterReward_url": "",
+      "icon_url": "bonusstar.png",
+      "taskTypes": [
+        {
+          "task_id": 1,
+          "user_action": "ReturnPlane",
+          "num_completed": 0,
+          "num_required": 12,
+          "obj_type_id": -1,
+          "size": null,
+          "plane_type": null,
+          "location_id": null,
+          "continent": null,
+          "air_cash_cost": 0,
+          "icon_url": "icon_sendplane.png",
+          "loca": {
+            "locaString": "av.task.return",
+            "locaParam": {
+              "amount": 12,
+              "item": "av.storeitem.cat_planes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 203,
+      "name": "getpassengers3000",
+      "min_lvl": 5,
+      "max_lvl": 999,
+      "reward_obj_type": null,
+      "reward_obj_type_id": -1,
+      "reward_passengers": 600,
+      "reward_air_coins": 1000,
+      "reward_air_cash": 1,
+      "reward_xp": 70,
+      "reward_cargo_capacity_upgrade": 0,
+      "character_url": "dummy_character2.png",
+      "characterReward_url": "",
+      "icon_url": "bonusstar.png",
+      "taskTypes": [
+        {
+          "task_id": 1,
+          "user_action": "GetPassengers",
+          "num_completed": 0,          
+          "num_required": 3000,
+          "obj_type_id": -1,
+          "size": null,
+          "plane_type": null,
+          "location_id": null,
+          "continent": null,
+          "air_cash_cost": 0,
+          "icon_url": "icon_passengers.png",
+          "loca": {
+            "locaString": "av.task.collect",
+            "locaParam": {
+              "amount": 3000,
               "item": "av.global.passengers"
             }
           }
@@ -136,15 +136,15 @@
     },
     {
       "id": 204,
-      "name": "getaircoins5000",
+      "name": "getaircoins10000",
       "min_lvl": 5,
       "max_lvl": 999,
       "reward_obj_type": null,
       "reward_obj_type_id": -1,
-      "reward_passengers": 75,
-      "reward_air_coins": 350,
-      "reward_air_cash": 0,
-      "reward_xp": 25,
+      "reward_passengers": 500,
+      "reward_air_coins": 1100,
+      "reward_air_cash": 1,
+      "reward_xp": 70,
       "reward_cargo_capacity_upgrade": 0,
       "character_url": "dummy_character2.png",
       "characterReward_url": "",
@@ -154,7 +154,7 @@
           "task_id": 1,
           "user_action": "GetAirCoins",
           "num_completed": 0,          
-          "num_required": 5000,
+          "num_required": 10000,
           "obj_type_id": -1,
           "size": null,
           "plane_type": null,
@@ -165,7 +165,7 @@
           "loca": {
             "locaString": "av.task.collect",
             "locaParam": {
-              "amount": 5000,
+              "amount": 10000,
               "item": "av.building.aircoins"
             }
           }
@@ -174,15 +174,15 @@
     },
     {
       "id": 205,
-      "name": "sendplanes20",
-      "min_lvl": 10,
+      "name": "sendplanes30",
+      "min_lvl": 15,
       "max_lvl": 999,
       "reward_obj_type": null,
       "reward_obj_type_id": -1,
-      "reward_passengers": 100,
-      "reward_air_coins": 400,
-      "reward_air_cash": 0,
-      "reward_xp": 30,
+      "reward_passengers": 800,
+      "reward_air_coins": 1500,
+      "reward_air_cash": 1,
+      "reward_xp": 90,
       "reward_cargo_capacity_upgrade": 0,
       "character_url": "dummy_character2.png",
       "characterReward_url": "",
@@ -192,18 +192,18 @@
           "task_id": 1,
           "user_action": "SendPlane",
           "num_completed": 0,          
-          "num_required": 20,
+          "num_required": 30,
           "obj_type_id": -1,
           "size": null,
           "plane_type": null,
           "location_id": null,
           "continent": null,
           "air_cash_cost": 0,
-          "icon_url": "icon_plane.png",
+          "icon_url": "icon_sendplane.png",
           "loca": {
             "locaString": "av.task.send",
             "locaParam": {
-              "amount": 20,
+              "amount": 30,
               "item": "av.storeitem.cat_planes"
             }
           }
@@ -212,15 +212,15 @@
     },
     {
       "id": 206,
-      "name": "sellproducts50",
-      "min_lvl": 15,
+      "name": "sellproducts100",
+      "min_lvl": 25,
       "max_lvl": 999,
       "reward_obj_type": null,
       "reward_obj_type_id": -1,
-      "reward_passengers": 100,
-      "reward_air_coins": 500,
-      "reward_air_cash": 0,
-      "reward_xp": 35,
+      "reward_passengers": 1000,
+      "reward_air_coins": 2000,
+      "reward_air_cash": 2,
+      "reward_xp": 120,
       "reward_cargo_capacity_upgrade": 0,
       "character_url": "dummy_character2.png",
       "characterReward_url": "",
@@ -230,18 +230,18 @@
           "task_id": 1,
           "user_action": "SellProducts",
           "num_completed": 0,          
-          "num_required": 50,
+          "num_required": 100,
           "obj_type_id": -1,
           "size": null,
           "plane_type": null,
           "location_id": null,
           "continent": null,
           "air_cash_cost": 0,
-          "icon_url": "icon_cargo.png",
+          "icon_url": "icon_dutyfree_small.png",
           "loca": {
             "locaString": "av.task.sellProducts",
             "locaParam": {
-              "amount": 500
+              "amount": 100
             }
           }
         }
@@ -249,24 +249,25 @@
     },
     {
       "id": 207,
-      "name": "getpassengers5000",
-      "min_lvl": 20,
+      "name": "getpassengers15000",
+      "min_lvl": 35,
       "max_lvl": 999,
       "reward_obj_type": null,
       "reward_obj_type_id": -1,
-      "reward_passengers": 150,
-      "reward_air_coins": 600,
-      "reward_air_cash": 1,
-      "reward_xp": 50,
+      "reward_passengers": 1500,
+      "reward_air_coins": 2500,
+      "reward_air_cash": 3,
+      "reward_xp": 160,
       "reward_cargo_capacity_upgrade": 0,
       "character_url": "dummy_character2.png",
       "characterReward_url": "",
       "icon_url": "bonusstar.png",
       "taskTypes": [
         {
+          "task_id": 1,
           "user_action": "GetPassengers",
           "num_completed": 0,          
-          "num_required": 5000,
+          "num_required": 15000,
           "obj_type_id": -1,
           "size": null,
           "plane_type": null,
@@ -277,7 +278,200 @@
           "loca": {
             "locaString": "av.task.collect",
             "locaParam": {
-              "amount": 5000,
+              "amount": 15000,
+              "item": "av.global.passengers"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 208,
+      "name": "marathon_50",
+      "min_lvl": 50,
+      "max_lvl": 999,
+      "reward_obj_type": null,
+      "reward_obj_type_id": -1,
+      "reward_passengers": 2000,
+      "reward_air_coins": 4000,
+      "reward_air_cash": 5,
+      "reward_xp": 220,
+      "reward_cargo_capacity_upgrade": 0,
+      "character_url": "dummy_character2.png",
+      "characterReward_url": "",
+      "icon_url": "bonusstar.png",
+      "taskTypes": [
+        {
+          "task_id": 1,
+          "user_action": "SendPlane",
+          "num_completed": 0,
+          "num_required": 50,
+          "obj_type_id": -1,
+          "size": null,
+          "plane_type": null,
+          "location_id": null,
+          "continent": null,
+          "air_cash_cost": 0,
+          "icon_url": "icon_sendplane.png",
+          "loca": {
+            "locaString": "av.task.send",
+            "locaParam": {
+              "amount": 50,
+              "item": "av.storeitem.cat_planes"
+            }
+          }
+        },
+        {
+          "task_id": 2,
+          "user_action": "GetPassengers",
+          "num_completed": 0,
+          "num_required": 25000,
+          "obj_type_id": -1,
+          "size": null,
+          "plane_type": null,
+          "location_id": null,
+          "continent": null,
+          "air_cash_cost": 0,
+          "icon_url": "icon_passengers.png",
+          "loca": {
+            "locaString": "av.task.collect",
+            "locaParam": {
+              "amount": 25000,
+              "item": "av.global.passengers"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 209,
+      "name": "goldrush_65",
+      "min_lvl": 65,
+      "max_lvl": 999,
+      "reward_obj_type": null,
+      "reward_obj_type_id": -1,
+      "reward_passengers": 2500,
+      "reward_air_coins": 5500,
+      "reward_air_cash": 7,
+      "reward_xp": 300,
+      "reward_cargo_capacity_upgrade": 0,
+      "character_url": "dummy_character2.png",
+      "characterReward_url": "",
+      "icon_url": "bonusstar.png",
+      "taskTypes": [
+        {
+          "task_id": 1,
+          "user_action": "GetAirCoins",
+          "num_completed": 0,
+          "num_required": 50000,
+          "obj_type_id": -1,
+          "size": null,
+          "plane_type": null,
+          "location_id": null,
+          "continent": null,
+          "air_cash_cost": 0,
+          "icon_url": "icon_coins.png",
+          "loca": {
+            "locaString": "av.task.collect",
+            "locaParam": {
+              "amount": 50000,
+              "item": "av.building.aircoins"
+            }
+          }
+        },
+        {
+          "task_id": 2,
+          "user_action": "ReturnPlane",
+          "num_completed": 0,
+          "num_required": 40,
+          "obj_type_id": -1,
+          "size": null,
+          "plane_type": null,
+          "location_id": null,
+          "continent": null,
+          "air_cash_cost": 0,
+          "icon_url": "icon_sendplane.png",
+          "loca": {
+            "locaString": "av.task.return",
+            "locaParam": {
+              "amount": 40,
+              "item": "av.storeitem.cat_planes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 210,
+      "name": "airportmadness_80",
+      "min_lvl": 80,
+      "max_lvl": 999,
+      "reward_obj_type": null,
+      "reward_obj_type_id": -1,
+      "reward_passengers": 3500,
+      "reward_air_coins": 8000,
+      "reward_air_cash": 9,
+      "reward_xp": 500,
+      "reward_cargo_capacity_upgrade": 0,
+      "character_url": "dummy_character2.png",
+      "characterReward_url": "",
+      "icon_url": "bonusstar.png",
+      "taskTypes": [
+        {
+          "task_id": 1,
+          "user_action": "SendPlane",
+          "num_completed": 0,
+          "num_required": 80,
+          "obj_type_id": -1,
+          "size": null,
+          "plane_type": null,
+          "location_id": null,
+          "continent": null,
+          "air_cash_cost": 0,
+          "icon_url": "icon_sendplane.png",
+          "loca": {
+            "locaString": "av.task.send",
+            "locaParam": {
+              "amount": 80,
+              "item": "av.storeitem.cat_planes"
+            }
+          }
+        },
+        {
+          "task_id": 2,
+          "user_action": "SellProducts",
+          "num_completed": 0,
+          "num_required": 300,
+          "obj_type_id": -1,
+          "size": null,
+          "plane_type": null,
+          "location_id": null,
+          "continent": null,
+          "air_cash_cost": 0,
+          "icon_url": "icon_dutyfree_small.png",
+          "loca": {
+            "locaString": "av.task.sellProducts",
+            "locaParam": {
+              "amount": 300
+            }
+          }
+        },
+        {
+          "task_id": 3,
+          "user_action": "GetPassengers",
+          "num_completed": 0,
+          "num_required": 75000,
+          "obj_type_id": -1,
+          "size": null,
+          "plane_type": null,
+          "location_id": null,
+          "continent": null,
+          "air_cash_cost": 0,
+          "icon_url": "icon_passengers.png",
+          "loca": {
+            "locaString": "av.task.collect",
+            "locaParam": {
+              "amount": 75000,
               "item": "av.global.passengers"
             }
           }

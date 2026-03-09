@@ -3,6 +3,7 @@ from commands.buddy_getAll import run_buddy_checks
 from src.daily_goals import handle_daily_goals
 from src.easy_events import get_all_easy_events
 from src.enums import PlaneState
+from src.utils import get_level_from_xp
 from deepmerge.merger import Merger
 from copy import deepcopy
 
@@ -88,7 +89,11 @@ def handle_getInitState(request, user_id, rpcResult, items_to_add_to_obj, json_d
         if time_remaining <= 0:
             process_data["finished"] = True
 
-    daily_goal_def = handle_daily_goals(json_data)
+    player_level = get_level_from_xp(
+        int(json_data.get("playerData", {}).get("xp", 0)),
+        init_data["playerData"]["xp_level_caps"]
+    )
+    daily_goal_def = handle_daily_goals(json_data, player_level)
 
     merger = Merger(
         [(dict, ["merge"]), (list, ["override"]), (set, ["override"])],

@@ -6,8 +6,8 @@ from datetime import datetime
 
 _CACHED_GOALS = None
 
-def handle_daily_goals(json_data) -> dict | None:
-    return _check_daily_goal(json_data)
+def handle_daily_goals(json_data, player_level: int) -> dict | None:
+    return _check_daily_goal(json_data, player_level)
 
 def _load_daily_goals(force_reload: bool = False) -> dict:
     global _CACHED_GOALS
@@ -57,7 +57,7 @@ def _merge_goal_progress(goal_def: dict, progress_goal: dict) -> dict:
                 break
     return merged_goal
 
-def _check_daily_goal(json_data: dict):
+def _check_daily_goal(json_data: dict, player_level: int):
     current_time = time.time()
     last_daily_time = json_data["goals"].get("daily_goal_time", 0)
 
@@ -72,7 +72,7 @@ def _check_daily_goal(json_data: dict):
 
     if needs_new_goal:
         day_of_year = current_date.timetuple().tm_yday
-        new_goal = _get_daily_goal_for_day(day_of_year, json_data["playerData"].get("level", 1))
+        new_goal = _get_daily_goal_for_day(day_of_year, player_level)
 
         json_data["goals"]["daily_goal_time"] = current_time
         json_data["goals"]["goals"]["daily"] = {
