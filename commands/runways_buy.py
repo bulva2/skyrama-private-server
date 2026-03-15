@@ -32,4 +32,4 @@ def handle_runwaysBuy(request, user_id, rpcResult, items_to_add_to_obj, json_dat
             
         json_data["runways"].append({"runway_types_id":request["p"]["types_id"],"id":json_data["playerData"]["next_object_id"],"position_x":request["p"]["position_x"],"position_y":request["p"]["position_y"],"direction":request["p"]["direction"],"player_id":user_id})
     
-        json_data["playerData"]["next_object_id"] = int(json_data["playerData"]["next_object_id"]) + 1
+        json_data["playerData"]["next_object_id"] += 1

@@ -1,4 +1,5 @@
 import logging
+from src.debug import report_issue
 from src.daily_goals import _get_goal_by_id
 from src.enums import PlaneState
 from commands.goals import *
@@ -24,182 +25,66 @@ available_task_types = {
     "SellProducts": handle_SellProducts
 }
 
-
-def give_reward(json_data, init_data, user_id, type_id, type, items_to_add_to_obj):
-    if type_id != -1:
-        if type == "Bay":
-            json_data["bays"].append({"bay_types_id": type_id,"last_harvest_time": 0,"set_in_storage_time": "0","id": json_data["playerData"]["next_object_id"],"position_x": -100,"position_y": -100,"direction": 0,"player_id": user_id})
-            json_data["playerData"]["next_object_id"] = int(json_data["playerData"]["next_object_id"]) + 1
-
-        elif type == "Plane":
-            for h in init_data["planeTypes"]:
-                if int(h["id"]) == type_id:
-
-                    # Get container id
-                    for k in init_data["hangarTypes"]:
-                        if k["sml"] == h["size"] and k["aircraft_type"] == h["type"]:
-                            hangar_type = int(k["id"])
-                            break
-                    for k in json_data["hangars"]:
-                        if int(k["hangar_types_id"]) == hangar_type:
-                            k["upgrade_level"] = int(k["upgrade_level"]) + 1
-                            container_id = int(k["id"])
-                            items_to_add_to_obj.append(f"hangars:{container_id}")
-                            break
-
-                    json_data["planes"].append(
-                        {
-                            "souvenir_types_id":-1,
-                            "active_count":1,
-                            "id":json_data["playerData"]["next_object_id"],
-                            "plane_type_id":type_id,
-                            "container_id":container_id,
-                            "subcontainer_id":1,
-                            "to_player_id":-1,
-                            "departure_time":-1,
-                            "arrival_time":-1,
-                            "kerosene_boost_flag":"0",
-                            "flight_status": PlaneState.HANGAR.value, # 0
-                            "buddy_points":h["buddy_points_yield"],
-                            "contents_count":h["capacity"],
-                            "air_coins":h["air_coins_yield"],
-                            "xp":h["xp_yield"],
-                            "wares_revenue":h["wares_revenue_capacity"],
-                            "banner_id":"-1",
-                            "start_service_time":"0",
-                            "last_state_change_time":"0",
-                            "drop_consumable_id":"0",
-                            "drop_consumable_amount":"0",
-                            "instantland":0,
-                            "player_id":user_id,
-                            "from_location_id":-1,
-                            "from_user_name":"",
-                            "upgrade_level":0
-                        }
-                    )
-                    json_data["playerData"]["next_object_id"] += 1
-                    break
-
-
-
-        elif type == "Hangar":
-            json_data["hangars"].append({"hangar_types_id":type_id,"upgrade_level":"1","id":json_data["playerData"]["next_object_id"],"position_x":-100,"position_y":-100,"direction":"0","player_id":user_id})
-            json_data["playerData"]["next_object_id"] = int(json_data["playerData"]["next_object_id"]) + 1
-
-
-
-        elif type == "Cargoshop":
-            json_data["cargoShops"].append({"cargo_shop_types_id":type_id,"upgrade_level":"0","products_sold":"0","sales_revenue":"0","id":json_data["playerData"]["next_object_id"],"position_x":-100,"position_y":-100,"direction":"0","player_id":user_id})
-            json_data["playerData"]["next_object_id"] = int(json_data["playerData"]["next_object_id"]) + 1
-
-
-
-        elif type == "Landside_Building":
-            json_data["landsideBuildings"].append({"landside_building_types_id":type_id,"last_harvest_time":"0","set_in_storage_time":"0","id":json_data["playerData"]["next_object_id"],"position_x":"-100","position_y":"-100","direction":"0","player_id":user_id})
-            json_data["playerData"]["next_object_id"] = int(json_data["playerData"]["next_object_id"]) + 1
-
-
-
-        elif type == "Runway":
-            json_data["runways"].append({"runway_types_id":type_id,"id":json_data["playerData"]["next_object_id"],"position_x":"-100","position_y":"-100","direction":"0","player_id":user_id})
-            json_data["playerData"]["next_object_id"] = int(json_data["playerData"]["next_object_id"]) + 1
-
-
-
-        elif type == "Warehouse":
-            json_data["warehouses"].append({"warehouse_types_id":type_id,"id":json_data["playerData"]["next_object_id"],"position_x":"-100","position_y":"-100","direction":"0","player_id":user_id})
-            json_data["playerData"]["next_object_id"] = int(json_data["playerData"]["next_object_id"]) + 1
-
-    return json_data
-
 def next_quest(quest_seq, init_data, json_data, user_id, items_to_add_to_obj):
-    g = 0
-    for j in init_data["goalTypes"]:
-        if int(j["id"]) == int(json_data["goals"]["goals"][quest_seq]["goal_types_id"]):
-            old_seq_num = int(j["seq_num"])
+    current_goal_types_id = int(json_data["goals"]["goals"][quest_seq]["goal_types_id"])
 
-            # Check for next quest in sequence
-            higher_seq_nums = []
-            for l in init_data["goalTypes"]:
-                if int(l["seq_num"]) > old_seq_num:
-                    if l["seq_type"] == quest_seq:
-                        higher_seq_nums.append(int(l["seq_num"]))
-                
-            smallest = min(higher_seq_nums)
+    # Find the current goal
+    old_goal = next((goal_type for goal_type in init_data["goalTypes"] if int(goal_type["id"]) == current_goal_types_id), None)
+    
+    if old_goal is None:
+        report_issue("warning", f"Could not find goal type {current_goal_types_id} for quest sequence: {quest_seq}, user_id: {user_id}")
+        return
 
-            for l in init_data["goalTypes"]: # Looping 3 times: probably a more efficient way: to-do
-                if int(l["seq_num"]) == smallest:
-                    if l["seq_type"] == quest_seq:
-                        new_goal_id = l["id"]
-                        break
+    old_seq_num = int(old_goal["seq_num"])
 
-            json_data["playerData"]["air_coins"] += j["reward_air_coins"]
-            json_data["playerData"]["air_cash"] += j["reward_air_cash"]
-            json_data["playerData"]["xp"] += j["reward_xp"]
-            json_data["playerData"]["passengers"] += j["reward_passengers"]
-            json_data["playerData"]["super_fuel"] += j["reward_kerosene_boost"]
+    # Give rewards for the completed quest
+    give_rewards(json_data, init_data, old_goal, items_to_add_to_obj)
 
-            # reward_goods and reward_map_extension are unused
+    # Give reward objects
+    type_id = old_goal["reward_obj_type_id"]
+    type = old_goal["reward_obj_type"]
 
-            if j["reward_hangar_upgrade"] > 0:
-                # Check which hangar needs to be upgraded
-                if j["reward_obj_type"] == "Hangar":
-                    hangar_types_id = int(h["hangar_types_id"])
-                elif j["reward_obj_type"] == "Plane":
-                    # Check to which hangar the plane belongs (not sure if there's an easier way for this?)
-                    for p in init_data["planeTypes"]:
-                        if p["id"] == j["reward_obj_type_id"]:
-                            plane_size = p["size"]
-                            plane_type = p["type"]
-                            break
-                    for h in init_data["hangarTypes"]:
-                        # If regular plane, check the size as well
-                        if h["aircraft_type"] == plane_type and \
-                            ((plane_type == "plane" and h["sml"] == plane_size) or plane_type != "plane"):
-                            hangar_types_id = h["id"]
-                            break
-                else:
-                    hangar_types_id = j["reward_obj_type_id"]
+    if type is not None and type_id is not None:
+        give_obj_reward(json_data, init_data, user_id, type_id, type, items_to_add_to_obj)
 
+    type_id = old_goal["alternative_reward_obj_type_id"]
+    type = old_goal["alternative_reward_obj_type"]
 
-                for h in json_data["hangars"]:
-                    if hangar_types_id == j["reward_obj_type_id"]:
-                        h["upgrade_level"] = int(h["upgrade_level"]) + int(j["reward_hangar_upgrade"])
-                        items_to_add_to_obj.append(f"hangars:{h["id"]}")
-                        logging.debug(f"Quest reward: Upgraded hangar {h['id']} by {j['reward_hangar_upgrade']} levels, current level: {h['upgrade_level']}")
-                        break
+    if type is not None and type_id is not None:
+        give_obj_reward(json_data, init_data, user_id, type_id, type, items_to_add_to_obj)
 
-            # reward_cargo_capacity_upgrade: Where to change this?
+    # Find the next goal in sequence:
+    # lowest seq_num that is > old_seq_num is the next quest
+    next_goal = None
+    for goal_type in init_data["goalTypes"]:
+        if goal_type["seq_type"] == quest_seq and int(goal_type["seq_num"]) > old_seq_num:
+            if next_goal is None or int(goal_type["seq_num"]) < int(next_goal["seq_num"]):
+                next_goal = goal_type
 
+    if next_goal is None:
+        # Quests from this seq_type are finished
+        json_data["goals"]["goals"][quest_seq] = {
+            "goal_types_id": -1,
+            "seq_num": -1,
+            "tasks": []
+        }
+        return
 
-            ################
-            # Give objects #
-            ################
+    new_goal_id = next_goal["id"]
+    smallest = int(next_goal["seq_num"])
 
-            type_id = j["reward_obj_type_id"]
-            type = j["reward_obj_type"]
-            json_data = give_reward(json_data, init_data, user_id, type_id, type, items_to_add_to_obj)
-
-            type_id = j["alternative_reward_obj_type_id"]
-            type = j["alternative_reward_obj_type"]
-            json_data = give_reward(json_data, init_data, user_id, type_id, type, items_to_add_to_obj)
-
-            break
-        g = g + 1
-    g = 0
     new_tasks = []
     for j in init_data["taskTypes"]:
         if int(j["goal_types_id"]) == int(new_goal_id):
             new_task = j
             new_task["num_completed"] = 0
             new_tasks.append(new_task)
-        g = g + 1
-    json_data["goals"]["goals"][quest_seq] = {}
-    json_data["goals"]["goals"][quest_seq]["goal_types_id"] = new_goal_id
-    json_data["goals"]["goals"][quest_seq]["seq_num"] = smallest
-    json_data["goals"]["goals"][quest_seq]["tasks"] = []
-    json_data["goals"]["goals"][quest_seq]["tasks"] = new_tasks
-    return json_data
+
+    json_data["goals"]["goals"][quest_seq] = {
+        "goal_types_id": new_goal_id,
+        "seq_num": smallest,
+        "tasks": new_tasks
+    }
 
 def handle_goal(request, user_id, quest_seq, items_to_add_to_obj, json_data, init_data):
     current_goal = json_data["goals"]["goals"].get(quest_seq)
@@ -215,7 +100,6 @@ def handle_goal(request, user_id, quest_seq, items_to_add_to_obj, json_data, ini
         if task["user_action"] in available_task_types:
             handler = available_task_types[task["user_action"]]
             json_data = handler(request, user_id, json_data, task, i, init_data, quest_seq)
-
 
         if json_data["goals"]["goals"][quest_seq]["tasks"][i]["num_completed"] >= json_data["goals"]["goals"][quest_seq]["tasks"][i]["num_required"]:
             num_tasks_completed = num_tasks_completed + 1
@@ -236,8 +120,122 @@ def handle_goal(request, user_id, quest_seq, items_to_add_to_obj, json_data, ini
                     type_id = goal_def.get("reward_obj_type_id", -1)
                     type = goal_def.get("reward_obj_type", None)
                     if type_id != -1 and type:
-                        json_data = give_reward(json_data, init_data, user_id, type_id, type, items_to_add_to_obj)
+                        give_obj_reward(json_data, init_data, user_id, type_id, type, items_to_add_to_obj)
                     # reward_cargo_capacity_upgrade (TODO: implement if needed)
                     json_data["goals"]["daily_reward_given"] = True
             return
-        json_data = next_quest(quest_seq, init_data, json_data, user_id, items_to_add_to_obj)
+        
+        next_quest(quest_seq, init_data, json_data, user_id, items_to_add_to_obj)
+
+def give_rewards(json_data, init_data, old_goal, items_to_add_to_obj):
+    json_data["playerData"]["air_coins"] += old_goal["reward_air_coins"]
+    json_data["playerData"]["air_cash"] += old_goal["reward_air_cash"]
+    json_data["playerData"]["xp"] += old_goal["reward_xp"]
+    json_data["playerData"]["passengers"] += old_goal["reward_passengers"]
+    json_data["playerData"]["super_fuel"] += old_goal["reward_kerosene_boost"]
+    json_data["playerData"]["cargo_capacity_level"] += old_goal["reward_cargo_capacity_upgrade"]
+    # reward_goods and reward_map_extension are unused
+
+    if old_goal["reward_hangar_upgrade"] > 0:
+        # Check which hangar needs to be upgraded
+        if old_goal["reward_obj_type"] == "Hangar":
+            hangar_types_id = int(old_goal["reward_obj_type_id"])
+        elif old_goal["reward_obj_type"] == "Plane":
+            # Check to which hangar the plane belongs
+            for plane_type in init_data["planeTypes"]:
+                if plane_type["id"] == old_goal["reward_obj_type_id"]:
+                    plane_size = plane_type["size"]
+                    plane_type = plane_type["type"]
+                    break
+
+            for hangar_type in init_data["hangarTypes"]:
+                # If regular plane, check the size as well
+                if hangar_type["aircraft_type"] == plane_type and \
+                    ((plane_type == "plane" and hangar_type["sml"] == plane_size) or plane_type != "plane"):
+                    hangar_types_id = int(hangar_type["id"])
+                    break
+        else:
+            hangar_types_id = int(old_goal["reward_obj_type_id"])
+
+        for hangar in json_data["hangars"]:
+            print(f"Checking hangar {hangar['id']} with type {hangar['hangar_types_id']} against required type {hangar_types_id}")
+            if int(hangar["hangar_types_id"]) == hangar_types_id:
+                hangar["upgrade_level"] = int(hangar["upgrade_level"]) + int(old_goal["reward_hangar_upgrade"])
+                items_to_add_to_obj.append("hangars") # Most likely unhandled by the client, remove if verified
+                logging.debug(f"Quest reward: Upgraded hangar {hangar['id']} by {old_goal['reward_hangar_upgrade']} levels, current level: {hangar['upgrade_level']}")
+                break
+
+def give_obj_reward(json_data, init_data, user_id, type_id, type, items_to_add_to_obj):
+    if type_id != -1:
+        if type == "Bay":
+            json_data["bays"].append({"bay_types_id": type_id,"last_harvest_time": 0,"set_in_storage_time": "0","id": json_data["playerData"]["next_object_id"],"position_x": -100,"position_y": -100,"direction": 0,"player_id": user_id})
+            json_data["playerData"]["next_object_id"] += 1
+
+        elif type == "Plane":
+            for plane_type in init_data["planeTypes"]:
+                if int(plane_type["id"]) == type_id:
+
+                    # Get container id
+                    for hangar_type in init_data["hangarTypes"]:
+                        if hangar_type["sml"] == plane_type["size"] and hangar_type["aircraft_type"] == plane_type["type"]:
+                            hangar_type = int(hangar_type["id"])
+                            break
+
+                    for hangar in json_data["hangars"]:
+                        if int(hangar["hangar_types_id"]) == hangar_type:
+                            container_id = int(hangar["id"])
+                            break
+
+                    json_data["planes"].append(
+                        {
+                            "souvenir_types_id":-1,
+                            "active_count":1,
+                            "id":json_data["playerData"]["next_object_id"],
+                            "plane_type_id":type_id,
+                            "container_id":container_id,
+                            "subcontainer_id":1,
+                            "to_player_id":-1,
+                            "departure_time":-1,
+                            "arrival_time":-1,
+                            "kerosene_boost_flag":0,
+                            "flight_status": PlaneState.HANGAR.value, # 0
+                            "buddy_points":plane_type["buddy_points_yield"],
+                            "contents_count":plane_type["capacity"],
+                            "air_coins":plane_type["air_coins_yield"],
+                            "xp":plane_type["xp_yield"],
+                            "wares_revenue":plane_type["wares_revenue_capacity"],
+                            "banner_id":-1,
+                            "start_service_time":0,
+                            "last_state_change_time":0,
+                            "drop_consumable_id":0,
+                            "drop_consumable_amount":0,
+                            "instantland":0,
+                            "player_id":user_id,
+                            "from_location_id":-1,
+                            "from_user_name":"",
+                            "upgrade_level":0
+                        }
+                    )
+                    json_data["playerData"]["next_object_id"] += 1
+                    items_to_add_to_obj.append("planes")
+                    break
+
+        elif type == "Hangar":
+            json_data["hangars"].append({"hangar_types_id":type_id,"upgrade_level":"1","id":json_data["playerData"]["next_object_id"],"position_x":-100,"position_y":-100,"direction":"0","player_id":user_id})
+            json_data["playerData"]["next_object_id"] += 1
+
+        elif type == "Cargoshop":
+            json_data["cargoShops"].append({"cargo_shop_types_id":type_id,"upgrade_level":"0","products_sold":"0","sales_revenue":"0","id":json_data["playerData"]["next_object_id"],"position_x":-100,"position_y":-100,"direction":"0","player_id":user_id})
+            json_data["playerData"]["next_object_id"] += 1
+
+        elif type == "Landside_Building":
+            json_data["landsideBuildings"].append({"landside_building_types_id":type_id,"last_harvest_time":"0","set_in_storage_time":"0","id":json_data["playerData"]["next_object_id"],"position_x":"-100","position_y":"-100","direction":"0","player_id":user_id})
+            json_data["playerData"]["next_object_id"] += 1
+
+        elif type == "Runway":
+            json_data["runways"].append({"runway_types_id":type_id,"id":json_data["playerData"]["next_object_id"],"position_x":"-100","position_y":"-100","direction":"0","player_id":user_id})
+            json_data["playerData"]["next_object_id"] += 1
+
+        elif type == "Warehouse":
+            json_data["warehouses"].append({"warehouse_types_id":type_id,"id":json_data["playerData"]["next_object_id"],"position_x":"-100","position_y":"-100","direction":"0","player_id":user_id})
+            json_data["playerData"]["next_object_id"] += 1

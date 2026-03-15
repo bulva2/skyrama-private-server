@@ -9,7 +9,7 @@ from starlette.middleware.cors import CORSMiddleware
 import src.config_handler as config_handler
 
 from bundle import STYLES_DIR, ASSETS_DIR
-from routers import api, web, management
+from routers import game_api, web, management, public_api
 from src.startup import lifespan
 
 config_handler.run()
@@ -32,9 +32,10 @@ app.add_middleware(
 app.mount("/assets", StaticFiles(directory=ASSETS_DIR), name="assets")
 app.mount("/templates/styles", StaticFiles(directory=STYLES_DIR), name="styles")
 
-app.include_router(api.router)
+app.include_router(game_api.router)
 app.include_router(web.router)
 app.include_router(management.router)
+app.include_router(public_api.router)
      
 if __name__ == "__main__":
     import uvicorn

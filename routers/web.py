@@ -13,6 +13,7 @@ import bcrypt
 import hashlib
 import os
 import uuid
+import logging
 
 import src.user_manager as user_manager
 
@@ -85,7 +86,6 @@ async def login(request: Request, username: str = Form(...), password: str = For
     stored_hash = user_manager.fetch_pwd_hash_by_name(username)
 
     if stored_hash:
-        # SHA-256 pwd that will be checked against the salt and hash stored in the database
         hashed_pwd = hashlib.sha256(password.encode('utf-8')).hexdigest().encode('utf-8')
         
         if bcrypt.checkpw(hashed_pwd, stored_hash):

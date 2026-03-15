@@ -34,6 +34,7 @@ def handle_recyclingStart(request, user_id, rpcResult, items_to_add_to_obj, json
         return
     
     json_data["planes"].remove(plane)
+    items_to_add_to_obj.append("planes")
 
     # ProcessDataVO
     processData = {

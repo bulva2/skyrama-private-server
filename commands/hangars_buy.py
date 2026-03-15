@@ -27,5 +27,5 @@ def handle_hangarsBuy(request, user_id, rpcResult, items_to_add_to_obj, json_dat
             })
 
             logging.debug(f"Added hangar with ID {json_data['playerData']['next_object_id']} for user {user_id}")
-            json_data["playerData"]["next_object_id"] = int(json_data["playerData"]["next_object_id"]) + 1
+            json_data["playerData"]["next_object_id"] += 1
             break

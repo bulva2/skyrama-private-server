@@ -40,4 +40,4 @@ def handle_terminalsBuy(request, user_id, rpcResult, items_to_add_to_obj, json_d
     json_data["playerData"]["air_cash"] = json_data["playerData"]["air_cash"] - request["p"]["influenceableType"]["air_cash_cost"]
     json_data["playerData"]["event_currency"] = json_data["playerData"]["event_currency"] - request["p"]["influenceableType"]["event_currency_cost"]
 
-    json_data["playerData"]["next_object_id"] = int(json_data["playerData"]["next_object_id"]) + 1
+    json_data["playerData"]["next_object_id"] += 1

@@ -4,6 +4,8 @@ def add_plane(json_data: dict, plane_type_id: int, user_id: int, init_data: dict
     for plane_type in init_data["planeTypes"]:
         if int(plane_type["id"]) == plane_type_id:
             container_id = _get_hangar_id_from_plane(plane_type, json_data, init_data)
+            
+            increase_hangar_capacity(json_data, container_id)
 
             plane = {
                 "souvenir_types_id": -1,
@@ -55,3 +57,9 @@ def _get_hangar_type_id_from_plane(plane: dict , init_data: dict) -> int:
             return hangarType["id"]
     
     return -1
+
+def increase_hangar_capacity(json_data: dict, hangar_id: int) -> None:
+    for hangar in json_data["hangars"]:
+        if int(hangar["id"]) == hangar_id:
+            hangar["upgrade_level"] += 1
+            break

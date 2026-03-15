@@ -126,6 +126,8 @@ def handle_recyclingCollect(request, user_id, rpcResult, items_to_add_to_obj, js
             json_data["materials"][m_id] += amount
         else:
             json_data["materials"][m_id] = amount
+
+    items_to_add_to_obj.append("materials")
         
     slot["processData"] = [] # No need for it to be an array but it doesn't hurt either i guess
     slot["processId"] = 0

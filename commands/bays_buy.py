@@ -30,4 +30,4 @@ def handle_baysBuy(request, user_id, rpcResult, items_to_add_to_obj, json_data, 
             
     json_data["bays"].append({"bay_types_id": request["p"]["types_id"],"last_harvest_time": request["p"]["last_harvest_time"],"set_in_storage_time": request["p"]["set_in_storage_time"],"id": json_data["playerData"]["next_object_id"],"position_x": request["p"]["position_x"],"position_y": request["p"]["position_y"],"direction": request["p"]["direction"],"player_id": user_id})
             
-    json_data["playerData"]["next_object_id"] = int(json_data["playerData"]["next_object_id"]) + 1
+    json_data["playerData"]["next_object_id"] += 1

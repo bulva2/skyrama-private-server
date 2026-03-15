@@ -64,6 +64,52 @@
                     </div>
                 </div>
 
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-white">
+                        <h5 class="mb-0">Quest Progress</h5>
+                    </div>
+                    <div class="card-body">
+                        {% for quest_type in ["main", "pilot"] %}
+                        {% set info = quest_info[quest_type] %}
+                        <div class="mb-3">
+                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div>
+                                    <span class="fw-bold text-capitalize">{{ quest_type }}</span>
+                                    &nbsp;&mdash;&nbsp;
+                                    {% if info.current_seq_num == -1 %}
+                                        <span class="badge bg-success">Finished</span>
+                                    {% else %}
+                                        <span class="badge bg-secondary">seq_num: {{ info.current_seq_num }}</span>
+                                        <small class="text-muted ms-1">(goal id: {{ info.goal_types_id }})</small>
+                                    {% endif %}
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <form method="post" action="/management/player/{{ player.user_id }}/quest/{{ quest_type }}/prev">
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary"
+                                            {% if info.prev_seq_num is none %}disabled{% endif %}>
+                                            &larr; Prev
+                                            {% if info.prev_seq_num is not none %}
+                                                <span class="badge bg-secondary ms-1">{{ info.prev_seq_num }}</span>
+                                            {% endif %}
+                                        </button>
+                                    </form>
+                                    <form method="post" action="/management/player/{{ player.user_id }}/quest/{{ quest_type }}/next">
+                                        <button type="submit" class="btn btn-sm btn-outline-primary"
+                                            {% if info.next_seq_num is none %}disabled{% endif %}>
+                                            Next &rarr;
+                                            {% if info.next_seq_num is not none %}
+                                                <span class="badge bg-primary ms-1">{{ info.next_seq_num }}</span>
+                                            {% endif %}
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        {% if not loop.last %}<hr class="my-2">{% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+
                 <div class="card shadow-sm">
                     <div class="card-header bg-white">
                         <h5 class="mb-0">Raw Player Data Overview</h5>

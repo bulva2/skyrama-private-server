@@ -24,7 +24,7 @@ def handle_planesCreateFlyBy(request, user_id, rpcResult, items_to_add_to_obj, j
                     "to_player_id": request["p"]["to_player_id"],
                     "departure_time": -1,
                     "arrival_time": -1,
-                    "kerosene_boost_flag": "0",
+                    "kerosene_boost_flag": 0,
                     "flight_status": PlaneState.FLY_BY_HOME.value, # 19
                     "buddy_points": 0,
                     "contents_count": 0,
@@ -32,10 +32,10 @@ def handle_planesCreateFlyBy(request, user_id, rpcResult, items_to_add_to_obj, j
                     "xp": 0,
                     "wares_revenue": 0,
                     "banner_id": request["p"]["banner_id"],
-                    "start_service_time": "0",
-                    "last_state_change_time": "0",
-                    "drop_consumable_id": "0",
-                    "drop_consumable_amount": "0",
+                    "start_service_time": 0,    
+                    "last_state_change_time": 0,
+                    "drop_consumable_id": 0,
+                    "drop_consumable_amount": 0,
                     "instantland": 0,
                     "player_id": user_id,
                     "from_location_id": json_data["playerData"]["location_id"],
@@ -45,5 +45,5 @@ def handle_planesCreateFlyBy(request, user_id, rpcResult, items_to_add_to_obj, j
                 }
             )
 
-            json_data["playerData"]["next_object_id"] = int(json_data["playerData"]["next_object_id"]) + 1
+            json_data["playerData"]["next_object_id"] += 1
             break

@@ -164,6 +164,7 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                             json_data["materials"][str_drop_mat] = drop_material_amount
                         else:
                             json_data["materials"][str_drop_mat] += drop_material_amount
+                        items_to_add_to_obj.append("materials")
                     #####################################################################################
                     elif "products_sold" in request["p"]:
                         highest_stock = 0
