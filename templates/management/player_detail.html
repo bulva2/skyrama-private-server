@@ -124,7 +124,7 @@
     <script>
     document.addEventListener("DOMContentLoaded", function() {
         {% if flash_message %}
-            document.getElementById('toastBody').textContent = "{{ flash_message }}";
+            document.getElementById('toastBody').textContent = {{ flash_message | tojson }};
             
             var toastEl = document.getElementById('actionToast');
             var toast = new bootstrap.Toast(toastEl, { delay: 3000 });

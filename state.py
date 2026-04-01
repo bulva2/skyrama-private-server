@@ -7,7 +7,6 @@ class ServerState:
     def __init__(self):
         self.init_data: Dict[str, Any] = {}
         self.obj_data: Dict[str, Any] = {}
-        self.admins: List[int] = []
         self.server_ip: str = ""
         self.maintenance: bool = False
         self.goal_types = ["main", "pilot", "daily"]

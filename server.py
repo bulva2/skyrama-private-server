@@ -1,7 +1,6 @@
 import os
 
 from fastapi import FastAPI
-from fastapi.responses import ORJSONResponse
 from fastapi.staticfiles import StaticFiles
 from starlette.middleware.sessions import SessionMiddleware
 from starlette.middleware.cors import CORSMiddleware
@@ -9,13 +8,13 @@ from starlette.middleware.cors import CORSMiddleware
 import src.config_handler as config_handler
 
 from bundle import STYLES_DIR, ASSETS_DIR
-from routers import game_api, web, management, public_api
+from routers import game_api, web, management, public_api, chat_api
 from src.startup import lifespan
 
 config_handler.run()
 config = config_handler.get_config()
 
-app = FastAPI(lifespan=lifespan, default_response_class=ORJSONResponse)
+app = FastAPI(lifespan=lifespan)
 
 app.add_middleware(
     SessionMiddleware, 
@@ -36,6 +35,7 @@ app.include_router(game_api.router)
 app.include_router(web.router)
 app.include_router(management.router)
 app.include_router(public_api.router)
+app.include_router(chat_api.router)
      
 if __name__ == "__main__":
     import uvicorn

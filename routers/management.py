@@ -6,7 +6,8 @@ from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 from sqlalchemy.orm.attributes import flag_modified
 
-from src.database import get_db_session, Player
+from src.database import Player
+from src.dependencies import get_db, is_player_admin
 from bundle import TEMPLATES_DIR
 from state import state
 
@@ -55,29 +56,6 @@ def _get_quest_info(player: Player) -> dict:
         }
 
     return result
-
-def get_db():
-    session = get_db_session()
-    try:
-        yield session
-    finally:
-        session.close()
-
-def is_player_admin(request: Request, db: Session = Depends(get_db)):
-    user_id = request.session.get("userid")
-    if not user_id:
-        raise HTTPException(
-            status_code=status.HTTP_307_TEMPORARY_REDIRECT, 
-            headers={"Location": "/"}
-        )
-    
-    player = db.query(Player).filter(Player.user_id == user_id).first()
-    if not player or not player.is_admin:
-        raise HTTPException(
-            status_code=status.HTTP_307_TEMPORARY_REDIRECT, 
-            headers={"Location": "/"}
-        )
-    return player
 
 @router.get("/")
 async def admin_dashboard(

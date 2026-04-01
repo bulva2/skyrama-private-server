@@ -1,4 +1,14 @@
 from src.debug import report_issue
+import asyncio
+from typing import Dict
+
+_user_locks: Dict[int, asyncio.Lock] = {}
+
+def get_user_lock(user_id: int) -> asyncio.Lock:
+    """Get or create an asyncio lock for a specific user (prevents concurrent requests)"""
+    if user_id not in _user_locks:
+        _user_locks[user_id] = asyncio.Lock()
+    return _user_locks[user_id]
 
 def get_level_from_xp(xp, level_caps):
   for level, cap in enumerate(level_caps):

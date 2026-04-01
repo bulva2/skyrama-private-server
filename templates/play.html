@@ -9,8 +9,9 @@
     <script src="assets/js/swfobject.js"></script>
     <script src="assets/js/skyrama.js"></script>
 
-    <link rel="stylesheet" href="templates/styles/play.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="templates/styles/play.css" />
     
     <link rel="shortcut icon" href="assets/favicon.ico" />
     <link rel="icon" href="assets/favicon.ico" />
@@ -61,9 +62,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="banner">
-                    <!-- affiliateBanner: banner disabled -->
+                <!-- Right-side Bootstrap chatbox (fixed, outside game box) -->
+                <div id="chatbox" class="card shadow" aria-live="polite" style="position:fixed; right:12px; top:410px; width:320px; z-index:9999;">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <strong class="mb-0">Global Chat</strong>
+                        <div>
+                            <button id="chatToggle" class="btn btn-sm btn-outline-secondary" title="Toggle">X</button>
+                        </div>
+                    </div>
+                    <div id="chatMessages" class="card-body p-2" style="overflow:auto; height:340px; background:#f8f9fa;"></div>
+                    <div class="card-footer p-2">
+                        <div class="input-group">
+                            <input id="chatInput" type="text" maxlength="200" class="form-control form-control-sm" placeholder="Say something...">
+                            <button id="chatSend" class="btn btn-primary btn-sm">Send</button>
+                        </div>
+                        <small id="charCount" style="color: #666; margin-top: 4px; display: block;">0/200</small>
+                    </div>
                 </div>
+                <!--
+                <div class="banner">
+                     affiliateBanner: banner disabled
+                </div>
+                -->
                 <div class="footer">
                     <!--gl footer-->
                     <div id="gl_footer">
@@ -405,5 +425,5 @@
     }
 </script>
 </body>
-
+<script src="assets/js/chat.js"></script>
 </html>

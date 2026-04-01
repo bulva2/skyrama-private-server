@@ -1,8 +1,3 @@
-import time
-from pathlib import Path
-import os
-import json
-
 def handle_PlaceBay(request, user_id, json_data, task, task_number, init_data, quest_seq):
     if request["m"] == "placeable.place":
         for i in json_data["bays"]:

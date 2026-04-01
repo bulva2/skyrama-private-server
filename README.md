@@ -66,8 +66,8 @@ These are all the types of tasks that can be in a quest. Doing an unimplemented 
 - [x] SellProducts
 - [x] SendPlane
 - [ ] SendPlaneToStranger
-- [ ] StoreLandsideBuilding
-- [ ] StoreTerminal
+- [x] StoreLandsideBuilding
+- [x] StoreTerminal
 
 ## List of game commands
 I'm not 100% sure if all of these are still being used in the latest version of Skyrama, but I hope it gives an indication of the progress of this private server.

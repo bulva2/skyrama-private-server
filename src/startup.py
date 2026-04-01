@@ -12,6 +12,7 @@ import src.user_manager as user_manager
 import src.config_handler as config_handler
 from src.database import init_database
 from src.cache_manager import initialize_cache
+from src.chat_moderation import load_profanity_list
 from state import state
 
 config = config_handler.get_config()
@@ -26,7 +27,9 @@ async def lifespan(app: FastAPI):
     if not conn_str:
         logging.critical("DB_CONNECTION_STRING not found in .env file. Make sure that you renamed .env-example to .env and that you set the DB_CONNECTION_STRING variable to your connection string!")
         exit(2)
-    init_database(conn_str)
+
+    db_manager = init_database(conn_str)
+    db_manager.create_tables()
     
     # Load Init Data
     logging.info("Loading init data...")
@@ -50,9 +53,9 @@ async def lifespan(app: FastAPI):
             langstrings[filename[0:-5]] = orjson.loads(f.read())
         
     state.langstrings = langstrings
-
-    # Load admins
-    state.admins = [int(x.strip()) for x in config.get("AdminUsers", "admin_ids", fallback="-1").split(",")]
+    
+    # Load profanity list
+    load_profanity_list()
     
     # URL setup
     host = config.get("ServerSettings", "host", fallback="127.0.0.1").replace("http://", "").replace("https://", "")

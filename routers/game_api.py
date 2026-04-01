@@ -5,7 +5,7 @@ from fastapi.responses import Response, PlainTextResponse, RedirectResponse
 from typing import Dict, Any
 
 from src.game_service import process_game_commands
-from src.dependencies import get_user_lock
+from src.utils import get_user_lock
 from src.debug import report_issue
 
 import src.user_manager as user_manager

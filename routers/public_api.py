@@ -87,7 +87,7 @@ async def get_traffic(user_id: int = Query(..., description="Player user ID")):
             raise HTTPException(status_code=404, detail="Player not found")
 
         planes = (
-            session.query(Plane.owner_id, Plane.to_player_id)
+            session.query(Plane.owner_id, Plane.to_player_id, Plane.flight_status)
             .filter(
                 (Plane.owner_id == user_id) | (Plane.to_player_id == user_id)
             )
@@ -104,10 +104,11 @@ async def get_traffic(user_id: int = Query(..., description="Player user ID")):
     outbound = 0
     inbound = 0
 
-    for owner_id, to_player_id in planes:
-        if owner_id == user_id and to_player_id not in (-1, user_id):
+    for owner_id, to_player_id, flight_status in planes:
+        # Only count planes that are actually in flight (flight_status != HANGAR/HOME)
+        if owner_id == user_id and to_player_id not in (-1, user_id) and flight_status != 0:
             outbound += 1
-        elif owner_id != user_id and to_player_id == user_id:
+        elif owner_id != user_id and to_player_id == user_id and flight_status != 0:
             inbound += 1
 
     data = {

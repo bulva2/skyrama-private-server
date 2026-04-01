@@ -113,6 +113,7 @@ class Player(Base):
 
     # Plane relationship (1-n)
     planes: Mapped[list["Plane"]] = relationship("Plane", back_populates="owner", cascade="all, delete-orphan")
+    chat_messages: Mapped[list["ChatMessage"]] = relationship("ChatMessage", back_populates="user", cascade="all, delete-orphan")
     
     # Primary identifications
     user_id: Mapped[int] = mapped_column(Integer, primary_key=True)
@@ -237,6 +238,20 @@ class VoucherRedemption(Base):
     
     __table_args__ = (
         Index('idx_user_voucher', 'user_id', 'voucher_id', unique=True),  # Prevent duplicate redemptions
+    )
+
+class ChatMessage(Base):
+    __tablename__ = 'chat_messages'
+
+    user: Mapped["Player"] = relationship("Player", back_populates="chat_messages")
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    user_id: Mapped[int] = mapped_column(Integer, ForeignKey("players.user_id"), nullable=False, index=True)
+    message: Mapped[str] = mapped_column(String(500), nullable=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.now, index=True)
+    
+    __table_args__ = (
+        Index('idx_created_at', 'created_at'),
     )
 
 class DatabaseManager:

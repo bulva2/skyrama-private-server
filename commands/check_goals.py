@@ -22,7 +22,9 @@ available_task_types = {
     "GetCargo": handle_GetCargo,
     "PlaceCargoshop": handle_PlaceCargoshop,
     "FillShop": handle_FillShop,
-    "SellProducts": handle_SellProducts
+    "SellProducts": handle_SellProducts,
+    "StoreTerminal": handle_StoreTerminal,
+    "StoreLandsideBuilding": handle_StoreLandsideBuilding
 }
 
 def next_quest(quest_seq, init_data, json_data, user_id, items_to_add_to_obj):
