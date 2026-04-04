@@ -23,13 +23,13 @@ templates = Jinja2Templates(directory=TEMPLATES_DIR)
 @router.get("/")
 async def homepage(request: Request, locale: Optional[str] = None, action: Optional[str] = None):
     if action == "internalPayment":
-        return templates.TemplateResponse("payment.html", {"request": request})
+        return templates.TemplateResponse(request, "payment.html", {"request": request})
     session = request.session
     lang = locale if locale else session.get("lang", "en")
     session["lang"] = lang
     langUpper = lang.upper()
     
-    return templates.TemplateResponse("home.html", {
+    return templates.TemplateResponse(request, "home.html", {
         "request": request,
         "SERVERIP": state.server_ip,
         "playerCount": user_manager.get_player_count(),
@@ -44,12 +44,12 @@ async def error(request: Request):
     mode = session.get("error_mode", "error")
     if mode == "unimplemented":
         session["error_mode"] = "error"
-        return templates.TemplateResponse("unimplemented.html", {"request": request})
+        return templates.TemplateResponse(request, "unimplemented.html", {"request": request})
     elif mode == "banned":
         session["error_mode"] = "error"
-        return templates.TemplateResponse("banned.html", {"request": request})
+        return templates.TemplateResponse(request, "banned.html", {"request": request})
     else:
-        return templates.TemplateResponse("error.html", {"request": request})
+        return templates.TemplateResponse(request, "error.html", {"request": request})
 
 @router.get("/crossdomain.xml")
 async def crossdomain():
@@ -66,7 +66,7 @@ async def play(request: Request, locale: Optional[str] = None):
     lang = locale if locale else session.get("lang", "en")
     session["lang"] = lang
     
-    return templates.TemplateResponse("play.html", {
+    return templates.TemplateResponse(request, "play.html", {
         "request": request,
         "username": session["username"],
         "userid": session["userid"],
@@ -96,7 +96,7 @@ async def login(request: Request, username: str = Form(...), password: str = For
                 user_id = json_data["playerData"]["account_id"]
 
                 if user_manager.is_user_banned(username=username):
-                    return templates.TemplateResponse("home.html", {
+                    return templates.TemplateResponse(request, "home.html", {
                         "request": request,
                         "SERVERIP": state.server_ip,
                         "playerCount": user_manager.get_player_count(),
@@ -115,7 +115,7 @@ async def login(request: Request, username: str = Form(...), password: str = For
             else:
                 report_issue("error", f"Failed to load save for user {username} after successful login. Data might be corrupted.")
     
-    return templates.TemplateResponse("home.html", {
+    return templates.TemplateResponse(request, "home.html", {
         "request": request,
         "SERVERIP": state.server_ip,
         "playerCount": user_manager.get_player_count(),
@@ -151,7 +151,7 @@ async def register(request: Request, RegUsername: str = Form(...), RegPassword: 
         user_registered_webhook(uid, RegUsername)
         return RedirectResponse(url='/play', status_code=303)
             
-    return templates.TemplateResponse("home.html", {
+    return templates.TemplateResponse(request, "home.html", {
         "request": request,
         "SERVERIP": state.server_ip,
         "playerCount": user_manager.get_player_count(),
@@ -169,7 +169,7 @@ async def logout(request: Request, locale: Optional[str] = None):
     lang = locale if locale else session.get("lang", "en")
     session["lang"] = lang
     langUpper = lang.upper()
-    return templates.TemplateResponse("logout.html", {
+    return templates.TemplateResponse(request, "logout.html", {
         "request": request,
         "lang": lang,
         "langUpper": langUpper,

@@ -1,4 +1,6 @@
 import uuid
+import logging
+import orjson
 
 from fastapi import APIRouter, Request, Depends, HTTPException, status, Query
 from fastapi.responses import RedirectResponse
@@ -8,6 +10,7 @@ from sqlalchemy.orm.attributes import flag_modified
 
 from src.database import Player
 from src.dependencies import get_db, is_player_admin
+from src.cache_manager import initialize_cache
 from bundle import TEMPLATES_DIR
 from state import state
 
@@ -15,6 +18,22 @@ import math
 
 router = APIRouter(prefix="/management", tags=["management"])
 templates = Jinja2Templates(directory=TEMPLATES_DIR)
+
+
+@router.post("/reload-init-data", dependencies=[Depends(is_player_admin)])
+async def admin_reload_init_data(request: Request):
+    """Reload global init data JSON and refresh derived caches."""
+    try:
+        with open(state.data_path / "global_init_data.json.def", "rb") as f:
+            state.init_data = orjson.loads(f.read())
+
+        initialize_cache(state.init_data)
+        request.session["flash_message"] = "Init data reloaded successfully."
+    except Exception as e:
+        logging.exception("Failed to reload global_init_data.json.def")
+        request.session["flash_message"] = f"Failed to reload init data: {e}"
+
+    return RedirectResponse(url="/management/", status_code=status.HTTP_302_FOUND)
 
 def _get_quest_info(player: Player) -> dict:
     """Return current/prev/next seq_num info for 'main' and 'pilot' quests."""
@@ -76,7 +95,7 @@ async def admin_dashboard(
 
     players = query.order_by(Player.user_id).offset((page - 1) * per_page).limit(per_page).all()
 
-    return templates.TemplateResponse("management/dashboard.html", {
+    return templates.TemplateResponse(request, "management/dashboard.html", {
         "request": request,
         "admin_user": admin_user,
         "players": players,
@@ -100,7 +119,7 @@ async def admin_player_detail(
         
     quest_info = _get_quest_info(player)
 
-    return templates.TemplateResponse("management/player_detail.html", {
+    return templates.TemplateResponse(request, "management/player_detail.html", {
         "request": request,
         "player": player,
         "admin_user": admin_user,
