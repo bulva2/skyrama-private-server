@@ -1571,7 +1571,7 @@
       "service_length": 20,
       "flight_time": 900,
       "air_coins_yield": 20,
-      "xp_yield": 0,
+      "xp_yield": 20,
       "buddy_points_yield": 0,
       "quick_start_coins_cost": 1,
       "quick_land_coins_cost": 1,
