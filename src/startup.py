@@ -58,11 +58,22 @@ async def lifespan(app: FastAPI):
     load_profanity_list()
     
     # URL setup
-    host = config.get("ServerSettings", "host", fallback="127.0.0.1").replace("http://", "").replace("https://", "")
-    port = int(config.get("ServerSettings", "port", fallback="3800"))
-    use_https = config.getboolean("ServerSettings", "use_https", fallback=False)
-    protocol = "https" if use_https else "http"
-    state.server_ip = f"{protocol}://{host}:{port}"
+    #
+    # This becomes SERVERIP in the templates, which the Flash client uses as an
+    # absolute origin for /SkyApi.php and for the login/register form actions.
+    # It therefore has to be the address the *player's browser* can reach, which
+    # is not the address the server binds to when it sits behind a reverse proxy
+    # (Docker: bind 0.0.0.0:3800, but players connect to nginx on :80/:443).
+    # PUBLIC_URL wins when set; otherwise fall back to host:port from config.cfg.
+    public_url = os.environ.get("PUBLIC_URL", "").strip().rstrip("/")
+    if public_url:
+        state.server_ip = public_url
+    else:
+        host = config.get("ServerSettings", "host", fallback="127.0.0.1").replace("http://", "").replace("https://", "")
+        port = int(config.get("ServerSettings", "port", fallback="3800"))
+        use_https = config.getboolean("ServerSettings", "use_https", fallback=False)
+        protocol = "https" if use_https else "http"
+        state.server_ip = f"{protocol}://{host}:{port}"
 
     swf_path = state.root_path / "assets" / "airville.swf"
     if swf_path.exists():

@@ -1,13 +1,21 @@
+import logging
 import re
+
+from state import state
 
 BLACKLIST = set()
 
 def load_profanity_list():
     global BLACKLIST
+    # Resolved from the project root, not the current working directory - a
+    # relative "data/..." path silently disabled the whole filter whenever the
+    # server was started from anywhere other than the repo root.
+    path = state.data_path / "blocked_words.txt"
     try:
-        with open("data/blocked_words.txt", "r") as f:
-            BLACKLIST = {word.strip().lower() for word in f.readlines()}
+        with open(path, "r", encoding="utf-8") as f:
+            BLACKLIST = {word.strip().lower() for word in f if word.strip()}
     except FileNotFoundError:
+        logging.warning(f"Profanity list not found at {path}, chat filtering is disabled.")
         BLACKLIST = set()
 
 def moderate_msg(text: str) -> str:

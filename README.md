@@ -28,13 +28,53 @@ The server may be down anytime for maintenance or updates, use different login/p
 
 Also join us on [Discord](https://discord.gg/uFhJRvggZy)!
 
-## How to run the code locally
+## How to run with Docker (recommended)
+
+Everything (server + PostgreSQL + nginx) comes up with one command. No database
+to install, no credentials to invent.
+
+1. Obtain the Skyrama `.swf` file, we cannot provide this on GitHub
+2. Place it in the `assets` folder as `assets/airville.swf`
+3. Run:
+
+```bash
+docker compose up -d --build
+```
+
+4. Open http://localhost and enjoy!
+
+There is no `.env` to create for a local test — every setting has a working
+default. Useful commands:
+
+```bash
+docker compose logs -f privaterama
+```
+
+To change anything (credentials, public address, TLS), copy `.env-example` to
+`.env` and edit it:
+
+- `PUBLIC_URL` — the address players type in their browser. It is baked into the
+  page as the Flash client's API host, so it must be your real public address
+  (e.g. `http://192.168.1.50` on a LAN, or `https://your-domain`), not
+  `localhost`, as soon as anyone else connects.
+- `SESSION_SECRET` — **change this before exposing the server.** With the default
+  value anyone can forge a logged-in session.
+- `POSTGRES_USER` / `POSTGRES_PASSWORD` / `POSTGRES_DB` — set once, used by both
+  the database container and the server's connection string.
+
+Player data lives in the `pgdata` Docker volume and survives rebuilds.
+`docker compose down -v` deletes it.
+
+For HTTPS via Let's Encrypt, follow the commented steps in the `certbot` service
+in `docker-compose.yml`.
+
+## How to run the code locally (without Docker)
 
 1. Obtain Skyrama .swf file, we cannot provide this on GitHub
 2. Place Skyrama .swf file into assets folder
 3. Install PostgreSQL and create a database
-4. Rename .env-example to .env and set your database password
-5. Change the database connection URI in config.cfg
+4. Rename .env-example to .env and set `DB_CONNECTION_STRING` to your database
+5. Adjust host/port in config.cfg if needed
 6. Run setup_database.py
 7. Run scripts\setup.bat (.sh)
 8. Run scripts\start.bat (.sh)

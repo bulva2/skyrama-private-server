@@ -1,17 +1,50 @@
 FROM python:3.13-slim
 
+# PYTHONUNBUFFERED so logs reach `docker compose logs` immediately instead of
+# sitting in a pipe buffer. PYTHONDONTWRITEBYTECODE keeps the layer clean.
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1
+
 WORKDIR /app
 
+# No build-essential / libpq-dev needed: psycopg[binary] and bcrypt both ship
+# manylinux wheels, so nothing is compiled from source. `curl` is only here for
+# the container healthcheck.
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    libpq-dev \
+        curl \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
-COPY . .
+# Only the application code is copied. assets/, data/, templates/, stub/ and
+# config.cfg are bind-mounted read-only by docker-compose.yml so that game data
+# and config can be changed without rebuilding the image.
+COPY server.py state.py bundle.py setup_database.py ./
+COPY src/ ./src/
+COPY routers/ ./routers/
+COPY commands/ ./commands/
+
+# Run unprivileged. The server never writes to disk (all state lives in
+# Postgres), so no writable paths are required.
+RUN useradd --create-home --uid 10001 skyrama && chown -R skyrama:skyrama /app
+USER skyrama
 
 EXPOSE 3800
 
-CMD ["sh", "-c", "python setup_database.py && gunicorn server:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:3800"]
+HEALTHCHECK --interval=15s --timeout=5s --start-period=40s --retries=5 \
+    CMD curl -fsS http://127.0.0.1:3800/crossdomain.xml || exit 1
+
+# WEB_CONCURRENCY defaults to 1 on purpose. The server keeps per-user asyncio
+# locks, the world-map player list and several caches in process memory, none of
+# which are shared between workers - running >1 worker reintroduces lost-update
+# races on player saves. Raise it only once that state is moved to Postgres/Redis.
+CMD ["sh", "-c", "exec gunicorn server:app \
+      --workers ${WEB_CONCURRENCY:-1} \
+      --worker-class uvicorn.workers.UvicornWorker \
+      --bind 0.0.0.0:3800 \
+      --timeout ${GUNICORN_TIMEOUT:-60} \
+      --access-logfile - \
+      --error-logfile -"]

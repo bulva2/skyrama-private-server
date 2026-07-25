@@ -1,0 +1,49 @@
+# Keep the build context tiny. Everything large is bind-mounted by
+# docker-compose.yml instead of being copied into the image
+# (assets alone is ~430 MB, .git ~380 MB, client-src ~12 MB).
+
+# Version control
+.git
+.gitattributes
+.gitignore
+.github
+
+# Local Python environment (never reuse the host venv inside the image)
+.venv
+venv
+env
+__pycache__
+**/__pycache__
+*.py[cod]
+*.egg-info
+
+# Secrets: injected as environment variables by compose, never baked in
+.env
+.env.*
+!.env-example
+
+# Bind-mounted at runtime (see docker-compose.yml)
+assets
+data
+templates
+stub
+config.cfg
+
+# Decompiled client sources: reference material, not needed to run
+client-src
+
+# Local tooling and docs
+tests
+scripts
+README.md
+Dockerfile
+docker-compose.yml
+.dockerignore
+nginx
+webroot
+
+# Editor / OS noise
+.vscode
+.idea
+.DS_Store
+Thumbs.db
