@@ -1,5 +1,6 @@
 from src.debug import report_issue
 import asyncio
+import math
 from typing import Dict
 
 _user_locks: Dict[int, asyncio.Lock] = {}
@@ -32,7 +33,26 @@ def get_crafting_level_from_xp(xp, level_caps):
 
 def subtract_resources(json_data, rpcResult, air_coins = None, air_cash = None, event_currency = None):
   player_data = json_data["playerData"]
-  
+
+  # Sanity check on the costs themselves, BEFORE checking affordability.
+  #
+  # The affordability checks below only answer "does the player have enough?".
+  # A negative cost passes that trivially (`1 < -65000` is False) and then
+  # `balance -= cost` ADDS currency instead of removing it. Any caller that
+  # derives its amount from the request was therefore a currency dupe - see
+  # crafting_buyMaterials, where a crafted `amount` minted air cash.
+  # Rejecting bad costs here closes it for every caller, present and future.
+  for name, amount in (("air_coins", air_coins), ("air_cash", air_cash), ("event_currency", event_currency)):
+    if amount is None:
+      continue
+    if (isinstance(amount, bool)
+        or not isinstance(amount, (int, float))
+        or not math.isfinite(amount)
+        or amount < 0):
+      rpcResult["i"] = -1
+      report_issue("warning", f"utils: Invalid {name} cost for user {player_data['account_id']}: {amount!r} (must be a non-negative number)")
+      return
+
   # Anticheat checks (Prevents negative resources)
   if air_coins and player_data["air_coins"] < air_coins:
     rpcResult["i"] = -1
