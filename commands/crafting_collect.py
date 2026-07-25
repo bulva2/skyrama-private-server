@@ -62,36 +62,35 @@ def handle_craftingCollect(request, user_id, rpcResult, items_to_add_to_obj, jso
     for i in init_data["planeTypes"]:
         if int(i["id"]) == int(process_data["itemId"]):
             json_data["planes"].append(
-                {
-                    "souvenir_types_id":-1,
-                    "active_count":1,
-                    "id":json_data["playerData"]["next_object_id"],
-                    "plane_type_id":process_data["itemId"],
-                    "container_id": hangar_id,
-                    "subcontainer_id":1, # Hangar has no subcontainers, so just 1 (i think that's what it means?)
-                    "to_player_id":-1,
-                    "departure_time":-1,
-                    "arrival_time":-1,
-                    "kerosene_boost_flag":"0",
-                    "flight_status": PlaneState.HANGAR.value, # 0
-                    "buddy_points":i["buddy_points_yield"],
-                    "contents_count":i["capacity"],
-                    "air_coins":i["air_coins_yield"],
-                    "xp":i["xp_yield"],
-                    "wares_revenue":i["wares_revenue_capacity"],
-                    "banner_id":"-1",
-                    "start_service_time":"0",
-                    "last_state_change_time":"0",
-                    "drop_consumable_id":"0",
-                    "drop_consumable_amount":"0",
-                    "instantland":0,
-                    "player_id":user_id,
-                    "from_location_id":-1,
-                    "from_user_name":"",
-                    "upgrade_level":0
-            }
-        )
-        break
+            {
+                "souvenir_types_id":-1,
+                "active_count":1,
+                "id":json_data["playerData"]["next_object_id"],
+                "plane_type_id":process_data["itemId"],
+                "container_id": hangar_id,
+                "subcontainer_id":1, # Hangar has no subcontainers, so just 1 (i think that's what it means?)
+                "to_player_id":-1,
+                "departure_time":-1,
+                "arrival_time":-1,
+                "kerosene_boost_flag":"0",
+                "flight_status": PlaneState.HANGAR.value, # 0
+                "buddy_points":i["buddy_points_yield"],
+                "contents_count":i["capacity"],
+                "air_coins":i["air_coins_yield"],
+                "xp":i["xp_yield"],
+                "wares_revenue":i["wares_revenue_capacity"],
+                "banner_id":"-1",
+                "start_service_time":"0",
+                "last_state_change_time":"0",
+                "drop_consumable_id":"0",
+                "drop_consumable_amount":"0",
+                "instantland":0,
+                "player_id":user_id,
+                "from_location_id":-1,
+                "from_user_name":"",
+                "upgrade_level":0
+            })
+            break
     
     currentCraftings.pop(str(process_data["itemId"]), None)
 
