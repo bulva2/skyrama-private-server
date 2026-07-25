@@ -142,9 +142,6 @@ async def verify_login(request: LoginRequest):
       - 500 if database error occurs
     """
     t_start = time.perf_counter()
-    
-    logging.debug(f"[public_api] /verify_login request.username={repr(request.username)} request.password={repr(request.password)}")
-    
     stored_hash = user_manager.fetch_pwd_hash_by_name(request.username)
     
     if not stored_hash:
@@ -153,8 +150,6 @@ async def verify_login(request: LoginRequest):
         raise HTTPException(status_code=401, detail="Invalid username or password")
 
     hashed_pwd = hashlib.sha256(request.password.encode('utf-8')).hexdigest().encode('utf-8')
-    
-    logging.debug(f"[public_api] /verify_login user={request.username} stored_hash={stored_hash} hashed_pwd={hashed_pwd}")
 
     if not bcrypt.checkpw(hashed_pwd, stored_hash):
         elapsed = (time.perf_counter() - t_start) * 1000
