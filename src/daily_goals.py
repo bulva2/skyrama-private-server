@@ -77,7 +77,7 @@ def _check_daily_goal(json_data: dict, player_level: int):
         json_data["goals"]["daily_goal_time"] = current_time
         json_data["goals"]["goals"]["daily"] = {
             "goal_types_id": new_goal["id"],
-            "tasks": new_goal["taskTypes"]
+            "tasks": copy.deepcopy(new_goal["taskTypes"])
         }
         json_data["goals"]["daily_reward_given"] = False
         return new_goal

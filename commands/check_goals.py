@@ -78,7 +78,7 @@ def next_quest(quest_seq, init_data, json_data, user_id, items_to_add_to_obj):
     new_tasks = []
     for j in init_data["taskTypes"]:
         if int(j["goal_types_id"]) == int(new_goal_id):
-            new_task = j
+            new_task = dict(j)
             new_task["num_completed"] = 0
             new_tasks.append(new_task)
 
