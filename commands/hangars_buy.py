@@ -18,10 +18,6 @@ def handle_hangarsBuy(request, user_id, rpcResult, items_to_add_to_obj, json_dat
             
             json_data["hangars"].append({
                 "hangar_types_id": request["p"]["types_id"],
-                # A new hangar is always level 1 - the client hardcodes it too
-                # (HangarManager.createInstanceFromClient). Taking it from the
-                # request let a modified client ask for a maxed-out hangar at the
-                # base price, since capacity is upgrade_capacity * (level - 1).
                 "upgrade_level": 1,
                 "id": json_data["playerData"]["next_object_id"],
                 "position_x": request["p"]["position_x"],

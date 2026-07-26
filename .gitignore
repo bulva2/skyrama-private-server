@@ -172,3 +172,6 @@ cython_debug/
 
 *.ignore
 assets/airville.swf
+
+# Local working notes, not for the repo
+CLAUDE.md
