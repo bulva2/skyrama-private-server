@@ -3,7 +3,9 @@ from pathlib import Path
 from colorama import init, Fore, Style
 import configparser
 import logging
+import orjson
 import os
+import sys
 
 # Singleton, so we don't load the config multiple times
 _config = None
@@ -45,6 +47,49 @@ class ColoredFormatter(logging.Formatter):
         record.levelname = f"{color}{levelname}{Style.RESET_ALL}"
         return super().format(record)
 
+_RECORD_KEYS = set(logging.LogRecord("", 0, "", 0, "", None, None).__dict__) | {"message", "asctime", "taskName"}
+
+class JsonFormatter(logging.Formatter):
+    """One JSON object per line, with any `extra` fields included."""
+
+    def format(self, record: logging.LogRecord) -> str:
+        out = {
+            "ts": self.formatTime(record, "%Y-%m-%dT%H:%M:%S"),
+            "level": record.levelname.lower(),
+            "logger": record.name,
+            "msg": record.getMessage(),
+        }
+        for key, value in record.__dict__.items():
+            if key not in _RECORD_KEYS and not key.startswith("_"):
+                out[key] = value
+        if record.exc_info:
+            out["exception"] = self.formatException(record.exc_info)
+        return orjson.dumps(out, default=str).decode()
+
+QUIET_ACCESS_PATHS = ("/chat/messages", "/crossdomain.xml")
+
+class QuietPollingFilter(logging.Filter):
+    """Drop successful access-log lines for polled endpoints, keep failures."""
+
+    def filter(self, record: logging.LogRecord) -> bool:
+        args = record.args
+        if not isinstance(args, tuple) or len(args) < 5:
+            return True
+
+        path, status = args[2], args[4]
+        if not isinstance(path, str):
+            return True
+
+        try:
+            status = int(status)  # type: ignore[arg-type]
+        except (TypeError, ValueError):
+            return True
+
+        if status >= 400:
+            return True
+
+        return not any(path.startswith(p) for p in QUIET_ACCESS_PATHS)
+
 def setup_logging():
     config = get_config()
 
@@ -57,7 +102,10 @@ def setup_logging():
     logging.root.handlers = []
     
     # Create a colored formatter
-    formatter = ColoredFormatter(fmt='%(levelname)s %(asctime)s: %(message)s', datefmt='%H:%M:%S')
+    if sys.stderr.isatty():
+        formatter = ColoredFormatter(fmt='%(levelname)s %(asctime)s: %(message)s', datefmt='%H:%M:%S')
+    else:
+        formatter = JsonFormatter()
     handler = logging.StreamHandler()
     handler.setFormatter(formatter)
     
@@ -75,5 +123,7 @@ def setup_logging():
         ulogger.handlers = []
         ulogger.addHandler(handler)
         ulogger.propagate = False
+
+    logging.getLogger("uvicorn.access").addFilter(QuietPollingFilter())
 
 

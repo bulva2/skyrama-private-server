@@ -82,12 +82,6 @@ async def lifespan(app: FastAPI):
     else:
         state.airville_cv = "devcv"
 
-    if config.get("Webhooks", "error_webhook", fallback="") == "":
-        logging.warning("No error webhook configured, errors will not be sent to Discord!")
-
-    if config.get("Webhooks", "registration_webhook", fallback="") == "":
-        logging.warning("No registration webhook configured, registrations will not be sent to Discord!")
-
     logging.info(f"Server initialized on {state.server_ip}")
     yield
     

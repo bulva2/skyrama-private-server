@@ -5,7 +5,6 @@ python-multipart
 jinja2
 deepmerge
 colorama
-requests
 orjson>=3.11.7
 python-dotenv
 itsdangerous

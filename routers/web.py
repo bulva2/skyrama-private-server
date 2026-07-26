@@ -7,7 +7,7 @@ from bundle import TEMPLATES_DIR, STUB_DIR
 from state import state
 
 from src.validator import validate_registration_form
-from src.debug import user_registered_webhook, report_issue
+from src.debug import report_issue
 
 import bcrypt
 import hashlib
@@ -148,7 +148,7 @@ async def register(request: Request, RegUsername: str = Form(...), RegPassword: 
         session["userid"] = uid
         session["token"] = token
         
-        user_registered_webhook(uid, RegUsername)
+        logging.info("Player registered", extra={"event": "registration", "user_id": uid, "username": RegUsername})
         return RedirectResponse(url='/play', status_code=303)
             
     return templates.TemplateResponse(request, "home.html", {

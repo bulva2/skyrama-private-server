@@ -26,7 +26,8 @@ def process_game_commands(user_id: int, commands: List[Dict[str, Any]], json_dat
             cmd_handler(cmd, user_id, rpc_result, add_items, json_data, state.init_data)
 
             if rpc_result.get("i") == -1:
-                report_issue("warning", f"AntiCheat triggered for user_id {user_id} on command {cmd['m']}")
+                report_issue("warning", f"AntiCheat triggered for user_id {user_id} on command {cmd['m']}",
+                             event="anticheat", user_id=user_id, command=cmd["m"])
                 return -1
             
             final_response["rpcResults"].append(rpc_result)
@@ -38,7 +39,8 @@ def process_game_commands(user_id: int, commands: List[Dict[str, Any]], json_dat
             items_to_add_to_obj.extend(add_items)
             logging.info(f"Command {cmd['m']} handled")
         else:
-            report_issue("warning", f"Unimplemented command {cmd['m']} from user_id {user_id}")
+            report_issue("warning", f"Unimplemented command {cmd['m']} from user_id {user_id}",
+                         event="unimplemented_command", user_id=user_id, command=cmd["m"])
             return -2
 
     end_level: int = get_level_from_xp(json_data.get("playerData", {}).get("xp", 0), state.init_data["playerData"]["xp_level_caps"])
