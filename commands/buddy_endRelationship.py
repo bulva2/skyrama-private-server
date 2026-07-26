@@ -14,12 +14,12 @@ def handle_buddyEndRelationship(request, user_id, rpcResult, items_to_add_to_obj
       return
     
     for idx, buddy in enumerate(json_data["buddyStuff"]["buddies"]):
-        if buddy["hi_player_id"] == request["p"] and buddy["lo_player_id"] == user_id:
+        if int(buddy["hi_player_id"]) == int(request["p"]) and int(buddy["lo_player_id"]) == int(user_id):
             json_data["buddyStuff"]["buddies"].pop(idx)
             break
         
     for idx, buddy in enumerate(buddy_data["buddyStuff"]["buddies"]):
-        if buddy["lo_player_id"] == request["p"] and buddy["hi_player_id"] == user_id:
+        if int(buddy["lo_player_id"]) == int(request["p"]) and int(buddy["hi_player_id"]) == int(user_id):
             buddy_data["buddyStuff"]["buddies"].pop(idx)
             break
 

@@ -15,12 +15,12 @@ def handle_buddyDecline(request, user_id, rpcResult, items_to_add_to_obj, json_d
       return
 
     for idx, buddy in enumerate(json_data["buddyStuff"]["buddies"]):
-        if buddy["hi_player_id"] == request["p"]["buddyId"] and buddy["lo_player_id"] == user_id:
+        if int(buddy["hi_player_id"]) == int(request["p"]["buddyId"]) and int(buddy["lo_player_id"]) == int(user_id):
             json_data["buddyStuff"]["buddies"].pop(idx)
             break
         
     for idx, buddy in enumerate(buddy_data["buddyStuff"]["buddies"]):
-        if buddy["lo_player_id"] == request["p"]["buddyId"] and buddy["hi_player_id"] == user_id:
+        if int(buddy["lo_player_id"]) == int(request["p"]["buddyId"]) and int(buddy["hi_player_id"]) == int(user_id):
             buddy_data["buddyStuff"]["buddies"].pop(idx)
             break
         

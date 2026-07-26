@@ -28,10 +28,10 @@ def handle_buddyCollectPassenger(request, user_id, rpcResult, items_to_add_to_ob
 
     # This controls the passengers for the buddy (the one being collected from)
     for buddy in buddies:
-        if buddy["lo_player_id"] == request["p"] and buddy["hi_player_id"] == user_id:
+        if int(buddy["lo_player_id"]) == int(request["p"]) and int(buddy["hi_player_id"]) == int(user_id):
             # This is to prevent unnecessary db writes to prevent crashes or other issues, might increase the limit in the future
-            if buddy["received_passengers"] < MAX_PASSENGERS_PER_BUDDY:
-                buddy["received_passengers"] += collected_passengers_buddy 
+            if int(buddy["received_passengers"]) < MAX_PASSENGERS_PER_BUDDY:
+                buddy["received_passengers"] = int(buddy["received_passengers"]) + collected_passengers_buddy
                 user_manager.modify_save_by_id(request["p"], buddy_data)
             break
     
@@ -39,13 +39,13 @@ def handle_buddyCollectPassenger(request, user_id, rpcResult, items_to_add_to_ob
     # -> Doesn't work, help wanted, broken in actual game too not just in ours.
     # Unless I misunderstood what is this meant to do which is likely too.
     for my_buddy in json_data["buddyStuff"]["buddies"]:
-        if my_buddy["lo_player_id"] == user_id and my_buddy["hi_player_id"] == request["p"]:
+        if int(my_buddy["lo_player_id"]) == int(user_id) and int(my_buddy["hi_player_id"]) == int(request["p"]):
             # Reset 24hr cooldown
-            if int(time.time()) - my_buddy["todays_first_collected_passengers_time"] > 86400:  # 24 hours in seconds
+            if int(time.time()) - int(my_buddy["todays_first_collected_passengers_time"]) > 86400:  # 24 hours in seconds
                 my_buddy["todays_collected_passengers"] = 0
                 my_buddy["todays_first_collected_passengers_time"] = int(time.time())
             
-            my_buddy["todays_collected_passengers"] += collected_passengers_buddy
+            my_buddy["todays_collected_passengers"] = int(my_buddy["todays_collected_passengers"]) + collected_passengers_buddy
             break
 
     rpcResult["r"] = True

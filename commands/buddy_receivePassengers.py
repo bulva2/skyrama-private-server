@@ -8,9 +8,9 @@ def handle_buddyReceivePassengers(request, user_id, rpcResult, items_to_add_to_o
     buddies = json_data["buddyStuff"]["buddies"]
 
     for buddy in buddies:
-        if buddy["received_passengers"] > 0 and buddy["lo_player_id"] == user_id:
+        if int(buddy["received_passengers"]) > 0 and int(buddy["lo_player_id"]) == int(user_id):
             print(f"Receiving {buddy['received_passengers']} passengers from buddy with hi_player_id {buddy['hi_player_id']} and lo_player_id {buddy['lo_player_id']}")
-            json_data["playerData"]["passengers"] += buddy["received_passengers"]
+            json_data["playerData"]["passengers"] += int(buddy["received_passengers"])
             buddy["received_passengers"] = 0
         else:
             print(f"No passengers to receive from buddy with hi_player_id {buddy['hi_player_id']} and lo_player_id {buddy['lo_player_id']}")

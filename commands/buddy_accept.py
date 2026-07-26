@@ -26,6 +26,8 @@ def handle_buddyAccept(request, user_id, rpcResult, items_to_add_to_obj, json_da
 #hi_id = his user id, lo_id = local user id
 def update_buddy_status(buddies: dict, hi_id: int, lo_id: int):
     for idx, buddy in enumerate(buddies):
-        if buddy["hi_player_id"] == hi_id and buddy["lo_player_id"] == lo_id:
+        # int() on both sides: ids reach us as ints from the DB but the client
+        # may send either, and legacy saves stored them as strings.
+        if int(buddy["hi_player_id"]) == int(hi_id) and int(buddy["lo_player_id"]) == int(lo_id):
             buddies[idx]["status"] = BuddyStatus.ACTIVE.value #5
             break
