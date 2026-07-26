@@ -1,13 +1,4 @@
-# Skyrama Private Server - full stack.
-#
-#   docker compose up -d --build
-#   -> game on http://localhost
-#
-# Everything has a working default, so a fresh clone with no .env at all still
-# boots. Copy .env-example to .env only when you want to change credentials,
-# the public URL, or point at an external database.
-#
-# TLS is opt-in and documented at the bottom of this file.
+# docker compose up -d --build
 
 x-postgres-env: &postgres-env
   POSTGRES_USER: ${POSTGRES_USER:-skyrama}
@@ -41,9 +32,7 @@ services:
       # level firewall / security group restricting the source IP.
       - "${DB_BIND:-127.0.0.1}:${DB_PORT:-5433}:5432"
     healthcheck:
-      # The app's first action is CREATE TABLE, so it must not start before
-      # Postgres actually accepts connections for the right user/database.
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-skyrama} -d ${POSTGRES_DB:-skyrama} -q"]
+      test: [ "CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-skyrama} -d ${POSTGRES_DB:-skyrama} -q" ]
       interval: 5s
       timeout: 5s
       retries: 20
@@ -65,10 +54,11 @@ services:
       # default value anyone can forge a login session.
       SESSION_SECRET: ${SESSION_SECRET:-dev-only-insecure-session-secret}
       # Absolute origin the Flash client uses for /SkyApi.php and the login
-      # form. Must be reachable from the player's browser, so it has to be the
-      # public address of nginx - not the internal container port.
-      PUBLIC_URL: ${PUBLIC_URL:-http://localhost}
-      WEB_CONCURRENCY: ${WEB_CONCURRENCY:-1}
+      # form. Derived from DOMAIN so there is only one thing to set:
+      #   no DOMAIN    -> http://localhost
+      #   DOMAIN=x.com -> https://x.com   (Caddy always serves a real host over TLS)
+      # Set PUBLIC_URL explicitly only to override, e.g. a LAN IP.
+      PUBLIC_URL: ${PUBLIC_URL:-http${DOMAIN:+s}://${DOMAIN:-localhost}}
     volumes:
       # Read-only bind mounts instead of COPY: keeps the image small and lets
       # you edit game data / config and just restart the container.
@@ -79,7 +69,7 @@ services:
       - ./config.cfg:/app/config.cfg:ro
     expose:
       - "3800"
-    # Uncomment to reach the app directly, bypassing nginx (handy for debugging).
+    # Uncomment to reach the app directly, bypassing Caddy (handy for debugging).
     # ports:
     #   - "127.0.0.1:3800:3800"
     extra_hosts:
@@ -90,71 +80,31 @@ services:
     networks:
       - app-network
 
-  nginx:
-    image: nginx:1.27-alpine
-    container_name: nginx
+  caddy:
+    image: caddy:2-alpine
+    container_name: skyrama-caddy
     restart: unless-stopped
+    environment:
+      # This is the entire TLS setup.
+      #   DOMAIN unset      -> ":80", plain HTTP, no certificates involved
+      #   DOMAIN=x.com      -> Caddy gets a certificate on first request and
+      #                        renews it forever, and redirects :80 to :443
+      SITE_ADDRESS: ${DOMAIN:-:80}
     ports:
       - "${HTTP_PORT:-80}:80"
       - "${HTTPS_PORT:-443}:443"
+      - "${HTTPS_PORT:-443}:443/udp" # HTTP/3
     volumes:
-      - ./nginx/conf.d:/etc/nginx/conf.d:ro
-      # Only the two directories nginx actually serves are mounted - the old
-      # setup mounted the whole repo (including .env and .git) into nginx.
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - ./assets:/srv/assets:ro
       - ./templates/styles:/srv/styles:ro
-      - certbot-etc:/etc/letsencrypt
-      - certbot-webroot:/var/www/certbot
+      # Certificates and account keys live here - this volume MUST persist, or
+      # every restart re-requests certificates and will hit rate limits.
+      - caddy_data:/data
+      - caddy_config:/config
     depends_on:
       privaterama:
         condition: service_started
-    networks:
-      - app-network
-
-  # TLS is opt-in - it never runs (and never fails) during a normal `up`.
-  #
-  #   1. Point your domain's A record at this host.
-  #   2. Put DOMAIN=example.com and CERTBOT_EMAIL=you@example.com in .env,
-  #      and set PUBLIC_URL=https://example.com.
-  #   3. docker compose up -d                      # HTTP must be reachable first
-  #   4. docker compose --profile tls run --rm certbot
-  #   5. cp nginx/tls.conf.example nginx/conf.d/tls.conf
-  #      and replace REPLACE_WITH_YOUR_DOMAIN in it with your domain.
-  #   6. docker compose restart nginx
-  #
-  # Renewal: docker compose --profile tls run --rm certbot renew
-  # (add that to a host cron job; it does not need to run continuously).
-  certbot:
-    image: certbot/certbot
-    container_name: certbot
-    profiles: ["tls"]
-    volumes:
-      - certbot-etc:/etc/letsencrypt
-      - certbot-webroot:/var/www/certbot
-    environment:
-      DOMAIN: ${DOMAIN:-}
-      CERTBOT_EMAIL: ${CERTBOT_EMAIL:-}
-      # Set CERTBOT_STAGING=0 once you have confirmed the flow works. Staging
-      # certs are not trusted by browsers but do not burn Let's Encrypt rate
-      # limits, so the first run uses them by default.
-      CERTBOT_STAGING: ${CERTBOT_STAGING:-1}
-    # Validated here rather than with compose's ${VAR:?...} syntax, because that
-    # is interpolated when the file is parsed and would break `docker compose up`
-    # for everyone who never enables TLS.
-    entrypoint:
-      - /bin/sh
-      - -c
-      - |
-        set -e
-        [ -n "$${DOMAIN}" ] || { echo "ERROR: set DOMAIN in .env first" >&2; exit 1; }
-        [ -n "$${CERTBOT_EMAIL}" ] || { echo "ERROR: set CERTBOT_EMAIL in .env first" >&2; exit 1; }
-        [ "$${CERTBOT_STAGING}" = "1" ] && STAGING=--staging || STAGING=
-        exec certbot "$$@" $${STAGING} \
-          --webroot -w /var/www/certbot \
-          -d "$${DOMAIN}" --email "$${CERTBOT_EMAIL}" \
-          --agree-tos --no-eff-email --non-interactive
-      - certbot
-    command: ["certonly"]
     networks:
       - app-network
 
@@ -164,5 +114,5 @@ networks:
 
 volumes:
   pgdata:
-  certbot-etc:
-  certbot-webroot:
+  caddy_data:
+  caddy_config:

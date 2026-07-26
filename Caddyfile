@@ -1,0 +1,25 @@
+{$SITE_ADDRESS}
+
+encode zstd gzip
+
+request_body {
+	max_size 10MB
+}
+
+# Game assets (SWF, sounds, images) served straight off disk.
+# handle_path strips the prefix, so /assets/foo.swf -> /srv/assets/foo.swf
+handle_path /assets/* {
+	root * /srv/assets
+	file_server
+	header Cache-Control "public, max-age=1209600"
+}
+
+# The app mounts its stylesheets under this exact prefix, so this has to mirror
+# it (see the StaticFiles mount for "/templates/styles" in server.py).
+handle_path /templates/styles/* {
+	root * /srv/styles
+	file_server
+	header Cache-Control "public, max-age=86400"
+}
+
+reverse_proxy privaterama:3800

@@ -39,8 +39,7 @@ README.md
 Dockerfile
 docker-compose.yml
 .dockerignore
-nginx
-webroot
+Caddyfile
 
 # Editor / OS noise
 .vscode

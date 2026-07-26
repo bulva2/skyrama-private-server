@@ -30,7 +30,7 @@ Also join us on [Discord](https://discord.gg/uFhJRvggZy)!
 
 ## How to run with Docker (recommended)
 
-Everything (server + PostgreSQL + nginx) comes up with one command. No database
+Everything (server + PostgreSQL + Caddy) comes up with one command. No database
 to install, no credentials to invent.
 
 1. Obtain the Skyrama `.swf` file, we cannot provide this on GitHub
@@ -53,20 +53,34 @@ docker compose logs -f privaterama
 To change anything (credentials, public address, TLS), copy `.env-example` to
 `.env` and edit it:
 
-- `PUBLIC_URL` — the address players type in their browser. It is baked into the
-  page as the Flash client's API host, so it must be your real public address
-  (e.g. `http://192.168.1.50` on a LAN, or `https://your-domain`), not
-  `localhost`, as soon as anyone else connects.
+- `DOMAIN` — see HTTPS below.
 - `SESSION_SECRET` — **change this before exposing the server.** With the default
   value anyone can forge a logged-in session.
 - `POSTGRES_USER` / `POSTGRES_PASSWORD` / `POSTGRES_DB` — set once, used by both
   the database container and the server's connection string.
+- `PUBLIC_URL` — only if you need to override the derived value, e.g. serving on
+  a LAN IP like `http://192.168.1.50`. It is baked into the page as the Flash
+  client's API host, so it must be the address players actually use.
 
 Player data lives in the `pgdata` Docker volume and survives rebuilds.
 `docker compose down -v` deletes it.
 
-For HTTPS via Let's Encrypt, follow the commented steps in the `certbot` service
-in `docker-compose.yml`.
+## HTTPS
+
+Point your domain's A record at the server, put it in `.env`:
+
+```
+DOMAIN=skyrama.example.com
+```
+
+then `docker compose up -d`. That's the whole thing.
+
+Caddy obtains the certificate on the first request, renews it in the background
+forever, and redirects HTTP to HTTPS. `PUBLIC_URL` becomes
+`https://skyrama.example.com` on its own, so there is nothing to keep in sync.
+
+Certificates live in the `caddy_data` volume — don't delete it, or Caddy
+re-requests them on restart and can hit Let's Encrypt rate limits.
 
 ## How to run the code locally (without Docker)
 
