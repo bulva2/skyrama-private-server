@@ -106,6 +106,8 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                                     break
                     #####################################################################################
                     elif "cargo" in request["p"]:
+                        cargo_type = None
+
                         for h in json_data["locations"]:
                             if int(h["id"]) == location_id:
                                 cargo_type = int(h["cargo_types_id"])
@@ -113,27 +115,33 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                                 request["p"]["cargo_types_id"] = cargo_type
                                 break
 
+                        if cargo_type is None:
+                            report_issue("warning", f"planes_takeMeans: No location {location_id} for user {user_id}, cannot tell which cargo this is")
+                            rpcResult["i"] = -1
+                            return
+
+                        reported_cargo = int(request["p"]["cargo"])
+                        if reported_cargo != contents_count:
+                            report_issue("warning", f"planes_takeMeans: Cargo amount mismatch for plane id {plane['id']}, User: {json_data['playerData']['user_name']} (ID: {user_id}). Expected: {contents_count}, Reported: {request['p']['cargo']}")
+                            rpcResult["i"] = -1
+                            return
+
+                        # Don't overstock the warehouse
+                        warehouse_capacity = calculate_warehouse_capacity(
+                            json_data["playerData"]["cargo_capacity_level"], init_data)
+
                         setup_new_cargo_item = True
                         for k in json_data["cargo"]:
                             if int(k["cargo_types_id"]) == cargo_type:
                                 setup_new_cargo_item = False
-                                # Possible cheat, disconnect user
-                                if int(request["p"]["cargo"] != contents_count):
-                                    report_issue("warning", f"planes_takeMeans: Cargo amount mismatch for plane id {plane['id']}, User: {json_data['playerData']['user_name']} (ID: {user_id}). Expected: {contents_count}, Reported: {request['p']['cargo']}")
-                                    rpcResult["i"] = -1
-                                    return
-                                k["num_in_warehouse"] += int(
-                                    request["p"]["cargo"])
-                                warehouse_capacity = calculate_warehouse_capacity(
-                                    json_data["playerData"]["cargo_capacity_level"], init_data)
-                                # Don't overstock (not sure if needed to be checked but it never hurts)
-                                if k["num_in_warehouse"] > warehouse_capacity:
-                                    k["num_in_warehouse"] = warehouse_capacity
+                                k["num_in_warehouse"] = min(int(k["num_in_warehouse"]) + reported_cargo, warehouse_capacity)
                                 break
 
                         if setup_new_cargo_item:  # Never collected this item before, add it to the list
-                            json_data["cargo"].append({"cargo_types_id": cargo_type, "num_in_shop": 0, "num_in_warehouse": int(
-                                request["p"]["cargo"]), "player_id": user_id})
+                            json_data["cargo"].append({"cargo_types_id": cargo_type,
+                                                       "num_in_shop": 0,
+                                                       "num_in_warehouse": min(reported_cargo, warehouse_capacity), # Do not overfill the warehouse
+                                                       "player_id": user_id})
                             
                     elif "souvenir_types_id" in request["p"] and int(request["p"]["souvenir_types_id"]) != -1:
                         # Event currency drop (-2)
