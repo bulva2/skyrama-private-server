@@ -1,5 +1,11 @@
 # docker compose up -d --build
 
+x-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
 x-postgres-env: &postgres-env
   POSTGRES_USER: ${POSTGRES_USER:-skyrama}
   POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-skyrama}
@@ -9,6 +15,7 @@ services:
   db:
     image: postgres:17-alpine
     container_name: skyrama-db
+    logging: *default-logging
     restart: unless-stopped
     environment: *postgres-env
     volumes:
@@ -44,6 +51,7 @@ services:
     build: .
     image: skyrama-private-server:local
     container_name: privaterama
+    logging: *default-logging
     restart: unless-stopped
     environment:
       # Host is the compose service name `db`, NOT localhost - inside a
@@ -83,6 +91,7 @@ services:
   caddy:
     image: caddy:2-alpine
     container_name: skyrama-caddy
+    logging: *default-logging
     restart: unless-stopped
     environment:
       # This is the entire TLS setup.
@@ -108,6 +117,59 @@ services:
     networks:
       - app-network
 
+  grafana:
+    image: grafana/grafana
+    container_name: skyrama-grafana
+    logging: *default-logging
+    restart: unless-stopped
+    profiles: [ "production" ]
+    ports:
+      - '127.0.0.1:3000:3000'
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:-admin}
+      GF_ANALYTICS_REPORTING_ENABLED: "false"
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - grafana_storage:/var/lib/grafana
+    depends_on:
+      - loki
+    networks:
+      - app-network
+
+  loki:
+    image: grafana/loki:3
+    container_name: skyrama-loki
+    logging: *default-logging
+    restart: unless-stopped
+    profiles: [ "production" ]
+    command:
+      - -config.file=/etc/loki/loki-config.yaml
+      - -log.level=warn
+    volumes:
+      - ./loki/loki-config.yaml:/etc/loki/loki-config.yaml:ro
+      - loki_data:/loki
+    networks:
+      - app-network
+
+  alloy:
+    image: grafana/alloy:latest
+    container_name: skyrama-alloy
+    logging: *default-logging
+    restart: unless-stopped
+    profiles: [ "production" ]
+    command:
+      - run
+      - --storage.path=/var/lib/alloy/data
+      - /etc/alloy/config.alloy
+    volumes:
+      - ./alloy/config.alloy:/etc/alloy/config.alloy:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - alloy_data:/var/lib/alloy/data
+    depends_on:
+      - loki
+    networks:
+      - app-network
+
 networks:
   app-network:
     driver: bridge
@@ -116,3 +178,6 @@ volumes:
   pgdata:
   caddy_data:
   caddy_config:
+  loki_data:
+  grafana_storage:
+  alloy_data:
