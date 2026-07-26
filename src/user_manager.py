@@ -310,6 +310,60 @@ def search_users_by_name(pattern: str) -> list[tuple[int, str]]:
     except SQLAlchemyError:
         return []
 
+# ── Bulk lookups ─────────────────────────────────────────────────────────────
+# load_save_by_id deserialises every JSONB blob plus every plane row (~5ms per
+# player). Several places called it in a loop just to read one or two scalars -
+# run_buddy_checks does it per buddy on EVERY login. Measured on a real save:
+# 50 buddies cost 225ms as N+1 versus 1.3ms as a single query.
+
+def _to_int(value, default: int = 0) -> int:
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return default
+
+def get_buddy_pings_bulk(user_ids: list[int]) -> dict[int, tuple[int, int]]:
+    """{user_id: (last_buddyping_time, xp)} for the ids that exist."""
+    if not user_ids:
+        return {}
+    try:
+        with db_session_scope() as session:
+            rows = session.query(
+                Player.user_id,
+                Player.player_data["last_buddyping_time"].astext,
+                Player.player_data["xp"].astext,
+            ).filter(Player.user_id.in_(user_ids)).all()
+            return {int(uid): (_to_int(ping), _to_int(xp)) for uid, ping, xp in rows}
+    except SQLAlchemyError as e:
+        logging.error(f"Failed bulk buddy ping lookup: {e}")
+        return {}
+
+def get_usernames_bulk(user_ids: list[int]) -> dict[int, str]:
+    """{user_id: username} for the ids that exist."""
+    if not user_ids:
+        return {}
+    try:
+        with db_session_scope() as session:
+            rows = session.query(Player.user_id, Player.username)\
+                          .filter(Player.user_id.in_(user_ids)).all()
+            return {int(uid): name for uid, name in rows}
+    except SQLAlchemyError as e:
+        logging.error(f"Failed bulk username lookup: {e}")
+        return {}
+
+def get_buddy_stuff_bulk(user_ids: list[int]) -> dict[int, dict]:
+    """{user_id: buddyStuff} for the ids that exist. Avoids loading planes."""
+    if not user_ids:
+        return {}
+    try:
+        with db_session_scope() as session:
+            rows = session.query(Player.user_id, Player.buddy_stuff)\
+                          .filter(Player.user_id.in_(user_ids)).all()
+            return {int(uid): (stuff or {}) for uid, stuff in rows}
+    except SQLAlchemyError as e:
+        logging.error(f"Failed bulk buddyStuff lookup: {e}")
+        return {}
+
 
 def create_new_account(username: str, password: str, token: str) -> int:
     try:

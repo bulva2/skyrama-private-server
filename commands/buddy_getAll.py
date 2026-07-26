@@ -4,19 +4,25 @@ from src.enums import BuddyStatus
 from src.debug import report_issue
 
 def run_buddy_checks(time, json_data):
-    for buddy in json_data["buddyStuff"]["buddies"]:
-        buddy_data = user_manager.load_save_by_id(buddy["hi_player_id"])
-        
-        # load_save_by_id returns -1 if user isn't found, skip this user
-        if isinstance(buddy_data, int):
+    buddies = json_data["buddyStuff"]["buddies"]
+
+    # One query for the whole buddy list. This used to call load_save_by_id per
+    # buddy, which deserialises their entire save - every JSONB blob and every
+    # plane row - to read two numbers. It runs on every getInitState, so a player
+    # with 50 buddies paid ~225ms of database work on every single login.
+    pings = user_manager.get_buddy_pings_bulk([int(b["hi_player_id"]) for b in buddies])
+
+    for buddy in buddies:
+        found = pings.get(int(buddy["hi_player_id"]))
+
+        if found is None:
             report_issue("warning", f"run_buddy_checks: Buddy user {buddy['hi_player_id']} not found for user {json_data['playerData']['user_name']} (ID: {json_data['playerData']['account_id']}), setting offline status")
             buddy["last_buddyping_time"] = 0
             buddy["xp"] = 0
             buddy["status"] = BuddyStatus.NONE.value  # Set to offline
             continue
-            
-        buddy["last_buddyping_time"] = buddy_data["playerData"]["last_buddyping_time"]
-        buddy["xp"] = buddy_data["playerData"]["xp"]
+
+        buddy["last_buddyping_time"], buddy["xp"] = found
         # if request accepted
         if int(buddy["status"]) != BuddyStatus.INVITED.value and int(buddy["status"]) != BuddyStatus.INVITED_BY.value:
             # if buddyping activated
