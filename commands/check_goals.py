@@ -223,7 +223,7 @@ def give_obj_reward(json_data, init_data, user_id, type_id, type, items_to_add_t
                     break
 
         elif type == "Hangar":
-            json_data["hangars"].append({"hangar_types_id":type_id,"upgrade_level":"1","id":json_data["playerData"]["next_object_id"],"position_x":-100,"position_y":-100,"direction":"0","player_id":user_id})
+            json_data["hangars"].append({"hangar_types_id":type_id,"upgrade_level":1,"id":json_data["playerData"]["next_object_id"],"position_x":-100,"position_y":-100,"direction":"0","player_id":user_id})
             json_data["playerData"]["next_object_id"] += 1
 
         elif type == "Cargoshop":

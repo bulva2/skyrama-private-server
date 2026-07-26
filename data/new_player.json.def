@@ -68,7 +68,7 @@
   "hangars": [
     {
       "hangar_types_id": "1",
-      "upgrade_level": "1",
+      "upgrade_level": 1,
       "id": "10",
       "position_x": "0",
       "position_y": "0",
