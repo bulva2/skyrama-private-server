@@ -8,8 +8,6 @@ def handle_buddySearch(request, user_id, rpcResult, items_to_add_to_obj, json_da
 
     found_users = user_manager.search_users_by_name(request["p"]["username"])
 
-    # One query for the buddy lists of everyone the search matched, instead of a
-    # full save each (planes included) just to scan buddyStuff.
     buddy_stuff = user_manager.get_buddy_stuff_bulk(
         [uid for uid, _ in found_users if int(uid) != int(user_id)]
     )

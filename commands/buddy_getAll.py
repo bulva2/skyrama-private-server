@@ -5,11 +5,6 @@ from src.debug import report_issue
 
 def run_buddy_checks(time, json_data):
     buddies = json_data["buddyStuff"]["buddies"]
-
-    # One query for the whole buddy list. This used to call load_save_by_id per
-    # buddy, which deserialises their entire save - every JSONB blob and every
-    # plane row - to read two numbers. It runs on every getInitState, so a player
-    # with 50 buddies paid ~225ms of database work on every single login.
     pings = user_manager.get_buddy_pings_bulk([int(b["hi_player_id"]) for b in buddies])
 
     for buddy in buddies:

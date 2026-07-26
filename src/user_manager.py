@@ -310,12 +310,6 @@ def search_users_by_name(pattern: str) -> list[tuple[int, str]]:
     except SQLAlchemyError:
         return []
 
-# ── Bulk lookups ─────────────────────────────────────────────────────────────
-# load_save_by_id deserialises every JSONB blob plus every plane row (~5ms per
-# player). Several places called it in a loop just to read one or two scalars -
-# run_buddy_checks does it per buddy on EVERY login. Measured on a real save:
-# 50 buddies cost 225ms as N+1 versus 1.3ms as a single query.
-
 def _to_int(value, default: int = 0) -> int:
     try:
         return int(value)

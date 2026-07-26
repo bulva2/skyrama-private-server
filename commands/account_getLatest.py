@@ -14,10 +14,6 @@ def handle_accountGetLatest(request, user_id, rpcResult, items_to_add_to_obj, js
 
     logging.debug(f"Found {len(player_list)} players in location ID {request['p']['locationId']} for user {user_id}")
 
-    # One query for up to 30 usernames. This used to call load_save_by_id per
-    # player - a full save each, planes included - to read one string. It also
-    # crashed with TypeError if any id had since been deleted, because
-    # load_save_by_id returns -1 rather than a dict.
     usernames = user_manager.get_usernames_bulk([p for p in player_list if p != 800])
 
     for player in player_list:
