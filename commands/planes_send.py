@@ -104,15 +104,23 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
                     report_issue("error", f"planes_send: Cannot load buddy data for player {plane['to_player_id']}, plane will be treated as NPC plane")
                     receiver_data = None
                 else:
-                    last_id = int(receiver_data["playerData"]["next_object_id"])
+                    # next_object_id is the NEXT FREE id: everywhere else takes it as
+                    # the new id and then increments. Here it used to be set to the id
+                    # just handed out, so the receiver's next object reused this plane's
+                    # id - and with UniqueConstraint(owner_id, plane_id) that stops their
+                    # save committing at all. max() also steps over ids that earlier
+                    # sends already collided on, so old saves are not made worse.
+                    new_id = max([int(receiver_data["playerData"]["next_object_id"])]
+                                 + [int(p["id"]) + 1 for p in receiver_data["planes"]])
+
                     copy = plane.copy()
-                    copy["id"] = last_id + 1
+                    copy["id"] = new_id
                     copy["buddy_points"] = buddy_points
                     copy["xp"] = xp * 2  # Servicing a buddy's plane gives double xp, but same amount of coins
                     copy["air_coins"] = coins
 
                     receiver_data["planes"].append(copy)
-                    receiver_data["playerData"]["next_object_id"] = last_id + 1
+                    receiver_data["playerData"]["next_object_id"] = new_id + 1
 
                     user_manager.modify_save_by_id(receiver_data["playerData"]["account_id"], receiver_data)
 
