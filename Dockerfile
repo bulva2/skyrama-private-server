@@ -13,7 +13,7 @@ WORKDIR /app
 # manylinux wheels, so nothing is compiled from source. `curl` is only here for
 # the container healthcheck.
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        curl \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
@@ -37,14 +37,9 @@ EXPOSE 3800
 HEALTHCHECK --interval=15s --timeout=5s --start-period=40s --retries=5 \
     CMD curl -fsS http://127.0.0.1:3800/crossdomain.xml || exit 1
 
-# One worker, not configurable. Per-user locks, the world-map player list and
-# several caches live in process memory and are not shared between workers, so a
-# second worker silently loses player saves. This becomes a knob again only once
-# that state moves to Postgres/Redis.
-CMD ["sh", "-c", "exec gunicorn server:app \
-      --workers 1 \
-      --worker-class uvicorn.workers.UvicornWorker \
-      --bind 0.0.0.0:3800 \
-      --timeout ${GUNICORN_TIMEOUT:-60} \
-      --access-logfile - \
-      --error-logfile -"]
+CMD ["sh", "-c", "exec uvicorn server:app \
+    --host 0.0.0.0 \
+    --port 3800 \
+    --workers 1 \
+    --proxy-headers \
+    --forwarded-allow-ips='*'"]
