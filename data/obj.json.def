@@ -38,15 +38,15 @@
   "events": [
     {
       "id": 16,
-      "name": "polarevent122015",
+      "name": "japan2013",
       "type": "BigEvent",
       "startdate": 1670324400,
       "enddate": 1790776665,
       "config": {
         "drop_rate": 60,
-        "event_icon": "polarevent122015",
-        "currency_icon": "polarevent122015_coin",
-        "shop_category_icon": "polarevent122015_coin",
+        "event_icon": "japan2013",
+        "currency_icon": "japan2013_coin",
+        "shop_category_icon": "japan2013_coin",
         "sound": "",
         "storeItems": {
           "Plane": [

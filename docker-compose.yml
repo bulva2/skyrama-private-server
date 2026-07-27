@@ -13,13 +13,13 @@ x-postgres-env: &postgres-env
 
 services:
   db:
-    image: postgres:17-alpine
+    image: postgres:18-alpine
     container_name: skyrama-db
     logging: *default-logging
     restart: unless-stopped
     environment: *postgres-env
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql/18/docker
     ports:
       # Published so you can connect with psql / pgAdmin / DBeaver.
       #
