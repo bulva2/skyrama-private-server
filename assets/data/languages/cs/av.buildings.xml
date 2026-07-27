@@ -849,7 +849,7 @@
   <item name="av.building.waterplanes082015_background"><![CDATA[Krásná krajina]]></item>
   <item name="av.building.waterplanes082015_small_plane1"><![CDATA[Křídlo-air G-21]]></item>
   <item name="av.building.waterplanes082015_small_plane2"><![CDATA[Cessnair CN-280]]></item>
-  <item name="av.building.waterplanes082015_small_plane3"><![CDATA[Pionair YL-SL1]]></item>
+  <item name="av.building.waterplanes082015_small_plane3"><![CDATA[Pionair Limitovaná ediceL-SL1]]></item>
   <item name="av.building.waterplanes082015_small_plane4"><![CDATA[Jetstream HP-1]]></item>
   <item name="av.building.waterplanes082015_medium_plane1"><![CDATA[Amfibie B-200]]></item>
   <item name="av.building.waterplanes082015_medium_plane2"><![CDATA[Aviolander D-42]]></item>
@@ -1077,7 +1077,8 @@
   <item name="av.building.airstrip_birthday2022_large"><![CDATA[Velká narozeninová runway]]></item>
   <item name="av.building.airstrip_birthday2023_large"><![CDATA[Velká narozeninová runway]]></item>
   <item name="av.building.airstrip_birthday2024_large"><![CDATA[Velká narozeninová runway]]></item>
-  <item name="av.building.airstrip_birthday2025_large"><![CDATA[Velká narozeninová runway]]></item> 
+  <item name="av.building.airstrip_birthday2025_large"><![CDATA[Velká narozeninová runway]]></item>
+  <item name="av.building.airstrip_birthday2026_large"><![CDATA[Velká narozeninová runway]]></item>
   
   <item name="av.building.smallplane_mm_2022"><![CDATA[Ja-Lopy]]></item>
   <item name="av.building.madmax2022_background"><![CDATA[Futuristické pozadí]]></item>
@@ -1140,7 +1141,7 @@
   <item name="av.building.halloween2024_777"><![CDATA[Fr4nk-Enst31n]]></item>
   
   <item name="av.building.spaceevent2024_rocket"><![CDATA[L4G0-R0K-3T]]></item>
-  <item name="av.building.spaceevent2024_large_runway"><![CDATA[RUN-W4Y]]></item>
+  <item name="av.building.spaceevent2024_large_runway"><![CDATA[RUN-W4Limitovaná edice]]></item>
   <item name="av.building.spaceevent2024_largeplane"><![CDATA[SP4C3-LP]]></item>
   <item name="av.building.spaceevent2024_mediumplane"><![CDATA[SP4C3-MP]]></item>
   <item name="av.building.spaceevent2024_jet"><![CDATA[SP4C3-J3T]]></item>
@@ -1182,9 +1183,40 @@
   <item name="av.building.winterevent2025_icedeco"><![CDATA[Frozen Pillar]]></item>
   <item name="av.building.winterevent2025_iceloon"><![CDATA[Chill McDrift]]></item>
   <item name="av.building.winterevent2025_plane05"><![CDATA[Crystal Phoenix]]></item>
-  
+
+  <item name="av.building.skygateevent2026_deco"><![CDATA[Azure Obelisk]]></item>
+  <item name="av.building.skygateevent2026_techdeco"><![CDATA[Skygate of Amun]]></item>
+  <item name="av.building.skygateevent2026_temple"><![CDATA[Shrine of the Dunes]]></item>
+  <item name="av.building.skygateevent2026_pyramid"><![CDATA[Stargate Sanctuary]]></item>
+  <item name="av.building.skygateevent2026_loon"><![CDATA[Tombfire Drifter]]></item>
+  <item name="av.building.skygateevent2026_ancientplane"><![CDATA[Pharaoh’s Skyblade]]></item>
+  <item name="av.building.skygateevent2026_heli"><![CDATA[Horus Windrider]]></item>
+  <item name="av.building.skygateevent2026_background"><![CDATA[Desert of Two Moons]]></item>
+  <item name="av.building.skygateevent2026_bigbird"><![CDATA[Celestial Wingcarrier]]></item>
+  <item name="av.building.skygateevent2026_seaplane"><![CDATA[Sky Mariner]]></item>
+  <item name="av.building.skygateevent2026_zeppelin"><![CDATA[Golden Skybarge]]></item>
+  <item name="av.building.skygateevent2026_large_runway"><![CDATA[Sandstrip]]></item>
+  <item name="av.building.skygateevent2026_stonegate"><![CDATA[Stonegate]]></item>
+
+  <item name="av.building.skygateevent2026_medium_runway"><![CDATA[Medium Sandstrip]]></item>
+  <item name="av.building.skygateevent2026_small_runway"><![CDATA[Small Sandstrip]]></item>
+  <item name="av.building.skygateevent2026_bigbird_silver"><![CDATA[Silverwing]]></item>
+  <item name="av.building.skygateevent2026_arado"><![CDATA[Obsidian Wing]]></item>
+  <item name="av.building.skygateevent2026_summer_arado"><![CDATA[Neon Breeze]]></item>
+  <item name="av.building.skygateevent2026_summer_jet"><![CDATA[Riviera Jet]]></item>
+  <item name="av.building.skygateevent2026_summer_cargo"><![CDATA[Lagoon Cargo]]></item>
+  <item name="av.building.skygateevent2026_summer_seaplane"><![CDATA[Coral Cruiser]]></item>
+  <item name="av.building.skygateevent2026_summer_smallplane"><![CDATA[Tropic Sparrow]]></item>
+  <item name="av.building.birthdaytower_2026"><![CDATA[Aurora Tower]]></item>  
+
+  <item name="av.building.luxury_jet_silver"><![CDATA[Thousand-Jet]]></item>
+  <item name="av.building.luxury_medium_silver"><![CDATA[Million-Star]]></item>
+  <item name="av.building.luxury_large_silver"><![CDATA[Billion-Horizon]]></item>
+
  </category>
+
  <category name="av.storeitem">
+
   <item name="av.storeitem.s_prop1"><![CDATA[Transportuje pasažéry a vydělává haléry a zkušenost]]></item>
   <item name="av.storeitem.s_prop_cargo1"><![CDATA[Převážej zboží k zásobení bezcelních obchodů Toto letadlo je zosobněný zisk!]]></item>
   <item name="av.storeitem.s_prop2"><![CDATA[Transportuje pasažéry a vydělává haléry a zkušenost]]></item>
@@ -2002,7 +2034,8 @@
   <item name="av.storeitem.airstrip_birthday2022_large"><![CDATA[Přistání velkých letadel]]></item>
   <item name="av.storeitem.airstrip_birthday2023_large"><![CDATA[Přistání velkých letadel]]></item>
   <item name="av.storeitem.airstrip_birthday2024_large"><![CDATA[Přistání velkých letadel]]></item>
-  <item name="av.storeitem.airstrip_birthday2025_large"><![CDATA[Přistání velkých letadel]]></item>	 
+  <item name="av.storeitem.airstrip_birthday2025_large"><![CDATA[Přistání velkých letadel]]></item>
+  <item name="av.storeitem.airstrip_birthday2026_large"><![CDATA[Přistání velkých letadel]]></item>  
   
   <item name="av.storeitem.smallplane_mm_2022"><![CDATA[Limitovaná edice]]></item>
   <item name="av.storeitem.madmax2022_background"><![CDATA[Limitovaná edice]]></item>
@@ -2107,6 +2140,36 @@
   <item name="av.storeitem.winterevent2025_icedeco"><![CDATA[Rychlost odbavení: - {number} % Rádius: {radius}]]></item>
   <item name="av.storeitem.winterevent2025_iceloon"><![CDATA[Limitovaná edice]]></item>
   <item name="av.storeitem.winterevent2025_plane05"><![CDATA[Limitovaná edice]]></item>
+
+  <item name="av.storeitem.skygateevent2026_deco"><![CDATA[Pasažéři: + {number} Rádius: {radius}]]></item>
+  <item name="av.storeitem.skygateevent2026_techdeco"><![CDATA[Rychlost odbavení: - {number} % Rádius: {radius}]]></item>
+  <item name="av.storeitem.skygateevent2026_temple"><![CDATA[Sbírá pasažéry: {number} každých {minutes} min.]]></item>
+  <item name="av.storeitem.skygateevent2026_pyramid"><![CDATA[Sbírá pasažéry: {number} každých {minutes} min.]]></item>
+  <item name="av.storeitem.skygateevent2026_loon"><![CDATA[Limitovaná edice]]></item>
+  <item name="av.storeitem.skygateevent2026_ancientplane"><![CDATA[Limitovaná edice]]></item>
+  <item name="av.storeitem.skygateevent2026_heli"><![CDATA[Limitovaná edice]]></item>
+  <item name="av.storeitem.skygateevent2026_background"><![CDATA[Pozor: riziko spálení od slunce!]]></item>
+  <item name="av.storeitem.skygateevent2026_bigbird"><![CDATA[Limitovaná edice]]></item>
+  <item name="av.storeitem.skygateevent2026_seaplane"><![CDATA[Limitovaná edice]]></item>
+  <item name="av.storeitem.skygateevent2026_zeppelin"><![CDATA[Limitovaná edice]]></item>
+  <item name="av.storeitem.skygateevent2026_large_runway"><![CDATA[Přistání velkých letadel]]></item>
+  <item name="av.storeitem.skygateevent2026_stonegate"><![CDATA[Rychlost odbavení: - {number} % Rádius: {radius}]]></item>
+
+  <item name="av.storeitem.skygateevent2026_medium_runway"><![CDATA[Přistání středních letadel]]></item>
+  <item name="av.storeitem.skygateevent2026_small_runway"><![CDATA[Přistání malých letadel]]></item>
+  <item name="av.storeitem.skygateevent2026_bigbird_silver"><![CDATA[Limitovaná edice]]></item>
+  <item name="av.storeitem.skygateevent2026_arado"><![CDATA[Limitovaná edice]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_arado"><![CDATA[Limitovaná edice]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_jet"><![CDATA[Limitovaná edice]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_cargo"><![CDATA[Limitovaná edice]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_seaplane"><![CDATA[Limitovaná edice]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_smallplane"><![CDATA[Limitovaná edice]]></item>
+  <item name="av.storeitem.birthdaytower_2026"><![CDATA[Sbírá pasažéry: {number} každých {minutes} min.]]></item>
+
+  <item name="av.storeitem.luxury_jet_silver"><![CDATA[Luxusní edice]]></item>
+  <item name="av.storeitem.luxury_medium_silver"><![CDATA[Luxusní edice]]></item>
+  <item name="av.storeitem.luxury_large_silver"><![CDATA[Luxusní edice]]></item>  
     
  </category>
+
 </language>

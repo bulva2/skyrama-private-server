@@ -92,7 +92,7 @@
   <item name="av.building.berlin"><![CDATA[Berlin landskap]]></item>
   <item name="av.building.canada"><![CDATA[Canada landskap]]></item>
   <item name="av.building.london"><![CDATA[London landskap]]></item>
-  <item name="av.building.new_york"><![CDATA[New York landskap]]></item>
+  <item name="av.building.new_york"><![CDATA[New Begrenset opplagork landskap]]></item>
   <item name="av.building.fence1"><![CDATA[Gjerde 1]]></item>
   <item name="av.building.fence2"><![CDATA[Gjerde 2]]></item>
   <item name="av.building.fence3"><![CDATA[Gjerde 3]]></item>
@@ -437,7 +437,7 @@
   <item name="av.building.plural.berlin"><![CDATA[Berlins landskaper]]></item>
   <item name="av.building.plural.canada"><![CDATA[Canadiske landskaper]]></item>
   <item name="av.building.plural.london"><![CDATA[Londons landskaper]]></item>
-  <item name="av.building.plural.new_york"><![CDATA[New Yorks landskaper]]></item>
+  <item name="av.building.plural.new_york"><![CDATA[New Begrenset opplagorks landskaper]]></item>
   <item name="av.building.plural.fence1"><![CDATA[gjerder 1]]></item>
   <item name="av.building.plural.fence2"><![CDATA[gjerder 2]]></item>
   <item name="av.building.plural.fence3"><![CDATA[gjerder 3]]></item>
@@ -772,7 +772,7 @@
   <item name="av.building.mostwanted022015_medium_plane1"><![CDATA[Tupperdue154]]></item>
   <item name="av.building.mostwanted022015_medium_plane2"><![CDATA[Skydart-62]]></item>
   <item name="av.building.mostwanted022015_cargo_plane1"><![CDATA[Boiling C17]]></item>
-  <item name="av.building.mostwanted022015_cargo_plane2"><![CDATA[Super Yuppy]]></item>
+  <item name="av.building.mostwanted022015_cargo_plane2"><![CDATA[Super Begrenset opplaguppy]]></item>
   <item name="av.building.mostwanted022015_helicopter1"><![CDATA[Ding-Dong22]]></item>
   <item name="av.building.mostwanted022015_helicopter2"><![CDATA[Stratos 4]]></item>
   <item name="av.building.mostwanted022015_seaplane1"><![CDATA[Tornestjernen]]></item>
@@ -845,7 +845,7 @@
   <item name="av.building.waterplanes082015_background"><![CDATA[Nydelig landskap]]></item>
   <item name="av.building.waterplanes082015_small_plane1"><![CDATA[Skulderdekker-Air G-21]]></item>
   <item name="av.building.waterplanes082015_small_plane2"><![CDATA[Cessnair CN-280]]></item>
-  <item name="av.building.waterplanes082015_small_plane3"><![CDATA[Pionair YL-SL1]]></item>
+  <item name="av.building.waterplanes082015_small_plane3"><![CDATA[Pionair Begrenset opplagL-SL1]]></item>
   <item name="av.building.waterplanes082015_small_plane4"><![CDATA[Jetstream HP-1]]></item>
   <item name="av.building.waterplanes082015_medium_plane1"><![CDATA[Amfibiet-O B-200 ]]></item>
   <item name="av.building.waterplanes082015_medium_plane2"><![CDATA[Aviolander D-42]]></item>
@@ -923,8 +923,8 @@
   <item name="av.building.wildlifeevent042016_deco"><![CDATA[Elefantballong]]></item>
   <item name="av.building.wildlifeevent042016_tech_deco"><![CDATA[Safaribil]]></item>
   <item name="av.building.wildlifeevent042016_background"><![CDATA[Savanne]]></item>
-  <item name="av.building.wildlifeevent042016_small_plane1"><![CDATA[Monark BT-FLY]]></item>
-  <item name="av.building.wildlifeevent042016_small_plane2"><![CDATA[Y-slanger]]></item>
+  <item name="av.building.wildlifeevent042016_small_plane1"><![CDATA[Monark BT-FLBegrenset opplag]]></item>
+  <item name="av.building.wildlifeevent042016_small_plane2"><![CDATA[Begrenset opplag-slanger]]></item>
   <item name="av.building.wildlifeevent042016_small_plane3"><![CDATA[Insekthopper]]></item>
   <item name="av.building.wildlifeevent042016_medium_plane1"><![CDATA[Stryper-2B]]></item>
   <item name="av.building.wildlifeevent042016_medium_plane2"><![CDATA[Luskende LPD]]></item>
@@ -1073,7 +1073,8 @@
   <item name="av.building.airstrip_birthday2022_large"><![CDATA[Stor bursdagsrullebane]]></item>
   <item name="av.building.airstrip_birthday2023_large"><![CDATA[Stor bursdagsrullebane]]></item>
   <item name="av.building.airstrip_birthday2024_large"><![CDATA[Stor bursdagsrullebane]]></item>
-  <item name="av.building.airstrip_birthday2025_large"><![CDATA[Stor bursdagsrullebane]]></item>	 
+  <item name="av.building.airstrip_birthday2025_large"><![CDATA[Stor bursdagsrullebane]]></item>
+  <item name="av.building.airstrip_birthday2026_large"><![CDATA[Stor bursdagsrullebane]]></item>
   
   <item name="av.building.smallplane_mm_2022"><![CDATA[Ja-Lopy]]></item>
   <item name="av.building.madmax2022_background"><![CDATA[Fremtidsbakgrunn]]></item>
@@ -1137,7 +1138,7 @@
   <item name="av.building.halloween2024_777"><![CDATA[Fr4nk-Enst31n]]></item>
   
   <item name="av.building.spaceevent2024_rocket"><![CDATA[L4G0-R0K-3T]]></item>
-  <item name="av.building.spaceevent2024_large_runway"><![CDATA[RUN-W4Y]]></item>
+  <item name="av.building.spaceevent2024_large_runway"><![CDATA[RUN-W4Begrenset opplag]]></item>
   <item name="av.building.spaceevent2024_largeplane"><![CDATA[SP4C3-LP]]></item>
   <item name="av.building.spaceevent2024_mediumplane"><![CDATA[SP4C3-MP]]></item>
   <item name="av.building.spaceevent2024_jet"><![CDATA[SP4C3-J3T]]></item>
@@ -1179,10 +1180,40 @@
   <item name="av.building.winterevent2025_icedeco"><![CDATA[Frozen Pillar]]></item>
   <item name="av.building.winterevent2025_iceloon"><![CDATA[Chill McDrift]]></item>
   <item name="av.building.winterevent2025_plane05"><![CDATA[Crystal Phoenix]]></item>  
-        
+
+  <item name="av.building.skygateevent2026_deco"><![CDATA[Azure Obelisk]]></item>
+  <item name="av.building.skygateevent2026_techdeco"><![CDATA[Skygate of Amun]]></item>
+  <item name="av.building.skygateevent2026_temple"><![CDATA[Shrine of the Dunes]]></item>
+  <item name="av.building.skygateevent2026_pyramid"><![CDATA[Stargate Sanctuary]]></item>
+  <item name="av.building.skygateevent2026_loon"><![CDATA[Tombfire Drifter]]></item>
+  <item name="av.building.skygateevent2026_ancientplane"><![CDATA[Pharaoh’s Skyblade]]></item>
+  <item name="av.building.skygateevent2026_heli"><![CDATA[Horus Windrider]]></item>
+  <item name="av.building.skygateevent2026_background"><![CDATA[Desert of Two Moons]]></item>
+  <item name="av.building.skygateevent2026_bigbird"><![CDATA[Celestial Wingcarrier]]></item>
+  <item name="av.building.skygateevent2026_seaplane"><![CDATA[Sky Mariner]]></item>
+  <item name="av.building.skygateevent2026_zeppelin"><![CDATA[Golden Skybarge]]></item>
+  <item name="av.building.skygateevent2026_large_runway"><![CDATA[Sandstrip]]></item>
+  <item name="av.building.skygateevent2026_stonegate"><![CDATA[Stonegate]]></item>
+
+  <item name="av.building.skygateevent2026_medium_runway"><![CDATA[Medium Sandstrip]]></item>
+  <item name="av.building.skygateevent2026_small_runway"><![CDATA[Small Sandstrip]]></item>
+  <item name="av.building.skygateevent2026_bigbird_silver"><![CDATA[Silverwing]]></item>
+  <item name="av.building.skygateevent2026_arado"><![CDATA[Obsidian Wing]]></item>
+  <item name="av.building.skygateevent2026_summer_arado"><![CDATA[Neon Breeze]]></item>
+  <item name="av.building.skygateevent2026_summer_jet"><![CDATA[Riviera Jet]]></item>
+  <item name="av.building.skygateevent2026_summer_cargo"><![CDATA[Lagoon Cargo]]></item>
+  <item name="av.building.skygateevent2026_summer_seaplane"><![CDATA[Coral Cruiser]]></item>
+  <item name="av.building.skygateevent2026_summer_smallplane"><![CDATA[Tropic Sparrow]]></item>
+  <item name="av.building.birthdaytower_2026"><![CDATA[Aurora Tower]]></item>
+
+  <item name="av.building.luxury_jet_silver"><![CDATA[Thousand-Jet]]></item>
+  <item name="av.building.luxury_medium_silver"><![CDATA[Million-Star]]></item>
+  <item name="av.building.luxury_large_silver"><![CDATA[Billion-Horizon]]></item>  
+
  </category>
  
  <category name="av.storeitem">
+
   <item name="av.storeitem.s_prop1"><![CDATA[Frakter passasjerer for å lage Luftmynter og EP]]></item>
   <item name="av.storeitem.s_prop_cargo1"><![CDATA[Frakter varer for å supplere tax free butikkene. Dette flyet vil løfte dine inntekter!]]></item>
   <item name="av.storeitem.s_prop2"><![CDATA[Frakter passasjerer for å lage Luftmynter og EP]]></item>
@@ -1297,7 +1328,7 @@
   <item name="av.storeitem.california"><![CDATA[California landskap]]></item>
   <item name="av.storeitem.fall"><![CDATA[Skummelt landskap]]></item>
   <item name="av.storeitem.london"><![CDATA[London landskap]]></item>
-  <item name="av.storeitem.new_york"><![CDATA[New York landskap]]></item>
+  <item name="av.storeitem.new_york"><![CDATA[New Begrenset opplagork landskap]]></item>
   <item name="av.storeitem.fence1"><![CDATA[Servicetid: - {number}% Radius: {radius}]]></item>
   <item name="av.storeitem.fence2"><![CDATA[Servicetid: - {number}% Radius: {radius}]]></item>
   <item name="av.storeitem.fence3"><![CDATA[Servicetid: - {number}% Radius: {radius}]]></item>
@@ -1321,7 +1352,7 @@
   <item name="av.storeitem.billboard_skyrama"><![CDATA[Passasjerer: + {number}  Radius: {radius}]]></item>
   <item name="av.storeitem.weatherstation"><![CDATA[Servicetid: - {number}% Radius: {radius}]]></item>
   <item name="av.storeitem.climbing_plant_lila"><![CDATA[Passasjerer: + {number}  Radius: {radius}]]></item>
-  <item name="av.storeitem.large_helipad"><![CDATA[Yter service til alle Ramakoptere]]></item>
+  <item name="av.storeitem.large_helipad"><![CDATA[Begrenset opplagter service til alle Ramakoptere]]></item>
   <item name="av.storeitem.cafe_medium"><![CDATA[Samler inn {number} passasjer(er) hvert {minutes}. minutt]]></item>
   <item name="av.storeitem.busstation_medium"><![CDATA[Samler inn {number} passasjer(er) hvert {minutes}. minutt]]></item>
   <item name="av.storeitem.kite_field"><![CDATA[Samler inn {number} passasjer(er) hvert {minutes}. minutt]]></item>
@@ -1617,7 +1648,7 @@
   <item name="av.storeitem.conceptplanes_072014_helicopter"><![CDATA[Begrenset prototype!]]></item>
   <item name="av.storeitem.conceptplanes_072014_cargoplane"><![CDATA[Begrenset prototype!]]></item>
   <item name="av.storeitem.conceptplanes_072014_seaplane"><![CDATA[Begrenset prototype!]]></item>
-  <item name="av.storeitem.conceptplanes_072014_heli_landingplace"><![CDATA[Yter service til alle Ramakoptere]]></item>
+  <item name="av.storeitem.conceptplanes_072014_heli_landingplace"><![CDATA[Begrenset opplagter service til alle Ramakoptere]]></item>
   <item name="av.storeitem.conceptplanes_072014_parkingplace_medium"><![CDATA[Gir service til medium fly]]></item>
   <item name="av.storeitem.conceptplanes_072014_runway_medium"><![CDATA[Lander medium fly]]></item>
   <item name="av.storeitem.goldenageofaviation_092014_building"><![CDATA[Samler inn {number} passasjerer hvert {minutes}. minutt.]]></item>
@@ -1636,7 +1667,7 @@
   <item name="av.storeitem.goldenageofaviation_092014_seaplane2"><![CDATA[Begrenset opplag]]></item>
   <item name="av.storeitem.goldenageofaviation_092014_helicopter1"><![CDATA[Begrenset opplag]]></item>
   <item name="av.storeitem.goldenageofaviation_092014_helicopter2"><![CDATA[Begrenset opplag]]></item>
-  <item name="av.storeitem.goldenageofaviation_092014_heli_landingplace"><![CDATA[Yter service til alle Ramakoptere]]></item>
+  <item name="av.storeitem.goldenageofaviation_092014_heli_landingplace"><![CDATA[Begrenset opplagter service til alle Ramakoptere]]></item>
   <item name="av.storeitem.goldenageofaviation_092014_parkingplace_medium"><![CDATA[Gir service til medium fly]]></item>
   <item name="av.storeitem.goldenageofaviation_092014_runway_small"><![CDATA[Rullebane for små fly]]></item>
   <item name="av.storeitem.goldenageofaviation_092014_runway_medium"><![CDATA[Lander medium fly]]></item>
@@ -1652,7 +1683,7 @@
   <item name="av.storeitem.halloween_102014_medium_plane2"><![CDATA[Begrenset opplag]]></item>
   <item name="av.storeitem.halloween_102014_seaplane"><![CDATA[Begrenset opplag]]></item>
   <item name="av.storeitem.halloween_102014_helicopter"><![CDATA[Begrenset opplag]]></item>
-  <item name="av.storeitem.halloween_102014_heli_landingplace"><![CDATA[Yter service til alle Ramakoptere]]></item>
+  <item name="av.storeitem.halloween_102014_heli_landingplace"><![CDATA[Begrenset opplagter service til alle Ramakoptere]]></item>
   <item name="av.storeitem.halloween_102014_parkingplace_medium"><![CDATA[Gir service til medium fly]]></item>
   <item name="av.storeitem.halloween_102014_runway_small"><![CDATA[Rullebane for små fly]]></item>
   <item name="av.storeitem.halloween_102014_runway_medium"><![CDATA[Lander medium fly]]></item>
@@ -1672,7 +1703,7 @@
   <item name="av.storeitem.xmas2014_seaplane2"><![CDATA[Begrenset opplag]]></item>
   <item name="av.storeitem.xmas2014_helicopter1"><![CDATA[Begrenset opplag]]></item>
   <item name="av.storeitem.xmas2014_helicopter2"><![CDATA[Begrenset opplag]]></item>
-  <item name="av.storeitem.xmas2014_heli_landingplace"><![CDATA[Yter service til alle Ramakoptere]]></item>
+  <item name="av.storeitem.xmas2014_heli_landingplace"><![CDATA[Begrenset opplagter service til alle Ramakoptere]]></item>
   <item name="av.storeitem.xmas2014_parkingplace_medium"><![CDATA[Gir service til medium fly]]></item>
   <item name="av.storeitem.xmas2014_runway_small"><![CDATA[Rullebane for små fly]]></item>
   <item name="av.storeitem.xmas2014_runway_medium"><![CDATA[Lander medium fly]]></item>
@@ -1994,7 +2025,8 @@
   <item name="av.storeitem.airstrip_birthday2022_large"><![CDATA[Her lander store fly]]></item>
   <item name="av.storeitem.airstrip_birthday2023_large"><![CDATA[Her lander store fly]]></item>
   <item name="av.storeitem.airstrip_birthday2024_large"><![CDATA[Her lander store fly]]></item>
-  <item name="av.storeitem.airstrip_birthday2025_large"><![CDATA[Her lander store fly]]></item>	 
+  <item name="av.storeitem.airstrip_birthday2025_large"><![CDATA[Her lander store fly]]></item>
+  <item name="av.storeitem.airstrip_birthday2026_large"><![CDATA[Her lander store fly]]></item>
   
   <item name="av.storeitem.smallplane_mm_2022"><![CDATA[Begrenset opplag]]></item>
   <item name="av.storeitem.madmax2022_background"><![CDATA[Begrenset opplag]]></item>
@@ -2099,7 +2131,37 @@
   <item name="av.storeitem.winterevent2025_firedeco"><![CDATA[Passasjerer: +{number} Radius: {radius}]]></item>
   <item name="av.storeitem.winterevent2025_icedeco"><![CDATA[Servicetid: -{number} % Radius: {radius}]]></item>
   <item name="av.storeitem.winterevent2025_iceloon"><![CDATA[Begrenset opplag]]></item>
-  <item name="av.storeitem.winterevent2025_plane05"><![CDATA[Begrenset opplag]]></item>  
-  
+  <item name="av.storeitem.winterevent2025_plane05"><![CDATA[Begrenset opplag]]></item>
+
+  <item name="av.storeitem.skygateevent2026_deco"><![CDATA[Passasjerer: +{number} Radius: {radius}]]></item>
+  <item name="av.storeitem.skygateevent2026_techdeco"><![CDATA[Servicetid: -{number} % Radius: {radius}]]></item>
+  <item name="av.storeitem.skygateevent2026_temple"><![CDATA[Samler inn {number} passasjer(er) hvert {minutes}. minutt]]></item>
+  <item name="av.storeitem.skygateevent2026_pyramid"><![CDATA[Samler inn {number} passasjer(er) hvert {minutes}. minutt]]></item>
+  <item name="av.storeitem.skygateevent2026_loon"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.skygateevent2026_ancientplane"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.skygateevent2026_heli"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.skygateevent2026_background"><![CDATA[Advarsel: fare for solbrenthet.]]></item>
+  <item name="av.storeitem.skygateevent2026_bigbird"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.skygateevent2026_seaplane"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.skygateevent2026_zeppelin"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.skygateevent2026_large_runway"><![CDATA[Her lander store fly]]></item>
+  <item name="av.storeitem.skygateevent2026_stonegate"><![CDATA[Servicetid: -{number} % Radius: {radius}]]></item>  
+
+  <item name="av.storeitem.skygateevent2026_medium_runway"><![CDATA[Lander medium fly]]></item>
+  <item name="av.storeitem.skygateevent2026_small_runway"><![CDATA[Rullebane for små fly]]></item>
+  <item name="av.storeitem.skygateevent2026_bigbird_silver"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.skygateevent2026_arado"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_arado"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_jet"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_cargo"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_seaplane"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_smallplane"><![CDATA[Begrenset opplag]]></item>
+  <item name="av.storeitem.birthdaytower_2026"><![CDATA[XXX]]></item>
+
+  <item name="av.storeitem.luxury_jet_silver"><![CDATA[Luksusutgave]]></item>
+  <item name="av.storeitem.luxury_medium_silver"><![CDATA[Luksusutgave]]></item>
+  <item name="av.storeitem.luxury_large_silver"><![CDATA[Luksusutgave]]></item>  
+
  </category>
+
 </language>

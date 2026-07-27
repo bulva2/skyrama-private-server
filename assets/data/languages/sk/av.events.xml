@@ -263,9 +263,9 @@
  </category>
  
  <category name="av.birthdayevent2025">
-  <item name="av.birthdayevent2025.title"><![CDATA[Saturday Nightflight]]></item>
-  <item name="av.birthdayevent2025.text"><![CDATA[Skyrama oslavuje 14 rokov – blond vlasy sú nepovinné. Stehná sa chvejú, beat vibruje a láskyplné vankúšiky sa vlnia v rytme. Dopraj si šumivý Aerosol Spritz a ďalšie nezbedné drinky na tejto narodeninovej párty vo vzduchu. Na ranvej – a šmyk rovno do rozkoše!]]></item>
-  <item name="av.birthdayevent2025.mouseover"><![CDATA[Svetlá zhasnú, reflektor zapnutý! Saturday Nightflight vzlieta – cieľ: prísne tajná bikiny zóna. Vstup len s výstavným vlnivým bokom!]]></item>
+  <item name="av.birthdayevent2025.title"><![CDATA[Skyrama Birthday]]></item>
+  <item name="av.birthdayevent2025.text"><![CDATA[Skyrama oslavuje 15 rokov – blond vlasy sú nepovinné. Stehná sa chvejú, beat vibruje a láskyplné vankúšiky sa vlnia v rytme. Dopraj si šumivý Aerosol Spritz a ďalšie nezbedné drinky na tejto narodeninovej párty vo vzduchu. Na ranvej – a šmyk rovno do rozkoše!]]></item>
+  <item name="av.birthdayevent2025.mouseover"><![CDATA[Svetlá zhasnú, reflektor zapnutý! Skyrama Birthday vzlieta – cieľ: prísne tajná bikiny zóna. Vstup len s výstavným vlnivým bokom!]]></item>
  </category> 
 
  <category name="av.winterevent2025">
@@ -273,5 +273,11 @@
   <item name="av.winterevent2025.text"><![CDATA[Sneh na streche, ale v peci je ešte vždy príjemné teplo. Ideálny čas nastúpiť do plne natankovaných dovolenkových lietadiel, dať si poriadny dúšok vareného vína a vrátiť trochu pružnosti tým končatinám, ktoré trochu stuhli. Vzduch je ľadový, no tvoje líca žiaria, akoby prišla druhá jar. Vyroluj na dráhu a nechaj sa vtiahnuť do dobrodružstva ohňa a ľadu, ktoré nenechá nikoho v kokpite chladným.]]></item>
   <item name="av.winterevent2025.mouseover"><![CDATA[Horúce líca a chladné končeky. Perfektné pre pilotov s temperamentom.]]></item>
  </category>
- 
+
+ <category name="av.skygateevent2026">
+  <item name="av.skygateevent2026.title"><![CDATA[Skygate Týždne]]></item>
+  <item name="av.skygateevent2026.text"><![CDATA[Žeravé teplo na pokožke a portály, ktoré len čakajú, aby ťa katapultovali do netušených výšin. Nastúp do lietadiel z ďalekej galaxie a vystreľ sa naprieč priestorom a časom, až kým aj tvoj pulz nestratí zemskú príťažlivosť. Cudzie kultúry, neznáme obzory a dobrodružstvo, ktoré ťa zaručene vynesie do vyšších sfér. Pruhy od bikín v cene.]]></item>
+  <item name="av.skygateevent2026.mouseover"><![CDATA[Gilde Prime pozýva na slnečný kúpeľ. Odporúčaný ochranný faktor: galaktický.]]></item>
+ </category>
+
 </language>

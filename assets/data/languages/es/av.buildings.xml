@@ -772,7 +772,7 @@
   <item name="av.building.mostwanted022015_medium_plane1"><![CDATA[Tupperlew154]]></item>
   <item name="av.building.mostwanted022015_medium_plane2"><![CDATA[Aerodardo-62]]></item>
   <item name="av.building.mostwanted022015_cargo_plane1"><![CDATA[Buaing C17]]></item>
-  <item name="av.building.mostwanted022015_cargo_plane2"><![CDATA[Super Yuppy]]></item>
+  <item name="av.building.mostwanted022015_cargo_plane2"><![CDATA[Super Edición limitadauppy]]></item>
   <item name="av.building.mostwanted022015_helicopter1"><![CDATA[Ding-Dong22]]></item>
   <item name="av.building.mostwanted022015_helicopter2"><![CDATA[Stratos 4]]></item>
   <item name="av.building.mostwanted022015_seaplane1"><![CDATA[Minitrueno C-Star]]></item>
@@ -845,7 +845,7 @@
   <item name="av.building.waterplanes082015_background"><![CDATA[Paisaje bello]]></item>
   <item name="av.building.waterplanes082015_small_plane1"><![CDATA[Aleteo G-21]]></item>
   <item name="av.building.waterplanes082015_small_plane2"><![CDATA[Cessnaire CN-280]]></item>
-  <item name="av.building.waterplanes082015_small_plane3"><![CDATA[Pionaire YL-SL1]]></item>
+  <item name="av.building.waterplanes082015_small_plane3"><![CDATA[Pionaire Edición limitadaL-SL1]]></item>
   <item name="av.building.waterplanes082015_small_plane4"><![CDATA[Jetstream HP-1]]></item>
   <item name="av.building.waterplanes082015_medium_plane1"><![CDATA[Amfibeja-O B-200]]></item>
   <item name="av.building.waterplanes082015_medium_plane2"><![CDATA[Aviolander D-42]]></item>
@@ -923,8 +923,8 @@
   <item name="av.building.wildlifeevent042016_deco"><![CDATA[Globo elefante]]></item>
   <item name="av.building.wildlifeevent042016_tech_deco"><![CDATA[Coche de safari]]></item>
   <item name="av.building.wildlifeevent042016_background"><![CDATA[Sabana]]></item>
-  <item name="av.building.wildlifeevent042016_small_plane1"><![CDATA[Monarca BT-FLY]]></item>
-  <item name="av.building.wildlifeevent042016_small_plane2"><![CDATA[Y-Snakes]]></item>
+  <item name="av.building.wildlifeevent042016_small_plane1"><![CDATA[Monarca BT-FLEdición limitada]]></item>
+  <item name="av.building.wildlifeevent042016_small_plane2"><![CDATA[Edición limitada-Snakes]]></item>
   <item name="av.building.wildlifeevent042016_small_plane3"><![CDATA[Insectcóptero]]></item>
   <item name="av.building.wildlifeevent042016_medium_plane1"><![CDATA[Stryper-2B]]></item>
   <item name="av.building.wildlifeevent042016_medium_plane2"><![CDATA[LPD Prowl]]></item>
@@ -1073,7 +1073,8 @@
   <item name="av.building.airstrip_birthday2022_large"><![CDATA[Pista grande de cumpleaños]]></item>
   <item name="av.building.airstrip_birthday2023_large"><![CDATA[Pista grande de cumpleaños]]></item>
   <item name="av.building.airstrip_birthday2024_large"><![CDATA[Pista grande de cumpleaños]]></item>
-  <item name="av.building.airstrip_birthday2025_large"><![CDATA[Pista grande de cumpleaños]]></item>	 
+  <item name="av.building.airstrip_birthday2025_large"><![CDATA[Pista grande de cumpleaños]]></item>
+  <item name="av.building.airstrip_birthday2026_large"><![CDATA[Pista grande de cumpleaños]]></item>	 
   
   <item name="av.building.smallplane_mm_2022"><![CDATA[Ja-Lopy]]></item>
   <item name="av.building.madmax2022_background"><![CDATA[Fondo futurista]]></item>
@@ -1137,7 +1138,7 @@
   <item name="av.building.halloween2024_777"><![CDATA[Fr4nk-Enst31n]]></item>
   
   <item name="av.building.spaceevent2024_rocket"><![CDATA[L4G0-R0K-3T]]></item>
-  <item name="av.building.spaceevent2024_large_runway"><![CDATA[RUN-W4Y]]></item>
+  <item name="av.building.spaceevent2024_large_runway"><![CDATA[RUN-W4Edición limitada]]></item>
   <item name="av.building.spaceevent2024_largeplane"><![CDATA[SP4C3-LP]]></item>
   <item name="av.building.spaceevent2024_mediumplane"><![CDATA[SP4C3-MP]]></item>
   <item name="av.building.spaceevent2024_jet"><![CDATA[SP4C3-J3T]]></item>
@@ -1178,11 +1179,41 @@
   <item name="av.building.winterevent2025_firedeco"><![CDATA[Molten Pillar]]></item>
   <item name="av.building.winterevent2025_icedeco"><![CDATA[Frozen Pillar]]></item>
   <item name="av.building.winterevent2025_iceloon"><![CDATA[Chill McDrift]]></item>
-  <item name="av.building.winterevent2025_plane05"><![CDATA[Crystal Phoenix]]></item>  
+  <item name="av.building.winterevent2025_plane05"><![CDATA[Crystal Phoenix]]></item>
+
+  <item name="av.building.skygateevent2026_deco"><![CDATA[Azure Obelisk]]></item>
+  <item name="av.building.skygateevent2026_techdeco"><![CDATA[Skygate of Amun]]></item>
+  <item name="av.building.skygateevent2026_temple"><![CDATA[Shrine of the Dunes]]></item>
+  <item name="av.building.skygateevent2026_pyramid"><![CDATA[Stargate Sanctuary]]></item>
+  <item name="av.building.skygateevent2026_loon"><![CDATA[Tombfire Drifter]]></item>
+  <item name="av.building.skygateevent2026_ancientplane"><![CDATA[Pharaoh’s Skyblade]]></item>
+  <item name="av.building.skygateevent2026_heli"><![CDATA[Horus Windrider]]></item>
+  <item name="av.building.skygateevent2026_background"><![CDATA[Desert of Two Moons]]></item>
+  <item name="av.building.skygateevent2026_bigbird"><![CDATA[Celestial Wingcarrier]]></item>
+  <item name="av.building.skygateevent2026_seaplane"><![CDATA[Sky Mariner]]></item>
+  <item name="av.building.skygateevent2026_zeppelin"><![CDATA[Golden Skybarge]]></item>
+  <item name="av.building.skygateevent2026_large_runway"><![CDATA[Sandstrip]]></item>
+  <item name="av.building.skygateevent2026_stonegate"><![CDATA[Stonegate]]></item>
+
+  <item name="av.building.skygateevent2026_medium_runway"><![CDATA[Medium Sandstrip]]></item>
+  <item name="av.building.skygateevent2026_small_runway"><![CDATA[Small Sandstrip]]></item>
+  <item name="av.building.skygateevent2026_bigbird_silver"><![CDATA[Silverwing]]></item>
+  <item name="av.building.skygateevent2026_arado"><![CDATA[Obsidian Wing]]></item>
+  <item name="av.building.skygateevent2026_summer_arado"><![CDATA[Neon Breeze]]></item>
+  <item name="av.building.skygateevent2026_summer_jet"><![CDATA[Riviera Jet]]></item>
+  <item name="av.building.skygateevent2026_summer_cargo"><![CDATA[Lagoon Cargo]]></item>
+  <item name="av.building.skygateevent2026_summer_seaplane"><![CDATA[Coral Cruiser]]></item>
+  <item name="av.building.skygateevent2026_summer_smallplane"><![CDATA[Tropic Sparrow]]></item>
+  <item name="av.building.birthdaytower_2026"><![CDATA[Aurora Tower]]></item>
+
+  <item name="av.building.luxury_jet_silver"><![CDATA[Thousand-Jet]]></item>
+  <item name="av.building.luxury_medium_silver"><![CDATA[Million-Star]]></item>
+  <item name="av.building.luxury_large_silver"><![CDATA[Billion-Horizon]]></item>  
   
  </category>
  
  <category name="av.storeitem">
+
   <item name="av.storeitem.s_prop1"><![CDATA[Transporta pasajeros para generar aerocéntimos y PE.]]></item>
   <item name="av.storeitem.s_prop_cargo1"><![CDATA[Transporta cargamentos para suministrar a las tiendas duty free. ¡Este avión dará un impulso a tus beneficios!]]></item>
   <item name="av.storeitem.s_prop2"><![CDATA[Transporta pasajeros para generar aerocéntimos y PE.]]></item>
@@ -1426,7 +1457,7 @@
   <item name="av.storeitem.cbs_airship"><![CDATA[Tu competencia se morirá de envidia... ¡Una aeronave decorativa exclusiva!]]></item>
   <item name="av.storeitem.bday_plane_medium"><![CDATA[Celebra el cumple de Skyrama haciendo lo que más te gusta: ¡volare, oh, oh!]]></item>
   <item name="av.storeitem.bday_plane_cargo"><![CDATA[Nata y chocolate... la combinación perfecta para un cumpleañero.]]></item>
-  <item name="av.storeitem.bday_plane_sea"><![CDATA[¡Fiesta en las alturas! ¡Y no invites a ningún aguafiestas...!]]></item>
+  <item name="av.storeitem.bday_plane_sea"><![CDATA[¡Fiesta en las alturas! ¡Edición limitada no invites a ningún aguafiestas...!]]></item>
   <item name="av.storeitem.bday_copter"><![CDATA[¡Celebra tu cumpleaños con este magnífico cumplecóptero!]]></item>
   <item name="av.storeitem.bday_background"><![CDATA[Fondo de cumpleaños]]></item>
   <item name="av.storeitem.bday_building"><![CDATA[En cuanto a arquitectura... todo es cuestión de gustos. ¡Ñam!]]></item>
@@ -1456,7 +1487,7 @@
   <item name="av.storeitem.event2_deco_two"><![CDATA[Tiempo de servicio: - {number}% Radio: {radius}]]></item>
   <item name="av.storeitem.event2_background"><![CDATA[¡La fiesta llega a tu aeropuerto! Con este fondo, el jolgorio está asegurado.]]></item>
   <item name="av.storeitem.event3_small"><![CDATA[¡Abracadabra! Este siniestro avión a diferencia de su versión en tren te lleva en un abrir y cerrar de ojos a donde te propongas y... puede que también de vuelta.]]></item>
-  <item name="av.storeitem.event3_medium"><![CDATA[Este avión... ¡te pegará un susto de muerte! ¡Y es un hueso duro de roer!]]></item>
+  <item name="av.storeitem.event3_medium"><![CDATA[Este avión... ¡te pegará un susto de muerte! ¡Edición limitada es un hueso duro de roer!]]></item>
   <item name="av.storeitem.event3_helicopter"><![CDATA[Diseñado en Egipto, hasta se siente la arena cuando se mueven sus aspas.]]></item>
   <item name="av.storeitem.event3_seaplane"><![CDATA[Olas rojas rompen en tu aeropuerto. Con el Barón Muerto, el agua será la menor de tus pesadillas.]]></item>
   <item name="av.storeitem.event3_building"><![CDATA[Consigue {number} pasajero(s) cada {minutes} minuto(s)]]></item>
@@ -1466,7 +1497,7 @@
   <item name="av.storeitem.event4_small"><![CDATA[Las palomas blancas están cansadas. Es hora de coger un avión.]]></item>
   <item name="av.storeitem.event4_medium"><![CDATA[¡Hola, pilotos espaciales! Con esta aeronave, alcanzaréis las estrellas del cielo.]]></item>
   <item name="av.storeitem.event4_helicopter"><![CDATA[¡Conquístalo todo a la velocidad de la luz con sus potentes rotores imaginarios!]]></item>
-  <item name="av.storeitem.event4_seaplane"><![CDATA[¡No hay dos sin tres! Y este hidroavión... ¡es sencillamente genial!]]></item>
+  <item name="av.storeitem.event4_seaplane"><![CDATA[¡No hay dos sin tres! Edición limitada este hidroavión... ¡es sencillamente genial!]]></item>
   <item name="av.storeitem.event4_building"><![CDATA[Consigue {number} pasajero(s) cada {minutes} minuto(s)]]></item>
   <item name="av.storeitem.event4_deco_one"><![CDATA[Pasajeros: + {number} Radio: {radius}]]></item>
   <item name="av.storeitem.event4_deco_two"><![CDATA[Tiempo de servicio: - {number}% Radio: {radius}]]></item>
@@ -1481,7 +1512,7 @@
   <item name="av.storeitem.event5_helicopter"><![CDATA[Papá Noel sobrevuela la ciudad... ¡que lluevan los regalos!]]></item>
   <item name="av.storeitem.event5_seaplane"><![CDATA[Las aeronaves para el agua son cosa del ayer. Hazte con este avión apto para el hielo.]]></item>
   <item name="av.storeitem.747"><![CDATA[Los jumbos de verdad quieren llegar muy lejos. ¿Te apuntas?]]></item>
-  <item name="av.storeitem.concorde"><![CDATA[¿Es un pájaro? ¿Es un avión? Eh... pues claro que es un avión. ¡Y menudo avión!]]></item>
+  <item name="av.storeitem.concorde"><![CDATA[¿Es un pájaro? ¿Es un avión? Eh... pues claro que es un avión. ¡Edición limitada menudo avión!]]></item>
   <item name="av.storeitem.antonov"><![CDATA[En el cielo, el tamaño también importa. Como dice el dicho, todo lo bueno viene de arriba...]]></item>
   <item name="av.storeitem.casino"><![CDATA[Tu suerte está escrita en las estrellas y con esta torre la tendrás al alcance de tus dedos.]]></item>
   <item name="av.storeitem.cinema"><![CDATA[Consigue {number} pasajero(s) cada {minutes} minuto(s)]]></item>
@@ -1492,7 +1523,7 @@
   <item name="av.storeitem.history_tech_deco"><![CDATA[Tiempo de servicio: - {number}% Radio: {radius}]]></item>
   <item name="av.storeitem.history_balloon"><![CDATA[La edad de oro de los viajes en globo ha llegado a tu aeropuerto.]]></item>
   <item name="av.storeitem.history_wright"><![CDATA[Antes todo era mejor, incluidos los aviones. Hazte con el clásico entre los clásicos.]]></item>
-  <item name="av.storeitem.history_jet"><![CDATA[Ya no se hacen aviones como este, pero por suerte tenemos un par de ellos. ¡No dejes escapar esta oportunidad!]]></item>
+  <item name="av.storeitem.history_jet"><![CDATA[Edición limitadaa no se hacen aviones como este, pero por suerte tenemos un par de ellos. ¡No dejes escapar esta oportunidad!]]></item>
   <item name="av.storeitem.history_seaplane"><![CDATA[El agua puede ser muy traicionera, pero no te preocupes: con este clásico, no habrá aterrizaje que se te resista.]]></item>
   <item name="av.storeitem.history_background"><![CDATA[Un recorrido por la historia de la aviación.]]></item>
   <item name="av.storeitem.vip_small"><![CDATA[¡Las pequeñas estrellas también quieren volar hasta tu aeropuerto!]]></item>
@@ -1997,7 +2028,8 @@
   <item name="av.storeitem.airstrip_birthday2022_large"><![CDATA[Para aterrizar aviones grandes]]></item>
   <item name="av.storeitem.airstrip_birthday2023_large"><![CDATA[Para aterrizar aviones grandes]]></item>
   <item name="av.storeitem.airstrip_birthday2024_large"><![CDATA[Para aterrizar aviones grandes]]></item>
-  <item name="av.storeitem.airstrip_birthday2025_large"><![CDATA[Para aterrizar aviones grandes]]></item>	 
+  <item name="av.storeitem.airstrip_birthday2025_large"><![CDATA[Para aterrizar aviones grandes]]></item>
+  <item name="av.storeitem.airstrip_birthday2026_large"><![CDATA[Para aterrizar aviones grandes]]></item>
   
   <item name="av.storeitem.smallplane_mm_2022"><![CDATA[Edición limitada]]></item>
   <item name="av.storeitem.madmax2022_background"><![CDATA[Edición limitada]]></item>
@@ -2102,7 +2134,37 @@
   <item name="av.storeitem.winterevent2025_firedeco"><![CDATA[Pasajeros: +{number} Radio: {radius}]]></item>
   <item name="av.storeitem.winterevent2025_icedeco"><![CDATA[Tiempo de servicio: - {number}% Radio: {radius}]]></item>
   <item name="av.storeitem.winterevent2025_iceloon"><![CDATA[Edición limitada]]></item>
-  <item name="av.storeitem.winterevent2025_plane05"><![CDATA[Edición limitada]]></item>  
-   
+  <item name="av.storeitem.winterevent2025_plane05"><![CDATA[Edición limitada]]></item>
+
+  <item name="av.storeitem.skygateevent2026_deco"><![CDATA[Pasajeros: +{number} Radio: {radius}]]></item>
+  <item name="av.storeitem.skygateevent2026_techdeco"><![CDATA[Tiempo de servicio: - {number}% Radio: {radius}]]></item>
+  <item name="av.storeitem.skygateevent2026_temple"><![CDATA[Consigue {number} pasajero(s) cada {minutes} minuto(s)]]></item>
+  <item name="av.storeitem.skygateevent2026_pyramid"><![CDATA[Consigue {number} pasajero(s) cada {minutes} minuto(s)]]></item>
+  <item name="av.storeitem.skygateevent2026_loon"><![CDATA[Edición limitada]]></item>
+  <item name="av.storeitem.skygateevent2026_ancientplane"><![CDATA[Edición limitada]]></item>
+  <item name="av.storeitem.skygateevent2026_heli"><![CDATA[Edición limitada]]></item>
+  <item name="av.storeitem.skygateevent2026_background"><![CDATA[Precaución: riesgo de quemaduras solares.]]></item>
+  <item name="av.storeitem.skygateevent2026_bigbird"><![CDATA[Edición limitada]]></item>
+  <item name="av.storeitem.skygateevent2026_seaplane"><![CDATA[Edición limitada]]></item>
+  <item name="av.storeitem.skygateevent2026_zeppelin"><![CDATA[Edición limitada]]></item>
+  <item name="av.storeitem.skygateevent2026_large_runway"><![CDATA[Para aterrizar aviones grandes]]></item>
+  <item name="av.storeitem.skygateevent2026_stonegate"><![CDATA[Tiempo de servicio: - {number}% Radio: {radius}]]></item>  
+
+  <item name="av.storeitem.skygateevent2026_medium_runway"><![CDATA[Permite el aterrizaje de aviones M.]]></item>
+  <item name="av.storeitem.skygateevent2026_small_runway"><![CDATA[Permite el aterrizaje de aviones S.]]></item>
+  <item name="av.storeitem.skygateevent2026_bigbird_silver"><![CDATA[Edición limitada]]></item>
+  <item name="av.storeitem.skygateevent2026_arado"><![CDATA[Edición limitada]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_arado"><![CDATA[Edición limitada]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_jet"><![CDATA[Edición limitada]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_cargo"><![CDATA[Edición limitada]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_seaplane"><![CDATA[Edición limitada]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_smallplane"><![CDATA[Edición limitada]]></item>
+  <item name="av.storeitem.birthdaytower_2026"><![CDATA[Consigue {number} pasajero(s) cada {minutes} minuto(s)]]></item>
+
+  <item name="av.storeitem.luxury_jet_silver"><![CDATA[Edición de lujo]]></item>
+  <item name="av.storeitem.luxury_medium_silver"><![CDATA[Edición de lujo]]></item>
+  <item name="av.storeitem.luxury_large_silver"><![CDATA[Edición de lujo]]></item>  
+
  </category>
+ 
 </language>

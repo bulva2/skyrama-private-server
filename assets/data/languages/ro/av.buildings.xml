@@ -92,7 +92,7 @@
   <item name="av.building.berlin"><![CDATA[Reper Berlin]]></item>
   <item name="av.building.canada"><![CDATA[Reper Canada]]></item>
   <item name="av.building.london"><![CDATA[Reper Londra]]></item>
-  <item name="av.building.new_york"><![CDATA[Reper New York]]></item>
+  <item name="av.building.new_york"><![CDATA[Reper New Ediţie limitatăork]]></item>
   <item name="av.building.fence1"><![CDATA[Gard 1]]></item>
   <item name="av.building.fence2"><![CDATA[Gard 2]]></item>
   <item name="av.building.fence3"><![CDATA[Gard 3]]></item>
@@ -437,7 +437,7 @@
   <item name="av.building.plural.berlin"><![CDATA[Repere Berlin]]></item>
   <item name="av.building.plural.canada"><![CDATA[Repere Canada]]></item>
   <item name="av.building.plural.london"><![CDATA[Repere Londra]]></item>
-  <item name="av.building.plural.new_york"><![CDATA[Repere New York]]></item>
+  <item name="av.building.plural.new_york"><![CDATA[Repere New Ediţie limitatăork]]></item>
   <item name="av.building.plural.fence1"><![CDATA[Garduri 1]]></item>
   <item name="av.building.plural.fence2"><![CDATA[Garduri 2]]></item>
   <item name="av.building.plural.fence3"><![CDATA[Garduri 3]]></item>
@@ -772,7 +772,7 @@
   <item name="av.building.mostwanted022015_medium_plane1"><![CDATA[Tupperlew154]]></item>
   <item name="av.building.mostwanted022015_medium_plane2"><![CDATA[Skydart-62 ]]></item>
   <item name="av.building.mostwanted022015_cargo_plane1"><![CDATA[Boiling C17]]></item>
-  <item name="av.building.mostwanted022015_cargo_plane2"><![CDATA[Super Yuppy]]></item>
+  <item name="av.building.mostwanted022015_cargo_plane2"><![CDATA[Super Ediţie limitatăuppy]]></item>
   <item name="av.building.mostwanted022015_helicopter1"><![CDATA[Ding-Dong22]]></item>
   <item name="av.building.mostwanted022015_helicopter2"><![CDATA[Stratos 4]]></item>
   <item name="av.building.mostwanted022015_seaplane1"><![CDATA[Spinier H2O]]></item>
@@ -845,7 +845,7 @@
   <item name="av.building.waterplanes082015_background"><![CDATA[Fundal minunat]]></item>
   <item name="av.building.waterplanes082015_small_plane1"><![CDATA[Monoplan-Air G-21]]></item>
   <item name="av.building.waterplanes082015_small_plane2"><![CDATA[Cessnair CN-280]]></item>
-  <item name="av.building.waterplanes082015_small_plane3"><![CDATA[Pionair YL-SL1]]></item>
+  <item name="av.building.waterplanes082015_small_plane3"><![CDATA[Pionair Ediţie limitatăL-SL1]]></item>
   <item name="av.building.waterplanes082015_small_plane4"><![CDATA[Jetstream HP-1]]></item>
   <item name="av.building.waterplanes082015_medium_plane1"><![CDATA[Amphibee-O B-200]]></item>
   <item name="av.building.waterplanes082015_medium_plane2"><![CDATA[Aviolander D-42]]></item>
@@ -923,8 +923,8 @@
   <item name="av.building.wildlifeevent042016_deco"><![CDATA[Balon elefant]]></item>
   <item name="av.building.wildlifeevent042016_tech_deco"><![CDATA[Maşină safari]]></item>
   <item name="av.building.wildlifeevent042016_background"><![CDATA[Savană]]></item>
-  <item name="av.building.wildlifeevent042016_small_plane1"><![CDATA[Monarch BT-FLY]]></item>
-  <item name="av.building.wildlifeevent042016_small_plane2"><![CDATA[Y-Snakes]]></item>
+  <item name="av.building.wildlifeevent042016_small_plane1"><![CDATA[Monarch BT-FLEdiţie limitată]]></item>
+  <item name="av.building.wildlifeevent042016_small_plane2"><![CDATA[Ediţie limitată-Snakes]]></item>
   <item name="av.building.wildlifeevent042016_small_plane3"><![CDATA[Bug Hopper]]></item>
   <item name="av.building.wildlifeevent042016_medium_plane1"><![CDATA[Stryper-2B]]></item>
   <item name="av.building.wildlifeevent042016_medium_plane2"><![CDATA[LPD Prowl]]></item>
@@ -1074,6 +1074,7 @@
   <item name="av.building.airstrip_birthday2023_large"><![CDATA[Pistă aniversară mare]]></item>
   <item name="av.building.airstrip_birthday2024_large"><![CDATA[Pistă aniversară mare]]></item>
   <item name="av.building.airstrip_birthday2025_large"><![CDATA[Pistă aniversară mare]]></item>
+  <item name="av.building.airstrip_birthday2026_large"><![CDATA[Pistă aniversară mare]]></item>
   
   <item name="av.building.smallplane_mm_2022"><![CDATA[Ja-Lopy]]></item>
   <item name="av.building.madmax2022_background"><![CDATA[Decorul viitorului]]></item>
@@ -1136,7 +1137,7 @@
   <item name="av.building.halloween2024_777"><![CDATA[Fr4nk-Enst31n]]></item>
   
   <item name="av.building.spaceevent2024_rocket"><![CDATA[L4G0-R0K-3T]]></item>
-  <item name="av.building.spaceevent2024_large_runway"><![CDATA[RUN-W4Y]]></item>
+  <item name="av.building.spaceevent2024_large_runway"><![CDATA[RUN-W4Ediţie limitată]]></item>
   <item name="av.building.spaceevent2024_largeplane"><![CDATA[SP4C3-LP]]></item>
   <item name="av.building.spaceevent2024_mediumplane"><![CDATA[SP4C3-MP]]></item>
   <item name="av.building.spaceevent2024_jet"><![CDATA[SP4C3-J3T]]></item>
@@ -1177,10 +1178,41 @@
   <item name="av.building.winterevent2025_firedeco"><![CDATA[Molten Pillar]]></item>
   <item name="av.building.winterevent2025_icedeco"><![CDATA[Frozen Pillar]]></item>
   <item name="av.building.winterevent2025_iceloon"><![CDATA[Chill McDrift]]></item>
-  <item name="av.building.winterevent2025_plane05"><![CDATA[Crystal Phoenix]]></item>  
+  <item name="av.building.winterevent2025_plane05"><![CDATA[Crystal Phoenix]]></item>
+
+  <item name="av.building.skygateevent2026_deco"><![CDATA[Azure Obelisk]]></item>
+  <item name="av.building.skygateevent2026_techdeco"><![CDATA[Skygate of Amun]]></item>
+  <item name="av.building.skygateevent2026_temple"><![CDATA[Shrine of the Dunes]]></item>
+  <item name="av.building.skygateevent2026_pyramid"><![CDATA[Stargate Sanctuary]]></item>
+  <item name="av.building.skygateevent2026_loon"><![CDATA[Tombfire Drifter]]></item>
+  <item name="av.building.skygateevent2026_ancientplane"><![CDATA[Pharaoh’s Skyblade]]></item>
+  <item name="av.building.skygateevent2026_heli"><![CDATA[Horus Windrider]]></item>
+  <item name="av.building.skygateevent2026_background"><![CDATA[Desert of Two Moons]]></item>
+  <item name="av.building.skygateevent2026_bigbird"><![CDATA[Celestial Wingcarrier]]></item>
+  <item name="av.building.skygateevent2026_seaplane"><![CDATA[Sky Mariner]]></item>
+  <item name="av.building.skygateevent2026_zeppelin"><![CDATA[Golden Skybarge]]></item>
+  <item name="av.building.skygateevent2026_large_runway"><![CDATA[Sandstrip]]></item>
+  <item name="av.building.skygateevent2026_stonegate"><![CDATA[Stonegate]]></item>
+
+  <item name="av.building.skygateevent2026_medium_runway"><![CDATA[Medium Sandstrip]]></item>
+  <item name="av.building.skygateevent2026_small_runway"><![CDATA[Small Sandstrip]]></item>
+  <item name="av.building.skygateevent2026_bigbird_silver"><![CDATA[Silverwing]]></item>
+  <item name="av.building.skygateevent2026_arado"><![CDATA[Obsidian Wing]]></item>
+  <item name="av.building.skygateevent2026_summer_arado"><![CDATA[Neon Breeze]]></item>
+  <item name="av.building.skygateevent2026_summer_jet"><![CDATA[Riviera Jet]]></item>
+  <item name="av.building.skygateevent2026_summer_cargo"><![CDATA[Lagoon Cargo]]></item>
+  <item name="av.building.skygateevent2026_summer_seaplane"><![CDATA[Coral Cruiser]]></item>
+  <item name="av.building.skygateevent2026_summer_smallplane"><![CDATA[Tropic Sparrow]]></item>
+  <item name="av.building.birthdaytower_2026"><![CDATA[Aurora Tower]]></item>
+
+  <item name="av.building.luxury_jet_silver"><![CDATA[Thousand-Jet]]></item>
+  <item name="av.building.luxury_medium_silver"><![CDATA[Million-Star]]></item>
+  <item name="av.building.luxury_large_silver"><![CDATA[Billion-Horizon]]></item>  
   
  </category>
+
  <category name="av.storeitem">
+
   <item name="av.storeitem.s_prop1"><![CDATA[Transportă pasageri pentru a genera Aircoin-uri şi PE.]]></item>
   <item name="av.storeitem.s_prop_cargo1"><![CDATA[Transportă mărfuri pentru duty-free. Acest plan îţi va stimula profiturile!]]></item>
   <item name="av.storeitem.s_prop2"><![CDATA[Transportă pasageri pentru a genera Aircoin-uri şi PE.]]></item>
@@ -1295,7 +1327,7 @@
   <item name="av.storeitem.california"><![CDATA[Reper California]]></item>
   <item name="av.storeitem.fall"><![CDATA[Peisaj Halloween]]></item>
   <item name="av.storeitem.london"><![CDATA[Reper Londra]]></item>
-  <item name="av.storeitem.new_york"><![CDATA[Reper New York]]></item>
+  <item name="av.storeitem.new_york"><![CDATA[Reper New Ediţie limitatăork]]></item>
   <item name="av.storeitem.fence1"><![CDATA[Timp mentenanță: - {number}% Rază: {radius}]]></item>
   <item name="av.storeitem.fence2"><![CDATA[Timp mentenanță: - {number}% Rază: {radius}]]></item>
   <item name="av.storeitem.fence3"><![CDATA[Timp mentenanță: - {number}% Rază: {radius}]]></item>
@@ -1997,6 +2029,7 @@
   <item name="av.storeitem.airstrip_birthday2023_large"><![CDATA[Aici aterizează avioane mari]]></item>
   <item name="av.storeitem.airstrip_birthday2024_large"><![CDATA[Aici aterizează avioane mari]]></item>
   <item name="av.storeitem.airstrip_birthday2025_large"><![CDATA[Aici aterizează avioane mari]]></item>
+  <item name="av.storeitem.airstrip_birthday2026_large"><![CDATA[Aici aterizează avioane mari]]></item>
   
   <item name="av.storeitem.smallplane_mm_2022"><![CDATA[Ediţie limitată]]></item>
   <item name="av.storeitem.madmax2022_background"><![CDATA[Ediţie limitată]]></item>
@@ -2102,6 +2135,35 @@
   <item name="av.storeitem.winterevent2025_icedeco"><![CDATA[Timp mentenanță: - {number}% Rază: {radius}]]></item>
   <item name="av.storeitem.winterevent2025_iceloon"><![CDATA[Ediţie limitată]]></item>
   <item name="av.storeitem.winterevent2025_plane05"><![CDATA[Ediţie limitată]]></item>  
-  
+
+  <item name="av.storeitem.skygateevent2026_deco"><![CDATA[Pasageri: + {number} Rază: {radius}]]></item>
+  <item name="av.storeitem.skygateevent2026_techdeco"><![CDATA[Timp mentenanță: - {number}% Rază: {radius}]]></item>
+  <item name="av.storeitem.skygateevent2026_temple"><![CDATA[Colectează {number} pasager(i) la fiecare {minutes} minute]]></item>
+  <item name="av.storeitem.skygateevent2026_pyramid"><![CDATA[Colectează {number} pasager(i) la fiecare {minutes} minute]]></item>
+  <item name="av.storeitem.skygateevent2026_loon"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.skygateevent2026_ancientplane"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.skygateevent2026_heli"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.skygateevent2026_background"><![CDATA[Atenție: risc de arsuri solare.]]></item>
+  <item name="av.storeitem.skygateevent2026_bigbird"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.skygateevent2026_seaplane"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.skygateevent2026_zeppelin"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.skygateevent2026_large_runway"><![CDATA[Aici aterizează avioane mari]]></item>
+  <item name="av.storeitem.skygateevent2026_stonegate"><![CDATA[Timp mentenanță: - {number}% Rază: {radius}]]></item>
+
+  <item name="av.storeitem.skygateevent2026_medium_runway"><![CDATA[Pentru aterizarea avioanelor medii.]]></item>
+  <item name="av.storeitem.skygateevent2026_small_runway"><![CDATA[Pentru aterizarea avioanelor mici.]]></item>
+  <item name="av.storeitem.skygateevent2026_bigbird_silver"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.skygateevent2026_arado"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_arado"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_jet"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_cargo"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_seaplane"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_smallplane"><![CDATA[Ediţie limitată]]></item>
+  <item name="av.storeitem.birthdaytower_2026"><![CDATA[Colectează {number} pasager(i) la fiecare {minutes} minute]]></item>
+
+  <item name="av.storeitem.luxury_jet_silver"><![CDATA[Ediție de lux]]></item>
+  <item name="av.storeitem.luxury_medium_silver"><![CDATA[Ediție de lux]]></item>
+  <item name="av.storeitem.luxury_large_silver"><![CDATA[Ediție de lux]]></item>  
+
  </category>
 </language>

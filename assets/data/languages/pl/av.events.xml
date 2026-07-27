@@ -263,9 +263,9 @@
  </category>
  
  <category name="av.birthdayevent2025">
-  <item name="av.birthdayevent2025.title"><![CDATA[Saturday Nightflight]]></item>
-  <item name="av.birthdayevent2025.text"><![CDATA[Skyrama kończy 14 lat – blond włosy są opcjonalne. Uda drżą, beat wibruje, a boczki kołyszą się w rytmie. Zafunduj sobie musującego Aerosol Spritza i inne figlarne drinki na tym podniebnym przyjęciu urodzinowym. Na pas startowy – i ślizg prosto w rozkosz!]]></item>
-  <item name="av.birthdayevent2025.mouseover"><![CDATA[Światła gasną, reflektor w ruch! Saturday Nightflight startuje – cel: ściśle tajna strefa bikini. Wstęp tylko z biodrowym wigglem!]]></item>
+  <item name="av.birthdayevent2025.title"><![CDATA[Skyrama Birthday]]></item>
+  <item name="av.birthdayevent2025.text"><![CDATA[Skyrama kończy 15 lat – blond włosy są opcjonalne. Uda drżą, beat wibruje, a boczki kołyszą się w rytmie. Zafunduj sobie musującego Aerosol Spritza i inne figlarne drinki na tym podniebnym przyjęciu urodzinowym. Na pas startowy – i ślizg prosto w rozkosz!]]></item>
+  <item name="av.birthdayevent2025.mouseover"><![CDATA[Światła gasną, reflektor w ruch! Skyrama Birthday startuje – cel: ściśle tajna strefa bikini. Wstęp tylko z biodrowym wigglem!]]></item>
  </category> 
 
  <category name="av.winterevent2025">
@@ -273,5 +273,11 @@
   <item name="av.winterevent2025.text"><![CDATA[Śnieg na dachu, a w piecu wciąż przyjemne ciepło. To idealny moment, aby wsiąść do w pełni zatankowanych samolotów wakacyjnych, wypić porządny łyk grzanego wina i przywrócić trochę elastyczności tym nieco zesztywniałym kończynom. Powietrze jest lodowate, ale twoje policzki rozgrzewają się jak podczas drugiej wiosny. Wytocz się na pas startowy i pozwól się porwać przygodzie ognia i lodu, która nie pozostawi nikogo w kokpicie obojętnym.]]></item>
   <item name="av.winterevent2025.mouseover"><![CDATA[Ciepłe policzki i chłodne końcówki. Idealne dla pilotów z temperamentem.]]></item>
  </category>
- 
+
+ <category name="av.skygateevent2026">
+  <item name="av.skygateevent2026.title"><![CDATA[Tygodnie Skygate]]></item>
+  <item name="av.skygateevent2026.text"><![CDATA[Rozpalone gorąco na skórze i portale, które tylko czekają, by wystrzelić cię na niewyobrażalne wysokości. Wsiądź do maszyn z odległej galaktyki i pomknij przez przestrzeń i czas, aż nawet twój puls utraci ziemską grawitację. Obce kultury, nieznane horyzonty i przygoda, która z pewnością wyniesie cię do wyższych sfer. Ślady po bikini w zestawie.]]></item>
+  <item name="av.skygateevent2026.mouseover"><![CDATA[Gilde Prime zaprasza na kąpiel słoneczną. Zalecany galaktyczny współczynnik ochrony.]]></item>
+ </category>
+
 </language>

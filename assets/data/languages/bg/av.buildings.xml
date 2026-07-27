@@ -830,7 +830,7 @@
   <item name="av.building.airshow072015_deco"><![CDATA[Червен биклон]]></item>
   <item name="av.building.airshow072015_tech_deco"><![CDATA[Цистерна]]></item>
   <item name="av.building.airshow072015_background"><![CDATA[Красив изглед]]></item>
-  <item name="av.building.airshow072015_small_plane1"><![CDATA[Green Yonder ]]></item>
+  <item name="av.building.airshow072015_small_plane1"><![CDATA[Green Лимитирано изданиеonder ]]></item>
   <item name="av.building.airshow072015_small_plane2"><![CDATA[AIRcrobatic KA-55 ]]></item>
   <item name="av.building.airshow072015_small_plane3"><![CDATA[Airfrica S360 ]]></item>
   <item name="av.building.airshow072015_small_plane4"><![CDATA[Xtreme-Air XXA-42 ]]></item>
@@ -844,7 +844,7 @@
   <item name="av.building.waterplanes082015_background"><![CDATA[Красив пейзаж]]></item>
   <item name="av.building.waterplanes082015_small_plane1"><![CDATA[Самолет с високо разположено крило G-21 ]]></item>
   <item name="av.building.waterplanes082015_small_plane2"><![CDATA[Чеснеър CN-280 ]]></item>
-  <item name="av.building.waterplanes082015_small_plane3"><![CDATA[Пионеър YL-SL1 ]]></item>
+  <item name="av.building.waterplanes082015_small_plane3"><![CDATA[Пионеър Лимитирано изданиеL-SL1 ]]></item>
   <item name="av.building.waterplanes082015_small_plane4"><![CDATA[Джетстрийм HP-1 ]]></item>
   <item name="av.building.waterplanes082015_medium_plane1"><![CDATA[Амфибия-O B-200 ]]></item>
   <item name="av.building.waterplanes082015_medium_plane2"><![CDATA[Авиоприземител D-42 ]]></item>
@@ -922,8 +922,8 @@
   <item name="av.building.wildlifeevent042016_deco"><![CDATA[Балон слон]]></item>
   <item name="av.building.wildlifeevent042016_tech_deco"><![CDATA[Кола за сафари]]></item>
   <item name="av.building.wildlifeevent042016_background"><![CDATA[Савана]]></item>
-  <item name="av.building.wildlifeevent042016_small_plane1"><![CDATA[Монарх BT-FLY]]></item>
-  <item name="av.building.wildlifeevent042016_small_plane2"><![CDATA[Y-Змии]]></item>
+  <item name="av.building.wildlifeevent042016_small_plane1"><![CDATA[Монарх BT-FLЛимитирано издание]]></item>
+  <item name="av.building.wildlifeevent042016_small_plane2"><![CDATA[Лимитирано издание-Змии]]></item>
   <item name="av.building.wildlifeevent042016_small_plane3"><![CDATA[Совалка буболечка]]></item>
   <item name="av.building.wildlifeevent042016_medium_plane1"><![CDATA[Stryper-2B]]></item>
   <item name="av.building.wildlifeevent042016_medium_plane2"><![CDATA[LPD Prowl]]></item>
@@ -1072,7 +1072,8 @@
   <item name="av.building.airstrip_birthday2022_large"><![CDATA[Голямата юбилейна писта]]></item>
   <item name="av.building.airstrip_birthday2023_large"><![CDATA[Голямата юбилейна писта]]></item>
   <item name="av.building.airstrip_birthday2024_large"><![CDATA[Голямата юбилейна писта]]></item>
-  <item name="av.building.airstrip_birthday2025_large"><![CDATA[Голямата юбилейна писта]]></item>  
+  <item name="av.building.airstrip_birthday2025_large"><![CDATA[Голямата юбилейна писта]]></item>
+  <item name="av.building.airstrip_birthday2026_large"><![CDATA[Голямата юбилейна писта]]></item>
   
   <item name="av.building.smallplane_mm_2022"><![CDATA[Ja-Lopy]]></item>
   <item name="av.building.madmax2022_background"><![CDATA[Задният план на бъдещето]]></item>
@@ -1134,7 +1135,7 @@
   <item name="av.building.halloween2024_777"><![CDATA[Fr4nk-Enst31n]]></item>
   
   <item name="av.building.spaceevent2024_rocket"><![CDATA[L4G0-R0K-3T]]></item>
-  <item name="av.building.spaceevent2024_large_runway"><![CDATA[RUN-W4Y]]></item>
+  <item name="av.building.spaceevent2024_large_runway"><![CDATA[RUN-W4Лимитирано издание]]></item>
   <item name="av.building.spaceevent2024_largeplane"><![CDATA[SP4C3-LP]]></item>
   <item name="av.building.spaceevent2024_mediumplane"><![CDATA[SP4C3-MP]]></item>
   <item name="av.building.spaceevent2024_jet"><![CDATA[SP4C3-J3T]]></item>
@@ -1175,10 +1176,41 @@
   <item name="av.building.winterevent2025_firedeco"><![CDATA[Molten Pillar]]></item>
   <item name="av.building.winterevent2025_icedeco"><![CDATA[Frozen Pillar]]></item>
   <item name="av.building.winterevent2025_iceloon"><![CDATA[Chill McDrift]]></item>
-  <item name="av.building.winterevent2025_plane05"><![CDATA[Crystal Phoenix]]></item>  
+  <item name="av.building.winterevent2025_plane05"><![CDATA[Crystal Phoenix]]></item>
+
+  <item name="av.building.skygateevent2026_deco"><![CDATA[Azure Obelisk]]></item>
+  <item name="av.building.skygateevent2026_techdeco"><![CDATA[Skygate of Amun]]></item>
+  <item name="av.building.skygateevent2026_temple"><![CDATA[Shrine of the Dunes]]></item>
+  <item name="av.building.skygateevent2026_pyramid"><![CDATA[Stargate Sanctuary]]></item>
+  <item name="av.building.skygateevent2026_loon"><![CDATA[Tombfire Drifter]]></item>
+  <item name="av.building.skygateevent2026_ancientplane"><![CDATA[Pharaoh’s Skyblade]]></item>
+  <item name="av.building.skygateevent2026_heli"><![CDATA[Horus Windrider]]></item>
+  <item name="av.building.skygateevent2026_background"><![CDATA[Desert of Two Moons]]></item>
+  <item name="av.building.skygateevent2026_bigbird"><![CDATA[Celestial Wingcarrier]]></item>
+  <item name="av.building.skygateevent2026_seaplane"><![CDATA[Sky Mariner]]></item>
+  <item name="av.building.skygateevent2026_zeppelin"><![CDATA[Golden Skybarge]]></item>
+  <item name="av.building.skygateevent2026_large_runway"><![CDATA[Sandstrip]]></item>
+  <item name="av.building.skygateevent2026_stonegate"><![CDATA[Stonegate]]></item>  
   
+  <item name="av.building.skygateevent2026_medium_runway"><![CDATA[Medium Sandstrip]]></item>
+  <item name="av.building.skygateevent2026_small_runway"><![CDATA[Small Sandstrip]]></item>
+  <item name="av.building.skygateevent2026_bigbird_silver"><![CDATA[Silverwing]]></item>
+  <item name="av.building.skygateevent2026_arado"><![CDATA[Obsidian Wing]]></item>
+  <item name="av.building.skygateevent2026_summer_arado"><![CDATA[Neon Breeze]]></item>
+  <item name="av.building.skygateevent2026_summer_jet"><![CDATA[Riviera Jet]]></item>
+  <item name="av.building.skygateevent2026_summer_cargo"><![CDATA[Lagoon Cargo]]></item>
+  <item name="av.building.skygateevent2026_summer_seaplane"><![CDATA[Coral Cruiser]]></item>
+  <item name="av.building.skygateevent2026_summer_smallplane"><![CDATA[Tropic Sparrow]]></item>
+  <item name="av.building.birthdaytower_2026"><![CDATA[Aurora Tower]]></item>
+
+  <item name="av.building.luxury_jet_silver"><![CDATA[Thousand-Jet]]></item>
+  <item name="av.building.luxury_medium_silver"><![CDATA[Million-Star]]></item>
+  <item name="av.building.luxury_large_silver"><![CDATA[Billion-Horizon]]></item>  
+
  </category>
+
  <category name="av.storeitem">
+
   <item name="av.storeitem.s_prop1"><![CDATA[Превозва пътници и носи аеромонети и ТО.]]></item>
   <item name="av.storeitem.s_prop_cargo1"><![CDATA[Превозва товари за зареждането на duty-free магазините. Увеличава печалбата!]]></item>
   <item name="av.storeitem.s_prop2"><![CDATA[Превозва пътници и носи аеромонети и ТО.]]></item>
@@ -1991,6 +2023,7 @@
   <item name="av.storeitem.airstrip_birthday2023_large"><![CDATA[Приземява големи самолети]]></item>
   <item name="av.storeitem.airstrip_birthday2024_large"><![CDATA[Приземява големи самолети]]></item>
   <item name="av.storeitem.airstrip_birthday2025_large"><![CDATA[Приземява големи самолети]]></item>
+  <item name="av.storeitem.airstrip_birthday2026_large"><![CDATA[Приземява големи самолети]]></item>
   
   <item name="av.storeitem.smallplane_mm_2022"><![CDATA[Лимитирано издание]]></item>
   <item name="av.storeitem.madmax2022_background"><![CDATA[Лимитирано издание]]></item>
@@ -2094,6 +2127,36 @@
   <item name="av.storeitem.winterevent2025_icedeco"><![CDATA[Време за обслужване: - {number}% Радиус: {radius}]]></item>
   <item name="av.storeitem.winterevent2025_iceloon"><![CDATA[Лимитирано издание]]></item>
   <item name="av.storeitem.winterevent2025_plane05"><![CDATA[Лимитирано издание]]></item>
+
+  <item name="av.storeitem.skygateevent2026_deco"><![CDATA[Пътници: + {number}радиус: {radius}]]></item>
+  <item name="av.storeitem.skygateevent2026_techdeco"><![CDATA[Време за обслужване: - {number}% Радиус: {radius}]]></item>
+  <item name="av.storeitem.skygateevent2026_temple"><![CDATA[Събери {number} пътник(а) на всеки {minutes}мин.]]></item>
+  <item name="av.storeitem.skygateevent2026_pyramid"><![CDATA[Събери {number} пътник(а) на всеки {minutes}мин.]]></item>
+  <item name="av.storeitem.skygateevent2026_loon"><![CDATA[Лимитирано издание]]></item>
+  <item name="av.storeitem.skygateevent2026_ancientplane"><![CDATA[Лимитирано издание]]></item>
+  <item name="av.storeitem.skygateevent2026_heli"><![CDATA[Лимитирано издание]]></item>
+  <item name="av.storeitem.skygateevent2026_background"><![CDATA[Внимание: риск от слънчево изгаряне!]]></item>
+  <item name="av.storeitem.skygateevent2026_bigbird"><![CDATA[Лимитирано издание]]></item>
+  <item name="av.storeitem.skygateevent2026_seaplane"><![CDATA[Лимитирано издание]]></item>
+  <item name="av.storeitem.skygateevent2026_zeppelin"><![CDATA[Лимитирано издание]]></item>
+  <item name="av.storeitem.skygateevent2026_large_runway"><![CDATA[Приземява големи самолети]]></item>
+  <item name="av.storeitem.skygateevent2026_stonegate"><![CDATA[Време за обслужване: - {number}% Радиус: {radius}]]></item>
+
+  <item name="av.storeitem.skygateevent2026_medium_runway"><![CDATA[Писта за кацане на средно големи самолети.]]></item>
+  <item name="av.storeitem.skygateevent2026_small_runway"><![CDATA[Писта за кацане на малки самолети]]></item>
+  <item name="av.storeitem.skygateevent2026_bigbird_silver"><![CDATA[Лимитирано издание]]></item>
+  <item name="av.storeitem.skygateevent2026_arado"><![CDATA[Лимитирано издание]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_arado"><![CDATA[Лимитирано издание]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_jet"><![CDATA[Лимитирано издание]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_cargo"><![CDATA[Лимитирано издание]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_seaplane"><![CDATA[Лимитирано издание]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_smallplane"><![CDATA[Лимитирано издание]]></item>
+  <item name="av.storeitem.birthdaytower_2026"><![CDATA[Събери {number} пътник(а) на всеки {minutes}мин.]]></item>
+  
+  <item name="av.storeitem.luxury_jet_silver"><![CDATA[Луксозно издание]]></item>
+  <item name="av.storeitem.luxury_medium_silver"><![CDATA[Луксозно издание]]></item>
+  <item name="av.storeitem.luxury_large_silver"><![CDATA[Луксозно издание]]></item>  
     
  </category>
+
 </language>

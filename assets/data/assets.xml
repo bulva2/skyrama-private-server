@@ -11221,6 +11221,7 @@
 		<AircraftBarComponent popUpX="19" popUpY="22" />
 		<ProfileTagComponent assetY="20" />
 	</Asset>
+
 	<Asset name="halloween_102013_zeppelin" type="plane">
 		<ViewComponent name="v0" dir="0" isoWidth="55"
 			isoLength="55" isoHeight="30">
@@ -31968,7 +31969,7 @@
 		<PlaceableComponent storable="false" />
 		<AircraftComponent engine="balloon" />
 		<AircraftBarComponent popUpX="19" popUpY="22" />
-		<ProfileTagComponent assetY="20" />
+		<ProfileTagComponent assetY="0" />
 	</Asset>	
 
 	<!-- Halloween 2025 - Large Plane 01 OID 451  -->
@@ -32408,7 +32409,7 @@
 		<PlaceableComponent storable="false" />
 		<AircraftComponent engine="balloon" />
 		<AircraftBarComponent popUpX="19" popUpY="22" />
-		<ProfileTagComponent assetY="20" />
+		<ProfileTagComponent assetY="0" />
 	</Asset>		
 
 	<!-- Winter 2025 - Plane 05 Medium Crytal Phoenix -->
@@ -32416,27 +32417,31 @@
 	<Asset name="winterevent2025_plane05" type="plane">
 
 		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="30">
+
 			<SpriteRenderComponent
 				colorMap="gfx/events/winterevent2025/plane05/winterevent2025_plane05_v0.png"
 				originX = "-96" originY = "-60" isoWidth = "60" isoLength = "74" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "1"
-				/>
+			/>
+
 			<ShadowMapComponent
 				colorMap="gfx/events/winterevent2025/plane05/winterevent2025_plane05_s_v0.png"
-				originX = "-111" originY = "-64" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
-				boundingBox="false"
-				/>
+				originX = "-111" originY = "-64" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" boundingBox="false"
+			/>
+
 		</ViewComponent>
 		
 		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+
 			<SpriteRenderComponent
 				colorMap="gfx/events/winterevent2025/plane05/winterevent2025_plane05_v1.png"
 				originX = "-79" originY = "-55" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "1"
-				/>
+			/>
+
 			<ShadowMapComponent
 				colorMap="gfx/events/winterevent2025/plane05/winterevent2025_plane05_s_v1.png"
-				originX = "-79" originY = "-59" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
-				boundingBox="false"
-				/>
+				originX = "-79" originY = "-59" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" boundingBox="false"
+			/>
+
 		</ViewComponent>
 
 		<PlaceableComponent storable="false" />
@@ -32445,29 +32450,1218 @@
 		<ProfileTagComponent assetY="20" />
 	</Asset>	
 	
-	<!-- Put Custom Planes Under here -->
 
-	<!-- Zeppelin -->
-	<Asset name="zeppelin" type="plane">
-		<ViewComponent name="v0" dir="0" isoWidth="55"
-			 isoLength="55" isoHeight="30">
-			<SpriteRenderComponent colorMap="gfx/planes/zeppelin/animation/zeppelin_0.swf" 
-				originX="-70" originY="-51" animationSpeed="1" preload="false" 
-				isoOffsetZ="1" />
-			<ShadowMapComponent colorMap="gfx/planes/zeppelin/zeppelin_s.swf@0" 
-				originX="-74" originY="-54" /> <!-- @0/1 controls direction -->
+	<!-- Skygate Event 2026 - Obelisk Deco -->
+	
+	<Asset name="skygateevent2026_deco" type="landside_building">
+
+		<ViewComponent name="v0" dir="0">
+	
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/deco/skygateevent2026_deco_v0.png"
+				originX = "-53" originY = "-98" isoWidth = "42" isoLength = "37" isoHeight = "1" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" preload="false"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/deco/skygateevent2026_deco_s_v0.png"
+				originX = "-53" originY = "-98" isoWidth = "42" isoLength = "37" isoHeight = "1" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" scene="UndergroundScene" boundingBox="false"
+			/>
+				
 		</ViewComponent>
-		<ViewComponent name="v1" dir="1" isoWidth="55"
-		 	isoLength="55" isoHeight="30">
-			<SpriteRenderComponent colorMap="gfx/planes/zeppelin/animation/zeppelin_1.swf" 
-				originX="-120" originY="-61" animationSpeed="1" preload="false" 
-				isoOffsetZ="1" />
-			<ShadowMapComponent colorMap="gfx/planes/zeppelin/zeppelin_s.swf@1" 
-				originX="-124" originY="-64" /> <!-- @0/1 controls direction -->
+		
+		<ViewComponent name="v1" dir="1">
+			
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/deco/skygateevent2026_deco_v1.png"
+				originX = "-56" originY = "-105" isoWidth = "42" isoLength = "37" isoHeight = "1" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" preload="false"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/deco/skygateevent2026_deco_s_v1.png"
+				originX = "-56" originY = "-105" isoWidth = "42" isoLength = "37" isoHeight = "1" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" scene="UndergroundScene" boundingBox="false"
+			/>
+		
 		</ViewComponent>
+
+		<PlaceableComponent />
+		<LandsideBuildingComponent />
+
+	</Asset>
+
+	<!-- Skygate Event 2026 - Skygate Tech Deco -->
+
+	<Asset name="skygateevent2026_techdeco" type="landside_building">
+
+		<ViewComponent name="v0" dir="0">
+	
+			<SpriteRenderComponent 
+				colorMap="gfx/events/skygateevent2026/techdeco/skygateevent2026_techdeco_v0.png"
+				originX="-65" originY="-64" isoWidth="47" isoLength="70" isoHeight="25" preload="false" isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/techdeco/skygateevent2026_techdeco_s_v0.png"
+				originX="-65" originY="-64" isoWidth="47" isoLength="70" isoHeight="25" isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" scene="UndergroundScene" boundingBox="false"
+			/>
+
+		</ViewComponent>
+
+		<ViewComponent name="v1" dir="1">
+		
+			<SpriteRenderComponent 
+				colorMap="gfx/events/skygateevent2026/techdeco/skygateevent2026_techdeco_v1.png"  
+				originX="-42" originY="-63" isoWidth="71" isoLength="47" isoHeight="25"  preload="false" isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/techdeco/skygateevent2026_techdeco_s_v1.png"  
+				originX="-42" originY="-63" isoWidth="71" isoLength="47" isoHeight="25" isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" scene="UndergroundScene" boundingBox="false"
+			/>
+			
+		</ViewComponent>
+		
+		<PlaceableComponent />
+		<LandsideBuildingComponent />
+		<LandsideBuildingInfoComponent popUpX="-40" popUpY="-60"/>
+
+	</Asset>
+
+	<!-- Skygate Event 2026 - Temple -->
+
+	<Asset name="skygateevent2026_temple" type="landside_building">
+
+		<ViewComponent name="v0" dir="0">
+			
+			<SpriteRenderComponent 
+				colorMap="gfx/events/skygateevent2026/temple/skygateevent2026_temple_v0.png"
+				originX="-97" originY="-107" isoWidth="119" isoLength="96" isoHeight="137" isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" preload="false"
+			/>
+			
+			<ShadowMapComponent 
+				colorMap="gfx/events/skygateevent2026/temple/skygateevent2026_temple_s_v0.png"
+				originX="-97" originY="-107" isoWidth="119" isoLength="96" isoHeight="137" isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" scene="UndergroundScene" boundingBox="false"
+			/>
+						
+		</ViewComponent>
+
+		<ViewComponent name="v1" dir="1">
+		
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/temple/skygateevent2026_temple_v1.png"
+				originX="-120" originY="-115" isoWidth="92" isoLength="116" isoHeight="137" isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" preload="false"
+			/>
+			
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/temple/skygateevent2026_temple_s_v1.png"
+				originX="-120" originY="-115" isoWidth="92" isoLength="116" isoHeight="137" isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" scene="UndergroundScene" boundingBox="false"
+			/>
+			
+		</ViewComponent>
+
+		<PlaceableComponent />
+		<LandsideBuildingComponent />
+		<LandsideBuildingInfoComponent popUpX="-15" popUpY="-35"/>
+
+	</Asset>
+
+	<!-- Skygate Event 2026 - Pyramid -->
+
+	<Asset name="skygateevent2026_pyramid" type="landside_building">
+		
+		<ViewComponent name="v0" dir="0">
+		
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/pyramid/skygateevent2026_pyramid_v0.png"
+				preload="false" originX="-146" originY="-184" isoWidth="120" isoLength="120" isoHeight="54" isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0"
+			/>
+		
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/pyramid/skygateevent2026_pyramid_s_v0.png"
+				preload="false" originX="-146" originY="-184" isoWidth="120" isoLength="120" isoHeight="54" isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" scene="UndergroundScene" boundingBox="false"
+			/>
+		
+		</ViewComponent>
+		
+		<ViewComponent name="v1" dir="1">
+		
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/pyramid/skygateevent2026_pyramid_v1.png"
+				preload="false" originX="-141" originY="-187" isoWidth="120" isoLength="120" isoHeight="54" isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0"
+			/>
+		
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/pyramid/skygateevent2026_pyramid_s_v1.png"
+				preload="false" originX="-141" originY="-187" isoWidth="120" isoLength="120" isoHeight="54" isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" scene="UndergroundScene" boundingBox="false"
+			/>
+		
+		</ViewComponent>
+
+		<PlaceableComponent />
+		<LandsideBuildingComponent />
+		<LandsideBuildingInfoComponent popUpX="-40" popUpY="-60"/>
+	
+	</Asset>
+
+	<!-- Skygate Event 2026 - Loon -->
+		
+	<Asset name="skygateevent2026_loon" type="plane">
+		
+		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+			
+			<SpriteRenderComponent name="steady"
+				colorMap="gfx/events/skygateevent2026/loon/skygateevent2026_loon_v0.png"
+				originX = "-68" originY = "-116" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "1"
+			/>
+
+			<SpriteRenderComponent name="animation"
+				colorMap="gfx/events/skygateevent2026/loon/anim/skygateevent2026_loon_v0_.swf"
+				originX = "-68" originY = "-116" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+			/>			
+			
+			<ShadowMapComponent 
+				colorMap="gfx/events/skygateevent2026/loon/skygateevent2026_loon_s_v0.png"
+				originX = "-81" originY = "-133" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+			/>
+
+		</ViewComponent>
+		
+		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="30">
+			
+			<SpriteRenderComponent name="steady"
+				colorMap="gfx/events/skygateevent2026/loon/skygateevent2026_loon_v1.png"
+				originX = "-20" originY = "-99" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "1"
+			/>
+
+			<SpriteRenderComponent name="animation"
+				colorMap="gfx/events/skygateevent2026/loon/anim/skygateevent2026_loon_v1_.swf"
+				originX = "-20" originY = "-99" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+			/>			
+			
+			<ShadowMapComponent 
+				colorMap="gfx/events/skygateevent2026/loon/skygateevent2026_loon_s_v1.png"
+				originX = "-34" originY = "-116" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+			/>
+
+		</ViewComponent>
+		
 		<PlaceableComponent storable="false" />
-		<AircraftComponent engine="zeppelin" />
+		<AircraftComponent engine="balloon" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="0" />
+
+	</Asset>	
+
+	<!-- Skygate Event 2026 - Ancient Plane -->
+
+	<Asset name="skygateevent2026_ancientplane" type="plane">
+
+		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/ancientplane/skygateevent2026_ancientplane_v0.png"
+				originX = "-96" originY = "-60" isoWidth = "60" isoLength = "74" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "1"
+			/>
+			
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/ancientplane/skygateevent2026_ancientplane_s_v0.png"
+				originX = "-111" originY = "-64" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+		
+		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/ancientplane/skygateevent2026_ancientplane_v1.png"
+				originX = "-79" originY = "-55" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "1"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/ancientplane/skygateevent2026_ancientplane_s_v1.png"
+				originX = "-79" originY = "-59" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+
+	</Asset>
+
+	<!-- Skygate Event 2026 - Helicopter  Change-->
+
+	<Asset name="skygateevent2026_heli" type="plane">
+	
+		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent name="steady"
+				colorMap="gfx/events/skygateevent2026/heli/skygateevent2026_heli_v0.png"
+				originX = "-52" originY = "-44" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+			/>
+
+			<SpriteRenderComponent name="animation"
+				colorMap="gfx/events/skygateevent2026/heli/anim/skygateevent2026_heli_v0_.swf"
+				originX = "-52" originY = "-44" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" preload="false"
+			/>
+
+			<ShadowMapComponent name="animation"
+				colorMap="gfx/events/skygateevent2026/heli/anim/skygateevent2026_heli_s_v0_.swf"
+				originX = "-65" originY = "-65" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" preload="false" boundingBox="false"
+			/>
+						
+		</ViewComponent>
+
+		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent name="steady"
+				colorMap="gfx/events/skygateevent2026/heli/skygateevent2026_heli_v1.png"
+				originX = "-63" originY = "-44" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+			/>
+
+			<SpriteRenderComponent name="animation"
+				colorMap="gfx/events/skygateevent2026/heli/anim/skygateevent2026_heli_v1_.swf"
+				originX = "-63" originY = "-44" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" preload="false"
+			/>
+
+			<ShadowMapComponent name="animation"
+				colorMap="gfx/events/skygateevent2026/heli/anim/skygateevent2026_heli_s_v1_.swf"
+				originX = "-78" originY = "-65" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" preload="false" boundingBox="false"
+			/>
+
+		</ViewComponent>
+
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="rotor" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="10" />
+
+	</Asset>
+
+	<!-- Skygate Event 2026 - BigBird -->
+	
+	<Asset name="skygateevent2026_bigbird" type="plane">
+
+		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/bigbird/skygateevent2026_bigbird_v0.png"
+				originX = "-139" originY = "-88" isoWidth = "72" isoLength = "75" isoHeight = "54" isoOffsetX = "-2" isoOffsetY = "-5" isoOffsetZ = "0"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/bigbird/skygateevent2026_bigbird_s_v0.png"
+				originX = "-184" originY = "-97" isoWidth = "29" isoLength = "71" isoHeight = "30" isoOffsetX = "13" isoOffsetY = "-11" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+
+		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/bigbird/skygateevent2026_bigbird_v1.png"
+				originX = "-130" originY = "-90" isoWidth = "58" isoLength = "94" isoHeight = "54" isoOffsetX = "16" isoOffsetY = "-20" isoOffsetZ = "0"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/bigbird/skygateevent2026_bigbird_s_v1.png"
+				originX = "-91" originY = "-97" isoWidth = "29" isoLength = "71" isoHeight = "30" isoOffsetX = "13" isoOffsetY = "-11" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="0" />
+
+	</Asset>	
+
+	<!-- Skygate Event 2026 - Seaplane -->
+	
+	<Asset name="skygateevent2026_seaplane" type="plane">
+
+		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/seaplane/skygateevent2026_seaplane_v1.png"
+				originX = "-79" originY = "-51" isoWidth = "59" isoLength = "58" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "1"
+			/>
+
+			<SpriteRenderComponent name="animation"
+				colorMap="gfx/events/skygateevent2026/seaplane/anim/skygateevent2026_seaplane_v1_.swf"
+				originX = "-79" originY = "-51" isoWidth = "59" isoLength = "58" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "1" preload="false"
+			/>
+	
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/seaplane/skygateevent2026_seaplane_s_v1.png"
+				originX = "-73" originY = "-46" isoWidth = "17" isoLength = "24" isoHeight = "30" isoOffsetX = "2" isoOffsetY = "5" isoOffsetZ = "0"
+			/>
+
+		</ViewComponent>
+		
+		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="55">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/seaplane/skygateevent2026_seaplane_v0.png"
+				originX = "-59" originY = "-46" isoWidth = "75" isoLength = "60" isoHeight = "54" isoOffsetX = "1" isoOffsetY = "0" isoOffsetZ = "0"
+			/>
+			
+			<SpriteRenderComponent name="animation"
+				colorMap="gfx/events/skygateevent2026/seaplane/anim/skygateevent2026_seaplane_v0_.swf"
+				originX = "-59" originY = "-46" isoWidth = "75" isoLength = "60" isoHeight = "54" isoOffsetX = "1" isoOffsetY = "0" isoOffsetZ = "0" preload="false"
+			/>
+			
+			<ShadowMapComponent colorMap="gfx/events/skygateevent2026/seaplane/skygateevent2026_seaplane_s_v0.png"
+				originX = "-73" originY = "-53" isoWidth = "24" isoLength = "25" isoHeight = "55" isoOffsetX = "23" isoOffsetY = "13" isoOffsetZ = "0"
+			/>
+
+		</ViewComponent>
+
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="prop" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+
+	</Asset>
+
+	<!-- Skygate Event 2026 - Zeppelin -->
+
+	<Asset name="skygateevent2026_zeppelin" type="plane">
+
+		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="30">
+		
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/zeppelin/skygateevent2026_zeppelin_v1.png"
+				originX="-65" originY="-62" isoWidth="99" isoLength="76" isoHeight="30" isoOffsetX="0" isoOffsetY="-4 " isoOffsetZ="1"
+			/>
+		
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/zeppelin/skygateevent2026_zeppelin_s_v1.png"
+				originX="-19" originY="-15" isoWidth="99" isoLength="76" isoHeight="30" isoOffsetX="0" isoOffsetY="-4 " isoOffsetZ="1"
+			/>
+
+		</ViewComponent>
+
+		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/zeppelin/skygateevent2026_zeppelin_v0.png"
+				originX="-76" originY="-69" isoWidth="64" isoLength="89" isoHeight="30" isoOffsetX="3" isoOffsetY="2" isoOffsetZ="0"
+			/>
+			
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/zeppelin/skygateevent2026_zeppelin_s_v0.png"
+				originX="-39" originY="-26" isoWidth="64" isoLength="89" isoHeight="30" isoOffsetX="3" isoOffsetY="2" isoOffsetZ="0"
+			/>
+
+		</ViewComponent>
+
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="balloon" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="-10" />
+
+	</Asset>
+
+	<!-- Skygate Event 2026 - Large Runway -->
+	
+	<Asset name="skygateevent2026_large_runway" type="runway">
+
+		<ViewComponent name="v0" dir="0">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/runway/skygateevent2026_large_runway_v0.png"
+				originX = "-95" originY = "-1" isoWidth = "480" isoLength = "96" isoHeight = "3" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" scene="UndergroundScene"
+			/>
+		
+			<SpriteRenderComponent name="landing_smoke"
+				colorMap="gfx/animations/landingsmoke/landingsmoke.swf"
+				originX = "-38" originY = "-13" isoWidth = "81" isoLength = "26" isoHeight = "2" isoOffsetX = "87" isoOffsetY = "34" isoOffsetZ = "1" boundingBox="false" animationAutoStart="false"
+			/>
+
+			<SpriteRenderComponent name="landing_smoke_big"
+				colorMap="gfx/animations/large_landingsmoke/large_landingsmoke_v1_.swf"
+				originX = "-56" originY = "-4" isoWidth = "233" isoLength = "83" isoHeight = "2" isoOffsetX = "-21" isoOffsetY = "-10" isoOffsetZ = "1" boundingBox="false" animationAutoStart="false"
+			/>
+
+			<OutlineComponent />
+
+		</ViewComponent>
+
+		<ViewComponent name="v1" dir="1">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/runway/skygateevent2026_large_runway_v1.png"
+				originX = "-479" originY = "-1" isoWidth = "98" isoLength = "480" isoHeight = "3" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" scene="UndergroundScene"
+			/>
+
+			<SpriteRenderComponent name="landing_smoke"
+				colorMap="gfx/animations/landingsmoke/landingsmoke_x.swf"
+				originX = "-158" originY = "-26" isoWidth = "81" isoLength = "26" isoHeight = "2" isoOffsetX = "41" isoOffsetY = "94" isoOffsetZ = "1" boundingBox="false" animationAutoStart="false"
+			/>
+
+			<SpriteRenderComponent name="landing_smoke_big"
+				colorMap="gfx/animations/large_landingsmoke/large_landingsmoke_v0_.swf"
+				originX = "-205" originY = "-8" isoWidth = "76" isoLength = "233" isoHeight = "2" isoOffsetX = "-3" isoOffsetY = "-24" isoOffsetZ = "0" boundingBox="false" animationAutoStart="false"
+			/>
+
+			<OutlineComponent />
+
+		</ViewComponent>
+
+		<PlaceableComponent />
+		<AircraftSlotComponent />
+		<RunwayComponent absoluteDirection="false"
+		startX_0="40"
+		startY_0="40"
+
+		landX_0="370"
+		landY_0="40"
+
+		startX_1="40"
+		startY_1="45"
+
+		landX_1="45"
+		landY_1="370"
+
+		z_Offset="400"
+		animation_time="8.5" ground_time="4.9" />
+		
+	</Asset>
+
+	<!-- Skygate Event 2026 - Skygate Stonegate -->
+
+	<Asset name="skygateevent2026_stonegate" type="landside_building">
+
+		<ViewComponent name="v0" dir="0">
+
+			<SpriteRenderComponent 
+				colorMap="gfx/events/skygateevent2026/stonegate/skygateevent2026_stonegate_v0.png"
+				originX="-65" originY="-64" isoWidth="47" isoLength="70" isoHeight="25" preload="false" isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/stonegate/skygateevent2026_stonegate_s_v0.png"
+				originX="-65" originY="-64" isoWidth="47" isoLength="70" isoHeight="25" isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" scene="UndergroundScene" boundingBox="false"
+			/>
+
+		</ViewComponent>
+
+		<ViewComponent name="v1" dir="1">
+
+			<SpriteRenderComponent 
+				colorMap="gfx/events/skygateevent2026/stonegate/skygateevent2026_stonegate_v1.png"
+				originX="-42" originY="-63" isoWidth="71" isoLength="47" isoHeight="25"  preload="false" isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/stonegate/skygateevent2026_stonegate_s_v1.png"
+				originX="-42" originY="-63" isoWidth="71" isoLength="47" isoHeight="25" isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" scene="UndergroundScene" boundingBox="false"
+			/>
+			
+		</ViewComponent>
+
+		<PlaceableComponent />
+		<LandsideBuildingComponent />
+		<LandsideBuildingInfoComponent popUpX="-40" popUpY="-60" />
+
+	</Asset>
+
+	<!-- Skygate Event 2026 - Medium Runway -->
+
+	<Asset name="skygateevent2026_medium_runway" type="runway">
+
+		<ViewComponent name="v0" dir="0">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/runway_medium/skygateevent2026_medium_runway_v0.png"
+				originX = "-72" originY = "0" isoWidth = "410" isoLength = "74" isoHeight = "3" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" scene="UndergroundScene" />
+
+			<SpriteRenderComponent name="landing_smoke"
+				colorMap="gfx/animations/landingsmoke/landingsmoke.swf"
+				originX="0" originY="0" isoWidth="81" isoLength="26" isoHeight="2" isoOffsetX="17" isoOffsetY="30" isoOffsetZ="1" boundingBox="false" animationAutoStart="false" />
+			<OutlineComponent />
+
+		</ViewComponent>
+
+		<ViewComponent name="v1" dir="1">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/runway_medium/skygateevent2026_medium_runway_v1.png"
+				originX = "-380" originY = "0" isoWidth = "71" isoLength = "407" isoHeight = "3" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" scene="UndergroundScene" />
+
+			<SpriteRenderComponent name="landing_smoke"
+				colorMap="gfx/animations/landingsmoke/landingsmoke_x.swf"
+				originX="0" originY="0" isoWidth="81" isoLength="26" isoHeight="2" isoOffsetX="-75" isoOffsetY="105" isoOffsetZ="1" boundingBox="false" animationAutoStart="false" />
+			<OutlineComponent />
+
+		</ViewComponent>
+		
+		<PlaceableComponent />
+		<AircraftSlotComponent />
+		<RunwayComponent absoluteDirection="false" startX_0="30" startY_0="30" landX_0="350" landY_0="30" startX_1="30" startY_1="24" landX_1="30" landY_1="350" />
+	</Asset>
+
+	<!-- Skygate Event 2026 - Small Runway -->
+
+	<Asset name="skygateevent2026_small_runway" type="runway">
+
+		<ViewComponent name="v0" dir="0">
+	
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/runway_small/skygateevent2026_small_runway_v0.png"
+				originX="-78" originY="-2" isoWidth="282" isoLength="74" isoHeight="3" isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" scene="UndergroundScene" />
+
+			<SpriteRenderComponent name="landing_smoke"
+				colorMap="gfx/animations/landingsmoke/landingsmoke.swf"
+				originX="-38" originY="-13" isoWidth="81" isoLength="26" isoHeight="2" isoOffsetX="36" isoOffsetY="19" isoOffsetZ="1" boundingBox="false" animationAutoStart="false" />
+			<OutlineComponent />
+
+		</ViewComponent>
+
+		<ViewComponent name="v1" dir="1">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/runway_small/skygateevent2026_small_runway_v1.png"
+				originX="-290" originY="-1" isoWidth="73" isoLength="285" isoHeight="3" isoOffsetX="0" isoOffsetY="0" isoOffsetZ="0" scene="UndergroundScene" />
+
+			<SpriteRenderComponent name="landing_smoke"
+				colorMap="gfx/animations/landingsmoke/landingsmoke_x.swf"
+				originX="-158" originY="-26" isoWidth="81" isoLength="26" isoHeight="2" isoOffsetX="36" isoOffsetY="26" isoOffsetZ="1" boundingBox="false" animationAutoStart="false" />
+			<OutlineComponent />
+
+		</ViewComponent>
+
+		<PlaceableComponent />
+		<AircraftSlotComponent />
+		<RunwayComponent absoluteDirection="false" startX_0="30" startY_0="24" landX_0="230" landY_0="24" startX_1="30" startY_1="24" landX_1="30" landY_1="224" />
+	</Asset>
+
+	<!-- Birthday Event > Skygate Style 2026 - BigBird Silver -->
+	
+	<Asset name="skygateevent2026_bigbird_silver" type="plane">
+
+		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/bigbird_silver/skygateevent2026_bigbird_silver_v0.png"
+				originX = "-139" originY = "-88" isoWidth = "72" isoLength = "75" isoHeight = "54" isoOffsetX = "-2" isoOffsetY = "-5" isoOffsetZ = "0"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/bigbird_silver/skygateevent2026_bigbird_silver_s_v0.png"
+				originX = "-184" originY = "-97" isoWidth = "29" isoLength = "71" isoHeight = "30" isoOffsetX = "13" isoOffsetY = "-11" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+
+		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/bigbird_silver/skygateevent2026_bigbird_silver_v1.png"
+				originX = "-130" originY = "-90" isoWidth = "58" isoLength = "94" isoHeight = "54" isoOffsetX = "16" isoOffsetY = "-20" isoOffsetZ = "0"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/bigbird_silver/skygateevent2026_bigbird_silver_s_v1.png"
+				originX = "-91" originY = "-97" isoWidth = "29" isoLength = "71" isoHeight = "30" isoOffsetX = "13" isoOffsetY = "-11" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="0" />
+
+	</Asset>	
+
+	<!-- Birthday Event > Skygate Style 2026 - Arado -->
+
+	<Asset name="skygateevent2026_arado" type="plane">
+
+		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/arado/skygateevent2026_arado_v0.png"
+				originX = "-94" originY = "-67" isoWidth = "48" isoLength = "48" isoHeight = "54" isoOffsetX = "14" isoOffsetY = "3" isoOffsetZ = "0"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/arado/skygateevent2026_arado_s_v0.png"
+				originX = "-92" originY = "-63" isoWidth = "48" isoLength = "48" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "6" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+
+		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/arado/skygateevent2026_arado_v1.png"
+				originX = "-62" originY = "-54" isoWidth = "48" isoLength = "48" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "6" isoOffsetZ = "0"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/arado/skygateevent2026_arado_s_v1.png"
+				originX = "-63" originY = "-57" isoWidth = "48" isoLength = "48" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "6" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet" />
 		<AircraftBarComponent popUpX="19" popUpY="22" />
 		<ProfileTagComponent assetY="20" />
 	</Asset>
+
+	<!-- Birthday Event > Skygate Style 2026 - Summer Arado -->
+
+	<Asset name="skygateevent2026_summer_arado" type="plane">
+
+		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/summer_arado/skygateevent2026_summer_arado_v0.png"
+				originX = "-94" originY = "-67" isoWidth = "48" isoLength = "48" isoHeight = "54" isoOffsetX = "14" isoOffsetY = "3" isoOffsetZ = "0"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/summer_arado/skygateevent2026_summer_arado_s_v0.png"
+				originX = "-92" originY = "-63" isoWidth = "48" isoLength = "48" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "6" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+
+		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/summer_arado/skygateevent2026_summer_arado_v1.png"
+				originX = "-62" originY = "-54" isoWidth = "48" isoLength = "48" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "6" isoOffsetZ = "0"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/summer_arado/skygateevent2026_summer_arado_s_v1.png"
+				originX = "-63" originY = "-57" isoWidth = "48" isoLength = "48" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "6" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+	</Asset>
+
+
+	<!-- Birthday Event > Skygate Style 2026 - Summer Jet -->
+	
+	<Asset name="skygateevent2026_summer_jet" type="plane">
+	
+		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="30">
+		
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/summer_jet/skygateevent2026_summer_jet_v0.png"
+				originX = "-59" originY = "-21" isoWidth = "48" isoLength = "48" isoHeight = "54" isoOffsetX = "12" isoOffsetY = "3" isoOffsetZ = "0"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/summer_jet/skygateevent2026_summer_jet_s_v0.png"
+				originX = "-55" originY = "-20" isoWidth = "48" isoLength = "48" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "6" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+		
+		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/summer_jet/skygateevent2026_summer_jet_v1.png"
+				originX = "-36" originY = "-21" isoWidth = "48" isoLength = "48" isoHeight = "54" isoOffsetX = "0" isoOffsetY = "6" isoOffsetZ = "0"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/summer_jet/skygateevent2026_summer_jet_s_v1.png"
+				originX = "-36" originY = "-25" isoWidth = "48" isoLength = "48" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "6" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+		
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet" landingAnimation="none"/>
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+
+	</Asset>
+
+	<!-- Birthday Event > Skygate Style 2026 - Summer Cargo -->
+	
+	<Asset name="skygateevent2026_summer_cargo" type="plane">
+
+		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/summer_cargo/skygateevent2026_summer_cargo_v0.png"
+				originX = "-139" originY = "-88" isoWidth = "72" isoLength = "75" isoHeight = "54" isoOffsetX = "-2" isoOffsetY = "-5" isoOffsetZ = "0"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/summer_cargo/skygateevent2026_summer_cargo_s_v0.png"
+				originX = "-184" originY = "-97" isoWidth = "29" isoLength = "71" isoHeight = "30" isoOffsetX = "13" isoOffsetY = "-11" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+
+		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/summer_cargo/skygateevent2026_summer_cargo_v1.png"
+				originX = "-130" originY = "-90" isoWidth = "58" isoLength = "94" isoHeight = "54" isoOffsetX = "16" isoOffsetY = "-20" isoOffsetZ = "0"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/summer_cargo/skygateevent2026_summer_cargo_s_v1.png"
+				originX = "-91" originY = "-97" isoWidth = "29" isoLength = "71" isoHeight = "30" isoOffsetX = "13" isoOffsetY = "-11" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+
+	</Asset>	
+
+	<!-- Birthday Event > Skygate Style 2026 - Summer Seaplane -->
+		
+	<Asset name="skygateevent2026_summer_seaplane" type="plane">
+		
+		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent 
+				colorMap="gfx/events/skygateevent2026/summer_seaplane/skygateevent2026_summer_seaplane_v0.png"
+				originX="-28" originY="-4" preload="false" isoOffsetZ="1"
+			/>
+			
+			<SpriteRenderComponent name="animation"
+				colorMap="gfx/events/skygateevent2026/summer_seaplane/anim/skygateevent2026_summer_seaplane_v0_.swf"
+				originX="-28" originY="-4" preload="false" isoOffsetZ="1"
+			/>
+			
+			<ShadowMapComponent 
+				colorMap="gfx/events/skygateevent2026/summer_seaplane/skygateevent2026_summer_seaplane_s_v0.png"
+				originX="-29" originY="-9"
+			/>
+
+		</ViewComponent>
+		
+		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/summer_seaplane/skygateevent2026_summer_seaplane_v1.png"
+				originX="-45" originY="-2" preload="false" isoOffsetZ="1"
+			/>
+			
+			<SpriteRenderComponent name="animation"
+				colorMap="gfx/events/skygateevent2026/summer_seaplane/anim/skygateevent2026_summer_seaplane_v1_.swf"
+				originX="-45" originY="-2" preload="false" isoOffsetZ="1"
+			/>
+			
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/summer_seaplane/skygateevent2026_summer_seaplane_s_v1.png"
+				originX="-49" originY="-6"
+			/>
+
+		</ViewComponent>
+		
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="prop" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+
+	</Asset>
+
+	<!-- Birthday Event > Skygate Style 2026 - Summer Smallplane -->
+	
+	<Asset name="skygateevent2026_summer_smallplane" type="plane">
+	
+		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/summer_smallplane/skygateevent2026_summer_smallplane_v0.png"
+				originX = "-69" originY = "-42" isoWidth = "48" isoLength = "48" isoHeight = "54" isoOffsetX = "12" isoOffsetY = "3" isoOffsetZ = "0"
+			/>
+
+			<SpriteRenderComponent name="animation"
+				colorMap="gfx/events/skygateevent2026/summer_smallplane/anim/skygateevent2026_summer_smallplane_v0_.swf"
+				originX = "-69" originY = "-42" isoWidth = "48" isoLength = "48" isoHeight = "54" isoOffsetX = "12" isoOffsetY = "3" isoOffsetZ = "0" preload="false"
+			/>
+			
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/summer_smallplane/skygateevent2026_summer_smallplane_s_v0.png"
+				originX = "-74" originY = "-42" isoWidth = "48" isoLength = "48" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "6" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+		
+		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+			
+			<SpriteRenderComponent
+				colorMap="gfx/events/skygateevent2026/summer_smallplane/skygateevent2026_summer_smallplane_v1.png"
+				originX = "-61" originY = "-30" isoWidth = "48" isoLength = "48" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "6" isoOffsetZ = "0"
+			/>
+
+			<SpriteRenderComponent name="animation"
+				colorMap="gfx/events/skygateevent2026/summer_smallplane/anim/skygateevent2026_summer_smallplane_v1_.swf"
+				originX = "-61" originY = "-30" isoWidth = "48" isoLength = "48" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "6" isoOffsetZ = "0" preload="false"
+			/>
+			
+			<ShadowMapComponent
+				colorMap="gfx/events/skygateevent2026/summer_smallplane/skygateevent2026_summer_smallplane_s_v1.png"
+				originX = "-74" originY = "-36" isoWidth = "48" isoLength = "48" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "6" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="prop" landingAnimation="none"/>
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+
+	</Asset>
+
+	<!-- Birthday Event 2026 > Birthday Tower -->
+	
+	<Asset name="birthdaytower_2026" type="landside_building">
+
+		<ViewComponent name="v0" dir="0">
+
+			<SpriteRenderComponent
+				colorMap="gfx/buildings/birthday_tower_2026/tower_birthday_2026_v0.png"
+				originX = "-72" originY = "-93" isoWidth = "65" isoLength = "65" isoHeight = "25" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0"
+			/>
+			
+			<ShadowMapComponent
+				colorMap="gfx/buildings/birthday_tower_2026/tower_birthday_2026_s_v0.png"
+				originX = "7" originY = "-16" isoWidth = "52" isoLength = "44" isoHeight = "1" isoOffsetX = "13" isoOffsetY = "15" isoOffsetZ = "0" scene="UndergroundScene" boundingBox="false"
+			/>
+
+		</ViewComponent>
+
+		<ViewComponent name="v1" dir="1">
+
+			<SpriteRenderComponent
+				colorMap="gfx/buildings/birthday_tower_2026/tower_birthday_2026_v1.png"
+				originX = "-72" originY = "-84" isoWidth = "65" isoLength = "65" isoHeight = "25" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" 
+			/>
+			
+			<ShadowMapComponent
+				colorMap="gfx/buildings/birthday_tower_2026/tower_birthday_2026_s_v1.png"
+				originX = "0" originY = "-14" isoWidth = "42" isoLength = "55" isoHeight = "1" isoOffsetX = "14" isoOffsetY = "9" isoOffsetZ = "0" scene="UndergroundScene" boundingBox="false"
+			/>
+
+		</ViewComponent>
+
+		<PlaceableComponent />
+		<LandsideBuildingComponent />
+		<LandsideBuildingInfoComponent popUpX="-40" popUpY="-60" />
+		
+	</Asset>
+
+	<!-- LARGE RUNWAY BIRTHDAY 2026 -->
+	
+	<Asset name="airstrip_birthday2026_large" type="runway">
+		
+		<ViewComponent name="v0" dir="0">
+
+			<SpriteRenderComponent
+			colorMap="gfx/buildings/airstrip_birthday2026_large/birthday_large_runway2026_v0.png"
+			originX = "-95" originY = "-1" isoWidth = "480" isoLength = "96" isoHeight = "3" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" scene="UndergroundScene"
+			/>
+
+			<SpriteRenderComponent
+				colorMap="gfx/buildings/airstrip_birthday2026_large/anim/birthday_runway_v0_.swf"
+				originX = "-28" originY = "31" isoWidth = "480" isoLength = "96" isoHeight = "3" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+			<SpriteRenderComponent name="landing_smoke"
+				colorMap="gfx/animations/landingsmoke/landingsmoke.swf"
+				originX = "-38" originY = "-13" isoWidth = "81" isoLength = "26" isoHeight = "2" isoOffsetX = "87" isoOffsetY = "34" isoOffsetZ = "1" boundingBox="false" animationAutoStart="false"
+			/>
+
+			<SpriteRenderComponent name="landing_smoke_big"
+				colorMap="gfx/animations/large_landingsmoke/large_landingsmoke_v1_.swf"
+				originX = "-56" originY = "-4" isoWidth = "233" isoLength = "83" isoHeight = "2" isoOffsetX = "-21" isoOffsetY = "-10" isoOffsetZ = "1" boundingBox="false" animationAutoStart="false"
+			/>
+
+			<OutlineComponent />
+
+		</ViewComponent>
+
+		<ViewComponent name="v1" dir="1">
+		
+			<SpriteRenderComponent
+			colorMap="gfx/buildings/airstrip_birthday2026_large/birthday_large_runway2026_v1.png"
+			originX = "-479" originY = "-1" isoWidth = "98" isoLength = "480" isoHeight = "3" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" scene="UndergroundScene"
+			/>
+
+			<SpriteRenderComponent
+				colorMap="gfx/buildings/airstrip_birthday2026_large/anim/birthday_runway_v1_.swf"
+				originX = "-357" originY = "30" isoWidth = "98" isoLength = "480" isoHeight = "3" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+			<SpriteRenderComponent name="landing_smoke"
+				colorMap="gfx/animations/landingsmoke/landingsmoke_x.swf"
+				originX = "-158" originY = "-26" isoWidth = "81" isoLength = "26" isoHeight = "2" isoOffsetX = "41" isoOffsetY = "94" isoOffsetZ = "1" boundingBox="false" animationAutoStart="false"
+			/>
+
+			<SpriteRenderComponent name="landing_smoke_big"
+				colorMap="gfx/animations/large_landingsmoke/large_landingsmoke_v0_.swf"
+				originX = "-205" originY = "-8" isoWidth = "76" isoLength = "233" isoHeight = "2" isoOffsetX = "-3" isoOffsetY = "-24" isoOffsetZ = "0" boundingBox="false" animationAutoStart="false"
+			/>
+
+			<OutlineComponent />
+
+		</ViewComponent>
+
+		<PlaceableComponent />
+		<AircraftSlotComponent />
+		<RunwayComponent 
+			absoluteDirection="false" startX_0="40" startY_0="40" landX_0="370" landY_0="40" startX_1="40" startY_1="45" landX_1="45" landY_1="370" z_Offset="400" animation_time="8.5" ground_time="4.9"
+		/>
+	</Asset>	
+
+	<!-- Luxury Planes 2026 - Silver Jet -->
+	
+	<Asset name="luxury_jet_silver" type="plane">
+	
+		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="30">
+		
+			<SpriteRenderComponent
+				colorMap="gfx/planes/luxury_jet_silver/luxury_jet_silver_v0.png"
+				originX = "-73" originY = "-30" isoWidth = "48" isoLength = "48" isoHeight = "54" isoOffsetX = "12" isoOffsetY = "3" isoOffsetZ = "0"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/planes/luxury_jet_silver/luxury_jet_silver_s_v0.png"
+				originX = "-48" originY = "-24" isoWidth = "48" isoLength = "48" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "6" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+		
+		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/planes/luxury_jet_silver/luxury_jet_silver_v1.png"
+				originX = "-36" originY = "-36" isoWidth = "48" isoLength = "48" isoHeight = "54" isoOffsetX = "0" isoOffsetY = "6" isoOffsetZ = "0"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/planes/luxury_jet_silver/luxury_jet_silver_s_v1.png"
+				originX = "-36" originY = "-36" isoWidth = "48" isoLength = "48" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "6" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+		
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet"/>
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+
+	</Asset>
+
+	<!-- Luxury Planes 2026 - Silver Jet Upgrade-->
+	
+	<Asset name="luxury_jet_silver_2102594" type="plane">
+	
+		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="30">
+		
+			<SpriteRenderComponent
+				colorMap="gfx/planes/luxury_jet_silver/upgrade/luxury_jet_black_v0.png"
+				originX = "-73" originY = "-30" isoWidth = "48" isoLength = "48" isoHeight = "54" isoOffsetX = "12" isoOffsetY = "3" isoOffsetZ = "0"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/planes/luxury_jet_silver/luxury_jet_silver_s_v0.png"
+				originX = "-48" originY = "-24" isoWidth = "48" isoLength = "48" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "6" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+		
+		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/planes/luxury_jet_silver/upgrade/luxury_jet_black_v1.png"
+				originX = "-36" originY = "-36" isoWidth = "48" isoLength = "48" isoHeight = "54" isoOffsetX = "0" isoOffsetY = "6" isoOffsetZ = "0"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/planes/luxury_jet_silver/luxury_jet_silver_s_v1.png"
+				originX = "-36" originY = "-36" isoWidth = "48" isoLength = "48" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "6" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+		
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet"/>
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+
+	</Asset>
+
+	<!-- Luxury Planes 2026 - Medium Plane -->
+	
+	<Asset name="luxury_medium_silver" type="plane">
+	
+		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="30">
+		
+			<SpriteRenderComponent
+				colorMap="gfx/planes/luxury_medium_silver/luxury_medium_silver_v0.png"
+				originX = "-94" originY = "-60" isoWidth = "60" isoLength = "74" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "1"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/planes/luxury_medium_silver/luxury_medium_silver_s_v0.png"
+				originX = "-94" originY = "-60" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+		
+		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/planes/luxury_medium_silver/luxury_medium_silver_v1.png"
+				originX = "-86" originY = "-69" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "1"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/planes/luxury_medium_silver/luxury_medium_silver_s_v1.png"
+				originX = "-86" originY = "-69" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+		
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet"/>
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+
+	</Asset>
+
+	<!-- Luxury Planes 2026 - Medium Plane Upgrade -->
+	
+	<Asset name="luxury_medium_silver_2102594" type="plane">
+	
+		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="30">
+		
+			<SpriteRenderComponent
+				colorMap="gfx/planes/luxury_medium_silver/upgrade/luxury_medium_black_v0.png"
+				originX = "-94" originY = "-60" isoWidth = "60" isoLength = "74" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "1"
+			/>
+			
+			<ShadowMapComponent
+				colorMap="gfx/planes/luxury_medium_silver/luxury_medium_silver_s_v0.png"
+				originX = "-94" originY = "-60" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" boundingBox="false"
+			/>
+			
+		</ViewComponent>
+		
+		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/planes/luxury_medium_silver/upgrade/luxury_medium_black_v1.png"
+				originX = "-86" originY = "-69" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "1"
+			/>
+			
+			<ShadowMapComponent
+				colorMap="gfx/planes/luxury_medium_silver/luxury_medium_silver_s_v1.png"
+				originX = "-86" originY = "-69" isoWidth = "55" isoLength = "55" isoHeight = "30" isoOffsetX = "0" isoOffsetY = "0" isoOffsetZ = "0" boundingBox="false"
+			/>
+			
+		</ViewComponent>
+		
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet"/>
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+
+	</Asset>
+
+	<!-- Luxury Planes 2026 - Large Plane -->
+	
+	<Asset name="luxury_large_silver" type="plane">
+
+		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/planes/luxury_large_silver/luxury_large_silver_v0.png"
+				originX = "-141" originY = "-82" isoWidth = "72" isoLength = "75" isoHeight = "54" isoOffsetX = "-2" isoOffsetY = "-5" isoOffsetZ = "1"
+			/>
+			
+			<ShadowMapComponent
+				colorMap="gfx/planes/luxury_large_silver/luxury_large_silver_s_v0.png"
+				originX = "-141" originY = "-82" isoWidth = "72" isoLength = "75" isoHeight = "54" isoOffsetX = "-2" isoOffsetY = "-5" isoOffsetZ = "0" boundingBox="false"
+			/>
+			
+		</ViewComponent>
+
+		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/planes/luxury_large_silver/luxury_large_silver_v1.png"
+				originX = "-148" originY = "-92" isoWidth = "58" isoLength = "94" isoHeight = "54" isoOffsetX = "16" isoOffsetY = "-20" isoOffsetZ = "1"
+			/>
+			
+			<ShadowMapComponent
+				colorMap="gfx/planes/luxury_large_silver/luxury_large_silver_s_v1.png"
+				originX = "-148" originY = "-92" isoWidth = "58" isoLength = "94" isoHeight = "54" isoOffsetX = "16" isoOffsetY = "-20" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+	</Asset>	
+
+	<!-- Luxury Planes 2026 - Large Plane Upgrade -->
+	
+	<Asset name="luxury_large_silver_2102594" type="plane">
+
+		<ViewComponent name="v0" dir="0" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/planes/luxury_large_silver/upgrade/luxury_large_black_v0.png"
+				originX = "-141" originY = "-82" isoWidth = "72" isoLength = "75" isoHeight = "54" isoOffsetX = "-2" isoOffsetY = "-5" isoOffsetZ = "1"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/planes/luxury_large_silver/luxury_large_silver_s_v0.png"
+				originX = "-141" originY = "-82" isoWidth = "72" isoLength = "75" isoHeight = "54" isoOffsetX = "-2" isoOffsetY = "-5" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+
+		<ViewComponent name="v1" dir="1" isoWidth="55" isoLength="55" isoHeight="30">
+
+			<SpriteRenderComponent
+				colorMap="gfx/planes/luxury_large_silver/upgrade/luxury_large_black_v1.png"
+				originX = "-148" originY = "-92" isoWidth = "58" isoLength = "94" isoHeight = "54" isoOffsetX = "16" isoOffsetY = "-20" isoOffsetZ = "1"
+			/>
+
+			<ShadowMapComponent
+				colorMap="gfx/planes/luxury_large_silver/luxury_large_silver_s_v1.png"
+				originX = "-148" originY = "-92" isoWidth = "58" isoLength = "94" isoHeight = "54" isoOffsetX = "16" isoOffsetY = "-20" isoOffsetZ = "0" boundingBox="false"
+			/>
+
+		</ViewComponent>
+
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+	</Asset>	
+
 </Assets>

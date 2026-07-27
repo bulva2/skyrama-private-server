@@ -325,6 +325,12 @@
 		<mapTile asset="gfx/backgrounds/winter2025/sky1_ground.png" />
 	</background>		
 	
+	<background name="skygateevent2026_background">
+		<top asset="gfx/backgrounds/skygateevent2026/sky1_top.png" />
+		<horizon asset="gfx/backgrounds/skygateevent2026/sky1_middle.png" />
+		<mapTile asset="gfx/backgrounds/skygateevent2026/sky1_ground.png" />
+	</background>		
+
 	<landmark name="berlin" asset="gfx/backgrounds/landmarks/berlin.png" x="910" y="168" />
 	<landmark name="new_york" asset="gfx/backgrounds/landmarks/new_york.png" x="910" y="168" />
 	<landmark name="california" asset="gfx/backgrounds/landmarks/california.png" x="910" y="168" />

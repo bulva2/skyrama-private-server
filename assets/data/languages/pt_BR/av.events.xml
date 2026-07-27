@@ -264,9 +264,9 @@
  </category>
  
  <category name="av.birthdayevent2025">
-  <item name="av.birthdayevent2025.title"><![CDATA[Saturday Nightflight]]></item>
-  <item name="av.birthdayevent2025.text"><![CDATA[Skyrama faz 14 anos – cabelo loiro é opcional. As coxas tremem, o beat vibra e os pneuzinhos dançam no ritmo. Brinde com um Aerosol Spritz borbulhante e outros drinks safadinhos nessa festa de aniversário nas alturas. Corra para a pista e deslize direto para o prazer!]]></item>
-  <item name="av.birthdayevent2025.mouseover"><![CDATA[Luz apagada, holofote aceso! O Saturday Nightflight vai decolar – destino: zona do biquíni ultrassecreta. Entrada só com rebolado autorizado!]]></item>
+  <item name="av.birthdayevent2025.title"><![CDATA[Skyrama Birthday]]></item>
+  <item name="av.birthdayevent2025.text"><![CDATA[Skyrama faz 15 anos – cabelo loiro é opcional. As coxas tremem, o beat vibra e os pneuzinhos dançam no ritmo. Brinde com um Aerosol Spritz borbulhante e outros drinks safadinhos nessa festa de aniversário nas alturas. Corra para a pista e deslize direto para o prazer!]]></item>
+  <item name="av.birthdayevent2025.mouseover"><![CDATA[Luz apagada, holofote aceso! O Skyrama Birthday vai decolar – destino: zona do biquíni ultrassecreta. Entrada só com rebolado autorizado!]]></item>
  </category> 
 
  <category name="av.winterevent2025">
@@ -274,5 +274,11 @@
   <item name="av.winterevent2025.text"><![CDATA[Neve no telhado mas ainda aquele calor gostoso no forno. A hora perfeita para subir nos aviões de férias já abastecidos, tomar um bom gole de vinho quente e devolver um pouco de flexibilidade para esses membros que ficaram meio duros. O ar está gelado, mas suas bochechas brilham como em uma segunda primavera. Siga para a pista e deixe se levar por uma aventura de fogo e gelo que não vai deixar ninguém no cockpit indiferente.]]></item>
   <item name="av.winterevent2025.mouseover"><![CDATA[Bochechas quentes e pontas frias. Perfeito para pilotos com aquele toque especial.]]></item>
  </category>
- 
+
+ <category name="av.skygateevent2026">
+  <item name="av.skygateevent2026.title"><![CDATA[Semanas Skygate]]></item>
+  <item name="av.skygateevent2026.text"><![CDATA[Calor escaldante na pele e portais que estão apenas esperando para te catapultar a alturas inimagináveis. Suba em aeronaves de uma galáxia distante e dispare através do espaço e do tempo até que até mesmo o seu pulso perca a gravidade da Terra. Culturas estrangeiras, horizontes desconhecidos e uma aventura que certamente vai te levar a esferas mais altas. Marquinha de biquíni incluída.]]></item>
+  <item name="av.skygateevent2026.mouseover"><![CDATA[Gilde Prime convida para um banho de sol. Fator de proteção galáctico recomendado.]]></item>
+ </category>
+
 </language>

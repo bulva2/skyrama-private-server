@@ -92,7 +92,7 @@
   <item name="av.building.berlin"><![CDATA[Sevärdhet från Berlin]]></item>
   <item name="av.building.canada"><![CDATA[Sevärdhet från Kanada]]></item>
   <item name="av.building.london"><![CDATA[Sevärdhet från London]]></item>
-  <item name="av.building.new_york"><![CDATA[Sevärdhet från New York]]></item>
+  <item name="av.building.new_york"><![CDATA[Sevärdhet från New Begränsad upplagaork]]></item>
   <item name="av.building.fence1"><![CDATA[Staket 1]]></item>
   <item name="av.building.fence2"><![CDATA[Staket 2]]></item>
   <item name="av.building.fence3"><![CDATA[Staket 3]]></item>
@@ -189,7 +189,7 @@
   <item name="av.building.flour"><![CDATA[Mjöl]]></item>
   <item name="av.building.silver"><![CDATA[Silver]]></item>
   <item name="av.building.eggs"><![CDATA[Ägg]]></item>
-  <item name="av.building.wool"><![CDATA[Ylle]]></item>
+  <item name="av.building.wool"><![CDATA[Begränsad upplagalle]]></item>
   <item name="av.building.solarpowerstation"><![CDATA[Solkraftverk]]></item>
   <item name="av.building.bonsai"><![CDATA[Bonsai]]></item>
   <item name="av.building.cherrytree"><![CDATA[Körsbärsträd]]></item>
@@ -436,7 +436,7 @@
   <item name="av.building.plural.berlin"><![CDATA[Sevärdheter från Berlin]]></item>
   <item name="av.building.plural.canada"><![CDATA[Sevärdheter från Kanada]]></item>
   <item name="av.building.plural.london"><![CDATA[Sevärdheter från London]]></item>
-  <item name="av.building.plural.new_york"><![CDATA[Sevärdheter från New York]]></item>
+  <item name="av.building.plural.new_york"><![CDATA[Sevärdheter från New Begränsad upplagaork]]></item>
   <item name="av.building.plural.fence1"><![CDATA[Staket 1]]></item>
   <item name="av.building.plural.fence2"><![CDATA[Staket 2]]></item>
   <item name="av.building.plural.fence3"><![CDATA[Staket 3]]></item>
@@ -771,7 +771,7 @@
   <item name="av.building.mostwanted022015_medium_plane1"><![CDATA[Tupperlew154]]></item>
   <item name="av.building.mostwanted022015_medium_plane2"><![CDATA[Skydart-62]]></item>
   <item name="av.building.mostwanted022015_cargo_plane1"><![CDATA[Boiling C17]]></item>
-  <item name="av.building.mostwanted022015_cargo_plane2"><![CDATA[Super Yuppy]]></item>
+  <item name="av.building.mostwanted022015_cargo_plane2"><![CDATA[Super Begränsad upplagauppy]]></item>
   <item name="av.building.mostwanted022015_helicopter1"><![CDATA[Ding-Dong22]]></item>
   <item name="av.building.mostwanted022015_helicopter2"><![CDATA[Stratos 4]]></item>
   <item name="av.building.mostwanted022015_seaplane1"><![CDATA[Törndykare]]></item>
@@ -844,7 +844,7 @@
   <item name="av.building.waterplanes082015_background"><![CDATA[Vackert landskap]]></item>
   <item name="av.building.waterplanes082015_small_plane1"><![CDATA[Skuldervingsplan G-21]]></item>
   <item name="av.building.waterplanes082015_small_plane2"><![CDATA[Cessnair CN-280]]></item>
-  <item name="av.building.waterplanes082015_small_plane3"><![CDATA[Pionair YL-SL1]]></item>
+  <item name="av.building.waterplanes082015_small_plane3"><![CDATA[Pionair Begränsad upplagaL-SL1]]></item>
   <item name="av.building.waterplanes082015_small_plane4"><![CDATA[Jetstream HP-1]]></item>
   <item name="av.building.waterplanes082015_medium_plane1"><![CDATA[Amfibi-O B-200]]></item>
   <item name="av.building.waterplanes082015_medium_plane2"><![CDATA[Aviolandare D-42]]></item>
@@ -922,8 +922,8 @@
   <item name="av.building.wildlifeevent042016_deco"><![CDATA[Elefantballong]]></item>
   <item name="av.building.wildlifeevent042016_tech_deco"><![CDATA[Safaribil]]></item>
   <item name="av.building.wildlifeevent042016_background"><![CDATA[Savann]]></item>
-  <item name="av.building.wildlifeevent042016_small_plane1"><![CDATA[Monark BT-FLY]]></item>
-  <item name="av.building.wildlifeevent042016_small_plane2"><![CDATA[Y-Kräl]]></item>
+  <item name="av.building.wildlifeevent042016_small_plane1"><![CDATA[Monark BT-FLBegränsad upplaga]]></item>
+  <item name="av.building.wildlifeevent042016_small_plane2"><![CDATA[Begränsad upplaga-Kräl]]></item>
   <item name="av.building.wildlifeevent042016_small_plane3"><![CDATA[Kryp-shuttle]]></item>
   <item name="av.building.wildlifeevent042016_medium_plane1"><![CDATA[Stryper-2B]]></item>
   <item name="av.building.wildlifeevent042016_medium_plane2"><![CDATA[LPD Rov]]></item>
@@ -1073,6 +1073,7 @@
   <item name="av.building.airstrip_birthday2023_large"><![CDATA[Stor födelsedagslandningsbana]]></item>
   <item name="av.building.airstrip_birthday2024_large"><![CDATA[Stor födelsedagslandningsbana]]></item>
   <item name="av.building.airstrip_birthday2025_large"><![CDATA[Stor födelsedagslandningsbana]]></item>
+  <item name="av.building.airstrip_birthday2026_large"><![CDATA[Stor födelsedagslandningsbana]]></item>
   
   <item name="av.building.smallplane_mm_2022"><![CDATA[Ja-Lopy]]></item>
   <item name="av.building.madmax2022_background"><![CDATA[Framtidsbakgrund]]></item>
@@ -1135,7 +1136,7 @@
   <item name="av.building.halloween2024_777"><![CDATA[Fr4nk-Enst31n]]></item>
   
   <item name="av.building.spaceevent2024_rocket"><![CDATA[L4G0-R0K-3T]]></item>
-  <item name="av.building.spaceevent2024_large_runway"><![CDATA[RUN-W4Y]]></item>
+  <item name="av.building.spaceevent2024_large_runway"><![CDATA[RUN-W4Begränsad upplaga]]></item>
   <item name="av.building.spaceevent2024_largeplane"><![CDATA[SP4C3-LP]]></item>
   <item name="av.building.spaceevent2024_mediumplane"><![CDATA[SP4C3-MP]]></item>
   <item name="av.building.spaceevent2024_jet"><![CDATA[SP4C3-J3T]]></item>
@@ -1176,10 +1177,41 @@
   <item name="av.building.winterevent2025_firedeco"><![CDATA[Molten Pillar]]></item>
   <item name="av.building.winterevent2025_icedeco"><![CDATA[Frozen Pillar]]></item>
   <item name="av.building.winterevent2025_iceloon"><![CDATA[Chill McDrift]]></item>
-  <item name="av.building.winterevent2025_plane05"><![CDATA[Crystal Phoenix]]></item>  
+  <item name="av.building.winterevent2025_plane05"><![CDATA[Crystal Phoenix]]></item>
+
+  <item name="av.building.skygateevent2026_deco"><![CDATA[Azure Obelisk]]></item>
+  <item name="av.building.skygateevent2026_techdeco"><![CDATA[Skygate of Amun]]></item>
+  <item name="av.building.skygateevent2026_temple"><![CDATA[Shrine of the Dunes]]></item>
+  <item name="av.building.skygateevent2026_pyramid"><![CDATA[Stargate Sanctuary]]></item>
+  <item name="av.building.skygateevent2026_loon"><![CDATA[Tombfire Drifter]]></item>
+  <item name="av.building.skygateevent2026_ancientplane"><![CDATA[Pharaoh’s Skyblade]]></item>
+  <item name="av.building.skygateevent2026_heli"><![CDATA[Horus Windrider]]></item>
+  <item name="av.building.skygateevent2026_background"><![CDATA[Desert of Two Moons]]></item>
+  <item name="av.building.skygateevent2026_bigbird"><![CDATA[Celestial Wingcarrier]]></item>
+  <item name="av.building.skygateevent2026_seaplane"><![CDATA[Sky Mariner]]></item>
+  <item name="av.building.skygateevent2026_zeppelin"><![CDATA[Golden Skybarge]]></item>
+  <item name="av.building.skygateevent2026_large_runway"><![CDATA[Sandstrip]]></item>
+  <item name="av.building.skygateevent2026_stonegate"><![CDATA[Stonegate]]></item>
+
+  <item name="av.building.skygateevent2026_medium_runway"><![CDATA[Medium Sandstrip]]></item>
+  <item name="av.building.skygateevent2026_small_runway"><![CDATA[Small Sandstrip]]></item>
+  <item name="av.building.skygateevent2026_bigbird_silver"><![CDATA[Silverwing]]></item>
+  <item name="av.building.skygateevent2026_arado"><![CDATA[Obsidian Wing]]></item>
+  <item name="av.building.skygateevent2026_summer_arado"><![CDATA[Neon Breeze]]></item>
+  <item name="av.building.skygateevent2026_summer_jet"><![CDATA[Riviera Jet]]></item>
+  <item name="av.building.skygateevent2026_summer_cargo"><![CDATA[Lagoon Cargo]]></item>
+  <item name="av.building.skygateevent2026_summer_seaplane"><![CDATA[Coral Cruiser]]></item>
+  <item name="av.building.skygateevent2026_summer_smallplane"><![CDATA[Tropic Sparrow]]></item>
+  <item name="av.building.birthdaytower_2026"><![CDATA[Aurora Tower]]></item>
+
+  <item name="av.building.luxury_jet_silver"><![CDATA[Thousand-Jet]]></item>
+  <item name="av.building.luxury_medium_silver"><![CDATA[Million-Star]]></item>
+  <item name="av.building.luxury_large_silver"><![CDATA[Billion-Horizon]]></item>  
   
  </category>
+
  <category name="av.storeitem">
+
   <item name="av.storeitem.s_prop1"><![CDATA[Fraktar passagerare för att generera luftmynt och EP]]></item>
   <item name="av.storeitem.s_prop_cargo1"><![CDATA[Bär gods för att leverera till tax free-butiker. Det här planet ökar din vinst!]]></item>
   <item name="av.storeitem.s_prop2"><![CDATA[Fraktar passagerare för att generera luftmynt och EP]]></item>
@@ -1294,7 +1326,7 @@
   <item name="av.storeitem.california"><![CDATA[Sevärdhet från Kalifornien]]></item>
   <item name="av.storeitem.fall"><![CDATA[Läskigt landskap]]></item>
   <item name="av.storeitem.london"><![CDATA[Sevärdhet från London]]></item>
-  <item name="av.storeitem.new_york"><![CDATA[Sevärdhet från New York]]></item>
+  <item name="av.storeitem.new_york"><![CDATA[Sevärdhet från New Begränsad upplagaork]]></item>
   <item name="av.storeitem.fence1"><![CDATA[Servicetid: - {number}% Radie: {radius}]]></item>
   <item name="av.storeitem.fence2"><![CDATA[Servicetid: - {number}% Radie: {radius}]]></item>
   <item name="av.storeitem.fence3"><![CDATA[Servicetid: - {number}% Radie: {radius}]]></item>
@@ -1992,6 +2024,7 @@
   <item name="av.storeitem.airstrip_birthday2023_large"><![CDATA[Här landar stora plan]]></item>
   <item name="av.storeitem.airstrip_birthday2024_large"><![CDATA[Här landar stora plan]]></item>
   <item name="av.storeitem.airstrip_birthday2025_large"><![CDATA[Här landar stora plan]]></item>
+  <item name="av.storeitem.airstrip_birthday2026_large"><![CDATA[Här landar stora plan]]></item>
   
   <item name="av.storeitem.smallplane_mm_2022"><![CDATA[Begränsad upplaga]]></item>
   <item name="av.storeitem.madmax2022_background"><![CDATA[Begränsad upplaga]]></item>
@@ -2096,7 +2129,37 @@
   <item name="av.storeitem.winterevent2025_firedeco"><![CDATA[Passagerare: + {number}Radie: {radius}]]></item>
   <item name="av.storeitem.winterevent2025_icedeco"><![CDATA[Servicetid: - {number}% Radie: {radius}]]></item>
   <item name="av.storeitem.winterevent2025_iceloon"><![CDATA[Begränsad upplaga]]></item>
-  <item name="av.storeitem.winterevent2025_plane05"><![CDATA[Begränsad upplaga]]></item>  
+  <item name="av.storeitem.winterevent2025_plane05"><![CDATA[Begränsad upplaga]]></item>
+
+  <item name="av.storeitem.skygateevent2026_deco"><![CDATA[Passagerare: + {number}Radie: {radius}]]></item>
+  <item name="av.storeitem.skygateevent2026_techdeco"><![CDATA[Servicetid: - {number}% Radie: {radius}]]></item>
+  <item name="av.storeitem.skygateevent2026_temple"><![CDATA[Samlar {number} passagerare var {minutes} minut]]></item>
+  <item name="av.storeitem.skygateevent2026_pyramid"><![CDATA[Samlar {number} passagerare var {minutes} minut]]></item>
+  <item name="av.storeitem.skygateevent2026_loon"><![CDATA[Begränsad upplaga]]></item>
+  <item name="av.storeitem.skygateevent2026_ancientplane"><![CDATA[Begränsad upplaga]]></item>
+  <item name="av.storeitem.skygateevent2026_heli"><![CDATA[Begränsad upplaga]]></item>
+  <item name="av.storeitem.skygateevent2026_background"><![CDATA[Varning: risk för solbränna.]]></item>
+  <item name="av.storeitem.skygateevent2026_bigbird"><![CDATA[Begränsad upplaga]]></item>
+  <item name="av.storeitem.skygateevent2026_seaplane"><![CDATA[Begränsad upplaga]]></item>
+  <item name="av.storeitem.skygateevent2026_zeppelin"><![CDATA[Begränsad upplaga]]></item>
+  <item name="av.storeitem.skygateevent2026_large_runway"><![CDATA[Här landar stora plan]]></item>
+  <item name="av.storeitem.skygateevent2026_stonegate"><![CDATA[Servicetid: - {number}% Radie: {radius}]]></item>
+
+  <item name="av.storeitem.skygateevent2026_medium_runway"><![CDATA[Låter medelstora plan landa]]></item>
+  <item name="av.storeitem.skygateevent2026_small_runway"><![CDATA[Gör att små plan kan landa]]></item>
+  <item name="av.storeitem.skygateevent2026_bigbird_silver"><![CDATA[Begränsad upplaga]]></item>
+  <item name="av.storeitem.skygateevent2026_arado"><![CDATA[Begränsad upplaga]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_arado"><![CDATA[Begränsad upplaga]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_jet"><![CDATA[Begränsad upplaga]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_cargo"><![CDATA[Begränsad upplaga]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_seaplane"><![CDATA[Begränsad upplaga]]></item>
+  <item name="av.storeitem.skygateevent2026_summer_smallplane"><![CDATA[Begränsad upplaga]]></item>
+  <item name="av.storeitem.birthdaytower_2026"><![CDATA[Samlar {number} passagerare var {minutes} minut]]></item>
+
+  <item name="av.storeitem.luxury_jet_silver"><![CDATA[Lyxutgåva]]></item>
+  <item name="av.storeitem.luxury_medium_silver"><![CDATA[Lyxutgåva]]></item>
+  <item name="av.storeitem.luxury_large_silver"><![CDATA[Lyxutgåva]]></item>  
   
  </category>
+
 </language>
