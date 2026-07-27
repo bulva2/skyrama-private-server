@@ -104,13 +104,13 @@
   <item name="av.eng_bay.skin_text"><![CDATA[Pretty-up your plane! Revamp your flyer and go the extra mile!]]></item>
  </category>
  <category name="av.announcement">
-  <item name="av.announcement.header"><![CDATA[The Skyrama Herald]]></item>
-  <item name="av.announcement.title"><![CDATA[Get a glimpse of tomorrow, today! Find out here first, what's about to happen next!]]></item>
-  <item name="av.announcement.text"><![CDATA[It's tourist season and things are flying sky-high in Skyrama. We have a huge event lined up come month's end for aspiring and established athletes alike. Exclusive airplanes, brand-new buildings and lot's more will make the sun shine like gold. Furthermore, we're revamping everything behind the scenes by calling back the best team of exterminators we have in the hive to snuff out the jive of the latest bugs and stuff.]]></item>
-  <item name="av.announcement.hint_title"><![CDATA[Bosom Buddies]]></item>
-  <item name="av.announcement.hint_text"><![CDATA[Better, quicker, easier! The brand new invite feature will soon be go for launch.]]></item>
-  <item name="av.announcement.shop_title"><![CDATA[Old and gray was for yesterday.]]></item>
-  <item name="av.announcement.shop_text"><![CDATA[Daily quests like you've never seen before - coming soon!]]></item>
+  <item name="av.announcement.header"><![CDATA[Privaterama News]]></item>
+  <item name="av.announcement.title"><![CDATA[Welcome back! Long time no see!]]></item>
+  <item name="av.announcement.text"><![CDATA[After another longer break, a brand new big update of the privaterama is underway! This update is huge, so stay tuned for more information.]]></item>
+  <item name="av.announcement.hint_title"><![CDATA[Hint]]></item>
+  <item name="av.announcement.hint_text"><![CDATA[Planes serviced at another player's airport give you double XP.]]></item>
+  <item name="av.announcement.shop_title"><![CDATA[Deployment]]></item>
+  <item name="av.announcement.shop_text"><![CDATA[The whole project is now nicely dockerized!]]></item>
  </category>
  <category name="av.friends">
   <item name="av.friends.header"><![CDATA[Social Flightwork]]></item>

@@ -53047,7 +53047,7 @@
       }
     ]
   },
-  "news": null,
+  "news": {"name":"announcement","character":"dummy_character2.png","detail":"","box_0":{"got_prefix":"","prefix":"hint","type":"","cat":"","id":-1},"box_1":{"got_prefix":"","prefix":"shop","type":"","cat":"","id":-1}},
   "materialTypes": {
     "1": {
       "MaterialId": 1,

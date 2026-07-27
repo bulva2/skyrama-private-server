@@ -8,8 +8,8 @@ def handle_planesSendback(request, user_id, rpcResult, items_to_add_to_obj, json
     rpcResult["t"] = int(time.time())
     rpcResult["r"] = None
 
-    plane_id = request["p"]["id"]
-    player_id = request["p"]["player_id"]
+    plane_id = int(request["p"]["id"])
+    player_id = int(request["p"]["player_id"])
     json2_data = None
 
     for plane in json_data["planes"]:
@@ -43,7 +43,7 @@ def handle_planesSendback(request, user_id, rpcResult, items_to_add_to_obj, json
                 # Crash fail safe, needs more testing
                 if json2_data == -1 or json2_data is None:
                     logging.critical(f"Crash has been prevented!")
-                    logging.critical(f"[planes_sendback] Could not load buddy data for player_id {request['p']['player_id']}: invalid json2_data")
+                    logging.critical(f"[planes_sendback] Could not load buddy data for player_id {player_id}: invalid json2_data")
                     json_data["planes"].remove(plane)
                     break
 
@@ -73,9 +73,9 @@ def handle_planesSendback(request, user_id, rpcResult, items_to_add_to_obj, json
 
                 json_data["planes"].remove(plane)
 
-    if request["p"]["player_id"] != 0:
+    if player_id != 0:
         # Also just a fail safe, needs more testing
         if json2_data != -1 and json2_data is not None and "playerData" in json2_data and "account_id" in json2_data["playerData"]:
             user_manager.modify_save_by_id(json2_data["playerData"]["account_id"], json2_data)
         else:
-            logging.critical(f"[planes_sendback] Could not save buddy data for player_id {request['p']['player_id']}: invalid json2_data")
+            logging.critical(f"[planes_sendback] Could not save buddy data for player_id {player_id}: invalid json2_data")

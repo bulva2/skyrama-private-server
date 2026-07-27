@@ -6,20 +6,24 @@ request_body {
 	max_size 10MB
 }
 
-# Game assets (SWF, sounds, images) served straight off disk.
-# handle_path strips the prefix, so /assets/foo.swf -> /srv/assets/foo.swf
 handle_path /assets/* {
 	root * /srv/assets
 	file_server
-	header Cache-Control "public, max-age=1209600"
+
+	@busted not path /data/languages/*
+	header @busted Cache-Control "public, max-age=604800"
+
+	@lang path /data/languages/*
+	header @lang Cache-Control "no-cache"
 }
 
-# The app mounts its stylesheets under this exact prefix, so this has to mirror
-# it (see the StaticFiles mount for "/templates/styles" in server.py).
 handle_path /templates/styles/* {
 	root * /srv/styles
 	file_server
-	header Cache-Control "public, max-age=86400"
+	header Cache-Control "no-cache"
 }
 
-reverse_proxy privaterama:3800
+handle {
+	header Cache-Control "no-store"
+	reverse_proxy privaterama:3800
+}
