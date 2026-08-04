@@ -90,11 +90,14 @@ def next_quest(quest_seq, init_data, json_data, user_id, items_to_add_to_obj):
 
 def handle_goal(request, user_id, quest_seq, items_to_add_to_obj, json_data, init_data):
     current_goal = json_data["goals"]["goals"].get(quest_seq)
-    
+
     if current_goal is None or "tasks" not in current_goal:
         logging.error(f"No current goal or tasks found for quest sequence: {quest_seq}, user_id: {user_id}")
         return
-    
+
+    if current_goal.get("goal_types_id") == -1:
+        return  # questline finished
+
     num_tasks_completed = 0
 
     i = 0
