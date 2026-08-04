@@ -64,16 +64,9 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
             else:
                 drop_material_amount = 0
 
-            ############################################################
-            # Extra cheat checks (because we don't trust anyone xD) \/ #
-            ############################################################
-
             buddy_points = int(plane["buddy_points"])
-
             wares_revenue = int(plane["wares_revenue"])
-
             contents_count = int(plane["contents_count"])
-
             souvenir_types_id = int(plane["souvenir_types_id"])
 
             for g in init_data["planeTypes"]:
@@ -83,10 +76,10 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                     quick_buddy_serve_coins_cost = g["quick_buddy_serve_coins_cost"]
                     #####################################################################################
                     if "air_coins" in request["p"]:
-                        json_data["playerData"]["air_coins"] += math.floor(request["p"]["air_coins"] * get_coin_multiplier())
+                        json_data["playerData"]["air_coins"] += math.floor(int(plane["air_coins"]) * get_coin_multiplier())
                     #####################################################################################
                     elif "xp" in request["p"]:
-                        json_data["playerData"]["xp"] += math.floor(request["p"]["xp"] * get_xp_multiplier())
+                        json_data["playerData"]["xp"] += math.floor(int(plane["xp"]) * get_xp_multiplier())
                     #####################################################################################
                     elif "buddy_points" in request["p"]:
                         for h in json_data["buddyStuff"]["buddies"]:
