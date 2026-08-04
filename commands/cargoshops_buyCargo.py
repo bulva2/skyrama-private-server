@@ -35,6 +35,6 @@ def handle_cargoshopsBuyCargo(request, user_id, rpcResult, items_to_add_to_obj, 
                 rpcResult["i"] = -1
                 return
             else:
-                    subtract_resources(json_data, rpcResult, air_cash=cost)                    
-                    i["num_in_warehouse"] += amount
+                subtract_resources(json_data, rpcResult, air_cash=cost)                    
+                i["num_in_warehouse"] += amount
             break

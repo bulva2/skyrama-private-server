@@ -11,34 +11,34 @@ def handle_planesUpgrade(request, user_id, rpcResult, items_to_add_to_obj, json_
 
     for i in json_data["planes"]:
         if int(i["id"]) == request["p"]["id"]:
-          i["upgrade_level"] = i["upgrade_level"] + 1
-          current_upgrade_number = i["upgrade_level"]
-          current_plane_type_id = i["plane_type_id"]
+            i["upgrade_level"] = i["upgrade_level"] + 1
+            current_upgrade_number = i["upgrade_level"]
+            current_plane_type_id = i["plane_type_id"]
                 
-          for j in init_data["planeUpgradeTypes"]:
-            if init_data["planeUpgradeTypes"][j]["level"] == current_upgrade_number:
-              if current_plane_type_id in init_data["planeUpgradeTypes"][j]["attachableTo"]:
-                upgrade_type = j
-                for g in init_data["planeUpgradeTypes"][j]["effects"]:
+            for j in init_data["planeUpgradeTypes"]:
+                if init_data["planeUpgradeTypes"][j]["level"] == current_upgrade_number:
+                    if current_plane_type_id in init_data["planeUpgradeTypes"][j]["attachableTo"]:
+                        upgrade_type = j
+                        for g in init_data["planeUpgradeTypes"][j]["effects"]:
 #                  if g["type"] == "flight_time": # Not needed :)
 #                    i["departure_time"] = str(int(time.time()) - ((i["arrival_time"] - i["departure_time"]) * (1 - (g["percent"] / 100)))) # Might get broken with turbo fuel
 #                    i["arrival_time"] = int(time.time())
                     
-                    # xp and air_coins are derived from upgrade_level in planes_send
-                    if g["type"] == "cargo":
-                      i["wares_revenue"] = i["wares_revenue"] * (1 + (g["percent"] / 100))
+                            # xp and air_coins are derived from upgrade_level in planes_send
+                            if g["type"] == "cargo":
+                                i["wares_revenue"] = i["wares_revenue"] * (1 + (g["percent"] / 100))
           
-          break
+            break
         
     for i in init_data["planeUpgradeCostTypes"]:
-      if current_plane_type_id in i["planeIds"]:
-        for j in i["costs"][str(current_upgrade_number)]:
-          if j["type"] == "consumable": # Reduce tuning parts
-            json_data["consumables"][j["id"]] = json_data["consumables"][j["id"]] - j["amount"]
+        if current_plane_type_id in i["planeIds"]:
+            for j in i["costs"][str(current_upgrade_number)]:
+                if j["type"] == "consumable": # Reduce tuning parts
+                    json_data["consumables"][j["id"]] = json_data["consumables"][j["id"]] - j["amount"]
             
-          if j["type"] == "currency": # Not checking for id, as only coins are possible?
-            json_data["playerData"]["air_coins"] = json_data["playerData"]["air_coins"] - j["amount"]
-        break
+                if j["type"] == "currency": # Not checking for id, as only coins are possible?
+                    json_data["playerData"]["air_coins"] = json_data["playerData"]["air_coins"] - j["amount"]
+            break
       
     # planeUpgrades isn't a persisted field (no DB column for it), so it has to be
     # rebuilt from upgrade_level every time rather than appended to across requests.

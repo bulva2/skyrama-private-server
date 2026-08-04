@@ -11,9 +11,9 @@ def handle_buddyAccept(request, user_id, rpcResult, items_to_add_to_obj, json_da
     buddy_data = user_manager.load_save_by_id(request["p"]["buddyId"])
 
     if isinstance(buddy_data, int):
-      report_issue("warning", f"buddyAccept: Failed to load buddy data for user_id {request['p']['buddyId']} from user_id {user_id}")
-      rpcResult["r"] = {"success": False}
-      return
+        report_issue("warning", f"buddyAccept: Failed to load buddy data for user_id {request['p']['buddyId']} from user_id {user_id}")
+        rpcResult["r"] = {"success": False}
+        return
 
     # Friend both players by setting their status to 5 (active)
     update_buddy_status(json_data["buddyStuff"]["buddies"], request["p"]["buddyId"], user_id)

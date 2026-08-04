@@ -52,4 +52,4 @@ def handle_craftingBuyMaterials(request, user_id, rpcResult, items_to_add_to_obj
     # I don't know any cases where this wouldn't be success
     rpcResult["r"] = {"success": True, "slotId": slot_id, "materialId": material_id,
                       "planePartId": plane_part_id, "materials": materials}
-                    # in memorial for the 26 aircash that were offered for this: R.I.P.
+    # in memorial for the 26 aircash that were offered for this: R.I.P.

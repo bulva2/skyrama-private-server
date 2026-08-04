@@ -40,7 +40,7 @@ def handle_recyclingStart(request, user_id, rpcResult, items_to_add_to_obj, json
     processData = {
         "endtime": end_time,
         "finished": False,
-        # Now it's plane_type_id instead of plane_id!
+    # Now it's plane_type_id instead of plane_id!
         "itemId": plane_type_id,
         "starttime": start_time
     }

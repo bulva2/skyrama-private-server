@@ -9,9 +9,9 @@ def handle_buddyEndRelationship(request, user_id, rpcResult, items_to_add_to_obj
     buddy_data = user_manager.load_save_by_id(request["p"])
 
     if isinstance(buddy_data, int):
-      report_issue("warning", f"buddyEndRelationship: Failed to load buddy data for user_id {request['p']} from user_id {user_id}")
-      rpcResult["r"] = {"success": False}
-      return
+        report_issue("warning", f"buddyEndRelationship: Failed to load buddy data for user_id {request['p']} from user_id {user_id}")
+        rpcResult["r"] = {"success": False}
+        return
     
     for idx, buddy in enumerate(json_data["buddyStuff"]["buddies"]):
         if int(buddy["hi_player_id"]) == int(request["p"]) and int(buddy["lo_player_id"]) == int(user_id):
