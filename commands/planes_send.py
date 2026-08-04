@@ -1,5 +1,6 @@
 from src.debug import report_issue
 from src.plane_manager import add_plane
+from src.utils import get_upgraded_yield
 
 from src.enums import PlaneState
 
@@ -31,10 +32,15 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
                 
             plane_type_id = int(plane["plane_type_id"])
 
+            upgrade_level = int(plane.get("upgrade_level", 0))
+
             for plane_type in init_data["planeTypes"]:
                 if int(plane_type["id"]) == plane_type_id:
-                    xp = plane_type["xp_yield"]
-                    coins = plane_type["air_coins_yield"]
+                    
+                    # Here we calculate the bonus yield because of upgrades
+                    xp = get_upgraded_yield(plane_type["xp_yield"], plane_type_id, upgrade_level, init_data, "xp")
+                    coins = get_upgraded_yield(plane_type["air_coins_yield"], plane_type_id, upgrade_level, init_data, "air_coins")
+
                     buddy_points = int(plane_type["buddy_points_yield"])
                     load_type = plane_type["load_type"]
                     wares_revenue = int(plane_type["wares_revenue_capacity"])

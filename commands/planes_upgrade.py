@@ -24,12 +24,7 @@ def handle_planesUpgrade(request, user_id, rpcResult, items_to_add_to_obj, json_
 #                    i["departure_time"] = str(int(time.time()) - ((i["arrival_time"] - i["departure_time"]) * (1 - (g["percent"] / 100)))) # Might get broken with turbo fuel
 #                    i["arrival_time"] = int(time.time())
                     
-                    if g["type"] == "xp":
-                      i["xp"] = i["xp"] * (1 + (g["percent"] / 100))
-                      
-                    if g["type"] == "air_coins":
-                      i["air_coins"] = i["air_coins"] * (1 + (g["percent"] / 100))
-                      
+                    # xp and air_coins are derived from upgrade_level in planes_send
                     if g["type"] == "cargo":
                       i["wares_revenue"] = i["wares_revenue"] * (1 + (g["percent"] / 100))
           
