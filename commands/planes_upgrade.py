@@ -14,20 +14,6 @@ def handle_planesUpgrade(request, user_id, rpcResult, items_to_add_to_obj, json_
             i["upgrade_level"] = i["upgrade_level"] + 1
             current_upgrade_number = i["upgrade_level"]
             current_plane_type_id = i["plane_type_id"]
-                
-            for j in init_data["planeUpgradeTypes"]:
-                if init_data["planeUpgradeTypes"][j]["level"] == current_upgrade_number:
-                    if current_plane_type_id in init_data["planeUpgradeTypes"][j]["attachableTo"]:
-                        upgrade_type = j
-                        for g in init_data["planeUpgradeTypes"][j]["effects"]:
-#                  if g["type"] == "flight_time": # Not needed :)
-#                    i["departure_time"] = str(int(time.time()) - ((i["arrival_time"] - i["departure_time"]) * (1 - (g["percent"] / 100)))) # Might get broken with turbo fuel
-#                    i["arrival_time"] = int(time.time())
-                    
-                            # xp and air_coins are derived from upgrade_level in planes_send
-                            if g["type"] == "cargo":
-                                i["wares_revenue"] = i["wares_revenue"] * (1 + (g["percent"] / 100))
-          
             break
         
     for i in init_data["planeUpgradeCostTypes"]:
