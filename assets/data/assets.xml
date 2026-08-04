@@ -9931,6 +9931,29 @@
 		<ProfileTagComponent assetY="20" />
 	</Asset>
 
+	<Asset name="zeppelin" type="plane">
+		<ViewComponent name="v0" dir="0" isoWidth="55"
+			 isoLength="55" isoHeight="30">
+			<SpriteRenderComponent colorMap="gfx/planes/zeppelin/animation/zeppelin_0.swf"
+				originX="-70" originY="-51" animationSpeed="1" preload="false"
+				isoOffsetZ="1" />
+			<ShadowMapComponent colorMap="gfx/planes/zeppelin/zeppelin_s.swf@0"
+				originX="-74" originY="-54" />
+		</ViewComponent>
+		<ViewComponent name="v1" dir="1" isoWidth="55"
+		 	isoLength="55" isoHeight="30">
+			<SpriteRenderComponent colorMap="gfx/planes/zeppelin/animation/zeppelin_1.swf"
+				originX="-120" originY="-61" animationSpeed="1" preload="false"
+				isoOffsetZ="1" />
+			<ShadowMapComponent colorMap="gfx/planes/zeppelin/zeppelin_s.swf@1"
+				originX="-124" originY="-64" />
+		</ViewComponent>
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="zeppelin" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+	</Asset>
+
 	<!-- ############################ ### EMERGENCY EVENT ### ############################ -->
 	<Asset name="emergency_small_plane" type="plane">
 		<ViewComponent name="v1" dir="0" isoWidth="55"
@@ -33663,5 +33686,4 @@
 		<AircraftBarComponent popUpX="19" popUpY="22" />
 		<ProfileTagComponent assetY="20" />
 	</Asset>	
-
 </Assets>
