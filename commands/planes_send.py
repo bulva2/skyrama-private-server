@@ -40,11 +40,11 @@ def handle_planesSend(request, user_id, rpcResult, items_to_add_to_obj, json_dat
                     # Here we calculate the bonus yield because of upgrades
                     xp = get_upgraded_yield(plane_type["xp_yield"], plane_type_id, upgrade_level, init_data, "xp")
                     coins = get_upgraded_yield(plane_type["air_coins_yield"], plane_type_id, upgrade_level, init_data, "air_coins")
+                    contents_count = get_upgraded_yield(plane_type["capacity"], plane_type_id, upgrade_level, init_data, "cargo")
 
                     buddy_points = int(plane_type["buddy_points_yield"])
                     load_type = plane_type["load_type"]
                     wares_revenue = int(plane_type["wares_revenue_capacity"])
-                    contents_count = int(plane_type["capacity"])
                     recycling_value = int(plane_type["recyclingValue"]) # L parts drop is depending on this number (6 random sequences)
                     break
                 
