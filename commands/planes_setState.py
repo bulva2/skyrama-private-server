@@ -51,8 +51,12 @@ def handle_planesSetState(request, user_id, rpcResult, items_to_add_to_obj, json
                         subtract_resources(json_data, rpcResult, air_cash=air_cash_cost)
                         break
             
-            # Quick Start aircash reduction
-            if request["p"]["flight_status"] == PlaneState.QUICK_START.value: # 18:
+            # Quick Start aircash reduction. aycqs_start_time is really an END
+            # time - while it is in the future quick service is free (client:
+            # PlayerData.hasAllYouCanQuickService).
+            aycqs_active = rpcResult["t"] < int(json_data["playerData"]["aycqs_start_time"])
+
+            if request["p"]["flight_status"] == PlaneState.QUICK_START.value and not aycqs_active: # 18
                 for plane_type in init_data["planeTypes"]:
                     if int(plane_type["id"]) == int(plane["plane_type_id"]):
                         quick_start_coins_cost = int(plane_type["quick_start_coins_cost"])

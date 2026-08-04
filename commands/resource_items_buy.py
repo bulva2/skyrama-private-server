@@ -22,7 +22,7 @@ def handle_resourceItemsBuy(request, user_id, rpcResult, items_to_add_to_obj, js
 
     if request["p"]["name"].startswith("allyoucanquickservice"):
         json_data["playerData"]["air_cash"] -= air_cash_cost
-        json_data["playerData"]["aycqs_start_time"] = request["p"]["time"] + (amount * 3600) # amount = number of hours
+        json_data["playerData"]["aycqs_start_time"] = rpcResult["t"] + (amount * 3600) # amount = number of hours
 
     elif request["p"]["name"] == "aircoins":
         json_data["playerData"]["air_cash"] -= air_cash_cost

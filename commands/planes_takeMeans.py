@@ -229,18 +229,10 @@ def handle_planesTakeMeans(request, user_id, rpcResult, items_to_add_to_obj, jso
                     break
 
             # CHECK IF QUICK SERVICE IS USED
+            # Own-plane Quick Start is charged in planes.setState (flight_status 18),
+            # which is the authoritative signal. Don't charge it again here.
 
-            if int(request["p"]["owner_id"]) == int(user_id) and "xp" in request["p"]:
-                # Add xp as temporary fix to check if it's the last drop before going into hangar.
-                ##########################################################
-                # This should be moved to planes.setState to avoid that! #
-                ##########################################################
-                if "xp" in request["p"]:
-                    if (int(request["t"]) - int(plane["start_service_time"])) < (int(service_time) / 3) or int(plane["start_service_time"]) == 0:  # Own plane
-                        if int(request["t"]) > int(json_data["playerData"]["aycqs_start_time"]):
-                            json_data["playerData"]["air_cash"] -= int(quick_start_coins_cost)
-
-            elif int(request["p"]["owner_id"]) != int(user_id):
+            if int(request["p"]["owner_id"]) != int(user_id):
                 # Add xp as temporary fix. Plane id 0 = Cashcow
                 ##########################################################
                 # This should be moved to planes.setState to avoid that! #
