@@ -14775,6 +14775,34 @@
       "wares_revenue_capacity": 60,
       "can_change_skin": 1,
       "recyclingValue": 6
+    },
+    {
+      "id": 8000,
+      "alias_id": 8000,
+      "name": "icetrain38_x26",
+      "type": "plane",
+      "size": "Large",
+      "load_type": "Passenger",
+      "capacity": 250,
+      "service_length": 400,
+      "flight_time": 64800,
+      "air_coins_yield": 2096,
+      "xp_yield": 450,
+      "buddy_points_yield": 1,
+      "air_coins_cost": 50000000,
+      "air_cash_cost": 0,
+      "event_currency_cost": 0,
+      "quick_start_coins_cost": 1,
+      "quick_land_coins_cost": 1,
+      "quick_buddy_serve_coins_cost": 1,
+      "wares_revenue_capacity": 0,
+      "cargo_service_bonus": 0,
+      "recyclingValue": 0,
+      "can_change_skin": 1,
+      "priority": 1750,
+      "tier": null,
+      "event_material_cost": null,
+      "event_material_drop": null
     }
   ],
   "planeUpgradeTypes": {
@@ -15194,7 +15222,8 @@
         491,
         492,
         493,
-        494
+        494,
+        8000
       ],
       "effects": [
         {
@@ -15806,7 +15835,8 @@
         491,
         492,
         493,
-        494
+        494,
+        8000
       ],
       "effects": [
         {
@@ -16258,7 +16288,8 @@
         491,
         492,
         493,
-        494
+        494,
+        8000
       ],
       "effects": [
         {
@@ -16535,7 +16566,8 @@
         265,
         451,
         470,
-        494
+        494,
+        8000
       ],
       "effects": [
         {
@@ -17627,7 +17659,8 @@
         474,
         482,
         485,
-        494
+        494,
+        8000
       ],
       "costs": {
         "1": [
@@ -52880,45 +52913,11 @@
         "highlight": 0
       },
       {
-        "obj_type": "Runway",
-        "obj_type_id": 41,
-        "category_priority": 10,
+        "obj_type": "Plane",
+        "obj_type_id": 8000,
+        "category_priority": 100,
         "new_priority": -1,
-        "required_level": 0,
-        "goal_reward_for": -1,
-        "requirement_1_type": null,
-        "requirement_1_id": -1,
-        "requirement_2_type": null,
-        "requirement_2_id": -1,
-        "requirement_3_type": null,
-        "requirement_3_id": -1,
-        "requirements_message": null,
-        "max_instances": -1,
-        "highlight": 0
-      },
-      {
-        "obj_type": "Runway",
-        "obj_type_id": 42,
-        "category_priority": 10,
-        "new_priority": -1,
-        "required_level": 0,
-        "goal_reward_for": -1,
-        "requirement_1_type": null,
-        "requirement_1_id": -1,
-        "requirement_2_type": null,
-        "requirement_2_id": -1,
-        "requirement_3_type": null,
-        "requirement_3_id": -1,
-        "requirements_message": null,
-        "max_instances": -1,
-        "highlight": 0
-      },
-      {
-        "obj_type": "Runway",
-        "obj_type_id": 43,
-        "category_priority": 105,
-        "new_priority": -1,
-        "required_level": 9,
+        "required_level": 70,
         "goal_reward_for": -1,
         "requirement_1_type": null,
         "requirement_1_id": -1,
@@ -53030,7 +53029,25 @@
       }
     ]
   },
-  "news": {"name":"announcement","character":"dummy_character2.png","detail":"","box_0":{"got_prefix":"","prefix":"hint","type":"","cat":"","id":-1},"box_1":{"got_prefix":"","prefix":"shop","type":"","cat":"","id":-1}},
+  "news": {
+    "name": "announcement",
+    "character": "dummy_character2.png",
+    "detail": "",
+    "box_0": {
+      "got_prefix": "",
+      "prefix": "hint",
+      "type": "",
+      "cat": "",
+      "id": -1
+    },
+    "box_1": {
+      "got_prefix": "",
+      "prefix": "shop",
+      "type": "",
+      "cat": "",
+      "id": -1
+    }
+  },
   "materialTypes": {
     "1": {
       "MaterialId": 1,

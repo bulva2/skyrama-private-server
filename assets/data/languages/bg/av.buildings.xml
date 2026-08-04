@@ -2157,6 +2157,8 @@
   <item name="av.storeitem.luxury_medium_silver"><![CDATA[Луксозно издание]]></item>
   <item name="av.storeitem.luxury_large_silver"><![CDATA[Луксозно издание]]></item>  
     
+  <item name="av.building.icetrain38_x26"><![CDATA[Icetrain 38 X26]]></item>
+  <item name="av.building.plural.icetrain38_x26"><![CDATA[Icetrain 38 X26]]></item>
  </category>
 
 </language>

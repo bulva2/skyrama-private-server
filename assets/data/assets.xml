@@ -33686,4 +33686,53 @@
 		<AircraftBarComponent popUpX="19" popUpY="22" />
 		<ProfileTagComponent assetY="20" />
 	</Asset>	
+
+	<Asset name="icetrain38_x26" type="plane">
+		<ViewComponent name="v0" dir="0" isoWidth="55"
+			isoLength="55" isoHeight="30">
+			<SpriteRenderComponent
+				colorMap="gfx/planes/icetrain38_x26/icetrain38_x26_v0.png"
+				originX="-75" originY="-37" />
+			<ShadowMapComponent
+				colorMap="gfx/planes/icetrain38_x26/icetrain38_x26_s_v0.png"
+				originX="-75" originY="-27" />
+		</ViewComponent>
+		<ViewComponent name="v1" dir="1" isoWidth="55"
+			isoLength="55" isoHeight="30">
+			<SpriteRenderComponent
+				colorMap="gfx/planes/icetrain38_x26/icetrain38_x26_v1.png"
+				originX="-75" originY="-37" />
+			<ShadowMapComponent
+				colorMap="gfx/planes/icetrain38_x26/icetrain38_x26_s_v1.png"
+				originX="-75" originY="-27" />
+		</ViewComponent>
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+	</Asset>
+	<Asset name="icetrain38_x26_2102594" type="plane">
+		<ViewComponent name="v0" dir="0" isoWidth="55"
+			isoLength="55" isoHeight="30">
+			<SpriteRenderComponent
+				colorMap="gfx/planes/upgrades/icetrain38_x26/icetrain38_x26_2102594_v0.png"
+				originX="-75" originY="-37" />
+			<ShadowMapComponent
+				colorMap="gfx/planes/upgrades/icetrain38_x26/icetrain38_x26_2102594_s_v0.png"
+				originX="-75" originY="-27" />
+		</ViewComponent>
+		<ViewComponent name="v1" dir="1" isoWidth="55"
+			isoLength="55" isoHeight="30">
+			<SpriteRenderComponent
+				colorMap="gfx/planes/upgrades/icetrain38_x26/icetrain38_x26_2102594_v1.png"
+				originX="-75" originY="-37" />
+			<ShadowMapComponent
+				colorMap="gfx/planes/upgrades/icetrain38_x26/icetrain38_x26_2102594_s_v1.png"
+				originX="-75" originY="-27" />
+		</ViewComponent>
+		<PlaceableComponent storable="false" />
+		<AircraftComponent engine="jet" />
+		<AircraftBarComponent popUpX="19" popUpY="22" />
+		<ProfileTagComponent assetY="20" />
+	</Asset>
 </Assets>
