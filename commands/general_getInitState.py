@@ -3,7 +3,7 @@ from commands.buddy_getAll import run_buddy_checks
 from src.daily_goals import handle_daily_goals
 from src.easy_events import get_all_easy_events
 from src.enums import PlaneState
-from src.utils import get_level_from_xp
+from src.utils import get_level_from_xp, build_plane_upgrades
 from deepmerge.merger import Merger
 from copy import deepcopy
 
@@ -16,6 +16,8 @@ def handle_getInitState(request, user_id, rpcResult, items_to_add_to_obj, json_d
     items_to_add_to_obj.append("planeUpgrades")
     items_to_add_to_obj.append("planeUpgradeTypes")
     items_to_add_to_obj.append("planeUpgradeCostTypes")
+
+    json_data["planeUpgrades"] = build_plane_upgrades(json_data["planes"], init_data)
 
     # Store session time
     json_data["playerData"]["session_start_time"] = int(time.time())

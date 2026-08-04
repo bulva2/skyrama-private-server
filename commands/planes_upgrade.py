@@ -1,4 +1,5 @@
 import time
+from src.utils import build_plane_upgrades
 
 def handle_planesUpgrade(request, user_id, rpcResult, items_to_add_to_obj, json_data, init_data):
     rpcResult["i"] = request["i"]
@@ -44,14 +45,9 @@ def handle_planesUpgrade(request, user_id, rpcResult, items_to_add_to_obj, json_
             json_data["playerData"]["air_coins"] = json_data["playerData"]["air_coins"] - j["amount"]
         break
       
-    # Add upgrade to planeUpgrades. For some reason this is during init not being sent in rpcResults, but in Object???
-    if not "planeUpgrades" in json_data:
-      json_data["planeUpgrades"] = {} # First upgrade: initialize json_data
-      
-    if not str(request["p"]["id"]) in json_data["planeUpgrades"]: # First upgrade on plane
-      json_data["planeUpgrades"][str(request["p"]["id"])] = []
-    
-    json_data["planeUpgrades"][str(request["p"]["id"])].append(int(upgrade_type))
+    # planeUpgrades isn't a persisted field (no DB column for it), so it has to be
+    # rebuilt from upgrade_level every time rather than appended to across requests.
+    json_data["planeUpgrades"] = build_plane_upgrades(json_data["planes"], init_data)
 
     # Success, we have to return the planeUpgrades object, else the client gets stuck
     rpcResult["r"] = json_data["planeUpgrades"]

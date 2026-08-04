@@ -31,6 +31,22 @@ def get_crafting_level_from_xp(xp, level_caps):
     xp_in_level -= intcap
   return (len(level_caps) - 1, xp_in_level + intcap, intcap)
 
+def build_plane_upgrades(planes, init_data):
+  """Derive {plane_id: [applied upgrade bracket ids]} from upgrade_level.
+  Not persisted anywhere (no DB column for it), so it has to be rebuilt from
+  the authoritative Plane.upgrade_level on every read instead of accumulated
+  across requests - see planes_upgrade.py.
+  """
+  from src.cache_manager import get_plane_upgrade_keys_up_to
+
+  result = {}
+  for plane in planes:
+    level = int(plane.get("upgrade_level", 0))
+    if level <= 0:
+      continue
+    result[str(plane["id"])] = get_plane_upgrade_keys_up_to(plane["plane_type_id"], level)
+  return result
+
 def subtract_resources(json_data, rpcResult, air_coins = None, air_cash = None, event_currency = None):
   player_data = json_data["playerData"]
 
