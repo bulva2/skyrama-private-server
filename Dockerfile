@@ -22,7 +22,7 @@ RUN pip install -r requirements.txt
 # Only the application code is copied. assets/, data/, templates/, stub/ and
 # config.cfg are bind-mounted read-only by docker-compose.yml so that game data
 # and config can be changed without rebuilding the image.
-COPY server.py state.py bundle.py setup_database.py ./
+COPY server.py state.py bundle.py ./
 COPY src/ ./src/
 COPY routers/ ./routers/
 COPY commands/ ./commands/
